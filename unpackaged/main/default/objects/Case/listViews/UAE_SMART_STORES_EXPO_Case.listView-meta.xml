@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>UAE_SMART_STORES_EXPO_Case</fullName>
+    <filterScope>Queue</filterScope>
+    <label>UAE SMART STORES EXPO</label>
+    <queue>UAE_SMART_STORES_EXPO</queue>
+    <sharedTo>
+        <allInternalUsers />
+    </sharedTo>
+</ListView>

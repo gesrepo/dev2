@@ -1,0 +1,516 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Client_Product__c</fullName>
+    <inlineHelpText>Please select the product from the list</inlineHelpText>
+    <label>Client Product</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>true</sorted>
+            <value>
+                <fullName>Abilify/Aripiprazole</fullName>
+                <default>false</default>
+                <label>Abilify/Aripiprazole</label>
+            </value>
+            <value>
+                <fullName>Abrocitinib</fullName>
+                <default>false</default>
+                <label>Abrocitinib</label>
+            </value>
+            <value>
+                <fullName>AI</fullName>
+                <default>false</default>
+                <label>AI</label>
+            </value>
+            <value>
+                <fullName>Aircraft parts</fullName>
+                <default>false</default>
+                <label>Aircraft parts</label>
+            </value>
+            <value>
+                <fullName>Alesse</fullName>
+                <default>false</default>
+                <label>Alesse</label>
+            </value>
+            <value>
+                <fullName>Anti Infectives</fullName>
+                <default>false</default>
+                <label>Anti Infectives</label>
+            </value>
+            <value>
+                <fullName>Atozet, Ezetrol, Inegy</fullName>
+                <default>false</default>
+                <label>Atozet, Ezetrol, Inegy</label>
+            </value>
+            <value>
+                <fullName>Atozet, Ezetrol, Inegy, Janumet, Januvia, Zontivity</fullName>
+                <default>false</default>
+                <label>Atozet, Ezetrol, Inegy, Janumet, Januvia, Zontivity</label>
+            </value>
+            <value>
+                <fullName>Atozet, Ezetrol, Janumet, Januvia</fullName>
+                <default>false</default>
+                <label>Atozet, Ezetrol, Janumet, Januvia</label>
+            </value>
+            <value>
+                <fullName>Baraclude/Entecavir</fullName>
+                <default>false</default>
+                <label>Baraclude/Entecavir</label>
+            </value>
+            <value>
+                <fullName>Belatacept</fullName>
+                <default>false</default>
+                <label>Belatacept</label>
+            </value>
+            <value>
+                <fullName>Big Drum</fullName>
+                <default>false</default>
+                <label>Big Drum</label>
+            </value>
+            <value>
+                <fullName>Biosimilars</fullName>
+                <default>false</default>
+                <label>Biosimilars</label>
+            </value>
+            <value>
+                <fullName>Blank</fullName>
+                <default>false</default>
+                <label>Blank</label>
+            </value>
+            <value>
+                <fullName>BRG</fullName>
+                <default>false</default>
+                <label>BRG</label>
+            </value>
+            <value>
+                <fullName>BZA/DVS/HT</fullName>
+                <default>false</default>
+                <label>BZA/DVS/HT</label>
+            </value>
+            <value>
+                <fullName>CA</fullName>
+                <default>false</default>
+                <label>CA</label>
+            </value>
+            <value>
+                <fullName>Cancidas, Invanz, Noxafil</fullName>
+                <default>false</default>
+                <label>Cancidas, Invanz, Noxafil</label>
+            </value>
+            <value>
+                <fullName>Cancidas, Noxafil, Zostavax</fullName>
+                <default>false</default>
+                <label>Cancidas, Noxafil, Zostavax</label>
+            </value>
+            <value>
+                <fullName>CentreOne</fullName>
+                <default>false</default>
+                <label>CentreOne</label>
+            </value>
+            <value>
+                <fullName>Clopidogrel/Irbesartan</fullName>
+                <default>false</default>
+                <label>Clopidogrel/Irbesartan</label>
+            </value>
+            <value>
+                <fullName>Clopidogrel/Irbesartan/MI</fullName>
+                <default>false</default>
+                <label>Clopidogrel/Irbesartan/MI</label>
+            </value>
+            <value>
+                <fullName>Cresemba</fullName>
+                <default>false</default>
+                <label>Cresemba</label>
+            </value>
+            <value>
+                <fullName>Crisaborole</fullName>
+                <default>false</default>
+                <label>Crisaborole</label>
+            </value>
+            <value>
+                <fullName>Danfoss : HS/DEN</fullName>
+                <default>false</default>
+                <label>Danfoss : HS/DEN</label>
+            </value>
+            <value>
+                <fullName>Danfoss : PE</fullName>
+                <default>false</default>
+                <label>Danfoss : PE</label>
+            </value>
+            <value>
+                <fullName>Danfoss : PS</fullName>
+                <default>false</default>
+                <label>Danfoss : PS</label>
+            </value>
+            <value>
+                <fullName>Danfoss : RC/CC</fullName>
+                <default>false</default>
+                <label>Danfoss : RC/CC</label>
+            </value>
+            <value>
+                <fullName>Defence and Aerospace</fullName>
+                <default>false</default>
+                <label>Defence and Aerospace</label>
+            </value>
+            <value>
+                <fullName>Dermatology</fullName>
+                <default>false</default>
+                <label>Dermatology</label>
+            </value>
+            <value>
+                <fullName>Devices</fullName>
+                <default>false</default>
+                <label>Devices</label>
+            </value>
+            <value>
+                <fullName>E2C</fullName>
+                <default>false</default>
+                <label>E2C</label>
+            </value>
+            <value>
+                <fullName>Effexor</fullName>
+                <default>false</default>
+                <label>Effexor</label>
+            </value>
+            <value>
+                <fullName>Eliquis</fullName>
+                <default>false</default>
+                <label>Eliquis</label>
+            </value>
+            <value>
+                <fullName>Emend</fullName>
+                <default>false</default>
+                <label>Emend</label>
+            </value>
+            <value>
+                <fullName>Emend, Keytruda</fullName>
+                <default>false</default>
+                <label>Emend, Keytruda</label>
+            </value>
+            <value>
+                <fullName>Enbrel</fullName>
+                <default>false</default>
+                <label>Enbrel</label>
+            </value>
+            <value>
+                <fullName>Endocrine</fullName>
+                <default>false</default>
+                <label>Endocrine</label>
+            </value>
+            <value>
+                <fullName>Erbitux/Taxol</fullName>
+                <default>false</default>
+                <label>Erbitux/Taxol</label>
+            </value>
+            <value>
+                <fullName>Evenity</fullName>
+                <default>false</default>
+                <label>Evenity</label>
+            </value>
+            <value>
+                <fullName>Follistim, Orgalutron</fullName>
+                <default>false</default>
+                <label>Follistim, Orgalutron</label>
+            </value>
+            <value>
+                <fullName>FSME</fullName>
+                <default>false</default>
+                <label>FSME</label>
+            </value>
+            <value>
+                <fullName>Gardasil</fullName>
+                <default>false</default>
+                <label>Gardasil</label>
+            </value>
+            <value>
+                <fullName>Genotropin</fullName>
+                <default>false</default>
+                <label>Genotropin</label>
+            </value>
+            <value>
+                <fullName>Hematology</fullName>
+                <default>false</default>
+                <label>Hematology</label>
+            </value>
+            <value>
+                <fullName>Hemophillia</fullName>
+                <default>false</default>
+                <label>Hemophillia</label>
+            </value>
+            <value>
+                <fullName>Inflammation</fullName>
+                <default>false</default>
+                <label>Inflammation</label>
+            </value>
+            <value>
+                <fullName>Inflectra</fullName>
+                <default>false</default>
+                <label>Inflectra</label>
+            </value>
+            <value>
+                <fullName>Isentress</fullName>
+                <default>false</default>
+                <label>Isentress</label>
+            </value>
+            <value>
+                <fullName>Ixabepilone</fullName>
+                <default>false</default>
+                <label>Ixabepilone</label>
+            </value>
+            <value>
+                <fullName>JAK</fullName>
+                <default>false</default>
+                <label>JAK</label>
+            </value>
+            <value>
+                <fullName>Januvia, Janumet</fullName>
+                <default>false</default>
+                <label>Januvia, Janumet</label>
+            </value>
+            <value>
+                <fullName>Karvea/Irbesartan</fullName>
+                <default>false</default>
+                <label>Karvea/Irbesartan</label>
+            </value>
+            <value>
+                <fullName>Keytruda</fullName>
+                <default>false</default>
+                <label>Keytruda</label>
+            </value>
+            <value>
+                <fullName>Large Ships</fullName>
+                <default>false</default>
+                <label>Large Ships</label>
+            </value>
+            <value>
+                <fullName>Laude</fullName>
+                <default>false</default>
+                <label>Laude</label>
+            </value>
+            <value>
+                <fullName>Licensing (Mitzi Conners)</fullName>
+                <default>false</default>
+                <label>Licensing (Mitzi Conners)</label>
+            </value>
+            <value>
+                <fullName>Lorviqua</fullName>
+                <default>false</default>
+                <label>Lorviqua</label>
+            </value>
+            <value>
+                <fullName>Medical Imaging</fullName>
+                <default>false</default>
+                <label>Medical Imaging</label>
+            </value>
+            <value>
+                <fullName>Meningoccol</fullName>
+                <default>false</default>
+                <label>Meningoccol</label>
+            </value>
+            <value>
+                <fullName>Nutritional</fullName>
+                <default>false</default>
+                <label>Nutritional</label>
+            </value>
+            <value>
+                <fullName>Oncology</fullName>
+                <default>false</default>
+                <label>Oncology</label>
+            </value>
+            <value>
+                <fullName>Oncology - Gastrointestinal</fullName>
+                <default>false</default>
+                <label>Oncology - Gastrointestinal</label>
+            </value>
+            <value>
+                <fullName>Oncology Medical (AML)</fullName>
+                <default>false</default>
+                <label>Oncology Medical (AML)</label>
+            </value>
+            <value>
+                <fullName>Oncology Pipeline</fullName>
+                <default>false</default>
+                <label>Oncology Pipeline</label>
+            </value>
+            <value>
+                <fullName>Orencia</fullName>
+                <default>false</default>
+                <label>Orencia</label>
+            </value>
+            <value>
+                <fullName>Organ Transplant</fullName>
+                <default>false</default>
+                <label>Organ Transplant</label>
+            </value>
+            <value>
+                <fullName>Orthopedics</fullName>
+                <default>false</default>
+                <label>Orthopedics</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>Partnering for Cure</fullName>
+                <default>false</default>
+                <label>Partnering for Cure</label>
+            </value>
+            <value>
+                <fullName>Pfizer: DGT</fullName>
+                <default>false</default>
+                <label>Pfizer: DGT</label>
+            </value>
+            <value>
+                <fullName>PIH i&amp;I Europe</fullName>
+                <default>false</default>
+                <label>PIH i&amp;I Europe</label>
+            </value>
+            <value>
+                <fullName>Pipeline</fullName>
+                <default>false</default>
+                <label>Pipeline</label>
+            </value>
+            <value>
+                <fullName>Plavix/Clopidogrel</fullName>
+                <default>false</default>
+                <label>Plavix/Clopidogrel</label>
+            </value>
+            <value>
+                <fullName>Prevenar</fullName>
+                <default>false</default>
+                <label>Prevenar</label>
+            </value>
+            <value>
+                <fullName>Prevenar/Meningitec</fullName>
+                <default>false</default>
+                <label>Prevenar/Meningitec</label>
+            </value>
+            <value>
+                <fullName>Prevenar/Meningitec &amp; Tygacil</fullName>
+                <default>false</default>
+                <label>Prevenar/Meningitec &amp; Tygacil</label>
+            </value>
+            <value>
+                <fullName>Rare Diseases</fullName>
+                <default>false</default>
+                <label>Rare Diseases</label>
+            </value>
+            <value>
+                <fullName>Recart</fullName>
+                <default>false</default>
+                <label>Recart</label>
+            </value>
+            <value>
+                <fullName>Refacto</fullName>
+                <default>false</default>
+                <label>Refacto</label>
+            </value>
+            <value>
+                <fullName>Remicade, Simponi</fullName>
+                <default>false</default>
+                <label>Remicade, Simponi</label>
+            </value>
+            <value>
+                <fullName>Somavert</fullName>
+                <default>false</default>
+                <label>Somavert</label>
+            </value>
+            <value>
+                <fullName>Sprycel/Dasatinib</fullName>
+                <default>false</default>
+                <label>Sprycel/Dasatinib</label>
+            </value>
+            <value>
+                <fullName>Sutent</fullName>
+                <default>false</default>
+                <label>Sutent</label>
+            </value>
+            <value>
+                <fullName>Tafamidis</fullName>
+                <default>false</default>
+                <label>Tafamidis</label>
+            </value>
+            <value>
+                <fullName>Tanezumab</fullName>
+                <default>false</default>
+                <label>Tanezumab</label>
+            </value>
+            <value>
+                <fullName>Tazocin/Tygacil</fullName>
+                <default>false</default>
+                <label>Tazocin/Tygacil</label>
+            </value>
+            <value>
+                <fullName>Team Hawkeye</fullName>
+                <default>false</default>
+                <label>Team Hawkeye</label>
+            </value>
+            <value>
+                <fullName>Tofa</fullName>
+                <default>false</default>
+                <label>Tofa</label>
+            </value>
+            <value>
+                <fullName>Torisel</fullName>
+                <default>false</default>
+                <label>Torisel</label>
+            </value>
+            <value>
+                <fullName>Tygacil</fullName>
+                <default>false</default>
+                <label>Tygacil</label>
+            </value>
+            <value>
+                <fullName>UCB - Evoke</fullName>
+                <default>false</default>
+                <label>UCB - Evoke</label>
+            </value>
+            <value>
+                <fullName>Unbranded</fullName>
+                <default>false</default>
+                <label>Unbranded</label>
+            </value>
+            <value>
+                <fullName>Vaccines</fullName>
+                <default>false</default>
+                <label>Vaccines</label>
+            </value>
+            <value>
+                <fullName>Victrelis</fullName>
+                <default>false</default>
+                <label>Victrelis</label>
+            </value>
+            <value>
+                <fullName>Virology</fullName>
+                <default>false</default>
+                <label>Virology</label>
+            </value>
+            <value>
+                <fullName>Vyndaqel</fullName>
+                <default>false</default>
+                <label>Vyndaqel</label>
+            </value>
+            <value>
+                <fullName>Womens Health</fullName>
+                <default>false</default>
+                <label>Womens Health</label>
+            </value>
+            <value>
+                <fullName>Xeljanz</fullName>
+                <default>false</default>
+                <label>Xeljanz</label>
+            </value>
+            <value>
+                <fullName>Zontivity</fullName>
+                <default>false</default>
+                <label>Zontivity</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

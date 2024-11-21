@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Congress_Manager__c</fullName>
+    <label>Congress Manager</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Andrew Rolls</fullName>
+                <default>false</default>
+                <label>Andrew Rolls</label>
+            </value>
+            <value>
+                <fullName>Congress Manager 1</fullName>
+                <default>false</default>
+                <label>Congress Manager 1</label>
+            </value>
+            <value>
+                <fullName>Congress Manager 2</fullName>
+                <default>false</default>
+                <label>Congress Manager 2</label>
+            </value>
+            <value>
+                <fullName>Congress Manager 3</fullName>
+                <default>false</default>
+                <label>Congress Manager 3</label>
+            </value>
+            <value>
+                <fullName>Corrine Landolt</fullName>
+                <default>false</default>
+                <label>Corrine Landolt</label>
+            </value>
+            <value>
+                <fullName>Nadine Curtin</fullName>
+                <default>false</default>
+                <label>Curtin, Nadine</label>
+            </value>
+            <value>
+                <fullName>Jacqueline Campo</fullName>
+                <default>false</default>
+                <label>Jacqueline Campo</label>
+            </value>
+            <value>
+                <fullName>Joe Walsh</fullName>
+                <default>false</default>
+                <label>Joe Walsh</label>
+            </value>
+            <value>
+                <fullName>John Hasemann</fullName>
+                <default>false</default>
+                <label>John Hasemann</label>
+            </value>
+            <value>
+                <fullName>Kaitlyn Reynolds</fullName>
+                <default>false</default>
+                <label>Kaitlyn Reynolds</label>
+            </value>
+            <value>
+                <fullName>Erica Kepes</fullName>
+                <default>false</default>
+                <label>Kepes, Erica</label>
+            </value>
+            <value>
+                <fullName>Laurie Stein-Richards</fullName>
+                <default>false</default>
+                <label>Laurie Stein-Richards</label>
+            </value>
+            <value>
+                <fullName>Ralph Lopez</fullName>
+                <default>false</default>
+                <label>Lopez, Ralph</label>
+            </value>
+            <value>
+                <fullName>Rebecca Baker</fullName>
+                <default>false</default>
+                <label>Rebecca Baker</label>
+            </value>
+            <value>
+                <fullName>Aleida Rosete</fullName>
+                <default>false</default>
+                <label>Rosete, Aleida</label>
+            </value>
+            <value>
+                <fullName>Dan Schuler</fullName>
+                <default>false</default>
+                <label>Schuler, Dan</label>
+            </value>
+            <value>
+                <fullName>Dawn Syntcha</fullName>
+                <default>false</default>
+                <label>Syntcha, Dawn</label>
+            </value>
+            <value>
+                <fullName>Andrea Throckmorton</fullName>
+                <default>false</default>
+                <label>Throckmorton, Andrea</label>
+            </value>
+            <value>
+                <fullName>Rose Marie Zarrillo</fullName>
+                <default>false</default>
+                <label>Zarrillo, Rose Marie</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

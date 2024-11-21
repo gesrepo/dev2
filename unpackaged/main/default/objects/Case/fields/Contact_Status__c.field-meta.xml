@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Contact_Status__c</fullName>
+    <label>Contact Status</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>1st Attempt Made</fullName>
+                <default>false</default>
+                <label>1st Attempt Made</label>
+            </value>
+            <value>
+                <fullName>2nd Attempt Made</fullName>
+                <default>false</default>
+                <label>2nd Attempt Made</label>
+            </value>
+            <value>
+                <fullName>3rd Attempt Made</fullName>
+                <default>false</default>
+                <label>3rd Attempt Made</label>
+            </value>
+            <value>
+                <fullName>Final Attempt Made</fullName>
+                <default>false</default>
+                <label>Final Attempt Made</label>
+            </value>
+            <value>
+                <fullName>Exh Contacted</fullName>
+                <default>false</default>
+                <label>Exh Contacted</label>
+            </value>
+            <value>
+                <fullName>Not Applicable</fullName>
+                <default>false</default>
+                <label>Not Applicable</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,354 @@
+<apex:component controller="GC_ItemOptionsController" selfClosing="true">
+  <apex:attribute name="gotAttribute" description="The task being passed in" type="GC_GES_Order_Task__c" required="true" assignTo="{!got}" />
+  <apex:attribute name="coreApiAttribute" description="The coreAPI instance to use" type="GC_CoreQuery" required="true" assignTo="{!coreApi}" />
+  <apex:attribute name="materialOptions" description="Select Options" type="SelectOption[]" required="false" assignTo="{!materialAttributes}" />
+  <apex:attribute name="designElementTaskOptions" description="Design Element Tasks" type="SelectOption[]" required="false" assignTo="{!designElementTasks}" />
+  <apex:attribute name="activeGemStructureTaskOptions" description="GEM Structures to Link" type="SelectOption[]" required="false" assignTo="{!activeGemStructureTasks}" />
+  <apex:attribute name="editMode" description="Edit Mode" type="Boolean" default="true" /> 
+  <apex:attribute name="taskFieldMan" description="Task Fields to be shown" type="GC_Task_Field_Manager__c" required="false" assignTo="{!taskFieldManager}" />
+  <apex:outputPanel rendered="{!got.Item_Template__c == ''}">
+    
+    <br/>
+    <H3>Item Template is blank. Please select an item first to display appropriate item options.</H3>
+    <br/>
+  </apex:outputPanel>
+  <apex:outputPanel rendered="{!got.Item_Template__c != ''}" id="itemOptionsSections">
+    <apex:pageBlockSection rendered="{!got.Item_Template__c == 'Basic' && !editMode}" title="Basic Item Options">
+      <apex:outputField value="{!got.QuantityNum__c}" />
+     </apex:pageBlockSection>
+    <apex:pageBlockSection rendered="{!got.Item_Template__c == 'Basic' && editMode}" title="Basic Item Options">
+      <apex:pageBlockSectionItem helpText="{!$ObjectType.GC_GES_Order_Task__c.fields.QuantityNum__c.inlineHelpText}">
+        <apex:outputLabel value="{!$ObjectType.GC_GES_Order_Task__c.fields.QuantityNum__c.Label}" />
+        <apex:outputPanel >
+          <div class="requiredInput">
+            <div class="requiredBlock"></div>
+            <apex:inputField value="{!got.QuantityNum__c}" />
+          </div>
+        </apex:outputPanel>
+          </apex:pageBlockSectionItem>
+           </apex:pageBlockSection>
+    <apex:pageBlockSection rendered="{!got.Item_Template__c == 'GEM Structures' && !editMode}" title="GEM Structure Item Options">
+      <apex:outputField value="{!got.QuantityNum__c}" />
+    </apex:pageBlockSection>
+    <apex:pageBlockSection rendered="{!got.Item_Template__c == 'GEM Structures' && editMode}" title="GEM Structure Item Options">
+      <apex:pageBlockSectionItem helpText="{!$ObjectType.GC_GES_Order_Task__c.fields.QuantityNum__c.inlineHelpText}">
+        <apex:outputLabel value="{!$ObjectType.GC_GES_Order_Task__c.fields.QuantityNum__c.Label}" />
+        <apex:outputPanel >
+          <div class="requiredInput">
+            <div class="requiredBlock"></div>
+            <apex:inputField value="{!got.QuantityNum__c}" />
+          </div>
+        </apex:outputPanel>
+      </apex:pageBlockSectionItem>
+        </apex:pageBlockSection>
+    <apex:pageBlockSection rendered="{!(got.Item_Template__c == 'Carpet' || got.Item_Template__c == 'Custom Carpet') && !editMode}" title="Carpet Item Options">
+      <apex:outputField value="{!got.QuantityNum__c}" />
+      <apex:pageBlockSectionItem />
+      <apex:outputField value="{!got.Carpet_Length__c}" rendered="{!got.UOM__c == 'SF'}" />
+      <apex:outputField value="{!got.Carpet_Width__c}" rendered="{!got.UOM__c == 'SF' }" />
+      <apex:outputField value="{!got.Electrical_Ordered__c}" />
+      <apex:outputField value="{!got.Electrical_Under__c}" />
+    </apex:pageBlockSection>
+      
+    <apex:pageBlockSection rendered="{!got.Item_Template__c == 'Carpet' && editMode}" title="Carpet Item Options">
+       <apex:outputPanel rendered="{!got.Item_Template__c == 'Carpet' && coreApi.selectedItem.Units == 'SF'}">
+        * Quantity will be calculated by Carpet Length and Width.
+      </apex:outputPanel>
+       <apex:pageBlockSectionItem helpText="{!$ObjectType.GC_GES_Order_Task__c.fields.QuantityNum__c.inlineHelpText}">
+        <apex:outputLabel value="{!$ObjectType.GC_GES_Order_Task__c.fields.QuantityNum__c.Label}" rendered="{!got.Item_Template__c == 'Carpet' && coreApi.selectedItem.Units == 'EA' && coreApi.selectedItem.Units != 'SF'}" />
+        <apex:outputPanel >
+          <div class="requiredInput">
+            <div class="requiredBlock"></div>
+            <apex:inputField value="{!got.QuantityNum__c}" rendered="{!got.Item_Template__c == 'Carpet' && coreApi.selectedItem.Units == 'EA' && coreApi.selectedItem.Units != 'SF'}" />
+          </div>
+        </apex:outputPanel>
+      </apex:pageBlockSectionItem>
+       <apex:pageBlockSectionItem rendered="{!got.UOM__c == 'SF'}" helpText="{!$ObjectType.GC_GES_Order_Task__c.fields.Carpet_Length__c.inlineHelpText}">
+        <apex:outputLabel value="{!$ObjectType.GC_GES_Order_Task__c.fields.Carpet_Length__c.Label}" />
+        <apex:outputPanel >
+          <div class="requiredInput">
+            <div class="requiredBlock"></div>
+            <apex:inputField value="{!got.Carpet_Length__c}"/>
+          </div>
+        </apex:outputPanel>
+      </apex:pageBlockSectionItem>
+      <apex:pageBlockSectionItem rendered="{!got.UOM__c == 'SF'}" helpText="{!$ObjectType.GC_GES_Order_Task__c.fields.Carpet_Width__c.inlineHelpText}">
+        <apex:outputLabel value="{!$ObjectType.GC_GES_Order_Task__c.fields.Carpet_Width__c.Label}" />
+        <apex:outputPanel >
+          <div class="requiredInput">
+            <div class="requiredBlock"></div>
+            <apex:inputField value="{!got.Carpet_Width__c}"/>
+          </div>
+        </apex:outputPanel>
+      </apex:pageBlockSectionItem>
+      <apex:inputField value="{!got.Electrical_Ordered__c}" />
+      <apex:inputField value="{!got.Electrical_Under__c}" />
+    </apex:pageBlockSection>
+      
+    <apex:pageBlockSection rendered="{!got.Item_Template__c == 'Custom Carpet' && editMode}" title="Custom Carpet Item Options">
+      <apex:outputPanel rendered="{!got.Item_Template__c == 'Custom Carpet' && coreApi.selectedItem.Units == 'SF'}">
+        * Quantity will be calculated by Carpet Length and Width.
+      </apex:outputPanel>
+      <apex:pageBlockSectionItem rendered="{!got.Item_Template__c == 'Custom Carpet' && coreApi.selectedItem.Units == 'SF'}" />
+       <apex:pageBlockSectionItem rendered="{!got.UOM__c == 'SF'}" helpText="{!$ObjectType.GC_GES_Order_Task__c.fields.Carpet_Length__c.inlineHelpText}">
+        <apex:outputLabel value="{!$ObjectType.GC_GES_Order_Task__c.fields.Carpet_Length__c.Label}" />
+        <apex:outputPanel >
+          <div class="requiredInput">
+            <div class="requiredBlock"></div>
+            <apex:inputField value="{!got.Carpet_Length__c}" />
+          </div>
+        </apex:outputPanel>
+      </apex:pageBlockSectionItem>
+      <apex:pageBlockSectionItem rendered="{!got.UOM__c == 'SF'}" helpText="{!$ObjectType.GC_GES_Order_Task__c.fields.Carpet_Width__c.inlineHelpText}">
+        <apex:outputLabel value="{!$ObjectType.GC_GES_Order_Task__c.fields.Carpet_Width__c.Label}" />
+        <apex:outputPanel >
+          <div class="requiredInput">
+            <div class="requiredBlock"></div>
+            <apex:inputField value="{!got.Carpet_Width__c}" />
+          </div>
+        </apex:outputPanel>
+      </apex:pageBlockSectionItem>
+      <apex:inputField value="{!got.Electrical_Ordered__c}" />
+      <apex:inputField value="{!got.Electrical_Under__c}" />
+    </apex:pageBlockSection>
+    <c:GC_CustomRTF targetclass="signCopy" rendered="true" toolbar="full" uniqueid="signCopy" />
+    <c:GC_CustomRTF targetclass="layout" rendered="true" toolbar="full" uniqueid="layout" />
+    <apex:pageBlockSection rendered="{!got.Item_Template__c == 'GEM Graphics' && !editMode}" title="GEM Graphics Options">
+      <apex:outputField value="{!got.QuantityNum__c}" />
+      <apex:outputField value="{!got.Sign_Title__c}" />
+      <apex:outputField value="{!got.GOT_Sign_Type__c}" />
+      <apex:outputField value="{!got.GOT_Sign_Type_Other__c}" />
+      <apex:outputField value="{!got.GOT_Single_Double_Sided__c}" />
+      <apex:outputField value="{!got.GOT_Copy_Placement__c}" />
+      <apex:outputField value="{!got.Material__c}" />
+      <apex:outputField value="{!got.Sign_Copy__c}" />
+      <apex:outputField value="{!got.Layout__c}" />
+      <apex:outputField value="{!got.Outdoors__c}" />
+      <apex:outputField value="{!got.Installation_Method__c}" />
+      <apex:outputField value="{!got.Save_Signs__c}" />
+      <apex:outputField value="{!got.GOT_Background__c}" />
+      <apex:outputField value="{!got.Design_Element_Task__c}" />
+      <apex:outputField value="{!got.Parent_GEM_Structure__c}" />
+    </apex:pageBlockSection>
+    <apex:pageBlockSection rendered="{!got.Item_Template__c == 'GEM Graphics' && editMode}" title="GEM Graphics Options">
+      <apex:pageBlockSectionItem helpText="{!$ObjectType.GC_GES_Order_Task__c.fields.QuantityNum__c.inlineHelpText}">
+        <apex:outputLabel value="{!$ObjectType.GC_GES_Order_Task__c.fields.QuantityNum__c.Label}" />
+        <apex:outputPanel >
+          <div class="requiredInput">
+            <div class="requiredBlock"></div>
+            <apex:inputField value="{!got.QuantityNum__c}" />
+          </div>
+        </apex:outputPanel>
+      </apex:pageBlockSectionItem>
+      <apex:inputField value="{!got.Sign_Title__c}" />
+      <apex:inputField value="{!got.Sign_Width__c}" />
+      <apex:inputField value="{!got.Sign_Length__c}" />
+      <apex:inputField value="{!got.GOT_Sign_Type__c}" />
+      <apex:inputField value="{!got.GOT_Single_Double_Sided__c}" />
+      <apex:inputField value="{!got.GOT_Sign_Type_Other__c}" />
+      <apex:selectList id="materialSelect" value="{!got.Material__c}" size="1">
+        <apex:selectOptions value="{!materialAttributes}"></apex:selectOptions>
+      </apex:selectList>
+      <apex:inputtextarea styleClass="signCopy ckeditor" richtext="false" value="{!got.Sign_Copy__c}" style="width:100%" />
+      <apex:inputtextarea styleClass="layout ckeditor" richtext="false" value="{!got.Layout__c}" style="width:100%" />
+      <apex:inputField value="{!got.GOT_Copy_Placement__c}" />
+      <apex:inputField value="{!got.Outdoors__c}" />
+      <apex:inputField value="{!got.Installation_Method__c}" />
+      <apex:inputField value="{!got.Save_Signs__c}" />
+      <apex:inputField value="{!got.GOT_Background__c}" />
+      <apex:pageBlockSectionItem helpText="{!$ObjectType.GC_GES_Order_Task__c.fields.Design_Element_Task__c.inlineHelpText}">
+        <apex:outputLabel value="{!$ObjectType.GC_GES_Order_Task__c.fields.Design_Element_Task__c.Label}" />
+        <apex:selectList id="detSelect" value="{!got.Design_Element_Task__c}" size="1">
+          <apex:selectOptions value="{!designElementTasks}"></apex:selectOptions>
+        </apex:selectList>
+      </apex:pageBlockSectionItem>
+      <apex:pageBlockSectionItem helpText="{!$ObjectType.GC_GES_Order_Task__c.fields.Parent_GEM_Structure__c.inlineHelpText}">
+        <apex:outputLabel value="{!$ObjectType.GC_GES_Order_Task__c.fields.Parent_GEM_Structure__c.Label}" />
+        <apex:selectList id="gemStructureSelect" value="{!got.Parent_GEM_Structure__c}" title="Graphics Order Option." size="1">
+          <apex:selectOptions value="{!activeGemStructureTasks}"></apex:selectOptions>
+        </apex:selectList>
+      </apex:pageBlockSectionItem>
+    </apex:pageBlockSection>
+      <apex:pageBlockSection title="Graphics Item Options" rendered="{!got.Item_Template__c == 'Graphics' && !editMode}">
+      <apex:outputField value="{!got.QuantityNum__c}" />
+      <apex:outputField value="{!got.Sign_Title__c}" rendered="{!(taskFieldManager.Sign_Title__c!= $Label.GC_Label_TFM_Hide)}" />
+      <apex:outputText rendered="{!(taskFieldManager.Sign_Title__c== $Label.GC_Label_TFM_Hide)}"></apex:outputText> 
+      <apex:outputField value="{!got.GOT_Sign_Type__c}" rendered="{!(taskFieldManager.Sign_Type__c!= $Label.GC_Label_TFM_Hide)}" />
+      <apex:outputText rendered="{!(taskFieldManager.Sign_Type__c== $Label.GC_Label_TFM_Hide)}"></apex:outputText>
+      <apex:outputField value="{!got.GOT_Sign_Type_Other__c}" rendered="{!(taskFieldManager.Sign_Type_Other__c!= $Label.GC_Label_TFM_Hide)}" />
+      <apex:outputText rendered="{!(taskFieldManager.Sign_Type_Other__c==$Label.GC_Label_TFM_Hide)}"></apex:outputText>
+      <apex:outputField value="{!got.GOT_Single_Double_Sided__c}" rendered="{!(taskFieldManager.Single_Double_Sided__c!= $Label.GC_Label_TFM_Hide)}"/>
+      <apex:outputText rendered="{!(taskFieldManager.Single_Double_Sided__c==$Label.GC_Label_TFM_Hide)}"></apex:outputText>
+      
+      <apex:outputField value="{!got.GOT_Copy_Placement__c}" rendered="{!(taskFieldManager.Copy_Placement__c!= $Label.GC_Label_TFM_Hide)}"/>
+      <apex:outputText rendered="{!(taskFieldManager.Copy_Placement__c== $Label.GC_Label_TFM_Hide)}"></apex:outputText>
+      <apex:outputField value="{!got.Material__c}" />
+      <apex:outputField value="{!got.Outdoors__c}" rendered="{!(taskFieldManager.Outdoors__c!= $Label.GC_Label_TFM_Hide)}"/>
+      <apex:outputText rendered="{!(taskFieldManager.Outdoors__c== $Label.GC_Label_TFM_Hide)}"></apex:outputText>
+      <apex:outputField value="{!got.Layout__c}" rendered="{!(taskFieldManager.Client_Layout_Notes__c!= $Label.GC_Label_TFM_Hide)}" />
+      <apex:outputText rendered="{!(taskFieldManager.Client_Layout_Notes__c== $Label.GC_Label_TFM_Hide)}"></apex:outputText>
+      <apex:outputField value="{!got.Save_Signs__c}" rendered="{!(taskFieldManager.Save_Signs__c!= $Label.GC_Label_TFM_Hide)}"/>
+      <apex:outputText rendered="{!(taskFieldManager.Save_Signs__c== $Label.GC_Label_TFM_Hide)}"></apex:outputText>
+      
+      <apex:outputField value="{!got.Installation_Method__c}" rendered="{!(taskFieldManager.Installation_Method__c!= $Label.GC_Label_TFM_Hide)}"/>
+      <apex:outputText rendered="{!(taskFieldManager.Installation_Method__c== $Label.GC_Label_TFM_Hide)}"></apex:outputText>
+      <apex:outputField value="{!got.Design_Element_Task__c}" />
+      <apex:outputField value="{!got.GOT_Background__c}" rendered="{!(taskFieldManager.Background__c!= $Label.GC_Label_TFM_Hide)}"/> 
+        <apex:outputText rendered="{!(taskFieldManager.Background__c== $Label.GC_Label_TFM_Hide)}"></apex:outputText>     
+      <apex:outputField value="{!got.Sign_Copy__c}" rendered="{!(taskFieldManager.Sign_Copy__c!= $Label.GC_Label_TFM_Hide)}" />
+      <apex:outputText rendered="{!(taskFieldManager.Sign_Copy__c== $Label.GC_Label_TFM_Hide)}"></apex:outputText>  
+    </apex:pageBlockSection>
+    
+    <apex:pageBlockSection rendered="{!got.Item_Template__c == 'Graphics' && editMode}" title="Graphics Item Options" id="graphicsSection">
+      <apex:pageBlockSectionItem helpText="{!$ObjectType.GC_GES_Order_Task__c.fields.QuantityNum__c.inlineHelpText}">
+        <apex:outputLabel value="{!$ObjectType.GC_GES_Order_Task__c.fields.QuantityNum__c.Label}" />
+        <apex:outputPanel >
+          <div class="requiredInput">
+            <div class="requiredBlock"></div>
+            <apex:inputField value="{!got.QuantityNum__c}" />
+          </div>
+        </apex:outputPanel>
+      </apex:pageBlockSectionItem>
+      <apex:inputField value="{!got.Sign_Title__c}" rendered="{!(taskFieldManager.Sign_Title__c!= $Label.GC_Label_TFM_Hide)}"/>
+      <apex:outputText rendered="{!(taskFieldManager.Sign_Title__c== $Label.GC_Label_TFM_Hide)}"/>
+      
+      <apex:inputField value="{!got.GOT_Sign_Type__c}"  rendered="{!(taskFieldManager.Sign_Type__c!= $Label.GC_Label_TFM_Hide)}"/>
+      <apex:outputText rendered="{!(taskFieldManager.Sign_Type__c== $Label.GC_Label_TFM_Hide)}"/>
+      
+      <apex:pageBlockSectionItem helpText="{!$ObjectType.GC_GES_Order_Task__c.fields.GOT_Single_Double_Sided__c.inlineHelpText}" rendered="{!(taskFieldManager.Single_Double_Sided__c!= $Label.GC_Label_TFM_Hide)}">
+        <apex:outputLabel value="{!$ObjectType.GC_GES_Order_Task__c.fields.GOT_Single_Double_Sided__c.Label}" />
+        <apex:inputField value="{!got.GOT_Single_Double_Sided__c}"/>      
+      </apex:pageBlockSectionItem>    
+      <apex:outputText rendered="{!(taskFieldManager.Single_Double_Sided__c== $Label.GC_Label_TFM_Hide)}"/> 
+      
+      <apex:inputField value="{!got.GOT_Sign_Type_Other__c}" rendered="{!(taskFieldManager.Sign_Type_Other__c!= $Label.GC_Label_TFM_Hide)}"/>
+       <apex:outputText rendered="{!(taskFieldManager.Sign_Type_Other__c== $Label.GC_Label_TFM_Hide)}"></apex:outputText>
+       
+      <apex:selectList id="materialSelect" value="{!got.Material__c}" title="Graphics Order Option." size="1">
+        <apex:selectOptions value="{!materialAttributes}"></apex:selectOptions>
+      </apex:selectList>
+      
+      <apex:inputtextarea styleClass="signCopy ckeditor" richtext="false" value="{!got.Sign_Copy__c}" style="width:100%"
+      rendered="{!(taskFieldManager.Sign_Copy__c!= $Label.GC_Label_TFM_Hide)}"/>
+      <apex:outputText rendered="{!(taskFieldManager.Sign_Copy__c== $Label.GC_Label_TFM_Hide)}"/>
+      
+      <apex:inputtextarea styleClass="layout ckeditor" richtext="false" value="{!got.Layout__c}" style="width:100%" 
+      rendered="{!(taskFieldManager.Client_Layout_Notes__c!= $Label.GC_Label_TFM_Hide)}"/>
+      <apex:outputText rendered="{!(taskFieldManager.Client_Layout_Notes__c== $Label.GC_Label_TFM_Hide)}"/>
+      
+      <apex:inputField value="{!got.GOT_Copy_Placement__c}" rendered="{!(taskFieldManager.Copy_Placement__c!= $Label.GC_Label_TFM_Hide)}" />
+      <apex:outputText rendered="{!(taskFieldManager.Copy_Placement__c== $Label.GC_Label_TFM_Hide)}"></apex:outputText>
+      
+      <apex:inputField value="{!got.Outdoors__c}" rendered="{!(taskFieldManager.Outdoors__c!= $Label.GC_Label_TFM_Hide)}"/>
+      <apex:outputText rendered="{!(taskFieldManager.Outdoors__c== $Label.GC_Label_TFM_Hide)}"></apex:outputText>
+      
+      <apex:inputField value="{!got.Installation_Method__c}" rendered="{!(taskFieldManager.Installation_Method__c!= $Label.GC_Label_TFM_Hide)}" />   
+      <apex:outputText rendered="{!(taskFieldManager.Installation_Method__c== $Label.GC_Label_TFM_Hide)}"></apex:outputText>
+      
+      <apex:inputField value="{!got.Save_Signs__c}" rendered="{!(taskFieldManager.Save_Signs__c!= $Label.GC_Label_TFM_Hide)}"/>
+      <apex:outputText rendered="{!(taskFieldManager.Save_Signs__c== $Label.GC_Label_TFM_Hide)}"></apex:outputText>
+          
+      <apex:inputField value="{!got.GOT_Background__c}" rendered="{!(taskFieldManager.Background__c!= $Label.GC_Label_TFM_Hide)}"/>
+      <apex:outputText rendered="{!(taskFieldManager.Background__c== $Label.GC_Label_TFM_Hide)}"></apex:outputText>
+      
+      <apex:pageBlockSectionItem helpText="{!$ObjectType.GC_GES_Order_Task__c.fields.Design_Element_Task__c.inlineHelpText}">
+        <apex:outputLabel value="{!$ObjectType.GC_GES_Order_Task__c.fields.Design_Element_Task__c.Label}" />
+        <apex:selectList id="detSelect" value="{!got.Design_Element_Task__c}" size="1">
+          <apex:selectOptions value="{!designElementTasks}"></apex:selectOptions>
+        </apex:selectList>
+      </apex:pageBlockSectionItem>
+    </apex:pageBlockSection>
+    <apex:pageBlockSection rendered="{!got.Item_Template__c == 'Custom Graphics' && !editMode}" title="Custom Graphics Item Options">
+      <apex:outputField value="{!got.QuantityNum__c}" />
+      <apex:outputField value="{!got.Sign_Title__c}" />
+      <apex:outputField value="{!got.Sign_Width__c}" />
+      <apex:outputField value="{!got.Sign_Length__c}" />
+      <apex:outputField value="{!got.GOT_Sign_Type__c}" />
+      <apex:outputField value="{!got.GOT_Single_Double_Sided__c}" />
+      <apex:outputField value="{!got.GOT_Sign_Type_Other__c}" />
+      <apex:outputField value="{!got.Material__c}" />
+      <apex:outputField value="{!got.Sign_Copy__c}" />
+      <apex:outputField value="{!got.Layout__c}" />
+      <apex:outputField value="{!got.GOT_Copy_Placement__c}" />
+      <apex:outputField value="{!got.Outdoors__c}" />
+      <apex:outputField value="{!got.Installation_Method__c}" />
+      <apex:outputField value="{!got.Save_Signs__c}" />
+      <apex:outputField value="{!got.GOT_Background__c}" />
+      <apex:outputField value="{!got.Design_Element_Task__c}" />
+    </apex:pageBlockSection>
+    <apex:pageBlockSection rendered="{!got.Item_Template__c == 'Custom Graphics' && editMode}" title="Custom Graphics Item Options">
+      <apex:pageBlockSectionItem helpText="{!$ObjectType.GC_GES_Order_Task__c.fields.QuantityNum__c.inlineHelpText}">
+        <apex:outputLabel value="{!$ObjectType.GC_GES_Order_Task__c.fields.QuantityNum__c.Label}" />
+        <apex:outputPanel >
+          <div class="requiredInput">
+            <div class="requiredBlock"></div>
+            <apex:inputField value="{!got.QuantityNum__c}" />
+          </div>
+        </apex:outputPanel>
+      </apex:pageBlockSectionItem>
+      <apex:inputField value="{!got.Sign_Title__c}" />
+      <apex:pageBlockSectionItem helpText="{!$ObjectType.GC_GES_Order_Task__c.fields.Sign_Width__c.inlineHelpText}">
+        <apex:outputLabel value="{!$ObjectType.GC_GES_Order_Task__c.fields.Sign_Width__c.Label}" />
+        <apex:outputPanel >
+          <div class="requiredInput">
+            <div class="requiredBlock"></div>
+            <apex:inputField value="{!got.Sign_Width__c}" />
+          </div>
+        </apex:outputPanel>
+      </apex:pageBlockSectionItem>
+      <apex:pageBlockSectionItem helpText="{!$ObjectType.GC_GES_Order_Task__c.fields.Sign_Length__c.inlineHelpText}">
+        <apex:outputLabel value="{!$ObjectType.GC_GES_Order_Task__c.fields.Sign_Length__c.Label}" />
+        <apex:outputPanel >
+          <div class="requiredInput">
+            <div class="requiredBlock"></div>
+            <apex:inputField value="{!got.Sign_Length__c}" />
+          </div>
+        </apex:outputPanel>
+      </apex:pageBlockSectionItem>
+      <apex:inputField value="{!got.GOT_Sign_Type__c}" />
+      <apex:inputField value="{!got.GOT_Single_Double_Sided__c}" />
+      <apex:inputField value="{!got.GOT_Sign_Type_Other__c}" />
+      <apex:selectList id="materialSelect" value="{!got.Material__c}" size="1">
+        <apex:selectOptions value="{!materialAttributes}"></apex:selectOptions>
+      </apex:selectList>
+      <apex:inputtextarea styleClass="signCopy ckeditor" richtext="false" value="{!got.Sign_Copy__c}" style="width:100%" />
+      <apex:inputtextarea styleClass="layout ckeditor" richtext="false" value="{!got.Layout__c}" style="width:100%" />
+      <apex:inputField value="{!got.GOT_Copy_Placement__c}" />
+      <apex:inputField value="{!got.Outdoors__c}" />
+      <apex:inputField value="{!got.Installation_Method__c}" />
+      <apex:inputField value="{!got.Save_Signs__c}" />
+      <apex:inputField value="{!got.GOT_Background__c}" />
+      <apex:pageBlockSectionItem helpText="{!$ObjectType.GC_GES_Order_Task__c.fields.Design_Element_Task__c.inlineHelpText}">
+        <apex:outputLabel value="{!$ObjectType.GC_GES_Order_Task__c.fields.Design_Element_Task__c.Label}" />
+        <apex:selectList id="detSelect" value="{!got.Design_Element_Task__c}" size="1">
+          <apex:selectOptions value="{!designElementTasks}"></apex:selectOptions>
+        </apex:selectList>
+      </apex:pageBlockSectionItem>
+    </apex:pageBlockSection>
+      <apex:pageBlockSection title="Labor Item Options" rendered="{!got.Item_Template__c == 'Labor' && editMode}">
+      <apex:pageBlockSectionItem helpText="{!$ObjectType.GC_GES_Order_Task__c.fields.QuantityNum__c.inlineHelpText}">
+        <apex:outputLabel value="{!$ObjectType.GC_GES_Order_Task__c.fields.QuantityNum__c.Label}" />
+        <apex:outputPanel >
+          <div class="requiredInput">
+            <div class="requiredBlock"></div>
+            <apex:inputField value="{!got.QuantityNum__c}" />
+          </div>
+        </apex:outputPanel>
+      </apex:pageBlockSectionItem>
+       <apex:pageBlockSectionItem >
+      <apex:outputLabel value="Labor In/Out" />
+       <apex:outputPanel >
+        <div class="requiredInput">
+          <div class="requiredBlock"></div>
+      <apex:inputField value="{!got.Labor_In_Out__c}" required="true" />
+       </div>
+        </apex:outputPanel>
+       </apex:pageBlockSectionItem>
+     </apex:pageBlockSection>
+      
+     <apex:pageBlockSection title="Labor Item Options" rendered="{!got.Item_Template__c == 'Labor' && !editMode}">
+        <apex:outputField value="{!got.QuantityNum__c}" />
+        <apex:outputField value="{!got.Labor_In_Out__c}" />
+     </apex:pageBlockSection>   
+  </apex:outputPanel>
+</apex:component>

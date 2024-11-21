@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>New_Design_Element_Task</fullName>
+    <availability>online</availability>
+    <displayType>massActionButton</displayType>
+    <linkType>javascript</linkType>
+    <masterLabel>New Design Element Task</masterLabel>
+    <openType>onClickJavaScript</openType>
+    <protected>false</protected>
+    <requireRowSelection>true</requireRowSelection>
+    <url>var recId = window.location.href.substring(window.location.href.lastIndexOf(&#39;/&#39;) + 1).split(&#39;?&#39;)[0];  
+window.top.location.href = &quot;/apex/GC_DesignElement_Edit?drfId=&quot; + recId + &quot;&amp;isCommunity=false&quot;;</url>
+</WebLink>

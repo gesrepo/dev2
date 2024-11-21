@@ -1,0 +1,80 @@
+<apex:page controller="GC_RegChkListTaskDtlsController"  contentType="application/vnd.ms-excel#{!formName+'_'+showName+'_'+showYear}.xls" cache="true" action="{!MarkAsReadOnLoad}">
+   <style>
+        
+        caption {
+          display: table-caption;
+          text-align: left;      
+          font-weight: bold; 
+          font-size:15px;   
+        }
+         table.classTable1 td {
+            border: 1px solid black;
+            padding: 5px;
+        }
+        table.classTable1 tbody tr:first-child {
+            background-color: #00a0af;
+            font-weight: bold;
+        }               
+        table.classTable2 td {
+            border: none;
+            padding: 5px;
+        }
+        
+        table.classTable2 caption { 
+            display: table-caption;
+            text-align: center;
+            border: 1px solid black;
+        }
+    </style>
+            <table class="classTable2">
+                <caption style="font-size:20px;"><b>{!formName}</b></caption>
+                <thead>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td style="font-weight: bold;" ><apex:outputText value="Show Details" /></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td style="font-weight: bold;" ><apex:outputText value="Show Name" /></td>
+                        <td style="text-align: right;"><apex:outputText value="{!showName}" /></td>
+                    </tr>
+                    <tr>
+                        <td style="font-weight: bold;"><apex:outputText value="Show Start Date" /></td>
+                        <td ><apex:outputText value="{!startDate}" /></td>
+                    </tr>
+                    <tr>
+                        <td style="font-weight: bold;"><apex:outputText value="Show End Date" /></td>
+                        <td ><apex:outputText value="{!endDate}" /></td>
+                    </tr>
+                </tbody>
+            </table>
+            <br></br><br></br>
+            <table class="classTable1" border="1">
+                <caption style="font-size: x-large; font-weight: bold;" >Submitted Details</caption>
+                <thead>
+                    <tr>
+                        <!--<th >Date Changed</th>-->
+                        <apex:repeat value="{!listOfLabels}" var="taskLabel">
+                            <th ><apex:outputText value="{!taskLabel}" /></th>
+                        </apex:repeat>
+                    </tr>
+                </thead>
+                <tbody>
+                        <apex:repeat value="{!allQuestionDetails}" var="taskDetail">
+                            <tr >
+                                <!--<td  ><apex:outputText value="{!taskDetail.UpdatedOn}" /></td>-->
+                                <apex:repeat value="{!taskDetail}" var="taskStatusDetail">
+                                    <td  ><apex:outputText value="{!taskStatusDetail}" /></td>
+                                </apex:repeat>
+                            </tr>
+                        </apex:repeat>
+                </tbody>
+            </table>
+        <!--</apex:pageBlock>-->
+
+</apex:page>

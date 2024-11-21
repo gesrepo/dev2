@@ -1,0 +1,343 @@
+<apex:page standardStylesheets="true" showHeader="false" sidebar="false" docType="html-5.0" standardController="GC_Connect2_Show__c" extensions="GC_ShowOnTheGoHolderController">
+    <html xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <head>
+            <apex:outputPanel id="filterControls">
+                <apex:form id="form1">
+                    <style type="text/css">
+                        .selectionDiv {
+                        margin: 20px !important;
+                        }
+                        
+                        .itemTable td {
+                        padding: 3px;
+                        }
+                        
+                        .columnHeader {
+                        padding: 5px;
+                        }
+                        
+                        .pageButtons {
+                        width: 300px;
+                        }
+                        
+                        .selectAllBox {
+                        float: right;
+                        }
+                        
+                        .bPageBlock .detailList tr td
+                        {
+                        border-bottom: white!important;
+                        }
+                        
+                        
+                        
+                        .tableStyle {border-collapse: collapse; border-spacing: 0px 0px; }
+                        .colStyle1 { width: 16.5%;text-align:right; padding-top:3px; padding-bottom:5px}
+                        .colStyle2 { width: 10%; padding-left:20px; padding-top:5px; padding-bottom:5px}
+                        .colStyle3 { width: 10%;text-align:right; padding-top:5px; padding-bottom:5px}
+                        .colStyle4 { width: 21%; padding-left:20px; padding-top:5px; padding-bottom:5px}
+                        .colStyle5 { width: 10%;text-align:right; padding-top:5px; padding-bottom:5px}
+                        .colStyle6 { width: 32%; padding-left:20px; padding-top:5px; padding-bottom:4px}
+                        .rowstyle { border-bottom-style:solid; border-bottom-width:1px;border-bottom-color:#E8E8E8 }
+                        
+                        .colStyle11 { width: 1.5%;text-align:right; padding-top:3px; padding-bottom:5px}
+                        .colStyle21 { width: 11%; padding-left:20px; padding-top:5px; padding-bottom:5px}
+                        .colStyle31 { width: 10%;text-align:right; padding-top:5px; padding-bottom:5px}
+                        .colStyle41 { width: 21%; padding-left:20px; padding-top:5px; padding-bottom:5px}
+                        .colStyle51 { width: 10%;text-align:right; padding-top:5px; padding-bottom:5px}
+                        .colStyle61 { width: 32%; padding-left:20px; padding-top:5px; padding-bottom:4px}
+                    </style>
+                    <!-- <apex:includeScript value="{!$Resource.jQuery}" />
+<apex:stylesheet value="{!URLFOR($Resource.Lightning_Design_System, 'assets/styles/salesforce-lightning-design-system.min.css')}" /> -->
+              
+                <script type="text/javascript">
+                        function checkAll(cb, checkId) {
+                        var inputElem = document.getElementsByTagName("input");
+                        for (var i = 0; i < inputElem.length; i++) {
+                            if (inputElem[i].id.indexOf(checkId) != -1) {
+                                if (checkId == "selectedItems") {
+                                    if (!cb.checked) {
+                                        for (var j = 0; j < inputElem.length; j++) {
+                                            inputElem[j].checked = cb.checked;
+                                        }
+                                    }
+                                    inputElem[i].checked = cb.checked;
+                                }
+                            }
+                        }
+                    }
+                    
+                    function redirectUrl(recordId, signOrderOpt, workOrderOpt,pdfByLocation, isCommunity){
+                        if(isCommunity=='true')
+                        {
+                            window.open("/GESConnect/GC_ShowOnTheGoPDF?urlParamsId="+recordId+"&signOrderOpt="+signOrderOpt+"&workOrderOpt="+workOrderOpt+"&pdfByLocation="+pdfByLocation, "_blank")
+                        }
+                        else
+                        { 
+                            window.open("/apex/GC_ShowOnTheGoPDF?urlParamsId="+recordId+"&signOrderOpt="+signOrderOpt+"&workOrderOpt="+workOrderOpt+"&pdfByLocation="+pdfByLocation, "_blank")}
+                    }
+                
+                </script>
+                
+               
+                    <apex:outputPanel id="outputQueries">
+                        <apex:pageMessages id="messages" />
+                        
+                        <apex:actionStatus id="serachStatusSpinner">
+                            <apex:facet name="start">
+                                <c:GC_StatusSpinner statusMessage="Searching." /> 
+                            </apex:facet>
+                        </apex:actionStatus>
+                        <apex:actionStatus id="savingFiltersSpinner">
+                            <apex:facet name="start">
+                                <c:GC_Community_StatusSpinner statusMessage="Saving Filter Values" />
+                            </apex:facet>
+                        </apex:actionStatus>
+                       
+                        <apex:pageBlock id="pb1">
+                            <!-- <apex:outputPanel> -->
+                            <apex:outputPanel id="outputQueries"> 
+                                <apex:pageBlockSection title="Order Filters" columns="1">
+                                    
+                                    <apex:panelGrid columns="6" border="0" styleClass="tableStyle" width="100%" columnClasses="colStyle1,colStyle2,colStyle3,colStyle4,colStyle5,colStyle6" rowClasses="rowstyle">
+                                        <apex:outputLabel value="Delivery Location" />
+                                        <apex:selectList value="{!deliveryLocation}" size="1" styleClass="slds-select" style="width: 200px;">
+                                            <apex:selectOptions value="{!deliveryLocations}"></apex:selectOptions>
+                                        </apex:selectList>
+                                        
+                                        <apex:outputLabel value="Area Description" />
+                                        <apex:selectList value="{!areaDescription}" size="1" styleClass="slds-select" style="width: 200px;">
+                                            <apex:selectOptions value="{!orderAreaDescriptions}"></apex:selectOptions>
+                                        </apex:selectList>
+                                        
+                                        <apex:outputLabel value="Delivery Area" />
+                                        <apex:selectList value="{!delivery}" size="1" styleClass="slds-select" style="width: 200px;">
+                                            <apex:selectOptions value="{!deliveryAreas}"></apex:selectOptions>
+                                        </apex:selectList>
+                                        
+                                        <apex:outputLabel value="Department" />
+                                        <apex:selectList value="{!department}" size="1" styleClass="slds-select" style="width: 200px;">
+                                            <apex:selectOptions value="{!departments}"></apex:selectOptions>
+                                        </apex:selectList>
+                                        
+                                        <apex:outputLabel value="User Name" />
+                                        <apex:selectList value="{!Username}" size="8" styleClass="slds-select" multiselect="true" style="height: 100px;width: 200px;">
+                                            <apex:selectOptions value="{!Usernames}"></apex:selectOptions>
+                                        </apex:selectList>
+                                        
+                                        <apex:outputLabel value="Venue Location" />
+                                        <apex:selectList value="{!venue}" size="1" styleClass="slds-select" style="width: 200px;">
+                                            <apex:selectOptions value="{!venueLocations}"></apex:selectOptions> 
+                                        </apex:selectList>
+                                    </apex:panelGrid>
+                                    <apex:outputpanel id="collapsibleSection">
+                                        <!-- <div id="contentToToggle" style="display:{!if(showSection,"block","none")};">-->
+                                        <div id="contentToToggle" >
+                                            <apex:pageBlockSection collapsible="true" title="More Filters" columns="1" id="pbsXI">
+                                                <apex:panelGrid columns="6" border="0" styleClass="tableStyle" width="100%" columnClasses="colStyle1,colStyle2,colStyle3,colStyle4,colStyle5,colStyle6" rowClasses="rowstyle">
+                                                    <apex:outputLabel >Modified Date From</apex:outputLabel>
+                                                    <input type="date" value="{!modifiedDateFrom}"/>
+                                               
+                                               
+                                                    <apex:outputLabel >Modified Date To</apex:outputLabel>
+                                                    <apex:input type="date" value="{!modifiedDateTo}" />
+                               
+                                                    <apex:outputLabel value="Vendor" />
+                                                    <apex:selectList value="{!vendor}" size="1" styleClass="slds-select" style="width: 150px;">
+                                                        <apex:selectOptions value="{!vendors}"></apex:selectOptions> 
+                                                    </apex:selectList>
+                                                
+                                                    <apex:outputLabel >Creation Date From</apex:outputLabel>
+                                                    <apex:input type="date" value="{!createdDateFrom}" />
+                                               
+                                                    <apex:outputLabel >Creation Date To</apex:outputLabel>
+                                                    <apex:input type="date" value="{!createdDateTo}" />
+                                               
+                                                    <apex:outputLabel value="Keyword Search" />
+                                                    <apex:inputText styleClass="slds-input"  value="{!searchString}" style="width: 150px"/> 
+                                               
+                                                    <apex:outputLabel >Delivery Date/Time</apex:outputLabel>
+                                                    <apex:input type="date" value="{!showDateDelivery}" />
+                                                
+                                                    <apex:outputLabel >Completion Date/Time</apex:outputLabel>
+                                                    <apex:input type="date" value="{!showDateCompletion}" />
+                                               
+                                                    <apex:outputLabel >Removal Date/Time</apex:outputLabel>
+                                                    <apex:input type="date" value="{!showDateRemoval}" />
+                                                    
+                                                    <apex:outputLabel >Removal Date/Time</apex:outputLabel>
+                                                    <apex:input type="date" value="{!showDateRemoval}" />
+                                                    
+                                                    <apex:outputLabel >Onsite Contact Person</apex:outputLabel>
+                                                    <apex:selectList value="{!onsiteContactPerson}" size="8" styleClass="slds-select" multiselect="true" style="height: 100px;width: 200px;">
+                                                    <apex:selectOptions value="{!OnsiteContactPersons}"></apex:selectOptions>
+                                                    </apex:selectList>
+                                                    
+                                                    <apex:outputLabel >Onsite Contact Person Other</apex:outputLabel>
+                                                    <apex:selectList value="{!onsiteContactPersonOther}" size="8" styleClass="slds-select" multiselect="true" style="height: 100px;width: 200px;">
+                                                    <apex:selectOptions value="{!OnsiteContactPersonOthers}"></apex:selectOptions>
+                                                    </apex:selectList>
+                                                </apex:panelGrid>
+                                            </apex:pageBlockSection>
+                                        </div>
+                                    </apex:outputpanel>   
+                                    
+                                    
+                                    <apex:pageBlockSection id="pbs7" columns="3" collapsible="false">
+                                                                               
+                                        <apex:pageBlockSectionItem >
+                                            <apex:outputPanel > 
+                                                
+                                                <apex:commandButton value="Search" action="{!searchResults}" styleClass="pageButton" reRender="pbs1, messages"  status="serachStatusSpinner" oncomplete="saveFilters()"/> 
+                                                <apex:commandButton value="Reset" action="{!resetSearch}"  id="btnReset" reRender="filterControls, outputQueries"/>
+                                                <apex:actionFunction name="saveFilters" action="{!SavePDFFilter}" reRender="messages" status="savingFiltersSpinner"/>
+                                            </apex:outputPanel> 
+                                        </apex:pageBlockSectionItem> 
+                                    
+                                  </apex:pageBlockSection> 
+                                </apex:pageBlockSection> 
+                            </apex:outputPanel>  
+                        </apex:pageBlock>
+                    </apex:outputPanel>
+                </apex:form>
+                
+                        <apex:form >
+                            <apex:pageBlock >
+                            <apex:pageBlockSection id="pbs2" title="Select Status(s) to Print" columns="3" collapsible="true">
+                                <apex:pageBlockSectionItem >
+                                    <apex:outputPanel >
+                                        <c:GC_MultiselectPicklist leftLabel="Available"
+                                        rightLabel="Selected" size="8" width="150px" showUpDownButtons="false"
+                                        leftOption="{!availableStatus}"
+                                        rightOption="{!selectedStatus}"/>
+                                        <apex:outputLabel value="Only Sign Orders"/>
+                                        <apex:inputCheckbox value="{!signOrder}"></apex:inputCheckbox>
+                                        <apex:outputLabel value="Only Work Orders"/>
+                                        <apex:inputCheckbox value="{!workOrder}"></apex:inputCheckbox>
+                                        <apex:outputLabel value="Generate PDF by Location"/>
+                                        <apex:inputCheckbox value="{!pdfByLocation}"></apex:inputCheckbox>
+                                    </apex:outputPanel>
+                                    
+                                </apex:pageBlockSectionItem>
+                            </apex:pageBlockSection>    
+                            <apex:pageBlockSection id="pbsx"  columns="3" collapsible="false">
+                                <apex:pageBlockSectionItem >
+                                    <apex:outputPanel >
+                                        <apex:commandButton value="Generate PDF" action="{!itemsSelected}" styleClass="pageButton"  reRender="pbs1, messages, redirect1"  />
+                                        <apex:commandButton value="Export to CSV" action="{!itemsSelectedtoExportCSV}" styleClass="pageButton"  reRender="pbs1, messages" />
+                                    </apex:outputPanel>
+                                </apex:pageBlockSectionItem>
+                            </apex:pageBlockSection>
+                            
+                            
+                            <apex:pageBlockSection id="pbs1" title="Select Order(s)" columns="1" collapsible="false">
+                                <apex:pageBlockTable value="{!orderHolders}" var="orderHolder" styleClass="itemTable" id="itemTable2" headerClass="columnHeader">
+                                    <apex:column >
+                                        <apex:facet name="header">
+                                            <apex:inputCheckbox onclick="checkAll(this, 'selectedItems');">
+                                            </apex:inputCheckbox>
+                                        </apex:facet>
+                                        <apex:inputCheckbox value="{!orderHolder.selected}" id="selectedItems" />
+                                    </apex:column>
+                                    <apex:column >
+                                        <apex:facet name="header">
+                                            <apex:commandLink action="{!performSort}" reRender="pbs1, messages" value="Show" status="serachStatusSpinner">
+                                                <apex:param name="initialOrderByQuery" value="Connect2_Show__c"></apex:param>
+                                            </apex:commandLink>
+                                        </apex:facet>
+                                        <apex:outputText value="{!orderHolder.order.Show_Name__c}" />
+                                    </apex:column>
+                                    <apex:column >
+                                        <apex:facet name="header">
+                                            <apex:commandLink action="{!performSort}" reRender="pbs1, messages" value="Order Number" status="serachStatusSpinner">
+                                                <apex:param name="initialOrderByQuery" value="Order_Number__c"></apex:param>
+                                            </apex:commandLink>
+                                        </apex:facet>
+                                        <apex:outputText value="{!orderHolder.order.Order_Number__c}" />
+                                    </apex:column> 
+                                    <apex:column >
+                                        <apex:facet name="header">
+                                            <apex:commandLink action="{!performSort}" reRender="pbs1, messages" value="Delivery Location" status="serachStatusSpinner">
+                                                <apex:param name="initialOrderByQuery" value="Booth_Area__c"></apex:param>
+                                            </apex:commandLink>
+                                        </apex:facet>
+                                        <apex:outputText value="{!orderHolder.order.Booth_Area__c}" />
+                                    </apex:column>
+                                    <apex:column >
+                                        <apex:facet name="header">
+                                            <apex:commandLink action="{!performSort}" reRender="pbs1, messages" value="Area Description" status="serachStatusSpinner">
+                                                <apex:param name="initialOrderByQuery" value="Order_Area_Description__c"></apex:param>
+                                            </apex:commandLink>
+                                        </apex:facet>
+                                        <apex:outputText value="{!orderHolder.order.Order_Area_Description__c}" />
+                                    </apex:column>
+                                    <apex:column >
+                                        <apex:facet name="header"> 
+                                            <apex:commandLink action="{!performSort}" reRender="pbs1, messages" value="Delivery Date" status="serachStatusSpinner">
+                                                <apex:param name="initialOrderByQuery" value="Delivery_Date_Time__c"></apex:param>
+                                            </apex:commandLink>
+                                        </apex:facet>
+                                        <apex:outputField value="{!orderHolder.order.Delivery_Date_Time__c}" />
+                                    </apex:column>
+                                    <apex:column >
+                                        <apex:facet name="header"> 
+                                            <apex:commandLink action="{!performSort}" reRender="pbs1, messages" value="Completion Date" status="serachStatusSpinner">
+                                                <apex:param name="initialOrderByQuery" value="Completion_Date_Time__c"></apex:param>
+                                            </apex:commandLink>
+                                        </apex:facet>
+                                        <apex:outputField value="{!orderHolder.order.Completion_Date_Time__c}" />
+                                    </apex:column>
+                                    <apex:column >
+                                        <apex:facet name="header"> 
+                                            <apex:commandLink action="{!performSort}" reRender="pbs1, messages" value="Removal Date" status="serachStatusSpinner">
+                                                <apex:param name="initialOrderByQuery" value="Removal_Date_Time__c"></apex:param>
+                                            </apex:commandLink>
+                                        </apex:facet>
+                                        <apex:outputField value="{!orderHolder.order.Removal_Date_Time__c}" />
+                                    </apex:column>
+                                    <apex:column >
+                                        <apex:facet name="header"> 
+                                            <apex:commandLink action="{!performSort}" reRender="pbs1, messages" value="Status" status="serachStatusSpinner">
+                                                <apex:param name="initialOrderByQuery" value="Status__c"></apex:param>
+                                            </apex:commandLink>
+                                         </apex:facet>
+                                        <apex:outputText value="{!orderHolder.order.Status__c}" />
+                                    </apex:column>
+                                    <apex:column >
+                                        <apex:facet name="header"> User Name </apex:facet>
+                                        <apex:outputText value="{!orderHolder.order.User_Name__c}" />
+                                    </apex:column>
+                                    <apex:column >
+                                        <apex:facet name="header"> Creation Date</apex:facet>
+                                        <apex:outputField value="{!orderHolder.order.CreatedDate}" />
+                                    </apex:column>
+                                    <apex:column >
+                                        <apex:facet name="header"> Modified Date</apex:facet>
+                                        <apex:outputField value="{!orderHolder.order.LastModifiedDate}" />
+                                    </apex:column>
+                                </apex:pageBlockTable>
+                            </apex:pageBlockSection>
+                            
+
+                            <apex:commandButton value="Generate PDF" action="{!itemsSelected}" styleClass="pageButton" reRender="pbs1, messages, redirect1"/>
+                            <apex:commandButton value="Export to CSV" action="{!itemsSelectedtoExportCSV}" styleClass="pageButton" reRender="pbs1, messages" />
+                            <apex:outputPanel id="redirect1">
+                                <apex:repeat value="{!urlParamsObjectList}" var="obj">
+                                    <script>
+                                    
+                                        console.log('ll==={!obj.Id}');
+                                        redirectUrl('{!obj.Id}', '{!signOrderOpt}', '{!workOrderOpt}', '{!pdfByLocation}', '{!isCommunityBool}');
+                                    
+
+                                    </script>
+                                </apex:repeat>
+                            </apex:outputPanel>
+                           
+                        </apex:pageBlock>
+                       
+                   
+                </apex:form>
+                </apex:outputPanel>
+                 </head>
+            </html>
+        </apex:page>

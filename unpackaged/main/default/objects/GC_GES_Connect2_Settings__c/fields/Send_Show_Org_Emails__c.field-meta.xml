@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Send_Show_Org_Emails__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Sends the show organizer emails upon order changes.</description>
+    <inlineHelpText>Sends the show organizer emails upon order changes.</inlineHelpText>
+    <label>Send Show Org Emails</label>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

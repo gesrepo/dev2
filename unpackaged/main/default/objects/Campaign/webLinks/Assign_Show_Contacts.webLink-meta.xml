@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Assign_Show_Contacts</fullName>
+    <availability>online</availability>
+    <description>Adds all Booth Contacts as Campaign Members for Show specified on the Campaign</description>
+    <displayType>button</displayType>
+    <linkType>javascript</linkType>
+    <masterLabel>Assign Show Contacts</masterLabel>
+    <openType>onClickJavaScript</openType>
+    <protected>false</protected>
+    <url>if (typeof(srcUp) == &#39;function&#39;)
+{
+    srcUp(&#39;/apex/PageLogisticsCampaignMemberAssignment?id={!Campaign.Id}&amp;isdtp=vw&#39;);
+} 
+else 
+{    
+     window.open(&#39;/apex/PageLogisticsCampaignMemberAssignment?id={!Campaign.Id}&amp;isdtp=vw&#39;);
+}</url>
+</WebLink>

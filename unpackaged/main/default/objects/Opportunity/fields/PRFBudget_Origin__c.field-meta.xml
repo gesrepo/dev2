@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PRFBudget_Origin__c</fullName>
+    <label>Budget Origin</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Client Actual</fullName>
+                <default>false</default>
+                <label>Client Actual</label>
+            </value>
+            <value>
+                <fullName>Client Estimate</fullName>
+                <default>false</default>
+                <label>Client Estimate</label>
+            </value>
+            <value>
+                <fullName>GES Estimate-Email Playback</fullName>
+                <default>false</default>
+                <label>GES Estimate-Email Playback</label>
+            </value>
+            <value>
+                <fullName>GES Estimate-Client Doc Playback</fullName>
+                <default>false</default>
+                <label>GES Estimate-Client Doc Playback</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

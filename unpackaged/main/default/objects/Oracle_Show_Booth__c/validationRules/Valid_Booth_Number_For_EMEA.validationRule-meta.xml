@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Valid_Booth_Number_For_EMEA</fullName>
+    <active>true</active>
+    <errorConditionFormula>(ISNEW() || ISCHANGED(BOOTH_NUMBER__c)) &amp;&amp;  NOT(ISNULL(BOOTH_NUMBER__c)) &amp;&amp; Show_Occurrence__r.RecordType.Name = &#39;EMEA - Exhibition&#39; &amp;&amp; (UPPER(BOOTH_NUMBER__c) = &#39;NOT SURE&#39; || UPPER(BOOTH_NUMBER__c) = &#39;NOTSURE&#39;)</errorConditionFormula>
+    <errorDisplayField>BOOTH_NUMBER__c</errorDisplayField>
+    <errorMessage>Please enter a valid stand/booth number</errorMessage>
+</ValidationRule>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ED_PRFSubmit_BudgetOrigin</fullName>
+    <active>true</active>
+    <description>The Budget Origin must be filled in on PRF Submit.</description>
+    <errorConditionFormula>PRF_Submitted__c =true &amp;&amp; 
+ISPICKVAL(GBMS_CORE__c, &quot;GBMS&quot;) &amp;&amp; 
+$RecordType.DeveloperName = &quot;E_D_Projects&quot; 
+&amp;&amp;( GBMSProjectStatus__c =&quot;Forecast&quot; || ISBLANK(GBMSProjectStatus__c )) 
+&amp;&amp; ISPICKVAL( PRFBudget_Origin__c , &quot;&quot;)
+&amp;&amp; ($Profile.Name != &quot;GES Administrator Interface&quot;)</errorConditionFormula>
+    <errorDisplayField>PRFBudget_Origin__c</errorDisplayField>
+    <errorMessage>A Budget Origin value is required to submit this PRF.</errorMessage>
+</ValidationRule>

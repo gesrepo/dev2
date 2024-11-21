@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>E_D_Won_Opportunities_Current_Year</fullName>
+    <columns>OPPORTUNITY.NAME</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>OPPORTUNITY.CLOSE_DATE</columns>
+    <columns>OPPORTUNITY.STAGE_NAME</columns>
+    <columns>CORE.USERS.ALIAS</columns>
+    <columns>GBMS_Project_ID__c</columns>
+    <columns>Project_Type__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>OPPORTUNITY.RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Opportunity.E_D_Projects,Opportunity.E_D_Projects_Proposal,Opportunity.E_D_Projects_Read_Only</value>
+    </filters>
+    <filters>
+        <field>Show_Close_Date__c</field>
+        <operation>equals</operation>
+        <value>THIS_YEAR</value>
+    </filters>
+    <filters>
+        <field>CORE.USERS.ALIAS</field>
+        <operation>equals</operation>
+        <value>saundk</value>
+    </filters>
+    <label>E&amp;D Won Opportunities-Current Year</label>
+    <language>en_US</language>
+    <sharedTo>
+        <group>US_Users</group>
+    </sharedTo>
+</ListView>

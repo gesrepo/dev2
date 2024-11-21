@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Selling_Group__c</fullName>
+    <label>Selling Group</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>- None -</fullName>
+                <default>true</default>
+                <label>- None -</label>
+            </value>
+            <value>
+                <fullName>APAC - Design &amp; Build</fullName>
+                <default>false</default>
+                <label>APAC - Design &amp; Build</label>
+            </value>
+            <value>
+                <fullName>Canada - Exhibitions</fullName>
+                <default>false</default>
+                <label>Canada - Exhibitions</label>
+            </value>
+            <value>
+                <fullName>EMEA - Account Mgmt</fullName>
+                <default>false</default>
+                <label>EMEA - Account Mgmt</label>
+            </value>
+            <value>
+                <fullName>EMEA - AV</fullName>
+                <default>false</default>
+                <label>EMEA - AV</label>
+            </value>
+            <value>
+                <fullName>EMEA - Design &amp; Build</fullName>
+                <default>false</default>
+                <label>EMEA - Design &amp; Build</label>
+            </value>
+            <value>
+                <fullName>EMEA - Exhibition, Event, Show Ready</fullName>
+                <default>false</default>
+                <label>EMEA - Exhibition, Event, Show Ready</label>
+            </value>
+            <value>
+                <fullName>EMEA - Exhibitor Graphics</fullName>
+                <default>false</default>
+                <label>EMEA - Exhibitor Graphics</label>
+            </value>
+            <value>
+                <fullName>EMEA - Marketing</fullName>
+                <default>false</default>
+                <label>EMEA - Marketing</label>
+            </value>
+            <value>
+                <fullName>N/A</fullName>
+                <default>false</default>
+                <label>N/A</label>
+            </value>
+            <value>
+                <fullName>Poken</fullName>
+                <default>false</default>
+                <label>Poken</label>
+            </value>
+            <value>
+                <fullName>US - Accommodations</fullName>
+                <default>false</default>
+                <label>US - Accommodations</label>
+            </value>
+            <value>
+                <fullName>US - AV</fullName>
+                <default>false</default>
+                <label>US - AV</label>
+            </value>
+            <value>
+                <fullName>US - Corporate Accounts</fullName>
+                <default>false</default>
+                <label>US - Corporate Accounts</label>
+            </value>
+            <value>
+                <fullName>US - Events</fullName>
+                <default>false</default>
+                <label>US - Events</label>
+            </value>
+            <value>
+                <fullName>US - Exhibitions</fullName>
+                <default>false</default>
+                <label>US - Exhibitions</label>
+            </value>
+            <value>
+                <fullName>US - Exhibitor Graphics</fullName>
+                <default>false</default>
+                <label>US - Exhibitor Graphics</label>
+            </value>
+            <value>
+                <fullName>US - Logistics</fullName>
+                <default>false</default>
+                <label>US - Logistics</label>
+            </value>
+            <value>
+                <fullName>US - Marketing</fullName>
+                <default>false</default>
+                <label>US - Marketing</label>
+            </value>
+            <value>
+                <fullName>US - TSE</fullName>
+                <default>false</default>
+                <label>US - TSE</label>
+            </value>
+            <value>
+                <fullName>Visit</fullName>
+                <default>false</default>
+                <label>Visit</label>
+            </value>
+            <value>
+                <fullName>US - Lead Gen</fullName>
+                <default>false</default>
+                <label>US - Lead Gen</label>
+            </value>
+            <value>
+                <fullName>-None-</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>-None-</label>
+            </value>
+            <value>
+                <fullName>Audio Visual</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Audio Visual</label>
+            </value>
+            <value>
+                <fullName>Branded Entertainment</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Branded Entertainment</label>
+            </value>
+            <value>
+                <fullName>Canada</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Canada</label>
+            </value>
+            <value>
+                <fullName>Corporate Accounts</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Corporate Accounts</label>
+            </value>
+            <value>
+                <fullName>EMEA - Custom Build</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>EMEA - Custom Build</label>
+            </value>
+            <value>
+                <fullName>EMEA - Exhibition</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>EMEA - Exhibition</label>
+            </value>
+            <value>
+                <fullName>EMEA AV</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>EMEA AV</label>
+            </value>
+            <value>
+                <fullName>Housing</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Housing</label>
+            </value>
+            <value>
+                <fullName>National</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>National</label>
+            </value>
+            <value>
+                <fullName>Portfolio</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Portfolio</label>
+            </value>
+            <value>
+                <fullName>Program</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Program</label>
+            </value>
+            <value>
+                <fullName>Regional</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Regional</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

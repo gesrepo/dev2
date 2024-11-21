@@ -1,0 +1,258 @@
+<apex:page standardController="Claims__Incident_Report__c" extensions="WorkersCompensationController" showHeader="false" sidebar="false" standardStylesheets="true">
+   <head>
+      <apex:stylesheet value="{!URLFOR($Resource.IncidentReportsForm, 'css/IncidentWebForm.css')}"/>
+      <apex:stylesheet value="{!URLFOR($Resource.IncidentReportsForm, 'css/IncidentStyle.css')}"/>
+   </head>
+   <body>
+      <apex:form id="pbForm" >
+         <div id="content" class="shadow">
+            <div id="header">
+               <p>
+                  <apex:image value="{!URLFOR($Resource.IncidentReportsForm, 'images/GESLogo.jpeg')}" />
+               </p>
+               <apex:outputPanel layout="none" >
+                  <h2>{!$Label.Supervisor_Report_Portal}</h2> 
+                  <p><h3>{!$Label.SP_Subtitle}</h3></p>
+               </apex:outputPanel>
+            </div>
+            <apex:pageBlock >
+               <apex:pageBlockSection >
+                  <apex:inputField value="{!Claims__Incident_Report__c.Injured_Employee_Full_Name__c}" required="true"/>
+                  <apex:inputField value="{!Claims__Incident_Report__c.Injured_Employee_Social_Security_Number__c}"/>
+               </apex:pageBlockSection>
+               <!-- Employeer deets -->
+               <apex:pageBlockSection title="{!$Label.Employer_Details}">
+                  <apex:inputField value="{!Claims__Incident_Report__c.Current_Employer__c}"/>
+                  <apex:inputField value="{!Claims__Incident_Report__c.Employer_Address__c}"/>
+                  <apex:inputField value="{!Claims__Incident_Report__c.Employer_City__c}"/>
+                  <apex:inputField value="{!Claims__Incident_Report__c.Employer_State__c}"/>
+                  <apex:inputField value="{!Claims__Incident_Report__c.Employer_Zip_Code__c}"/>
+                  <apex:inputField value="{!Claims__Incident_Report__c.Show_Name_or_ID__c}" required="true"/>
+                  <apex:inputField value="{!Claims__Incident_Report__c.Job_Number__c}" required="true"/>
+                  <apex:inputField value="{!Claims__Incident_Report__c.Location_Code__c}" required="true"/>
+               </apex:pageBlockSection>
+               <apex:pageBlockSection title="{!$Label.Location}">
+                  <apex:inputField value="{!Claims__Incident_Report__c.Job_Location_where_Injury_Occured__c}"/>
+                  <apex:inputField value="{!Claims__Incident_Report__c.Job_Location_Address__c}"/>
+                  <apex:inputField value="{!Claims__Incident_Report__c.Job_Location_City__c}"/>
+                  <apex:inputField value="{!Claims__Incident_Report__c.Job_Location_State__c}"/>
+                  <apex:inputField value="{!Claims__Incident_Report__c.Job_Location_Zip_Code__c}"/>
+                  <apex:inputField value="{!Claims__Incident_Report__c.Date_and_Time_of_Injury_Exposure__c}"/>
+                  <apex:inputField value="{!Claims__Incident_Report__c.Claims__IncidentDate__c}" />
+                  <apex:inputField value="{!Claims__Incident_Report__c.Claims__Date_Reported__c}" />
+               </apex:pageBlockSection>
+               <!-- Witness Stuff -->
+               <apex:pageBlockSection title="{!$Label.Witness_Details}">
+                  <apex:inputField value="{!Claims__Incident_Report__c.Witness_1_Full_Name__c}"/>
+                  <apex:inputField value="{!Claims__Incident_Report__c.Witness_1_Phone_Number__c}"/>
+                  <apex:inputField value="{!Claims__Incident_Report__c.Witness_1_Email__c}"/>
+                  <br/>
+                  <apex:inputField value="{!Claims__Incident_Report__c.Witness_2_Full_Name__c}"/>
+                  <apex:inputField value="{!Claims__Incident_Report__c.Witness_2_Phone_Number__c}"/>
+                  <apex:inputField value="{!Claims__Incident_Report__c.Witness_2_Email__c}"/>
+                  <br/>
+                  <apex:inputField value="{!Claims__Incident_Report__c.Witness_3_Full_Name__c}"/>
+                  <apex:inputField value="{!Claims__Incident_Report__c.Witness_3_Phone_Number__c}"/>
+                  <apex:inputField value="{!Claims__Incident_Report__c.Witness_3_Email__c}"/>
+                  <br/>
+                  <apex:inputField value="{!Claims__Incident_Report__c.Witness_4_Full_Name__c}"/>
+                  <apex:inputField value="{!Claims__Incident_Report__c.Witness_4_Phone_Number__c}"/>
+                  <apex:inputField value="{!Claims__Incident_Report__c.Witness_4_Email__c}"/>
+               </apex:pageBlockSection>
+               <!-- Employee deets -->
+               <apex:pageBlockSection title="{!$Label.Employee_Details}">
+                  <apex:inputField value="{!Claims__Incident_Report__c.Job_Title__c}"/>
+                  <apex:inputField value="{!Claims__Incident_Report__c.Department__c}"/>
+                  <apex:inputField value="{!Claims__Incident_Report__c.Start_of_Shift__c}"/>
+                  <apex:inputField value="{!Claims__Incident_Report__c.End_of_Shift__c}"/>
+                  <apex:inputField value="{!Claims__Incident_Report__c.Last_Day_Employee_Worked__c}"/>
+                  <apex:inputField value="{!Claims__Incident_Report__c.Employee_Status__c}"/>
+                  <apex:inputField value="{!Claims__Incident_Report__c.Rate_of_Pay__c}"/>
+                  <apex:inputField value="{!Claims__Incident_Report__c.Was_Employee_Hired_to_Work_40_Hours__c}"/>
+                  <apex:inputField value="{!Claims__Incident_Report__c.Pay_Period_Ends__c}"/>
+                  <apex:inputField value="{!Claims__Incident_Report__c.Was_Employee_Hired_to_Work_Part_Time__c}"/>
+                  <apex:inputField value="{!Claims__Incident_Report__c.How_Many_Hours_Part_Time__c}"/>
+                  <apex:inputField value="{!Claims__Incident_Report__c.Paid__c}"/>
+               </apex:pageBlockSection>
+               <!-- Injury deets -->
+               <apex:pageBlockSection title="{!$Label.Injury_Details}">
+                  <apex:inputField value="{!Claims__Incident_Report__c.Area_of_Body_Affected__c}"/>
+                  <apex:inputField value="{!Claims__Incident_Report__c.Specific_Body_Part_Affected__c}"/>
+                  <apex:inputField value="{!Claims__Incident_Report__c.Type_of_illness__c}"/>
+                  <apex:inputField value="{!Claims__Incident_Report__c.Main_Cause__c}"/>
+
+                  <apex:inputField styleClass="textAreaBox" value="{!Claims__Incident_Report__c.Description_of_How_Injury_Occurred__c}"/>
+               </apex:pageBlockSection>
+
+               <!-- Extra info for conditional formatting -->
+               <apex:outputPanel id="one">
+               <apex:pageBlockSection >
+                  <apex:pageBlockSectionItem >
+                     <apex:outputLabel value="{!$ObjectType.Claims__Incident_Report__c.fields.Was_Accident_Reported_Immediately__c.Label}" />
+                     <apex:actionRegion >
+                        <apex:inputField id="reported" value="{!Claims__Incident_Report__c.Was_Accident_Reported_Immediately__c}">
+                           <apex:actionSupport event="onchange" rerender="one" />
+                        </apex:inputField>
+                     </apex:actionRegion>
+                  </apex:pageBlockSectionItem>
+                  <apex:inputField label="{!$Label.Reporting_accident}" value="{!Claims__Incident_Report__c.Why_Accident_not_Reported_Immediately__c}" 
+                  rendered="{!Claims__Incident_Report__c.Was_Accident_Reported_Immediately__c == 'No'}"/>
+               </apex:pageBlockSection>
+            </apex:outputPanel>
+
+               <apex:outputPanel id="oneX">
+               <apex:pageBlockSection >
+                  <apex:pageBlockSectionItem >
+                     <apex:outputLabel value="{!$ObjectType.Claims__Incident_Report__c.fields.Injury_Happened_During__c.Label}" />
+                     <apex:actionRegion >
+                        <apex:inputField id="reported" value="{!Claims__Incident_Report__c.Injury_Happened_During__c}">
+                           <apex:actionSupport event="onchange" rerender="oneX" />
+                        </apex:inputField>
+                     </apex:actionRegion>
+                  </apex:pageBlockSectionItem>
+                  <apex:inputField value="{!Claims__Incident_Report__c.Injury_Other__c}" 
+                  rendered="{!Claims__Incident_Report__c.Injury_Happened_During__c == 'Other'}"/>
+               </apex:pageBlockSection>
+            </apex:outputPanel>
+
+                  <apex:outputPanel id="two">
+                  <apex:pageBlockSection >
+                  <apex:pageBlockSectionItem >
+                     <apex:outputLabel value="{!$ObjectType.Claims__Incident_Report__c.fields.Was_Discipline_Given__c.Label}"/>
+                     <apex:actionRegion >
+                        <apex:inputField value="{!Claims__Incident_Report__c.Was_Discipline_Given__c}">
+                           <apex:actionSupport event="onchange" rerender="two"/>
+                        </apex:inputField>
+                     </apex:actionRegion>
+                  </apex:pageBlockSectionItem>
+                  <apex:inputField value="{!Claims__Incident_Report__c.Why_was_Discipline_Given__c}" 
+                  rendered="{!Claims__Incident_Report__c.Was_Discipline_Given__c == 'Yes'}"/>
+               </apex:pageBlockSection>
+                </apex:outputPanel>
+
+               <apex:outputPanel id="three">
+                  <apex:pageBlockSection >
+                  <apex:pageBlockSectionItem >
+                     <apex:outputLabel value="{!$ObjectType.Claims__Incident_Report__c.fields.Has_Employee_Returned_to_Work__c.Label}" />
+                     <apex:actionRegion >
+                        <apex:inputField value="{!Claims__Incident_Report__c.Has_Employee_Returned_to_Work__c}">
+                           <apex:actionSupport event="onchange" rerender="three" />
+                        </apex:inputField>
+                     </apex:actionRegion>
+                  </apex:pageBlockSectionItem>
+                  <apex:inputField value="{!Claims__Incident_Report__c.Date_Returned_to_Work__c}" 
+                  rendered="{!Claims__Incident_Report__c.Has_Employee_Returned_to_Work__c == 'Yes'}"/>
+                  <apex:inputField value="{!Claims__Incident_Report__c.Have_Medical_Services_been_Rendered__c}"/>
+               </apex:pageBlockSection>
+            </apex:outputPanel>
+
+             <apex:outputPanel id="four">
+                  <apex:pageBlockSection >
+                  <apex:pageBlockSectionItem >
+                     <apex:outputLabel value="{!$ObjectType.Claims__Incident_Report__c.fields.Has_the_Employee_Been_Hospitalised__c.Label}" />
+                     <apex:actionRegion >
+                        <apex:inputField value="{!Claims__Incident_Report__c.Has_the_Employee_Been_Hospitalised__c}">
+                           <apex:actionSupport event="onchange" rerender="four" />
+                        </apex:inputField>
+                     </apex:actionRegion>
+                  </apex:pageBlockSectionItem>
+                  <apex:inputField value="{!Claims__Incident_Report__c.Type_of_Treatment_Received__c}" 
+                  rendered="{!Claims__Incident_Report__c.Has_the_Employee_Been_Hospitalised__c == 'Yes'}"/>
+               </apex:pageBlockSection>
+            </apex:outputPanel>
+
+                <apex:outputPanel id="five">
+                  <apex:pageBlockSection >
+                  <apex:pageBlockSectionItem >
+                     <apex:outputLabel value="{!$ObjectType.Claims__Incident_Report__c.fields.Has_Employee_Refused_Medical_Treatment__c.Label}" />
+                     <apex:actionRegion >
+                        <apex:inputField value="{!Claims__Incident_Report__c.Has_Employee_Refused_Medical_Treatment__c}">
+                           <apex:actionSupport event="onchange" rerender="five" />
+                        </apex:inputField>
+                     </apex:actionRegion>
+                  </apex:pageBlockSectionItem>
+                  <apex:inputField value="{!Claims__Incident_Report__c.Date_Refused_Medical_Treatment__c}" 
+                  rendered="{!Claims__Incident_Report__c.Has_Employee_Refused_Medical_Treatment__c == 'Yes'}"/>
+                  <apex:inputField value="{!Claims__Incident_Report__c.Why_Employee_Refused_Medical_Treatment__c}" 
+                  rendered="{!Claims__Incident_Report__c.Has_Employee_Refused_Medical_Treatment__c == 'Yes'}"/>
+               </apex:pageBlockSection>
+            </apex:outputPanel>
+
+                <apex:outputPanel id="six">
+                  <apex:pageBlockSection >
+                  <apex:pageBlockSectionItem >
+                     <apex:outputLabel value="{!$ObjectType.Claims__Incident_Report__c.fields.Were_Safeguards_Equipment_Provided__c.Label}" />
+                     <apex:actionRegion >
+                        <apex:inputField value="{!Claims__Incident_Report__c.Were_Safeguards_Equipment_Provided__c}">
+                           <apex:actionSupport event="onchange" rerender="six" />
+                        </apex:inputField>
+                     </apex:actionRegion>
+                  </apex:pageBlockSectionItem>
+                  <apex:inputField value="{!Claims__Incident_Report__c.Were_Safeguards_Equipment_Used__c}" 
+                  rendered="{!Claims__Incident_Report__c.Were_Safeguards_Equipment_Provided__c == 'Yes'}"/>
+                  <apex:inputField value="{!Claims__Incident_Report__c.Was_Safety_Manager_Notified__c}"/>
+                  <apex:inputField value="{!Claims__Incident_Report__c.If_Fatality_Give_Date_of_Death__c}"/>
+               </apex:pageBlockSection>
+            </apex:outputPanel>
+
+             <apex:outputPanel id="seven">
+                  <apex:pageBlockSection >
+                  <apex:pageBlockSectionItem >
+                     <apex:outputLabel value="{!$ObjectType.Claims__Incident_Report__c.fields.Do_you_Doubt_the_Validity_of_the_Claim__c.Label}" />
+                     <apex:actionRegion >
+                        <apex:inputField required="true" 
+                        value="{!Claims__Incident_Report__c.Do_you_Doubt_the_Validity_of_the_Claim__c}">
+                           <apex:actionSupport event="onchange" rerender="seven" />
+                        </apex:inputField>
+                     </apex:actionRegion>
+                  </apex:pageBlockSectionItem>
+                  <apex:inputField value="{!Claims__Incident_Report__c.Why_do_you_Doubt_the_Validity__c}" 
+                  rendered="{!Claims__Incident_Report__c.Do_you_Doubt_the_Validity_of_the_Claim__c == 'Yes'}"/>
+               </apex:pageBlockSection>
+         </apex:outputPanel>
+
+         <apex:outputLabel value="{!$ObjectType.Claims__Incident_Report__c.fields.Additional_Comments_Supervisor_Portal__c.Label}" />
+            <apex:inputField value="{!Claims__Incident_Report__c.Additional_Comments_Supervisor_Portal__c}"/>
+            <apex:pageBlockSection title="{!$Label.Preparer_Information}">
+                  <apex:inputField value="{!Claims__Incident_Report__c.Preparer_Title__c}" required="true"/>
+                  <apex:inputField value="{!Claims__Incident_Report__c.Preparer_Telephone_Number__c}" required="true"/>
+                  <apex:inputField value="{!Claims__Incident_Report__c.Date_Prepared__c}" required="true"/>
+                  <apex:inputField value="{!Claims__Incident_Report__c.Claims__Email__c}" required="true"/>
+                  <apex:inputField value="{!Claims__Incident_Report__c.Claims__Report_Completed_By__c}" required="true"/>
+                 
+                  <!-- required -->
+                  <apex:inputField label="Preparer Home City" value="{!Claims__Incident_Report__c.Claims__IncidentLocation__c}" />
+               </apex:pageBlockSection>
+
+         <span class="disclaimer">
+            <apex:outputPanel layout="none">
+            <p class="pad"> 
+              {!$Label.SP_disclaimer}
+           </p>
+           <p>
+              <apex:outputLabel value="{!$Label.Additional_Forms}" />
+            </p>
+              <apex:outputLink target="_blank" value="{!$Label.Intranet_Link}" id="theLink">
+               {!$Label.Click_here_Forms}
+           </apex:outputLink>
+            </apex:outputPanel>
+         </span>
+
+               <!-- Save Button -->
+               <apex:pageBlockButtons location="bottom">
+                  <apex:commandButton action="{!Save}" value="{!$Label.Save_Report_Add_Attachments}"/>
+                  <apex:commandButton action="{!saveWithoutSubmission}" value="{!$Label.SaveWithoutSubmit}"/>
+               </apex:pageBlockButtons>
+            </apex:pageBlock>
+         </div>
+         <apex:actionStatus id="status">
+            <apex:facet name="start">
+               <div class="awaitingModel">&nbsp;</div>
+               <div class="awaitingImg">
+                  <img src="/img/loading32.gif" width="25" height="25" />
+               </div>
+            </apex:facet>
+         </apex:actionStatus>
+      </apex:form>
+   </body>
+</apex:page>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Lock_Completed_Requests_for_Others</fullName>
+    <active>true</active>
+    <description>If any user other than one with the profile GC Convention Planning Manager/Drafter tries to edit a FRP with Status as Complete, this rule will not allow that edit.</description>
+    <errorConditionFormula>($Profile.Name  &lt;&gt; &#39;GC Convention Planning Manager/Drafter&#39; &amp;&amp; $Profile.Name &lt;&gt; &#39;GES Service&#39;&amp;&amp; $Profile.Name &lt;&gt; &#39;Digital Products/IT Admin&#39; &amp;&amp; $Profile.Name &lt;&gt; &#39;System Administrator&#39;)  &amp;&amp;   Status__c  = &#39;Complete&#39;</errorConditionFormula>
+    <errorMessage>Complete requests cannot be edited. Please submit a new request or clone for additional work.</errorMessage>
+</ValidationRule>

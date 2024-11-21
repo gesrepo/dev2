@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Opportunity_name_cannot_be_edited</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+OR(
+RecordType.DeveloperName = &#39;FieldSecurityCR&#39;,
+RecordType.DeveloperName = &#39;FieldSecurityCV&#39;,
+RecordType.DeveloperName = &#39;FieldSecurityDB&#39;,
+RecordType.DeveloperName = &#39;FieldSecurity_IA&#39;,
+RecordType.DeveloperName = &#39;FieldSecurityLO&#39;,
+RecordType.DeveloperName = &#39;FieldSecurityLPE&#39;,
+RecordType.DeveloperName = &#39;FieldSecurityLPM&#39;,
+RecordType.DeveloperName = &#39;FieldSecurityLR&#39;,
+RecordType.DeveloperName = &#39;FieldSecurity_NE&#39;,
+RecordType.DeveloperName = &#39;FieldSecurityPS&#39;,
+RecordType.DeveloperName = &#39;FieldSecurityTS&#39;,
+RecordType.DeveloperName = &#39;MasterShowOccurrence&#39;,
+RecordType.DeveloperName = &#39;SalesRepShowOccurrence&#39;
+),
+ISCHANGED( Name ),
+NOT($User.Email = &#39;cdingwall@ges.com&#39;)
+)</errorConditionFormula>
+    <errorDisplayField>Name</errorDisplayField>
+    <errorMessage>Opportunity name cannot be edited</errorMessage>
+</ValidationRule>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Field_is_for_Show_Organizer_only</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(NOT(CONTAINS(TEXT(Show_Role__c), &#39;Show Organizer&#39;)),  OR(ReceiveNotificationAllOrders__c,   ReceiveNotificationMyOrders__c, Weekly_Order_Summary_Emails__c, Daily_Order_Summary_Emails__c, No_Notification_Emails__c))</errorConditionFormula>
+    <errorDisplayField>Connect2_Show__c</errorDisplayField>
+    <errorMessage>Team Members  with a show organizer role only are allowed to check these check-boxes. Please select either of the two check-boxes from left.</errorMessage>
+</ValidationRule>

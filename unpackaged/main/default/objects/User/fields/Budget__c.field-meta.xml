@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Budget__c</fullName>
+    <label>Budget</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>true</sorted>
+            <value>
+                <fullName>Canada</fullName>
+                <default>false</default>
+                <label>Canada</label>
+            </value>
+            <value>
+                <fullName>COE - Finance &amp; Accounting</fullName>
+                <default>false</default>
+                <label>COE - Finance &amp; Accounting</label>
+            </value>
+            <value>
+                <fullName>COE - IT</fullName>
+                <default>false</default>
+                <label>COE - IT</label>
+            </value>
+            <value>
+                <fullName>COE - Marketing</fullName>
+                <default>false</default>
+                <label>COE - Marketing</label>
+            </value>
+            <value>
+                <fullName>Corporate Accounts</fullName>
+                <default>false</default>
+                <label>Corporate Accounts</label>
+            </value>
+            <value>
+                <fullName>EMEA Exhibition</fullName>
+                <default>false</default>
+                <label>EMEA Exhibition</label>
+            </value>
+            <value>
+                <fullName>Events</fullName>
+                <default>false</default>
+                <label>Events</label>
+            </value>
+            <value>
+                <fullName>OnPeak</fullName>
+                <default>false</default>
+                <label>OnPeak</label>
+            </value>
+            <value>
+                <fullName>OnServices</fullName>
+                <default>false</default>
+                <label>OnServices</label>
+            </value>
+            <value>
+                <fullName>Branded Experiences</fullName>
+                <default>false</default>
+                <label>Spiro</label>
+            </value>
+            <value>
+                <fullName>US Exhibition</fullName>
+                <default>false</default>
+                <label>US Exhibition</label>
+            </value>
+            <value>
+                <fullName>Viad</fullName>
+                <default>false</default>
+                <label>Viad</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

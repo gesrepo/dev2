@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>KSA_Seamless_Startup_Pods_Case</fullName>
+    <filterScope>Queue</filterScope>
+    <label>KSA Seamless Startup Pods</label>
+    <queue>KSA_Seamless_Startup_Pods</queue>
+    <sharedTo>
+        <allInternalUsers />
+    </sharedTo>
+</ListView>

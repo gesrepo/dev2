@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>GES_Meeting_Planner__c</fullName>
+    <label>GES Meeting Planner</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>MK – Maria Kramer</fullName>
+                <default>false</default>
+                <label>MK – Maria Kramer</label>
+            </value>
+            <value>
+                <fullName>BC – Brenda Chambers</fullName>
+                <default>false</default>
+                <label>BC – Brenda Chambers</label>
+            </value>
+            <value>
+                <fullName>LH – Linda Holland</fullName>
+                <default>false</default>
+                <label>LH – Linda Holland</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

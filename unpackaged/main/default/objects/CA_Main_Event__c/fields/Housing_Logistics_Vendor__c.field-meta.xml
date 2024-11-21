@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Housing_Logistics_Vendor__c</fullName>
+    <label>Housing Logistics Vendor</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>true</sorted>
+            <value>
+                <fullName>American Express</fullName>
+                <default>false</default>
+                <label>American Express</label>
+            </value>
+            <value>
+                <fullName>Attendee Responsible</fullName>
+                <default>false</default>
+                <label>Attendee Responsible</label>
+            </value>
+            <value>
+                <fullName>Attendees book on own with code</fullName>
+                <default>false</default>
+                <label>Attendees book on own with code</label>
+            </value>
+            <value>
+                <fullName>Congress</fullName>
+                <default>false</default>
+                <label>Congress</label>
+            </value>
+            <value>
+                <fullName>Congress Central</fullName>
+                <default>false</default>
+                <label>Congress Central</label>
+            </value>
+            <value>
+                <fullName>GES</fullName>
+                <default>false</default>
+                <label>GES</label>
+            </value>
+            <value>
+                <fullName>GES - Test</fullName>
+                <default>false</default>
+                <label>GES - Test</label>
+            </value>
+            <value>
+                <fullName>Hilton Hawaiian Village</fullName>
+                <default>false</default>
+                <label>Hilton Hawaiian Village</label>
+            </value>
+            <value>
+                <fullName>Lindsey Kokenge manages</fullName>
+                <default>false</default>
+                <label>Lindsey Kokenge manages</label>
+            </value>
+            <value>
+                <fullName>N/A</fullName>
+                <default>false</default>
+                <label>N/A</label>
+            </value>
+            <value>
+                <fullName>OnPeak</fullName>
+                <default>false</default>
+                <label>OnPeak</label>
+            </value>
+            <value>
+                <fullName>Staff Responsibility</fullName>
+                <default>false</default>
+                <label>Staff Responsibility</label>
+            </value>
+            <value>
+                <fullName>Third Party</fullName>
+                <default>false</default>
+                <label>Third Party</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

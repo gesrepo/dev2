@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>EMEA_Bunkered_Live_NEC_Case</fullName>
+    <filterScope>Queue</filterScope>
+    <label>EMEA Bunkered Live NEC</label>
+    <queue>EMEA_Bunkered_Live_NEC</queue>
+    <sharedTo>
+        <allInternalUsers />
+    </sharedTo>
+</ListView>

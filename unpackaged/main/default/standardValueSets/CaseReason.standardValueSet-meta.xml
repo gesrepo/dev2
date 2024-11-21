@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StandardValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sorted>true</sorted>
+    <standardValue>
+        <fullName>Complex functionality</fullName>
+        <default>false</default>
+        <label>Complex functionality</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Confirmed Contracted Services</fullName>
+        <default>false</default>
+        <label>Confirmed Contracted Services</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Customer Placed Order On Expresso</fullName>
+        <default>false</default>
+        <label>Customer Placed Order On Expresso</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Deadline Past</fullName>
+        <default>false</default>
+        <label>Deadline Past</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Define</fullName>
+        <default>false</default>
+        <label>Define</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Existing problem</fullName>
+        <default>false</default>
+        <label>Existing problem</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Instructions not clear</fullName>
+        <default>false</default>
+        <label>Instructions not clear</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>New problem</fullName>
+        <default>false</default>
+        <label>New problem</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Referred To Show Ready</fullName>
+        <default>false</default>
+        <label>Referred To Show Ready</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>User didn&#39;t attend training</fullName>
+        <default>false</default>
+        <label>User didn&#39;t attend training</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Works Order Produced</fullName>
+        <default>false</default>
+        <label>Works Order Produced</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+</StandardValueSet>

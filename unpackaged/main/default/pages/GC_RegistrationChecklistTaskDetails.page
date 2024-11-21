@@ -1,0 +1,157 @@
+<apex:page showHeader="false" sidebar="false" controller="GC_RegChkListTaskDtlsController" readonly="false"  applyBodyTag="false" standardStylesheets="false" applyHtmlTag="false" action="{!MarkAsReadOnLoad}" renderAs="pdf" >
+    <html>
+        <head>
+            <apex:stylesheet value="{!URLFOR($Resource.Lightning_Design_System, 'assets/styles/salesforce-lightning-design-system.min.css')}" />
+            <apex:stylesheet value="{!URLFOR($Resource.GC_Assets, 'GC_Assets/css/GC_Styles.css')}" />
+            <apex:includeScript value="{!$Resource.jQuery}" />
+            <apex:includeScript value="{!URLFOR($Resource.GC_Assets, 'GC_Assets/js/GC_init.js')}" />
+            <apex:includeScript value="{!$Resource.Alasql}"/>
+            <script>
+                var projectNumber = GetURLParameter('projectNumber');
+                var chkListId = GetURLParameter('chkListId');
+                function GetURLParameter(sParam) {
+                    var sPageURL = window.location.search.substring(1);
+                    var sURLVariables = sPageURL.split('&');
+                    for (var i = 0; i < sURLVariables.length; i++)
+                    {
+                        var sParameterName = sURLVariables[i].split('=');
+                        if (sParameterName[0] == sParam)
+                        {
+                            return sParameterName[1];
+                        }
+                    }
+                }
+                function navigateToCheckListTasks(){
+                    //var ShowInstanceChecklistId=chkListId;
+                    window.top.location.href = "/apex/GC_RegistrationCheckListTasks?id="+chkListId+"&projectNumber="+projectNumber;
+                    //LoadCheckListTasks(chkListId);
+                }
+                
+                var $html = $(document.getElementsByTagName('html')[0]);
+                $html.height(0);
+            </script>
+            <style>
+                html.first{
+                    height: 0;
+                }
+                form {
+                    margin: 20px;
+                    padding: 20px;
+                    }
+                    
+                body {
+                    font-family: Arial Unicode MS;
+                    font-weight: normal;
+                    font-size: 75%;
+                }
+                
+                h1{
+                    font-family: 'Verdana', 'Geneva', sans-serif;
+                    color:#0e4866;
+                    }
+                
+                h2{
+                    font-family: 'Verdana', 'Geneva', sans-serif;
+                    color:#696969;
+                }
+                
+                h3, tr {
+                    font-family: 'Verdana', 'Geneva', sans-serif;
+                    color:#0e4866;
+                }
+                
+                .lbl{
+                    font-family: 'Verdana', 'Geneva', sans-serif;
+                    color:#ACACAC;
+                    font-size: 12px;
+                }
+                
+                h4,h5,h6 {
+                    font-family: 'Verdana', 'Geneva', sans-serif;
+                    font-size: 100%;
+                    margin: 0px;
+                    display: inline;
+                }
+                .details-table{
+                    width: 75%          
+                }
+            
+               @page {
+                    size: letter;
+                    margin: 25mm;
+                    margin-top: 0.8cm;
+                    @bottom-center {
+                        content: "Page " counter(page) " of " counter(pages);
+                    }   
+                }
+                .page-break {
+                    display:block;
+                    page-break-after:always;
+
+                }
+                
+                tr:hover {background-color: #f5f5f5;}
+                th, td {
+                    padding: 8px;
+                    text-align: left;
+                }
+                
+            </style>
+        </head>
+        <body>
+            <apex:form >                
+                <div id="section-to-print" style="page-break-after:always;">
+                    <div class="slds-media__body" style="text-align:right; font-size:16px;font-weight:bold;" >
+                        <p class="slds-page-header__title slds-align-middle">
+                            <span style="color:blue; font-weight:bold;" >Show Name : {!showName}
+                            <br></br></span>
+                            
+                        </p>
+                        <p class="slds-page-header__title slds-align-middle">
+                            <span>Show Start Date : {!startDate} 
+                            <br></br></span>
+                            
+                        </p>
+                        <p class="slds-page-header__title slds-align-middle">
+                            <span>Show End Date : {!endDate} 
+                            <br></br></span>
+                            
+                        </p>
+                    </div>
+                    <div class="slds-media__body" style="font-size:14px;font-weight:bold;">
+                        <p class="slds-page-header__title slds-align-middle">
+                            <span>{!formName} 
+                            <br></br><br></br><br></br></span>
+                            
+                        </p>
+                    </div>
+                  
+                
+                    <apex:repeat value="{!allQuestionDetails}" var="taskDetail">
+                        <div class="page-break" >
+                            <table   class="details-table">
+                                <thead>
+                                    <tr>
+                                        <th><b>Label</b></th>
+                                        <th><b>Value</b></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <apex:variable value="{!1}" var="rowNum"/>
+                                    <apex:repeat value="{!taskDetail}" var="taskStatusDetail">
+                                        <tr> 
+                                            <td><apex:outputText value="{!listOfLabels[rowNum]}" /></td>
+                                            <td><apex:outputText value="{!taskStatusDetail}" /></td>
+                                            <apex:variable var="rowNum" value="{!IF(rowNum == taskDetail.size-1, rowNum, rowNum+1)}"/>
+                                        </tr>   
+                                    </apex:repeat>
+                                </tbody>
+                            </table>
+                            <p style="page-break-after: auto;" />
+                        </div>
+                    </apex:repeat>
+                </div>
+            </apex:form>
+        </body>
+    </html>
+</apex:page>

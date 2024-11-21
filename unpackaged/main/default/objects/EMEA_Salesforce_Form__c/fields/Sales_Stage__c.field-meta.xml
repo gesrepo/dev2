@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Sales_Stage__c</fullName>
+    <inlineHelpText>Please select the Sales Stage</inlineHelpText>
+    <label>Sales Stage</label>
+    <required>false</required>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>SL1(Prospect)</fullName>
+                <default>false</default>
+                <label>SL1(Prospect)</label>
+            </value>
+            <value>
+                <fullName>SL3 (Qualified)</fullName>
+                <default>false</default>
+                <label>SL3 (Qualified)</label>
+            </value>
+            <value>
+                <fullName>PO (Value Proposition/Proposal)</fullName>
+                <default>false</default>
+                <label>PO (Value Proposition/Proposal)</label>
+            </value>
+            <value>
+                <fullName>PS (Proposal/Quotation Sent)</fullName>
+                <default>false</default>
+                <label>PS (Proposal/Quotation Sent)</label>
+            </value>
+            <value>
+                <fullName>CR (Won)</fullName>
+                <default>false</default>
+                <label>CR (Won)</label>
+            </value>
+            <value>
+                <fullName>LO (Lost)</fullName>
+                <default>false</default>
+                <label>LO (Lost)</label>
+            </value>
+            <value>
+                <fullName>DB (Decline to Bid)</fullName>
+                <default>false</default>
+                <label>DB (Decline to Bid)</label>
+            </value>
+            <value>
+                <fullName>TS (Tracking Show)</fullName>
+                <default>false</default>
+                <label>TS (Tracking Show)</label>
+            </value>
+            <value>
+                <fullName>TS –New Business</fullName>
+                <default>false</default>
+                <label>TS –New Business</label>
+            </value>
+            <value>
+                <fullName>Competitor Contract</fullName>
+                <default>false</default>
+                <label>Competitor Contract</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

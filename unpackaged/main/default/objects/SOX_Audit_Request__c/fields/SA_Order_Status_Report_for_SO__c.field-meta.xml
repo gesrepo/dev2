@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SA_Order_Status_Report_for_SO__c</fullName>
+    <inlineHelpText>Order Status Report for Show Organizer in Exception Mode with all exceptions cleared (CSM)</inlineHelpText>
+    <label>Order Status Report for Show Organizer</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Yes- Upload Form</fullName>
+                <default>false</default>
+                <label>Yes- Upload Form</label>
+            </value>
+            <value>
+                <fullName>No</fullName>
+                <default>false</default>
+                <label>No</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

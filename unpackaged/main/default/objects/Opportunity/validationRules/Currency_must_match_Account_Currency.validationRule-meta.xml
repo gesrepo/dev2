@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Currency_must_match_Account_Currency</fullName>
+    <active>true</active>
+    <description>Opportunity Currency must match Account Currency</description>
+    <errorConditionFormula>AND 
+
+($RecordType.DeveloperName = &#39;E_D_Projects&#39; ||
+$RecordType.DeveloperName = &#39;EventAndExperiential&#39; ||
+$RecordType.DeveloperName = &#39;EMEA_Custom_Build&#39;,
+
+ OR
+(ISPICKVAL(CurrencyIsoCode, &#39;USD&#39;) &lt;&gt; 
+ISPICKVAL(Account.CurrencyIsoCode, &#39;USD&#39;),
+
+ISPICKVAL(CurrencyIsoCode, &#39;GBP&#39;) &lt;&gt;   ISPICKVAL(Account.CurrencyIsoCode, &#39;GBP&#39;),
+
+ISPICKVAL(CurrencyIsoCode, &#39;AED&#39;) &lt;&gt; 
+ISPICKVAL(Account.CurrencyIsoCode, &#39;AED&#39;),
+
+ISPICKVAL(CurrencyIsoCode, &#39;EUR&#39;) &lt;&gt; 
+ISPICKVAL(Account.CurrencyIsoCode, &#39;EUR&#39;),
+
+ISPICKVAL(CurrencyIsoCode, &#39;CAD&#39;) &lt;&gt; 
+ISPICKVAL(Account.CurrencyIsoCode, &#39;CAD&#39;),
+
+ISPICKVAL(CurrencyIsoCode, &#39;SAR&#39;) &lt;&gt; 
+ISPICKVAL(Account.CurrencyIsoCode, &#39;SAR&#39;),
+
+ISPICKVAL(CurrencyIsoCode, &#39;AUD&#39;) &lt;&gt; 
+ISPICKVAL(Account.CurrencyIsoCode, &#39;AUD&#39;)),
+
+OR
+(AND( ISNEW(), ( Is_Converted__c ))))</errorConditionFormula>
+    <errorDisplayField>CurrencyIsoCode</errorDisplayField>
+    <errorMessage>Opportunity Currency must match Account Currency</errorMessage>
+</ValidationRule>

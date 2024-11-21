@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Tiles_Access__c</fullName>
+    <description>Select the tiles that you want to give access to this team member</description>
+    <inlineHelpText>Select the tiles that you want to give access to this team member</inlineHelpText>
+    <label>Tiles Access</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Tasks</fullName>
+                <default>false</default>
+                <label>Tasks</label>
+            </value>
+            <value>
+                <fullName>Orders</fullName>
+                <default>false</default>
+                <label>Orders</label>
+            </value>
+            <value>
+                <fullName>Attendee Management</fullName>
+                <default>false</default>
+                <label>Attendee Management</label>
+            </value>
+            <value>
+                <fullName>Analytics</fullName>
+                <default>false</default>
+                <label>Analytics</label>
+            </value>
+            <value>
+                <fullName>Service Tickets</fullName>
+                <default>false</default>
+                <label>Service Tickets</label>
+            </value>
+            <value>
+                <fullName>Social Media</fullName>
+                <default>false</default>
+                <label>Social Media</label>
+            </value>
+            <value>
+                <fullName>ProofBook</fullName>
+                <default>false</default>
+                <label>ProofBook</label>
+            </value>
+            <value>
+                <fullName>Exhibitors</fullName>
+                <default>false</default>
+                <label>Exhibitors</label>
+            </value>
+            <value>
+                <fullName>Accomodation</fullName>
+                <default>false</default>
+                <label>Accomodation</label>
+            </value>
+            <value>
+                <fullName>Graphic Proofing</fullName>
+                <default>false</default>
+                <label>Graphic Proofing</label>
+            </value>
+            <value>
+                <fullName>SharePoint</fullName>
+                <default>false</default>
+                <label>SharePoint</label>
+            </value>
+            <value>
+                <fullName>Sponsorship</fullName>
+                <default>false</default>
+                <label>Sponsorship</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

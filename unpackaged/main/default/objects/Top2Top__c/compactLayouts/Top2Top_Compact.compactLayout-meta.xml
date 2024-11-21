@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CompactLayout xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Top2Top_Compact</fullName>
+    <fields>Name</fields>
+    <fields>Account_Name__c</fields>
+    <fields>Show_Name__c</fields>
+    <fields>Exhibition_Opportunity__c</fields>
+    <fields>Occurrence_Revenue__c</fields>
+    <fields>Occurrence_Owner__c</fields>
+    <fields>Assessment_Contact__c</fields>
+    <fields>Assigned_Executive__c</fields>
+    <fields>Submit_for_Review__c</fields>
+    <fields>Assessment_Complete__c</fields>
+    <label>Top2Top Compact</label>
+</CompactLayout>

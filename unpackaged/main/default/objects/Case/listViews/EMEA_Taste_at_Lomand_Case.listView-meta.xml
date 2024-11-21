@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>EMEA_Taste_at_Lomand_Case</fullName>
+    <filterScope>Queue</filterScope>
+    <label>EMEA Taste at Lomond</label>
+    <queue>EMEA_Taste_at_Lomond</queue>
+    <sharedTo>
+        <allInternalUsers />
+    </sharedTo>
+</ListView>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Expresso_Name_Board_Requests_Case</fullName>
+    <filterScope>Queue</filterScope>
+    <label>EMEA Name Board Requests</label>
+    <queue>Expresso_Name_Board_Requests</queue>
+    <sharedTo>
+        <allInternalUsers />
+    </sharedTo>
+</ListView>

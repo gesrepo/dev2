@@ -1,0 +1,4 @@
+<apex:page standardController="GC_Design_Request_Form__c" extensions="GC_DesignRequestFormController" action="{!closeDRF}">
+    <apex:pageMessages />
+    <apex:outputLink value="/{!drf.Id}">&lt; Return to Design Request Form</apex:outputLink>
+</apex:page>

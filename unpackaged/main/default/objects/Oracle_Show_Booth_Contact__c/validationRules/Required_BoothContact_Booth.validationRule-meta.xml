@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Required_BoothContact_Booth</fullName>
+    <active>true</active>
+    <description>BoothContact must be associated to a Booth record. The error message should be displayed when Booth is not specified (i.e. Oracle_Show_Booth__c field is blank).</description>
+    <errorConditionFormula>ISBLANK(Oracle_Show_Booth__c)</errorConditionFormula>
+    <errorDisplayField>Oracle_Show_Booth__c</errorDisplayField>
+    <errorMessage>Booth is required on Booth Contact. Please provide a valid Booth Id in the Oracle_Show_Booth__c field.</errorMessage>
+</ValidationRule>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>LOB_Category_US__c</fullName>
+    <description>System field not intended for page layouts. Controls Apex logic within record tab,  &quot;Lookup Rollup Summaries&quot;. To view, the user must be assigned to the permission set with the same name.</description>
+    <externalId>false</externalId>
+    <formula>IF(
+
+AND(OR( ISPICKVAL( StageName , &quot;CR&quot;) ,  ISPICKVAL( StageName , &quot;CV&quot;)),
+RecordType_Name__c = &quot;US - Housing&quot;),
+
+&quot;Housing&quot;, 
+
+IF(
+
+AND(OR( ISPICKVAL( StageName , &quot;CR&quot;) ,  ISPICKVAL( StageName , &quot;CV&quot;)), 
+OR(RecordType_Name__c = &quot;AV - Master&quot;,RecordType_Name__c = &quot;AV - DB&quot;,RecordType_Name__c = &quot;AV - IA&quot;,RecordType_Name__c = &quot;AV - CV&quot;,RecordType_Name__c = &quot;AV - CR&quot;,RecordType_Name__c = &quot;AV - LO&quot;,RecordType_Name__c = &quot;AV - PS&quot;,RecordType_Name__c = &quot;AV - TS&quot;)),
+
+&quot;AV&quot;,
+
+IF(
+
+AND(OR( ISPICKVAL( StageName , &quot;CR&quot;) ,  ISPICKVAL( StageName , &quot;CV&quot;)),
+RecordType_Name__c = &quot;US - Registration&quot;),
+
+&quot;Registration&quot;, 
+
+
+&quot;FALSE&quot;
+)
+)
+
+)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>LOB Category US</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Requester_Secondary_STM__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>This field is auto populated when secondary requester user is filled out. When the secondary requester user is set on the DRF, a team member is created and linked to the show.</description>
+    <inlineHelpText>This field is auto populated when secondary requester user is filled out. When the secondary requester user is set on the DRF, a team member is created and linked to the show.</inlineHelpText>
+    <label>Secondary Team Member Requester</label>
+    <referenceTo>GC_Show_Team_Member__c</referenceTo>
+    <relationshipLabel>Design Request Forms (Secondary Team Member Requester)</relationshipLabel>
+    <relationshipName>Design_Request_Forms2</relationshipName>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

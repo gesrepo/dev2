@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Shipment__c</fullName>
+    <label>Shipment</label>
+    <lookupFilter>
+        <active>false</active>
+        <errorMessage>Shipment does not exist or is not part of the same Order.</errorMessage>
+        <filterItems>
+            <field>Shipment__c.OrderID__c</field>
+            <operation>equals</operation>
+            <valueField>$Source.OrderID__c</valueField>
+        </filterItems>
+        <isOptional>false</isOptional>
+    </lookupFilter>
+    <referenceTo>Shipment__c</referenceTo>
+    <relationshipLabel>Shipment Items</relationshipLabel>
+    <relationshipName>Shipment_Items</relationshipName>
+    <relationshipOrder>0</relationshipOrder>
+    <reparentableMasterDetail>true</reparentableMasterDetail>
+    <trackTrending>false</trackTrending>
+    <type>MasterDetail</type>
+    <writeRequiresMasterRead>false</writeRequiresMasterRead>
+</CustomField>

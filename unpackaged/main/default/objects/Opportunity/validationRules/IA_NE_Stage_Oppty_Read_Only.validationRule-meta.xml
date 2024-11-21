@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>IA_NE_Stage_Oppty_Read_Only</fullName>
+    <active>true</active>
+    <description>Opportunity in IA or NE stages is only editable by a System Administrator.
+Orig:</description>
+    <errorConditionFormula>AND(
+
+
+OR (ISPICKVAL( StageName , &#39;IA&#39;), ISPICKVAL( StageName , &#39;NE&#39;)),
+
+
+AND($Profile.Name  &lt;&gt; &#39;System Administrator&#39;,
+$Profile.Name  &lt;&gt; &#39;Salesforce Support User&#39;,
+$Profile.Name  &lt;&gt; &#39;EDAdmin_Interface&#39;,
+$Profile.Name  &lt;&gt; &#39;GES Interface&#39;,
+$Profile.Name  &lt;&gt; &#39;Custom System Administrator&#39;,
+$Profile.Name  &lt;&gt; &#39;GES Administrator Interface&#39;)
+)</errorConditionFormula>
+    <errorMessage>Opportunity in IA or NE stages is only editable by a System Administrator.</errorMessage>
+</ValidationRule>

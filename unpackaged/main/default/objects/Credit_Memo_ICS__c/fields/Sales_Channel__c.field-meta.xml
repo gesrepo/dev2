@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Sales_Channel__c</fullName>
+    <label>Sales Channel</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>E&amp;E (Trade Show)</fullName>
+                <default>false</default>
+                <label>E&amp;E (Trade Show)</label>
+            </value>
+            <value>
+                <fullName>E&amp;E Logistics (Trade Show)</fullName>
+                <default>false</default>
+                <label>E&amp;E Logistics (Trade Show)</label>
+            </value>
+            <value>
+                <fullName>E&amp;E(GBMS)</fullName>
+                <default>false</default>
+                <label>E&amp;E(GBMS)</label>
+            </value>
+            <value>
+                <fullName>Revenue Exhibitor</fullName>
+                <default>false</default>
+                <label>Revenue Exhibitor</label>
+            </value>
+            <value>
+                <fullName>Revenue Logistics</fullName>
+                <default>false</default>
+                <label>Revenue Logistics</label>
+            </value>
+            <value>
+                <fullName>Revenue Show Org</fullName>
+                <default>false</default>
+                <label>Revenue Show Org</label>
+            </value>
+            <value>
+                <fullName>Storage</fullName>
+                <default>false</default>
+                <label>Storage</label>
+            </value>
+            <value>
+                <fullName>None</fullName>
+                <default>true</default>
+                <label>None</label>
+            </value>
+            <value>
+                <fullName>Revenue Trade Show &amp; Logistics</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Revenue Trade Show &amp; Logistics</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

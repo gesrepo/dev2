@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Contains Traffic Administrator Approvers based on City codes</description>
+    <label>GC_DET_TAApprover</label>
+    <pluralLabel>GC_DET_TAApprovers</pluralLabel>
+    <visibility>Public</visibility>
+</CustomObject>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Find_Booth_and_Raise_Case</fullName>
+    <availability>online</availability>
+    <description>EMEA Button to search for records, create records, and raise a case.</description>
+    <displayType>button</displayType>
+    <height>600</height>
+    <linkType>page</linkType>
+    <masterLabel>Find Booth and Raise Case</masterLabel>
+    <openType>sidebar</openType>
+    <page>EMEA_Raise_Case_Test</page>
+    <protected>false</protected>
+</WebLink>

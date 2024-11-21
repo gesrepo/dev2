@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Case_Required_Priority</fullName>
+    <active>false</active>
+    <description>Value in Priority field needs to be other than --None--</description>
+    <errorConditionFormula>ISPICKVAL(Priority,&#39;--None--&#39;)</errorConditionFormula>
+    <errorMessage>Please select a value other than --None-- for Priority.</errorMessage>
+</ValidationRule>

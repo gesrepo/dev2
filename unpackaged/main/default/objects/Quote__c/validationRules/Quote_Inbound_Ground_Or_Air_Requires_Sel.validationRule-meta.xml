@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Quote_Inbound_Ground_Or_Air_Requires_Sel</fullName>
+    <active>true</active>
+    <description>Air Transportation or Ground Transportation requires Selection</description>
+    <errorConditionFormula>AND(($Profile.Name &lt;&gt; &quot;GES Administrator Interface&quot;), IF(AND(OR(ISPICKVAL(Shipment_Type__c,&#39;Air Transportation&#39;),ISPICKVAL(Shipment_Type__c,&#39;Ground Transportation&#39;)),ISPICKVAL(Selection__c,&#39;&#39;)),true,false))</errorConditionFormula>
+    <errorDisplayField>Selection__c</errorDisplayField>
+    <errorMessage>Selection must be specified for Air or Ground Transportation shipment.</errorMessage>
+</ValidationRule>

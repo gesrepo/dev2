@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>First_Name_Required</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+ISBLANK(FirstName),
+Not($User.Id =&#39;00540000003a3uV&#39;)) /*Marketo User per SR/CH */</errorConditionFormula>
+    <errorMessage>Please enter a First Name</errorMessage>
+</ValidationRule>

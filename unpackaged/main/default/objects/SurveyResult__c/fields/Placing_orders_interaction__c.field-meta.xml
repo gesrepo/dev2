@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Placing_orders_interaction__c</fullName>
+    <label>Placing orders / interaction</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>By downloading order form/s</fullName>
+                <default>false</default>
+                <label>By downloading order form/s</label>
+            </value>
+            <value>
+                <fullName>By visiting the Service Desk at the venue</fullName>
+                <default>false</default>
+                <label>By visiting the Service Desk at the venue</label>
+            </value>
+            <value>
+                <fullName>Online ordering directly via Expresso website</fullName>
+                <default>false</default>
+                <label>Online ordering directly via Expresso website</label>
+            </value>
+            <value>
+                <fullName>Receive an email as a reminder/prompt</fullName>
+                <default>false</default>
+                <label>Receive an email as a reminder/prompt</label>
+            </value>
+            <value>
+                <fullName>Send an email</fullName>
+                <default>false</default>
+                <label>Send an email</label>
+            </value>
+            <value>
+                <fullName>Telephoning at my convenience</fullName>
+                <default>false</default>
+                <label>Telephoning at my convenience</label>
+            </value>
+            <value>
+                <fullName>To be called by GES</fullName>
+                <default>false</default>
+                <label>To be called by GES</label>
+            </value>
+            <value>
+                <fullName>Using digital order form/s (no need to print)</fullName>
+                <default>false</default>
+                <label>Using digital order form/s (no need to print)</label>
+            </value>
+            <value>
+                <fullName>Via Exhibitor Manual, no other websites</fullName>
+                <default>false</default>
+                <label>Via Exhibitor Manual, no other websites</label>
+            </value>
+            <value>
+                <fullName>Using the online Live Chat function</fullName>
+                <default>false</default>
+                <label>Using the online Live Chat function</label>
+            </value>
+            <value>
+                <fullName>Verbally</fullName>
+                <default>false</default>
+                <label>Verbally</label>
+            </value>
+            <value>
+                <fullName>Via social media</fullName>
+                <default>false</default>
+                <label>Via social media</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

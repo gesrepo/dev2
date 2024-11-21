@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PRFTherapeutic_Area_3__c</fullName>
+    <label>Therapeutic Area 3</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>ADHD</fullName>
+                <default>false</default>
+                <label>ADHD</label>
+            </value>
+            <value>
+                <fullName>Arthritis</fullName>
+                <default>false</default>
+                <label>Arthritis</label>
+            </value>
+            <value>
+                <fullName>Cardiovascular</fullName>
+                <default>false</default>
+                <label>Cardiovascular</label>
+            </value>
+            <value>
+                <fullName>Chronic Obstructive Pulmonary Disease (COPD)</fullName>
+                <default>false</default>
+                <label>Chronic Obstructive Pulmonary Disease (COPD)</label>
+            </value>
+            <value>
+                <fullName>Consumer Healthcare</fullName>
+                <default>false</default>
+                <label>Consumer Healthcare</label>
+            </value>
+            <value>
+                <fullName>Dermatology/Rheumatology/Inflammation</fullName>
+                <default>false</default>
+                <label>Dermatology/Rheumatology/Inflammation</label>
+            </value>
+            <value>
+                <fullName>Endocrine</fullName>
+                <default>false</default>
+                <label>Endocrine</label>
+            </value>
+            <value>
+                <fullName>Gastrointestinal</fullName>
+                <default>false</default>
+                <label>Gastrointestinal</label>
+            </value>
+            <value>
+                <fullName>Generics</fullName>
+                <default>false</default>
+                <label>Generics</label>
+            </value>
+            <value>
+                <fullName>Healthcare Systems</fullName>
+                <default>false</default>
+                <label>Healthcare Systems</label>
+            </value>
+            <value>
+                <fullName>Hematology</fullName>
+                <default>false</default>
+                <label>Hematology</label>
+            </value>
+            <value>
+                <fullName>HIV/AIDS</fullName>
+                <default>false</default>
+                <label>HIV/AIDS</label>
+            </value>
+            <value>
+                <fullName>Hypertension</fullName>
+                <default>false</default>
+                <label>Hypertension</label>
+            </value>
+            <value>
+                <fullName>Infectious Disease</fullName>
+                <default>false</default>
+                <label>Infectious Disease</label>
+            </value>
+            <value>
+                <fullName>Injectibles</fullName>
+                <default>false</default>
+                <label>Injectibles</label>
+            </value>
+            <value>
+                <fullName>Neuroscience</fullName>
+                <default>false</default>
+                <label>Neuroscience</label>
+            </value>
+            <value>
+                <fullName>Nutrition</fullName>
+                <default>false</default>
+                <label>Nutrition</label>
+            </value>
+            <value>
+                <fullName>Oncology</fullName>
+                <default>false</default>
+                <label>Oncology</label>
+            </value>
+            <value>
+                <fullName>Pain &amp; Palliative Care</fullName>
+                <default>false</default>
+                <label>Pain &amp; Palliative Care</label>
+            </value>
+            <value>
+                <fullName>Primary Care</fullName>
+                <default>false</default>
+                <label>Primary Care</label>
+            </value>
+            <value>
+                <fullName>Rare Diseases</fullName>
+                <default>false</default>
+                <label>Rare Diseases</label>
+            </value>
+            <value>
+                <fullName>Thromboembolic Diseases</fullName>
+                <default>false</default>
+                <label>Thromboembolic Diseases</label>
+            </value>
+            <value>
+                <fullName>Transplant/Immunology</fullName>
+                <default>false</default>
+                <label>Transplant/Immunology</label>
+            </value>
+            <value>
+                <fullName>Urology (OAB and ED)</fullName>
+                <default>false</default>
+                <label>Urology (OAB and ED)</label>
+            </value>
+            <value>
+                <fullName>Vaccines</fullName>
+                <default>false</default>
+                <label>Vaccines</label>
+            </value>
+            <value>
+                <fullName>Women’s Health</fullName>
+                <default>false</default>
+                <label>Women’s Health</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Credit_Memo_Reason__c</fullName>
+    <label>Credit Memo Reason</label>
+    <required>true</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Accounts Receivables Billing Error: CM ERROR</fullName>
+                <default>false</default>
+                <label>Accounts Receivables Billing Error: CM ERROR</label>
+            </value>
+            <value>
+                <fullName>Bad Debt: CM</fullName>
+                <default>false</default>
+                <label>Bad Debt: CM</label>
+            </value>
+            <value>
+                <fullName>Billed Wrong Customer/Show: CM ERROR</fullName>
+                <default>false</default>
+                <label>Billed Wrong Customer/Show: CM ERROR</label>
+            </value>
+            <value>
+                <fullName>Cancel Refund Check: CM ERROR</fullName>
+                <default>false</default>
+                <label>Cancel Refund Check: CM ERROR</label>
+            </value>
+            <value>
+                <fullName>Cancelled/Didn&#39;t Attend Show: CM</fullName>
+                <default>false</default>
+                <label>Cancelled/Didn&#39;t Attend Show: CM</label>
+            </value>
+            <value>
+                <fullName>Didn&#39;t Order:CM</fullName>
+                <default>false</default>
+                <label>Didn&#39;t Order:CM</label>
+            </value>
+            <value>
+                <fullName>Discount Given to Customer: CM</fullName>
+                <default>false</default>
+                <label>Discount Given to Customer: CM</label>
+            </value>
+            <value>
+                <fullName>Duplicate Billing: CM ERROR</fullName>
+                <default>false</default>
+                <label>Duplicate Billing: CM ERROR</label>
+            </value>
+            <value>
+                <fullName>Good Faith/Settlement/In Short Pd/PO Honored: CM</fullName>
+                <default>false</default>
+                <label>Good Faith/Settlement/In Short Pd/PO Honored: CM</label>
+            </value>
+            <value>
+                <fullName>Insufficient/Incomplete Documentation: CM</fullName>
+                <default>false</default>
+                <label>Insufficient/Incomplete Documentation: CM</label>
+            </value>
+            <value>
+                <fullName>Legal Settlement: CM</fullName>
+                <default>false</default>
+                <label>Legal Settlement: CM</label>
+            </value>
+            <value>
+                <fullName>Logistics Good Faith/Settlement: CM</fullName>
+                <default>false</default>
+                <label>Logistics Good Faith/Settlement: CM</label>
+            </value>
+            <value>
+                <fullName>Operations Error: CM</fullName>
+                <default>false</default>
+                <label>Operations Error: CM</label>
+            </value>
+            <value>
+                <fullName>Order Entry Error: CM</fullName>
+                <default>false</default>
+                <label>Order Entry Error: CM</label>
+            </value>
+            <value>
+                <fullName>Outbound Quote Didn&#39;t Match IB: CM</fullName>
+                <default>false</default>
+                <label>Outbound Quote Didn&#39;t Match IB: CM</label>
+            </value>
+            <value>
+                <fullName>Sales Tax Error: CM ERROR</fullName>
+                <default>false</default>
+                <label>Sales Tax Error: CM ERROR</label>
+            </value>
+            <value>
+                <fullName>Service Failure/Item(s) not Received: CM</fullName>
+                <default>false</default>
+                <label>Service Failure/Item(s) not Received: CM</label>
+            </value>
+            <value>
+                <fullName>Should be Billed to Assn: CM</fullName>
+                <default>false</default>
+                <label>Should be Billed to Assn: CM</label>
+            </value>
+            <value>
+                <fullName>Supervision Charged in Error: CM</fullName>
+                <default>false</default>
+                <label>Supervision Charged in Error: CM</label>
+            </value>
+            <value>
+                <fullName>Surcharge/Off Target Doesn&#39;t Apply: CM</fullName>
+                <default>false</default>
+                <label>Surcharge/Off Target Doesn&#39;t Apply: CM</label>
+            </value>
+            <value>
+                <fullName>Tax Exempt: CM ERROR</fullName>
+                <default>false</default>
+                <label>Tax Exempt: CM ERROR</label>
+            </value>
+            <value>
+                <fullName>Trans/Discount not Applied: CM</fullName>
+                <default>false</default>
+                <label>Trans/Discount not Applied: CM</label>
+            </value>
+            <value>
+                <fullName>Wrong Price/Quote/Rate: CM</fullName>
+                <default>false</default>
+                <label>Wrong Price/Quote/Rate: CM</label>
+            </value>
+            <value>
+                <fullName>Wrong Product: CM</fullName>
+                <default>false</default>
+                <label>Wrong Product: CM</label>
+            </value>
+            <value>
+                <fullName>Wrong Qty/Weight/Hours: CM</fullName>
+                <default>false</default>
+                <label>Wrong Qty/Weight/Hours: CM</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

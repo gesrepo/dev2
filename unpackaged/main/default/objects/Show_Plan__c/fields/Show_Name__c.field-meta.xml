@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Show_Name__c</fullName>
+    <inlineHelpText>Show the plan is associated to.</inlineHelpText>
+    <label>Show Name</label>
+    <referenceTo>Show__c</referenceTo>
+    <relationshipLabel>Show Plans</relationshipLabel>
+    <relationshipName>Account_Plans</relationshipName>
+    <relationshipOrder>0</relationshipOrder>
+    <reparentableMasterDetail>false</reparentableMasterDetail>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MasterDetail</type>
+    <writeRequiresMasterRead>false</writeRequiresMasterRead>
+</CustomField>

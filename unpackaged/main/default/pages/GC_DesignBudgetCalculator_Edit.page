@@ -1,0 +1,194 @@
+<apex:page standardController="GC_Design_Request_Form__c" extensions="GC_DesignBudgetCalculator_Controller">
+    <style type="text/css">
+    .table-body td {
+        padding: 5px;
+    }
+
+    .table-body tr td:nth-child(1),
+    .align-right {
+        text-align: right;
+    }
+
+    .heading {
+        text-align: left;
+        font-weight: bold;
+    }
+
+    .text-red {
+        color: red !important;
+    }
+    </style>
+    <apex:pageMessages id="messages" />
+    <apex:form >
+        <apex:pageBlock id="calculator" rendered="{!IF(ISNULL(Source), false, true)}">
+            <apex:outputLabel style="font-weight: bold" value="Revision: {!Source.Revision__c}" for="revNumber" />
+            <br/>
+            <apex:outputLabel style="font-weight: bold" value="Budget Status: {!Source.Status__c}" />
+            <table>
+                <tbody class="table-body">
+                    <tr>
+                        <td></td>
+                        <td class="heading"># Units</td>
+                        <td class="heading">Est. Hours/unit</td>
+                        <td class="heading">Est. Revisions</td>
+                        <td class="heading">Estimated Hours</td>
+                    </tr>
+                    <tr>
+                        <td>New Concept/Design Style Guide</td>
+                        <td>
+                            <apex:inputField value="{!Source.New_Concept_Design_Style_Guide_Units__c}" />
+                        </td>
+                        <td>
+                            <apex:outputField value="{!Source.New_Concept_Design_Style_Guide_hr_u__c}" />
+                        </td>
+                        <td>
+                            <apex:inputField value="{!Source.New_Concept_Design_Style_Guide__c}" />
+                        </td>
+                        <td>
+                            <apex:outputField value="{!Source.Design_Style_Guide_Formula_e_hrs__c}" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Number of Brand New Structures to be Rendered</td>
+                        <td>
+                            <apex:inputField value="{!Source.New_Structures_to_be_Rendered_Units__c}" />
+                        </td>
+                        <td>
+                            <apex:outputField value="{!Source.New_Structures_to_be_Rendered_hr_u__c}" />
+                        </td>
+                        <td>
+                            <apex:inputField value="{!Source.New_Structures_to_be_Rendered__c}" />
+                        </td>
+                        <td>
+                            <apex:outputField value="{!Source.New_Structures_Rendered_Formula_e_hrs__c}" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Number of existing Structures Rendering</td>
+                        <td>
+                            <apex:inputField value="{!Source.Existing_Structures_Rendering_Units__c}" />
+                        </td>
+                        <td>
+                            <apex:outputField value="{!Source.Existing_Structures_Rendering_hr_u__c}" />
+                        </td>
+                        <td>
+                            <apex:inputField value="{!Source.Existing_Structures_Rendering__c}" />
+                        </td>
+                        <td>
+                            <apex:outputField value="{!Source.Exi_Structures_Rendering_Formula_e_hrs__c}" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Line Drawing/Blackline Only - new or existing</td>
+                        <td>
+                            <apex:inputField value="{!Source.New_Line_Drawing_Blackline_Only_Units__c}" />
+                        </td>
+                        <td>
+                            <apex:outputField value="{!Source.New_Line_Drawing_Blackline_hr_u__c}" />
+                        </td>
+                        <td>
+                            <apex:inputField value="{!Source.New_Line_Drawing_Blackline_Only__c}" />
+                        </td>
+                        <td>
+                            <apex:outputField value="{!Source.New_Line_Drawing_Formula_e_hrs__c}" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Update graphics only on Structure</td>
+                        <td>
+                            <apex:inputField value="{!Source.Update_Graphics_only_on_Structure_Units__c}" />
+                        </td>
+                        <td>
+                            <apex:outputField value="{!Source.Update_Graphics_on_Structure_hr_u__c}" />
+                        </td>
+                        <td>
+                            <apex:inputField value="{!Source.Update_Graphics_only_on_Structure__c}" />
+                        </td>
+                        <td>
+                            <apex:outputField value="{!Source.Update_Graphics_Formula_e_hrs__c}" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Detail/Extract/Pull List Brand New Structures</td>
+                        <td>
+                            <apex:inputField value="{!Source.Detail_Extract_Pull_List_Structures_est__c}" />
+                        </td>
+                        <td>
+                            <apex:outputField value="{!Source.Detail_Extract_Pull_List_Structure_hr_u__c}" />
+                        </td>
+                        <td>
+                            <apex:inputField value="{!Source.Detail_Extract_Pull_List_Structures__c}" />
+                        </td>
+                        <td>
+                            <apex:outputField value="{!Source.Detail_New_List_Structures_Formula_e_hrs__c}" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Existing Detail/Extract/Pull List Update Only</td>
+                        <td>
+                            <apex:inputField value="{!Source.Detail_Extract_Exi_List_Structures_Units__c}" />
+                        </td>
+                        <td>
+                            <apex:outputField value="{!Source.Detail_Extract_Exi_List_Structures_hr_u__c}" />
+                        </td>
+                        <td>
+                            <apex:inputField value="{!Source.Detail_Extract_Exi_List_Structures__c}" />
+                        </td>
+                        <td>
+                            <apex:outputField value="{!Source.Detail_Exi_List_Structures_Formula_e_hrs__c}" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">Subtotal</td>
+                        <td>
+                            <apex:outputField value="{!Source.Hours_Per_Unit_Subtotal__c}" />
+                        </td>
+                        <td></td>
+                        <td>
+                            <apex:outputField value="{!Source.Estimated_Hours_Subtotal__c}" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">Total Hours per Unit + Revisions</td>
+                        <td>
+                            <apex:outputField value="{!Source.Total_Plus_Revision_Hours_Formula__c}" />
+                        </td>
+                        <td class="align-right">Est. Design Labor</td>
+                        <td>
+                            <apex:outputField value="{!Source.Est_Design_Labor_Formula__c}" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">Administrative Hours</td>
+                        <td>
+                            <apex:outputField value="{!Source.Administrative_Hours_Formula__c}" />
+                        </td>
+                        <td class="align-right">Structure Budget</td>
+                        <td>
+                            <apex:outputField value="{!Source.Structure_Budget_Formula__c}" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">Est. Design Hours Agreed Upon</td>
+                        <td>
+                            <apex:outputField value="{!Source.Design_Hours_Agreed_Upon_Formula__c}" />
+                        </td>
+                        <td class="align-right">Client Budget</td>
+                        <td>
+                            <apex:inputField value="{!Source.Client_Budget__c}" />
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <apex:pageBlockButtons location="Bottom">
+                <apex:commandButton value="Save Budget" action="{!updateBudget}" reRender="messages, calculator" rendered="{!Clone == null}"/>
+                <apex:commandButton value="Save Revision*" action="{!updateBudget}" reRender="messages, calculator" rendered="{!Clone != null}" onclick="if(!confirm('Are you sure you want to create a new revision?')){return false;}" />
+                <apex:commandButton title="Return to Design Request Form" value="Return to DRF" action="{!cancelBudget}" reRender="messages, calculator" />
+                <apex:outputPanel rendered="{!Clone != null}">
+                    <br/>
+                    <br/> * Revision will not be created until Save
+                </apex:outputPanel>
+            </apex:pageBlockButtons>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

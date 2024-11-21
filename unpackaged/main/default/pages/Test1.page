@@ -1,0 +1,37 @@
+<apex:page standardController="Show__c" extensions="seismic.NewPredictiveController" action="{!Init}" docType="html-5.0" applyHtmlTag="false" applyBodyTag="false" showHeader="false" sidebar="false" standardStylesheets="false" html-style="height:100%; width:100%;">
+
+<script type="text/javascript" src="{!URLFOR($Resource.seismic__jquery_3_6_1_min_js)}"></script>
+<script type="text/javascript" src="{!URLFOR($Resource.seismic__jquery_base64_js)}"></script>
+<script type="text/javascript" src="{!JSENCODE(CanvasSDKControllerUrlString)}"></script>
+
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="Content-type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Seismic Content Viewer</title>
+
+    <style type="text/css">
+        BODY, HTML, IFRAME { width: 100%; margin: 0; padding: 0; }
+    </style>
+</head>
+<body>
+   <apex:pageMessages id="messages" escape="false" rendered="{!HasInvalidSubscription}"/>
+   <apex:canvasApp applicationName="SeismicCanvasApp" onCanvasAppLoad="resize" namespacePrefix="seismic" developerName="SeismicCanvasApp" parameters="{!CanvasAppParams}" width="100%" scrolling="auto" rendered="{!IF(HasInvalidSubscription,false,true)}"/>
+   <script type="text/javascript">
+    
+    function handleOpenDetailRequest(docDetailUrl){
+      window.top.location.href = encodeURI(docDetailUrl);
+    }
+     
+    function resize(){
+      var body = document.body, html = document.documentElement;
+      var containerHeight = Math.max( body.scrollHeight, body.offsetHeight, html.clientHeight, html.scrollHeight, html.offsetHeight );
+      Sfdc.canvas.controller.resize( {height : containerHeight+ "px"});
+    }
+
+    Sfdc.canvas.controller.subscribe({name : 'showDetail', onData : function (e) {
+      handleOpenDetailRequest(e.docDetailUrl);
+    }});
+  </script>
+</body>
+</apex:page>

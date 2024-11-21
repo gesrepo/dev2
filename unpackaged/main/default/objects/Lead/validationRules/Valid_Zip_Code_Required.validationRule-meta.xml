@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Valid_Zip_Code_Required</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+LEN(PostalCode)&gt;0,
+NOT(OR($Profile.Name = &#39;GESInterface&#39;, $Profile.Name = &#39;EDAdmin_Interface&#39;, $Profile.Name = &#39;Marketo User&#39;)),
+Country = &quot;US&quot;,
+NOT(OR(REGEX( PostalCode , &quot;[0-9]{5}-[0-9]{4}&quot;),REGEX( PostalCode , &quot;[0-9]{5}&quot;))))</errorConditionFormula>
+    <errorDisplayField>PostalCode</errorDisplayField>
+    <errorMessage>Please enter a valid United States postal code. Please enter postal code in this format: XXXXX-XXXX or XXXXX.</errorMessage>
+</ValidationRule>

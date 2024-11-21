@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>No_Of_Months_From_Closed_Won__c</fullName>
+    <externalId>false</externalId>
+    <formula>ABS((MONTH(Actual_Closed_Won_Date__c) + (12*(YEAR(Actual_Closed_Won_Date__c)-YEAR(TODAY()))) - MONTH(TODAY())))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>No Of Months From Closed Won</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackHistory>false</trackHistory>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

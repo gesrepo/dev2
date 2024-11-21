@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>UNSUBMITED_Carpet_Planning_Requests</fullName>
+    <columns>CREATED_DATE</columns>
+    <columns>NAME</columns>
+    <columns>CR_Show_ID__c</columns>
+    <columns>CR_YRMO__c</columns>
+    <columns>CR_Project_Number__c</columns>
+    <columns>CR_Facility_ID__c</columns>
+    <columns>First_Move_In_Date__c</columns>
+    <columns>Status__c</columns>
+    <columns>CREATEDBY_USER</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Status__c</field>
+        <operation>equals</operation>
+        <value>New</value>
+    </filters>
+    <label>UNSUBMITED Carpet Planning Requests</label>
+</ListView>

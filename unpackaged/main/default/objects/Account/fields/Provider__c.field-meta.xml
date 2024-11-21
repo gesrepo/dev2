@@ -1,0 +1,475 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Provider__c</fullName>
+    <label>Provider</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Under_Contract__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>true</sorted>
+            <value>
+                <fullName>2020</fullName>
+                <default>false</default>
+                <label>2020</label>
+            </value>
+            <value>
+                <fullName>3D Exhibits</fullName>
+                <default>false</default>
+                <label>3D Exhibits</label>
+            </value>
+            <value>
+                <fullName>Apple Rock displays</fullName>
+                <default>false</default>
+                <label>Apple Rock displays</label>
+            </value>
+            <value>
+                <fullName>Atmosphere</fullName>
+                <default>false</default>
+                <label>Atmosphere</label>
+            </value>
+            <value>
+                <fullName>Catalyst Exhibits</fullName>
+                <default>false</default>
+                <label>Catalyst Exhibits</label>
+            </value>
+            <value>
+                <fullName>CEP</fullName>
+                <default>false</default>
+                <label>CEP</label>
+            </value>
+            <value>
+                <fullName>Condit</fullName>
+                <default>false</default>
+                <label>Condit</label>
+            </value>
+            <value>
+                <fullName>CSI</fullName>
+                <default>false</default>
+                <label>CSI</label>
+            </value>
+            <value>
+                <fullName>Czarnowski</fullName>
+                <default>false</default>
+                <label>Czarnowski</label>
+            </value>
+            <value>
+                <fullName>Derse</fullName>
+                <default>false</default>
+                <label>Derse</label>
+            </value>
+            <value>
+                <fullName>Display Works</fullName>
+                <default>false</default>
+                <label>Display Works</label>
+            </value>
+            <value>
+                <fullName>Exhibit Fair</fullName>
+                <default>false</default>
+                <label>Exhibit Fair</label>
+            </value>
+            <value>
+                <fullName>Exhibit Plus</fullName>
+                <default>false</default>
+                <label>Exhibit Plus</label>
+            </value>
+            <value>
+                <fullName>Exhibit Tree</fullName>
+                <default>false</default>
+                <label>Exhibit Tree</label>
+            </value>
+            <value>
+                <fullName>Exhibit Works</fullName>
+                <default>false</default>
+                <label>Exhibit Works</label>
+            </value>
+            <value>
+                <fullName>Exhibit Worx</fullName>
+                <default>false</default>
+                <label>Exhibit Worx</label>
+            </value>
+            <value>
+                <fullName>Expo Group</fullName>
+                <default>false</default>
+                <label>Expo Group</label>
+            </value>
+            <value>
+                <fullName>Expo Technique</fullName>
+                <default>false</default>
+                <label>Expo Technique</label>
+            </value>
+            <value>
+                <fullName>Fern</fullName>
+                <default>false</default>
+                <label>Fern</label>
+            </value>
+            <value>
+                <fullName>Freddie George</fullName>
+                <default>false</default>
+                <label>Freddie George</label>
+            </value>
+            <value>
+                <fullName>Freeman</fullName>
+                <default>false</default>
+                <label>Freeman</label>
+            </value>
+            <value>
+                <fullName>George P. Johnson</fullName>
+                <default>false</default>
+                <label>George P. Johnson</label>
+            </value>
+            <value>
+                <fullName>GES (US)</fullName>
+                <default>false</default>
+                <label>GES (US)</label>
+            </value>
+            <value>
+                <fullName>Gilbert Displays</fullName>
+                <default>false</default>
+                <label>Gilbert Displays</label>
+            </value>
+            <value>
+                <fullName>Group Delphi</fullName>
+                <default>false</default>
+                <label>Group Delphi</label>
+            </value>
+            <value>
+                <fullName>H.B. Stubbs</fullName>
+                <default>false</default>
+                <label>H.B. Stubbs</label>
+            </value>
+            <value>
+                <fullName>Hamilton Displays</fullName>
+                <default>false</default>
+                <label>Hamilton Displays</label>
+            </value>
+            <value>
+                <fullName>Jack Morton Productions</fullName>
+                <default>false</default>
+                <label>Jack Morton Productions</label>
+            </value>
+            <value>
+                <fullName>Journey</fullName>
+                <default>false</default>
+                <label>Journey</label>
+            </value>
+            <value>
+                <fullName>Kubrick</fullName>
+                <default>false</default>
+                <label>Kubrick</label>
+            </value>
+            <value>
+                <fullName>Las Vegas Expo</fullName>
+                <default>false</default>
+                <label>Las Vegas Expo</label>
+            </value>
+            <value>
+                <fullName>Lazer</fullName>
+                <default>false</default>
+                <label>Lazer</label>
+            </value>
+            <value>
+                <fullName>Mash Group</fullName>
+                <default>false</default>
+                <label>Mash Group</label>
+            </value>
+            <value>
+                <fullName>MC2</fullName>
+                <default>false</default>
+                <label>MC2</label>
+            </value>
+            <value>
+                <fullName>Metro Exhibits</fullName>
+                <default>false</default>
+                <label>Metro Exhibits</label>
+            </value>
+            <value>
+                <fullName>Nth Degree</fullName>
+                <default>false</default>
+                <label>Nth Degree</label>
+            </value>
+            <value>
+                <fullName>Pico</fullName>
+                <default>false</default>
+                <label>Pico</label>
+            </value>
+            <value>
+                <fullName>Pinnacle Exhibits</fullName>
+                <default>false</default>
+                <label>Pinnacle Exhibits</label>
+            </value>
+            <value>
+                <fullName>Premier Dispays</fullName>
+                <default>false</default>
+                <label>Premier Dispays</label>
+            </value>
+            <value>
+                <fullName>Renaissance Management</fullName>
+                <default>false</default>
+                <label>Renaissance Management</label>
+            </value>
+            <value>
+                <fullName>Rochester Exhibits</fullName>
+                <default>false</default>
+                <label>Rochester Exhibits</label>
+            </value>
+            <value>
+                <fullName>Rosemont Expositions</fullName>
+                <default>false</default>
+                <label>Rosemont Expositions</label>
+            </value>
+            <value>
+                <fullName>Shepard Convention Services</fullName>
+                <default>false</default>
+                <label>Shepard Convention Services</label>
+            </value>
+            <value>
+                <fullName>Skyline</fullName>
+                <default>false</default>
+                <label>Skyline</label>
+            </value>
+            <value>
+                <fullName>Southwest Exhibits</fullName>
+                <default>false</default>
+                <label>Southwest Exhibits</label>
+            </value>
+            <value>
+                <fullName>Sparks Exhibits</fullName>
+                <default>false</default>
+                <label>Sparks Exhibits</label>
+            </value>
+            <value>
+                <fullName>STAK</fullName>
+                <default>false</default>
+                <label>STAK</label>
+            </value>
+            <value>
+                <fullName>Steel Head Exhibits</fullName>
+                <default>false</default>
+                <label>Steel Head Exhibits</label>
+            </value>
+            <value>
+                <fullName>Taylor Displays</fullName>
+                <default>false</default>
+                <label>Taylor Displays</label>
+            </value>
+            <value>
+                <fullName>Term Group</fullName>
+                <default>false</default>
+                <label>Term Group</label>
+            </value>
+            <value>
+                <fullName>Xhibit Solutions</fullName>
+                <default>false</default>
+                <label>Xhibit Solutions</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>2020</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>3D Exhibits</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>Apple Rock displays</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>Atmosphere</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>Catalyst Exhibits</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>CEP</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>Condit</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>CSI</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>Czarnowski</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>Derse</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>Display Works</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>Exhibit Fair</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>Exhibit Plus</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>Exhibit Tree</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>Exhibit Works</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>Exhibit Worx</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>Expo Group</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>Expo Technique</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>Fern</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>Freddie George</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>Freeman</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>George P. Johnson</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>GES (US)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>Gilbert Displays</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>Group Delphi</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>H.B. Stubbs</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>Hamilton Displays</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>Jack Morton Productions</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>Journey</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>Kubrick</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>Las Vegas Expo</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>Lazer</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>Mash Group</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>MC2</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>Metro Exhibits</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>Nth Degree</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>Pico</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>Pinnacle Exhibits</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>Premier Dispays</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>Renaissance Management</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>Rochester Exhibits</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>Rosemont Expositions</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>Shepard Convention Services</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>Skyline</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>Southwest Exhibits</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>Sparks Exhibits</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>STAK</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>Steel Head Exhibits</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>Taylor Displays</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>Term Group</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>Xhibit Solutions</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

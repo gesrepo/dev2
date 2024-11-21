@@ -1,0 +1,120 @@
+<apex:page standardStylesheets="true" controller="SymposiaDetail" showHeader="false" sidebar="false" applyHtmlTag="false" tabStyle="Account">
+    <html xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <head>
+            <apex:includeScript value="{!$Resource.jQuery}" />
+            <apex:stylesheet value="{!URLFOR($Resource.Lightning_Design_System, 'assets/styles/salesforce-lightning-design-system.min.css')}" />
+            <apex:stylesheet value="{!URLFOR($Resource.GC_Assets, 'GC_Assets/css/GC_Styles.css')}" />
+            <apex:includeScript value="{!URLFOR($Resource.GC_Assets, 'GC_Assets/js/GC_init.js')}" />
+        </head>
+        <div class="slds">
+            <c:GC_Community_Header />         
+            <div class="slds-page-header gc-navigation--subHeader" role="banner">
+                <div class="slds-media">
+                    <div class="slds-media__figure">
+                        <apex:image url="{!URLFOR($Resource.GC_Assets, 'GC_Assets/img/custom13_60_teal.png')}" />
+                    </div>
+                    <div class="slds-media__body">
+                        <p class="slds-page-header__title slds-align-middle">
+                            <span>Symposium Details</span>
+                            <span class="slds-truncate">{!sy.Name}</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            <apex:form >
+                <apex:pageBlock title="">
+                    <apex:pageBlockButtons location="top">
+                        <apex:commandButton value="Edit" action="{!SymposiaSave}" styleClass="slds-button slds-button--brand gc-teal-button"/>
+                        <apex:commandButton value="Back" action="{!Symposiacancel}" styleClass="slds-button slds-button--brand gc-teal-button"/>
+                        <apex:commandButton value="Clone" action="{!SymposiaClone}" styleClass="slds-button slds-button--brand gc-teal-button" style="float:right" />
+                    </apex:pageBlockButtons>
+                    <apex:pageBlockSection title="Symposium Detail"> 
+                        <apex:outputText label="Congress ID">
+                            <apex:outputLink value="{!$Page.Congressdetails}">
+                                {!congName}
+                                <apex:param name="id" value="{!congid}"/>                       
+                            </apex:outputLink>
+                        </apex:outputText>
+                        <apex:outputField value="{!sy.Symposia_Name__c}" />
+                        <apex:outputText value="{0,date, MMMM d, yyyy  hh:mm a}" label="    
+                                                                                        Requested Symposium Date & Time"> <apex:param value="{!sy.Requested_Symposium_Date_and_Time__c+ offset}" /> </apex:outputText>
+                        <apex:outputField value="{!sy.Symposium_Location__c}"/>
+                        <apex:outputText value="{!exhibitHoursOpenDay1}" label="Symposium Start Date & Time" />
+                        <apex:outputField value="{!sy.Activity_Level__c}"/>
+                        <apex:outputText value="{!exhibitHoursOpenDay2}" label="Symposium End Date & Time" />
+                        <apex:outputField value="{!sy.Symposia_Type__c}"/>
+                        <apex:outputField value="{!sy.Activity_Not_Confirmed__c}"/>
+                        <apex:outputField value="{!sy.Meal_included_with_Symposium__c}"/> 
+                        <apex:outputField value="{!sy.Symposium_Bundled_w_Sponsorship__c}"/>
+                        <apex:outputText ></apex:outputText>
+                        
+                        <apex:outputField value="{!sy.Reality_Engineering_Utilized__c}" />                
+                        <apex:outputField value="{!sy.Reason_RE_not_used__c}" rendered="{!sy.Reality_Engineering_Utilized__c=='No'}" />                        
+                        <apex:outputText rendered="{!sy.Reality_Engineering_Utilized__c!='No'}"></apex:outputText>
+                        <apex:outputText rendered="{!(sy.Reason_RE_not_used__c=='Not appropriate audience' && sy.Reality_Engineering_Utilized__c=='No')}" > </apex:outputText>
+                        <apex:outputField value="{!sy.If_not_appropriate_audience_Explanation__c}" rendered="{!(sy.Reason_RE_not_used__c=='Not appropriate audience' && sy.Reality_Engineering_Utilized__c=='No')}" />  
+                        
+                        <apex:outputField value="{!sy.Symposium_Notes__c}"/>
+                        <!--<apex:outputText ></apex:outputText>-->
+                        <apex:outputField value="{!sy.Symposia_Registrants__c}"/>
+                        <apex:outputField value="{!sy.Chair_Person__c}"/> 
+                        <apex:outputText ></apex:outputText>                   
+                        <apex:outputField value="{!sy.Speaker_1__c}"/>
+                        <apex:outputText ></apex:outputText>
+                        <apex:outputField value="{!sy.Speaker_2__c}"/>
+                        <apex:outputField value="{!sy.Canceled__c}"/>
+                        <apex:outputField value="{!sy.Speaker_3__c}"/>
+                        <apex:outputField value="{!sy.CancelReason__c}"/>
+                        <apex:outputField value="{!sy.Speaker_4__c}"/>
+                        <apex:outputField value="{!sy.CanceledDate__c}"/>
+                        
+                        <!--<apex:outputField value="{!sy.CurrencyIsoCode}"/>-->
+                                       
+                    </apex:pageBlockSection>
+                    <apex:pageBlockSection title="Symposium Contacts">
+                        <apex:outputField value="{!sy.GES_Congress_Manager__c}"/> <apex:outputField value="{!sy.Agency_Name__c}"/> 
+                        <apex:outputField value="{!sy.Congress_Lead__c}"/> <apex:outputField value="{!sy.Agency_Contact_Name__c}"/> 
+                        <apex:outputField value="{!sy.GES_Account_Executive__c}"/> <apex:outputField value="{!sy.Agency_Contact_Phone__c}"/>                    
+                        <apex:outputField value="{!sy.GES_Account_Manager__c}"/> <apex:outputField value="{!sy.Agency_Contact_E_mail__c}"/> 
+                        
+                        
+                    </apex:pageBlockSection>
+                </apex:pageBlock>
+                
+                
+            </apex:form>
+            <apex:form >
+                <apex:pageBlock title="Brand">
+                    <apex:pageBlockButtons location="top">
+                        <apex:commandButton value="New Brand" action="{!SymposiaNewBrand}" styleClass="slds-button slds-button--brand gc-teal-button"/>
+                    </apex:pageBlockButtons>            
+                    <apex:pageBlockTable value="{!brdlist}" var="sybr">
+                        <apex:column headerValue="Action">
+                            <apex:outputLink value="{!$Page.SymposiaBrandEdit}"> Edit
+                                <apex:param name="brandid" value="{!sybr.Id}"/> 
+                                <apex:param name="symid" value="{!symid}"/>
+                                <apex:param name="symName" value="{!sy.Name}"/>
+                                <apex:param name="congid" value="{!congid}"/>   
+                                <apex:param name="congName" value="{!congName}"/>                                                           
+                            </apex:outputLink>
+                        </apex:column>
+                        <apex:column headerValue="Brand Instance Name">
+                            <apex:outputLink value="{!$Page.SymposiaBrandDetail}"> {!sybr.Name}
+                                <apex:param name="symbrandid" value="{!sybr.Id}"/> 
+                                <apex:param name="symid" value="{!symid}"/>
+                                <apex:param name="symName" value="{!sy.Name}"/>
+                                <apex:param name="congid" value="{!congid}"/>   
+                                <apex:param name="congName" value="{!congName}"/>                                                           
+                            </apex:outputLink>
+                        </apex:column>
+                        <!--   <apex:column headerValue="Brand Instance Name" value="{!sybr.Name}"/>-->
+                        <apex:column headerValue="Brand Name" value="{!sybr.Brand_Name__c}"/>
+                        <apex:column headerValue="Brand Category" value="{!sybr.Brand_Category__c}"/>
+                        <apex:column headerValue="Business Unit" value="{!sybr.Business_Unit__c}"/>
+                        <apex:column headerValue="Canceled" value="{!sybr.Canceled__c}"/>
+                    </apex:pageBlockTable>
+                </apex:pageBlock>
+            </apex:form> </div>
+    </html>    
+</apex:page>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>EMEA_Global_Ageing_Conference_Case</fullName>
+    <filterScope>Queue</filterScope>
+    <label>EMEA Global Ageing Conference</label>
+    <queue>EMEA_Global_Ageing_Conference</queue>
+    <sharedTo>
+        <allInternalUsers />
+    </sharedTo>
+</ListView>

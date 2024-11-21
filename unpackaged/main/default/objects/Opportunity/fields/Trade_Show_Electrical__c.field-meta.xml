@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Trade_Show_Electrical__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Used to indicate that this is a GES Electrical Only show.
+Audited - KEEP per SR 9/24/2019</description>
+    <inlineHelpText>GES is only providing electrical services on exhibition</inlineHelpText>
+    <label>GES Electrical Only</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

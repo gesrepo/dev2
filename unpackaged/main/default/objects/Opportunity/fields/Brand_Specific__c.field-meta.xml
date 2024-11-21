@@ -1,0 +1,438 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Brand_Specific__c</fullName>
+    <label>Brand Specific</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Brand__c</controllingField>
+        <valueSetDefinition>
+            <sorted>true</sorted>
+            <value>
+                <fullName>Allergy &amp; Rheumatology</fullName>
+                <default>false</default>
+                <label>Allergy &amp; Rheumatology</label>
+            </value>
+            <value>
+                <fullName>Anti Infectives</fullName>
+                <default>false</default>
+                <label>Anti Infectives</label>
+            </value>
+            <value>
+                <fullName>Biosimilars</fullName>
+                <default>false</default>
+                <label>Biosimilars</label>
+            </value>
+            <value>
+                <fullName>Biosimilars/Inflectra</fullName>
+                <default>false</default>
+                <label>Biosimilars/Inflectra</label>
+            </value>
+            <value>
+                <fullName>BioTech</fullName>
+                <default>false</default>
+                <label>BioTech</label>
+            </value>
+            <value>
+                <fullName>Cardiovascular / Metabolics</fullName>
+                <default>false</default>
+                <label>Cardiovascular / Metabolics</label>
+            </value>
+            <value>
+                <fullName>CentreOne</fullName>
+                <default>false</default>
+                <label>CentreOne</label>
+            </value>
+            <value>
+                <fullName>Consumer</fullName>
+                <default>false</default>
+                <label>Consumer</label>
+            </value>
+            <value>
+                <fullName>Consumer Healthcare</fullName>
+                <default>false</default>
+                <label>Consumer Healthcare</label>
+            </value>
+            <value>
+                <fullName>Dermatology</fullName>
+                <default>false</default>
+                <label>Dermatology</label>
+            </value>
+            <value>
+                <fullName>Device</fullName>
+                <default>false</default>
+                <label>Device</label>
+            </value>
+            <value>
+                <fullName>Endocrine</fullName>
+                <default>false</default>
+                <label>Endocrine</label>
+            </value>
+            <value>
+                <fullName>EP  Legacy Brands</fullName>
+                <default>false</default>
+                <label>EP  Legacy Brands</label>
+            </value>
+            <value>
+                <fullName>General</fullName>
+                <default>false</default>
+                <label>General</label>
+            </value>
+            <value>
+                <fullName>Greenstone</fullName>
+                <default>false</default>
+                <label>Greenstone</label>
+            </value>
+            <value>
+                <fullName>Hematology</fullName>
+                <default>false</default>
+                <label>Hematology</label>
+            </value>
+            <value>
+                <fullName>Hemophilia</fullName>
+                <default>false</default>
+                <label>Hemophilia</label>
+            </value>
+            <value>
+                <fullName>Inflammation and Immunology</fullName>
+                <default>false</default>
+                <label>Inflammation and Immunology</label>
+            </value>
+            <value>
+                <fullName>Inflammation - RA</fullName>
+                <default>false</default>
+                <label>Inflammation - RA</label>
+            </value>
+            <value>
+                <fullName>Inflammation - Ulcerative Colitis</fullName>
+                <default>false</default>
+                <label>Inflammation - Ulcerative Colitis</label>
+            </value>
+            <value>
+                <fullName>Inflectra</fullName>
+                <default>false</default>
+                <label>Inflectra</label>
+            </value>
+            <value>
+                <fullName>Internal Medicine (CV/Metabolics)</fullName>
+                <default>false</default>
+                <label>Internal Medicine (CV/Metabolics)</label>
+            </value>
+            <value>
+                <fullName>Managed Markets</fullName>
+                <default>false</default>
+                <label>Managed Markets</label>
+            </value>
+            <value>
+                <fullName>Men&#39;s Health</fullName>
+                <default>false</default>
+                <label>Men&#39;s Health</label>
+            </value>
+            <value>
+                <fullName>Neurological</fullName>
+                <default>false</default>
+                <label>Neurological</label>
+            </value>
+            <value>
+                <fullName>Oncology</fullName>
+                <default>false</default>
+                <label>Oncology</label>
+            </value>
+            <value>
+                <fullName>Ophthalmology</fullName>
+                <default>false</default>
+                <label>Ophthalmology</label>
+            </value>
+            <value>
+                <fullName>Other EP products</fullName>
+                <default>false</default>
+                <label>Other EP products</label>
+            </value>
+            <value>
+                <fullName>PCA Group</fullName>
+                <default>false</default>
+                <label>PCA Group</label>
+            </value>
+            <value>
+                <fullName>PCH</fullName>
+                <default>false</default>
+                <label>PCH</label>
+            </value>
+            <value>
+                <fullName>PEH</fullName>
+                <default>false</default>
+                <label>PEH</label>
+            </value>
+            <value>
+                <fullName>Pfizer Sterile Injectables</fullName>
+                <default>false</default>
+                <label>Pfizer Sterile Injectables</label>
+            </value>
+            <value>
+                <fullName>Pfizer Trade</fullName>
+                <default>false</default>
+                <label>Pfizer Trade</label>
+            </value>
+            <value>
+                <fullName>PIH</fullName>
+                <default>false</default>
+                <label>PIH</label>
+            </value>
+            <value>
+                <fullName>Proprietary Pharma</fullName>
+                <default>false</default>
+                <label>Proprietary Pharma</label>
+            </value>
+            <value>
+                <fullName>Quillivant</fullName>
+                <default>false</default>
+                <label>Quillivant</label>
+            </value>
+            <value>
+                <fullName>Rare Disease</fullName>
+                <default>false</default>
+                <label>Rare Disease</label>
+            </value>
+            <value>
+                <fullName>Relpax</fullName>
+                <default>false</default>
+                <label>Relpax</label>
+            </value>
+            <value>
+                <fullName>Smoking Cessation</fullName>
+                <default>false</default>
+                <label>Smoking Cessation</label>
+            </value>
+            <value>
+                <fullName>Sterile Injectables</fullName>
+                <default>false</default>
+                <label>Sterile Injectables</label>
+            </value>
+            <value>
+                <fullName>Surgical</fullName>
+                <default>false</default>
+                <label>Surgical</label>
+            </value>
+            <value>
+                <fullName>Transplant</fullName>
+                <default>false</default>
+                <label>Transplant</label>
+            </value>
+            <value>
+                <fullName>Urology</fullName>
+                <default>false</default>
+                <label>Urology</label>
+            </value>
+            <value>
+                <fullName>Urology/Men&#39;s Health</fullName>
+                <default>false</default>
+                <label>Urology/Men&#39;s Health</label>
+            </value>
+            <value>
+                <fullName>Vaccines</fullName>
+                <default>false</default>
+                <label>Vaccines</label>
+            </value>
+            <value>
+                <fullName>Women’s Health</fullName>
+                <default>false</default>
+                <label>Women’s Health</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Pfizer - Other</controllingFieldValue>
+            <controllingFieldValue>Pfizer - CH</controllingFieldValue>
+            <valueName>Consumer Healthcare</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Pfizer - Other</controllingFieldValue>
+            <valueName>General</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Pfizer - EM</controllingFieldValue>
+            <controllingFieldValue>Pfizer - IM</controllingFieldValue>
+            <controllingFieldValue>Pfizer - EMX</controllingFieldValue>
+            <valueName>Anti Infectives</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Pfizer - EM</controllingFieldValue>
+            <controllingFieldValue>Pfizer - IM</controllingFieldValue>
+            <controllingFieldValue>Pfizer - IMX</controllingFieldValue>
+            <valueName>Cardiovascular / Metabolics</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Pfizer - EM</controllingFieldValue>
+            <controllingFieldValue>Pfizer - IM</controllingFieldValue>
+            <controllingFieldValue>Pfizer - EMX</controllingFieldValue>
+            <valueName>CentreOne</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Pfizer - EM</controllingFieldValue>
+            <controllingFieldValue>Pfizer - IM</controllingFieldValue>
+            <valueName>Consumer</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Pfizer - EM</controllingFieldValue>
+            <valueName>Device</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Pfizer - EM</controllingFieldValue>
+            <controllingFieldValue>Pfizer - EMX</controllingFieldValue>
+            <valueName>EP  Legacy Brands</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Pfizer - EM</controllingFieldValue>
+            <controllingFieldValue>Pfizer - IM</controllingFieldValue>
+            <valueName>Greenstone</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Pfizer - EM</controllingFieldValue>
+            <valueName>Men&#39;s Health</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Pfizer - EM</controllingFieldValue>
+            <valueName>Neurological</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Pfizer - EM</controllingFieldValue>
+            <controllingFieldValue>Pfizer - EMX</controllingFieldValue>
+            <valueName>Other EP products</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Pfizer - EM</controllingFieldValue>
+            <controllingFieldValue>Pfizer - IM</controllingFieldValue>
+            <valueName>PEH</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Pfizer - EM</controllingFieldValue>
+            <controllingFieldValue>Pfizer - EMX</controllingFieldValue>
+            <valueName>Pfizer Sterile Injectables</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Pfizer - EM</controllingFieldValue>
+            <valueName>Proprietary Pharma</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Pfizer - EM</controllingFieldValue>
+            <valueName>Quillivant</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Pfizer - EM</controllingFieldValue>
+            <valueName>Relpax</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Pfizer - EM</controllingFieldValue>
+            <valueName>Surgical</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Pfizer - EM</controllingFieldValue>
+            <valueName>Urology/Men&#39;s Health</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Pfizer - IM</controllingFieldValue>
+            <valueName>Biosimilars</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Pfizer - IM</controllingFieldValue>
+            <valueName>BioTech</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Pfizer - IM</controllingFieldValue>
+            <controllingFieldValue>Pfizer - IMX</controllingFieldValue>
+            <valueName>Dermatology</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Pfizer - IM</controllingFieldValue>
+            <controllingFieldValue>Pfizer - IMX</controllingFieldValue>
+            <valueName>Endocrine</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Pfizer - IM</controllingFieldValue>
+            <controllingFieldValue>Pfizer - IMX</controllingFieldValue>
+            <valueName>Hemophilia</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Pfizer - IM</controllingFieldValue>
+            <valueName>Inflammation and Immunology</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Pfizer - IM</controllingFieldValue>
+            <controllingFieldValue>Pfizer - IMX</controllingFieldValue>
+            <valueName>Inflammation - RA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Pfizer - IM</controllingFieldValue>
+            <controllingFieldValue>Pfizer - IMX</controllingFieldValue>
+            <valueName>Inflammation - Ulcerative Colitis</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Pfizer - IM</controllingFieldValue>
+            <valueName>Internal Medicine (CV/Metabolics)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Pfizer - IM</controllingFieldValue>
+            <controllingFieldValue>Pfizer - IMX</controllingFieldValue>
+            <valueName>Oncology</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Pfizer - IM</controllingFieldValue>
+            <controllingFieldValue>Pfizer - IMX</controllingFieldValue>
+            <valueName>PCA Group</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Pfizer - IM</controllingFieldValue>
+            <controllingFieldValue>Pfizer - IMX</controllingFieldValue>
+            <valueName>PCH</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Pfizer - IM</controllingFieldValue>
+            <controllingFieldValue>Pfizer - IMX</controllingFieldValue>
+            <valueName>Pfizer Trade</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Pfizer - IM</controllingFieldValue>
+            <controllingFieldValue>Pfizer - IMX</controllingFieldValue>
+            <valueName>PIH</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Pfizer - IM</controllingFieldValue>
+            <controllingFieldValue>Pfizer - IMX</controllingFieldValue>
+            <valueName>Rare Disease</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Pfizer - IM</controllingFieldValue>
+            <controllingFieldValue>Pfizer - IMX</controllingFieldValue>
+            <valueName>Smoking Cessation</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Pfizer - IM</controllingFieldValue>
+            <valueName>Sterile Injectables</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Pfizer - IM</controllingFieldValue>
+            <controllingFieldValue>Pfizer - IMX</controllingFieldValue>
+            <valueName>Urology</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Pfizer - IM</controllingFieldValue>
+            <controllingFieldValue>Pfizer - IMX</controllingFieldValue>
+            <valueName>Vaccines</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Pfizer - IM</controllingFieldValue>
+            <controllingFieldValue>Pfizer - IMX</controllingFieldValue>
+            <valueName>Women’s Health</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Pfizer - IMX</controllingFieldValue>
+            <controllingFieldValue>Pfizer - EMX</controllingFieldValue>
+            <valueName>Biosimilars/Inflectra</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Pfizer - EMX</controllingFieldValue>
+            <valueName>Inflectra</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

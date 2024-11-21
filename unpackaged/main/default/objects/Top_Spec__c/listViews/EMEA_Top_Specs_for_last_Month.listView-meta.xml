@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>EMEA_Top_Specs_for_last_Month</fullName>
+    <columns>NAME</columns>
+    <columns>Show_Name__c</columns>
+    <columns>Venue__c</columns>
+    <columns>Show_Open__c</columns>
+    <columns>Show_Close__c</columns>
+    <columns>CREATED_DATE</columns>
+    <columns>LAST_UPDATE</columns>
+    <columns>RECORDTYPE</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Show_Open__c</field>
+        <operation>equals</operation>
+        <value>LAST_MONTH</value>
+    </filters>
+    <label>EMEA Top Specs for last Month</label>
+    <language>en_US</language>
+</ListView>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Reason_Lost_AV__c</fullName>
+    <label>Reason Lost AV</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>In-House</fullName>
+                <default>false</default>
+                <label>In-House</label>
+            </value>
+            <value>
+                <fullName>Price</fullName>
+                <default>false</default>
+                <label>Price</label>
+            </value>
+            <value>
+                <fullName>Out of Territory</fullName>
+                <default>false</default>
+                <label>Out of Territory</label>
+            </value>
+            <value>
+                <fullName>Incumbent</fullName>
+                <default>false</default>
+                <label>Incumbent</label>
+            </value>
+            <value>
+                <fullName>Previous service failure</fullName>
+                <default>false</default>
+                <label>Previous service failure</label>
+            </value>
+            <value>
+                <fullName>Event canceled</fullName>
+                <default>false</default>
+                <label>Event canceled</label>
+            </value>
+            <value>
+                <fullName>X-rent of equipment</fullName>
+                <default>false</default>
+                <label>X-rent of equipment</label>
+            </value>
+            <value>
+                <fullName>Relationship</fullName>
+                <default>false</default>
+                <label>Relationship</label>
+            </value>
+            <value>
+                <fullName>Capabilities</fullName>
+                <default>false</default>
+                <label>Capabilities</label>
+            </value>
+            <value>
+                <fullName>GES lost bid</fullName>
+                <default>false</default>
+                <label>GES lost bid</label>
+            </value>
+            <value>
+                <fullName>Corona Virus</fullName>
+                <default>false</default>
+                <label>Corona Virus</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

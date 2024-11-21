@@ -1,0 +1,84 @@
+<apex:page standardStylesheets="true" standardController="GC_Design_Element__c" tabStyle="GC_Design_Element__c">
+    <apex:includeScript value="{!$Resource.jQuery}" />
+    <style>
+        .requiredInputc{
+        position: relative;
+        height: 100%;
+        padding-right: 10px;
+        }
+        
+        .requiredFieldc{
+        background-color: #c00;
+        position: absolute; 
+        left: -4px;
+        width: 3px;
+        top: 1px; 
+        bottom: 1px;
+        }
+        
+        .linkCol{
+        font-size: 91%;
+        font-weight: bold;
+        }
+    </style>
+    
+    <div id="divLocCodes" >
+        <table style="padding-left: 13.5%;">
+                <tr>
+                    <td class="linkCol">
+                        <apex:outputLink value="http://defyconvention.ges.intra/design/LOC%20Codes/Forms/AllItems.aspx" target="_blank">LOC Codes</apex:outputLink>
+                    </td>
+                    <td style="padding-left:3%">
+                        <div class = "requiredInputc">
+                            <apex:outputLabel value="{!GC_Design_Element__c.LOC1__c}" />
+                        </div> 
+                    </td>
+                    <td>
+                        <div class = "requiredInputc">
+                            <apex:outputLabel value="{!GC_Design_Element__c.LOC2__c}" />
+                        </div>
+                    </td>
+                    <td>
+                        <div class = "requiredInputc">
+                            <apex:outputLabel value="{!GC_Design_Element__c.LOC3__c}"/>
+                        </div>
+                    </td>
+                    <td>
+                        <div class = "requiredInputc">
+                            <apex:outputLabel value="{!GC_Design_Element__c.LOC4__c}" />
+                        </div>
+                    </td>
+                    <td>
+                        <div class = "requiredInputc">
+                            <apex:outputLabel value="{!GC_Design_Element__c.LOC5__c}" />
+                        </div>
+                    </td>
+                    <td>
+                        <div class = "requiredInputc">
+                            <apex:outputLabel value="{!GC_Design_Element__c.LOC6__c}" />
+                        </div>
+                    </td>
+                    <td>
+                        <div class = "requiredInputc">
+                            <apex:outputLabel value="{!GC_Design_Element__c.LOC7__c}" />
+                        </div>
+                    </td>
+                    <td>
+                        <div class = "requiredInputc">
+                            <apex:outputLabel value="{!GC_Design_Element__c.LOC8__c}" />
+                        </div>
+                    </td>
+                    <td>
+                        <div class = "requiredInputc">
+                            <apex:outputLabel value="{!GC_Design_Element__c.LOC9__c}" />
+                        </div>
+                    </td>
+                    <td>
+                        <div class = "requiredInputc">
+                            <apex:outputLabel value="{!GC_Design_Element__c.LOC10__c}" />
+                        </div>
+                    </td>
+                </tr>
+        </table>
+    </div>
+</apex:page>

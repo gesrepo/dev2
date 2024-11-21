@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>My_Chat_Transcripts</fullName>
+    <columns>Name</columns>
+    <columns>LiveChatVisitor</columns>
+    <columns>StartTime</columns>
+    <columns>EndTime</columns>
+    <columns>Status</columns>
+    <columns>Owner</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Owner</field>
+        <operation>equals</operation>
+        <value>Joy Varughese</value>
+    </filters>
+    <label>My Chat Transcripts</label>
+</ListView>

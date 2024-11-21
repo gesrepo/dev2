@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Display_Price_Matrix</fullName>
+    <availability>online</availability>
+    <displayType>button</displayType>
+    <linkType>javascript</linkType>
+    <masterLabel>Display Price Matrix</masterLabel>
+    <openType>onClickJavaScript</openType>
+    <protected>false</protected>
+    <url>{!REQUIRESCRIPT(&quot;/soap/ajax/10.0/connection.js&quot;)}
+{!REQUIRESCRIPT(&quot;/soap/ajax/10.0/apex.js&quot;)}
+{!REQUIRESCRIPT(&quot;/support/console/22.0/integration.js&quot;)}
+{!REQUIRESCRIPT(&quot;https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js&quot;)}
+{!REQUIRESCRIPT(&quot;https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/jquery-ui.min.js&quot;)}
+
+var priceMatrixUrl =  &#39;/apex/PageQuotePriceMatrix?Id={!Quote__c.Id}&#39;;
+var subTabTitle = &#39;Price Matrix&#39;;
+
+/*
+var openSubtab = function openSubtab (result) {
+      		sforce.console.openSubtab(result.id, priceMatrixUrl , true, subTabTitle,null,null);
+      	};
+
+sforce.console.getEnclosingPrimaryTabId(openSubtab);
+*/
+
+window.open(priceMatrixUrl);</url>
+</WebLink>

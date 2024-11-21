@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Declined_To_Bid_Reason__c</fullName>
+    <inlineHelpText>Enter a reason as to why you have chosen the DB (Declined to Bid) stage.</inlineHelpText>
+    <label>Declined To Bid Reason</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>StageName</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>true</sorted>
+            <value>
+                <fullName>Client Cancelled Attendance/Opted For Shell Scheme</fullName>
+                <default>false</default>
+                <label>Client Cancelled Attendance/Opted For Shell Scheme</label>
+            </value>
+            <value>
+                <fullName>Client Did Not Supply RFP</fullName>
+                <default>false</default>
+                <label>Client Did Not Supply RFP</label>
+            </value>
+            <value>
+                <fullName>GES Declined - Insufficient Budget</fullName>
+                <default>false</default>
+                <label>GES Declined - Insufficient Budget</label>
+            </value>
+            <value>
+                <fullName>GES Declined - Internal Resource Issues</fullName>
+                <default>false</default>
+                <label>GES Declined - Internal Resource Issues</label>
+            </value>
+            <value>
+                <fullName>GES Declined - Time Scales To Tight</fullName>
+                <default>false</default>
+                <label>GES Declined - Time Scales To Tight</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>DB</controllingFieldValue>
+            <controllingFieldValue>Decline to Bid</controllingFieldValue>
+            <valueName>Client Cancelled Attendance/Opted For Shell Scheme</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>DB</controllingFieldValue>
+            <controllingFieldValue>Decline to Bid</controllingFieldValue>
+            <valueName>Client Did Not Supply RFP</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>DB</controllingFieldValue>
+            <controllingFieldValue>Decline to Bid</controllingFieldValue>
+            <valueName>GES Declined - Insufficient Budget</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>DB</controllingFieldValue>
+            <controllingFieldValue>Decline to Bid</controllingFieldValue>
+            <valueName>GES Declined - Internal Resource Issues</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>DB</controllingFieldValue>
+            <controllingFieldValue>Decline to Bid</controllingFieldValue>
+            <valueName>GES Declined - Time Scales To Tight</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

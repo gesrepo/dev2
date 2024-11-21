@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>GES_Account_Manager__c</fullName>
+    <label>GES Account Manager</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>true</sorted>
+            <value>
+                <fullName>Amy Gerrard</fullName>
+                <default>false</default>
+                <label>Amy Gerrard</label>
+            </value>
+            <value>
+                <fullName>Ashley Simmons</fullName>
+                <default>false</default>
+                <label>Ashley Simmons</label>
+            </value>
+            <value>
+                <fullName>Broome, Julia</fullName>
+                <default>false</default>
+                <label>Broome, Julia</label>
+            </value>
+            <value>
+                <fullName>Brown, Caroline</fullName>
+                <default>false</default>
+                <label>Brown, Caroline</label>
+            </value>
+            <value>
+                <fullName>Costa, Debra</fullName>
+                <default>false</default>
+                <label>Costa, Debra</label>
+            </value>
+            <value>
+                <fullName>Ellis, Richard</fullName>
+                <default>false</default>
+                <label>Ellis, Richard</label>
+            </value>
+            <value>
+                <fullName>Emily Rawls</fullName>
+                <default>false</default>
+                <label>Emily Rawls</label>
+            </value>
+            <value>
+                <fullName>Gorman, Celeste</fullName>
+                <default>false</default>
+                <label>Gorman, Celeste</label>
+            </value>
+            <value>
+                <fullName>Harley, Lauren</fullName>
+                <default>false</default>
+                <label>Harley, Lauren</label>
+            </value>
+            <value>
+                <fullName>Jessica Bodner</fullName>
+                <default>false</default>
+                <label>Jessica Bodner</label>
+            </value>
+            <value>
+                <fullName>Jessica Wertheimer</fullName>
+                <default>false</default>
+                <label>Jessica Wertheimer</label>
+            </value>
+            <value>
+                <fullName>Laurie Miller</fullName>
+                <default>false</default>
+                <label>Laurie Miller</label>
+            </value>
+            <value>
+                <fullName>Marsh, Reta</fullName>
+                <default>false</default>
+                <label>Marsh, Reta</label>
+            </value>
+            <value>
+                <fullName>Megan Siconolfi</fullName>
+                <default>false</default>
+                <label>Megan Siconolfi</label>
+            </value>
+            <value>
+                <fullName>Morton, Lora</fullName>
+                <default>false</default>
+                <label>Morton, Lora</label>
+            </value>
+            <value>
+                <fullName>Proule, Jeannette</fullName>
+                <default>false</default>
+                <label>Proule, Jeannette</label>
+            </value>
+            <value>
+                <fullName>Roseler, Jennifer</fullName>
+                <default>false</default>
+                <label>Roseler, Jennifer</label>
+            </value>
+            <value>
+                <fullName>Shilpa Mistry</fullName>
+                <default>false</default>
+                <label>Shilpa Mistry</label>
+            </value>
+            <value>
+                <fullName>Tara Nigro</fullName>
+                <default>false</default>
+                <label>Tara Nigro</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

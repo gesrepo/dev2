@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Win_Or_Retain_Account__c</fullName>
+    <description>Description of what is needed to win over account and how design can support.</description>
+    <inlineHelpText>Description of what is needed to win over account and how design can support.</inlineHelpText>
+    <label>Answer 3</label>
+    <length>32768</length>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>LongTextArea</type>
+    <visibleLines>3</visibleLines>
+</CustomField>

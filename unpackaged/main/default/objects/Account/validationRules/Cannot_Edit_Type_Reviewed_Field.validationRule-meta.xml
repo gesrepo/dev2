@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Cannot_Edit_Type_Reviewed_Field</fullName>
+    <active>true</active>
+    <description>Type reviewed field can be edited only by system admin</description>
+    <errorConditionFormula>AND(ISCHANGED( Type_Reviewed__c ),$Profile.Name  &lt;&gt; &#39;System Administrator&#39;)</errorConditionFormula>
+    <errorDisplayField>Type_Reviewed__c</errorDisplayField>
+    <errorMessage>Do not have permission to Edit the Field</errorMessage>
+</ValidationRule>

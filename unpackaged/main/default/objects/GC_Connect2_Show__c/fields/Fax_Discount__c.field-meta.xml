@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Fax_Discount__c</fullName>
+    <defaultValue>true</defaultValue>
+    <description>Determines whether a discount is offered for Online orders placed before the Discount Deadline Date</description>
+    <inlineHelpText>Determines whether a discount is offered for Online orders placed before the Discount Deadline Date</inlineHelpText>
+    <label>Offer Online Ordering Discount</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

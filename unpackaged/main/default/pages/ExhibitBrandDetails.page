@@ -1,0 +1,100 @@
+<apex:page standardStylesheets="true" showHeader="false" sidebar="false" applyHtmlTag="false" applyBodyTag="false" docType="html-5.0" tabStyle="Account" standardController="Brand__c" extensions="BrandDetail">
+    <html xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <head>
+            <apex:includeScript value="{!$Resource.jQuery}" />
+            <apex:stylesheet value="{!URLFOR($Resource.Lightning_Design_System, 'assets/styles/salesforce-lightning-design-system.min.css')}" />
+            <apex:stylesheet value="{!URLFOR($Resource.GC_Assets, 'GC_Assets/css/GC_Styles.css')}" />
+            <apex:includeScript value="{!URLFOR($Resource.GC_Assets, 'GC_Assets/js/GC_init.js')}" />
+        </head>
+        
+        <body>
+            <div class="slds">
+                <c:GC_Community_Header />   
+                <div class="slds-page-header gc-navigation--subHeader" role="banner">
+                    <div class="slds-media">
+                        <div class="slds-media__figure">
+                            <apex:image url="{!URLFOR($Resource.GC_Assets, 'GC_Assets/img/custom13_60_teal.png')}" />
+                        </div>
+                        <div class="slds-media__body">
+                            <p class="slds-page-header__title slds-align-middle">
+                                <span> Brand Name:</span>
+                                <span class="slds-truncate">{!b.Name}</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            
+            <script>
+            function goto()
+            {
+                alert('hi');
+                var exhibitid=document.getElementById'{!$Component.fm.pb.pbs.pbsexid}').value;
+                alert(exhibitid);
+            }
+            </script>
+            <apex:form id="fm">
+                
+                <apex:pageBlock id="pb"> 
+                   <apex:pageBlockButtons location="top">
+                        <apex:commandButton action="{!BrandSave}" value="Edit" styleClass="slds-button slds-button--brand gc-teal-button"/>
+                        <apex:commandButton value="Back" action="{!BrandCancel}" styleClass="slds-button slds-button--brand gc-teal-button"/>
+                    </apex:pageBlockButtons>                  
+                    
+                    <apex:pageBlockSection title="Brand Details" id="pbs">           
+                        <!-- <apex:outputField value="{!b.Exhibit_Instance__c}" id="pbsexid"><apex:outputLabel onclick="goto()"></apex:outputLabel></apex:outputField> -->
+                        
+                        <apex:outputText label="Exhibit">
+                            <apex:outputLink value="{!$Page.ExhibitDetails}">{!exhibitName1}
+                                <apex:param name="congressid" value="{!b.GES_Connect_Corporate_Accounts__c}"/>
+                                <apex:param name="congressName" value="{!b.GES_Connect_Corporate_Accounts__r.Name}"/>
+                                <apex:param name="exhibitid" value="{!b.Exhibit_Instance__c}"/>
+                            </apex:outputLink>
+                        </apex:outputText>
+                        <apex:outputText label="Congress ID">
+                            <apex:outputLink value="{!$Page.Congressdetails}">{!b.GES_Connect_Corporate_Accounts__r.Name}
+                                <apex:param name="id" value="{!b.GES_Connect_Corporate_Accounts__c}"/>
+                            </apex:outputLink>
+                        </apex:outputText>
+                        <!-- <apex:outputField value="{!b.GES_Connect_Corporate_Accounts__c}"/> -->
+                        <apex:outputField value="{!b.Brand_Name__c}"/>
+                        <apex:outputField value="{!b.Brand_Team_Contact__c}"/>
+                       <!--<apex:outputField value="{!b.GES_Congress_Manager__c}"/> -->
+                        <apex:outputField value="{!b.Brand_Category__c}"/>
+                      <!--  <apex:outputField value="{!b.Congress_Lead__c}"/> -->
+                        <apex:outputField value="{!b.Contact_Not_Listed__c}"/>
+                        <apex:outputField value="{!b.Business_Unit__c}"/>
+                        <apex:outputField value="{!b.Finance_Coordinator__c}"/>
+                        <apex:outputField value="{!b.COE_Supported__c}"/>
+                        <apex:outputText ></apex:outputText>
+                        <apex:outputField value="{!b.Booth_Space_Cost_Estimated__c}"/>
+                        <apex:outputField value="{!b.Funding_Provider_Region__c}"/>
+                        <apex:outputField value="{!b.Booth_Space_Cost_Actual__c}"/>
+                        <apex:outputField value="{!b.Funding_Provider_Brand__c}"/>
+                        <apex:outputField value="{!b.Estimated_Cost_Origination__c}"/>
+                        <apex:outputField value="{!b.Funding_Provider_Department__c}"/> 
+                        <apex:outputField value="{!b.Exhibit_Costs_Estimated__c}"/>
+                        <apex:outputtext value="{!b.Cost_Center__c}"/> 
+                        <apex:outputField value="{!b.Exhibit_Costs_Actual__c}"/>
+                        <apex:outputField value="{!b.Company_Code__c}"/> 
+                        <apex:outputField value="{!b.Canceled__c}"/> 
+                        <apex:outputField value="{!b.CurrencyIsoCode}"/>
+                        <!--<apex:outputText ></apex:outputText>-->
+                        <apex:outputField value="{!b.Reason_for_Cancellation__c}"/>  
+                        <apex:outputText ></apex:outputText>  
+                        <apex:outputField value="{!b.Cancelled_Date__c}"/>
+                        <!--<apex:outputField value="{!b.Sponsorship__c}"/>-->
+                        
+                    </apex:pageBlockSection>
+                    
+                 <!--   <apex:pageBlockButtons >
+                        <apex:commandButton action="{! edit }" value="Edit" />  
+                        <apex:commandButton action="{! delete }" value="Delete" /> 
+                    </apex:pageBlockButtons>-->
+                    
+                </apex:pageBlock>
+                
+            </apex:form>
+          </div>
+        </body>
+    </html>
+</apex:page>

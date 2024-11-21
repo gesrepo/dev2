@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>EMEA_Custom_Build_Rule_if_closed_won</fullName>
+    <active>false</active>
+    <description>Requested by Michael Stewart</description>
+    <errorConditionFormula>/* We only want this to run against Custom build
+If the stage is won, we must have a Sell Margin, Designer and Account manager populated, prompt the user
+*/
+$RecordType.DeveloperName = &#39;EMEA_Custom_Build&#39;
+&amp;&amp; ISPICKVAL( StageName ,&#39;Contract Win&#39;)
+&amp;&amp; (ISBLANK( Design_cost__c ) ||  
+ISPICKVAL( E_E_Designer__c, &#39;&#39;)  ||  
+ISPICKVAL( ED_AccountMgr__c ,&#39;&#39;) 
+)</errorConditionFormula>
+    <errorMessage>If the stage is won, you must have a Sell Margin, Designer and Account manager populated</errorMessage>
+</ValidationRule>

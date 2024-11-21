@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Instructions__c</fullName>
+    <defaultValue>&quot;All are mandatory fields and need to be filled out. Please ensure you set your location correctly, this will allow the form to be routed to the correct Salesforce Support person. Please set Stage to NEW.  If you do not have all the information at that time then you can save and go back to it.  Only when you set the stage to SUBMITTED will it come to the relevant Salesforce Support person to action for you. They will set ourselves as Owner, in Record information section, and set to in progress, once complete setting to Done and posting links in the ADMIN ONLY section, triggering an email to you to let you know its created with links on the form for quick access for you.&quot;</defaultValue>
+    <label>Instructions</label>
+    <length>1000</length>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>LongTextArea</type>
+    <visibleLines>12</visibleLines>
+</CustomField>

@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Exhibit_House__c</fullName>
+    <label>Exhibit House</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>1220</fullName>
+                <default>false</default>
+                <label>1220</label>
+            </value>
+            <value>
+                <fullName>2020 Exhibits</fullName>
+                <default>false</default>
+                <label>2020 Exhibits</label>
+            </value>
+            <value>
+                <fullName>3D Exhibits</fullName>
+                <default>false</default>
+                <label>3D Exhibits</label>
+            </value>
+            <value>
+                <fullName>Avalon Exhibits</fullName>
+                <default>false</default>
+                <label>Avalon Exhibits</label>
+            </value>
+            <value>
+                <fullName>Boothcrafters</fullName>
+                <default>false</default>
+                <label>Boothcrafters</label>
+            </value>
+            <value>
+                <fullName>Cal Ostlund Inc. Exhibits</fullName>
+                <default>false</default>
+                <label>Cal Ostlund Inc. Exhibits</label>
+            </value>
+            <value>
+                <fullName>Centerpoint</fullName>
+                <default>false</default>
+                <label>Centerpoint</label>
+            </value>
+            <value>
+                <fullName>Contempo Exhibits</fullName>
+                <default>false</default>
+                <label>Contempo Exhibits</label>
+            </value>
+            <value>
+                <fullName>Czarnowski</fullName>
+                <default>false</default>
+                <label>Czarnowski</label>
+            </value>
+            <value>
+                <fullName>Derse</fullName>
+                <default>false</default>
+                <label>Derse</label>
+            </value>
+            <value>
+                <fullName>Exhibit Concepts</fullName>
+                <default>false</default>
+                <label>Exhibit Concepts</label>
+            </value>
+            <value>
+                <fullName>Exhibit Works</fullName>
+                <default>false</default>
+                <label>Exhibit Works</label>
+            </value>
+            <value>
+                <fullName>Exhibitgroup Giltspur</fullName>
+                <default>false</default>
+                <label>Exhibitgroup Giltspur</label>
+            </value>
+            <value>
+                <fullName>Expo Pros</fullName>
+                <default>false</default>
+                <label>Expo Pros</label>
+            </value>
+            <value>
+                <fullName>Freeman</fullName>
+                <default>false</default>
+                <label>Freeman</label>
+            </value>
+            <value>
+                <fullName>GES</fullName>
+                <default>false</default>
+                <label>GES</label>
+            </value>
+            <value>
+                <fullName>Gilbert Displays</fullName>
+                <default>false</default>
+                <label>Gilbert Displays</label>
+            </value>
+            <value>
+                <fullName>GPJ</fullName>
+                <default>false</default>
+                <label>GPJ</label>
+            </value>
+            <value>
+                <fullName>H.B. Stubbs</fullName>
+                <default>false</default>
+                <label>H.B. Stubbs</label>
+            </value>
+            <value>
+                <fullName>Impact Unlimited</fullName>
+                <default>false</default>
+                <label>Impact Unlimited</label>
+            </value>
+            <value>
+                <fullName>Jack Morton</fullName>
+                <default>false</default>
+                <label>Jack Morton</label>
+            </value>
+            <value>
+                <fullName>MC2</fullName>
+                <default>false</default>
+                <label>MC2</label>
+            </value>
+            <value>
+                <fullName>MICE North America</fullName>
+                <default>false</default>
+                <label>MICE North America</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>Premier Displays</fullName>
+                <default>false</default>
+                <label>Premier Displays</label>
+            </value>
+            <value>
+                <fullName>SDD</fullName>
+                <default>false</default>
+                <label>SDD</label>
+            </value>
+            <value>
+                <fullName>Skyline Exhibits</fullName>
+                <default>false</default>
+                <label>Skyline Exhibits</label>
+            </value>
+            <value>
+                <fullName>Sparks</fullName>
+                <default>false</default>
+                <label>Sparks</label>
+            </value>
+            <value>
+                <fullName>TCA Access</fullName>
+                <default>false</default>
+                <label>TCA Access</label>
+            </value>
+            <value>
+                <fullName>The Taylor Group</fullName>
+                <default>false</default>
+                <label>The Taylor Group</label>
+            </value>
+            <value>
+                <fullName>Trade Show Fabrications</fullName>
+                <default>false</default>
+                <label>Trade Show Fabrications</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Event_Manager_Phone_Auto__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF((TEXT(Event_Manager__c) == &quot;Shawn McDonald&quot;),&quot;(603) 610-3301&quot;,
+IF((TEXT(Event_Manager__c) == &quot;Aisling Meehan&quot;),&quot;(603) 610-3303&quot;,
+IF((TEXT(Event_Manager__c) == &quot;Caitlin Ferdyn&quot;),&quot;(603) 610-3284&quot;,
+IF((TEXT(Event_Manager__c) == &quot;Nicole Casey&quot;),&quot;(603) 610-3209&quot;,
+IF((TEXT(Event_Manager__c) == &quot;Adam Rowe&quot;),&quot;(603) 610-3278&quot;,
+IF((TEXT(Event_Manager__c) == &quot;Michael Clearey&quot;),&quot;(603) 610-3702&quot;,
+&quot;&quot;))))))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Event Manager Phone</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

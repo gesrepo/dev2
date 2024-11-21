@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Account__c</fullName>
+    <deleteConstraint>Restrict</deleteConstraint>
+    <description>Lookup to account</description>
+    <inlineHelpText>Please select the Organiser account that this relates to</inlineHelpText>
+    <label>Account</label>
+    <lookupFilter>
+        <active>true</active>
+        <errorMessage>You must select an account that is a Firm</errorMessage>
+        <filterItems>
+            <field>Account.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Firm</value>
+        </filterItems>
+        <infoMessage>Please select the firm this relates to</infoMessage>
+        <isOptional>false</isOptional>
+    </lookupFilter>
+    <referenceTo>Account</referenceTo>
+    <relationshipLabel>New Business</relationshipLabel>
+    <relationshipName>New_Business</relationshipName>
+    <required>true</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

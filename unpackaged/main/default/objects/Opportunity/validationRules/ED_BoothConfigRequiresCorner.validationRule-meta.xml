@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ED_BoothConfigRequiresCorner</fullName>
+    <active>false</active>
+    <description>Selection of Corner booth configuration requires a Corner Type selection. Error Location Top of Page 
+Description If &quot;Corner&quot; is chosen as booth configuration, a Corner Type must be selected.</description>
+    <errorConditionFormula>PRF_Submitted__c =true &amp;&amp; 
+(GBMSProjectStatus__c = &quot;Forecast&quot; || ISBLANK(GBMSProjectStatus__c ) ) 
+&amp;&amp; $RecordType.DeveloperName = &quot;E_D_Projects&quot; 
+&amp;&amp; ISPICKVAL( Booth_Type__c , &quot;Corner&quot;) 
+&amp;&amp; !ISPICKVAL( PRFCornerType__c , &quot;Right Open&quot;) 
+&amp;&amp; !ISPICKVAL( PRFCornerType__c , &quot;Left Open&quot;)</errorConditionFormula>
+    <errorMessage>Selection of Corner booth configuration requires a Corner Type selection.</errorMessage>
+</ValidationRule>

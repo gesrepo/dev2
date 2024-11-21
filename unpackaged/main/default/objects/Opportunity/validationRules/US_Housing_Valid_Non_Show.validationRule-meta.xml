@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>US_Housing_Valid_Non_Show</fullName>
+    <active>true</active>
+    <description>Non-show record selected on US Housing opportunities should be of US - Housing record type. The non-show field is shared between US - Housing and Corp Accounts, so this cannot be accomplished using lookup field filter.</description>
+    <errorConditionFormula>$RecordType.DeveloperName == &#39;US_Housing&#39; &amp;&amp; NOT(ISBLANK(Non_Show__c)) &amp;&amp; Non_Show__r.RecordType.DeveloperName != &#39;US_Housing&#39;&amp;&amp; ($Profile.Name != &quot;GES Administrator Interface&quot;)</errorConditionFormula>
+    <errorMessage>Incorrect Non-Show selected. Please select a Non-Show of &quot;US - Housing&quot; record type.</errorMessage>
+</ValidationRule>

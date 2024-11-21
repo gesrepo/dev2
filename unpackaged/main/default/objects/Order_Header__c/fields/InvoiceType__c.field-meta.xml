@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>InvoiceType__c</fullName>
+    <description>SOP Field - InvoiceType</description>
+    <label>Invoice Type</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>INVOICE</fullName>
+                <default>false</default>
+                <label>INVOICE</label>
+            </value>
+            <value>
+                <fullName>CREDIT NOTE</fullName>
+                <default>false</default>
+                <label>CREDIT NOTE</label>
+            </value>
+            <value>
+                <fullName>RESERVE</fullName>
+                <default>false</default>
+                <label>RESERVE</label>
+            </value>
+            <value>
+                <fullName>QUOTE</fullName>
+                <default>false</default>
+                <label>QUOTE</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

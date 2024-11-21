@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>110- Las Vegas</fullName>
+        <default>false</default>
+        <label>110- Las Vegas</label>
+    </customValue>
+    <customValue>
+        <fullName>140- Salt Lake City</fullName>
+        <default>false</default>
+        <label>140- Salt Lake City</label>
+    </customValue>
+    <customValue>
+        <fullName>150- Reno</fullName>
+        <default>false</default>
+        <label>150- Reno</label>
+    </customValue>
+    <customValue>
+        <fullName>160- Denver</fullName>
+        <default>false</default>
+        <label>160- Denver</label>
+    </customValue>
+    <customValue>
+        <fullName>170- Phoenix</fullName>
+        <default>false</default>
+        <label>170- Phoenix</label>
+    </customValue>
+    <customValue>
+        <fullName>220- Los Angeles, CA</fullName>
+        <default>false</default>
+        <label>220- Los Angeles, CA</label>
+    </customValue>
+    <customValue>
+        <fullName>240- San Francisco, San Jose</fullName>
+        <default>false</default>
+        <label>240- San Francisco, San Jose</label>
+    </customValue>
+    <customValue>
+        <fullName>250- San Diego</fullName>
+        <default>false</default>
+        <label>250- San Diego</label>
+    </customValue>
+    <customValue>
+        <fullName>420- Austin, Dallas, Houston, San Antonio</fullName>
+        <default>false</default>
+        <label>420- Austin, Dallas, Houston, San Antonio</label>
+    </customValue>
+    <customValue>
+        <fullName>510- Atlanta</fullName>
+        <default>false</default>
+        <label>510- Atlanta</label>
+    </customValue>
+    <customValue>
+        <fullName>520- Florida</fullName>
+        <default>false</default>
+        <label>520- Florida</label>
+    </customValue>
+    <customValue>
+        <fullName>530- New Orleans</fullName>
+        <default>false</default>
+        <label>530- New Orleans</label>
+    </customValue>
+    <customValue>
+        <fullName>610- Portland, Seattle</fullName>
+        <default>false</default>
+        <label>610- Portland, Seattle</label>
+    </customValue>
+    <customValue>
+        <fullName>710- Chicago, Cleveland, Milwaukee, St. Louis</fullName>
+        <default>false</default>
+        <label>710- Chicago, Cleveland, Milwaukee, St. Louis</label>
+    </customValue>
+    <customValue>
+        <fullName>790- Minneapolis</fullName>
+        <default>false</default>
+        <label>790- Minneapolis</label>
+    </customValue>
+    <customValue>
+        <fullName>810- New York &amp; Boston</fullName>
+        <default>false</default>
+        <label>810- New York &amp; Boston</label>
+    </customValue>
+    <customValue>
+        <fullName>830-DC, Philadelphia</fullName>
+        <default>false</default>
+        <label>830-DC, Philadelphia</label>
+    </customValue>
+    <customValue>
+        <fullName>940 - Tradeshow Foreign</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>940 - Tradeshow Foreign</label>
+    </customValue>
+    <customValue>
+        <fullName>120- Housing</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>120- Housing</label>
+    </customValue>
+    <customValue>
+        <fullName>520- Miami, Orlando, Tampa</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>520- Miami, Orlando, Tampa</label>
+    </customValue>
+    <customValue>
+        <fullName>230-Intl Corp Events</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>230-Intl Corp Events</label>
+    </customValue>
+    <customValue>
+        <fullName>270- Corporate Events (Marketing Dept only)</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>270- Corporate Events (Marketing Dept only)</label>
+    </customValue>
+    <customValue>
+        <fullName>460 - Calgary, Canada</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>460 - Calgary, Canada</label>
+    </customValue>
+    <customValue>
+        <fullName>470 - Edmonton, Canada</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>470 - Edmonton, Canada</label>
+    </customValue>
+    <customValue>
+        <fullName>471 - Vancouver, Canada</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>471 - Vancouver, Canada</label>
+    </customValue>
+    <customValue>
+        <fullName>480- Montreal, Canada - ESS</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>480- Montreal, Canada - ESS</label>
+    </customValue>
+    <customValue>
+        <fullName>481 - Quebec City, Canada</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>481 - Quebec City, Canada</label>
+    </customValue>
+    <customValue>
+        <fullName>890- Toronto, Canada</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>890- Toronto, Canada</label>
+    </customValue>
+    <customValue>
+        <fullName>Farnborough</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Farnborough</label>
+    </customValue>
+    <customValue>
+        <fullName>483 - Montreal, Canada - CCI</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>483 - Montreal, Canada - CCI</label>
+    </customValue>
+    <customValue>
+        <fullName>OLYMPIA London</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>OLYMPIA London</label>
+    </customValue>
+    <customValue>
+        <fullName>EXCEL London</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>EXCEL London</label>
+    </customValue>
+    <customValue>
+        <fullName>NEC Birmingham</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>NEC Birmingham</label>
+    </customValue>
+    <customValue>
+        <fullName>MANCHESTER Central</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>MANCHESTER Central</label>
+    </customValue>
+    <customValue>
+        <fullName>180 - Registration</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>180 - Registration</label>
+    </customValue>
+    <customValue>
+        <fullName>UAE</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>UAE</label>
+    </customValue>
+    <customValue>
+        <fullName>Sheffield</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Sheffield</label>
+    </customValue>
+    <customValue>
+        <fullName>Middle East, UAE</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Middle East, UAE</label>
+    </customValue>
+    <customValue>
+        <fullName>Holland</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Holland</label>
+    </customValue>
+    <customValue>
+        <fullName>London</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>London</label>
+    </customValue>
+    <customValue>
+        <fullName>Glasgow</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Glasgow</label>
+    </customValue>
+    <customValue>
+        <fullName>Germany</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Germany</label>
+    </customValue>
+    <customValue>
+        <fullName>Dubai, UAE</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Dubai, UAE</label>
+    </customValue>
+    <customValue>
+        <fullName>Coventry</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Coventry</label>
+    </customValue>
+    <customValue>
+        <fullName>Abu Dhabi, UAE</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Abu Dhabi, UAE</label>
+    </customValue>
+    <customValue>
+        <fullName>944 - E&amp;E Foreign</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>944 - E&amp;E Foreign</label>
+    </customValue>
+    <masterLabel>ICS_Location_City</masterLabel>
+    <sorted>true</sorted>
+</GlobalValueSet>

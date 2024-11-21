@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Brand__c</fullName>
+    <label>Brand</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>true</sorted>
+            <value>
+                <fullName>Novartis - Alcon</fullName>
+                <default>false</default>
+                <label>Novartis - Alcon</label>
+            </value>
+            <value>
+                <fullName>Novartis - Genoptix</fullName>
+                <default>false</default>
+                <label>Novartis - Genoptix</label>
+            </value>
+            <value>
+                <fullName>Novartis - Innovative Medicines</fullName>
+                <default>false</default>
+                <label>Novartis - Innovative Medicines</label>
+            </value>
+            <value>
+                <fullName>Novartis - Oncology</fullName>
+                <default>false</default>
+                <label>Novartis - Oncology</label>
+            </value>
+            <value>
+                <fullName>Novartis - Sandoz</fullName>
+                <default>false</default>
+                <label>Novartis - Sandoz</label>
+            </value>
+            <value>
+                <fullName>Novartis - Spark Therapeutics</fullName>
+                <default>false</default>
+                <label>Novartis - Spark Therapeutics</label>
+            </value>
+            <value>
+                <fullName>Pfizer - CH</fullName>
+                <default>false</default>
+                <label>Pfizer - CH</label>
+            </value>
+            <value>
+                <fullName>Pfizer - EM</fullName>
+                <default>false</default>
+                <label>Pfizer - EM</label>
+            </value>
+            <value>
+                <fullName>Pfizer - EMX</fullName>
+                <default>false</default>
+                <label>Pfizer - EMX</label>
+            </value>
+            <value>
+                <fullName>Pfizer - IM</fullName>
+                <default>false</default>
+                <label>Pfizer - IM</label>
+            </value>
+            <value>
+                <fullName>Pfizer - IMX</fullName>
+                <default>false</default>
+                <label>Pfizer - IMX</label>
+            </value>
+            <value>
+                <fullName>Pfizer - Other</fullName>
+                <default>false</default>
+                <label>Pfizer - Other</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

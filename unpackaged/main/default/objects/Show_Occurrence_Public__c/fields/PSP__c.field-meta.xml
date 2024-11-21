@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PSP__c</fullName>
+    <label>PSP</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>NM:  No - Mgmt Decision No</fullName>
+                <default>false</default>
+                <label>NM:  No - Mgmt Decision No</label>
+            </value>
+            <value>
+                <fullName>NP:  NE, Lost, Sub</fullName>
+                <default>false</default>
+                <label>NP:  NE, Lost, Sub</label>
+            </value>
+            <value>
+                <fullName>PI:  Price Increase in lieu</fullName>
+                <default>false</default>
+                <label>PI:  Price Increase in lieu</label>
+            </value>
+            <value>
+                <fullName>PM:  Unique PSP Terms</fullName>
+                <default>false</default>
+                <label>PM:  Unique PSP Terms</label>
+            </value>
+            <value>
+                <fullName>PS:  3% PSP</fullName>
+                <default>false</default>
+                <label>PS:  3% PSP</label>
+            </value>
+            <value>
+                <fullName>S2:  2% PSP</fullName>
+                <default>false</default>
+                <label>S2:  2% PSP</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>EMEA_NRB_Lunch_North_Case</fullName>
+    <filterScope>Queue</filterScope>
+    <label>EMEA NRB &amp; Lunch! North</label>
+    <queue>EMEA_NRB_Lunch_North</queue>
+    <sharedTo>
+        <allInternalUsers />
+    </sharedTo>
+</ListView>

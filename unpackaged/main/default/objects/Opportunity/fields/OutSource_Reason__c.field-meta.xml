@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>OutSource_Reason__c</fullName>
+    <label>OutSource Reason</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Insufficient lead time</fullName>
+                <default>false</default>
+                <label>Insufficient lead time</label>
+            </value>
+            <value>
+                <fullName>Not a package option</fullName>
+                <default>false</default>
+                <label>Not a package option</label>
+            </value>
+            <value>
+                <fullName>Package designs not preferred</fullName>
+                <default>false</default>
+                <label>Package designs not preferred</label>
+            </value>
+            <value>
+                <fullName>Package deviant</fullName>
+                <default>false</default>
+                <label>Package deviant</label>
+            </value>
+            <value>
+                <fullName>No stock available in-house</fullName>
+                <default>false</default>
+                <label>No stock available in-house</label>
+            </value>
+            <value>
+                <fullName>No labour  available in-house</fullName>
+                <default>false</default>
+                <label>No labour  available in-house</label>
+            </value>
+            <value>
+                <fullName>Cost benefit</fullName>
+                <default>false</default>
+                <label>Cost benefit</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

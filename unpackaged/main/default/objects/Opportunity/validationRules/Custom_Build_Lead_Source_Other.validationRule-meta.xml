@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Custom_Build_Lead_Source_Other</fullName>
+    <active>false</active>
+    <description>If this is a custom build project and the user selects Lead Source of other, we must have a value in the Other box</description>
+    <errorConditionFormula>/* We only want this to run against Custom build
+If the lead source is other, we must have a reason
+*/
+$RecordType.DeveloperName = &#39;EMEA_Custom_Build&#39;
+&amp;&amp; ISPICKVAL(LeadSource,&#39;Other&#39;)
+&amp;&amp; ISBLANK( If_Other_please_describe__c )
+&amp;&amp; Not(ISNEW())</errorConditionFormula>
+    <errorMessage>If you select a lead source of other, you must specify what other was</errorMessage>
+</ValidationRule>

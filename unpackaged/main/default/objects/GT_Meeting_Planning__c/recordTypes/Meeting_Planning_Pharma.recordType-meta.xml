@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Meeting_Planning_Pharma</fullName>
+    <active>true</active>
+    <label>Meeting Planning Pharma</label>
+    <picklistValues>
+        <picklist>Congress_Manager_Onsite__c</picklist>
+        <values>
+            <fullName>Congress Manager 1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Congress Manager 2</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Congress Manager 3</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Congress_Manager__c</picklist>
+        <values>
+            <fullName>Congress Manager 1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Congress Manager 2</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Congress Manager 3</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>GES_Account_Executive_Onsite__c</picklist>
+        <values>
+            <fullName>GES Account Executive 1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>GES Account Executive 2</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>GES Account Executive 3</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>GES_Account_Executive__c</picklist>
+        <values>
+            <fullName>GES Account Executive 1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>GES Account Executive 2</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>GES Account Executive 3</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>GES_Account_Manager_Onsite__c</picklist>
+        <values>
+            <fullName>GES Account Manager 1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>GES Account Manager 2</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>GES Account Manager 3</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>GES_Account_Manager__c</picklist>
+        <values>
+            <fullName>GES Account Manager 1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>GES Account Manager 2</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>GES Account Manager 3</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>GES_Project_Manager__c</picklist>
+        <values>
+            <fullName>Project Manager 1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Project Manager 2</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Project Manager 3</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>I_D_Supervisor__c</picklist>
+        <values>
+            <fullName>I%26D Supervisor 1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>I%26D Supervisor 2</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>I%26D Supervisor 3</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Meeting_Planning_Services__c</picklist>
+        <values>
+            <fullName>Congress Registration</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Dinner Reservations</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sleeping Rooms</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>VIP Car Service</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>On_Site_Meeting_Contact__c</picklist>
+        <values>
+            <fullName>On-Site Meeting Contact%09 2</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Reason_for_Cancellation__c</picklist>
+        <values>
+            <fullName>Budget Cut</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Exhibit Space Sold Out</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Product Owner Decision</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Strategy Change</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

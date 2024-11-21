@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Transaction_Types__c</fullName>
+    <label>Transaction Types</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>AR Adjustments</fullName>
+                <default>false</default>
+                <label>AR Adjustments</label>
+            </value>
+            <value>
+                <fullName>Refunds</fullName>
+                <default>false</default>
+                <label>Refunds</label>
+            </value>
+            <value>
+                <fullName>Credit Memo</fullName>
+                <default>false</default>
+                <label>Credit Memo</label>
+            </value>
+            <value>
+                <fullName>Payment Transfer</fullName>
+                <default>false</default>
+                <label>Payment Transfer</label>
+            </value>
+            <value>
+                <fullName>Receipt Reversals</fullName>
+                <default>false</default>
+                <label>Receipt Reversals</label>
+            </value>
+            <value>
+                <fullName>Charges</fullName>
+                <default>false</default>
+                <label>Charges</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

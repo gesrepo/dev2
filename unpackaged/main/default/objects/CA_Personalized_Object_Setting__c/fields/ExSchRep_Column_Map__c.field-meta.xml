@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ExSchRep_Column_Map__c</fullName>
+    <defaultValue>&#39;{&quot;col6&quot;:&quot;Brand&quot;,&quot;col5&quot;:&quot;Location&quot;,&quot;col4&quot;:&quot;Event End date&quot;,&quot;col3&quot;:&quot;Event Start Date&quot;,&quot;col2&quot;:&quot;Acronym&quot;,&quot;col1&quot;:&quot;Event Name&quot;}&#39;</defaultValue>
+    <inlineHelpText>To be used in the Exhibit Schedule Report. The report will show columns names entered here.</inlineHelpText>
+    <label>ExSchRep Column Map</label>
+    <length>2000</length>
+    <trackTrending>false</trackTrending>
+    <type>LongTextArea</type>
+    <visibleLines>3</visibleLines>
+</CustomField>

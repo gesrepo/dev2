@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>OwnerId</fullName>
+    <inlineHelpText>GES is using the lookup filter on the Owner field to restrict what users can be selected when the user performing the transfer has the DMU profile.  Restricting the DMU profile users to not select users that have the GES System Administrator profile.</inlineHelpText>
+    <lookupFilter>
+        <active>true</active>
+        <booleanFilter>(1 AND 2) OR 3</booleanFilter>
+        <errorMessage>Transferring ownership to a GES System Administrator is restricted; please select another user.</errorMessage>
+        <filterItems>
+            <field>User.Profile.Name</field>
+            <operation>notEqual</operation>
+            <value>GES System Administrator</value>
+        </filterItems>
+        <filterItems>
+            <field>$Profile.Name</field>
+            <operation>equals</operation>
+            <value>DMU</value>
+        </filterItems>
+        <filterItems>
+            <field>$Profile.Name</field>
+            <operation>notEqual</operation>
+            <value>DMU</value>
+        </filterItems>
+        <isOptional>false</isOptional>
+    </lookupFilter>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <type>Lookup</type>
+</CustomField>

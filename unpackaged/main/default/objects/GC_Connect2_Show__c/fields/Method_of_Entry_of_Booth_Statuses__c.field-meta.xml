@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Method_of_Entry_of_Booth_Statuses__c</fullName>
+    <label>Method of entry of Booth Packages</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Exhibitor Ordered on Expresso</fullName>
+                <default>false</default>
+                <label>Exhibitor Ordered on Expresso</label>
+            </value>
+            <value>
+                <fullName>Show Organizer Ordered</fullName>
+                <default>false</default>
+                <label>Show Organizer Ordered</label>
+            </value>
+            <value>
+                <fullName>Other (please describe)</fullName>
+                <default>false</default>
+                <label>Other (please describe)</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

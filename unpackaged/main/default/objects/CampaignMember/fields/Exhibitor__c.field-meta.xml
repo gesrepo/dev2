@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Exhibitor__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>Field to tie Booth to Campaign Member, when Show Booth Contacts are added as Campaign Members in a Campaign</description>
+    <label>Exhibitor</label>
+    <referenceTo>Account</referenceTo>
+    <relationshipLabel>Campaign Members</relationshipLabel>
+    <relationshipName>Campaign_Members</relationshipName>
+    <required>false</required>
+    <type>Lookup</type>
+</CustomField>

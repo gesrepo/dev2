@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>EMEA_Case_Onsite_Reassign</fullName>
+    <active>true</active>
+    <description>Must be an &quot;EMEA Onsite Service Request&quot; before it can be reassigned to an onsite owner.</description>
+    <errorConditionFormula>AND(ISPICKVAL( Reassign_to_Onsite_Owner__c , &quot;Yes&quot;)
+
+,
+
+NOT( EMEA_Onsite_Service_Request__c))</errorConditionFormula>
+    <errorMessage>Must be an &quot;EMEA Onsite Service Request&quot; before it can be reassigned to an onsite owner.</errorMessage>
+</ValidationRule>

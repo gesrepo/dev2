@@ -1,0 +1,83 @@
+<apex:page standardStylesheets="true" title="Ep3_ExcelDownload" showHeader="false" sidebar="false" applyHtmlTag="false" controller="Epa3ReportController" contentType="application/vnd.ms-excel#Ep3Report.xls" action="{!beginning}" readOnly="true">
+ <head>
+        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+        <style>
+            #tempId{
+            padding-left:5px;
+            }
+     
+     
+     </style>
+    </head>
+    <table>
+        <thead>
+            <tr>
+                <th>
+				CONGRESS NAME
+                </th>
+                 <th>
+                    CONGRESS ACRONYM
+                </th>
+                 <th>
+                 CONGRESS START DATE
+                </th>
+                 <th>
+                   CONGRESS END DATE
+                </th>
+                 <th>
+                   	CONGRESS LEVEL
+                </th>
+                 
+                 <th>
+                  CONGRESS MANAGER
+
+                </th>
+                 <th>
+                   ACCOUNT EXECUTIVE
+                </th>
+                <th>
+                  ACCOUNT MANAGER
+                </th>
+                <th>
+               EPA3 CLOSED DATE
+                </th>
+            
+            </tr>
+        </thead>
+        <apex:repeat value="{!wrapList}" var="congress">
+                        <tr >
+                          <td >            
+                          <apex:outputText value="{!congress.nameOfCongress}" />
+                          </td>
+                          <td >
+                            <apex:outputText value="{!congress.acronym}" />
+                          </td>
+                          <td >
+                            <apex:outputText value=" {!congress.exhiBitOpenDate}" />
+                          </td>                          
+                          <td >
+                            <apex:outputText value=" {!congress.exhiBitCloseDate}" />
+                          </td>
+                           <td id="tempId" >
+                            <apex:outputText value=" {!congress.level}" />
+                          </td>
+                            
+                            <td >
+                            <apex:outputText value=" {!congress.GesCongressMgr}" />
+                          </td>
+                             <td >
+                            <apex:outputText value=" {!congress.GESAccountExe}" />
+                          </td>
+                             <td >
+                                 <apex:outputText value=" {!congress.GESAccountMgr}" />
+                            </td>
+                            <td >
+                            <apex:outputText value=" {!congress.epCloseDate}" />
+                            </td>
+                        </tr>
+                      </apex:repeat>
+    </table>
+     
+
+
+</apex:page>

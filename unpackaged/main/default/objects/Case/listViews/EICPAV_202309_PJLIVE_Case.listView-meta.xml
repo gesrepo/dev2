@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>EICPAV_202309_PJLIVE_Case</fullName>
+    <filterScope>Queue</filterScope>
+    <label>EICPAV-202309-PJLIVE</label>
+    <queue>EICPAV_202309_PJLIVE</queue>
+    <sharedTo>
+        <allInternalUsers />
+    </sharedTo>
+</ListView>

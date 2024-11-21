@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>EMEA_Call_Backs_Case</fullName>
+    <filterScope>Queue</filterScope>
+    <label>EMEA Call Backs</label>
+    <queue>EMEA_Call_Backs</queue>
+    <sharedTo>
+        <allInternalUsers />
+    </sharedTo>
+</ListView>

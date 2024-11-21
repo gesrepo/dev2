@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Line_Of_Business__c</fullName>
+    <label>Line Of Business</label>
+    <required>false</required>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>true</sorted>
+            <value>
+                <fullName>Accommodations</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Accommodations</label>
+            </value>
+            <value>
+                <fullName>Blitz</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Blitz</label>
+            </value>
+            <value>
+                <fullName>Data Intelligence</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Data Intelligence</label>
+            </value>
+            <value>
+                <fullName>EMEA Exhibitions</fullName>
+                <default>false</default>
+                <label>EMEA Exhibitions</label>
+            </value>
+            <value>
+                <fullName>Events</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Events</label>
+            </value>
+            <value>
+                <fullName>Exhibitions</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Exhibitions</label>
+            </value>
+            <value>
+                <fullName>Exhibitor Services</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Exhibitor Services</label>
+            </value>
+            <value>
+                <fullName>Exhibits</fullName>
+                <default>false</default>
+                <label>Exhibits</label>
+            </value>
+            <value>
+                <fullName>North America Exhibitions</fullName>
+                <default>false</default>
+                <label>North America Exhibitions</label>
+            </value>
+            <value>
+                <fullName>onPeak</fullName>
+                <default>false</default>
+                <label>onPeak</label>
+            </value>
+            <value>
+                <fullName>On Services</fullName>
+                <default>false</default>
+                <label>On Services</label>
+            </value>
+            <value>
+                <fullName>Spiro</fullName>
+                <default>false</default>
+                <label>Spiro</label>
+            </value>
+            <value>
+                <fullName>Strategy</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Strategy</label>
+            </value>
+            <value>
+                <fullName>Visit</fullName>
+                <default>false</default>
+                <label>Visit</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Role3__c</fullName>
+    <label>Role3</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>true</sorted>
+            <value>
+                <fullName>ES: Other</fullName>
+                <default>false</default>
+                <label>ES: Other</label>
+            </value>
+            <value>
+                <fullName>ES: Overall</fullName>
+                <default>false</default>
+                <label>ES: Overall</label>
+            </value>
+            <value>
+                <fullName>ES: Text</fullName>
+                <default>false</default>
+                <label>ES: Text</label>
+            </value>
+            <value>
+                <fullName>Ops: Carpet</fullName>
+                <default>false</default>
+                <label>Ops: Carpet</label>
+            </value>
+            <value>
+                <fullName>Ops: Coordinator</fullName>
+                <default>false</default>
+                <label>Ops: Coordinator</label>
+            </value>
+            <value>
+                <fullName>Ops: Deco</fullName>
+                <default>false</default>
+                <label>Ops: Deco</label>
+            </value>
+            <value>
+                <fullName>Ops: Electrical</fullName>
+                <default>false</default>
+                <label>Ops: Electrical</label>
+            </value>
+            <value>
+                <fullName>Ops: Freight</fullName>
+                <default>false</default>
+                <label>Ops: Freight</label>
+            </value>
+            <value>
+                <fullName>Ops: Graphics</fullName>
+                <default>false</default>
+                <label>Ops: Graphics</label>
+            </value>
+            <value>
+                <fullName>Ops: Hanging Signs</fullName>
+                <default>false</default>
+                <label>Ops: Hanging Signs</label>
+            </value>
+            <value>
+                <fullName>Ops: Kronos</fullName>
+                <default>false</default>
+                <label>Ops: Kronos</label>
+            </value>
+            <value>
+                <fullName>Ops: Logistics</fullName>
+                <default>false</default>
+                <label>Ops: Logistics</label>
+            </value>
+            <value>
+                <fullName>Ops: Marshalling Yard</fullName>
+                <default>false</default>
+                <label>Ops: Marshalling Yard</label>
+            </value>
+            <value>
+                <fullName>Ops: Other</fullName>
+                <default>false</default>
+                <label>Ops: Other</label>
+            </value>
+            <value>
+                <fullName>Ops: Overall</fullName>
+                <default>false</default>
+                <label>Ops: Overall</label>
+            </value>
+            <value>
+                <fullName>Ops: Rigging</fullName>
+                <default>false</default>
+                <label>Ops: Rigging</label>
+            </value>
+            <value>
+                <fullName>Ops: SOM</fullName>
+                <default>false</default>
+                <label>Ops: SOM</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

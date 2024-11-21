@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>EMEA_Home_Gift_Furniture_Collection_Case</fullName>
+    <filterScope>Queue</filterScope>
+    <label>EMEA Home &amp; Gift &amp; Furniture Collection</label>
+    <queue>EMEA_Home_Gift_Furniture_Collection</queue>
+    <sharedTo>
+        <allInternalUsers />
+    </sharedTo>
+</ListView>

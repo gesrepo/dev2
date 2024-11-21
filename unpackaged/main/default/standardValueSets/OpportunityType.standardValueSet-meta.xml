@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StandardValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sorted>false</sorted>
+    <standardValue>
+        <fullName>Plan 2015</fullName>
+        <default>false</default>
+        <label>Plan 2015</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Plan 2016</fullName>
+        <default>false</default>
+        <label>Plan 2016</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Plan 2017</fullName>
+        <default>false</default>
+        <label>Plan 2017</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Plan 2018</fullName>
+        <default>false</default>
+        <label>Plan 2018</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Plan 2019</fullName>
+        <default>false</default>
+        <label>Plan 2019</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Plan 2020</fullName>
+        <default>false</default>
+        <label>Plan 2020</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Plan 2021</fullName>
+        <default>false</default>
+        <label>Plan 2021</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Plan 2022</fullName>
+        <default>false</default>
+        <label>Plan 2022</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Plan 2023</fullName>
+        <default>false</default>
+        <label>Plan 2023</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Plan 2024</fullName>
+        <default>false</default>
+        <label>Plan 2024</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Plan 2025</fullName>
+        <default>false</default>
+        <label>Plan 2025</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Plan 2026</fullName>
+        <default>false</default>
+        <label>Plan 2026</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Plan 2027</fullName>
+        <default>false</default>
+        <label>Plan 2027</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Plan 2028</fullName>
+        <default>false</default>
+        <label>Plan 2028</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Plan 2029</fullName>
+        <default>false</default>
+        <label>Plan 2029</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Plan 2030</fullName>
+        <default>false</default>
+        <label>Plan 2030</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Plan 2031</fullName>
+        <default>false</default>
+        <label>Plan 2031</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Plan 2032</fullName>
+        <default>false</default>
+        <label>Plan 2032</label>
+    </standardValue>
+    <standardValue>
+        <fullName>ITYFTY</fullName>
+        <default>true</default>
+        <label>ITYFTY</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Event</fullName>
+        <default>false</default>
+        <label>Event</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Competitor CORE Show</fullName>
+        <default>false</default>
+        <label>Competitor CORE Show</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Sales Goal</fullName>
+        <default>false</default>
+        <label>Sales Goal</label>
+    </standardValue>
+    <standardValue>
+        <fullName>CONTRACT</fullName>
+        <default>false</default>
+        <label>CONTRACT</label>
+    </standardValue>
+    <standardValue>
+        <fullName>HOLD</fullName>
+        <default>false</default>
+        <label>HOLD</label>
+    </standardValue>
+    <standardValue>
+        <fullName>INVOICED</fullName>
+        <default>false</default>
+        <label>INVOICED</label>
+    </standardValue>
+    <standardValue>
+        <fullName>QUOTE</fullName>
+        <default>false</default>
+        <label>QUOTE</label>
+    </standardValue>
+    <standardValue>
+        <fullName>RESERVATION</fullName>
+        <default>false</default>
+        <label>RESERVATION</label>
+    </standardValue>
+    <standardValue>
+        <fullName>SIGN OFF</fullName>
+        <default>false</default>
+        <label>SIGN OFF</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Plan 2012</fullName>
+        <default>false</default>
+        <label>Plan 2012</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Plan 2014</fullName>
+        <default>false</default>
+        <label>Plan 2014</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Plan 2013</fullName>
+        <default>false</default>
+        <label>Plan 2013</label>
+    </standardValue>
+</StandardValueSet>

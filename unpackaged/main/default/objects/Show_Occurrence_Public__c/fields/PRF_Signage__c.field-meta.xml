@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PRF_Signage__c</fullName>
+    <label>Signage</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Hanging Sign</fullName>
+                <default>false</default>
+                <label>Hanging Sign</label>
+            </value>
+            <value>
+                <fullName>Banner</fullName>
+                <default>false</default>
+                <label>Banner</label>
+            </value>
+            <value>
+                <fullName>Vinyl</fullName>
+                <default>false</default>
+                <label>Vinyl</label>
+            </value>
+            <value>
+                <fullName>Digital</fullName>
+                <default>false</default>
+                <label>Digital</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>3</visibleLines>
+</CustomField>

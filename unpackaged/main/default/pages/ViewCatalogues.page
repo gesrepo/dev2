@@ -1,0 +1,127 @@
+<apex:page controller="SOP_DataAccessController" action="{!getEventCatalogues}" showHeader="false" sideBar="false">
+    <style>
+        .custPopup{
+                background-color: white;
+                border-width: 2px;
+                border-style: solid;
+                z-index: 9999;
+                left: 50%;
+                padding:10px;
+                position: absolute;
+                width: 1000px;
+                
+                margin-left: -500px;
+                top:100px;
+            }
+            .popupBackground{
+                background-color:black;
+                opacity: 0.20;
+                filter: alpha(opacity = 20);
+                position: absolute;
+                width: 100%;
+                height: 200%;
+                top: 0;
+                left: 0;
+                z-index: 9998;
+            }
+    </style>
+    <div align="left">
+        <apex:image value="{!$Resource.GESLogo}" />
+    </div>
+    <apex:form >
+        <apex:actionFunction name="showChildren" action="{!showCatalogueChildren}" reRender="popup">
+            <apex:param name="parentId" value=""/>
+        </apex:actionFunction>
+        <apex:actionFunction name="showParents" action="{!showCatalogueParents}" reRender="popup" />        
+        <apex:pageBlock title="Catalogues">
+            <apex:dataTable value="{!catList}" var="c" cellSpacing="30">
+                <apex:column >
+                    <apex:facet name="header">ID</apex:facet>
+                    <apex:outputText value="{!c.ID}" />
+                </apex:column>
+                <apex:column >
+                    <apex:facet name="header">Catalogue Name</apex:facet>
+                    <apex:commandLink value="{!c.CatalogueName}" action="{!showHidePopup}" status="actStatusId">
+                        <apex:param value="{!c.ID}" name="catId"/>
+                    </apex:commandLink>
+                </apex:column>
+                <apex:column >
+                    <apex:facet name="header">Event ID</apex:facet>
+                    <apex:outputText value="{!c.EventID}" />
+                </apex:column>
+                <apex:column >
+                    <apex:facet name="header">Start Date</apex:facet>
+                    <apex:outputText value="{0,date,dd'/'mm'/'yyyy}">
+                        <apex:param value="{!c.StartDate}" />
+                    </apex:outputText>
+                </apex:column>
+            </apex:dataTable>
+            <br/><br/>
+            <div align="center">
+                <apex:commandButton value="Return" action="{!returnToSelect}" />
+            </div>
+        </apex:pageBlock>
+        <apex:outputPanel id="popup">
+            <apex:outputPanel styleClass="popupBackground" layout="block" rendered="{!showPopup}"/>
+            <apex:outputPanel styleClass="custPopup" layout="block" rendered="{!showPopup}">
+                <apex:pageBlock rendered="{!renderParent}" title="Catalogue Categories">
+                    <apex:pageBlockSection >
+                        <apex:dataTable value="{!parentList}" var="p" cellSpacing="30">
+                            <apex:column >
+                                <apex:facet name="header">Code</apex:facet>
+                                <apex:outputText value="{!p.Code}"/>
+                            </apex:column>
+                            <apex:column >
+                                <apex:facet name="header">Name</apex:facet>
+                                <apex:commandLink value="{!p.Name}" onClick="showChildren('{!p.Id}'); return false;" />                                 
+                            </apex:column>
+                            <apex:column >
+                                <apex:facet name="header">ID</apex:facet>
+                                <apex:outputText value="{!p.ID}"/>
+                            </apex:column>                  
+                        </apex:dataTable>
+                    </apex:pageBlockSection>
+                </apex:pageBlock>
+                <apex:pageBlock rendered="{!renderChild}" title="Catalogue Items">
+                    <apex:pageBlockSection columns="1" >                    
+                        <apex:outputPanel layout="block" style="max-height:700px; overflow:scroll; width:100%" id="main" >
+                            <apex:dataTable value="{!childMap[parentId]}" var="i" cellSpacing="30">
+                                <apex:column >
+                                    <apex:facet name="header">Code</apex:facet>
+                                    <apex:outputText value="{!i.Code}"/>
+                                </apex:column>
+                                <apex:column >
+                                    <apex:facet name="header">Name</apex:facet>
+                                    <apex:outputText value="{!i.Name}"/>
+                                </apex:column>
+                                <apex:column >
+                                    <apex:facet name="header">Item Type</apex:facet>
+                                    <apex:outputText value="{!i.ItemType}"/>
+                                </apex:column>
+                                <apex:column >
+                                    <apex:facet name="header">Code</apex:facet>
+                                    <apex:outputText value="{!i.Code}"/>
+                                </apex:column>
+                                <apex:column >
+                                    <apex:facet name="header">Hire Price</apex:facet>
+                                    <apex:outputText value="{!i.HirePrice}"/>
+                                </apex:column>
+                                <apex:column >
+                                    <apex:facet name="header">Current Price</apex:facet>
+                                    <apex:outputText value="{!i.CurrentPrice}"/>
+                                </apex:column>
+                            </apex:dataTable>
+                        </apex:outputPanel>
+                    </apex:pageBlockSection>
+                    <div align="left">
+                    <br/><br/>
+                        <apex:commandLink value="Back to Categories" onClick="showParents(); return false;" />
+                    </div>
+                </apex:pageBlock>                  
+                <div align="center">
+                    <apex:commandButton value="Close" action="{!showHidePopup}" />
+                </div>
+            </apex:outputPanel>
+        </apex:outputPanel>
+    </apex:form>
+</apex:page>

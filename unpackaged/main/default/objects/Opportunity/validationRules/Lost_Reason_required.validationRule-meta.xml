@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Lost_Reason_required</fullName>
+    <active>false</active>
+    <description>When ‘stage’ is changed to ‘Lost’ make ‘Lost Reason’ mandatory before saving</description>
+    <errorConditionFormula>IF( ( RecordType_Name__c = &quot;AV - Master&quot; || RecordType_Name__c = &quot;Event &amp; Experiential&quot; || RecordType_Name__c = &quot;E&amp;D - Projects&quot; )
+&amp;&amp; (ISPICKVAL(StageName, &quot;Closed Lost&quot;)||ISPICKVAL(StageName, &quot;Lost&quot;)||ISPICKVAL(StageName, &quot;LO&quot;)||ISPICKVAL(StageName, &quot;LR&quot;)||ISPICKVAL(StageName, &quot;LP&quot;)||ISPICKVAL(StageName, &quot;LPE&quot;)||ISPICKVAL(StageName, &quot;LPM&quot;)|| ISPICKVAL(Requested_Stage__c, &quot;Closed Lost&quot;)||ISPICKVAL(Requested_Stage__c, &quot;Lost&quot;)||ISPICKVAL(Requested_Stage__c, &quot;LO&quot;)||ISPICKVAL(Requested_Stage__c, &quot;LR&quot;)||ISPICKVAL(Requested_Stage__c, &quot;LP&quot;)||ISPICKVAL(Requested_Stage__c, &quot;LPE&quot;)||ISPICKVAL(Requested_Stage__c, &quot;LPM&quot;))
+&amp;&amp; (ISBLANK(TEXT(Lost_Reason__c)) ||ISPICKVAL(Lost_Reason__c, &quot;_None&quot;)) , true, false)</errorConditionFormula>
+    <errorDisplayField>Lost_Reason__c</errorDisplayField>
+    <errorMessage>‘Lost Reason’ is mandatory.</errorMessage>
+</ValidationRule>

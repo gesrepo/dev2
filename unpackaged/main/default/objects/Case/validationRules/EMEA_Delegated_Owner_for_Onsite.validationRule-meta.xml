@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>EMEA_Delegated_Owner_for_Onsite</fullName>
+    <active>false</active>
+    <description>This validation rule prohibits adding a delegated owner unless the case is also an EMEA on-site service request.
+
+No Longer used. Replaced by chatter post notification.</description>
+    <errorConditionFormula>AND(  NOT(EMEA_Onsite_Service_Request__c), NOT(ISNULL( Delegated_Owner__c )
+) )</errorConditionFormula>
+    <errorMessage>Must be an &quot;EMEA ONSITE Service Request&quot; before this record can be saved with a &quot;delegated owner&quot;.</errorMessage>
+</ValidationRule>

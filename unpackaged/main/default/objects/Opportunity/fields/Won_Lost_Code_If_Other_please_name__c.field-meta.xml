@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Won_Lost_Code_If_Other_please_name__c</fullName>
+    <description>This is a brief description of why the Won or Lost code is chosen as other.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>This is a brief description of why the Won or Lost Code is chosen as other. Please fill this out if you chose &quot;Other&quot; for Won or Lost Code.</inlineHelpText>
+    <label>Won/Lost Code - If Other, please name</label>
+    <length>50</length>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

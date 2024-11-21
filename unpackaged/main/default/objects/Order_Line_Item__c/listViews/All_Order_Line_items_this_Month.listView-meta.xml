@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>All_Order_Line_items_this_Month</fullName>
+    <columns>NAME</columns>
+    <columns>OrderID__c</columns>
+    <columns>OrderVersionNumber__c</columns>
+    <columns>ItemPosition__c</columns>
+    <columns>ItemCode__c</columns>
+    <columns>ItemName__c</columns>
+    <columns>ExtCodes__c</columns>
+    <columns>LineDescription__c</columns>
+    <columns>Line_Price_Subtotal__c</columns>
+    <columns>SOP_Supplier_Name__c</columns>
+    <columns>Instance__c</columns>
+    <columns>CREATED_DATE</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>CREATED_DATE</field>
+        <operation>equals</operation>
+        <value>THIS_MONTH</value>
+    </filters>
+    <label>All Order Line items this Month</label>
+    <language>en_US</language>
+</ListView>

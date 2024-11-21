@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>EMEA_White_Label_World_Expo_Case</fullName>
+    <filterScope>Queue</filterScope>
+    <label>EMEA White Label World Expo</label>
+    <queue>EMEA_White_Label_World_Expo</queue>
+    <sharedTo>
+        <allInternalUsers />
+    </sharedTo>
+</ListView>

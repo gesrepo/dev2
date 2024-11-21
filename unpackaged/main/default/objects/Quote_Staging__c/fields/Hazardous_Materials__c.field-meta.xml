@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Hazardous_Materials__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Hazardous Materials</description>
+    <inlineHelpText>Hazardous Materials</inlineHelpText>
+    <label>Hazardous Materials</label>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

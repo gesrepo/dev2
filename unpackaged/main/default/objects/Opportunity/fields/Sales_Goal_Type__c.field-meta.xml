@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Sales_Goal_Type__c</fullName>
+    <label>Sales Goal Type</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Corporate Accounts</fullName>
+                <default>false</default>
+                <label>Corporate Accounts</label>
+            </value>
+            <value>
+                <fullName>EMEA - Design &amp; Build</fullName>
+                <default>false</default>
+                <label>EMEA - Design &amp; Build</label>
+            </value>
+            <value>
+                <fullName>Event - Plan</fullName>
+                <default>false</default>
+                <label>Event - Plan</label>
+            </value>
+            <value>
+                <fullName>Event - STB</fullName>
+                <default>false</default>
+                <label>Event - STB</label>
+            </value>
+            <value>
+                <fullName>Housing</fullName>
+                <default>false</default>
+                <label>Housing</label>
+            </value>
+            <value>
+                <fullName>Plan</fullName>
+                <default>false</default>
+                <label>Plan</label>
+            </value>
+            <value>
+                <fullName>Show</fullName>
+                <default>false</default>
+                <label>Show</label>
+            </value>
+            <value>
+                <fullName>STB</fullName>
+                <default>false</default>
+                <label>STB</label>
+            </value>
+            <value>
+                <fullName>Branded Entertainment - Exhibition</fullName>
+                <default>false</default>
+                <label>Touring Exhibition</label>
+            </value>
+            <value>
+                <fullName>Holiday</fullName>
+                <default>false</default>
+                <label>Holiday</label>
+            </value>
+            <value>
+                <fullName>Retail</fullName>
+                <default>false</default>
+                <label>Retail</label>
+            </value>
+            <value>
+                <fullName>EMEA - Exhibitions New Business</fullName>
+                <default>false</default>
+                <label>EMEA - Exhibitions New Business</label>
+            </value>
+            <value>
+                <fullName>EMEA - Events &amp; Congress</fullName>
+                <default>false</default>
+                <label>EMEA - Events &amp; Congress</label>
+            </value>
+            <value>
+                <fullName>EMEA - ADP</fullName>
+                <default>false</default>
+                <label>EMEA - ADP</label>
+            </value>
+            <value>
+                <fullName>Work for Hire</fullName>
+                <default>false</default>
+                <label>Work for Hire</label>
+            </value>
+            <value>
+                <fullName>EMEA - Live Events</fullName>
+                <default>false</default>
+                <label>EMEA - Live Events</label>
+            </value>
+            <value>
+                <fullName>EMEA - Named Shows</fullName>
+                <default>false</default>
+                <label>EMEA - Named Shows</label>
+            </value>
+            <value>
+                <fullName>EMEA - Other</fullName>
+                <default>false</default>
+                <label>EMEA - Other</label>
+            </value>
+            <value>
+                <fullName>US - AV - New Business</fullName>
+                <default>false</default>
+                <label>US - AV - New Business</label>
+            </value>
+            <value>
+                <fullName>US - AV - Existing Business</fullName>
+                <default>false</default>
+                <label>US - AV - Existing Business</label>
+            </value>
+            <value>
+                <fullName>Corporate Accounts Financial Forecast - Monthly</fullName>
+                <default>false</default>
+                <label>Corporate Accounts Financial Forecast - Monthly</label>
+            </value>
+            <value>
+                <fullName>Priority Plan</fullName>
+                <default>false</default>
+                <label>Priority Plan</label>
+            </value>
+            <value>
+                <fullName>Program Plan</fullName>
+                <default>false</default>
+                <label>Program Plan</label>
+            </value>
+            <value>
+                <fullName>Exhibition Plan</fullName>
+                <default>false</default>
+                <label>Exhibition Plan</label>
+            </value>
+            <value>
+                <fullName>AV Plan</fullName>
+                <default>false</default>
+                <label>AV Plan</label>
+            </value>
+            <value>
+                <fullName>AV Firm</fullName>
+                <default>false</default>
+                <label>AV Firm</label>
+            </value>
+            <value>
+                <fullName>AV Exhibitor</fullName>
+                <default>false</default>
+                <label>AV Exhibitor</label>
+            </value>
+            <value>
+                <fullName>Corporate Event Plan</fullName>
+                <default>false</default>
+                <label>Corporate Event Plan</label>
+            </value>
+            <value>
+                <fullName>EMEA - Middle East</fullName>
+                <default>false</default>
+                <label>EMEA - Middle East</label>
+            </value>
+            <value>
+                <fullName>EMEA - Logistics</fullName>
+                <default>false</default>
+                <label>EMEA - Logistics</label>
+            </value>
+            <value>
+                <fullName>EMEA - Graphics</fullName>
+                <default>false</default>
+                <label>EMEA - Graphics</label>
+            </value>
+            <value>
+                <fullName>EMEA - All Services</fullName>
+                <default>false</default>
+                <label>EMEA - All Services</label>
+            </value>
+            <value>
+                <fullName>EMEA - Europe</fullName>
+                <default>false</default>
+                <label>EMEA - Europe</label>
+            </value>
+            <value>
+                <fullName>EMEA AV -  Venue Manchester Branch</fullName>
+                <default>false</default>
+                <label>EMEA AV -  Venue Manchester Branch</label>
+            </value>
+            <value>
+                <fullName>EMEA AV - Agency/Production</fullName>
+                <default>false</default>
+                <label>EMEA AV - Agency/Production</label>
+            </value>
+            <value>
+                <fullName>EMEA AV - Corporate/End User</fullName>
+                <default>false</default>
+                <label>EMEA AV - Corporate/End User</label>
+            </value>
+            <value>
+                <fullName>EMEA AV - Exhibition</fullName>
+                <default>false</default>
+                <label>EMEA AV - Exhibition</label>
+            </value>
+            <value>
+                <fullName>EMEA AV - Graphics/Event Tech</fullName>
+                <default>false</default>
+                <label>EMEA AV - Graphics/Event Tech</label>
+            </value>
+            <value>
+                <fullName>EMEA AV - New Business</fullName>
+                <default>false</default>
+                <label>EMEA AV - New Business</label>
+            </value>
+            <value>
+                <fullName>EMEA AV - Theatre</fullName>
+                <default>false</default>
+                <label>EMEA AV - Theatre</label>
+            </value>
+            <value>
+                <fullName>EMEA AV - Venue Excel</fullName>
+                <default>false</default>
+                <label>EMEA AV - Venue Excel</label>
+            </value>
+            <value>
+                <fullName>EMEA AV - Venue Manchester Central</fullName>
+                <default>false</default>
+                <label>EMEA AV - Venue Manchester Central</label>
+            </value>
+            <value>
+                <fullName>EMEA AV - Venue NEC</fullName>
+                <default>false</default>
+                <label>EMEA AV - Venue NEC</label>
+            </value>
+            <value>
+                <fullName>EMEA AV - Venue Olympia</fullName>
+                <default>false</default>
+                <label>EMEA AV - Venue Olympia</label>
+            </value>
+            <value>
+                <fullName>EMEA AV - Venue Farnborough</fullName>
+                <default>false</default>
+                <label>EMEA AV - Venue Farnborough</label>
+            </value>
+            <value>
+                <fullName>Show Profit</fullName>
+                <default>false</default>
+                <label>Show Profit</label>
+            </value>
+            <value>
+                <fullName>EMEA - Show Ready</fullName>
+                <default>false</default>
+                <label>EMEA - Show Ready</label>
+            </value>
+            <value>
+                <fullName>EMEA - Event Intelligence</fullName>
+                <default>false</default>
+                <label>EMEA - Event Intelligence</label>
+            </value>
+            <value>
+                <fullName>EMEA - Transport</fullName>
+                <default>false</default>
+                <label>EMEA - Transport</label>
+            </value>
+            <value>
+                <fullName>EMEA - Venue</fullName>
+                <default>false</default>
+                <label>EMEA - Venue</label>
+            </value>
+            <value>
+                <fullName>EMEA - Lead Gen</fullName>
+                <default>false</default>
+                <label>EMEA - Lead Gen</label>
+            </value>
+            <value>
+                <fullName>EMEA - Specialist Lightning</fullName>
+                <default>false</default>
+                <label>EMEA - Specialist Lightning</label>
+            </value>
+            <value>
+                <fullName>EMEA AV - Dry Hire</fullName>
+                <default>false</default>
+                <label>EMEA AV - Dry Hire</label>
+            </value>
+            <value>
+                <fullName>EMEA AV - The Brewery</fullName>
+                <default>false</default>
+                <label>EMEA AV - The Brewery</label>
+            </value>
+            <value>
+                <fullName>EMEA - FEATURES</fullName>
+                <default>false</default>
+                <label>EMEA - FEATURES</label>
+            </value>
+            <value>
+                <fullName>EMEA - EXHIBITOR GRAPHICS</fullName>
+                <default>false</default>
+                <label>EMEA - EXHIBITOR GRAPHICS</label>
+            </value>
+            <value>
+                <fullName>EMEA - Corporate Team</fullName>
+                <default>false</default>
+                <label>EMEA - Corporate Team</label>
+            </value>
+            <value>
+                <fullName>F5</fullName>
+                <default>false</default>
+                <label>F5</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

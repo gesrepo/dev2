@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Is_Locked__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Update Is Locked Field to True When Opportunity is in Closed Won Stage</description>
+    <label>Is Locked</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

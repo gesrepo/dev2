@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Shell_Scheme_Colours__c</fullName>
+    <inlineHelpText>Please select the relevant colour</inlineHelpText>
+    <label>Shell Scheme Colours</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Shell_Scheme_System__c</controllingField>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Black</fullName>
+                <default>false</default>
+                <label>Black</label>
+            </value>
+            <value>
+                <fullName>Silver</fullName>
+                <default>false</default>
+                <label>Silver</label>
+            </value>
+            <value>
+                <fullName>White</fullName>
+                <default>false</default>
+                <label>White</label>
+            </value>
+            <value>
+                <fullName>Square Edge</fullName>
+                <default>false</default>
+                <label>Square Edge</label>
+            </value>
+            <value>
+                <fullName>Sodem Wall</fullName>
+                <default>false</default>
+                <label>Sodem Wall</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Edge 46mm</controllingFieldValue>
+            <valueName>Black</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Edge 46mm</controllingFieldValue>
+            <controllingFieldValue>Octanorm</controllingFieldValue>
+            <valueName>Silver</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Hybrid</controllingFieldValue>
+            <valueName>Square Edge</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Hybrid</controllingFieldValue>
+            <valueName>Sodem Wall</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Octanorm</controllingFieldValue>
+            <valueName>White</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

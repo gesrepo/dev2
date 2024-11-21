@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Items_ever_used__c</fullName>
+    <label>Items ever used</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>AV</fullName>
+                <default>false</default>
+                <label>AV</label>
+            </value>
+            <value>
+                <fullName>Data Services</fullName>
+                <default>false</default>
+                <label>Data Services</label>
+            </value>
+            <value>
+                <fullName>Design and Build</fullName>
+                <default>false</default>
+                <label>Design and Build</label>
+            </value>
+            <value>
+                <fullName>Electrics</fullName>
+                <default>false</default>
+                <label>Electrics</label>
+            </value>
+            <value>
+                <fullName>Expresso</fullName>
+                <default>false</default>
+                <label>Expresso</label>
+            </value>
+            <value>
+                <fullName>Floor Covering</fullName>
+                <default>false</default>
+                <label>Floor Covering</label>
+            </value>
+            <value>
+                <fullName>Furniture Rental</fullName>
+                <default>false</default>
+                <label>Furniture Rental</label>
+            </value>
+            <value>
+                <fullName>GES Service Desk</fullName>
+                <default>false</default>
+                <label>GES Service Desk</label>
+            </value>
+            <value>
+                <fullName>Graphics</fullName>
+                <default>false</default>
+                <label>Graphics</label>
+            </value>
+            <value>
+                <fullName>Logistics</fullName>
+                <default>false</default>
+                <label>Logistics</label>
+            </value>
+            <value>
+                <fullName>Specialist Lighting</fullName>
+                <default>false</default>
+                <label>Specialist Lighting</label>
+            </value>
+            <value>
+                <fullName>Stand Fitting/Shell Extras</fullName>
+                <default>false</default>
+                <label>Stand Fitting/Shell Extras</label>
+            </value>
+            <value>
+                <fullName>Unsure/Not applicable</fullName>
+                <default>false</default>
+                <label>Unsure/Not applicable</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

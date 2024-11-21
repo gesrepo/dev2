@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ED_ValidatePRF_ShowOpen</fullName>
+    <active>false</active>
+    <description>Validates Show Open date is &gt;= Today. Pulls from related objects, not the fields on the Opportunity.</description>
+    <errorConditionFormula>NOT( ISPICKVAL( EAC__c , &quot;&quot;) )&amp;&amp; 
+(ISBLANK( GBMS_Workflow_Status__c ) || 
+GBMS_Workflow_Status__c = &quot;Forecasted&quot;) 
+&amp;&amp;  !ISPICKVAL(StageName , &quot;Closed Lost&quot;) &amp;&amp; 
+
+($RecordType.DeveloperName = &quot;E_D_Projects&quot; ) 
+
+&amp;&amp; ( (! ISBLANK(Non_Show__c ) 
+&amp;&amp; 
+VLOOKUP( 
+$ObjectType.Non_Show__c.Fields.Show_Open__c , 
+$ObjectType.Non_Show__c.Fields.Name, Non_Show__r.Name ) &lt; Today() ) 
+|| 
+(! ISBLANK( Show_Occurrence__c ) 
+&amp;&amp; Show_Occurrence__r.Show_Open_Date__c &lt; Today()))</errorConditionFormula>
+    <errorMessage>The Show Open date on the Show or Non-Show you selected is in the past. Please correct that date, or pick a current Show.</errorMessage>
+</ValidationRule>

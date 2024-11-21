@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>International_Lost_Code_Mandatory</fullName>
+    <active>false</active>
+    <description>Lost code is mandatory when the record type is Custom Build and the stage is Closed Lost.</description>
+    <errorConditionFormula>AND(RecordTypeId = &quot;0124000000019RN&quot;, ISPICKVAL( StageName,&quot;Closed Lost&quot;),ISPICKVAL( Lost_Code__c ,&quot;&quot;))</errorConditionFormula>
+    <errorDisplayField>Lost_Code__c</errorDisplayField>
+    <errorMessage>Lost code is mandatory when opportunity stage is Closed Lost. Please fill out the Lost Code.</errorMessage>
+</ValidationRule>

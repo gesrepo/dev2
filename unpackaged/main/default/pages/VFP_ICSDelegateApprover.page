@@ -1,0 +1,201 @@
+<apex:page standardController="Customer_Service_Inquiries_ICS__c" extensions="VFC_ICSDelegateApprover">
+    <apex:form >
+        <apex:pagemessages id="pageMessageId"/>
+        <apex:pageBlock title="{!customerServiceInquiries.Name}">
+            <apex:pageBlockSection >
+                <apex:outputLink value="/{!customerServiceInquiries.Id}" id="theLink">Back To Record</apex:outputLink>
+            </apex:pageBlockSection>
+            <apex:outputPanel rendered="{!requestorApproval != null}">
+                <apex:pageBlockSection title="Requestor Approval" columns="1">
+                    <apex:pageBlockTable value="{!listCustomerServiceInquiries}" var="custServiceInq" >
+                        <apex:column value="{!custServiceInq.CSI.Case_Requestor__c}"/>
+                        <apex:column value="{!custServiceInq.status}" headerValue="Status"/>
+                    </apex:pageBlockTable>
+                </apex:pageBlockSection>
+            </apex:outputPanel>
+            <apex:outputPanel rendered="{!lobApproval != null && listLOBApprovers.size > 0}">
+                <apex:pageBlockSection title="LOB Approval" columns="1" id="lobApprovers">
+                    <apex:variable var="i" value="{!0}"/>
+                    <apex:pageBlockTable value="{!listLOBApprovers}" var="LOBApprover" >
+                        <apex:column value="{!LOBApprover.recordNumber}" headerValue="Record Number"/>
+                        <apex:column value="{!LOBApprover.transactionType}" headerValue="Transaction Type"/>
+                        <apex:column value="{!LOBApprover.approverName.Name}"/>
+                        <apex:column value="{!LOBApprover.status}" headerValue="Status"/>
+                        <apex:column value="{!LOBApprover.timeStamp}" headerValue="Last Modified Date/Time"/>
+                        <apex:column value="{!LOBApprover.delegateName}" headerValue="Delegated to"/>
+                        <apex:column >   <!--style="{!IF(LOBApprover.status == 'Pending', 'display:\'\'', 'display:none')}"-->
+                            <apex:facet name="header">Delegate</apex:facet>
+                            <apex:outputText value="{!LOBApprover.delegateName}" rendered="{!LOBApprover.status != 'Pending' }"/>
+                            <apex:inputfield value="{!LOBApprover.arAdjustment.AR2_Approver_Name__c}" rendered="{!LOBApprover.status == 'Pending' }"/>
+                        </apex:column>
+                        
+                        <apex:column style="{!IF(LOBApprover.status == 'Pending' , 'display:\'\'', 'display:none')}">
+                            <apex:facet name="header"></apex:facet>
+                            <apex:commandButton value="Delegate" action="{!delegateApproval}" reRender="pageMessageId, lobApprovers">
+                                <apex:param value="{!LOBApprover.approverName.Email_Address__c}" name="delegateEmail" /> 
+                                <apex:param value="{!LOBApprover.approverStage}" name="approverstage"/>
+                                <apex:param value="{!LOBApprover.transactionType}" name="transactionType"/>
+                                <apex:param value="{!i}" name="index"/>
+                                <apex:variable var="i" value="{!i+1}"/>
+                            </apex:commandButton>
+                        </apex:column>
+                    </apex:pageBlockTable>
+                </apex:pageBlockSection>
+            </apex:outputPanel>
+            <apex:outputPanel rendered="{!frApproval != null && listFRApprovers.size > 0}">
+                <apex:pageBlockSection title="F&R Approval" columns="1" id="FRApprover">
+                    <apex:variable var="i" value="{!0}"/>
+                    <apex:pageBlockTable value="{!listFRApprovers}" var="FRApprover" >
+                        <apex:column value="{!FRApprover.recordNumber}" headerValue="Record Number"/>
+                        <apex:column value="{!FRApprover.transactionType}" headerValue="Transaction Type"/>
+                        <apex:column value="{!FRApprover.approverName.Name}"/>
+                        <apex:column value="{!FRApprover.status}" headerValue="Status"/>
+                        <apex:column value="{!FRApprover.timeStamp}" headerValue="Last Modified Date/Time"/>
+                        <apex:column value="{!FRApprover.delegateName}" headerValue="Delegated to"/>
+                        <apex:column >   <!-- style="{!IF(FRApprover.status == 'Pending', 'display:\'\'', 'display:none')}" -->
+                            <apex:facet name="header">Delegate</apex:facet>
+                            <apex:outputText value="{!FRApprover.delegateName}" rendered="{!FRApprover.status != 'Pending' }"/>
+                            <apex:inputfield value="{!FRApprover.arAdjustment.AR2_Approver_Name__c}" rendered="{!FRApprover.status == 'Pending' }"/>
+                        </apex:column>
+                        <apex:column style="{!IF(FRApprover.status == 'Pending', 'display:\'\'', 'display:none')}">
+                            <apex:facet name="header"></apex:facet>
+                            <apex:commandButton value="Delegate" action="{!delegateApproval}" reRender="pageMessageId, FRApprover">
+                                <apex:param value="{!FRApprover.approverName.Email_Address__c}" name="delegateEmail" /> 
+                                <apex:param value="{!FRApprover.approverStage}" name="approverstage"/>
+                                <apex:param value="{!FRApprover.transactionType}" name="transactionType"/>
+                                <apex:param value="{!i}" name="index"/>
+                                <apex:variable var="i" value="{!i+1}"/>
+                            </apex:commandButton>
+                        </apex:column>
+                    </apex:pageBlockTable>
+                </apex:pageBlockSection>
+            </apex:outputPanel>
+            <apex:outputPanel rendered="{!ar1Approval != null && listAR1Approvers.size > 0}">
+                <apex:pageBlockSection title="AR1 Approval" columns="1" id="AR1Approver">
+                    <apex:variable var="i" value="{!0}"/>
+                    <apex:pageBlockTable value="{!listAR1Approvers}" var="AR1Approver" >
+                        <apex:column value="{!AR1Approver.recordNumber}" headerValue="Record Number"/>
+                        <apex:column value="{!AR1Approver.transactionType}" headerValue="Transaction Type"/>
+                        <apex:column value="{!AR1Approver.approverName.Name}"/>
+                        <apex:column value="{!AR1Approver.status}" headerValue="Status"/>
+                        <apex:column value="{!AR1Approver.timeStamp}" headerValue="Last Modified Date/Time"/>
+                        <apex:column value="{!AR1Approver.delegateName}" headerValue="Delegated to"/>
+                        <apex:column >   <!-- style="{!IF(AR1Approver.status == 'Pending', 'display:\'\'', 'display:none')}" -->
+                            <apex:facet name="header">Delegate</apex:facet>
+                            <apex:outputText value="{!AR1Approver.delegateName}" rendered="{!AR1Approver.status != 'Pending' }"/>
+                            <apex:inputfield value="{!AR1Approver.arAdjustment.AR2_Approver_Name__c}" rendered="{!AR1Approver.status == 'Pending' }"/>
+                        </apex:column>
+                        <apex:column style="{!IF(AR1Approver.status == 'Pending' , 'display:\'\'', 'display:none')}">
+                            <apex:facet name="header"></apex:facet>
+                            <apex:commandButton value="Delegate" action="{!delegateApproval}" reRender="pageMessageId,AR1Approver">
+                                <apex:param value="{!AR1Approver.approverName.Email_Address__c}" name="delegateEmail" /> 
+                                <apex:param value="{!AR1Approver.approverStage}" name="approverstage"/>
+                                <apex:param value="{!AR1Approver.transactionType}" name="transactionType"/>
+                                <apex:param value="{!i}" name="index"/>
+                                <apex:variable var="i" value="{!i+1}"/>
+                            </apex:commandButton>
+                        </apex:column>
+                    </apex:pageBlockTable>
+                </apex:pageBlockSection>
+            </apex:outputPanel>
+            
+            
+             <apex:outputPanel rendered="{!CSOApproval != null && listCSOApprovers.size > 0}">
+                <apex:pageBlockSection title="CSO Approval" columns="1" id="CSOApprover">
+                    <apex:variable var="i" value="{!0}"/>
+                    <apex:pageBlockTable value="{!listCSOApprovers}" var="CSOApprover" >
+                        <apex:column value="{!CSOApprover.recordNumber}" headerValue="Record Number"/>
+                        <apex:column value="{!CSOApprover.transactionType}" headerValue="Transaction Type"/>
+                        <apex:column value="{!CSOApprover.approverName.Name}"/>
+                        <apex:column value="{!CSOApprover.status}" headerValue="Status"/>
+                        <apex:column value="{!CSOApprover.timeStamp}" headerValue="Last Modified Date/Time"/>
+                        <apex:column value="{!CSOApprover.delegateName}" headerValue="Delegated to"/>
+                        <apex:column >   <!-- style="{!IF(CSOApprover.status == 'Pending', 'display:\'\'', 'display:none')}" -->
+                            <apex:facet name="header">Delegate</apex:facet>
+                            <apex:outputText value="{!CSOApprover.delegateName}" rendered="{!CSOApprover.status != 'Pending'}"/>
+                            <apex:inputfield value="{!CSOApprover.arAdjustment.AR2_Approver_Name__c}" rendered="{!CSOApprover.status == 'Pending' }"/>
+                        </apex:column>
+                        <apex:column style="{!IF(CSOApprover.status == 'Pending' , 'display:\'\'', 'display:none')}">
+                            <apex:facet name="header"></apex:facet>
+                            <apex:commandButton value="Delegate" action="{!delegateApproval}" reRender="pageMessageId,CSOApprover">
+                                <apex:param value="{!CSOApprover.approverName.Email_Address__c}" name="delegateEmail" /> 
+                                <apex:param value="{!CSOApprover.approverStage}" name="approverstage"/>
+                                <apex:param value="{!CSOApprover.transactionType}" name="transactionType"/>
+                                <apex:param value="{!i}" name="index"/>
+                                <apex:variable var="i" value="{!i+1}"/>
+                            </apex:commandButton>
+                        </apex:column>
+                    </apex:pageBlockTable>
+                </apex:pageBlockSection>
+            </apex:outputPanel>
+            
+            
+            
+            <apex:outputPanel rendered="{!ar2Approval != null && listAR2Approvers.size > 0}">
+                <apex:pageBlockSection title="AR2 Approval" columns="1" id="AR2Approver">
+                    <apex:variable var="i" value="{!0}"/>
+                    <apex:pageBlockTable value="{!listAR2Approvers}" var="AR2Approver" >
+                        <apex:column value="{!AR2Approver.recordNumber}" headerValue="Record Number"/>
+                        <apex:column value="{!AR2Approver.transactionType}" headerValue="Transaction Type"/>
+                        <apex:column value="{!AR2Approver.approverName.Name}"/>
+                        <apex:column value="{!AR2Approver.status}" headerValue="Status"/>
+                        <apex:column value="{!AR2Approver.timeStamp}" headerValue="Last Modified Date/Time"/>
+                        <apex:column value="{!AR2Approver.delegateName}" headerValue="Delegated to"/>
+                        <apex:column >   <!-- style="{!IF(AR2Approver.status == 'Pending', 'display:\'\'', 'display:none')}" -->
+                            <apex:facet name="header">Delegate</apex:facet>
+                            <apex:outputText value="{!AR2Approver.delegateName}" rendered="{!AR2Approver.status != 'Pending'}"/>
+                            <apex:inputfield value="{!AR2Approver.arAdjustment.AR2_Approver_Name__c}" rendered="{!AR2Approver.status == 'Pending' }"/>
+                        </apex:column>
+                        <apex:column style="{!IF(AR2Approver.status == 'Pending' , 'display:\'\'', 'display:none')}">
+                            <apex:facet name="header"></apex:facet>
+                            <apex:commandButton value="Delegate" action="{!delegateApproval}" reRender="pageMessageId,AR2Approver">
+                                <apex:param value="{!AR2Approver.approverName.Email_Address__c}" name="delegateEmail" /> 
+                                <apex:param value="{!AR2Approver.approverStage}" name="approverstage"/>
+                                <apex:param value="{!AR2Approver.transactionType}" name="transactionType"/>
+                                <apex:param value="{!i}" name="index"/>
+                                <apex:variable var="i" value="{!i+1}"/>
+                            </apex:commandButton>
+                        </apex:column>
+                    </apex:pageBlockTable>
+                </apex:pageBlockSection>
+            </apex:outputPanel>
+            <apex:outputPanel rendered="{!additionalApproval != null && listAdditionalApprovers.size > 0}">
+                <apex:pageBlockSection title="Additional Approval" columns="1" id="AdditionalApprover">
+                    <apex:variable var="i" value="{!0}"/>
+                    <apex:pageBlockTable value="{!listAdditionalApprovers}" var="AdditionalApprover" >
+                        <apex:column value="{!AdditionalApprover.recordNumber}" headerValue="Record Number"/>
+                        <apex:column value="{!AdditionalApprover.transactionType}" headerValue="Transaction Type"/>
+                        <apex:column value="{!AdditionalApprover.approverName.Name}"/>
+                        <apex:column value="{!AdditionalApprover.status}" headerValue="Status"/>
+                        <apex:column value="{!AdditionalApprover.timeStamp}" headerValue="Last Modified Date/Time"/>
+                        <apex:column value="{!AdditionalApprover.delegateName}" headerValue="Delegated to"/>
+                        <apex:column > <!-- style="{!IF(AdditionalApprover.status == 'Pending', 'display:\'\'', 'display:none')}"> -->
+                            <apex:facet name="header">Delegate</apex:facet>
+                            <apex:outputText value="{!AdditionalApprover.delegateName}" rendered="{!AdditionalApprover.status != 'Pending'}"/>
+                            <apex:inputfield value="{!AdditionalApprover.arAdjustment.AR2_Approver_Name__c}" rendered="{!AdditionalApprover.status == 'Pending' }"/>
+                        </apex:column>
+                        <apex:column style="{!IF(AdditionalApprover.status == 'Pending' , 'display:\'\'', 'display:none')}">
+                            <apex:facet name="header"></apex:facet>
+                            <apex:commandButton value="Delegate" action="{!delegateApproval}" reRender="pageMessageId,AdditionalApprover">
+                                <apex:param value="{!AdditionalApprover.approverName.Email_Address__c}" name="delegateEmail" /> 
+                                <apex:param value="{!AdditionalApprover.approverStage}" name="approverstage"/>
+                                <apex:param value="{!AdditionalApprover.transactionType}" name="transactionType"/>
+                                <apex:param value="{!i}" name="index"/>
+                                <apex:variable var="i" value="{!i+1}"/>
+                            </apex:commandButton>
+                        </apex:column>
+                    </apex:pageBlockTable>
+                </apex:pageBlockSection>
+            </apex:outputPanel>
+            <!--<apex:pageBlockSection title="History" columns="1" id="historyPb">
+                <apex:pageBlockTable value="{!Customer_Service_Inquiries_ICS__c.histories}" var="c">
+                    <!--<apex:column value="{!c.CreatedById}" headerValue="User"/>
+                    <apex:column value="{!c.CreatedDate}" headerValue="Date"/>
+                    <apex:column value="{!c.Field}"/>
+                    <apex:column value="{!c.OldValue}" headervalue="Previous Status"/>
+                    <apex:column value="{!c.NewValue}" headervalue="New Status"/>
+                </apex:pageBlockTable>
+            </apex:pageBlockSection>-->
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

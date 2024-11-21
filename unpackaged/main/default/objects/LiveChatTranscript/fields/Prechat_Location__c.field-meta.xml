@@ -1,0 +1,335 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Prechat_Location__c</fullName>
+    <description>Used on VF Page - PageLiveAgentPreChat_EMEA</description>
+    <label>Prechat Location</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>UK – London Event</fullName>
+                <default>false</default>
+                <label>UK – London Event</label>
+            </value>
+            <value>
+                <fullName>UK – Elsewhere</fullName>
+                <default>false</default>
+                <label>UK – Elsewhere</label>
+            </value>
+            <value>
+                <fullName>UAE Event / Middle East</fullName>
+                <default>false</default>
+                <label>UAE Event / Middle East</label>
+            </value>
+            <value>
+                <fullName>Any other location</fullName>
+                <default>false</default>
+                <label>Any other location</label>
+            </value>
+            <value>
+                <fullName>BAE Etkinliği / Orta Doğu</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>BAE Etkinliği / Orta Doğu</label>
+            </value>
+            <value>
+                <fullName>Başka herhangi bir konum</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Başka herhangi bir konum</label>
+            </value>
+            <value>
+                <fullName>Cualquier otra ubicación</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Cualquier otra ubicación</label>
+            </value>
+            <value>
+                <fullName>Dowolna inna lokalizacja</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Dowolna inna lokalizacja</label>
+            </value>
+            <value>
+                <fullName>Elke andere locatie</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Elke andere locatie</label>
+            </value>
+            <value>
+                <fullName>Et hvilket som helst annet sted</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Et hvilket som helst annet sted</label>
+            </value>
+            <value>
+                <fullName>Evento Emirati Arabi Uniti / Medio Oriente</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Evento Emirati Arabi Uniti / Medio Oriente</label>
+            </value>
+            <value>
+                <fullName>Evento Emirati Arabi Uniti/Medio Oriente</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Evento Emirati Arabi Uniti/Medio Oriente</label>
+            </value>
+            <value>
+                <fullName>Evento Reino Unido – Londres</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Evento Reino Unido – Londres</label>
+            </value>
+            <value>
+                <fullName>Großbritannien – Anderswo</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Großbritannien – Anderswo</label>
+            </value>
+            <value>
+                <fullName>Großbritannien – London Veranstaltung</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Großbritannien – London Veranstaltung</label>
+            </value>
+            <value>
+                <fullName>Jede andere Stelle</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Jede andere Stelle</label>
+            </value>
+            <value>
+                <fullName>Jeder andere Ort</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Jeder andere Ort</label>
+            </value>
+            <value>
+                <fullName>Jeder andere Standort</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Jeder andere Standort</label>
+            </value>
+            <value>
+                <fullName>Qualsiasi altra posizione</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Qualsiasi altra posizione</label>
+            </value>
+            <value>
+                <fullName>Qualsiasi altro luogo</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Qualsiasi altro luogo</label>
+            </value>
+            <value>
+                <fullName>Regno Unito – Evento Londra</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Regno Unito – Evento Londra</label>
+            </value>
+            <value>
+                <fullName>Regno Unito – Evento di Londra</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Regno Unito – Evento di Londra</label>
+            </value>
+            <value>
+                <fullName>Reino Unido – Em outros lugares</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Reino Unido – Em outros lugares</label>
+            </value>
+            <value>
+                <fullName>Reino Unido – En otros lugares</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Reino Unido – En otros lugares</label>
+            </value>
+            <value>
+                <fullName>Reino Unido – Evento de Londres</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Reino Unido – Evento de Londres</label>
+            </value>
+            <value>
+                <fullName>Reino Unido – Evento en Londres</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Reino Unido – Evento en Londres</label>
+            </value>
+            <value>
+                <fullName>Royaume-Uni – Ailleurs</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Royaume-Uni – Ailleurs</label>
+            </value>
+            <value>
+                <fullName>Royaume-Uni – Événement à Londres</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Royaume-Uni – Événement à Londres</label>
+            </value>
+            <value>
+                <fullName>Storbritannien – andre steder</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Storbritannien – andre steder</label>
+            </value>
+            <value>
+                <fullName>Tout autre emplacement</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Tout autre emplacement</label>
+            </value>
+            <value>
+                <fullName>Tout autre endroit</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Tout autre endroit</label>
+            </value>
+            <value>
+                <fullName>UAE イベント / 中東</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>UAE イベント / 中東</label>
+            </value>
+            <value>
+                <fullName>UK – London-Veranstaltung</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>UK – London-Veranstaltung</label>
+            </value>
+            <value>
+                <fullName>VK – Elders</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>VK – Elders</label>
+            </value>
+            <value>
+                <fullName>Veranstaltung in Großbritannien – London</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Veranstaltung in Großbritannien – London</label>
+            </value>
+            <value>
+                <fullName>Wielka Brytania – Londyn Wydarzenie</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Wielka Brytania – Londyn Wydarzenie</label>
+            </value>
+            <value>
+                <fullName>Wielka Brytania – gdzie indziej</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Wielka Brytania – gdzie indziej</label>
+            </value>
+            <value>
+                <fullName>Wydarzenie Wielka Brytania – Londyn</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Wydarzenie Wielka Brytania – Londyn</label>
+            </value>
+            <value>
+                <fullName>Événement EAU / Moyen-Orient</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Événement EAU / Moyen-Orient</label>
+            </value>
+            <value>
+                <fullName>İngiltere – Başka Bir Yerde</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>İngiltere – Başka Bir Yerde</label>
+            </value>
+            <value>
+                <fullName>İngiltere – Londra Etkinliği</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>İngiltere – Londra Etkinliği</label>
+            </value>
+            <value>
+                <fullName>Будь-яке інше місце</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Будь-яке інше місце</label>
+            </value>
+            <value>
+                <fullName>Великобритания - В другом месте</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Великобритания - В другом месте</label>
+            </value>
+            <value>
+                <fullName>Любое другое место</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Любое другое место</label>
+            </value>
+            <value>
+                <fullName>أي مكان آخر</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>أي مكان آخر</label>
+            </value>
+            <value>
+                <fullName>حدث الإمارات / الشرق الأوسط</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>حدث الإمارات / الشرق الأوسط</label>
+            </value>
+            <value>
+                <fullName>他の場所</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>他の場所</label>
+            </value>
+            <value>
+                <fullName>任何其他位置</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>任何其他位置</label>
+            </value>
+            <value>
+                <fullName>任何其他地点</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>任何其他地点</label>
+            </value>
+            <value>
+                <fullName>英国 – 伦敦活动</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>英国 – 伦敦活动</label>
+            </value>
+            <value>
+                <fullName>英国 – 其他地方</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>英国 – 其他地方</label>
+            </value>
+            <value>
+                <fullName>英國 – 其他地方</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>英國 – 其他地方</label>
+            </value>
+            <value>
+                <fullName>阿联酋活动 / 中东</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>阿联酋活动 / 中东</label>
+            </value>
+            <value>
+                <fullName>阿联酋活动/中东</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>阿联酋活动/中东</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

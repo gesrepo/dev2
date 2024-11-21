@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>New_Assignment__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>This checkbox is an indicator of when an Account is newly assigned to the Sales Person or Owner</description>
+    <label>New Assignment</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

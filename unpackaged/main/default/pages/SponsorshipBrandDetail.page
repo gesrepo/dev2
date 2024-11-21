@@ -1,0 +1,72 @@
+<apex:page standardStylesheets="true" controller="SponsorshipBrandDetail" showHeader="false" sidebar="false" applyHtmlTag="false" tabStyle="Account">
+    <html xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <head>
+            <apex:includeScript value="{!$Resource.jQuery}" />
+            <apex:stylesheet value="{!URLFOR($Resource.Lightning_Design_System, 'assets/styles/salesforce-lightning-design-system.min.css')}" />
+            <apex:stylesheet value="{!URLFOR($Resource.GC_Assets, 'GC_Assets/css/GC_Styles.css')}" />
+            <apex:includeScript value="{!URLFOR($Resource.GC_Assets, 'GC_Assets/js/GC_init.js')}" />
+        </head>
+        <div class="slds">
+            <c:GC_Community_Header /> 
+            <div class="slds-page-header gc-navigation--subHeader" role="banner">
+                <div class="slds-media">
+                    <div class="slds-media__figure">
+                        <apex:image url="{!URLFOR($Resource.GC_Assets, 'GC_Assets/img/custom13_60_teal.png')}" />
+                    </div>
+                    <div class="slds-media__body">
+                        <p class="slds-page-header__title slds-align-middle">
+                            <span>Sponsorship Brand Details</span>
+                            <span class="slds-truncate">{!br.Name}</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            <apex:form >
+                <apex:pageBlock title="Sponsorship Brand Detail"> 
+                    <apex:pageBlockButtons location="top">
+                        <apex:commandButton action="{!BrandSave}" value="Edit" styleClass="slds-button slds-button--brand gc-teal-button"/>
+                        <apex:commandButton value="Back" action="{!BrandCancel}" styleClass="slds-button slds-button--brand gc-teal-button"/>
+                    </apex:pageBlockButtons>                         
+                    <apex:pageBlockSection title="Sponsorship Brand Details">
+                        <apex:outputText label="Sponsorship">
+                            <apex:outputLink value="{!$Page.SponsorshipDetails}">
+                                {!sponName}
+                                <apex:param name="sponid" value="{!sponid}"/>
+                                <apex:param name="congName" value="{!congName}"/>
+                                <apex:param name="congid" value="{!congid}"/>
+                            </apex:outputLink>
+                        </apex:outputText>    
+                        <apex:outputText label="Congress ID">
+                            <apex:outputLink value="{!$Page.Congressdetails}">
+                                {!congName}
+                                <apex:param name="id" value="{!congid}"/>
+                            </apex:outputLink>
+                        </apex:outputText>                
+                        <apex:outputField value="{!br.Brand_Name__c}"/>
+                        <apex:outputField value="{!br.Brand_Team_Contact__c}"/>
+                        <!-- <apex:outputField value="{!br.GES_Congress_Manager__c}"/>-->
+                        <apex:outputField value="{!br.Brand_Category__c}"/>
+                        <apex:outputField value="{!br.Contact_Not_Listed__c}"/>
+                        <!-- <apex:outputField value="{!br.Congress_Lead__c}"/> -->
+                        <apex:outputField value="{!br.Business_Unit__c}"/>
+                        <apex:outputField value="{!br.Finance_Coordinator__c}"/>
+                        <apex:outputField value="{!br.COE_Supported__c}"/>
+                        <apex:outputText ></apex:outputText>
+                        <apex:outputField value="{!br.Sponsorship_Costs_Estimated__c}"/>
+                        <apex:outputField value="{!br.Funding_Provider_Region__c}"/>
+                        <apex:outputField value="{!br.Sponsorship_Costs_Actual__c}"/>
+                        <apex:outputField value="{!br.Funding_Provider_Brand__c}"/>
+                        <apex:outputField value="{!br.Canceled__c}"/>
+                        <apex:outputField value="{!br.Funding_Provider_Department__c}"/>
+                        <apex:outputField value="{!br.Reason_for_Cancellation__c}"/>
+                        <apex:outputtext value="{!br.Cost_Center__c}"/>
+                        <apex:outputField value="{!br.Cancelled_Date__c}"/>
+                        <apex:outputField value="{!br.Company_Code__c}"/>
+                        <apex:outputText ></apex:outputText>
+                        <apex:outputField value="{!br.CurrencyISOCode}"/>
+                    </apex:pageBlockSection>
+                </apex:pageBlock>
+            </apex:form></div>
+    </html>    
+</apex:page>

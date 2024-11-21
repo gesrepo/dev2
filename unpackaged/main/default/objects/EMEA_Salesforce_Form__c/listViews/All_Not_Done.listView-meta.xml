@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>All_Not_Done</fullName>
+    <columns>NAME</columns>
+    <columns>Account_Name__c</columns>
+    <columns>All_Service_Show__c</columns>
+    <columns>Show_Full_Name__c</columns>
+    <columns>Venue__c</columns>
+    <columns>Sales_Stage__c</columns>
+    <columns>Status__c</columns>
+    <columns>CREATEDBY_USER</columns>
+    <columns>OWNER.ALIAS</columns>
+    <columns>UPDATEDBY_USER</columns>
+    <columns>CREATED_DATE</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Status__c</field>
+        <operation>notEqual</operation>
+        <value>Done</value>
+    </filters>
+    <label>All Not Done</label>
+</ListView>

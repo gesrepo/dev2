@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>New_Booth_Area</fullName>
+    <availability>online</availability>
+    <displayType>massActionButton</displayType>
+    <linkType>javascript</linkType>
+    <masterLabel>New Booth Area</masterLabel>
+    <openType>onClickJavaScript</openType>
+    <protected>false</protected>
+    <requireRowSelection>true</requireRowSelection>
+    <url>var recId = window.location.href.substring(window.location.href.indexOf(&#39;=&#39;) + 1); 
+window.top.location.href = &quot;/apex/Newboothcreation?Id=&quot; + recId + &quot;&amp;isCommunity=false&quot;;</url>
+</WebLink>

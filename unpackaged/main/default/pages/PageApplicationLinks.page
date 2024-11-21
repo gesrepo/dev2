@@ -1,0 +1,23 @@
+<apex:page controller="CCGESLinksListController" >
+    <p style="font-weight: bold"> GES Links - Show Related</p>
+        
+    <apex:dataList value="{!GESLinks}" var="l">
+        <a href="{!l.URL__c}" id="{!l.name}" target="_blank">{!l.Value__c}</a>
+    </apex:dataList>
+    <br />
+    
+    <p style="font-weight: bold"> Carrier Links</p>
+    
+    <apex:dataList value="{!CarrierLinks}" var="l">
+        <a href="{!l.URL__c}" id="{!l.name}" target="_blank">{!l.Value__c}</a>
+    </apex:dataList>
+    <br />
+    
+    <p style="font-weight: bold"> GES Links - Employee Related</p>
+        
+    <apex:dataList value="{!GESEmployeeLinks}" var="l">
+        <a href="{!l.URL__c}" id="{!l.name}" target="_blank">{!l.Value__c}</a>
+    </apex:dataList>
+    <br />
+    
+</apex:page>

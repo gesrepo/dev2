@@ -1,0 +1,62 @@
+<apex:page standardController="GC_Design_Request_Form__c">
+<style type="text/css">
+	table, th, td {
+		text-align: center;
+		border: 1px solid black;
+		border-collapse: collapse;
+	}
+  	@media screen {
+    	table, th, td {
+    		padding: 5px 40px 5px 40px;
+    		font-size: 1.1em;
+    	}
+  	}
+	@media print {
+		table, th, td { font-size: 1.0em; }
+    	table, th { padding: 5px 5px 5px 5px; }
+    	td { padding: 0px 5px 0px 5px; }
+  	}
+	.bold {
+		font-weight: bold;
+	}
+</style>
+	<apex:pageBlock >
+		<apex:form >
+			<table>
+				<tbody class="table-body">
+					<tr>
+						<td colspan="6" class="bold">Due Date:&nbsp;&nbsp;<apex:outputField value="{!GC_Design_Request_Form__c.FormulaShowMoveInDate__c}" /></td>
+					</tr>
+					<tr>
+						<th class="bold">Tier</th>
+						<th class="bold">Start</th>
+						<th class="bold">End</th>
+						<th></th>
+						<th></th>
+					</tr>
+					<tr>
+						<td>Tier 1</td>
+						<td>N/A</td>
+						<td><apex:outputField value="{!GC_Design_Request_Form__c.Tier_1_End_Date_Calc__c}" /></td>
+						<td>>30 day discount pricing</td>
+						<td>Graphic Proof is Approved 30 or more days from the move-in date</td>
+					</tr>
+					<tr>
+						<td>Tier 2</td>
+						<td><apex:outputField value="{!GC_Design_Request_Form__c.Tier_2_Start_Date_Calc__c}" /></td>
+						<td><apex:outputField value="{!GC_Design_Request_Form__c.Tier_2_End_Date_Calc__c}" /></td>
+						<td>29 - 8 day base pricing</td>
+						<td>Graphic Proof is Approved 2 - 8 days from the move-in date</td>
+					</tr>
+					<tr>
+						<td>Tier 3</td>
+						<td><apex:outputField value="{!GC_Design_Request_Form__c.Tier_3_Start_Date_Calc__c}" /></td>
+						<td><apex:outputField value="{!GC_Design_Request_Form__c.FormulaShowMoveInDate__c}" /></td>
+						<td>7 day or less expedited turnaround pricing</td>
+						<td>Graphic Proof is Approved 7 days or less from the move-in date</td>
+					</tr>
+				</tbody>
+			</table>
+		</apex:form>
+	</apex:pageBlock>
+</apex:page>

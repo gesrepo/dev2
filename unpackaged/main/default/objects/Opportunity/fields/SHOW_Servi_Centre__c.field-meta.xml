@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SHOW_Servi_Centre__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Determines if this is a full @SHOW Servi Centre desk</description>
+    <inlineHelpText>Please select this option if we are operating a full Servi Centre Desk</inlineHelpText>
+    <label>@SHOW Servi Centre</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

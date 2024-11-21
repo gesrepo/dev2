@@ -1,0 +1,579 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Traveling_Exhibition</fullName>
+    <active>true</active>
+    <compactLayoutAssignment>Show_Compact</compactLayoutAssignment>
+    <description>Used by Branded Entertainment to capturing competitor Exhibitions</description>
+    <label>Traveling Exhibition</label>
+    <picklistValues>
+        <picklist>Exhibitor_Marketing_Preferences__c</picklist>
+        <values>
+            <fullName>Decline Email Marketing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Extended Email Package</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Standard Email Package</fullName>
+            <default>true</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Good_Fit__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Industry_Focus__c</picklist>
+        <values>
+            <fullName>S1-Health Care%2FEdu%2FScience</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>S2-Home%2FPersonal Care%2FRetail%2FGift</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>S3-Hotel%2FFood Service</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>S4-Industrial%2FConstruction</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>S5-Services%2FGovernment%2FMilitary</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>S6-Technology</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Job_Classification__c</picklist>
+        <values>
+            <fullName>Congress</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Consumer Event</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Corporate Event</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Exhibition</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Region_Code__c</picklist>
+        <values>
+            <fullName>1%3AWest Coast National</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>10%3APhoenix</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>11%3AReno%26SLC</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2%3AWest Coast California</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>3%3ALas Vegas</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>4%3ACentral</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>5%3ADC%2FCentral National</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>6%3ASE%2C Texas%2C NO%2C NY%2C DC</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>7%3AEast National</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>8%3AQuade National Sales</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>9%3ANorthwest</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Show_Function_Type__c</picklist>
+        <values>
+            <fullName>A%3AAssociation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>B%3AB-B Media%2FPortfolio Accounts</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>C%3ACorporation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>I%3AIndependent Organizer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>M%3AShow Mgmt</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>S%3ASubcontract</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>U%3AUnion</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Show_Type__c</picklist>
+        <values>
+            <fullName>Museum%2C Traveling Exhibition</fullName>
+            <default>true</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Sub_Type__c</picklist>
+        <values>
+            <fullName>Accounting</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Advertising%2FMarketing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Aerospace and Aviation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Agriculture and Farming</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Air Conditioning%2C Heating and Refrigeration</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Amusement</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Apparel</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Architecture</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Art</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Associations</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Audio-Visual</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Automotive and Trucking</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Banking</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Beauty and Personal Care</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Boats</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Building and Construction</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Business</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ceramics and Glass</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Chemical</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Communications</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Computers and Computer Applications</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Consumer Services</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Death Care Services</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Dental</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Education</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Electrical and Electronics</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Energy</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Engineering</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Financial</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Fire and Fire Protection</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Floriculture and Horticulture</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Food Processing and Distribution</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Food and Beverage</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Forest Products</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Gifts</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Government</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hardware</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Home Economics</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Home Furnishings and Interior Design</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Housewares</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Housing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Human Resources</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Industrial</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Insurance</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Jewelry</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Landscape and Garden Supplies</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Laundry and Dry Cleaning</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Leather Goods and Luggage</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Legal</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Libraries</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lighting</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Manufacturing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Medical and Health Care</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Metal Working and Coatings Technology</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Military</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mining</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Nursing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ocean Science and Equipment</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Office Equipment and Supplies</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other Transportation Services</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Packaging</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Paint</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Paper</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pet Retail</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Petroleum%2C Oil and Gas</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pharmaceuticals</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Photography</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Physical Distribution</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Plant Engineering and Operations</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Plastics</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Police</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pollution Control</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Printing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Publishing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>RV</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Radio%2C TV and Cable</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Railroads</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Real Estate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Recreation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Religious</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rental and Leasing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Restaurant and Food Service</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Robotics</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Safety</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Science</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Security</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sporting Goods</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Stores and Store Fittings</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Telephone</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Textiles</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Toys and Hobbies</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Travel Industry</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Veterinary</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Waste Management</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Water</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Wedding</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Welding</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Wire</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Wood Workings</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Tier_1_Target__c</picklist>
+        <values>
+            <fullName>T1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>T2</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>T3</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

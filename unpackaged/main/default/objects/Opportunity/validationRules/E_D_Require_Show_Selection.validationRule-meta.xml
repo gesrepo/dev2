@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>E_D_Require_Show_Selection</fullName>
+    <active>true</active>
+    <errorConditionFormula>!ISBLANK(Presentation_Date__c) &amp;&amp; 
+($RecordType.DeveloperName = &quot;E_D_Projects&quot; || 
+$RecordType.DeveloperName = &quot;E_D_Projects_Proposal&quot; ||
+$RecordType.DeveloperName = &quot;EMEA_Custom_Build&quot; || 
+$RecordType.DeveloperName = &quot;E_D_Projects_Read_Only&quot;) 
+&amp;&amp; Show_Occurrence__c=&quot;&quot; 
+&amp;&amp; Non_Show__c=&quot;&quot;
+&amp;&amp; ($Profile.Name != &quot;GES Administrator Interface&quot;)
+&amp;&amp; ($Profile.Name != &quot;System Administrator&quot;)
+&amp;&amp; AND(NOT(Is_Converted__c ), ISNEW() )</errorConditionFormula>
+    <errorMessage>Select either a Show Occurrence or a Non-Show.</errorMessage>
+</ValidationRule>

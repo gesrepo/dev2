@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>EMEA_Joint_Annual_Meeting_ISMRM_ESMRMB_Case</fullName>
+    <filterScope>Queue</filterScope>
+    <label>EMEA Joint Annual Meeting ISMRM-ESMRMB</label>
+    <queue>EMEA_Joint_Annual_Meeting_ISMRM_ESMRMB</queue>
+    <sharedTo>
+        <allInternalUsers />
+    </sharedTo>
+</ListView>

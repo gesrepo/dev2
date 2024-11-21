@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Design_Element_Assignment</fullName>
+    <active>true</active>
+    <description>Record Type for Assigning Show Team Members to Design Element Tasks.</description>
+    <label>Design Element Assignment</label>
+</RecordType>

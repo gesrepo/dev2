@@ -1,0 +1,60 @@
+<apex:component selfClosing="true">
+    <!--<apex:attribute name="got" description="The ges order task being passed in" type="GC_GES_Order_Task__c" required="false" assignTo="{!gesOT}" />
+    <apex:attribute name="vot" description="The vendor order task being passed in" type="GC_Vendor_Order_Task__c" required="false" assignTo="{!venOT}" />
+    <apex:attribute name="order" description="The ges order being passed in" type="GC_GES_Order__c" required="false" assignTo="{!ordr}" />  -->
+    <apex:attribute name="recordId" description="Id of the record" default="true"  required="true" type="Id" />
+    <script>
+        
+        $( document ).ready(function() {
+                        window.parent.document.getElementsByName("NewFile" )[0].style.visibility ='hidden';
+                        var url_string = window.location.href;
+                        var url = new URL(url_string);
+                        var scrollDiv = url.searchParams.get("scrolltodiv");
+                        if(scrollDiv != undefined) {
+                            $('html, body').animate({ scrollTop: $('#'+scrollDiv).offset().top }, 'slow');
+                        }
+                        
+                        $('#publisherAttachContentPost').trigger('click');
+                        $('#chatterUploadFileAction').trigger('click');
+                        //$('.uploadFileSizeLimit').hide();           
+                        $('.contentPublisherSlideDown.customPanel.alignTop').css('border', '0');
+                        $('.clearContentPanelButtonContainer').hide();
+                        $('.publisherFeedItemTypeChoices').hide();      
+                        $('.cxfeedinnerwrapper').hide();  
+                        $('.publisherBottomBarPlaceholder').hide();
+                        $('.publisherTextAreaPlaceholder.alignCenter').hide();
+                    })
+                    
+        function uploadJSAction(){
+                        if($('.file')[1].files.length > 0){
+                            $('#publishersharebutton').trigger('click');
+                            alert('Please refresh the page once the upload is finished. Thank you. Press Ok to continue.');
+                                
+                        }else{
+                            alert('Please select a file');
+                        }
+                    }
+    
+    </script>
+
+    <table>
+            <tr>
+                <td>
+                    <chatter:feed entityId="{!recordId }"/>
+                    
+                </td>
+                <td style="margin-top: 10px; position: absolute; width:100%;"><!--  -->
+                <div class="slds-card__header slds-grid" role="banner">
+                    <div class="slds-col slds-no-flex--align-center">
+                        <div class="slds-grid--align-center">
+                            <div class="slds-button" >   
+                                <button onclick="uploadJSAction()" Class="slds-button slds-button--brand gc-teal-button">Upload File</button>   
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </td>
+            </tr>
+    </table> 
+    
+</apex:component>

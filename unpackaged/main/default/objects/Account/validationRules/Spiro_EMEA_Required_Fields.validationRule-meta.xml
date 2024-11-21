@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Spiro_EMEA_Required_Fields</fullName>
+    <active>true</active>
+    <description>Invoice Indicator, Cust Type and Business is required for EMEA Exhibitor account</description>
+    <errorConditionFormula>AND(ISNEW() ,ISPICKVAL( $User.Budget__c , &quot;Branded Experiences&quot;),
+
+OR($Profile.Name = &quot;Sales, Non US&quot;,
+$Profile.Name = &quot;EMEA Salesforce Support User&quot;,
+$Profile.Name = &quot;IT Support - US&quot;),
+
+    RecordType.Name = &#39;Exhibitor&#39;,
+    EMEA__c = TRUE,
+    OR(
+        ISPICKVAL(Cust_Type__c, &quot;&quot;),
+        ISPICKVAL(Business_Type__c, &quot;&quot;),
+        ISPICKVAL(Invoice_Indicator__c, &quot;&quot;)
+    )
+)</errorConditionFormula>
+    <errorMessage>For EMEA Exhibitor Accounts you must select Cust Type, Business Type and Invoice Indicator.</errorMessage>
+</ValidationRule>

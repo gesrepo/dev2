@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>DB_Approver__c</fullName>
+    <description>Designated manager who is the approver for the decline-to-bid, no exhibits, show cancelled Show Occurrence stages.  Should by default be two levels up from the user.</description>
+    <inlineHelpText>Designated manager who is the approver for the decline-to-bid, no exhibits, show cancelled Show Occurrence stages.  Should by default be two levels up from the user.</inlineHelpText>
+    <label>DB_NE_SC Approver</label>
+    <relationshipName>Users</relationshipName>
+    <restrictedAdminField>false</restrictedAdminField>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Hierarchy</type>
+</CustomField>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Show_Status__c</fullName>
+    <label>Show Status</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>1-Pre</fullName>
+                <default>false</default>
+                <label>1-Pre</label>
+            </value>
+            <value>
+                <fullName>2-Showsite</fullName>
+                <default>false</default>
+                <label>2-Showsite</label>
+            </value>
+            <value>
+                <fullName>3-Post</fullName>
+                <default>false</default>
+                <label>3-Post</label>
+            </value>
+            <value>
+                <fullName>4-Non Tradeshow-N/A</fullName>
+                <default>false</default>
+                <label>4-Non Tradeshow-N/A</label>
+            </value>
+            <value>
+                <fullName>Pre-show</fullName>
+                <default>false</default>
+                <label>Pre-show</label>
+            </value>
+            <value>
+                <fullName>Showsite (Build)</fullName>
+                <default>false</default>
+                <label>Showsite (Build)</label>
+            </value>
+            <value>
+                <fullName>Show Open</fullName>
+                <default>false</default>
+                <label>Show Open</label>
+            </value>
+            <value>
+                <fullName>Showsite (Breakdown)</fullName>
+                <default>false</default>
+                <label>Showsite (Breakdown)</label>
+            </value>
+            <value>
+                <fullName>Post-show</fullName>
+                <default>false</default>
+                <label>Post-show</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

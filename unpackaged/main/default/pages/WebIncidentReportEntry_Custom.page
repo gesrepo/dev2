@@ -1,0 +1,85 @@
+<apex:page controller="WebIncidentReportController_Custom" showHeader="false" sidebar="false" standardStylesheets="true">
+
+    <head>
+        <apex:stylesheet value="{!URLFOR($Resource.IncidentReportsForm, 'css/IncidentWebForm.css')}"/>
+    </head>
+
+    <body>  
+        <apex:form id="pbForm" >
+            <div id="content" class="shadow">
+                <div id="header">
+                <p>
+                    <apex:image value="{!URLFOR($Resource.IncidentReportsForm, 'images/GESLogo.jpeg')}" /> </p>
+                    <apex:outputPanel layout="none" rendered="{!ISBLANK(selectedType)}" >
+                    <h2>{!$Label.IncidentReportPortal}</h2>
+                    </apex:outputPanel>
+                    
+                    <apex:outputPanel layout="none" rendered="{!recordTypeName == $Label.Bodily_Injury}" >
+                    <p><apex:outputLabel escape="false" value="{!$Label.Bodily_Injury_Incident_Report}" /></p>
+                    </apex:outputPanel>
+                </div>
+                   
+                <apex:pageBlock mode="maindetail"> 
+                    <apex:actionRegion >
+                    <apex:pageMessages />
+
+                    <apex:pageBlockSection title="{!$Label.Action_Type}" columns="2" rendered="{!selectedAction == null}">
+                        <apex:outputLabel for="actionType">
+                            {!$Label.Select_Action_Type}
+                        </apex:outputLabel>
+                        <apex:selectList id="actionType" size="1" value="{!selectedAction}">
+                            <apex:selectOption itemValue="--None--" itemLabel="--None--"/>
+                            <apex:selectOption itemValue="search" itemLabel="Search for Incident Report"/>
+                            <apex:selectOption itemValue="new" itemLabel="New Incident Report"/>
+                            <apex:actionSupport event="onchange" rerender="pbForm" status="status" />
+                        </apex:selectList> 
+                    </apex:pageBlockSection>
+
+                    <apex:pageBlockSection title="{!$Label.Search_Incidents}" columns="3" rendered="{!selectedAction == 'search'}">
+                        <apex:outputLabel for="incRT">
+                            {!$Label.Enter_Report_ID}
+                        </apex:outputLabel>
+                        <apex:inputText size="8" value="{!searchString}" maxlength="8"/>
+                        <apex:commandButton value="{!$Label.Search_by_ID}" action="{!searchIncidents}"/>
+                        <p>
+                            <a href="/incidentportal">{!$Label.Back}</a>
+                        </p>
+                    </apex:pageBlockSection>
+
+                    <apex:pageMessage severity="WARNING" strength="2" summary="{!$Label.No_Incidents_Found}" rendered="{!availableReports != null && availableReports.size == 0 && selectedAction == 'search'}"/>
+
+                    <apex:pageBlockSection title="{!$Label.Incident_Type}" columns="2" rendered="{!selectedAction == 'new'}">
+                        <apex:outputLabel for="rtList">
+                            {!$Label.Select_Type_of_Report}
+                        </apex:outputLabel>
+                        <apex:selectList id="rtList" size="1" value="{!selectedType}">
+                            <apex:selectOptions value="{!incidentTypes}" />
+                            <apex:actionSupport event="onchange" action="{!setRecordTypeName}" rerender="claimInfo" status="status"/>
+                        </apex:selectList>
+                        <p>
+                            <a href="/incidentportal">{!$Label.Back}</a>
+                        </p>
+                    </apex:pageBlockSection>
+                </apex:actionRegion>
+                </apex:pageBlock>
+                <br />
+                
+                <apex:outputPanel id="claimInfo" layout="block">
+                    <c:BodilyInjury IncidentReport="{!report}" IncidentReportController="{!Controller}" ButtonLabel="{!$Label.Save_Report_Add_Attachments}" rendered="{!recordTypeName == $Label.Bodily_Injury}" />
+                    <c:MotorVehicle IncidentReport="{!report}" IncidentReportController="{!Controller}" ButtonLabel="{!$Label.Save_Report_Add_Attachments}" rendered="{!recordTypeName == $Label.Motor_Vehicle}" />
+                    <c:FacilityDamage IncidentReport="{!report}" IncidentReportController="{!Controller}" ButtonLabel="{!$Label.Save_Report_Add_Attachments}" rendered="{!recordTypeName == $Label.Facility_Damage}" />
+                    <c:PropertyDamage IncidentReport="{!report}" IncidentReportController="{!Controller}" ButtonLabel="{!$Label.Save_Report_Add_Attachments}" rendered="{!recordTypeName == $Label.Property_Damage_RT}" />
+                </apex:outputPanel>
+
+            </div>
+            <apex:actionStatus id="status">
+                <apex:facet name="start">
+                <div class="awaitingModel">&nbsp;</div>
+                <div class="awaitingImg">
+                    <img src="/img/loading32.gif" width="25" height="25" />
+                </div>
+                </apex:facet>
+            </apex:actionStatus>
+        </apex:form>
+    </body>
+</apex:page>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>UAE_BETT_MEA_Case</fullName>
+    <filterScope>Queue</filterScope>
+    <label>UAE BETT MEA</label>
+    <queue>UAE_BETT_MEA</queue>
+    <sharedTo>
+        <allInternalUsers />
+    </sharedTo>
+</ListView>

@@ -1,0 +1,444 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Product__c</fullName>
+    <label>Product</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>ASD</fullName>
+                <default>false</default>
+                <label>ASD</label>
+            </value>
+            <value>
+                <fullName>Business Development &amp; Strategy</fullName>
+                <default>false</default>
+                <label>Business Development &amp; Strategy</label>
+            </value>
+            <value>
+                <fullName>Business Support/Career Fairs</fullName>
+                <default>false</default>
+                <label>Business Support/Career Fairs</label>
+            </value>
+            <value>
+                <fullName>Channel/Partner</fullName>
+                <default>false</default>
+                <label>Channel/Partner</label>
+            </value>
+            <value>
+                <fullName>Corporate Development &amp; Strategy</fullName>
+                <default>false</default>
+                <label>Corporate Development &amp; Strategy</label>
+            </value>
+            <value>
+                <fullName>Corporate – Other</fullName>
+                <default>false</default>
+                <label>Corporate – Other</label>
+            </value>
+            <value>
+                <fullName>Emerging Technologies</fullName>
+                <default>false</default>
+                <label>Emerging Technologies</label>
+            </value>
+            <value>
+                <fullName>Enterprise</fullName>
+                <default>false</default>
+                <label>Enterprise</label>
+            </value>
+            <value>
+                <fullName>Government</fullName>
+                <default>false</default>
+                <label>Government</label>
+            </value>
+            <value>
+                <fullName>Gov’t Relations/PA</fullName>
+                <default>false</default>
+                <label>Gov’t Relations/PA</label>
+            </value>
+            <value>
+                <fullName>K-12</fullName>
+                <default>false</default>
+                <label>K-12</label>
+            </value>
+            <value>
+                <fullName>National Sales</fullName>
+                <default>false</default>
+                <label>National Sales</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>Overlay</fullName>
+                <default>false</default>
+                <label>Overlay</label>
+            </value>
+            <value>
+                <fullName>Public Affairs/Govt’ Relations</fullName>
+                <default>false</default>
+                <label>Public Affairs/Govt’ Relations</label>
+            </value>
+            <value>
+                <fullName>Public Safety</fullName>
+                <default>false</default>
+                <label>Public Safety</label>
+            </value>
+            <value>
+                <fullName>Sales Partner</fullName>
+                <default>false</default>
+                <label>Sales Partner</label>
+            </value>
+            <value>
+                <fullName>SCN Sales</fullName>
+                <default>false</default>
+                <label>SCN Sales</label>
+            </value>
+            <value>
+                <fullName>Small Cell</fullName>
+                <default>false</default>
+                <label>Small Cell</label>
+            </value>
+            <value>
+                <fullName>Small Cell - In Building</fullName>
+                <default>false</default>
+                <label>Small Cell - In Building</label>
+            </value>
+            <value>
+                <fullName>Small Cell Sales</fullName>
+                <default>false</default>
+                <label>Small Cell Sales</label>
+            </value>
+            <value>
+                <fullName>Supply Chain/Diversity</fullName>
+                <default>false</default>
+                <label>Supply Chain/Diversity</label>
+            </value>
+            <value>
+                <fullName>System-wide event</fullName>
+                <default>false</default>
+                <label>System-wide event</label>
+            </value>
+            <value>
+                <fullName>Wholesale</fullName>
+                <default>false</default>
+                <label>Wholesale</label>
+            </value>
+            <value>
+                <fullName>Hemophilia</fullName>
+                <default>false</default>
+                <label>Hemophilia</label>
+            </value>
+            <value>
+                <fullName>NovoLog</fullName>
+                <default>false</default>
+                <label>NovoLog</label>
+            </value>
+            <value>
+                <fullName>Novoeight</fullName>
+                <default>false</default>
+                <label>Novoeight</label>
+            </value>
+            <value>
+                <fullName>Tretten</fullName>
+                <default>false</default>
+                <label>Tretten</label>
+            </value>
+            <value>
+                <fullName>Rebinyn</fullName>
+                <default>false</default>
+                <label>Rebinyn</label>
+            </value>
+            <value>
+                <fullName>Ozempic</fullName>
+                <default>false</default>
+                <label>Ozempic</label>
+            </value>
+            <value>
+                <fullName>Victoza</fullName>
+                <default>false</default>
+                <label>Victoza</label>
+            </value>
+            <value>
+                <fullName>Tresiba</fullName>
+                <default>false</default>
+                <label>Tresiba</label>
+            </value>
+            <value>
+                <fullName>Xultophy</fullName>
+                <default>false</default>
+                <label>Xultophy</label>
+            </value>
+            <value>
+                <fullName>Saxenda</fullName>
+                <default>false</default>
+                <label>Saxenda</label>
+            </value>
+            <value>
+                <fullName>Convention Marketing</fullName>
+                <default>false</default>
+                <label>Convention Marketing</label>
+            </value>
+            <value>
+                <fullName>NovoSeven</fullName>
+                <default>false</default>
+                <label>NovoSeven</label>
+            </value>
+            <value>
+                <fullName>ReThink Obesity</fullName>
+                <default>false</default>
+                <label>ReThink Obesity</label>
+            </value>
+            <value>
+                <fullName>Norditropin</fullName>
+                <default>false</default>
+                <label>Norditropin</label>
+            </value>
+            <value>
+                <fullName>Medical Information</fullName>
+                <default>false</default>
+                <label>Medical Information</label>
+            </value>
+            <value>
+                <fullName>Growth Disorder</fullName>
+                <default>false</default>
+                <label>Growth Disorder</label>
+            </value>
+            <value>
+                <fullName>Fiasp</fullName>
+                <default>false</default>
+                <label>Fiasp</label>
+            </value>
+            <value>
+                <fullName>Somapacitan</fullName>
+                <default>false</default>
+                <label>Somapacitan</label>
+            </value>
+            <value>
+                <fullName>Diabetes Marketing</fullName>
+                <default>false</default>
+                <label>Diabetes Marketing</label>
+            </value>
+            <value>
+                <fullName>Tresiba - Unbranded</fullName>
+                <default>false</default>
+                <label>Tresiba - Unbranded</label>
+            </value>
+            <value>
+                <fullName>Human Resources</fullName>
+                <default>false</default>
+                <label>Human Resources</label>
+            </value>
+            <value>
+                <fullName>Activelle</fullName>
+                <default>false</default>
+                <label>Activelle</label>
+            </value>
+            <value>
+                <fullName>Actrapid</fullName>
+                <default>false</default>
+                <label>Actrapid</label>
+            </value>
+            <value>
+                <fullName>Changing Diabetes</fullName>
+                <default>false</default>
+                <label>Changing Diabetes</label>
+            </value>
+            <value>
+                <fullName>Changing Haemophilia</fullName>
+                <default>false</default>
+                <label>Changing Haemophilia</label>
+            </value>
+            <value>
+                <fullName>Estrofem</fullName>
+                <default>false</default>
+                <label>Estrofem</label>
+            </value>
+            <value>
+                <fullName>FlexPen</fullName>
+                <default>false</default>
+                <label>FlexPen</label>
+            </value>
+            <value>
+                <fullName>FlexTouch</fullName>
+                <default>false</default>
+                <label>FlexTouch</label>
+            </value>
+            <value>
+                <fullName>GlucaGen</fullName>
+                <default>false</default>
+                <label>GlucaGen</label>
+            </value>
+            <value>
+                <fullName>HCP</fullName>
+                <default>false</default>
+                <label>HCP</label>
+            </value>
+            <value>
+                <fullName>InnoLet</fullName>
+                <default>false</default>
+                <label>InnoLet</label>
+            </value>
+            <value>
+                <fullName>Insulatard</fullName>
+                <default>false</default>
+                <label>Insulatard</label>
+            </value>
+            <value>
+                <fullName>Levemir</fullName>
+                <default>false</default>
+                <label>Levemir</label>
+            </value>
+            <value>
+                <fullName>Mixtard 40</fullName>
+                <default>false</default>
+                <label>Mixtard 40</label>
+            </value>
+            <value>
+                <fullName>Mixtard 50</fullName>
+                <default>false</default>
+                <label>Mixtard 50</label>
+            </value>
+            <value>
+                <fullName>Mixtard 30</fullName>
+                <default>false</default>
+                <label>Mixtard 30</label>
+            </value>
+            <value>
+                <fullName>Multi-Product</fullName>
+                <default>false</default>
+                <label>Multi-Product</label>
+            </value>
+            <value>
+                <fullName>NNI Corporate - Med Info</fullName>
+                <default>false</default>
+                <label>NNI Corporate - Med Info</label>
+            </value>
+            <value>
+                <fullName>NNI Corporate Logo</fullName>
+                <default>false</default>
+                <label>NNI Corporate Logo</label>
+            </value>
+            <value>
+                <fullName>NordiLet</fullName>
+                <default>false</default>
+                <label>NordiLet</label>
+            </value>
+            <value>
+                <fullName>NordiPen</fullName>
+                <default>false</default>
+                <label>NordiPen</label>
+            </value>
+            <value>
+                <fullName>Norditropin Nordiflex</fullName>
+                <default>false</default>
+                <label>Norditropin Nordiflex</label>
+            </value>
+            <value>
+                <fullName>Norditropin FlexPro</fullName>
+                <default>false</default>
+                <label>Norditropin FlexPro</label>
+            </value>
+            <value>
+                <fullName>Novofem</fullName>
+                <default>false</default>
+                <label>Novofem</label>
+            </value>
+            <value>
+                <fullName>NovoFine</fullName>
+                <default>false</default>
+                <label>NovoFine</label>
+            </value>
+            <value>
+                <fullName>NovoFine AutoCover</fullName>
+                <default>false</default>
+                <label>NovoFine AutoCover</label>
+            </value>
+            <value>
+                <fullName>NovoFine Plus</fullName>
+                <default>false</default>
+                <label>NovoFine Plus</label>
+            </value>
+            <value>
+                <fullName>NovoLog Mix 70/30</fullName>
+                <default>false</default>
+                <label>NovoLog Mix 70/30</label>
+            </value>
+            <value>
+                <fullName>NovoPen</fullName>
+                <default>false</default>
+                <label>NovoPen</label>
+            </value>
+            <value>
+                <fullName>NovoThirteen</fullName>
+                <default>false</default>
+                <label>NovoThirteen</label>
+            </value>
+            <value>
+                <fullName>NovoTwist</fullName>
+                <default>false</default>
+                <label>NovoTwist</label>
+            </value>
+            <value>
+                <fullName>OneHypoTooMany</fullName>
+                <default>false</default>
+                <label>OneHypoTooMany</label>
+            </value>
+            <value>
+                <fullName>Oral Sema</fullName>
+                <default>false</default>
+                <label>Oral Sema</label>
+            </value>
+            <value>
+                <fullName>PenMate</fullName>
+                <default>false</default>
+                <label>PenMate</label>
+            </value>
+            <value>
+                <fullName>Prandin</fullName>
+                <default>false</default>
+                <label>Prandin</label>
+            </value>
+            <value>
+                <fullName>Ryzodeg 70/30</fullName>
+                <default>false</default>
+                <label>Ryzodeg 70/30</label>
+            </value>
+            <value>
+                <fullName>Somatropin</fullName>
+                <default>false</default>
+                <label>Somatropin</label>
+            </value>
+            <value>
+                <fullName>Vagifem</fullName>
+                <default>false</default>
+                <label>Vagifem</label>
+            </value>
+            <value>
+                <fullName>Market Access</fullName>
+                <default>false</default>
+                <label>Market Access</label>
+            </value>
+            <value>
+                <fullName>Obesity Marketing</fullName>
+                <default>false</default>
+                <label>Obesity Marketing</label>
+            </value>
+            <value>
+                <fullName>Product Communications</fullName>
+                <default>false</default>
+                <label>Product Communications</label>
+            </value>
+            <value>
+                <fullName>Trade</fullName>
+                <default>false</default>
+                <label>Trade</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

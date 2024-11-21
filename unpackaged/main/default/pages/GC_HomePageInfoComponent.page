@@ -1,0 +1,13 @@
+<apex:page controller="GC_HomePageInfo_Controller">
+    <apex:pageBlock title="Connect2 Shows">
+        <apex:pageBlockTable value="{!shows}" var="show">
+            <apex:column headervalue="Name">
+                <apex:outputLink value="{!URLFOR($Action.GC_Connect2_Show__c.View, show.id)}" target="_top">{!show.Name}</apex:outputLink>
+            </apex:column>
+            <apex:column headervalue="Show Name" value="{!show.Show_Name__c}" />
+            <apex:column headervalue="Facility" value="{!show.Facility__c}" />
+            <apex:column headervalue="Start Date" value="{!show.Show_Start_Date__c}" />
+            <apex:column headervalue="End Date" value="{!show.Show_End_Date__c}" />
+        </apex:pageBlockTable>
+    </apex:pageBlock>
+</apex:page>

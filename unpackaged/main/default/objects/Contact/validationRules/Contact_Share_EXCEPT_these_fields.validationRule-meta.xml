@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Contact_Share_EXCEPT_these_fields</fullName>
+    <active>true</active>
+    <description>Share contact records between all users in roles in public group Contact Sharing except these fields and excluding these profiles.</description>
+    <errorConditionFormula>AND(OR( 
+ISCHANGED(FirstName), 
+ISCHANGED(LastName), 
+ISCHANGED(Phone), 
+ISCHANGED(Email)), 
+$Profile.Name &lt;&gt; &quot;Analytics Cloud Integration User&quot;, 
+$Profile.Name &lt;&gt; &quot;Analytics Cloud Security User&quot;, 
+$Profile.Name &lt;&gt; &quot;EDExactTarget&quot;, 
+$Profile.Name &lt;&gt; &quot;Force.com - App Subscription User&quot;, 
+$Profile.Name &lt;&gt; &quot;GES Logistics&quot;, 
+$Profile.Name &lt;&gt; &quot;EMEA Credit Control&quot;, 
+$Profile.Name &lt;&gt; &quot;GES Service&quot;, 
+$Profile.Name &lt;&gt; &quot;GES EMEA Service&quot;, 
+$Profile.Name &lt;&gt; &quot;GES EMEA Service Manager&quot;, 
+$Profile.Name &lt;&gt; &quot;GES EMEA Service Supervisor&quot;, 
+$Profile.Name &lt;&gt; &quot;Marketing User&quot;, 
+$Profile.Name &lt;&gt; &quot;Marketo User&quot;, 
+$Profile.Name &lt;&gt; &quot;R2 Interface&quot;, 
+$Profile.Name &lt;&gt; &quot;Salesforce Support User&quot;, 
+$Profile.Name &lt;&gt; &quot;Events Salesforce Support User&quot;, 
+$Profile.Name &lt;&gt; &quot;System Administrator&quot;, 
+$Profile.Name &lt;&gt; &quot;EMEA GES System Administrator&quot;, 
+$Profile.Name &lt;&gt; &quot;EMEA System Administrator&quot;, 
+$Profile.Name &lt;&gt; &quot;EMEA Finance Full&quot;, 
+$Profile.Name &lt;&gt; &quot;UK Marketing&quot;, 
+$Profile.Name &lt;&gt; &quot;SOP Interface&quot;, 
+$Profile.Name &lt;&gt; &quot;EMEA Operations/Account Mgmt&quot;, 
+$Profile.Name &lt;&gt; &quot;GES Interface&quot;, 
+$Profile.Name &lt;&gt; &quot;EMEA Spiro Interface&quot;,
+$Profile.Name &lt;&gt; &quot;GES Administrator Interface&quot;,
+$User.Id &lt;&gt; &quot;00540000003EC3RAAW&quot;, 
+$User.Id &lt;&gt; &quot;00540000003DJcL&quot;,
+$User.Id &lt;&gt; &quot;00540000003ECEKAA4&quot;, 
+$User.Id &lt;&gt; &quot;00540000003EGPqAAO&quot;, 
+$User.Id &lt;&gt; &quot;0051W0000056Hvu&quot;,
+$User.Id &lt;&gt; &quot;0051W000004GxAh&quot;,
+$User.Id &lt;&gt; &quot;00540000003NZ9j&quot;,
+$User.Id &lt;&gt; &quot;0051W000004edgw&quot;,
+OwnerId&lt;&gt;$User.Id)</errorConditionFormula>
+    <errorMessage>Only the Owner can change the Name, Phone or Email on a Contact Record. Please contact the owner of the record to change.</errorMessage>
+</ValidationRule>

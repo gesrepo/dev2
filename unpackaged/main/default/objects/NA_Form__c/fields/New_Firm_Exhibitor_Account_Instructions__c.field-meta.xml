@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>New_Firm_Exhibitor_Account_Instructions__c</fullName>
+    <defaultValue>&quot;Please fill out all the required fields to request a new Firm/Exhibitor Account in Salesforce. If this account/client also needs to be added/updated in Lightning, please select an option on the For Lightning Only: field.&quot;</defaultValue>
+    <label>New Firm/Exhibitor Account Instructions</label>
+    <length>32768</length>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>LongTextArea</type>
+    <visibleLines>3</visibleLines>
+</CustomField>

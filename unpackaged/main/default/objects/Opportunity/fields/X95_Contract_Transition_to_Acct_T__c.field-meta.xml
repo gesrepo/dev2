@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>X95_Contract_Transition_to_Acct_T__c</fullName>
+    <description>Date Opportunity moved to 95% - Contract &amp; Transition to Acct Team.</description>
+    <label>95% - Contract &amp; Transition to Acct Team</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Date</type>
+</CustomField>

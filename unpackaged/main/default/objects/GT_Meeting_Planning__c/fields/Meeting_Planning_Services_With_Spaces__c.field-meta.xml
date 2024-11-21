@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Meeting_Planning_Services_With_Spaces__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(ISBLANK(Meeting_Planning_Services__c), NULL, 
+SUBSTITUTE( 
+IF(INCLUDES(Meeting_Planning_Services__c, &#39;Sleeping Rooms&#39;),  &#39;Sleeping Rooms, &#39;,  NULL) +
+IF(INCLUDES(Meeting_Planning_Services__c, &#39;Congress Registration&#39;), &#39;Congress Registration, &#39;, NULL) +
+IF(INCLUDES(Meeting_Planning_Services__c, &#39;Dinner Reservations&#39;),  &#39;Dinner Reservations, &#39;,  NULL) +
+IF(INCLUDES(Meeting_Planning_Services__c, &#39;VIP Car Service&#39;),  &#39;VIP Car Service, &#39;,  NULL) + 
+&quot;.&quot;, &quot;, .&quot;, &quot; &quot;))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Meeting Planning Services</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

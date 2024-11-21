@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Flat_Rate_Unit_Price_Type__c</fullName>
+    <description>Flat_Rate_Unit_Price_Type</description>
+    <inlineHelpText>Flat_Rate_Unit_Price_Type</inlineHelpText>
+    <label>Rate Type</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Flat</fullName>
+                <default>false</default>
+                <label>Flat</label>
+            </value>
+            <value>
+                <fullName>Per Pound</fullName>
+                <default>false</default>
+                <label>Per Pound</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

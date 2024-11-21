@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Billing_ZIP_required</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(LEN(BillingPostalCode)=0, OR(BillingCountry= &#39;US&#39;,  BillingCountry = &#39;CA&#39;), NOT(OR($Profile.Name = &#39;GES Interface&#39;,$Profile.Name = &#39;SOP Interface&#39;,$Profile.Name = &#39;EMEA Spiro Interface&#39;,$Profile.Name = &quot;GES Administrator Interface&quot;)), Source_Exhibitor_Upload__c = TRUE)</errorConditionFormula>
+    <errorDisplayField>BillingPostalCode</errorDisplayField>
+    <errorMessage>Please enter the billing ZIP or postal code</errorMessage>
+</ValidationRule>

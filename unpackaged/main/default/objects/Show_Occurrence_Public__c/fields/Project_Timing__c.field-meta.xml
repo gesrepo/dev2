@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Project_Timing__c</fullName>
+    <label>Project Timing</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>No Time Commitment</fullName>
+                <default>false</default>
+                <label>No Time Commitment</label>
+            </value>
+            <value>
+                <fullName>Will Create Business Case for Procurement Timeline</fullName>
+                <default>false</default>
+                <label>Will Create Business Case for Procurement Timeline</label>
+            </value>
+            <value>
+                <fullName>0-6 Months</fullName>
+                <default>false</default>
+                <label>0-6 Months</label>
+            </value>
+            <value>
+                <fullName>7-12 Months</fullName>
+                <default>false</default>
+                <label>7-12 Months</label>
+            </value>
+            <value>
+                <fullName>12+ Months</fullName>
+                <default>false</default>
+                <label>12+ Months</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

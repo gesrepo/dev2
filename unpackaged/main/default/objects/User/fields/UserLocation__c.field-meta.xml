@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>UserLocation__c</fullName>
+    <description>This is the User&#39;s physical location</description>
+    <label>User Location</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>110- Las Vegas</fullName>
+                <color>#0B6FCE</color>
+                <default>false</default>
+                <label>110- Las Vegas</label>
+            </value>
+            <value>
+                <fullName>120- Housing</fullName>
+                <default>false</default>
+                <label>120- OnPeak</label>
+            </value>
+            <value>
+                <fullName>140- Salt Lake City</fullName>
+                <color>#78C953</color>
+                <default>false</default>
+                <label>140- Salt Lake City</label>
+            </value>
+            <value>
+                <fullName>150- Reno</fullName>
+                <color>#E27001</color>
+                <default>false</default>
+                <label>150- Reno</label>
+            </value>
+            <value>
+                <fullName>160- Denver</fullName>
+                <default>false</default>
+                <label>160- Denver</label>
+            </value>
+            <value>
+                <fullName>170- Phoenix, Tucson, Albquerque</fullName>
+                <color>#A845DC</color>
+                <default>false</default>
+                <label>170- Phoenix, Tucson, Albquerque</label>
+            </value>
+            <value>
+                <fullName>220- Los Angeles</fullName>
+                <color>#F3D904</color>
+                <default>false</default>
+                <label>220- Los Angeles</label>
+            </value>
+            <value>
+                <fullName>230- Corp Events</fullName>
+                <default>false</default>
+                <label>230- Corp Events</label>
+            </value>
+            <value>
+                <fullName>240- San Francisco, San Jose</fullName>
+                <color>#A53711</color>
+                <default>false</default>
+                <label>240- San Francisco, San Jose</label>
+            </value>
+            <value>
+                <fullName>250- San Diego</fullName>
+                <color>#66E9BD</color>
+                <default>false</default>
+                <label>250- San Diego</label>
+            </value>
+            <value>
+                <fullName>290 - Audio Visual</fullName>
+                <color>#0B24BE</color>
+                <default>false</default>
+                <label>290 - Audio Visual</label>
+            </value>
+            <value>
+                <fullName>310 - Lead Gen</fullName>
+                <color>#419249</color>
+                <default>false</default>
+                <label>310 - Lead Gen</label>
+            </value>
+            <value>
+                <fullName>320 - Program</fullName>
+                <color>#B6E32E</color>
+                <default>false</default>
+                <label>320 - Program</label>
+            </value>
+            <value>
+                <fullName>330 - GES INT, DPM</fullName>
+                <color>#641CCF</color>
+                <default>false</default>
+                <label>330 - GES INT, DPM</label>
+            </value>
+            <value>
+                <fullName>340 - GES UK, BD</fullName>
+                <color>#F96FB7</color>
+                <default>false</default>
+                <label>340 - GES UK, BD</label>
+            </value>
+            <value>
+                <fullName>350 - GES Europe, BD</fullName>
+                <color>#2F5D85</color>
+                <default>false</default>
+                <label>350 - GES Europe, BD</label>
+            </value>
+            <value>
+                <fullName>360 - GES Middle East, BD</fullName>
+                <color>#AFCADF</color>
+                <default>false</default>
+                <label>360 - GES Middle East, BD</label>
+            </value>
+            <value>
+                <fullName>370 - Retail INT, BD</fullName>
+                <color>#8F6429</color>
+                <default>false</default>
+                <label>370 - Retail INT, BD</label>
+            </value>
+            <value>
+                <fullName>380 - Show Team</fullName>
+                <color>#EFAE73</color>
+                <default>false</default>
+                <label>380 - Show Team</label>
+            </value>
+            <value>
+                <fullName>390 - Branded Entertainment</fullName>
+                <color>#57F17C</color>
+                <default>false</default>
+                <label>390 - Branded Entertainment</label>
+            </value>
+            <value>
+                <fullName>420- Austin, Dallas, Houston, San Antonio</fullName>
+                <color>#0B6FCE</color>
+                <default>false</default>
+                <label>420- Austin, Dallas, Houston, San Antonio</label>
+            </value>
+            <value>
+                <fullName>460- Calgary, Canada</fullName>
+                <color>#78C953</color>
+                <default>false</default>
+                <label>460- Calgary, Canada</label>
+            </value>
+            <value>
+                <fullName>470- Edmonton, Canada</fullName>
+                <color>#E27001</color>
+                <default>false</default>
+                <label>470- Edmonton, Canada</label>
+            </value>
+            <value>
+                <fullName>471 - Vancouver, Canada</fullName>
+                <default>false</default>
+                <label>471 - Vancouver, Canada</label>
+            </value>
+            <value>
+                <fullName>480 - Montreal, Canada</fullName>
+                <color>#A845DC</color>
+                <default>false</default>
+                <label>480 - Montreal, Canada</label>
+            </value>
+            <value>
+                <fullName>480 - Montreal, Canada - ESS</fullName>
+                <default>false</default>
+                <label>480 - Montreal, Canada - ESS</label>
+            </value>
+            <value>
+                <fullName>481 - Quebec City, Canada</fullName>
+                <default>false</default>
+                <label>481 - Quebec City, Canada</label>
+            </value>
+            <value>
+                <fullName>483 - Montreal, Canada - CCI</fullName>
+                <default>false</default>
+                <label>483 - Montreal, Canada - CCI</label>
+            </value>
+            <value>
+                <fullName>510- Atlanta</fullName>
+                <color>#F3D904</color>
+                <default>false</default>
+                <label>510- Atlanta</label>
+            </value>
+            <value>
+                <fullName>520- Miami, Orlando, Tampa</fullName>
+                <color>#A53711</color>
+                <default>false</default>
+                <label>520- Miami, Orlando, Tampa</label>
+            </value>
+            <value>
+                <fullName>530- New Orleans</fullName>
+                <color>#66E9BD</color>
+                <default>false</default>
+                <label>530- New Orleans</label>
+            </value>
+            <value>
+                <fullName>610- Portland, Seattle</fullName>
+                <color>#0B24BE</color>
+                <default>false</default>
+                <label>610- Portland, Seattle</label>
+            </value>
+            <value>
+                <fullName>710- Chicago, Cleveland, Milwaukee</fullName>
+                <color>#419249</color>
+                <default>false</default>
+                <label>710- Chicago, Cleveland, Milwaukee</label>
+            </value>
+            <value>
+                <fullName>720- Portfolio Accounts</fullName>
+                <color>#B6E32E</color>
+                <default>false</default>
+                <label>720- Portfolio Accounts</label>
+            </value>
+            <value>
+                <fullName>790- Minneapolis</fullName>
+                <color>#641CCF</color>
+                <default>false</default>
+                <label>790- Minneapolis</label>
+            </value>
+            <value>
+                <fullName>810- New York</fullName>
+                <color>#F96FB7</color>
+                <default>false</default>
+                <label>810- New York</label>
+            </value>
+            <value>
+                <fullName>830- DC, Philadelphia</fullName>
+                <color>#2F5D85</color>
+                <default>false</default>
+                <label>830- DC, Philadelphia</label>
+            </value>
+            <value>
+                <fullName>890- Toronto, Canada</fullName>
+                <color>#AFCADF</color>
+                <default>false</default>
+                <label>890- Toronto, Canada</label>
+            </value>
+            <value>
+                <fullName>940- National Sales</fullName>
+                <color>#8F6429</color>
+                <default>false</default>
+                <label>940- National Sales</label>
+            </value>
+            <value>
+                <fullName>960- National Event Sales</fullName>
+                <color>#EFAE73</color>
+                <default>false</default>
+                <label>960- National Event Sales</label>
+            </value>
+            <value>
+                <fullName>Coventry</fullName>
+                <default>false</default>
+                <label>Coventry</label>
+            </value>
+            <value>
+                <fullName>Germany</fullName>
+                <default>false</default>
+                <label>Germany</label>
+            </value>
+            <value>
+                <fullName>Holland</fullName>
+                <default>false</default>
+                <label>Holland</label>
+            </value>
+            <value>
+                <fullName>London</fullName>
+                <default>false</default>
+                <label>London</label>
+            </value>
+            <value>
+                <fullName>UAE</fullName>
+                <default>false</default>
+                <label>UAE</label>
+            </value>
+            <value>
+                <fullName>Sheffield</fullName>
+                <default>false</default>
+                <label>Sheffield</label>
+            </value>
+            <value>
+                <fullName>Elstree</fullName>
+                <default>false</default>
+                <label>Elstree</label>
+            </value>
+            <value>
+                <fullName>Watford(N200)</fullName>
+                <default>false</default>
+                <label>Watford(N200)</label>
+            </value>
+            <value>
+                <fullName>Hong Kong</fullName>
+                <default>false</default>
+                <label>Hong Kong</label>
+            </value>
+            <value>
+                <fullName>Singapore</fullName>
+                <default>false</default>
+                <label>Singapore</label>
+            </value>
+            <value>
+                <fullName>Switzerland</fullName>
+                <default>false</default>
+                <label>Switzerland</label>
+            </value>
+            <value>
+                <fullName>Herald Way, Coventry</fullName>
+                <default>false</default>
+                <label>Herald Way, Coventry</label>
+            </value>
+            <value>
+                <fullName>Sibiu</fullName>
+                <default>false</default>
+                <label>Sibiu</label>
+            </value>
+            <value>
+                <fullName>US(inc Latin America&amp;Canada)</fullName>
+                <default>false</default>
+                <label>US(inc Latin America&amp;Canada)</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

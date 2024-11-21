@@ -1,0 +1,573 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Default_US</fullName>
+    <active>true</active>
+    <compactLayoutAssignment>US_Tasks</compactLayoutAssignment>
+    <description>Original Task Record Type as of 6/16/2015</description>
+    <label>Default US</label>
+    <picklistValues>
+        <picklist>DMAPP__TTG_Prime_Action_Type__c</picklist>
+        <values>
+            <fullName>Close Plan</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Emphasize your strengths</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Insulate against competition</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Minimize your weaknesses</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Prove your value</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Retrieve missing information</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Event_Status__c</picklist>
+        <values>
+            <fullName>Cancelled</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Completed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Planned</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Postponed</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Outcome__c</picklist>
+        <values>
+            <fullName>Disqualified%3A Invalid Number</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Disqualified%3A Not Attending Show</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Success %E2%80%93 Spoke%2C Additional follow up set</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Success%3A Dealing with Design and Build</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Success%3A Dealing with Service Centre</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Success%3A Dealing with Show Ready</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Success%3A Email capabilities</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Success%3A Onsite meeting scheduled</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Success%3A Opportunity created</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Success%3A Presentation scheduled</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Success%3A Spoke%2C but not interested</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Success%3A Spoke%2C registered for webinar</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Unsuccessful%3A Email Undeliverable</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Unsuccessful%3A Unable to reach %E2%80%93 did not leave voicemail</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Unsuccessful%3A Unable to reach %E2%80%93 left voicemail</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Priority</picklist>
+        <values>
+            <fullName>High</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Low</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Normal</fullName>
+            <default>true</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Related_Department__c</picklist>
+        <values>
+            <fullName>AV</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Core</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Corporate Accounts</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Event Intelligence</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Event Management</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Graphics</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lead Generation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>New Business</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Service Centre</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Show Ready</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Status</picklist>
+        <values>
+            <fullName>Completed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Deferred</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>In Progress</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Not Started</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Pending Approval</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Waiting on someone else</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Sub_Sub_Type__c</picklist>
+        <values>
+            <fullName>Fact Based</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IAEE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IAEE Annual</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PCMA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PCMA Annual</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Sub_Type__c</picklist>
+        <values>
+            <fullName>Account Planning</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Attached %26 Completed Competitor Show Report</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Competitor Show Visit</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Credit Request</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Direct Mail</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Email</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Executed Contract</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Face-to-face Meeting</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Facility Capabilities Presentation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Facility Visit</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Follow-up</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Industry Event</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Last Meeting</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Letter</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Linked-In Message</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mass Email</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Meeting</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>New Opportunity</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Phone</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Presale Job Number</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Presentation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Proforma</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Proposal</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>RFP</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Reassignment</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Site Visit</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Social Post</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Speaking Engagement</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Task</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Virtual Meeting</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Website Chat</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Subject</picklist>
+        <values>
+            <fullName>A New Opportunity has been created for You%21</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Account%3A Confirmed Show Organizer Data</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Account%3A Requested Change to Show Organizer Data %28Address Info%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Contact%3A Created New Contact</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Contact%3A Identified Key Contact %28Updated %22Primary%22 Check-box%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Contact%3A Updated Existing Contact Info</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Follow Up Call%3A Show Occurrence%3A %5BENTER NAME HERE%5D</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Follow Up Email%3A Show Occurrence%3A %5BENTER NAME HERE%5D</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Intro Call%3A Show Occurrence%3A %5BENTER NAME HERE%5D</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Intro Email%3A Show Occurrence%3A %5BENTER NAME HERE%5D</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ownership Reassignment</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Show Occurrence%3A **Reminder** Send to DOS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Show Occurrence%3A Confirmed Occurrence Data%3A %5BENTER NAME HERE%5D</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Show Occurrence%3A Sent to DOS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Show%3A Confirmed Show Active%2FInactive</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Show%3A Confirmed Show Data</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Show%3A Confirmed Show Organizer %28Account%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Show%3A Requested Show Inactivation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Show%3A Requested Show Organizer %28Account%29 Change</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Type</picklist>
+        <values>
+            <fullName>Account Planning</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Attached Competitor Show Report</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Capabilities Presentation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Complete Competitor Show Report</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Electrical Problem Orders</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Email</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Face to Face</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>File Received</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>File Requested from Puliz</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>File Requested from Show Close</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>File Returned</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>File Sent</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>File Transferred</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Follow-up</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Gift</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Industry Event</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Letter</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Meeting - External</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Meeting - Internal</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Order Feedback Coaching</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Order Feedback Error</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Phone</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Reassignment</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Requested Return from Current Owner</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Researching Lost File</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Retrieve File</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sent GES Show Business</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sent Proposal</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Site Visit</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Solutions Presentation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Task</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Type__c</picklist>
+        <values>
+            <fullName>External</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Internal</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>UAE_Solar_Case</fullName>
+    <filterScope>Queue</filterScope>
+    <label>UAE Solar</label>
+    <queue>UAE_Solar</queue>
+    <sharedTo>
+        <allInternalUsers />
+    </sharedTo>
+</ListView>

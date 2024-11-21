@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>GES_Congress_Manager__c</fullName>
+    <label>GES Congress Manager</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Debbie Hummel</fullName>
+                <default>false</default>
+                <label>Debbie Hummel</label>
+            </value>
+            <value>
+                <fullName>Elena Fezzardi</fullName>
+                <default>false</default>
+                <label>Elena Fezzardi</label>
+            </value>
+            <value>
+                <fullName>Eva McCartney</fullName>
+                <default>false</default>
+                <label>Eva McCartney</label>
+            </value>
+            <value>
+                <fullName>Gail Griffith</fullName>
+                <default>false</default>
+                <label>Gail Griffith</label>
+            </value>
+            <value>
+                <fullName>Ilysa Link</fullName>
+                <default>false</default>
+                <label>Ilysa Link</label>
+            </value>
+            <value>
+                <fullName>Julia Noonan</fullName>
+                <default>false</default>
+                <label>Julia Noonan</label>
+            </value>
+            <value>
+                <fullName>Linnell Navarro</fullName>
+                <default>false</default>
+                <label>Linnell Navarro</label>
+            </value>
+            <value>
+                <fullName>Michelle Pflug</fullName>
+                <default>false</default>
+                <label>Michelle Pflug</label>
+            </value>
+            <value>
+                <fullName>Stephanie Houck</fullName>
+                <default>false</default>
+                <label>Stephanie Houck</label>
+            </value>
+            <value>
+                <fullName>Tricia Purcell</fullName>
+                <default>false</default>
+                <label>Tricia Purcell</label>
+            </value>
+            <value>
+                <fullName>n/a</fullName>
+                <default>false</default>
+                <label>n/a</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

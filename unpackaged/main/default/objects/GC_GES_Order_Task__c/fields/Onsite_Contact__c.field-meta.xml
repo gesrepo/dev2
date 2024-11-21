@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Onsite_Contact__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>Contact name to associate with this order if not found in salesforce.</description>
+    <inlineHelpText>Contact name to associate with this order if not found in salesforce.</inlineHelpText>
+    <label>Onsite Contact Person</label>
+    <referenceTo>Contact</referenceTo>
+    <relationshipName>GES_Orders3</relationshipName>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

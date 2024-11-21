@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Need_Details__c</fullName>
+    <label>Need Details</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Need__c</controllingField>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Internal Sales/Marketing Meeting</fullName>
+                <default>false</default>
+                <label>Internal Sales/Marketing Meeting</label>
+            </value>
+            <value>
+                <fullName>Customer Vendor Conference</fullName>
+                <default>false</default>
+                <label>Customer Vendor Conference</label>
+            </value>
+            <value>
+                <fullName>Celebration/Gala</fullName>
+                <default>false</default>
+                <label>Celebration/Gala</label>
+            </value>
+            <value>
+                <fullName>Brand Experiences</fullName>
+                <default>false</default>
+                <label>Brand Experiences</label>
+            </value>
+            <value>
+                <fullName>Media Events</fullName>
+                <default>false</default>
+                <label>Media Events</label>
+            </value>
+            <value>
+                <fullName>Touring Exhibitions</fullName>
+                <default>false</default>
+                <label>Touring Exhibitions</label>
+            </value>
+            <value>
+                <fullName>Other (Specify in Need Details Notes)</fullName>
+                <default>false</default>
+                <label>Other (Specify in Need Details Notes)</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

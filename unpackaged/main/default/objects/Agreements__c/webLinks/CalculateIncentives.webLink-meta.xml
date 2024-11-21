@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CalculateIncentives</fullName>
+    <availability>online</availability>
+    <displayType>button</displayType>
+    <linkType>javascript</linkType>
+    <masterLabel>Calculate Incentives</masterLabel>
+    <openType>onClickJavaScript</openType>
+    <protected>false</protected>
+    <url>{!requireScript(&quot;/soap/ajax/17.0/connection.js&quot;)} 
+var idAgreement = &#39;{!Agreements__c.Id}&#39;; 
+var objListOppIDs = []; 
+var objListOpps = []; 
+var objListIncentives = []; 
+if({!Agreements__c.Incentive_Created__c} == false) 
+{ 
+createIncentives(); 
+} 
+else 
+{ 
+alert(&#39;Incentives Already Created&#39;) 
+} 
+function createIncentives() 
+{ 
+try 
+{ 
+
+var objAgreement = sforce.connection.query(&quot;SELECT ID,Show_Occurrence__c, Show_Occurrence_2__c, Show_Occurrence_3__c, Show_Occurrence_4__c, Show_Occurrence_5__c, Sales_Person__c,Show_Occurrence_6__c,Incentive_Created__c,Front_End_Percent__c,Rep_1_Back_End_Percent__c,SalesRep1__c,User__c,SalesRep3__c,SalesRep4__c,Rep_2_Back_End_Percent__c,Rep_4_Back_End_Percent__c,Rep_3_Back_End_Percent__c,Rep_2_Front_End_Percent__c,Rep_3_Front_End_Percent__c,Rep_4_Front_End_Percent__c, AV_Opportunity__c, AV_Opportunity_2__c, AV_Opportunity_3__c, AV_Opportunity_4__c, AV_Opportunity_5__c, AV_Opportunity_6__c From Agreements__c WHERE ID = &#39;&quot;+idAgreement+&quot;&#39;&quot; ); 
+if (objAgreement.records.Show_Occurrence__c != null) 
+{ 
+objListOppIDs.push(objAgreement.records.Show_Occurrence__c); 
+} 
+if (objAgreement.records.Show_Occurrence_2__c != null) 
+{ 
+objListOppIDs.push(objAgreement.records.Show_Occurrence_2__c); 
+} 
+if (objAgreement.records.Show_Occurrence_3__c != null) 
+{ 
+objListOppIDs.push(objAgreement.records.Show_Occurrence_3__c); 
+} 
+if (objAgreement.records.Show_Occurrence_4__c != null) 
+{ 
+objListOppIDs.push(objAgreement.records.Show_Occurrence_4__c); 
+} 
+if (objAgreement.records.Show_Occurrence_5__c != null) 
+{ 
+objListOppIDs.push(objAgreement.records.Show_Occurrence_5__c); 
+} 
+if (objAgreement.records.Show_Occurrence_6__c != null) 
+{ 
+objListOppIDs.push(objAgreement.records.Show_Occurrence_6__c); 
+} 
+if (objAgreement.records.AV_Opportunity__c != null) 
+{ 
+objListOppIDs.push(objAgreement.records.AV_Opportunity__c); 
+} 
+if (objAgreement.records.AV_Opportunity_2__c != null) 
+{ 
+objListOppIDs.push(objAgreement.records.AV_Opportunity_2__c); 
+} 
+if (objAgreement.records.AV_Opportunity_3__c != null) 
+{ 
+objListOppIDs.push(objAgreement.records.AV_Opportunity_3__c); 
+} 
+if (objAgreement.records.AV_Opportunity_4__c != null) 
+{ 
+objListOppIDs.push(objAgreement.records.AV_Opportunity_4__c); 
+} 
+if (objAgreement.records.AV_Opportunity_5__c != null) 
+{ 
+objListOppIDs.push(objAgreement.records.AV_Opportunity_5__c); 
+} 
+if (objAgreement.records.AV_Opportunity_6__c != null) 
+{ 
+objListOppIDs.push(objAgreement.records.AV_Opportunity_6__c); 
+} 
+
+var strOutIds = &quot;(&#39;&quot; + objListOppIDs.join(&quot;&#39;,&#39;&quot;) + &quot;&#39;)&quot;; 
+objListOpps = sforce.connection.query(&quot;SELECT ID, sales_person__c FROM Opportunity WHERE ID IN&quot; + strOutIds ); 
+var objListOppsqr = new sforce.QueryResultIterator(objListOpps); 
+while (objListOppsqr.hasNext()) 
+{ 
+var objTmpOpportunity = objListOppsqr.next(); 
+salesrep(objListIncentives,objTmpOpportunity,objAgreement.records,objAgreement.records.SalesRep1__c,objAgreement.records.Rep_1_Back_End_Percent__c,objAgreement.records.Front_End_Percent__c); 
+salesrep(objListIncentives,objTmpOpportunity,objAgreement.records,objAgreement.records.User__c,objAgreement.records.Rep_2_Back_End_Percent__c,objAgreement.records.Rep_2_Front_End_Percent__c); 
+
+salesrep(objListIncentives,objTmpOpportunity,objAgreement.records,objAgreement.records.SalesRep3__c,objAgreement.records.Rep_3_Back_End_Percent__c,objAgreement.records.Rep_3_Front_End_Percent__c); 
+
+salesrep(objListIncentives,objTmpOpportunity,objAgreement.records,objAgreement.records.SalesRep4__c,objAgreement.records.Rep_4_Back_End_Percent__c,objAgreement.records.Rep_4_Front_End_Percent__c); 
+
+}	
+result = sforce.connection.create(objListIncentives); 
+if(result [0].success==&quot;true&quot;) 
+{ 
+alert(&quot;Incentives Record Created Successfully &quot;); 
+window.location.reload(); 
+} 
+else 
+{ 
+alert(&quot;Error Occured. Incentives Record Not Created &quot;); 
+} 
+objTmpagree = new sforce.SObject(&quot;Agreements__c&quot;); 
+objTmpagree.id = objAgreement .records.Id; 
+objTmpagree.Incentive_Created__c = true; 
+result = sforce.connection.update([objTmpagree]); 
+} 
+catch(ex) 
+{ 
+alert(&quot;An Error has been occured Please contact your Administrator&quot;); 
+} 
+} 
+function salesrep(objListIncentives,objTmpOpportunity,objAgreement,id,incentiveback,incentivefront) 
+{ 
+if(id != null) 
+{ 
+objTmpIncentive = new sforce.SObject(&quot;Incentives__c&quot;); 
+objTmpIncentive.Show_Occurrence__c = objTmpOpportunity.Id; 
+objTmpIncentive.Sales_Person__c = objAgreement.Sales_Person__c; 
+objTmpIncentive.Sales_Rep__c = id; 
+objTmpIncentive.Incentive__c = incentiveback; 
+objTmpIncentive.Type__c = &#39;Back-end&#39;; 
+objListIncentives.push(objTmpIncentive); 
+
+objTmpIncentive = new sforce.SObject(&quot;Incentives__c&quot;); 
+objTmpIncentive.Show_Occurrence__c = objTmpOpportunity.Id; 
+objTmpIncentive.Sales_Person__c = objAgreement.Sales_Person__c; 
+objTmpIncentive.Sales_Rep__c = id; 
+objTmpIncentive.Incentive__c = incentivefront; 
+objTmpIncentive.Type__c = &#39;Front-end&#39;; 
+objListIncentives.push(objTmpIncentive); 
+} 
+}</url>
+</WebLink>

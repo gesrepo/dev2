@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Primary_Interest__c</fullName>
+    <label>Primary Interest</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>true</sorted>
+            <value>
+                <fullName>A/V</fullName>
+                <default>false</default>
+                <label>A/V</label>
+            </value>
+            <value>
+                <fullName>Accommodations</fullName>
+                <default>false</default>
+                <label>Accommodations</label>
+            </value>
+            <value>
+                <fullName>Brand &amp; Product Activations</fullName>
+                <default>false</default>
+                <label>Brand &amp; Product Activations</label>
+            </value>
+            <value>
+                <fullName>Consumer Events (B2C)</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Consumer Events (B2C)</label>
+            </value>
+            <value>
+                <fullName>Corporate Events (B2B)</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Corporate Events (B2B)</label>
+            </value>
+            <value>
+                <fullName>Environments &amp; Permanent Installations</fullName>
+                <default>false</default>
+                <label>Environments &amp; Permanent Installations</label>
+            </value>
+            <value>
+                <fullName>Exhibit Design &amp; Build</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Exhibit Design &amp; Build</label>
+            </value>
+            <value>
+                <fullName>Exhibitor Services</fullName>
+                <default>false</default>
+                <label>Exhibitor Services</label>
+            </value>
+            <value>
+                <fullName>Exhibit Program Management</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Exhibit Program Management</label>
+            </value>
+            <value>
+                <fullName>Exhibit Rental</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Exhibit Rental</label>
+            </value>
+            <value>
+                <fullName>Exhibits &amp; Program Management</fullName>
+                <default>false</default>
+                <label>Exhibits &amp; Program Management</label>
+            </value>
+            <value>
+                <fullName>GES Customer Service</fullName>
+                <default>false</default>
+                <label>GES Customer Service</label>
+            </value>
+            <value>
+                <fullName>GES Venue/Hotel Services</fullName>
+                <default>false</default>
+                <label>GES Venue/Hotel Services</label>
+            </value>
+            <value>
+                <fullName>Marketing &amp; Measurement</fullName>
+                <default>false</default>
+                <label>Marketing &amp; Measurement</label>
+            </value>
+            <value>
+                <fullName>Measurement &amp; Intelligence</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Measurement &amp; Intelligence</label>
+            </value>
+            <value>
+                <fullName>Meetings &amp; Events</fullName>
+                <default>false</default>
+                <label>Meetings &amp; Events</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>Poken</fullName>
+                <default>false</default>
+                <label>Poken</label>
+            </value>
+            <value>
+                <fullName>Sponsorship</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Sponsorship</label>
+            </value>
+            <value>
+                <fullName>Strategy / Experiential Design</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Strategy / Experiential Design</label>
+            </value>
+            <value>
+                <fullName>Touring Exhibitions</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Touring Exhibitions</label>
+            </value>
+            <value>
+                <fullName>Trade Show/Conference Management</fullName>
+                <default>false</default>
+                <label>Trade Show/Conference Management</label>
+            </value>
+            <value>
+                <fullName>VISIT</fullName>
+                <default>false</default>
+                <label>VISIT</label>
+            </value>
+            <value>
+                <fullName>Visit GO</fullName>
+                <default>false</default>
+                <label>Visit GO</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

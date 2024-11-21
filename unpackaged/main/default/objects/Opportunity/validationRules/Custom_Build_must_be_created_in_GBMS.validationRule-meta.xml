@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Custom_Build_must_be_created_in_GBMS</fullName>
+    <active>false</active>
+    <errorConditionFormula>$RecordType.DeveloperName = &#39;EMEA_Custom_Build&#39;
+&amp;&amp; ISNEW()
+&amp;&amp; NOT( $Profile.Name = &#39;EMEA Spiro Interface&#39;)
+&amp;&amp; NOT( $Profile.Name = &#39;System Administrator&#39;)
+&amp;&amp; NOT( $Profile.Name = &#39;Marketing Super Users&#39;)
+&amp;&amp; NOT( $Profile.Name = &#39;IT Support - US&#39;)</errorConditionFormula>
+    <errorMessage>Cannot create opportunity - Please submit PRJ Request in Monday.com</errorMessage>
+</ValidationRule>

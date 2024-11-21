@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>GES_Meeting_Planner_Phone__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF((TEXT(GES_Meeting_Planner__c ) == &quot;Brenda Chambers&quot;),&quot;(412) 208-2259&quot;, 
+IF((TEXT(GES_Meeting_Planner__c ) == &quot;Allyson Wagner&quot;),&quot;(412) 523-2991&quot;, 
+IF((TEXT(GES_Meeting_Planner__c ) == &quot;Brian Travis&quot;),&quot;&quot;, 
+IF((TEXT(GES_Meeting_Planner__c ) == &quot;Marie Caci&quot;),&quot;&quot;, 
+IF((TEXT(GES_Meeting_Planner__c ) == &quot;Maria Kramer&quot;),&quot;(412) 389-2222&quot;,
+IF((TEXT(GES_Meeting_Planner__c) == &quot;Sue Kelly&quot;),&quot;(412) 742-1988&quot;,
+IF((TEXT(GES_Meeting_Planner__c) == &quot;Linda Holland&quot;),&quot;(412) 208-2256&quot;,
+IF((TEXT(GES_Meeting_Planner__c ) == &quot;Kayla Rogers&quot;),&quot;(508) 408-2146&quot;,&quot; &quot;))))))))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>GES Meeting Planner Phone</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

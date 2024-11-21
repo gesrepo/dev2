@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Lock_Estimated_Ship_Date_Field</fullName>
+    <active>true</active>
+    <description>Lock Estimated Ship DateField when E&amp;D - Opportunity Closed Won</description>
+    <errorConditionFormula>ISCHANGED(PRFShip_Date__c)
+&amp;&amp;($RecordType.DeveloperName = &quot;E_D_Projects&quot; || 
+$RecordType.DeveloperName = &quot;E_D_Projects_Proposal&quot; || 
+$RecordType.DeveloperName = &quot;E_D_Projects_Read_Only&quot;)
+&amp;&amp;(ISPICKVAL( StageName ,&#39;Contract Win&#39;) ||
+ISPICKVAL( StageName ,&#39;Lost&#39;))
+&amp;&amp; NOT($Profile.Name = &quot;System Administrator&quot;)
+&amp;&amp; NOT($Profile.Name = &quot;GES Administrator Interface&quot;) 
+&amp;&amp; NOT($Profile.Name = &quot;Marketing Super Users&quot;)
+&amp;&amp; NOT($User.Id = &quot;005400000010HD9&quot;)
+&amp;&amp; NOT($User.Id = &quot;005400000010HCL&quot;)
+&amp;&amp; NOT(Project_Type__c = &quot;Field Service&quot;)</errorConditionFormula>
+    <errorMessage>Cannot edit Estimated Ship Date as Opportunity Stage is Closed Won.</errorMessage>
+</ValidationRule>

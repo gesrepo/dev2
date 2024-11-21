@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Marketing_Preference__c</fullName>
+    <description>Used to capture preferences at an Opportunity level.</description>
+    <inlineHelpText>Please set the Marketing preferences for this Opportunity.</inlineHelpText>
+    <label>Marketing_Preference</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>All exhibitors are space only</fullName>
+                <default>false</default>
+                <label>All exhibitors are space only</label>
+            </value>
+            <value>
+                <fullName>No marketing required – Small show</fullName>
+                <default>false</default>
+                <label>No marketing required – Small show</label>
+            </value>
+            <value>
+                <fullName>Only send 1 email</fullName>
+                <default>false</default>
+                <label>Only send 1 email</label>
+            </value>
+            <value>
+                <fullName>Only send 2 emails</fullName>
+                <default>false</default>
+                <label>Only send 2 emails</label>
+            </value>
+            <value>
+                <fullName>Only use current years exhibitor list</fullName>
+                <default>false</default>
+                <label>Only use current years exhibitor list</label>
+            </value>
+            <value>
+                <fullName>User standard email timeline</fullName>
+                <default>false</default>
+                <label>User standard email timeline</label>
+            </value>
+            <value>
+                <fullName>Use email timeline for i2i</fullName>
+                <default>false</default>
+                <label>Use email timeline for i2i</label>
+            </value>
+            <value>
+                <fullName>Use email timeline for European shows</fullName>
+                <default>false</default>
+                <label>Use email timeline for European shows</label>
+            </value>
+            <value>
+                <fullName>Use email timeline for UAE shows</fullName>
+                <default>false</default>
+                <label>Use email timeline for UAE shows</label>
+            </value>
+            <value>
+                <fullName>Do not send for D&amp;B</fullName>
+                <default>false</default>
+                <label>Do not send for D&amp;B</label>
+            </value>
+            <value>
+                <fullName>Ensure show name is correct</fullName>
+                <default>false</default>
+                <label>Ensure show name is correct</label>
+            </value>
+            <value>
+                <fullName>Only send for graphics</fullName>
+                <default>false</default>
+                <label>Only send for graphics</label>
+            </value>
+            <value>
+                <fullName>Only market for D&amp;B</fullName>
+                <default>false</default>
+                <label>Only market for D&amp;B</label>
+            </value>
+            <value>
+                <fullName>Only send COMBO emails</fullName>
+                <default>false</default>
+                <label>Only send COMBO emails</label>
+            </value>
+            <value>
+                <fullName>Organiser must approve proofs</fullName>
+                <default>false</default>
+                <label>Organiser must approve proofs</label>
+            </value>
+            <value>
+                <fullName>Organiser must approve email schedule</fullName>
+                <default>false</default>
+                <label>Organiser must approve email schedule</label>
+            </value>
+            <value>
+                <fullName>Pkg sent, include details for furniture</fullName>
+                <default>false</default>
+                <label>Pkg sent, include details for furniture</label>
+            </value>
+            <value>
+                <fullName>Pkg sent, include details for electrics</fullName>
+                <default>false</default>
+                <label>Pkg sent, include details for electrics</label>
+            </value>
+            <value>
+                <fullName>Carpeted venue, advise about floor flats</fullName>
+                <default>false</default>
+                <label>Carpeted venue, advise about floor flats</label>
+            </value>
+            <value>
+                <fullName>Congress templates can be used</fullName>
+                <default>false</default>
+                <label>Congress templates can be used</label>
+            </value>
+            <value>
+                <fullName>Graphics early discount to be promoted</fullName>
+                <default>false</default>
+                <label>Graphics early discount to be promoted</label>
+            </value>
+            <value>
+                <fullName>Target for D&amp;B</fullName>
+                <default>false</default>
+                <label>Target for D&amp;B</label>
+            </value>
+            <value>
+                <fullName>Target for LOG</fullName>
+                <default>false</default>
+                <label>Target for LOG</label>
+            </value>
+            <value>
+                <fullName>Target for GPX</fullName>
+                <default>false</default>
+                <label>Target for GPX</label>
+            </value>
+            <value>
+                <fullName>Social media</fullName>
+                <default>false</default>
+                <label>Social media</label>
+            </value>
+            <value>
+                <fullName>Blog</fullName>
+                <default>false</default>
+                <label>Blog</label>
+            </value>
+            <value>
+                <fullName>Case study</fullName>
+                <default>false</default>
+                <label>Case study</label>
+            </value>
+            <value>
+                <fullName>Photographer required</fullName>
+                <default>false</default>
+                <label>Photographer required</label>
+            </value>
+            <value>
+                <fullName>D&amp;B approved</fullName>
+                <default>false</default>
+                <label>D&amp;B approved</label>
+            </value>
+            <value>
+                <fullName>SR approved</fullName>
+                <default>false</default>
+                <label>SR approved</label>
+            </value>
+            <value>
+                <fullName>LOG approved</fullName>
+                <default>false</default>
+                <label>LOG approved</label>
+            </value>
+            <value>
+                <fullName>GPX approved</fullName>
+                <default>false</default>
+                <label>GPX approved</label>
+            </value>
+            <value>
+                <fullName>FU approved</fullName>
+                <default>false</default>
+                <label>FU approved</label>
+            </value>
+            <value>
+                <fullName>FC approved</fullName>
+                <default>false</default>
+                <label>FC approved</label>
+            </value>
+            <value>
+                <fullName>SH approved</fullName>
+                <default>false</default>
+                <label>SH approved</label>
+            </value>
+            <value>
+                <fullName>EL approved</fullName>
+                <default>false</default>
+                <label>EL approved</label>
+            </value>
+            <value>
+                <fullName>AV approved</fullName>
+                <default>false</default>
+                <label>AV approved</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>5</visibleLines>
+</CustomField>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ED_Lost_to_Sales_Rep_required</fullName>
+    <active>false</active>
+    <description>Fill out the Lost to Sales Rep field. When Lost Code has a &quot;Lost&quot; value, Lost to Sales Rep field is required.</description>
+    <errorConditionFormula>AND(ISBLANK( Lost_to_Sales_Rep__c ),OR(ISPICKVAL( Lost_Code__c ,&quot;Lost: Design&quot;),ISPICKVAL( Lost_Code__c ,&quot;Lost: Price&quot;),ISPICKVAL( Lost_Code__c ,&quot;Lost: Relationship&quot;),ISPICKVAL( Lost_Code__c ,&quot;Lost: Returned to Lead Gen&quot;),ISPICKVAL( Lost_Code__c ,&quot;Lost: Other&quot;)))</errorConditionFormula>
+    <errorDisplayField>Lost_to_Sales_Rep__c</errorDisplayField>
+    <errorMessage>Makes Lost to Sales Rep field required when Lost Code has Lost Value</errorMessage>
+</ValidationRule>

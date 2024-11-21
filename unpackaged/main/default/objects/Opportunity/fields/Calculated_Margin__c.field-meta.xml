@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Calculated_Margin__c</fullName>
+    <description>The calculated margin (the total amount multiplied by the margin). Mutliplied as margin is stored as decimal value</description>
+    <formula>IF(OR( Amount = 0, Margin__c =0),0, Amount * Margin__c)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>This is the Amount divided by the % margin</inlineHelpText>
+    <label>Calculated Margin</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackHistory>false</trackHistory>
+    <type>Currency</type>
+</CustomField>

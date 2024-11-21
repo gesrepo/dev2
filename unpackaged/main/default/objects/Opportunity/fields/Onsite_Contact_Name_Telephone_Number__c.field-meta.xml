@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Onsite_Contact_Name_Telephone_Number__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Enter First Name, Surname &amp; Contact Telephone Number</inlineHelpText>
+    <label>Onsite Contact Name &amp; Telephone Number</label>
+    <length>50</length>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

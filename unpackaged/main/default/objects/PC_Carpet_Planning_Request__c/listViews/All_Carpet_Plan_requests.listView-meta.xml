@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>All_Carpet_Plan_requests</fullName>
+    <columns>CREATED_DATE</columns>
+    <columns>First_Move_In_Date__c</columns>
+    <columns>CR_Show_ID__c</columns>
+    <columns>CR_YRMO__c</columns>
+    <columns>NAME</columns>
+    <columns>CR_Client_Services_Manager__c</columns>
+    <columns>Status__c</columns>
+    <columns>CPR_Claimed_By__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Carpet_Delivery_Date_Time__c</field>
+        <operation>greaterThan</operation>
+        <value>4/1/2022 12:00 AM</value>
+    </filters>
+    <filters>
+        <field>CR_YRMO__c</field>
+        <operation>greaterThan</operation>
+        <value>202304</value>
+    </filters>
+    <label>All Carpet Plan requests</label>
+</ListView>

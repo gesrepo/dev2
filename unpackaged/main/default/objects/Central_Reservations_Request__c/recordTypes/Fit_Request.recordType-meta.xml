@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Fit_Request</fullName>
+    <active>true</active>
+    <label>Fit Request</label>
+    <picklistValues>
+        <picklist>CRR_Current_Sales_Status__c</picklist>
+        <values>
+            <fullName>Confirmed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Proposed</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>CRR_Production_City__c</picklist>
+        <values>
+            <fullName>AT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CH</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>LA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>LV</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NJ</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>OR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PX</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>RE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SD</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SF</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SL</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>CRR_Request_Type__c</picklist>
+        <values>
+            <fullName>Adjusted Request</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cancel Request</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>New Request</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>CRR_Status__c</picklist>
+        <values>
+            <fullName>Complete</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>New</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Rejected</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Submited</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>CRR_Wedge_Counter_RGB_Color__c</picklist>
+        <values>
+            <fullName>Blue - 0%2F0%2F225</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Coral - 255%2F0%2F128</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cyan - 0%2F255%2F255</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Green - 0%2F255%2F0</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Light Blue - 0%2F128%2F255</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Orange - 255%2F128%2F0</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pink - 255%2F0%2F255</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Purple - 128%2F0%2F255</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Red - 255%2F0%2F0</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Specialty Color</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>White - 255%2F255%2F255</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Yellow - 255%2F255%2F0</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

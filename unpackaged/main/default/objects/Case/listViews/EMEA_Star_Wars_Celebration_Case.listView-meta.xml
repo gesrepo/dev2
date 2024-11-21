@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>EMEA_Star_Wars_Celebration_Case</fullName>
+    <filterScope>Queue</filterScope>
+    <label>EMEA Star Wars Celebration</label>
+    <queue>EMEA_Star_Wars_Celebration</queue>
+    <sharedTo>
+        <allInternalUsers />
+    </sharedTo>
+</ListView>

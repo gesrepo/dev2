@@ -1,0 +1,74 @@
+<apex:page tabstyle="Account_Credit__c" controller="Link_Show_Opportunities_Controller" action="{!init}">
+
+    <!-- Javascript function to check all rows in the table -->
+    <script>
+        function checkAll(cb)
+        {   
+            var inputElem = document.getElementsByTagName("input");   
+            for(var i=0;i<inputElem.length;i++)     
+            {             
+                if(inputElem[i].id.indexOf("selectLine1")!=-1)                   
+                    inputElem[i].checked = cb.checked;      
+            }
+        }
+    </script><!-- End of Javascript function -->
+
+
+    <apex:sectionHeader title="Link" subtitle="Show Opportunities" />
+
+    <apex:form >
+  
+        <apex:pageMessages />
+  <apex:pageblock title="Related Show Opportunities">
+
+            <apex:pageBlockButtons >
+                <apex:commandButton immediate="true" value="Cancel" action="{!DoCancel}" />
+
+                <apex:commandButton value="Select" action="{!DoSelect}" >
+                    <apex:actionSupport event="onclick"/> 
+                </apex:commandButton>
+                    
+            </apex:pageBlockButtons>
+           
+            <apex:outputPanel rendered="{!IF(opp.size != 0 ,false, true)}">
+                <br/>
+                No Related Show Opportunity Available.
+                <br/><br/>
+            </apex:outputPanel>  
+                
+            <apex:pageBlockTable value="{!opp}" var="o" rendered="{!IF(opp.size != 0 , true, false)}">   
+                
+                <apex:column >                
+                    <apex:facet name="header">                    
+                        <apex:inputCheckbox onclick="checkAll(this)"/>                
+                    </apex:facet>  
+                    <apex:inputCheckbox value="{!o.selected}" id="selectLine1"/>             
+                </apex:column>
+      
+                <apex:column >
+                    <apex:facet name="header">
+                        Show Occurrence
+                    </apex:facet>
+                    <apex:outputLink value="/{!o.opp.Id}" >{!o.opp.Name}</apex:outputLink>
+                </apex:column>
+      
+                <apex:column >
+                    <apex:facet name="header">
+                        Account
+                    </apex:facet>
+                    <apex:outputField value="{!o.opp.AccountId}" />
+                </apex:column>
+      
+                <apex:column >
+                    <apex:facet name="header">
+                        Owner
+                    </apex:facet>
+                    <apex:outputField value="{!o.opp.OwnerId}" />
+                </apex:column>
+      
+            </apex:pageBlockTable>
+        </apex:pageBlock>
+  
+    </apex:form>
+
+</apex:page>

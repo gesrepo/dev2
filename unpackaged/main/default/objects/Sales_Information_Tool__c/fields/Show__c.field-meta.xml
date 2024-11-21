@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Show__c</fullName>
+    <deleteConstraint>Restrict</deleteConstraint>
+    <label>Show</label>
+    <referenceTo>Show__c</referenceTo>
+    <relationshipLabel>Sales Information Tools</relationshipLabel>
+    <relationshipName>Sales_Information_Tools</relationshipName>
+    <required>true</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

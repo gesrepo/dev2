@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Year__c</fullName>
+    <description>Year of Exhibition Close Date on Opportunity; Formula field based on YRMO</description>
+    <externalId>false</externalId>
+    <formula>LEFT(YRMO__c,4)</formula>
+    <label>Year</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Substatus__c</fullName>
+    <label>Substatus</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>None Required</fullName>
+                <default>true</default>
+                <label>None Required</label>
+            </value>
+            <value>
+                <fullName>Audit Complete</fullName>
+                <default>false</default>
+                <label>Audit Complete</label>
+            </value>
+            <value>
+                <fullName>Audit in Process</fullName>
+                <default>false</default>
+                <label>Audit in Process</label>
+            </value>
+            <value>
+                <fullName>File Request From Archivist</fullName>
+                <default>false</default>
+                <label>File Request From Archivist</label>
+            </value>
+            <value>
+                <fullName>Graphics</fullName>
+                <default>false</default>
+                <label>Graphics</label>
+            </value>
+            <value>
+                <fullName>ICS Complete</fullName>
+                <default>false</default>
+                <label>ICS Complete</label>
+            </value>
+            <value>
+                <fullName>Known Error</fullName>
+                <default>false</default>
+                <label>Known Error</label>
+            </value>
+            <value>
+                <fullName>Order Entered</fullName>
+                <default>false</default>
+                <label>Order Entered</label>
+            </value>
+            <value>
+                <fullName>Pending Expresso Issue</fullName>
+                <default>false</default>
+                <label>Pending Expresso Issue</label>
+            </value>
+            <value>
+                <fullName>Pending Kit Finalization</fullName>
+                <default>false</default>
+                <label>Pending Kit Finalization</label>
+            </value>
+            <value>
+                <fullName>Printed by City Office</fullName>
+                <default>false</default>
+                <label>Printed by City Office</label>
+            </value>
+            <value>
+                <fullName>Waiting for City Response</fullName>
+                <default>false</default>
+                <label>Waiting for City Response</label>
+            </value>
+            <value>
+                <fullName>Waiting for CR/RF Decision</fullName>
+                <default>false</default>
+                <label>Waiting for CR/RF Decision</label>
+            </value>
+            <value>
+                <fullName>Waiting for Entry</fullName>
+                <default>false</default>
+                <label>Waiting for Entry</label>
+            </value>
+            <value>
+                <fullName>Waiting for Customer - Information</fullName>
+                <default>false</default>
+                <label>Waiting for Customer - Information</label>
+            </value>
+            <value>
+                <fullName>Waiting for Customer - Response</fullName>
+                <default>false</default>
+                <label>Waiting for Customer - Response</label>
+            </value>
+            <value>
+                <fullName>Waiting for Delivery</fullName>
+                <default>false</default>
+                <label>Waiting for Delivery</label>
+            </value>
+            <value>
+                <fullName>Waiting for Quote</fullName>
+                <default>false</default>
+                <label>Waiting for Quote</label>
+            </value>
+            <value>
+                <fullName>Waiting for Reroute/Upgrade</fullName>
+                <default>false</default>
+                <label>Waiting for Reroute/Upgrade</label>
+            </value>
+            <value>
+                <fullName>Waiting GES Electric Response</fullName>
+                <default>false</default>
+                <label>Waiting GES Electric Response</label>
+            </value>
+            <value>
+                <fullName>Waiting GES Operation Response</fullName>
+                <default>false</default>
+                <label>Waiting GES Operation Response</label>
+            </value>
+            <value>
+                <fullName>Waiting on A/R Process</fullName>
+                <default>false</default>
+                <label>Waiting on A/R Process</label>
+            </value>
+            <value>
+                <fullName>Waiting on Credit Card Info</fullName>
+                <default>false</default>
+                <label>Waiting on Credit Card Info</label>
+            </value>
+            <value>
+                <fullName>Waiting on Files</fullName>
+                <default>false</default>
+                <label>Waiting on Files</label>
+            </value>
+            <value>
+                <fullName>Waiting on Invoice Breakdown</fullName>
+                <default>false</default>
+                <label>Waiting on Invoice Breakdown</label>
+            </value>
+            <value>
+                <fullName>Waiting on IT Help Desk</fullName>
+                <default>false</default>
+                <label>Waiting on IT Help Desk</label>
+            </value>
+            <value>
+                <fullName>Waiting on NSC Support Desk</fullName>
+                <default>false</default>
+                <label>Waiting on NSC Support Desk</label>
+            </value>
+            <value>
+                <fullName>Waiting on Order Forms</fullName>
+                <default>false</default>
+                <label>Waiting on Order Forms</label>
+            </value>
+            <value>
+                <fullName>Waiting for Printing</fullName>
+                <default>false</default>
+                <label>Waiting for Printing</label>
+            </value>
+            <value>
+                <fullName>Waiting on Response from Intl</fullName>
+                <default>false</default>
+                <label>Waiting on Response from Intl</label>
+            </value>
+            <value>
+                <fullName>Waiting on Verification of City</fullName>
+                <default>false</default>
+                <label>Waiting on Verification of City</label>
+            </value>
+            <value>
+                <fullName>Waiting Show Site Follow Up</fullName>
+                <default>false</default>
+                <label>Waiting Show Site Follow Up</label>
+            </value>
+            <value>
+                <fullName>TSE Only Show - Waiting for Entry</fullName>
+                <default>false</default>
+                <label>TSE Only Show - Waiting for Entry</label>
+            </value>
+            <value>
+                <fullName>Awaiting Exh Confirmation Quote</fullName>
+                <default>false</default>
+                <label>Awaiting Exh Confirmation Quote</label>
+            </value>
+            <value>
+                <fullName>Awaiting Exh Confirmation Reserve (FG)</fullName>
+                <default>false</default>
+                <label>Awaiting Exh Confirmation Reserve (FG)</label>
+            </value>
+            <value>
+                <fullName>Awaiting Diagram</fullName>
+                <default>false</default>
+                <label>Awaiting Diagram</label>
+            </value>
+            <value>
+                <fullName>Awaiting Payment</fullName>
+                <default>false</default>
+                <label>Awaiting Payment</label>
+            </value>
+            <value>
+                <fullName>Awaiting Response From IT</fullName>
+                <default>false</default>
+                <label>Awaiting Response From IT</label>
+            </value>
+            <value>
+                <fullName>Awaiting Response From Credit Control</fullName>
+                <default>false</default>
+                <label>Awaiting Response From Credit Control</label>
+            </value>
+            <value>
+                <fullName>Awaiting Response From Operations/SF</fullName>
+                <default>false</default>
+                <label>Awaiting Response From Operations/SF</label>
+            </value>
+            <value>
+                <fullName>Awaiting Response From FG</fullName>
+                <default>false</default>
+                <label>Awaiting Response From FG</label>
+            </value>
+            <value>
+                <fullName>Awaiting Response From FC</fullName>
+                <default>false</default>
+                <label>Awaiting Response From FC</label>
+            </value>
+            <value>
+                <fullName>Awaiting Response From 3rd Party Supplier</fullName>
+                <default>false</default>
+                <label>Awaiting Response From 3rd Party Supplier</label>
+            </value>
+            <value>
+                <fullName>Awaiting Response From Account Manager</fullName>
+                <default>false</default>
+                <label>Awaiting Response From Account Manager</label>
+            </value>
+            <value>
+                <fullName>Awaiting Updated Top Spec</fullName>
+                <default>false</default>
+                <label>Awaiting Updated Top Spec</label>
+            </value>
+            <value>
+                <fullName>Awaiting floor plan</fullName>
+                <default>false</default>
+                <label>Awaiting floor plan</label>
+            </value>
+            <value>
+                <fullName>Awaiting More information from exh</fullName>
+                <default>false</default>
+                <label>Awaiting More information from exh</label>
+            </value>
+            <value>
+                <fullName>Awaiting Exh List</fullName>
+                <default>false</default>
+                <label>Awaiting Exh List</label>
+            </value>
+            <value>
+                <fullName>Call Back - No Contact Made</fullName>
+                <default>false</default>
+                <label>Call Back - No Contact Made</label>
+            </value>
+            <value>
+                <fullName>Needs Pre-Show Assistance</fullName>
+                <default>false</default>
+                <label>Needs Pre-Show Assistance</label>
+            </value>
+            <value>
+                <fullName>Exhibitor List Pending Upload/Update</fullName>
+                <default>false</default>
+                <label>Exhibitor List Pending Upload/Update</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

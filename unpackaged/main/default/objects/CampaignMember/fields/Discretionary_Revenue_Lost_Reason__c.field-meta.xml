@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Discretionary_Revenue_Lost_Reason__c</fullName>
+    <label>Discretionary Revenue Lost Reason</label>
+    <required>false</required>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Not Interested</fullName>
+                <default>false</default>
+                <label>Not Interested</label>
+            </value>
+            <value>
+                <fullName>Using 3rd Party</fullName>
+                <default>false</default>
+                <label>Using 3rd Party</label>
+            </value>
+            <value>
+                <fullName>Cancelled out of show</fullName>
+                <default>false</default>
+                <label>Cancelled out of show</label>
+            </value>
+            <value>
+                <fullName>Price</fullName>
+                <default>false</default>
+                <label>Price</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

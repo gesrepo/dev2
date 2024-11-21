@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SOP_PaymentTypeID__c</fullName>
+    <description>Displays the SOP Payment Type ID/Code that matches the value of Payment Type.</description>
+    <externalId>false</externalId>
+    <formula>CASE(  PaymentTypeName__c  , 
+&quot;Cheque&quot;, &quot;1&quot;, 
+&quot;Credit/Debit Card&quot;, &quot;2&quot;, 
+&quot;Bank Transfer&quot;, &quot;4&quot;,
+&quot;Worldpay&quot;, &quot;5&quot;,
+&quot;No Payment&quot;, &quot;6&quot;, 
+&quot;Cash&quot;, &quot;7&quot;,
+&quot;Foreign Cheque&quot;, &quot;8&quot;,
+&quot;On Site Payment&quot;, &quot;9&quot;,
+&quot;CC Surcharge Only&quot;, &quot;102&quot;, 
+&quot;Dashboard&quot;, &quot;103&quot;, 
+&quot;NA&quot;)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>Displays the SOP Payment Type ID/Code that matches the value of Payment Type.</inlineHelpText>
+    <label>SOP PaymentTypeID</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

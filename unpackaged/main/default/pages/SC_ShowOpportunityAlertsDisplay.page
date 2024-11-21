@@ -1,0 +1,41 @@
+<apex:page showHeader="false" sidebar="false" standardController="Case" extensions="SC_ShowOpportunityAlertsController">
+    <apex:form >
+        <apex:pageMessages id="messages"/>
+        <apex:pageBlock id="pb" rendered="{!con != null}">
+            <apex:pageBlockTable value="{!Records}" var="alert">
+<!--                 <apex:column value="{!alert.Name}"/>
+                <apex:column value="{!alert.IsActive__c}"/>
+                <apex:column value="{!alert.Order__c}"/> -->
+                <apex:column value="{!alert.URL__c}"/>
+                <apex:column value="{!alert.Message__c}"/>
+                <apex:column value="{!alert.LastModifiedDate}"/>
+            </apex:pageBlockTable>
+            <apex:pageBlockSection columns="3" id="pbStatus">
+                <apex:pageBlockSectionItem >
+                    <apex:outputText value="{!PageRange}" />
+                </apex:pageBlockSectionItem>
+                <apex:pageBlockSectionItem dataStyle="text-align:center;" >
+                    <apex:actionStatus startText="Loading Records..." id="pageStatus">
+                        <apex:facet name="start">
+                            <apex:outputPanel >
+                                <img src="/img/loading32.gif" width="16" height="16" style="margin:-3px 8px;" />
+                                <apex:outputText value="Loading Records..." />
+                            </apex:outputPanel>
+                        </apex:facet>
+                    </apex:actionStatus>
+                </apex:pageBlockSectionItem>
+                <apex:pageBlockSectionItem >
+                    <apex:panelGrid columns="4" style="float:right;margin:-6px 8px;" >
+                        <apex:commandButton value="First" action="{!con.first}" disabled="{!!con.hasPrevious}" status="pageStatus" reRender="pb"/>
+                        <apex:commandButton value="Previous" action="{!con.previous}" disabled="{!!con.hasPrevious}" status="pageStatus" reRender="pb"/>
+                        <apex:commandButton value="Next" action="{!con.next}" disabled="{!!con.hasNext}" status="pageStatus" reRender="pb" />
+                        <apex:commandButton value="Last" action="{!con.last}" disabled="{!!con.hasNext}" status="pageStatus" reRender="pb"/>
+                    </apex:panelGrid>
+                </apex:pageBlockSectionItem>
+            </apex:pageBlockSection>
+        </apex:pageBlock>
+        <apex:pageBlock rendered="{!con == null}">
+            <apex:outputText value="{!errorMessage}"/>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

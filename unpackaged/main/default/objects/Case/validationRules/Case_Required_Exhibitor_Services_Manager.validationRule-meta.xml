@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Case_Required_Exhibitor_Services_Manager</fullName>
+    <active>false</active>
+    <description>Exhibitor Services Manager is required when Refund/Adj amount is &gt; 500 and Credit Memo Code is not blank</description>
+    <errorConditionFormula>AND(ISBLANK(Exhibitor_Services_Manager__c),Refund_Adj_Amount__c &gt; 500,NOT(ISPICKVAL(Credit_Memo_Code__c,&#39;&#39;)))</errorConditionFormula>
+    <errorMessage>Exhibitor Services Manager is required when Refund/Adj Amount &gt; 500 for a  Credit Memo</errorMessage>
+</ValidationRule>

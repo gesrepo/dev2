@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>UAE_Seamless_Middle_East_2020_Case</fullName>
+    <filterScope>Queue</filterScope>
+    <label>UAE Seamless Middle East 2020</label>
+    <queue>UAE_Seamless_Middle_East_2020</queue>
+    <sharedTo>
+        <allInternalUsers />
+    </sharedTo>
+</ListView>

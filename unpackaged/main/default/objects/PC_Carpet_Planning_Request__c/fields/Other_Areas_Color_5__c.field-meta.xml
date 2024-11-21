@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Other_Areas_Color_5__c</fullName>
+    <label>Color 5</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Black</fullName>
+                <default>false</default>
+                <label>Black</label>
+            </value>
+            <value>
+                <fullName>Blue</fullName>
+                <default>false</default>
+                <label>Blue</label>
+            </value>
+            <value>
+                <fullName>Blue Jay</fullName>
+                <default>false</default>
+                <label>Blue Jay</label>
+            </value>
+            <value>
+                <fullName>Cayenne</fullName>
+                <default>false</default>
+                <label>Cayenne</label>
+            </value>
+            <value>
+                <fullName>Gray</fullName>
+                <default>false</default>
+                <label>Gray</label>
+            </value>
+            <value>
+                <fullName>Green</fullName>
+                <default>false</default>
+                <label>Green</label>
+            </value>
+            <value>
+                <fullName>Pepper</fullName>
+                <default>false</default>
+                <label>Pepper</label>
+            </value>
+            <value>
+                <fullName>Red</fullName>
+                <default>false</default>
+                <label>Red</label>
+            </value>
+            <value>
+                <fullName>Safari</fullName>
+                <default>false</default>
+                <label>Safari</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

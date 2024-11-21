@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Require_Disqualify_Reason</fullName>
+    <active>true</active>
+    <description>If Disqualify Reason = blank and Lead Status = Unqualified, &amp; not international lead record type, then Disqualify Reason must be populated.</description>
+    <errorConditionFormula>AND 
+( 
+ISBLANK(TEXT(Disqualify_Reason__c)), 
+ISPICKVAL(Status,&quot;Disqualified&quot;) 
+)</errorConditionFormula>
+    <errorDisplayField>Disqualify_Reason__c</errorDisplayField>
+    <errorMessage>Please enter a Disqualify Reason</errorMessage>
+</ValidationRule>

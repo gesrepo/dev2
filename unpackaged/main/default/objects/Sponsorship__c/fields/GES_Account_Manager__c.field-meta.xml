@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>GES_Account_Manager__c</fullName>
+    <label>GES Account Manager</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>true</sorted>
+            <value>
+                <fullName>Amy Gerrard</fullName>
+                <default>false</default>
+                <label>Amy Gerrard</label>
+            </value>
+            <value>
+                <fullName>Ashley Simmons</fullName>
+                <default>false</default>
+                <label>Ashley Simmons</label>
+            </value>
+            <value>
+                <fullName>Emily Huntzinger</fullName>
+                <default>false</default>
+                <label>Emily Huntzinger</label>
+            </value>
+            <value>
+                <fullName>Emily Piery</fullName>
+                <default>false</default>
+                <label>Emily Piery</label>
+            </value>
+            <value>
+                <fullName>Emily Rawls</fullName>
+                <default>false</default>
+                <label>Emily Rawls</label>
+            </value>
+            <value>
+                <fullName>Georgia Moore</fullName>
+                <default>false</default>
+                <label>Georgia Moore</label>
+            </value>
+            <value>
+                <fullName>Jennifer Cherok</fullName>
+                <default>false</default>
+                <label>Jennifer Cherok</label>
+            </value>
+            <value>
+                <fullName>Jessica Bodner</fullName>
+                <default>false</default>
+                <label>Jessica Bodner</label>
+            </value>
+            <value>
+                <fullName>Jill Johnson</fullName>
+                <default>false</default>
+                <label>Jill Johnson</label>
+            </value>
+            <value>
+                <fullName>Julie Powell</fullName>
+                <default>false</default>
+                <label>Julie Powell</label>
+            </value>
+            <value>
+                <fullName>Kaylene Pastorius</fullName>
+                <default>false</default>
+                <label>Kaylene Pastorius</label>
+            </value>
+            <value>
+                <fullName>Laurie Miller</fullName>
+                <default>false</default>
+                <label>Laurie Miller</label>
+            </value>
+            <value>
+                <fullName>Linda Holland</fullName>
+                <default>false</default>
+                <label>Linda Holland</label>
+            </value>
+            <value>
+                <fullName>Megan Siconolfi</fullName>
+                <default>false</default>
+                <label>Megan Siconolfi</label>
+            </value>
+            <value>
+                <fullName>Nicole Dribnock</fullName>
+                <default>false</default>
+                <label>Nicole Dribnock</label>
+            </value>
+            <value>
+                <fullName>Sarah Rado</fullName>
+                <default>false</default>
+                <label>Sarah Rado</label>
+            </value>
+            <value>
+                <fullName>Shilpa Mistry</fullName>
+                <default>false</default>
+                <label>Shilpa Mistry</label>
+            </value>
+            <value>
+                <fullName>Stephanie Houck</fullName>
+                <default>false</default>
+                <label>Stephanie Houck</label>
+            </value>
+            <value>
+                <fullName>Stephanie Solomon</fullName>
+                <default>false</default>
+                <label>Stephanie Solomon</label>
+            </value>
+            <value>
+                <fullName>Tara Nigro</fullName>
+                <default>false</default>
+                <label>Tara Nigro</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

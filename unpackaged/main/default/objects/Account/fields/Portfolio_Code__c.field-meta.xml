@@ -1,0 +1,581 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Portfolio_Code__c</fullName>
+    <inlineHelpText>If this Account is tied to a Portfolio, which one is it?</inlineHelpText>
+    <label>Portfolio Code</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Portfolio__c</controllingField>
+        <valueSetDefinition>
+            <sorted>true</sorted>
+            <value>
+                <fullName>(Gartner)</fullName>
+                <default>false</default>
+                <label>(Gartner)</label>
+            </value>
+            <value>
+                <fullName>1105 Media</fullName>
+                <default>false</default>
+                <label>1105 Media</label>
+            </value>
+            <value>
+                <fullName>Access Intelligence</fullName>
+                <default>false</default>
+                <label>Access Intelligence</label>
+            </value>
+            <value>
+                <fullName>Active</fullName>
+                <default>false</default>
+                <label>Active</label>
+            </value>
+            <value>
+                <fullName>ad-tech</fullName>
+                <default>false</default>
+                <label>ad-tech</label>
+            </value>
+            <value>
+                <fullName>Advanstar</fullName>
+                <default>false</default>
+                <label>Advanstar</label>
+            </value>
+            <value>
+                <fullName>AMC</fullName>
+                <default>false</default>
+                <label>AMC</label>
+            </value>
+            <value>
+                <fullName>Americasmart</fullName>
+                <default>false</default>
+                <label>Americasmart</label>
+            </value>
+            <value>
+                <fullName>ASI</fullName>
+                <default>false</default>
+                <label>ASI</label>
+            </value>
+            <value>
+                <fullName>Barron&#39;s</fullName>
+                <default>false</default>
+                <label>Barron&#39;s</label>
+            </value>
+            <value>
+                <fullName>BNP</fullName>
+                <default>false</default>
+                <label>BNP</label>
+            </value>
+            <value>
+                <fullName>Bobit</fullName>
+                <default>false</default>
+                <label>Bobit</label>
+            </value>
+            <value>
+                <fullName>Brett</fullName>
+                <default>false</default>
+                <label>Brett</label>
+            </value>
+            <value>
+                <fullName>Business Journals</fullName>
+                <default>false</default>
+                <label>Business Journals</label>
+            </value>
+            <value>
+                <fullName>Cambridge</fullName>
+                <default>false</default>
+                <label>Cambridge</label>
+            </value>
+            <value>
+                <fullName>Clarion</fullName>
+                <default>false</default>
+                <label>Clarion</label>
+            </value>
+            <value>
+                <fullName>Comexposium</fullName>
+                <default>false</default>
+                <label>Comexposium</label>
+            </value>
+            <value>
+                <fullName>Convention Management Group (CMG)</fullName>
+                <default>false</default>
+                <label>Convention Management Group (CMG)</label>
+            </value>
+            <value>
+                <fullName>Corcoran</fullName>
+                <default>false</default>
+                <label>Corcoran</label>
+            </value>
+            <value>
+                <fullName>Cure Media Group</fullName>
+                <default>false</default>
+                <label>Cure Media Group</label>
+            </value>
+            <value>
+                <fullName>Cygnus</fullName>
+                <default>false</default>
+                <label>Cygnus</label>
+            </value>
+            <value>
+                <fullName>Dallas Market Center</fullName>
+                <default>false</default>
+                <label>Dallas Market Center</label>
+            </value>
+            <value>
+                <fullName>Diversified Communications (DEI)</fullName>
+                <default>false</default>
+                <label>Diversified Communications (DEI)</label>
+            </value>
+            <value>
+                <fullName>DMG</fullName>
+                <default>false</default>
+                <label>DMG</label>
+            </value>
+            <value>
+                <fullName>E5 Global Media</fullName>
+                <default>false</default>
+                <label>E5 Global Media</label>
+            </value>
+            <value>
+                <fullName>EH</fullName>
+                <default>false</default>
+                <label>EH</label>
+            </value>
+            <value>
+                <fullName>Emap</fullName>
+                <default>false</default>
+                <label>Emap</label>
+            </value>
+            <value>
+                <fullName>Emerald Expositions</fullName>
+                <default>false</default>
+                <label>Emerald Expositions</label>
+            </value>
+            <value>
+                <fullName>ENK Productions</fullName>
+                <default>false</default>
+                <label>ENK Productions</label>
+            </value>
+            <value>
+                <fullName>Experient</fullName>
+                <default>false</default>
+                <label>Experient</label>
+            </value>
+            <value>
+                <fullName>F+W</fullName>
+                <default>false</default>
+                <label>F+W</label>
+            </value>
+            <value>
+                <fullName>Gartner</fullName>
+                <default>false</default>
+                <label>Gartner</label>
+            </value>
+            <value>
+                <fullName>Gartner (Facility)</fullName>
+                <default>false</default>
+                <label>Gartner (Facility)</label>
+            </value>
+            <value>
+                <fullName>George Little Management</fullName>
+                <default>false</default>
+                <label>George Little Management</label>
+            </value>
+            <value>
+                <fullName>George P. Johnson</fullName>
+                <default>false</default>
+                <label>George P. Johnson</label>
+            </value>
+            <value>
+                <fullName>Global Lifestyle Markets</fullName>
+                <default>false</default>
+                <label>Global Lifestyle Markets</label>
+            </value>
+            <value>
+                <fullName>Hall-Erickson</fullName>
+                <default>false</default>
+                <label>Hall-Erickson</label>
+            </value>
+            <value>
+                <fullName>Hanley Wood</fullName>
+                <default>false</default>
+                <label>Hanley Wood</label>
+            </value>
+            <value>
+                <fullName>Hart</fullName>
+                <default>false</default>
+                <label>Hart</label>
+            </value>
+            <value>
+                <fullName>IDG World Expo</fullName>
+                <default>false</default>
+                <label>IDG World Expo</label>
+            </value>
+            <value>
+                <fullName>Inciscive</fullName>
+                <default>false</default>
+                <label>Inciscive</label>
+            </value>
+            <value>
+                <fullName>Informa</fullName>
+                <default>false</default>
+                <label>Informa</label>
+            </value>
+            <value>
+                <fullName>Jupiter Events</fullName>
+                <default>false</default>
+                <label>Jupiter Events</label>
+            </value>
+            <value>
+                <fullName>M|C Communications</fullName>
+                <default>false</default>
+                <label>M|C Communications</label>
+            </value>
+            <value>
+                <fullName>Mace Media</fullName>
+                <default>false</default>
+                <label>Mace Media</label>
+            </value>
+            <value>
+                <fullName>Market Group</fullName>
+                <default>false</default>
+                <label>Market Group</label>
+            </value>
+            <value>
+                <fullName>Motor Trend</fullName>
+                <default>false</default>
+                <label>Motor Trend</label>
+            </value>
+            <value>
+                <fullName>Networld Media Group</fullName>
+                <default>false</default>
+                <label>Networld Media Group</label>
+            </value>
+            <value>
+                <fullName>Paradice</fullName>
+                <default>false</default>
+                <label>Paradice</label>
+            </value>
+            <value>
+                <fullName>Penton Media</fullName>
+                <default>false</default>
+                <label>Penton Media</label>
+            </value>
+            <value>
+                <fullName>Portfolio Summit</fullName>
+                <default>false</default>
+                <label>Portfolio Summits</label>
+            </value>
+            <value>
+                <fullName>Pulver.com</fullName>
+                <default>false</default>
+                <label>Pulver.com</label>
+            </value>
+            <value>
+                <fullName>Questex Media</fullName>
+                <default>false</default>
+                <label>Questex Media</label>
+            </value>
+            <value>
+                <fullName>Reed</fullName>
+                <default>false</default>
+                <label>Reed</label>
+            </value>
+            <value>
+                <fullName>Shared Insights</fullName>
+                <default>false</default>
+                <label>Shared Insights</label>
+            </value>
+            <value>
+                <fullName>SME</fullName>
+                <default>false</default>
+                <label>SME</label>
+            </value>
+            <value>
+                <fullName>Smith-Bucklin</fullName>
+                <default>false</default>
+                <label>Smith-Bucklin</label>
+            </value>
+            <value>
+                <fullName>Source Media (Thompson Media)</fullName>
+                <default>false</default>
+                <label>Source Media (Thompson Media)</label>
+            </value>
+            <value>
+                <fullName>Tarsus</fullName>
+                <default>false</default>
+                <label>Tarsus</label>
+            </value>
+            <value>
+                <fullName>UBM</fullName>
+                <default>false</default>
+                <label>UBM</label>
+            </value>
+            <value>
+                <fullName>UBM Canon Communications</fullName>
+                <default>false</default>
+                <label>UBM Canon Communications</label>
+            </value>
+            <value>
+                <fullName>UP Media Group</fullName>
+                <default>false</default>
+                <label>UP Media Group</label>
+            </value>
+            <value>
+                <fullName>Virgo Publishing</fullName>
+                <default>false</default>
+                <label>Virgo Publishing</label>
+            </value>
+            <value>
+                <fullName>World Shoe (WSA Holdings)</fullName>
+                <default>false</default>
+                <label>World Shoe (WSA Holdings)</label>
+            </value>
+            <value>
+                <fullName>WT Glasgow</fullName>
+                <default>false</default>
+                <label>WT Glasgow</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Yes</controllingFieldValue>
+            <valueName>(Gartner)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Yes</controllingFieldValue>
+            <valueName>1105 Media</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Yes</controllingFieldValue>
+            <valueName>Access Intelligence</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Yes</controllingFieldValue>
+            <valueName>Active</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Yes</controllingFieldValue>
+            <valueName>ad-tech</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Yes</controllingFieldValue>
+            <valueName>Advanstar</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Yes</controllingFieldValue>
+            <valueName>Americasmart</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Yes</controllingFieldValue>
+            <valueName>ASI</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Yes</controllingFieldValue>
+            <valueName>Barron&#39;s</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Yes</controllingFieldValue>
+            <valueName>BNP</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Yes</controllingFieldValue>
+            <valueName>Bobit</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Yes</controllingFieldValue>
+            <valueName>Brett</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Yes</controllingFieldValue>
+            <valueName>Business Journals</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Yes</controllingFieldValue>
+            <valueName>Cambridge</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Yes</controllingFieldValue>
+            <valueName>Clarion</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Yes</controllingFieldValue>
+            <valueName>Comexposium</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Yes</controllingFieldValue>
+            <valueName>Convention Management Group (CMG)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Yes</controllingFieldValue>
+            <valueName>Corcoran</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Yes</controllingFieldValue>
+            <valueName>Cure Media Group</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Yes</controllingFieldValue>
+            <valueName>Cygnus</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Yes</controllingFieldValue>
+            <valueName>Dallas Market Center</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Yes</controllingFieldValue>
+            <valueName>Diversified Communications (DEI)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Yes</controllingFieldValue>
+            <valueName>DMG</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Yes</controllingFieldValue>
+            <valueName>E5 Global Media</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Yes</controllingFieldValue>
+            <valueName>EH</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Yes</controllingFieldValue>
+            <valueName>Emap</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Yes</controllingFieldValue>
+            <valueName>Emerald Expositions</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Yes</controllingFieldValue>
+            <valueName>ENK Productions</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Yes</controllingFieldValue>
+            <valueName>Experient</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Yes</controllingFieldValue>
+            <valueName>F+W</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Yes</controllingFieldValue>
+            <valueName>George Little Management</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Yes</controllingFieldValue>
+            <valueName>George P. Johnson</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Yes</controllingFieldValue>
+            <valueName>Global Lifestyle Markets</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Yes</controllingFieldValue>
+            <valueName>Hall-Erickson</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Yes</controllingFieldValue>
+            <valueName>Hanley Wood</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Yes</controllingFieldValue>
+            <valueName>Hart</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Yes</controllingFieldValue>
+            <valueName>IDG World Expo</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Yes</controllingFieldValue>
+            <valueName>Inciscive</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Yes</controllingFieldValue>
+            <valueName>Informa</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Yes</controllingFieldValue>
+            <valueName>Jupiter Events</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Yes</controllingFieldValue>
+            <valueName>M|C Communications</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Yes</controllingFieldValue>
+            <valueName>Mace Media</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Yes</controllingFieldValue>
+            <valueName>Market Group</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Yes</controllingFieldValue>
+            <valueName>Motor Trend</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Yes</controllingFieldValue>
+            <valueName>Networld Media Group</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Yes</controllingFieldValue>
+            <valueName>Paradice</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Yes</controllingFieldValue>
+            <valueName>Penton Media</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Yes</controllingFieldValue>
+            <valueName>Portfolio Summit</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Yes</controllingFieldValue>
+            <valueName>Pulver.com</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Yes</controllingFieldValue>
+            <valueName>Questex Media</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Yes</controllingFieldValue>
+            <valueName>Reed</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Yes</controllingFieldValue>
+            <valueName>Shared Insights</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Yes</controllingFieldValue>
+            <valueName>Smith-Bucklin</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Yes</controllingFieldValue>
+            <valueName>Source Media (Thompson Media)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Yes</controllingFieldValue>
+            <valueName>Tarsus</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Yes</controllingFieldValue>
+            <valueName>UBM</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Yes</controllingFieldValue>
+            <valueName>UBM Canon Communications</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Yes</controllingFieldValue>
+            <valueName>UP Media Group</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Yes</controllingFieldValue>
+            <valueName>Virgo Publishing</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Yes</controllingFieldValue>
+            <valueName>WT Glasgow</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

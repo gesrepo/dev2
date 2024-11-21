@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>EMEA_Sales_Tag__c</fullName>
+    <inlineHelpText>Please select the appropriate tags</inlineHelpText>
+    <label>EMEA Sales Tag</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>true</sorted>
+            <value>
+                <fullName>Conference</fullName>
+                <default>false</default>
+                <label>Conference</label>
+            </value>
+            <value>
+                <fullName>Congress</fullName>
+                <default>false</default>
+                <label>Congress</label>
+            </value>
+            <value>
+                <fullName>D&amp;B</fullName>
+                <default>false</default>
+                <label>D&amp;B</label>
+            </value>
+            <value>
+                <fullName>Exhibitions</fullName>
+                <default>false</default>
+                <label>Exhibitions</label>
+            </value>
+            <value>
+                <fullName>Summit</fullName>
+                <default>false</default>
+                <label>Summit</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

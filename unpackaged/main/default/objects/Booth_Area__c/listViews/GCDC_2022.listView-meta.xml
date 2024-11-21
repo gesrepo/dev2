@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>GCDC_2022</fullName>
+    <columns>NAME</columns>
+    <columns>BoothID_Area__c</columns>
+    <columns>OBJECT_ID</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Connect2_Show__c</field>
+        <operation>equals</operation>
+        <value>CS-7151</value>
+    </filters>
+    <label>GCDC 2022</label>
+    <language>en_US</language>
+</ListView>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>AR_CUST_LAST_UPDATE_DATE__c</fullName>
+    <description>Stores values from Oracle AR Account Customer HZ_CUST_ACCOUNTS.LAST_UPDATE_DATE column.</description>
+    <label>Customer Last Modified</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>DateTime</type>
+</CustomField>

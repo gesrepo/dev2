@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Reality_Engineering_Utilized__c</fullName>
+    <description>Changes to multiselect picklist for SCA 726 by rsinha</description>
+    <label>Data Collection Methods</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Survey</fullName>
+                <default>false</default>
+                <label>Survey</label>
+            </value>
+            <value>
+                <fullName>Opt-In</fullName>
+                <default>false</default>
+                <label>Opt-In</label>
+            </value>
+            <value>
+                <fullName>E-Literature</fullName>
+                <default>false</default>
+                <label>E-Literature</label>
+            </value>
+            <value>
+                <fullName>Interactive E-detail with scanning</fullName>
+                <default>false</default>
+                <label>Interactive E-detail with scanning</label>
+            </value>
+            <value>
+                <fullName>App Badge Scanning (API obtained)</fullName>
+                <default>false</default>
+                <label>App Badge Scanning (API obtained)</label>
+            </value>
+            <value>
+                <fullName>Hospitality Scanning/E-Delivery Hospitality</fullName>
+                <default>false</default>
+                <label>Hospitality Scanning/E-Delivery Hospitality</label>
+            </value>
+            <value>
+                <fullName>Heat Mapping/Traffic Tracking</fullName>
+                <default>false</default>
+                <label>Heat Mapping/Traffic Tracking</label>
+            </value>
+            <value>
+                <fullName>Show Provided Badge Scanning</fullName>
+                <default>false</default>
+                <label>Show Provided Badge Scanning</label>
+            </value>
+            <value>
+                <fullName>Customer Target Match to List</fullName>
+                <default>false</default>
+                <label>Customer Target Match to List</label>
+            </value>
+            <value>
+                <fullName>Client not interested in collecting any data</fullName>
+                <default>false</default>
+                <label>Client not interested in collecting any data</label>
+            </value>
+            <value>
+                <fullName>Other –open field</fullName>
+                <default>false</default>
+                <label>Other –open field</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

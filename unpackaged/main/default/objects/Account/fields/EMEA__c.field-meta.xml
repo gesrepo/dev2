@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>EMEA__c</fullName>
+    <defaultValue>false</defaultValue>
+    <inlineHelpText>If this account is EMEA and is to be transferred to SOP, check this box.</inlineHelpText>
+    <label>EMEA</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

@@ -1,0 +1,436 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Event_RL_GT</fullName>
+    <active>true</active>
+    <description>Event RL for GT</description>
+    <label>Event RL GT</label>
+    <picklistValues>
+        <picklist>Activity_Level__c</picklist>
+        <values>
+            <fullName>Tier 1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tier 2</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tier 3</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Ancillary_Meeting_Space_Required_CrownC__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Business_Unit__c</picklist>
+        <values>
+            <fullName>ASD</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Business Support%2FCareer Fairs</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Corporate %E2%80%93 Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Corporate Development %26 Strategy</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Emerging Technologies</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Fiber %E2%80%93 Channel</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Fiber %E2%80%93 Enterprise</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Fiber %E2%80%93 Overlay</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Fiber %E2%80%93 Wholesale</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Gov%E2%80%99t Relations%2FPA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>National Sales</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Public Safety</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SCN Sales</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Small Cell</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Supply Chain%2FDiversity</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>System-wide event</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Congress_Manager__c</picklist>
+        <values>
+            <fullName>Andrew Rolls</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Corrine Landolt</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Jacqueline Campo</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Joe Walsh</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>John Hasemann</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Kaitlyn Reynolds</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Laurie Stein-Richards</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rebecca Baker</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Event_Manager__c</picklist>
+        <values>
+            <fullName>Aisling Meehan</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Caitlin Ferdyn</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Don Schmid</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Laine Mann</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lee Kim</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Michael Clearey</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>N%2FA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sandra Kusek</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Shawn McDonald</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Suthee Suvansri</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Virginia Hayward</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Event_Room_Use__c</picklist>
+        <values>
+            <fullName>Client Meetings</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Opinion Leader</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Work Room</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Event_Type__c</picklist>
+        <values>
+            <fullName>Customer facing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Internal</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>GES_Account_Executive__c</picklist>
+        <values>
+            <fullName>Andrew Callen</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>GES_Account_Manager__c</picklist>
+        <values>
+            <fullName>Jessica Bodner</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Stephanie Specht</fullName>
+            <default>true</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>GES_Project_Manager__c</picklist>
+        <values>
+            <fullName>Al Grauzinis</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Andrew Vanhorn</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Carl Ahrens</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Chris Wright</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Courtney Rowe</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Dave Botsford</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Donny Spray</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Duane Glossa</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Edward Haas</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Elizabeth Zajda</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Frank Cacciato</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Greg Rawe</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Jim Angle</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Michael Samuel</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mike Mulvey</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mike Porter</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Patty Welch</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sam Hornsby</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tim Murphy</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Troy Devenberg</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>I_D_Supervisor__c</picklist>
+        <values>
+            <fullName>Alan Squyres</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Dave Dragoone</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Heather Campbell</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Joe Holland</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ken Pantoliano</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Steve Burgess</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tom Kessler</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Market__c</picklist>
+        <values>
+            <fullName>Consumer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Law Enforcement</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Media</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Military</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sport</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Product__c</picklist>
+        <values>
+            <fullName>Academy</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Air</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ammunition</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Electro-Optics</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Firearms</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Suppressors</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Project_Manager_CrownCastle__c</picklist>
+        <values>
+            <fullName>Juanita Timney</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Katie Lillie</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lisandra Fernandez</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Stephanie Naida</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Reason_for_Cancellation__c</picklist>
+        <values>
+            <fullName>Budget Cut</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Exhibit Space Sold Out</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Product Owner Decision</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Strategy Change</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Opportunity_Short_Name__c</fullName>
+    <description>The Show ID + YR Mo, no venue, used to identify duplicates</description>
+    <externalId>false</externalId>
+    <formula>Show_Name__r.Show_ID__c + &#39;-&#39; +  YRMO__c</formula>
+    <label>Opportunity Short Name</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

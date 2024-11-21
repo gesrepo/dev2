@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Organiser_address_is_entered</fullName>
+    <active>true</active>
+    <errorConditionFormula>Organiser_Address__c == &quot;.&quot; ||
+ Organiser_Address__c == &quot;TBC&quot; ||
+ Organiser_Address__c == &quot;TBD&quot; || 
+ Organiser_Address__c == &quot;tbc&quot; ||
+ Organiser_Address__c == &quot;tbd&quot; ||
+ Organiser_Address__c == &quot;Already Set Up&quot; ||
+ Organiser_Address__c == &quot;already set up&quot; ||
+ Organiser_Address__c == &quot;unknown&quot; ||
+ Organiser_Address__c == &quot;Unknown&quot;</errorConditionFormula>
+    <errorMessage>Please enter the Organiser Address. Data quality is important</errorMessage>
+</ValidationRule>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Shows_with_no_Sub_Type</fullName>
+    <booleanFilter>1 and 2</booleanFilter>
+    <columns>NAME</columns>
+    <columns>Show_ID__c</columns>
+    <columns>Account__c</columns>
+    <columns>Exhibition_Provider__c</columns>
+    <columns>Exhibition_Expiration_Date__c</columns>
+    <columns>Show_Type__c</columns>
+    <columns>Sub_Type__c</columns>
+    <columns>Sales_Person__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Sub_Type__c</field>
+        <operation>equals</operation>
+    </filters>
+    <filters>
+        <field>RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Show__c.Tradeshow</value>
+    </filters>
+    <label>Shows with no Sub Type</label>
+    <language>en_US</language>
+    <sharedTo>
+        <role>SystemAdministrator</role>
+        <role>System_Support_Admin</role>
+    </sharedTo>
+</ListView>

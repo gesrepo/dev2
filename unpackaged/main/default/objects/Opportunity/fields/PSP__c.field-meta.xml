@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PSP__c</fullName>
+    <inlineHelpText>&quot;Petroleum Surcharge Program&quot;; if exhibition contract allows for charging of Petroleum Surcharge.
+For historical reporting purposes only – no longer editable</inlineHelpText>
+    <label>PSP</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>NM:  No - Mgmt Decision No</fullName>
+                <default>false</default>
+                <label>NM:  No - Mgmt Decision No</label>
+            </value>
+            <value>
+                <fullName>NP:  No Exhibitor Rev/Lost Plan Show</fullName>
+                <default>false</default>
+                <label>NP:  No Exhibitor Rev/Lost Plan Show</label>
+            </value>
+            <value>
+                <fullName>NE: Sub</fullName>
+                <default>false</default>
+                <label>NE: Sub</label>
+            </value>
+            <value>
+                <fullName>PI:Price Increase in lieu</fullName>
+                <default>false</default>
+                <label>PI:Price Increase in lieu</label>
+            </value>
+            <value>
+                <fullName>PM:  Unique PSP Terms</fullName>
+                <default>false</default>
+                <label>PM:  Unique PSP Terms</label>
+            </value>
+            <value>
+                <fullName>PS:  3% PSP</fullName>
+                <default>false</default>
+                <label>PS:  3% PSP</label>
+            </value>
+            <value>
+                <fullName>S2:  2% PSP</fullName>
+                <default>false</default>
+                <label>S2:  2% PSP</label>
+            </value>
+            <value>
+                <fullName>S4: 4% PSP</fullName>
+                <default>false</default>
+                <label>S4: 4% PSP</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

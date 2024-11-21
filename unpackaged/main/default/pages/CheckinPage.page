@@ -1,0 +1,81 @@
+<apex:page standardController="Shipment__c" extensions="ShipmentReturn_Controller" sidebar="false" showHeader="true">
+    <apex:form id="myForm">
+        
+        <apex:pageBlock id="PB1" Title="CHECKIN PAGE">
+            
+            <apex:pageBlockSection Title="Scan Product" >
+                
+                <apex:pageBlockSectionItem labelStyle="text-align:center" >
+                    <apex:inputText id="item_id" styleClass="inputtextbox" onkeyup="Test()" style="width:150px;" value="{!scannedId}"  title="Product Serial">
+                        <apex:actionFunction name="CallController" action="{!SpecialCharacterCheck}" reRender="PB2,showmsg,Needed" oncomplete="window.load()"/>
+                        <script>
+                        function Test(){
+                            var txt=document.getElementsByClassName("inputtextbox")[0].value;
+                            var flag=txt.indexOf("?");
+                            if (flag != -1) {
+                                //alert("txt"+document.getElementsByClassName("inputtextbox")[0].value);
+                                CallController();
+                                document.getElementsByClassName("inputtextbox")[0].value='';
+                                
+                            }
+                            
+                        }
+                        </script>
+                    </apex:inputText>
+                    <apex:commandButton action="{!CheckinItem}" style="text-align:center;width:100px;" value="Check In"/>
+                    
+                </apex:pageBlockSectionItem>
+                
+            </apex:pageBlockSection>
+            
+            <apex:pageMessages id="showmsg"></apex:pageMessages>
+        </apex:pageBlock>
+        
+        
+        <apex:pageBlock id="PB2" >
+            
+            <apex:pageBlockSection id="Shipment" columns="2" Title="Shipment Details" rendered="{!DisplayDetails}">
+                
+                <apex:outputField value="{!Ship.ExhibitionOpportunity__c}" title="Exhibition Opportunity" />
+                <apex:outputField value="{!Ship.ShowName__c}" title="Show Name"/>
+                <apex:outputField value="{!Ship.AccountID__c}" title="Account"/>
+                <apex:outputField value="{!Ship.OrderID__c}" title="Order"/>
+                <apex:outputField value="{!Ship.ShippingDate__c}" title="Shipping Date"/>
+                <apex:outputField value="{!Ship.ReturnDate__c}" title="Return Date"/>
+                
+            </apex:pageBlockSection>                
+            
+            <apex:pageBlockSection id="Needed" columns="2" title="Needed Products" rendered="{!DisplayDetails}" >
+                <apex:pageBlockTable value="{!OrdItems}" var="Item" id="table" style="text-align:left">
+                    <apex:column headerValue="Quantity" value="{!Item.Quantity}"/>
+                    <apex:column headerValue="Product" value="{!Item.Product2Id}"/>
+                    <apex:column headerValue="Inventory" value="{!Item.Inventory__c}"/>
+                    <apex:column headerValue="Sendable" value="{!Item.Sendable__c}"/>
+                </apex:pageBlockTable>
+            </apex:pageBlockSection>
+            
+            <apex:pageBlockSection id="CheckedIn" title="Checked In Products" rendered="{!DisplayDetails}">
+                
+                <apex:pageBlockTable value="{!CheckedIn_Items}" var="Items" id="table2">
+                    <apex:column headerValue="Product Name" value="{!Items.ProductID__r.Name}"/>
+                    <apex:column headerValue="Asset Name" value="{!Items.AssetId__r.Name}"/>
+                    <apex:column headerValue="Serial" value="{!Items.AssetId__r.SerialNumber}"/>
+                    <apex:column headerValue="Expected Return Date" value="{!Items.Expected_Return_Date__c}"/>
+                    <apex:column headerValue="Actual Return Date" value="{!Items.Actual_Return_Date__c}"/>
+                </apex:pageBlockTable>
+            </apex:pageBlockSection>
+            
+        </apex:pageBlock>          
+      
+        
+    </apex:form>
+    
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script>        
+        $(document).ready(function(){
+        //alert("I am in!!!");
+        $('.inputtextbox').focus();
+    }); 
+    </script>
+</apex:page>

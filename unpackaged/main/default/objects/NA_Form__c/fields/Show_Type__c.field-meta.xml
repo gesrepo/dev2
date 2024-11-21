@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Show_Type__c</fullName>
+    <label>Show Type</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Business Services</fullName>
+                <default>false</default>
+                <label>Business Services</label>
+            </value>
+            <value>
+                <fullName>Consumer Goods and Retail Trade</fullName>
+                <default>false</default>
+                <label>Consumer Goods and Retail Trade</label>
+            </value>
+            <value>
+                <fullName>Discretionary Consumer Goods &amp; Services</fullName>
+                <default>false</default>
+                <label>Discretionary Consumer Goods &amp; Services</label>
+            </value>
+            <value>
+                <fullName>Education</fullName>
+                <default>false</default>
+                <label>Education</label>
+            </value>
+            <value>
+                <fullName>Food Sector</fullName>
+                <default>false</default>
+                <label>Food Sector</label>
+            </value>
+            <value>
+                <fullName>Financial, Legal and Real Estate</fullName>
+                <default>false</default>
+                <label>Financial, Legal and Real Estate</label>
+            </value>
+            <value>
+                <fullName>Government, Public &amp; Non-Profit Services</fullName>
+                <default>false</default>
+                <label>Government, Public &amp; Non-Profit Services</label>
+            </value>
+            <value>
+                <fullName>Building, Construction, Home &amp; Repair</fullName>
+                <default>false</default>
+                <label>Building, Construction, Home &amp; Repair</label>
+            </value>
+            <value>
+                <fullName>Industrial / Heavy Machinery / Finished Business Outputs</fullName>
+                <default>false</default>
+                <label>Industrial / Heavy Machinery / Finished Business Outputs</label>
+            </value>
+            <value>
+                <fullName>Communications &amp; Information Technology</fullName>
+                <default>false</default>
+                <label>Communications &amp; Information Technology</label>
+            </value>
+            <value>
+                <fullName>Medical &amp; Healthcare</fullName>
+                <default>false</default>
+                <label>Medical &amp; Healthcare</label>
+            </value>
+            <value>
+                <fullName>Raw Materials &amp; Science</fullName>
+                <default>false</default>
+                <label>Raw Materials &amp; Science</label>
+            </value>
+            <value>
+                <fullName>Sporting Goods, Travel and Amusement</fullName>
+                <default>false</default>
+                <label>Sporting Goods, Travel and Amusement</label>
+            </value>
+            <value>
+                <fullName>Transportation</fullName>
+                <default>false</default>
+                <label>Transportation</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Lock_Contact_Mobile</fullName>
+    <active>false</active>
+    <description>Make Contact Mobile Phone field read-only for a selected list of profiles.</description>
+    <errorConditionFormula>AND(ISCHANGED(MobilePhone), 
+OR($Profile.Name = &#39;EDExactTarget&#39;, 
+$Profile.Name = &#39;EDManager&#39;, 
+$Profile.Name = &#39;EDSalesRep&#39;, 
+$Profile.Name = &#39;EDSalesRep_NoSSO&#39;))</errorConditionFormula>
+    <errorDisplayField>MobilePhone</errorDisplayField>
+    <errorMessage>Contact Mobile Phone cannot be modified. Please send an email to creditrequests@ges.com to update Contact information.</errorMessage>
+</ValidationRule>

@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Design_Option__c</fullName>
+    <label>Design Option</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Option A</fullName>
+                <default>false</default>
+                <label>Avon</label>
+            </value>
+            <value>
+                <fullName>Option B</fullName>
+                <default>false</default>
+                <label>Boyne</label>
+            </value>
+            <value>
+                <fullName>Option C</fullName>
+                <default>false</default>
+                <label>Clyde</label>
+            </value>
+            <value>
+                <fullName>Option D</fullName>
+                <default>false</default>
+                <label>Danube</label>
+            </value>
+            <value>
+                <fullName>Option E</fullName>
+                <default>false</default>
+                <label>Elbe</label>
+            </value>
+            <value>
+                <fullName>Option F</fullName>
+                <default>false</default>
+                <label>Frome</label>
+            </value>
+            <value>
+                <fullName>Option G</fullName>
+                <default>false</default>
+                <label>Garda</label>
+            </value>
+            <value>
+                <fullName>Option H</fullName>
+                <default>false</default>
+                <label>Hudson</label>
+            </value>
+            <value>
+                <fullName>Option I</fullName>
+                <default>false</default>
+                <label>Inari</label>
+            </value>
+            <value>
+                <fullName>Option J</fullName>
+                <default>false</default>
+                <label>Jordan</label>
+            </value>
+            <value>
+                <fullName>Option K</fullName>
+                <default>false</default>
+                <label>Klondike</label>
+            </value>
+            <value>
+                <fullName>Option L</fullName>
+                <default>false</default>
+                <label>Loire</label>
+            </value>
+            <value>
+                <fullName>Option M</fullName>
+                <default>false</default>
+                <label>Mekong</label>
+            </value>
+            <value>
+                <fullName>Nile</fullName>
+                <default>false</default>
+                <label>Nile</label>
+            </value>
+            <value>
+                <fullName>Non-Standard</fullName>
+                <default>false</default>
+                <label>Non-Standard</label>
+            </value>
+            <value>
+                <fullName>Unclassified</fullName>
+                <default>false</default>
+                <label>Unclassified</label>
+            </value>
+            <value>
+                <fullName>Ohio</fullName>
+                <default>false</default>
+                <label>Ohio</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

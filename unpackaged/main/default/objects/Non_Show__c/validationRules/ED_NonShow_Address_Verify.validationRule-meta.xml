@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ED_NonShow_Address_Verify</fullName>
+    <active>true</active>
+    <description>Verifies a facility has been selected or an address has been entered.</description>
+    <errorConditionFormula>AND(
+ Facility__c  =&quot;&quot;,
+  Shipping_Street__c =&quot;&quot;,
+  Shipping_State_Province__c =&quot;&quot;,
+  Shipping_Street__c =&quot;&quot;,
+  Shipping_Zip_Postal_Code__c =&quot;&quot;, 
+  Ship_To_Company__c =&quot;&quot;)
+
+&amp;&amp; 
+NOT(OR($Profile.Name = &#39;GES Interface&#39;, 
+$Profile.Name = &#39;EDAdmin_Interface&#39;,
+$Profile.Name = &#39;EMEA Spiro Interface&#39;,
+$Profile.Name = &#39;System Administrator&#39;,
+$User.Id = &quot;00540000003NbAFAA0&quot;, 
+$User.Id = &quot;0051W000004H7uHQAS&quot;) /*Connie Masters and Shelly Barnes for AV Non-shows */
+)</errorConditionFormula>
+    <errorMessage>Please enter a Full Address or Select a Facility.</errorMessage>
+</ValidationRule>

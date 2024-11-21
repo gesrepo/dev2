@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Status_Must_be_New_On_Create</fullName>
+    <active>true</active>
+    <description>When an Article Update Request is created, the status must be New.</description>
+    <errorConditionFormula>IF (ISNEW() &amp;&amp; !ISPICKVAL (Status__c, &quot;New&quot;), TRUE, FALSE)</errorConditionFormula>
+    <errorDisplayField>Status__c</errorDisplayField>
+    <errorMessage>Only a Status of &quot;New&quot; may be selected when creating a new Article Update Request.</errorMessage>
+</ValidationRule>

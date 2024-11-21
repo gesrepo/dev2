@@ -1,0 +1,53 @@
+<apex:page showHeader="false" sidebar="true" standardController="GC_GES_Order_Task__c" recordSetVar="tasks" extensions="GC_OrderTaskBulkapproveController" action="{!loadAction}">
+<head>
+    <style type="text/css">
+    .selectionDiv {
+        margin: 20px !important;
+    }
+
+    .itemTable td {
+        padding: 3px;
+    }
+
+    .columnHeader {
+        padding: 5px;
+    }
+
+    .pageButtons {
+        width: 300px;
+    }
+
+    .selectAllBox {
+        float: right;
+    }
+    </style>
+</head>
+<apex:form >
+    <apex:pageMessages id="messages" />
+     <apex:pageBlock >
+        <apex:outputPanel id="statuses">
+            <apex:actionStatus id="loadStatus">
+              <apex:facet name="start">
+                <c:GC_StatusSpinner statusMessage="Approving the tasks." />
+              </apex:facet>
+            </apex:actionStatus>
+        </apex:outputPanel>
+        <apex:outputPanel >
+            <!--apex:pageBlockSection id="pbs" title="status of order tasks" columns="2"--> <!--commented by Sajid on 04/05/23 Ticket-1209 -->
+            <apex:pageBlockSection id="pbs" title="status of Item" columns="2">  <!-- added by Sajid on 04/05/23 Ticket-1209 -->
+                <apex:pageBlockTable value="{!gots}" var="got" styleClass="itemTable" id="itemTable1" headerClass="columnHeader">
+                    <apex:column >
+                        <apex:facet name="header">GES Order #</apex:facet>
+                        <apex:outputText value="{!got.Name}" />
+                    </apex:column>
+                    <apex:column >
+                        <apex:facet name="header">Status</apex:facet>
+                        <apex:outputText value="{!got.Status__c}" />
+                    </apex:column>
+                </apex:pageBlockTable>
+            </apex:pageBlockSection>
+            <apex:commandButton value="Back" action="{!backAction}" styleClass="pageButton" reRender="pbs, messages" />
+        </apex:outputPanel>
+    </apex:pageBlock>
+</apex:form>
+</apex:page>

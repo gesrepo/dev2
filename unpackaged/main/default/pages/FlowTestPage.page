@@ -1,0 +1,5 @@
+<apex:page standardController="Case" tabStyle="Case" >
+    <flow:interview name="Case_Create_New_Records_Within">
+        <apex:param name="CaseID" value="{!Case.Id}"/>
+    </flow:interview>
+</apex:page>

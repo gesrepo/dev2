@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Main_Business_Category__c</fullName>
+    <description>Main Business Category</description>
+    <label>Main Business Category</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>BA</fullName>
+                <default>false</default>
+                <label>Brand &amp; Product Activations</label>
+            </value>
+            <value>
+                <fullName>ME</fullName>
+                <default>false</default>
+                <label>Meetings &amp; Events</label>
+            </value>
+            <value>
+                <fullName>MM</fullName>
+                <default>false</default>
+                <label>Marketing &amp; Measurement</label>
+            </value>
+            <value>
+                <fullName>PI</fullName>
+                <default>false</default>
+                <label>Environments &amp; Permanent Installations</label>
+            </value>
+            <value>
+                <fullName>PM</fullName>
+                <default>false</default>
+                <label>Exhibits &amp; Program Management</label>
+            </value>
+            <value>
+                <fullName>None</fullName>
+                <default>false</default>
+                <label>None</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

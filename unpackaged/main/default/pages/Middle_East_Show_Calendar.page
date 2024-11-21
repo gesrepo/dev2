@@ -1,0 +1,55 @@
+<apex:page sidebar="false" standardController="Opportunity" extensions="MiddleEastShowCalendar" recordSetVar="shows">
+    <apex:sectionHeader title="Show Calendar"/>
+    <apex:form style="width:100%;">
+    
+        <apex:pageBlock title="Please select the month to view" mode="edit" id="block">
+            <apex:pageBlockButtons location="bottom">
+                <apex:commandButton value="Search" action="{!search}"/>
+                <apex:commandButton value="Clear" action="{!clear}"/>
+                <apex:commandButton value="Print" action="{!print}"/>
+                <apex:commandButton value="Export To Excel" action="{!excel}"/>
+            </apex:pageBlockButtons>
+            <apex:pageBlockSection columns="1">
+                <apex:pageBlockSectionItem >
+                    Month:
+                    <apex:selectlist value="{!monthValue}"  multiselect="false" size="1">
+                        <apex:selectOption itemValue="THIS_MONTH" itemLabel="This Month"/>
+                        <apex:selectOption itemValue="LAST_MONTH" itemLabel="Last Month"/>
+                        <apex:selectOption itemValue="NEXT_MONTH" itemLabel="Next Month"/>
+                        <apex:selectOption itemValue="THIS_QUARTER" itemLabel="This Quarter"/>
+                        <apex:selectOption itemValue="NEXT_QUARTER" itemLabel="Next Quarter"/>
+                        <apex:selectOption itemValue="LAST_QUARTER" itemLabel="Last Quarter"/>
+                        <apex:selectOption itemValue="THIS_YEAR" itemLabel="This Year"/>
+                        <apex:selectOption itemValue="LAST_YEAR" itemLabel="Last Year"/>
+                        <apex:selectOption itemValue="NEXT_YEAR" itemLabel="Next Year"/>
+                    </apex:selectlist>
+                </apex:pageBlockSectionItem>
+                <apex:messages />
+            </apex:pageBlockSection>
+        </apex:pageBlock>
+        
+        <apex:pageBlock title="Results" id="results">
+            <apex:pageBlockSection columns="1">
+                <apex:pageBlockTable value="{!show}" var="s">
+                    <apex:column headerValue="Sop Event ID" value="{!s.opp.SOP_Event_ID__c}"/>
+                    <apex:column headerValue="Show Name" value="{!s.opp.Show_Name__c}"/>
+                    <apex:column headerValue="Opportunity Name">
+                        <a href="/{!s.opp.Id}">{!s.opp.Name}</a>
+                    </apex:column>
+                    <apex:column headerValue="Venue" value="{!s.opp.Facility__c}"/>
+                    <apex:column headerValue="Account" value="{!s.opp.AccountId}"/>
+                    <apex:column headerValue="Show Open" value="{!s.opp.Show_Open_Date__c}"/>
+                    <apex:column headerValue="Show Close" value="{!s.opp.Show_Close_Date__c}"/>
+                    <apex:column headerValue="Sales Manager" value="{!s.opp.Sales_Person__c}"/>
+                    <apex:column headerValue="GES Move In" value="{!s.opp.GES_Move_In__c}"/>
+                    <apex:column headerValue="GES Move Out" value="{!s.opp.GES_Move_Out_Date_1__c}"/>
+                    <apex:column headerValue="Event Manager" value="{!s.opp.Event_Manager__c}"/>
+                    <apex:column headerValue="Products">
+                         {!s.products}
+                    </apex:column>
+                </apex:pageBlockTable>
+            </apex:pageBlockSection>
+        </apex:pageBlock>
+
+    </apex:form>
+</apex:page>

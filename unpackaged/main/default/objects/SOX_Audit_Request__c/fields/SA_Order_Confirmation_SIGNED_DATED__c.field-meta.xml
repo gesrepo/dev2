@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SA_Order_Confirmation_SIGNED_DATED__c</fullName>
+    <inlineHelpText>Uploaded, signature and date stamped</inlineHelpText>
+    <label>Preliminary Invoice (SIGNED &amp; DATED)</label>
+    <required>true</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Yes- Upload Form</fullName>
+                <default>false</default>
+                <label>Yes- Upload Form</label>
+            </value>
+            <value>
+                <fullName>No</fullName>
+                <default>false</default>
+                <label>No</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

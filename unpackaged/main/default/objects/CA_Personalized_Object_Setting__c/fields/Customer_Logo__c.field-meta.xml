@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Customer_Logo__c</fullName>
+    <defaultValue>&quot;GESProjectCentral_Logo_gray?v=1&quot;</defaultValue>
+    <inlineHelpText>Enter the url where customer logo is stored, else the default logo will be displayed</inlineHelpText>
+    <label>Customer Logo</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Url</type>
+</CustomField>

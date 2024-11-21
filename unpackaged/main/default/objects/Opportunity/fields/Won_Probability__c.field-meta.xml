@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Won_Probability__c</fullName>
+    <description>Amount of 100% Probability</description>
+    <formula>IF( AND 
+(RecordType_Name__c &lt;&gt; &quot;Sales Goal&quot;, Probability = 1),
+Amount , NULL)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Won Probability</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackHistory>false</trackHistory>
+    <type>Currency</type>
+</CustomField>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ORACLE_AR_CUST_STATUS__c</fullName>
+    <description>Status of Customer record in Oracle AR</description>
+    <externalId>false</externalId>
+    <label>Oracle AR Customer Status</label>
+    <length>1</length>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

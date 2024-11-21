@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>First_Project_Moved_to_Lost__c</fullName>
+    <description>Date first opportunity was moved to Lost. Field used in New Logo Lost Ratio</description>
+    <label>First Project Moved to Lost</label>
+    <summarizedField>Opportunity.Lost_Date__c</summarizedField>
+    <summaryForeignKey>Opportunity.AccountId</summaryForeignKey>
+    <summaryOperation>min</summaryOperation>
+    <trackHistory>false</trackHistory>
+    <type>Summary</type>
+</CustomField>

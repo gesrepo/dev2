@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ApexPage xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>43.0</apiVersion>
+    <availableInTouch>false</availableInTouch>
+    <confirmationTokenRequired>false</confirmationTokenRequired>
+    <description>– Pass in the project number and it will give you a list of the checklist forms for that show and their submitted totals etc… ShowInstanceChecklistId is the unique id of each record.</description>
+    <label>GC_ShowInstanceChecklistItems</label>
+</ApexPage>

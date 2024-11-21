@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Zoe_s_Team_EMEA</fullName>
+    <booleanFilter>(1 OR 2 OR 3) AND 4</booleanFilter>
+    <columns>CASES.CASE_NUMBER</columns>
+    <columns>CORE.USERS.ALIAS</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>Show_Name__c</columns>
+    <columns>Show_Open_Date__c</columns>
+    <columns>Booth_Number__c</columns>
+    <columns>CASES.CREATED_DATE</columns>
+    <columns>Substatus__c</columns>
+    <columns>Age__c</columns>
+    <columns>Age_Current_Owner__c</columns>
+    <columns>CASES.LAST_UPDATE</columns>
+    <columns>Show_Opportunity__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>CORE.USERS.LAST_NAME</field>
+        <operation>equals</operation>
+        <value>Zhenkov,Donnelly,Hothy,Javed,Morgan</value>
+    </filters>
+    <filters>
+        <field>CORE.USERS.LAST_NAME</field>
+        <operation>equals</operation>
+        <value>Nadeem,Rhodes,Jones,Peraira,Saliu</value>
+    </filters>
+    <filters>
+        <field>CORE.USERS.LAST_NAME</field>
+        <operation>equals</operation>
+        <value>Ferron,Jana,Williamson</value>
+    </filters>
+    <filters>
+        <field>CASES.STATUS</field>
+        <operation>equals</operation>
+        <value>Open</value>
+    </filters>
+    <label>Zoe&#39;s Team - EMEA</label>
+    <language>en_US</language>
+    <sharedTo>
+        <roleAndSubordinatesInternal>Exhibitor_Services_Co_Ordinator</roleAndSubordinatesInternal>
+        <roleAndSubordinatesInternal>GES_EMEA_Operations</roleAndSubordinatesInternal>
+        <roleAndSubordinatesInternal>GES_EMEA_Servi_Centre</roleAndSubordinatesInternal>
+        <roleAndSubordinatesInternal>GES_EMEA_Servi_Centre_Manager</roleAndSubordinatesInternal>
+        <roleAndSubordinatesInternal>GES_EMEA_Servi_Centre_Supervisor</roleAndSubordinatesInternal>
+    </sharedTo>
+</ListView>

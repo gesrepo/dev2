@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Canadian_Sales_Person__c</fullName>
+    <inlineHelpText>Canadian use ONLY - Local - Facility Sales Person occupying no salesforce license.</inlineHelpText>
+    <label>Canadian Sales Person</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>David Pengelly</fullName>
+                <default>false</default>
+                <label>David Pengelly</label>
+            </value>
+            <value>
+                <fullName>Gary Jorgenson</fullName>
+                <default>false</default>
+                <label>Gary Jorgenson</label>
+            </value>
+            <value>
+                <fullName>Kelly Courts</fullName>
+                <default>false</default>
+                <label>Kelly Courts</label>
+            </value>
+            <value>
+                <fullName>Mike Lecour</fullName>
+                <default>false</default>
+                <label>Mike Lecour</label>
+            </value>
+            <value>
+                <fullName>Robert McIntosh</fullName>
+                <default>false</default>
+                <label>Robert McIntosh</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

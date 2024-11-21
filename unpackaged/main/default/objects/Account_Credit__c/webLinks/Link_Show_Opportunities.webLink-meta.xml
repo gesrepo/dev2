@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Link_Show_Opportunities</fullName>
+    <availability>online</availability>
+    <displayType>button</displayType>
+    <encodingKey>UTF-8</encodingKey>
+    <linkType>url</linkType>
+    <masterLabel>Link Show Opportunities</masterLabel>
+    <openType>replace</openType>
+    <protected>false</protected>
+    <url>/apex/LinkShowOpportunities?id={!Account_Credit__c.Id}</url>
+</WebLink>

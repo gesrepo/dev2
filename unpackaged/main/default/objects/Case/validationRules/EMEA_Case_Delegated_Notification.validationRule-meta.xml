@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>EMEA_Case_Delegated_Notification</fullName>
+    <active>false</active>
+    <description>Cannot send acceptance notification to a delegated owner that doesn&#39;t exist.
+
+No longer used. Delegated owner approval notification replaced with chatter post.</description>
+    <errorConditionFormula>AND( ISPICKVAL( Delegated_Status__c ,&quot;Send Accentance Notification&quot;) ,ISNULL( Delegated_Owner__c ))</errorConditionFormula>
+    <errorMessage>You must first identify a delegated owner before sending an acceptance notification.</errorMessage>
+</ValidationRule>

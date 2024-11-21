@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>TSNN_Top_50_Canadian__c</fullName>
+    <defaultValue>false</defaultValue>
+    <inlineHelpText>If checked, opportunity is part of TSNN Canadian Top 50 Show list.</inlineHelpText>
+    <label>TSNN Top 50 Canadian</label>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

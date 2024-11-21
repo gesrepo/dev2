@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Number_of_Shows__c</fullName>
+    <inlineHelpText>How many shows does Account produce?</inlineHelpText>
+    <label>Number of Shows</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>One Show/Year</fullName>
+                <default>false</default>
+                <label>One Show/Year</label>
+            </value>
+            <value>
+                <fullName>Multiple Shows/Year</fullName>
+                <default>false</default>
+                <label>Multiple Shows/Year</label>
+            </value>
+            <value>
+                <fullName>One show every two years or more</fullName>
+                <default>false</default>
+                <label>One show every two years or more</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

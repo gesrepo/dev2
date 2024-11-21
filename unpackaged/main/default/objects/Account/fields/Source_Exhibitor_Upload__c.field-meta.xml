@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Source_Exhibitor_Upload__c</fullName>
+    <defaultValue>false</defaultValue>
+    <inlineHelpText>Hidden field. TRUE when the source of the Account is the Exhibitor Upload Routine.</inlineHelpText>
+    <label>Source Exhibitor Upload</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

@@ -1,0 +1,99 @@
+<apex:component controller="GC_Community_HeaderController">
+    <div class="slds-grid slds-wrap">
+        <div class="slds-col--padded slds-size--1-of-1 slds-medium-size--1-of-2 slds-large-size--1-of-2">
+            <apex:image url="{!URLFOR($Resource.GC_Assets, 'GC_Assets/img/ges_connect_cmyk--opt.png')}" width="400"  style="margin: 15px 0;" />
+        </div>
+        <div class="slds-col--padded slds-size--1-of-1 slds-medium-size--1-of-2 slds-large-size--1-of-2" style="text-align: right;">
+            <p style="margin-top: 50px;">
+                Hello, {!$User.FirstName} {!$User.LastName}! | <a href="{! $Page.GC_Community_ShowSearch }">Search Shows</a> | <a href="{!$Site.Prefix}/secur/logout.jsp">Logout</a>
+                <br/>
+                <apex:outputPanel rendered="{!show != null}">
+                    Show: <b>{!show.Show_Name__c}</b>
+                    <br/> Show Dates: <b>{!ShowDates}</b>
+                </apex:outputPanel>
+            </p>
+        </div>
+        <nav class="gc-navigation gc-grey-background slds-col-padded slds-size--1-of-1">
+            <ul class="slds-list--horizontal slds-grid slds-wrap slds-grid--align-space">   
+                <apex:outputPanel rendered="{!hasTradeshowAccess}">
+                    <li class="slds-list__item slds-col--padded">
+                        <apex:outputLink value="{! $Page.GC_Community_HomePage }" styleClass="gc-home gc-nav-item">
+                            Home
+                            <apex:param name="showId" value="{!show.Id}" assignTo="{!showId}" />
+                        </apex:outputLink>
+                    </li>
+                </apex:outputPanel>
+                <apex:outputPanel rendered="{!hasTradeshowAccess}">
+                    <li class="slds-list__item slds-col--padded">
+                        <a href="https://ges.proofhq.com/dashboard" target="_blank" class="gc-graphic-proofing gc-nav-item">Graphic Proofing</a>
+                    </li>
+                </apex:outputPanel>
+                <apex:outputPanel rendered="{!hasTradeshowAccess}">
+                    <li class="slds-list__item slds-col--padded">
+                        <a href="javascript:;" onclick="alert('Coming Soon..')" class="gc-view-designs gc-nav-item">View Designs</a>
+                    </li>
+                </apex:outputPanel>
+                <apex:outputPanel rendered="{!hasTradeshowAccess}">
+                    <li class="slds-list__item slds-col--padded">
+                        <apex:outputLink value="{! $Page.GC_Community_OrderView }" styleClass="gc-manage-orders gc-nav-item">
+                            Manage Orders
+                            <apex:param name="showId" value="{!show.Id}" assignTo="{!showId}" />
+                            <apex:param name="orderId" value="{!order.Id}" assignTo="{!orderId}" />
+                        </apex:outputLink>
+                    </li>
+                </apex:outputPanel>
+                <apex:outputPanel rendered="{!hasTradeshowAccess}">
+                    <li class="slds-list__item slds-col--padded">
+                        <a href="javascript:;" onclick="alert('Coming Soon..')" class="gc-analytics gc-nav-item">
+                            Analytics
+                        </a>
+                    </li>
+                </apex:outputPanel>
+                <apex:outputPanel rendered="{!hasTradeshowAccess}">
+                    <li class="slds-list__item slds-col--padded">
+                        <a href="https://file.ges.com/" target="_blank" class="gc-graphic-upload gc-nav-item">Graphic File Upload</a>
+                    </li>
+                </apex:outputPanel>
+                <apex:outputPanel rendered="{!hasTradeshowAccess}">
+                    <li class="slds-list__item slds-col--padded">
+                        <a href="javascript:;" onclick="alert('Coming Soon..')" class="gc-file-collab gc-nav-item">File Collaboration</a>
+                    </li> 
+                </apex:outputPanel>
+                
+                <apex:outputPanel rendered="{!hasCongressAccess}">
+                    <li class="slds-list__item slds-col--padded">
+                        <apex:outputLink value="{! $Page.GC_Community_ShowCongress}" styleClass="gc-manage-orders gc-nav-item">
+                            Show Info          
+                        </apex:outputLink>
+                    </li>
+                </apex:outputPanel> 
+                <apex:outputPanel rendered="{!hasCongressAccess}">
+                    <li class="slds-list__item slds-col--padded">
+                        <apex:outputLink value="{! $Page.Congress_Tableau_Dashboard}" styleclass="gc-analytics gc-nav-item">
+                            Analytics
+                        </apex:outputLink>
+                    </li>
+                </apex:outputPanel>
+                <apex:outputPanel rendered="{!hasCongressAccess}">
+                    <li class="slds-list__item slds-col--padded">
+                        <apex:outputLink value="{! $Page.GC_CongressCalender}" styleclass="gc-manage-orders gc-nav-item">
+                           Show Calendar
+                        </apex:outputLink>
+                    </li>
+                </apex:outputPanel> 
+                <!--  <li class="slds-list__item slds-col--padded">
+                        <apex:outputLink value="{! $Page.ExhibitSchedule}" styleclass="gc-analytics gc-nav-item">
+                            Reports 
+                        </apex:outputLink>
+                      </li>-->
+                <apex:outputPanel rendered="{!hasTaskRayAccess}">
+                    <li class="slds-list__item slds-col--padded">
+                        <apex:outputLink value="/apex/TASKRAY__trTaskBoard?isdtp=p1" target="_blank" styleClass="gc-manage-orders gc-nav-item">
+                            Project Management
+                        </apex:outputLink>
+                    </li>
+                </apex:outputPanel>
+            </ul>
+        </nav>
+    </div>
+</apex:component>

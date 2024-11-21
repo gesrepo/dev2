@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Housing_Logistics_Vendor__c</fullName>
+    <label>Housing Logistics Vendor</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Congress</fullName>
+                <default>false</default>
+                <label>Congress Central</label>
+            </value>
+            <value>
+                <fullName>GES</fullName>
+                <default>false</default>
+                <label>GES</label>
+            </value>
+            <value>
+                <fullName>Staff Responsibility</fullName>
+                <default>false</default>
+                <label>Staff Responsibility</label>
+            </value>
+            <value>
+                <fullName>Third Party</fullName>
+                <default>false</default>
+                <label>Third Party</label>
+            </value>
+            <value>
+                <fullName>Attendee Responsible</fullName>
+                <default>false</default>
+                <label>Attendee Responsible</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

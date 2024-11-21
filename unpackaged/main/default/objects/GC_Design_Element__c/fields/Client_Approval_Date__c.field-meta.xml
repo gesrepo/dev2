@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Client_Approval_Date__c</fullName>
+    <description>Date on which the task was approved by client</description>
+    <inlineHelpText>Date on which the task was approved by client</inlineHelpText>
+    <label>Client Approval Date</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Date</type>
+</CustomField>

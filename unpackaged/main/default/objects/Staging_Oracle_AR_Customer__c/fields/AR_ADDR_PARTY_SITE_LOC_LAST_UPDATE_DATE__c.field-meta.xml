@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>AR_ADDR_PARTY_SITE_LOC_LAST_UPDATE_DATE__c</fullName>
+    <description>Stores values from Oracle AR Site XGES_AR_ADDRESSES_V.LOC_LAST_UPDATE_DATE column. This column is derived from HZ_LOCATIONS.LAST_UPDATE_DATE column.</description>
+    <label>Site Location Last Modified</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>DateTime</type>
+</CustomField>

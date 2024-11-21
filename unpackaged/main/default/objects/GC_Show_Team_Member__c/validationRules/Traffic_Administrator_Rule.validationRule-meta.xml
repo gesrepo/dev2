@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Traffic_Administrator_Rule</fullName>
+    <active>true</active>
+    <description>Rules for Traffic Administrators</description>
+    <errorConditionFormula>AND(
+   ISPICKVAL(Show_Role__c, &#39;Traffic Administrator&#39;),
+   (NOT(INCLUDES(User__r.GC_Show_Role__c, &#39;GC Traffic Administrator&#39;)))
+)</errorConditionFormula>
+    <errorMessage>Only Users with Traffic Administrator Profiles can have the Traffic Administrator Role.</errorMessage>
+</ValidationRule>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Lock_Record_for_Manual_Intervention</fullName>
+    <active>true</active>
+    <description>Lock Record for Manual Intervention to prevent Interface User from overriding the address</description>
+    <errorConditionFormula>AND(
+IsManualIntervention__c =True,
+
+OR(
+ISCHANGED(Address1__c),
+ISCHANGED(Address_2__c),
+ISCHANGED(Address_3__c),
+ISCHANGED(City__c),
+ISCHANGED(State__c),
+ISCHANGED(Postal_Code__c),
+ISCHANGED(Country__c)),
+
+OR(
+$Profile.Name = &quot;GES Interface&quot;))</errorConditionFormula>
+    <errorMessage>You cannot edit the Address marked for manual Intervention</errorMessage>
+</ValidationRule>

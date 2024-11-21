@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Carpet_Plan_Submitted_for_6_Week__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Tracking for National Carpet Planning for Plan Submission</description>
+    <inlineHelpText>Tracking for National Carpet Planning for Plan Submission</inlineHelpText>
+    <label>Carpet Plan Submitted for 6 Week</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

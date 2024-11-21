@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Marketing__c</fullName>
+    <description>Marketing Field for Blitz Account Integration</description>
+    <label>Marketing</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>EVENTCO</fullName>
+                <default>false</default>
+                <label>EVENTCO</label>
+            </value>
+            <value>
+                <fullName>GOV</fullName>
+                <default>false</default>
+                <label>GOV</label>
+            </value>
+            <value>
+                <fullName>THEATRE</fullName>
+                <default>false</default>
+                <label>THEATRE</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

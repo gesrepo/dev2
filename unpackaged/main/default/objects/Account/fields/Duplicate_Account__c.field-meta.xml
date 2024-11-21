@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Duplicate_Account__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>This field is to be used to indicate an account as a duplicate account for the purposes of creating a map such that when we are able to merge customers in CORE, we will be able to quickly identify the winning and losing account.</description>
+    <label>Duplicate Account?</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

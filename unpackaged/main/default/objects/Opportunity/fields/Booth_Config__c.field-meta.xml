@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Booth_Config__c</fullName>
+    <label>Booth Config</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>GEM</fullName>
+                <default>false</default>
+                <label>GEM</label>
+            </value>
+            <value>
+                <fullName>Hardwall</fullName>
+                <default>false</default>
+                <label>Hardwall</label>
+            </value>
+            <value>
+                <fullName>iCE</fullName>
+                <default>false</default>
+                <label>iCE</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>6</visibleLines>
+</CustomField>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Contract_Type__c</fullName>
+    <inlineHelpText>Type of exhibition contract (direct vs. sub); if subcontract, either Subcontract from GES or to GES</inlineHelpText>
+    <label>Contract Type</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Direct</fullName>
+                <default>false</default>
+                <label>Direct</label>
+            </value>
+            <value>
+                <fullName>Subcontract from GES</fullName>
+                <default>false</default>
+                <label>Subcontract from GES</label>
+            </value>
+            <value>
+                <fullName>Subcontract to GES</fullName>
+                <default>false</default>
+                <label>Subcontract to GES</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

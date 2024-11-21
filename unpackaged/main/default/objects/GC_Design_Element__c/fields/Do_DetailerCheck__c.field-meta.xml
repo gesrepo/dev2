@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Do_DetailerCheck__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Used in the Approval Process to check if it needs to do a detailer check prior to running the process</description>
+    <inlineHelpText>Used in the Approval Process to check if it needs to do a detailer check prior to running the process</inlineHelpText>
+    <label>Do_DetailerCheck</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

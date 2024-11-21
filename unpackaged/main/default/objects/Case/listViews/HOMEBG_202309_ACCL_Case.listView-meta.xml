@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>HOMEBG_202309_ACCL_Case</fullName>
+    <filterScope>Queue</filterScope>
+    <label>HOMEBG-202309-ACCL</label>
+    <queue>HOMEBG_202309_ACCL</queue>
+    <sharedTo>
+        <allInternalUsers />
+    </sharedTo>
+</ListView>

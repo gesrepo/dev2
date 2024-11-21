@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Show_Name__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <label>Connect2 Show</label>
+    <referenceTo>GC_Connect2_Show__c</referenceTo>
+    <relationshipName>GES_Connet_Corporate_Accounts</relationshipName>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

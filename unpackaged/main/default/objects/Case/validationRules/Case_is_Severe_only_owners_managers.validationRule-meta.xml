@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Case_is_Severe_only_owners_managers</fullName>
+    <active>false</active>
+    <description>EMEA rule. If a case is Severe, only the owner, the delegated owner, or supervisor and manager profiles can modify the record.</description>
+    <errorConditionFormula>AND(
+Severe__c = TRUE,
+(OR(
+OwnerId &lt;&gt; $User.Id,
+Delegated_Owner__r.Id  &lt;&gt; $User.Id,
+$Profile.Name &lt;&gt; &#39;System Administrator&#39;,
+$Profile.Name &lt;&gt; &#39;GES EMEA Service Manager&#39;
+)))</errorConditionFormula>
+    <errorMessage>This is a record marked as &quot;Severe&quot;. You must be an associated owner or have the GES EMEA Service Manager profile.</errorMessage>
+</ValidationRule>

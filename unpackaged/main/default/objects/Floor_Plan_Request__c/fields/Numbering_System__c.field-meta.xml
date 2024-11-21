@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Numbering_System__c</fullName>
+    <label>Numbering System</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Odd/Even (2,4,6 etc.)</fullName>
+                <default>false</default>
+                <label>Odd/Even (2,4,6 etc.)</label>
+            </value>
+            <value>
+                <fullName>Consecutive (1,2,3 etc.)</fullName>
+                <default>false</default>
+                <label>Consecutive (1,2,3 etc.)</label>
+            </value>
+            <value>
+                <fullName>Serpentine</fullName>
+                <default>false</default>
+                <label>Serpentine</label>
+            </value>
+            <value>
+                <fullName>None</fullName>
+                <default>false</default>
+                <label>None</label>
+            </value>
+            <value>
+                <fullName>Other (describe)</fullName>
+                <default>false</default>
+                <label>Other (describe)</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

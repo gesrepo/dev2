@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Booth_Upload_Notes__c</fullName>
+    <description>Enter notes to describe unusable exhibitors data</description>
+    <inlineHelpText>For Jo Brooks : To enter why is file unusable : Format to be use: Date File received, from whom, reason why not uploaded</inlineHelpText>
+    <label>Booth Upload Notes</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>TextArea</type>
+</CustomField>

@@ -1,0 +1,29 @@
+<apex:page standardStylesheets="true" showHeader="false" sidebar="false" applyHtmlTag="false" tabStyle="Account" controller="ReportContrl">
+ <html xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <head>
+            <apex:includeScript value="{!$Resource.jQuery}" />
+            <apex:stylesheet value="{!URLFOR($Resource.Lightning_Design_System, 'assets/styles/salesforce-lightning-design-system.min.css')}" />
+            <apex:stylesheet value="{!URLFOR($Resource.GC_Assets, 'GC_Assets/css/GC_Styles.css')}" />
+            <apex:includeScript value="{!URLFOR($Resource.GC_Assets, 'GC_Assets/js/GC_init.js')}" />
+        </head>
+         <div class="slds">
+                <c:GC_Community_Header />              
+        <apex:form >
+        <apex:sectionHeader title="Reports" subtitle="Congress Reports"/>
+            <apex:pageBlock >
+                 <apex:commandButton value="Back" action="{!Back}" styleClass="slds-button slds-button--small slds-button--brand gc-teal-button" style="left:250px;position:relative;"/>
+            <apex:pageBlockSection columns="1">
+                <apex:outputText ><apex:outputLink value="{!$Page.ExhibitScheduleReport}">Congress Schedule Report</apex:outputLink> </apex:outputText>
+                <apex:outputText ><apex:outputLink value="{!$Page.ExhibitScheduleBasicReport}">Exhibit Schedule Basic</apex:outputLink> </apex:outputText>
+                <!--<apex:outputText ><apex:outputLink value="{!$Page.Contactreport}">Contacts</apex:outputLink> </apex:outputText>-->
+                <!--<apex:outputText ><apex:outputLink value="{!''}">GES Invoice Tracker</apex:outputLink> </apex:outputText>-->
+                <apex:outputText ><apex:outputLink value="{!$Page.GC_Community_ShowCongressReport}">Congress Financial Summary</apex:outputLink> </apex:outputText>
+                <apex:outputText ><apex:outputLink value="{!$Page.CongressSummaryReportHome}">Congress Summary</apex:outputLink> </apex:outputText>
+                 <apex:outputText ><apex:outputLink value="{!$Page.GC_Community_CSI_Report}">CSI Report</apex:outputLink> </apex:outputText>
+                         <apex:outputText ><apex:outputLink value="{!$Page.GC_EpaReport}">Epa3 Report</apex:outputLink> </apex:outputText>
+
+                </apex:pageBlockSection>          
+            </apex:pageBlock>
+        </apex:form>    </div>
+ </html>
+</apex:page>

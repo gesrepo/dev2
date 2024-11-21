@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Basic_Service_Desk__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Determines if this is a basic service desk setup</description>
+    <inlineHelpText>Is this a Basic Service Desk show?</inlineHelpText>
+    <label>Basic Service Desk</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

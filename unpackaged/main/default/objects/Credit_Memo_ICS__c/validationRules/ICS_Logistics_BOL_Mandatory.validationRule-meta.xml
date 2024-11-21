@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ICS_Logistics_BOL_Mandatory</fullName>
+    <active>true</active>
+    <description>If LOB is Logistics and Logistics BOL# mandatory</description>
+    <errorConditionFormula>IF(
+    AND(
+        TEXT(Credit_LOB__c) = &quot;LOGISTICS&quot;, 
+        ISBLANK( Logistics_BOL__c)), True, False
+ )</errorConditionFormula>
+    <errorMessage>Please Enter Logistics BOL#</errorMessage>
+</ValidationRule>

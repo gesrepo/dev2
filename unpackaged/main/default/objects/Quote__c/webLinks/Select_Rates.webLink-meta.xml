@@ -1,0 +1,558 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Select_Rates</fullName>
+    <availability>online</availability>
+    <displayType>button</displayType>
+    <linkType>javascript</linkType>
+    <masterLabel>Select Rates</masterLabel>
+    <openType>onClickJavaScript</openType>
+    <protected>false</protected>
+    <url>{!REQUIRESCRIPT(&quot;/soap/ajax/56.0/connection.js&quot;)}
+{!REQUIRESCRIPT(&quot;/soap/ajax/56.0/apex.js&quot;)}
+{!REQUIRESCRIPT(&quot;https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js&quot;)}
+{!REQUIRESCRIPT(&quot;https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/jquery-ui.min.js&quot;)}
+
+$j = jQuery.noConflict();
+
+try {
+	var Result = sforce.connection.query(&quot;Select Class_of_Service__c, Crated_Weight__c, Custom_Quote__c, Delivery_Date__c, Destination_State__c, Dim_Weight__c, Flat_Rate_Unit_Price_Type__c, Id, Message__c, OB_Class_of_Service__c, OB_Custom_Quote__c, OB_Delivery_Date__c, OB_Destination_State__c, OB_Flat_Rate_Unit_Price_Type__c, OB_Origination_State__c, OB_Pickup_Date__c, OB_Pickup_Window_Start__c, OB_Selection__c, OB_Service_Type__c, OB_Shipment_Type__c, Order_Date__c, Origination_State__c, Pickup_Date__c, Pickup_Window_Start__c, Quote_Subject__c, Selection__c, Service_Type__c, Shipment_Type__c, Weight_Override__c From Quote__c Where Id = &#39;{!Quote__c.Id}&#39;&quot;);
+	var Records = Result.getArray(&quot;records&quot;);
+	
+	var Subject = Records[0].Quote_Subject__c;
+	var AlertMessage = Records[0].Message__c;
+
+	var OriginState = Records[0].Origination_State__c; //&#39;{!Quote__c.Origination_State__c}&#39;;
+	var DestinationState = Records[0].Destination_State__c; //&#39;{!Quote__c.Destination_State__c}&#39;;
+	var PickupDate = Records[0].Pickup_Date__c; //&#39;{!Quote__c.Pickup_Date__c}&#39;;
+	var DeliveryDate = Records[0].Delivery_Date__c; // &#39;{!Quote__c.Delivery_Date__c}&#39;;
+	var OrderDate = Records[0].Order_Date__c; //&#39;{!Quote__c.Order_Date__c}&#39;;
+	var PickupWindowStart = Records[0].Pickup_Window_Start__c; //&#39;{!Quote__c.Pickup_Window_Start__c}&#39;;
+	var ShipmentType = Records[0].Shipment_Type__c;
+	var ClassOfService = Records[0].Class_of_Service__c;
+	var ServiceType = Records[0].Service_Type__c;
+	var Selection = Records[0].Selection__c;
+	var CustomQuote = (Records[0].Custom_Quote__c == &quot;true&quot; ? true : false);
+	var FlatOrUnitRateType = Records[0].Flat_Rate_Unit_Price_Type__c;
+	
+	/*
+	window.alert(&#39;Origin State: &#39; + OriginState);
+	window.alert(&#39;Destination State: &#39; + DestinationState);
+	window.alert(&#39;Pickup Date: &#39; + PickupDate);
+	window.alert(&#39;Delivery Date: &#39; + DeliveryDate);
+	*/
+	
+	var OBOriginState = Records[0].OB_Origination_State__c; //&#39;{!Quote__c.OB_Origination_State__c}&#39;;
+	var OBDestinationState = Records[0].OB_Destination_State__c; //&#39;{!Quote__c.OB_Destination_State__c}&#39;;
+	var OBPickupDate = Records[0].OB_Pickup_Date__c; //&#39;{!Quote__c.OB_Pickup_Date__c}&#39;;
+	var OBDeliveryDate = Records[0].OB_Delivery_Date__c; //&#39;{!Quote__c.OB_Delivery_Date__c}&#39;;
+	var OBOrderDate = Records[0].Order_Date__c; //&#39;{!Quote__c.Order_Date__c}&#39;;
+	var OBPickupWindowStart = Records[0].OB_Pickup_Window_Start__c; //&#39;{!Quote__c.OB_Pickup_Window_Start__c}&#39;;
+	var OBShipmentType = Records[0].OB_Shipment_Type__c;
+	var OBClassOfService = Records[0].OB_Class_of_Service__c;
+	var OBServiceType = Records[0].OB_Service_Type__c;
+	var OBSelection = Records[0].OB_Selection__c;
+	var OBCustomQuote = (Records[0].OB_Custom_Quote__c == &quot;true&quot; ? true : false);
+	var OBFlatOrUnitRateType = Records[0].OB_Flat_Rate_Unit_Price_Type__c;	
+	
+	//window.alert(&#39;Record Type: &#39; + &#39;{!Quote__c.RecordType}&#39;);
+	
+	var CratedWeight = Records[0].Crated_Weight__c;
+	var DimWeight = Records[0].Dim_Weight__c;
+	var WeightOverride = Records[0].Weight_Override__c;
+	var EffectiveWeight = 0;       
+
+	if (CratedWeight != null &amp;&amp; CratedWeight &gt; 0)
+	     EffectiveWeight = CratedWeight;
+
+	if (DimWeight != null &amp;&amp; DimWeight &gt; 0 &amp;&amp; CratedWeight != null &amp;&amp; CratedWeight &gt; 0 &amp;&amp; DimWeight &gt; CratedWeight)
+	     EffectiveWeight = DimWeight;
+
+	if (WeightOverride != null &amp;&amp; WeightOverride &gt; 0)
+	     EffectiveWeight = WeightOverride;
+		
+	var InRateFieldValuesValid = OriginState != null  &amp;&amp; OriginState != &#39;&#39; &amp;&amp; DestinationState != null &amp;&amp; DestinationState != &#39;&#39; &amp;&amp; PickupDate != null &amp;&amp; PickupDate != &#39;&#39; &amp;&amp; DeliveryDate != null &amp;&amp; DeliveryDate != &#39;&#39; &amp;&amp; OrderDate != null &amp;&amp; OrderDate != &#39;&#39; &amp;&amp; EffectiveWeight &gt; 0;
+	var OutRateFieldValuesValid = OBOriginState != null  &amp;&amp; OBOriginState != &#39;&#39; &amp;&amp; OBDestinationState != null &amp;&amp; OBDestinationState != &#39;&#39; &amp;&amp; OBPickupDate != null &amp;&amp; OBPickupDate != &#39;&#39; &amp;&amp; OBDeliveryDate != null &amp;&amp; OBDeliveryDate != &#39;&#39; &amp;&amp; OBOrderDate != null &amp;&amp; OBOrderDate != &#39;&#39; &amp;&amp; EffectiveWeight &gt; 0;
+	
+	var Direction = Subject.toUpperCase();
+	var RateDirection = Direction;
+	var RatesEligible = true;
+	var OnlyOverrideOrCratedDimWeight = true;
+	var TruckloadFlag = false;
+	var CustomQuoteFlag = false;
+	
+	if (Subject.toUpperCase() == &#39;TRUCKLOAD&#39;)
+		TruckloadFlag = true;
+		
+	if ((Direction == &#39;ROUNDTRIP&#39; &amp;&amp; CustomQuote) || (Direction == &#39;ROUNDTRIP&#39; &amp;&amp; OBCustomQuote))
+	{
+		if (CustomQuote &amp;&amp; OBCustomQuote)
+			CustomQuoteFlag = true;
+		else if (CustomQuote)
+			RateDirection = &#39;OUTBOUND&#39;;
+		else if (OBCustomQuote)
+			RateDirection = &#39;INBOUND&#39;;
+	}
+	else if (Direction == &#39;INBOUND&#39; &amp;&amp; CustomQuote)
+	{
+		CustomQuoteFlag = true;
+	}
+	else if (Direction == &#39;OUTBOUND&#39; &amp;&amp; OBCustomQuote)
+	{
+		CustomQuoteFlag = true;
+	}
+	
+	if (!(TruckloadFlag || CustomQuoteFlag))
+	{
+		if (RateDirection == &#39;ROUNDTRIP&#39; &amp;&amp; (!InRateFieldValuesValid || !OutRateFieldValuesValid))
+		{
+			RatesEligible = false;
+		}
+		else if (RateDirection == &#39;INBOUND&#39; &amp;&amp; !InRateFieldValuesValid)
+		{
+			RatesEligible = false;
+		}
+		else if(RateDirection == &#39;OUTBOUND&#39; &amp;&amp; !OutRateFieldValuesValid)
+		{
+			RatesEligible = false;
+		}
+		
+		if (((CratedWeight != null &amp;&amp; CratedWeight &gt; 0) || (DimWeight !=  null &amp;&amp; DimWeight &gt; 0)) &amp;&amp; (WeightOverride != null &amp;&amp; WeightOverride &gt; 0))
+			OnlyOverrideOrCratedDimWeight = false;
+		
+		if (RatesEligible &amp;&amp; OnlyOverrideOrCratedDimWeight &amp;&amp; EffectiveWeight &lt; 5000)
+		{
+			if($j(&quot;#jquerycss&quot;).length == 0)
+			{
+				$j(&quot;body&quot;).append( &quot;&lt;link id=&#39;jquerycss&#39; rel=&#39;stylesheet&#39; type=&#39;text/css&#39; href=&#39;https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/themes/ui-lightness/jquery-ui.css&#39; /&gt;&quot;);
+				
+				$j(&quot;body&quot;).append(&quot;&lt;style&gt;.priceMatrixTable {border: solid 1px; border-collapse:collapse; border-spacing: 0px; table-layout: fixed; width: 600px; margin-top: 20px;}&lt;/style&gt;&quot;);
+				
+				$j(&quot;body&quot;).append(&quot;&lt;style&gt;.priceMatrixTableHeader {width: 90px; border: solid 1px; padding: 5px; font-size: 1em; text-align: center; background-color: lightblue; }&lt;/style&gt;&quot;);
+				
+				$j(&quot;body&quot;).append(&quot;&lt;style&gt;.priceMatrixTableHeaderTypeColumn { width: 90px; border: solid 1px; padding: 5px; font-size: 1em; text-align: left; background-color: white; text-color: black;}&lt;/style&gt;&quot;);
+				
+				$j(&quot;body&quot;).append(&quot;&lt;style&gt;.priceMatrixTypeColumn {width: 90px; border: solid 1px; padding: 2px; font-size: 1em; text-align: left; font-weight: bold; border-color: default; color: blue;} &lt;/style&gt;&quot;);
+					
+				$j(&quot;body&quot;).append(&quot;&lt;style&gt;.priceMatrixValue {width: 90px; border: solid 1px; padding: 2px; font-size: 1em; font-weight: bold; text-align: center;}&lt;/style&gt;&quot;);
+				
+				$j(&quot;body&quot;).append(&quot;&lt;style&gt;.priceMatrixValueNA {width: 90px; border: solid 1px; padding: 2px; font-size: 1em; text-align: center; background-color: lightgrey;}&lt;/style&gt;&quot;);
+				
+				$j(&quot;body&quot;).append(&quot;&lt;style&gt;.priceMatrixValueSpecial {width: 90px; border: solid 1px; padding: 2px; font-size: 1em; font-weight: normal; text-align: center;}&lt;/style&gt;&quot;);			
+				
+				$j(&quot;body&quot;).append(&quot;&lt;style&gt;.priceMatrixValueInvalidEntry {width: 90px; border: solid 1px; padding: 2px; font-size: 1em; font-weight: bold; text-align: center; color: red;}&lt;/style&gt;&quot;);						
+				
+				$j(&quot;body&quot;).append(&quot;&lt;style&gt;td.priceMatrixValue:hover {color: red; background-color: lightyellow; cursor:pointer;}&lt;/style&gt;&quot;);
+				
+				$j(&quot;body&quot;).append(&quot;&lt;style&gt;td.priceMatrixValueSelected{width: 90px; border: solid 1px; padding: 2px; font-size: 1em; font-weight: bold; text-align: center; border-color: none; color: white; background-color: red; }&lt;/style&gt;&quot;);
+				
+				$j(&quot;body&quot;).append(&quot;&lt;style&gt;td.priceMatrixValuePriorSelection{width: 90px; border: solid 1px; padding: 2px; font-size: 1em; font-weight: bold; text-align: center; border-color: none; color: white; background-color: blue; }&lt;/style&gt;&quot;);
+				
+				$j(&quot;body&quot;).append(&quot;&lt;style&gt;td.priceMatrixValuePriorSelection:hover {color: red; background-color: lightyellow; cursor:pointer;}&lt;/style&gt;&quot;);
+				
+				$j(&quot;body&quot;).append(&quot;&lt;style type=&#39;text/css&#39;&gt; .dialogBody { background: #f0f0f0; margin: 0; padding: 0; font: 10px normal Verdana, Arial, Helvetica, sans-serif; color: #444; } .dialogH1 {font-size: 3em; margin: 20px 0;} .container { width: 620px; margin: 10px auto; overflow: none;} ul.tabs { margin: 0; padding: 0; list-style: none; height: 32px; border-bottom: 1px solid #999; border-left: 1px solid #999; width: 100%;} ul.tabs li {margin: 0; padding: 0; height: 31px; line-height: 20px; border: 1px solid #999; border-left: none; margin-bottom: -1px; background: #e0e0e0; overflow: hidden; } ul.tabs li a { text-decoration: none; color: #000; display: block; font-size: 1.2em; padding: 0 20px; border: 1px solid #fff; outline: none; } ul.tabs li a:hover { background: #ccc; } html ul.tabs li.active, html ul.tabs li.active a:hover  { background: gold; color: black; border-bottom: 1px solid #fff; } .tabLink { padding: 20px;}  .tab_container { border: 1px solid #999; border-top: none; clear: both; background: #fff; -moz-border-radius-bottomright: 5px; -khtml-border-radius-bottomright: 5px; -webkit-border-bottom-right-radius: 5px; -moz-border-radius-bottomleft: 5px; -khtml-border-radius-bottomleft: 5px; -webkit-border-bottom-left-radius: 5px;} .tab_content { float: left; padding: 20px; font-size: 1.2em; } .tab_content h2 { font-weight: normal; padding-bottom: 10px; border-bottom: 1px dashed #ddd; font-size: 1.8em; } .tab_content h3 a{ color: #254588; } .tab_content img { float: left; margin: 0 20px 20px 0; border: 1px solid #ddd; padding: 5px; } &lt;/style&gt;&quot;);
+				
+				$j(&quot;body&quot;).prepend(&quot;&lt;script&gt;var inboundIdentifier; var outboundIdentifier; var inboundSelectedCell; var outboundSelectedCell; var inboundRates; var outboundRates; 	var InRatesChanged = false; var OutRatesChanged = false; var inUnitPrice; var outUnitPrice;&lt;/script&gt;&quot;);
+				
+				$j(&quot;body&quot;).prepend(&quot;&lt;script&gt;function setInboundIdentifier(index) { inboundIdentifier = index; } &lt;/script&gt;&quot;);
+				
+				$j(&quot;body&quot;).prepend(&quot;&lt;script&gt;function setOutboundIdentifier(index) { outboundIdentifier = index;}&lt;/script&gt;&quot;);
+				
+				$j(&quot;body&quot;).prepend(&quot;&lt;script&gt;function changeInboundCellColor(cell, id, rates) { cell.className = &#39;priceMatrixValueSelected&#39;; if (inboundIdentifier != null &amp;&amp; inboundIdentifier.indexOf(&#39;C&#39;) != 0) { inboundSelectedCell = document.getElementById(inboundIdentifier); inboundSelectedCell.className = &#39;priceMatrixValue&#39;; } inboundSelectedCell = cell; inboundIdentifier = id; inboundRates = rates; InRatesChanged = true;}&lt;/script&gt;&quot;);			
+				
+				$j(&quot;body&quot;).prepend(&quot;&lt;script&gt;function changeOutboundCellColor(cell, id, rates) { cell.className = &#39;priceMatrixValueSelected&#39;; if (outboundIdentifier != null &amp;&amp; outboundIdentifier.indexOf(&#39;C&#39;) != 0) { outboundSelectedCell = document.getElementById(outboundIdentifier); outboundSelectedCell.className = &#39;priceMatrixValue&#39;; } outboundSelectedCell = cell; outboundIdentifier = id; outboundRates = rates; OutRatesChanged = true;}&lt;/script&gt;&quot;);			
+				
+				$j(&quot;body&quot;).prepend(&quot;&lt;script&gt;function updateInboundQuote(selection, rates, unitPrice) { var returnVal = sforce.apex.execute(&#39;LogisticsQuoteRates&#39;,&#39;UpdateQuote&#39;,{QuoteId:&#39;{!Quote__c.Id}&#39;, selection:inboundIdentifier, rates:inboundRates, unitPrice:unitPrice}); var message = &#39;&#39;; return returnVal; }&lt;/script&gt;&quot;);			
+				
+				$j(&quot;body&quot;).prepend(&quot;&lt;script&gt;function updateOutboundQuote(selection, rates, unitPrice) { var returnVal = sforce.apex.execute(&#39;LogisticsQuoteRates&#39;,&#39;UpdateQuote&#39;,{QuoteId:&#39;{!Quote__c.Id}&#39;, selection:outboundIdentifier, rates:outboundRates, unitPrice:unitPrice}); var message = &#39;&#39;; return returnVal; }&lt;/script&gt;&quot;);						
+				
+				//$j(&quot;body&quot;).append(&quot;&lt;script&gt;function currency(N){N=parseFloat(N);if(!isNaN(N))N=N.toFixed(2);else N=&#39;0.00&#39;;return N;}&quot;&lt;/script&gt;);
+				
+				$j(&quot;body&quot;).prepend(&quot;&lt;script type=&#39;text/javascript&#39;&gt;function inShipTypeSelChanged(element)  {var SelectedIndex = element.selectedIndex; var ShipType = element.options[SelectedIndex].text; var ShipValue = element.options[SelectedIndex].value; var LiRates = &#39;&#39;; var HiRates = &#39;&#39;; var ClassOfServiceElement = document.getElementById(&#39;inClassOfServiceSel&#39;);  var LowValueTb = document.getElementById(&#39;inLowValue&#39;); var HighValueTb = document.getElementById(&#39;inHighValue&#39;); if (inboundIdentifier != null &amp;&amp; inboundIdentifier.indexOf(&#39;C&#39;) != 0) { inboundSelectedCell = document.getElementById(inboundIdentifier); inboundSelectedCell.className = &#39;priceMatrixValue&#39;; } if (ShipType.toUpperCase() == &#39;GROUND TRANSPORTATION&#39; || ShipType.toUpperCase() == &#39;LOCAL&#39;) { ClassOfServiceElement.disabled=true; LiRates = ShipValue.split(&#39;|&#39;)[0]; HiRates = ShipValue.split(&#39;|&#39;)[1]; LowValueTb.value = LiRates.split(&#39;,&#39;)[0]; HighValueTb.value = HiRates.split(&#39;,&#39;)[0]; inboundRates = LiRates; if (ShipType.toUpperCase() == &#39;GROUND TRANSPORTATION&#39;) inboundIdentifier = &#39;CiGroundLtl&#39;; else inboundIdentifier = &#39;CiLocal&#39;; } else { ClassOfServiceElement.disabled=false; var ClassOfServiceType = ClassOfServiceElement.options[ClassOfServiceElement.selectedIndex].text;  var ClassOfServiceValue = ClassOfServiceElement.options[ClassOfServiceElement.selectedIndex].value; LiRates = ClassOfServiceValue.split(&#39;|&#39;)[0]; HiRates = ClassOfServiceValue.split(&#39;|&#39;)[1]; LowValueTb.value = LiRates.split(&#39;,&#39;)[0]; HighValueTb.value = HiRates.split(&#39;,&#39;)[0]; inboundRates = LiRates; if (ClassOfServiceType.toUpperCase() == &#39;NEXT DAY&#39;) inboundIdentifier = &#39;CiAirNextDay&#39;; else inboundIdentifier = &#39;CiAir2ndDay&#39;;} inUnitPrice = null; var InUnitPriceTb = document.getElementById(&#39;inUnitPrice&#39;); InUnitPriceTb.value = null; InRatesChanged = false;}&lt;/script&gt;&quot;);
+				
+				$j(&quot;body&quot;).prepend(&quot;&lt;script type=&#39;text/javascript&#39;&gt;function outShipTypeSelChanged(element) {var SelectedIndex = element.selectedIndex; var ShipType = element.options[SelectedIndex].text; var ShipValue = element.options[SelectedIndex].value; var LiRates = &#39;&#39;; var HiRates = &#39;&#39;; var ClassOfServiceElement = document.getElementById(&#39;outClassOfServiceSel&#39;); var LowValueTb = document.getElementById(&#39;outLowValue&#39;); var HighValueTb = document.getElementById(&#39;outHighValue&#39;); if (outboundIdentifier != null &amp;&amp; outboundIdentifier.indexOf(&#39;C&#39;) != 0) { outboundSelectedCell = document.getElementById(outboundIdentifier); outboundSelectedCell.className = &#39;priceMatrixValue&#39;; } if (ShipType.toUpperCase() == &#39;GROUND TRANSPORTATION&#39; || ShipType.toUpperCase() == &#39;LOCAL&#39;) { ClassOfServiceElement.disabled=true; LiRates = ShipValue.split(&#39;|&#39;)[0]; HiRates = ShipValue.split(&#39;|&#39;)[1]; LowValueTb.value = LiRates.split(&#39;,&#39;)[0]; HighValueTb.value = HiRates.split(&#39;,&#39;)[0]; outboundRates = LiRates; if (ShipType.toUpperCase() == &#39;GROUND TRANSPORTATION&#39;) outboundIdentifier = &#39;CoGroundLtl&#39;; else outboundIdentifier = &#39;CoLocal&#39;; } else { ClassOfServiceElement.disabled=false; var ClassOfServiceType = ClassOfServiceElement.options[ClassOfServiceElement.selectedIndex].text; var ClassOfServiceValue = ClassOfServiceElement.options[ClassOfServiceElement.selectedIndex].value; LiRates = ClassOfServiceValue.split(&#39;|&#39;)[0]; HiRates = ClassOfServiceValue.split(&#39;|&#39;)[1]; LowValueTb.value = LiRates.split(&#39;,&#39;)[0]; HighValueTb.value = HiRates.split(&#39;,&#39;)[0]; outboundRates = LiRates; if (ClassOfServiceType.toUpperCase() == &#39;NEXT DAY&#39;) outboundIdentifier = &#39;CoAirNextDay&#39;; else outboundIdentifier = &#39;CoAir2ndDay&#39;;} OutUnitPrice = null; var OutUnitPriceTb = document.getElementById(&#39;outUnitPrice&#39;); OutUnitPriceTb.value = null; OutRatesChanged = false;} &lt;/script&gt;&quot;);
+				
+				$j(&quot;body&quot;).prepend(&quot;&lt;script type=&#39;text/javascript&#39;&gt;function inClassOfServiceSelChanged(element) { var SelectedIndex = element.selectedIndex; var ClassOfServiceType = element.options[SelectedIndex].text; var ClassOfServiceValue = element.options[SelectedIndex].value; var LiRates = ClassOfServiceValue.split(&#39;|&#39;)[0]; var HiRates = ClassOfServiceValue.split(&#39;|&#39;)[1]; var LowValueTb = document.getElementById(&#39;inLowValue&#39;); var HighValueTb = document.getElementById(&#39;inHighValue&#39;); LowValueTb.value = LiRates.split(&#39;,&#39;)[0]; HighValueTb.value = HiRates.split(&#39;,&#39;)[0]; inboundRates = LiRates;  if (inboundIdentifier != null &amp;&amp; inboundIdentifier.indexOf(&#39;C&#39;) != 0) { inboundSelectedCell = document.getElementById(inboundIdentifier); inboundSelectedCell.className = &#39;priceMatrixValue&#39;; } if (ClassOfServiceType.toUpperCase() == &#39;NEXT DAY&#39;) inboundIdentifier = &#39;CiAirNextDay&#39;; else inboundIdentifier = &#39;CiAir2ndDay&#39;;  inUnitPrice = null; var InUnitPriceTb = document.getElementById(&#39;inUnitPrice&#39;); InUnitPriceTb.value = null; InRatesChanged = false; }&lt;/script&gt;&quot;);
+				
+				$j(&quot;body&quot;).prepend(&quot;&lt;script type=&#39;text/javascript&#39;&gt;function outClassOfServiceSelChanged(element) { var SelectedIndex = element.selectedIndex; var ClassOfServiceType = element.options[SelectedIndex].text; var ClassOfServiceValue = element.options[SelectedIndex].value; var LiRates = ClassOfServiceValue.split(&#39;|&#39;)[0]; var HiRates = ClassOfServiceValue.split(&#39;|&#39;)[1]; var LowValueTb = document.getElementById(&#39;outLowValue&#39;); var HighValueTb = document.getElementById(&#39;outHighValue&#39;); LowValueTb.value = LiRates.split(&#39;,&#39;)[0]; HighValueTb.value = HiRates.split(&#39;,&#39;)[0]; outboundRates = LiRates;  if (outboundIdentifier != null &amp;&amp; outboundIdentifier.indexOf(&#39;C&#39;) != 0) { outboundSelectedCell = document.getElementById(outboundIdentifier); outboundSelectedCell.className = &#39;priceMatrixValue&#39;; } if (ClassOfServiceType.toUpperCase() == &#39;NEXT DAY&#39;) outboundIdentifier = &#39;CoAirNextDay&#39;; else outboundIdentifier = &#39;CoAir2ndDay&#39;;  OutUnitPrice = null; var OutUnitPriceTb = document.getElementById(&#39;outUnitPrice&#39;); OutUnitPriceTb.value = null; OutRatesChanged = false;}&lt;/script&gt;&quot;);
+				
+				$j(&quot;body&quot;).prepend(&quot;&lt;script type=&#39;text/javascript&#39;&gt;function inUnitPriceChanged(element) { var LowValueTb = document.getElementById(&#39;inLowValue&#39;); if (element.value != null &amp;&amp; parseFloat(element.value) &lt; parseFloat(LowValueTb.value)) { window.alert(&#39;Price cannot be lower than the low value&#39;); element.value = LowValueTb.value; } inUnitPrice = element.value; if (element.value != null) InRatesChanged = true; else InRatesChanged = false; if(inboundIdentifier != &#39;undefined&#39; &amp;&amp; inboundIdentifier != null &amp;&amp; inboundIdentifier.indexOf(&#39;C&#39;) != 0) { inboundSelectedCell = document.getElementById(inboundIdentifier); if (inboundSelectedCell != null) inboundSelectedCell.className = &#39;priceMatrixValue&#39;; } var ShipTypeSel = document.getElementById(&#39;inShipTypeSel&#39;); var ShipType = ShipTypeSel.options[ShipTypeSel.selectedIndex].text; var ShipTypeValue = ShipTypeSel.options[ShipTypeSel.selectedIndex].value; var ClassOfServiceElement = document.getElementById(&#39;inClassOfServiceSel&#39;); if (ShipType.toUpperCase() == &#39;GROUND TRANSPORTATION&#39;) {inboundIdentifier = &#39;CiGroundLtl&#39;; inboundRates = ShipTypeValue.split(&#39;|&#39;)[0];} else if (ShipType.toUpperCase() == &#39;LOCAL&#39;) {inboundIdentifier = &#39;CiLocal&#39;; inboundRates = ShipTypeValue.split(&#39;|&#39;)[0];} else if (ShipType.toUpperCase() == &#39;AIR TRANSPORTATION&#39;) { var ClassOfServiceType = ClassOfServiceElement.options[ClassOfServiceElement.selectedIndex].text; var ClassOfServiceValue = ClassOfServiceElement.options[ClassOfServiceElement.selectedIndex].value; if (ClassOfServiceType.toUpperCase() == &#39;NEXT DAY&#39;) {inboundIdentifier = &#39;CiAirNextDay&#39;; inboundRates = ClassOfServiceValue.split(&#39;|&#39;)[0];} else {inboundIdentifier = &#39;CiAir2ndDay&#39;; inboundRates = ClassOfServiceValue.split(&#39;|&#39;)[0];} }} &lt;/script&gt;&quot;);
+				
+				$j(&quot;body&quot;).prepend(&quot;&lt;script type=&#39;text/javascript&#39;&gt;function outUnitPriceChanged(element) { var LowValueTb = document.getElementById(&#39;outLowValue&#39;); if (element.value != null &amp;&amp; parseFloat(element.value) &lt; parseFloat(LowValueTb.value)) { window.alert(&#39;Price cannot be lower than the low value&#39;); element.value = LowValueTb.value; } outUnitPrice = element.value; if (element.value != null) OutRatesChanged = true; else OutRatesChanged = false; if(outboundIdentifier != &#39;undefined&#39; &amp;&amp; outboundIdentifier != null &amp;&amp; outboundIdentifier.indexOf(&#39;C&#39;) != 0) { outboundSelectedCell = document.getElementById(outboundIdentifier); if (outboundSelectedCell != null) outboundSelectedCell.className = &#39;priceMatrixValue&#39;; } var ShipTypeSel = document.getElementById(&#39;outShipTypeSel&#39;);  var ShipType = ShipTypeSel.options[ShipTypeSel.selectedIndex].text; var ShipTypeValue = ShipTypeSel.options[ShipTypeSel.selectedIndex].value; var ClassOfServiceElement = document.getElementById(&#39;outClassOfServiceSel&#39;); if (ShipType.toUpperCase() == &#39;GROUND TRANSPORTATION&#39;) {outboundIdentifier = &#39;CoGroundLtl&#39;; outboundRates = ShipTypeValue.split(&#39;|&#39;)[0];} else if (ShipType.toUpperCase() == &#39;LOCAL&#39;) {outboundIdentifier = &#39;CoLocal&#39;; outboundRates = ShipTypeValue.split(&#39;|&#39;)[0];} else if (ShipType.toUpperCase() == &#39;AIR TRANSPORTATION&#39;) { var ClassOfServiceType = ClassOfServiceElement.options[ClassOfServiceElement.selectedIndex].text; var ClassOfServiceValue = ClassOfServiceElement.options[ClassOfServiceElement.selectedIndex].value; if (ClassOfServiceType.toUpperCase() == &#39;NEXT DAY&#39;) {outboundIdentifier = &#39;CoAirNextDay&#39;; outboundRates = ClassOfServiceValue.split(&#39;|&#39;)[0];} else {outboundIdentifier = &#39;CoAir2ndDay&#39;; outboundRates = ClassOfServiceValue.split(&#39;|&#39;)[0];} }} &lt;/script&gt;&quot;);
+			}
+			
+			$j(&quot;&lt;div id=&#39;Processing&#39;&gt;Retrieving rates....&lt;/div&gt;&quot;).dialog({
+				title: &#39;Please wait...&#39;,
+				height: 50,
+				width: 200,
+				position: &#39;center&#39;,
+				modal: true});
+
+			var quoteId = &#39;{!Quote__c.Id}&#39;;
+			
+			//sforce.connection.sessionId = &#39;{!$Api.Session_ID}&#39;; This statement is required only if invocation is from VF page
+		
+			var ComplexPriceData = &#39;&lt;div&gt;&lt;/div&gt;&#39;;
+			var Proceed = false;
+			var SOAPError = &#39;&#39;;
+			
+			try
+			{
+				/*
+				window.alert(&#39;In values: &#39; + InRateFieldValuesValid);
+				window.alert(&#39;Out values: &#39; + OutRateFieldValuesValid);
+				*/
+				
+				if (!InRateFieldValuesValid &amp;&amp; !OutRateFieldValuesValid)
+				{
+					SOAPError = &#39;&lt;table&gt;&lt;tr&gt;&lt;td&gt;To view logistics rates, values must be specified for these fields:&lt;/td&gt;&lt;td&gt;&lt;br/&gt;&lt;/td&gt;&lt;td&gt;Origination State&lt;/td&gt;&lt;td&gt;Delivery State&lt;/td&gt;&lt;td&gt;Pickup Date&lt;/td&gt;&lt;td&gt;Delivery Date&lt;/td&gt;&lt;td&gt;&lt;br/&gt;&lt;/td&gt;&lt;td&gt;&lt;br/&gt;&lt;/td&gt;&lt;td&gt;To view rates for both Inbound and Outbound shipments, please specify values for required fields for both Shipments.&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&#39;;
+				}
+				
+				if (RateDirection != &#39;&#39;)
+				{
+					ComplexPriceData = sforce.apex.execute(&#39;LogisticsQuoteRates&#39;,&#39;GetRates&#39;,{QuoteId:&#39;{!Quote__c.Id}&#39;, Direction:RateDirection});
+					
+					if (ComplexPriceData.toString().indexOf(&#39;Shipment meets criteria for special quote&#39;) &gt;= 0)
+						SOAPError = &#39;Rates cannot be displayed because &#39; + ComplexPriceData.toString();
+					else
+						Proceed = true;
+				}
+			} 
+			catch (e)
+			{
+				SOAPError = e.toString();        
+			}
+
+			if (!Proceed)
+			{
+				$j(&quot;#Processing&quot;).dialog(&quot;close&quot;);
+				$j(&quot;#Processing&quot;).remove();
+				$j(&quot;&lt;div id=&#39;Error&#39;&gt;&quot; + SOAPError + &quot;&lt;/div&gt;&quot;).dialog({
+					title: &#39;Error&#39;,
+					height: 300,
+					width: 600,
+					position: &#39;center&#39;,
+					modal: true});
+			}
+			else
+			{
+				$j(&quot;#Processing&quot;).dialog(&quot;close&quot;);
+				
+				if (Direction != RateDirection)
+				{
+					//Fetch rates for the inbound or outbound section that 
+					var CustomQuoteSegment = (RateDirection == &#39;INBOUND&#39; ? &#39;OUTBOUND&#39; : &#39;INBOUND&#39;);
+					
+					if ((CustomQuoteSegment == &#39;INBOUND&#39; &amp;&amp; FlatOrUnitRateType == &#39;Per Pound&#39;) || (CustomQuoteSegment == &#39;OUTBOUND&#39; &amp;&amp; OBFlatOrUnitRateType == &#39;Per Pound&#39;))
+					{
+						try
+						{
+							var CustomQuoteRetVal = PriceCustomQuote(&#39;{!Quote__c.Id}&#39;, CustomQuoteSegment);
+							window.alert(CustomQuoteRetVal);
+						}
+						catch(e)
+						{
+							window.alert(e.message ? e.message : e);
+						}
+					}
+				}
+				
+				$j(ComplexPriceData.toString()).dialog({
+					title: &#39;Logistics Rates&#39;,
+					width: 670,
+					position: &#39;top&#39;,
+					modal: true,
+					autoOpen: false,
+					open: function(event, ui) {
+					
+						//If rates have been selected before, then set the inboundIdentifier variable so that user is not
+						//forced to make a selection. Use case: user needs to revise only one segment of a round-trip
+						//quote.
+						
+						if ((AlertMessage == null || AlertMessage ==  undefined || AlertMessage == &#39;&#39;) &amp;&amp; (RateDirection == &#39;INBOUND&#39; || RateDirection == &#39;ROUNDTRIP&#39;))
+						{
+							if (ShipmentType != null &amp;&amp; ShipmentType != undefined &amp;&amp; Selection != null &amp;&amp; Selection != undefined)
+							{
+								if (ShipmentType.toUpperCase() == &#39;AIR TRANSPORTATION&#39;)
+								{
+									if (ClassOfService != null &amp;&amp; ClassOfService != undefined)
+									{
+										if (ClassOfService.toUpperCase() == &#39;2ND DAY&#39;)
+										{
+											if (Selection.toUpperCase() == &#39;HIGH&#39;)
+												inboundIdentifier = &#39;HiAir2ndDay&#39;;
+											else if (Selection.toUpperCase() == &#39;LOW&#39;)
+												inboundIdentifier = &#39;LiAir2ndDay&#39;;
+										}
+										else if (ClassOfService.toUpperCase() == &#39;NEXT DAY&#39;)
+										{
+											if (Selection.toUpperCase() == &#39;HIGH&#39;)
+												inboundIdentifier = &#39;HiAirNextDay&#39;;
+											else if (Selection.toUpperCase() == &#39;LOW&#39;)
+												inboundIdentifier = &#39;LiAirNextDay&#39;;
+										}
+									}
+								}
+								else if (ShipmentType.toUpperCase() == &#39;GROUND TRANSPORTATION&#39;)
+								{
+									if (ServiceType != null &amp;&amp; ServiceType != undefined)
+									{
+										if (ServiceType.toUpperCase() == &#39;LTL&#39;)
+										{
+											if (Selection.toUpperCase() == &#39;HIGH&#39;)
+												inboundIdentifier = &#39;HiGroundLTL&#39;;
+											else if (Selection.toUpperCase() == &#39;LOW&#39;)
+												inboundIdentifier = &#39;LiGroundLTL&#39;;
+										}
+										/*
+										else if (ServiceType.toUpperCase() == &#39;FTL&#39;)
+										{
+											if (Selection.toUpperCase() == &#39;HIGH&#39;)
+												inboundIdentifier = &#39;HiGroundFTL&#39;;
+											else if (Selection.toUpperCase() == &#39;LOW&#39;)
+												inboundIdentifier = &#39;LiGroundFTL&#39;;										
+										}
+										*/
+									}
+								}
+								else if (ShipmentType.toUpperCase() == &#39;LOCAL SHIPMENTS&#39;)
+								{
+									if (Selection.toUpperCase() == &#39;HIGH&#39;)
+										inboundIdentifier = &#39;HiLocal&#39;;
+									else if (Selection.toUpperCase() == &#39;LOW&#39;)
+										inboundIdentifier = &#39;LiLocal&#39;;	
+								}
+							}
+							
+							inboundSelectedCell = $j(&quot;#&quot;+inboundIdentifier);
+						}
+						
+						//If rates have been selected before, then set the outboundIdentifier variable so that user is not
+						//forced to make a selection. Use case: user needs to revise only one segment of a round-trip
+						//quote
+						
+						if ((AlertMessage == null || AlertMessage ==  undefined || AlertMessage == &#39;&#39;) &amp;&amp; (RateDirection == &#39;OUTBOUND&#39; || RateDirection == &#39;ROUNDTRIP&#39;))
+						{					
+							if (OBShipmentType != null &amp;&amp; OBShipmentType != undefined &amp;&amp; OBSelection != null &amp;&amp; OBSelection != undefined)
+							{
+								if (OBShipmentType.toUpperCase() == &#39;AIR TRANSPORTATION&#39;)
+								{
+									if (OBClassOfService != null &amp;&amp; OBClassOfService != undefined)
+									{
+										if (OBClassOfService.toUpperCase() == &#39;2ND DAY&#39;)
+										{
+											if (OBSelection.toUpperCase() == &#39;HIGH&#39;)
+												outboundIdentifier = &#39;HoAir2ndDay&#39;;
+											else if (OBSelection.toUpperCase() == &#39;LOW&#39;)
+												outboundIdentifier = &#39;LoAir2ndDay&#39;;
+										}
+										else if (OBClassOfService.toUpperCase() == &#39;NEXT DAY&#39;)
+										{
+											if (OBSelection.toUpperCase() == &#39;HIGH&#39;)
+												outboundIdentifier = &#39;HoAirNextDay&#39;;
+											else if (OBSelection.toUpperCase() == &#39;LOW&#39;)
+												outboundIdentifier = &#39;LoAirNextDay&#39;;
+										}
+									}
+								}
+								else if (OBShipmentType.toUpperCase() == &#39;GROUND TRANSPORTATION&#39;)
+								{
+									if (OBServiceType != null &amp;&amp; OBServiceType != undefined)
+									{
+										if (OBServiceType.toUpperCase() == &#39;LTL&#39;)
+										{
+											if (OBSelection.toUpperCase() == &#39;HIGH&#39;)
+												outboundIdentifier = &#39;HoGroundLTL&#39;;
+											else if (OBSelection.toUpperCase() == &#39;LOW&#39;)
+												outboundIdentifier = &#39;LoGroundLTL&#39;;
+										}
+										/*
+										else if (OBServiceType.toUpperCase() == &#39;FTL&#39;)
+										{
+											if (OBSelection.toUpperCase() == &#39;HIGH&#39;)
+												outboundIdentifier = &#39;HoGroundFTL&#39;;
+											else if (OBSelection.toUpperCase() == &#39;LOW&#39;)
+												outboundIdentifier = &#39;LoGroundFTL&#39;;										
+										}
+										*/
+									}
+								}
+								else if (OBShipmentType.toUpperCase() == &#39;LOCAL SHIPMENTS&#39;)
+								{
+									if (OBSelection.toUpperCase() == &#39;HIGH&#39;)
+										outboundIdentifier = &#39;HoLocal&#39;;
+									else if (OBSelection.toUpperCase() == &#39;LOW&#39;)
+										outboundIdentifier = &#39;LoLocal&#39;;									
+								}
+							}
+						
+							outboundSelectedCell = $j(&quot;#&quot;+outboundIdentifier);
+						}
+
+						//window.alert(&#39;Outbound Selected Cell: &#39; + outboundSelectedCell);					
+					},
+					buttons: {
+						Save: function() {
+							
+							//window.alert(&#39;inboundIdentifier: &#39; + inboundIdentifier);
+							//window.alert(&#39;outboundIdentifier: &#39; + outboundIdentifier);
+							//window.alert(&#39;Origin State: &#39; + OriginState + &#39; Delivery State: &#39; + DestinationState);
+
+							var ImproperSelectionMessage = &#39;&#39;;
+							var QuoteUpdatedMessage = &#39;&#39;;
+
+							if (InRateFieldValuesValid &amp;&amp; (RateDirection == &#39;INBOUND&#39; || RateDirection == &#39;ROUNDTRIP&#39;))
+							{
+							   if (inboundIdentifier != undefined) {
+									//window.alert(&#39;Inbound Identifier: &#39; + inboundIdentifier);						   
+									//ServerErrorMessage = updateQuote(inboundIdentifier, &#39;Inbound&#39;);
+							   }
+							   else
+							   {
+									if (inboundIdentifier == undefined || inboundIdentifier == null)
+										ImproperSelectionMessage = &quot;Please select an Inbound price.&quot;;
+							   }
+							}
+
+							if (OutRateFieldValuesValid &amp;&amp; (RateDirection == &#39;OUTBOUND&#39; || RateDirection == &#39;ROUNDTRIP&#39;))
+							{
+							   if (outboundIdentifier != undefined) {
+									//window.alert(&#39;Outbound Identifier: &#39; + outboundIdentifier);
+									//ServerErrorMessage = updateQuote(outboundIdentifier, &#39;Outbound&#39;);                        
+							   }
+							   else
+							   {								
+									if (outboundIdentifier == undefined || outboundIdentifier == null)
+									{
+										if (ImproperSelectionMessage != null &amp;&amp; ImproperSelectionMessage != &#39;&#39;)
+											ImproperSelectionMessage = &quot;Please select Inbound and Outbound price.&quot;;
+										else
+											ImproperSelectionMessage = &quot;Please select an Outbound price.&quot;;
+									}
+							   }
+							}
+
+							if (ImproperSelectionMessage != null &amp;&amp; ImproperSelectionMessage != &#39;&#39;)
+								window.alert(ImproperSelectionMessage);
+							else {
+								var ServerErrorMessage = &#39;&#39;;
+								
+								//window.alert(&#39;inboundIdentifier: &#39; + inboundIdentifier + &#39; inboundRates: &#39; + inboundRates + &#39; inRatesChanged: &#39; + InRatesChanged);																
+								
+								if (InRateFieldValuesValid &amp;&amp; inboundIdentifier != undefined &amp;&amp; InRatesChanged)
+								{
+									if (inUnitPrice == undefined)
+										inUnitPrice = 0;
+									
+									ServerErrorMessage = updateInboundQuote(inboundIdentifier, inboundRates, inUnitPrice);
+									QuoteUpdatedMessage = &#39;Inbound&#39;;
+								}
+								
+								//window.alert(&#39;outboundIdentifier: &#39; + outboundIdentifier + &#39; outboundRates: &#39; + outboundRates + &#39; outRatesChanged: &#39; + OutRatesChanged);								
+
+								if (OutRateFieldValuesValid &amp;&amp; outboundIdentifier != undefined &amp;&amp; OutRatesChanged) {
+																		
+									if (outUnitPrice == undefined)
+										outUnitPrice = 0;
+										
+									if (ServerErrorMessage != &#39;&#39; &amp;&amp; ServerErrorMessage != null)
+										ServerErrorMessage += updateOutboundQuote(outboundIdentifier, outboundRates, outUnitPrice);
+									else
+									{
+										ServerErrorMessage = updateOutboundQuote(outboundIdentifier, outboundRates, outUnitPrice);
+									}
+
+									if (QuoteUpdatedMessage != &#39;&#39; &amp;&amp; QuoteUpdatedMessage != null)
+										QuoteUpdatedMessage += &#39; and Outbound&#39;;
+									else
+										QuoteUpdatedMessage = &#39;Outbound&#39;;
+								}
+								
+								if (ServerErrorMessage != null &amp;&amp; ServerErrorMessage != &#39;&#39;)
+									window.alert(ServerErrorMessage);
+								else
+								{
+									if (QuoteUpdatedMessage != &#39;&#39; &amp;&amp; QuoteUpdatedMessage != null)
+										window.alert(QuoteUpdatedMessage + &#39; rates updated.&#39;);
+									else 
+										window.alert(&#39;No rate(s) selected or changed. Please select inbound and/or outbound rates.&#39;);
+								}
+						   }
+						},
+						Close: function() {
+						   $j(&quot;#priceMatrixDialog&quot;).dialog(&quot;close&quot;);
+						   $j(&quot;#tabContainer&quot;).tabs(&quot;destroy&quot;);
+						   $j(&quot;#priceMatrixDialog&quot;).dialog(&quot;destroy&quot;);
+						   $j(this).remove();
+						   window.location.reload(); }					
+					}
+				});
+
+				$j(&#39;#priceMatrixDialog&#39;).bind(&#39;dialogopen&#39;, function(event, ui) {				
+					$j(&#39;#tabContainer&#39;).tabs( {selected: 2});
+					});
+				
+				$j(&quot;#priceMatrixDialog&quot;).bind(&quot;dialogclose&quot;, function(event, ui) {
+					$j(&quot;#tabContainer&quot;).tabs(&#39;destroy&#39;);
+					$j(&quot;#priceMatrixDialog&quot;).dialog(&#39;destroy&#39;);
+					$j(this).remove();
+					ComplexPriceData = null;});
+
+				$j(&quot;#priceMatrixDialog&quot;).dialog(&quot;open&quot;);
+			}
+		}
+		else
+		{
+			/*
+			var Message = &quot;&lt;table&gt;&lt;tr&gt;&lt;td&gt;To view logistics rates, values must be specified for these fields:&lt;/td&gt;&lt;td&gt;&lt;br/&gt;&lt;/td&gt;&lt;td&gt;Origination State&lt;/td&gt;&lt;td&gt;Delivery State&lt;/td&gt;&lt;td&gt;Pickup Date&lt;/td&gt;&lt;td&gt;Delivery Date&lt;/td&gt;&lt;td&gt;&lt;br/&gt;&lt;/td&gt;&lt;td&gt;&lt;br/&gt;&lt;/td&gt;&lt;td&gt;To view rates for both Inbound and Outbound shipments, please specify values for required fields for both Shipments.&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&quot;;
+			
+			$j(&quot;&lt;div id=&#39;Validation&#39;&gt;&quot; + Message + &quot;&lt;/div&gt;&quot;).dialog({
+				title: &#39;Required Fields Not Specified&#39;,
+				height: 100,
+				width: 200,
+				position: &#39;center&#39;,
+				modal: true});
+			*/
+			var Message = &#39;&#39;;
+			
+			if (EffectiveWeight &gt; 5000)
+				Message = &quot;Rates cannot be generated because Crated or Dim weight is &gt; 5000 lbs. Please follow your department&#39;s standard operating procedure to generate rates for this special Quote.&quot;;
+			else if (OnlyOverrideOrCratedDimWeight == false)
+				Message = &#39;Please ensure Quick Quote Weight is blank when Crated Weight or Dim Weight is specified.&#39;;
+			else
+				Message = &quot;To view logistics rates, values must be specified for these fields: \n\nOrigination State\nDelivery State\nPickup Date\nDelivery Date\nWeight\n\nTo view rates for &#39;Roundtrip&#39; shipment, please specify values for required fields for both Inbound and Outbound shipment.&quot;;
+			
+			window.alert(Message);
+		}
+	}
+	else
+	{
+		if (TruckloadFlag)
+			window.alert(&#39;Truckload quote cannot be rated using \&#39;Select Rates\&#39; button. Please enter the amount directly in the Total field.&#39;);
+		else if (CustomQuoteFlag)
+		{
+			//Fetch rates for the inbound or outbound section that 
+			var CustomQuoteSegment = Direction;
+			
+			try
+			{
+				var CustomQuoteRetVal = PriceCustomQuote(&#39;{!Quote__c.Id}&#39;, CustomQuoteSegment);
+				window.alert(CustomQuoteRetVal);
+			}
+			catch(e)
+			{
+				window.alert(e.message ? e.message : e);
+			}
+			window.location.reload();
+		}
+	}
+}
+catch(e) 
+{
+	window.alert(e.message ? e.message : e);
+}
+
+function PriceCustomQuote(quoteId, direction)
+{
+	return sforce.apex.execute(&#39;LogisticsQuoteRates&#39;,&#39;PriceCustomQuote&#39;,{QuoteId:quoteId, Direction:direction});
+}</url>
+</WebLink>

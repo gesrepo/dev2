@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Disat_Specialist_Lighting_quality__c</fullName>
+    <label>Disat.Specialist Lighting quality</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Cleanliness</fullName>
+                <default>false</default>
+                <label>Cleanliness</label>
+            </value>
+            <value>
+                <fullName>Fault/damage</fullName>
+                <default>false</default>
+                <label>Fault/damage</label>
+            </value>
+            <value>
+                <fullName>Not as expected</fullName>
+                <default>false</default>
+                <label>Not as expected</label>
+            </value>
+            <value>
+                <fullName>On-site</fullName>
+                <default>false</default>
+                <label>On-site</label>
+            </value>
+            <value>
+                <fullName>Pre-show</fullName>
+                <default>false</default>
+                <label>Pre-show</label>
+            </value>
+            <value>
+                <fullName>Product/equipment</fullName>
+                <default>false</default>
+                <label>Product/equipment</label>
+            </value>
+            <value>
+                <fullName>Safety</fullName>
+                <default>false</default>
+                <label>Safety</label>
+            </value>
+            <value>
+                <fullName>Service</fullName>
+                <default>false</default>
+                <label>Service</label>
+            </value>
+            <value>
+                <fullName>Staff</fullName>
+                <default>false</default>
+                <label>Staff</label>
+            </value>
+            <value>
+                <fullName>Unprofessional</fullName>
+                <default>false</default>
+                <label>Unprofessional</label>
+            </value>
+            <value>
+                <fullName>Value for money</fullName>
+                <default>false</default>
+                <label>Value for money</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

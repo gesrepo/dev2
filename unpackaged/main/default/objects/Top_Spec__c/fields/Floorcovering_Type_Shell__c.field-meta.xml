@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Floorcovering_Type_Shell__c</fullName>
+    <label>Floorcovering Type - Shell</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Harmony Velour</fullName>
+                <default>false</default>
+                <label>Harmony Velour</label>
+            </value>
+            <value>
+                <fullName>Shanghai Velour</fullName>
+                <default>false</default>
+                <label>Shanghai Velour</label>
+            </value>
+            <value>
+                <fullName>Willow Cord</fullName>
+                <default>false</default>
+                <label>Willow Cord</label>
+            </value>
+            <value>
+                <fullName>Escolita Carpet Tiles</fullName>
+                <default>false</default>
+                <label>Escolita Carpet Tiles</label>
+            </value>
+            <value>
+                <fullName>Safety Slate Floor</fullName>
+                <default>false</default>
+                <label>Safety Slate Floor</label>
+            </value>
+            <value>
+                <fullName>Other Flooring</fullName>
+                <default>false</default>
+                <label>Other Flooring</label>
+            </value>
+            <value>
+                <fullName>Coir Matting</fullName>
+                <default>false</default>
+                <label>Coir Matting</label>
+            </value>
+            <value>
+                <fullName>ELEA Quality</fullName>
+                <default>false</default>
+                <label>ELEA Quality</label>
+            </value>
+            <value>
+                <fullName>ELEA ELITE Quality</fullName>
+                <default>false</default>
+                <label>ELEA ELITE Quality</label>
+            </value>
+            <value>
+                <fullName>Podium</fullName>
+                <default>false</default>
+                <label>Podium</label>
+            </value>
+            <value>
+                <fullName>Plat</fullName>
+                <default>false</default>
+                <label>Plat</label>
+            </value>
+            <value>
+                <fullName>Delta</fullName>
+                <default>false</default>
+                <label>Delta</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

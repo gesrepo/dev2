@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Third_Party__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <label>Third Party</label>
+    <referenceTo>Account</referenceTo>
+    <relationshipLabel>Opportunities (Third Party)</relationshipLabel>
+    <relationshipName>Show_Opportunities2</relationshipName>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Lookup</type>
+</CustomField>

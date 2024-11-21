@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>provide_CSM_comments_on_Access_storage</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND( ISPICKVAL( Is_Access_Storage_available__c , &#39;No&#39;) , ISBLANK( If_no_provide_CSM_comments__c ) )</errorConditionFormula>
+    <errorDisplayField>If_no_provide_CSM_comments__c</errorDisplayField>
+    <errorMessage>Provide CSM comments on how an exhibitor may request it.</errorMessage>
+</ValidationRule>

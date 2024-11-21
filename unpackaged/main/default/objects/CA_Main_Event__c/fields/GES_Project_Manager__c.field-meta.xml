@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>GES_Project_Manager__c</fullName>
+    <label>GES Project Manager</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>true</sorted>
+            <value>
+                <fullName>AJ – Andy Jones</fullName>
+                <default>false</default>
+                <label>AJ – Andy Jones</label>
+            </value>
+            <value>
+                <fullName>AV – Andy Valentine</fullName>
+                <default>false</default>
+                <label>AV – Andy Valentine</label>
+            </value>
+            <value>
+                <fullName>Mulvey, Mike</fullName>
+                <default>false</default>
+                <label>Mulvey, Mike</label>
+            </value>
+            <value>
+                <fullName>MZ – Margaret Zajda</fullName>
+                <default>false</default>
+                <label>MZ – Margaret Zajda</label>
+            </value>
+            <value>
+                <fullName>Pesch, Patty</fullName>
+                <default>false</default>
+                <label>Pesch, Patty</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

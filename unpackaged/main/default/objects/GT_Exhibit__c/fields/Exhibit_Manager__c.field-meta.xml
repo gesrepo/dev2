@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Exhibit_Manager__c</fullName>
+    <label>Exhibit Manager</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Don Schmid</fullName>
+                <default>false</default>
+                <label>Don Schmid</label>
+            </value>
+            <value>
+                <fullName>Laine Mann</fullName>
+                <default>false</default>
+                <label>Laine Mann</label>
+            </value>
+            <value>
+                <fullName>Lee Kim</fullName>
+                <default>false</default>
+                <label>Lee Kim</label>
+            </value>
+            <value>
+                <fullName>Sandra Kusek</fullName>
+                <default>false</default>
+                <label>Sandra Kusek</label>
+            </value>
+            <value>
+                <fullName>Suthee Suvansri</fullName>
+                <default>false</default>
+                <label>Suthee Suvansri</label>
+            </value>
+            <value>
+                <fullName>Virginia Hayward</fullName>
+                <default>false</default>
+                <label>Virginia Hayward</label>
+            </value>
+            <value>
+                <fullName>N/A</fullName>
+                <default>false</default>
+                <label>N/A</label>
+            </value>
+            <value>
+                <fullName>Exhibit Manager 1</fullName>
+                <default>false</default>
+                <label>Exhibit Manager 1</label>
+            </value>
+            <value>
+                <fullName>Exhibit Manager 2</fullName>
+                <default>false</default>
+                <label>Exhibit Manager 2</label>
+            </value>
+            <value>
+                <fullName>Exhibit Manager 3</fullName>
+                <default>false</default>
+                <label>Exhibit Manager 3</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

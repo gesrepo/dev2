@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Portfolio_Director__c</fullName>
+    <label>Portfolio Director</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>al Maaytah, Yasser</fullName>
+                <default>false</default>
+                <label>al Maaytah, Yasser</label>
+            </value>
+            <value>
+                <fullName>Chambers, Mike</fullName>
+                <default>false</default>
+                <label>Chambers, Mike</label>
+            </value>
+            <value>
+                <fullName>Corderoy, Dan</fullName>
+                <default>false</default>
+                <label>Corderoy, Dan</label>
+            </value>
+            <value>
+                <fullName>Eddy, Mark</fullName>
+                <default>false</default>
+                <label>Eddy, Mark</label>
+            </value>
+            <value>
+                <fullName>Ellis, Ian</fullName>
+                <default>false</default>
+                <label>Ellis, Ian</label>
+            </value>
+            <value>
+                <fullName>Harper, Sarah</fullName>
+                <default>false</default>
+                <label>Harper, Sarah</label>
+            </value>
+            <value>
+                <fullName>Humphrey, Gwyn</fullName>
+                <default>false</default>
+                <label>Humphrey, Gwyn</label>
+            </value>
+            <value>
+                <fullName>Humphrey, Nick</fullName>
+                <default>false</default>
+                <label>Humphrey, Nick</label>
+            </value>
+            <value>
+                <fullName>Linehan, Dean</fullName>
+                <default>false</default>
+                <label>Linehan, Dean</label>
+            </value>
+            <value>
+                <fullName>O&#39;Connor, David</fullName>
+                <default>false</default>
+                <label>O&#39;Connor, David</label>
+            </value>
+            <value>
+                <fullName>Squires, Justin</fullName>
+                <default>false</default>
+                <label>Squires, Justin</label>
+            </value>
+            <value>
+                <fullName>Tait, Steve</fullName>
+                <default>false</default>
+                <label>Tait, Steve</label>
+            </value>
+            <value>
+                <fullName>Thompson, Alan</fullName>
+                <default>false</default>
+                <label>Thompson, Alan</label>
+            </value>
+            <value>
+                <fullName>Vernon, Paul</fullName>
+                <default>false</default>
+                <label>Vernon, Paul</label>
+            </value>
+            <value>
+                <fullName>Wing, Natalie</fullName>
+                <default>false</default>
+                <label>Wing, Natalie</label>
+            </value>
+            <value>
+                <fullName>Blake Horgan</fullName>
+                <default>false</default>
+                <label>Blake Horgan</label>
+            </value>
+            <value>
+                <fullName>Woodley, Damian</fullName>
+                <default>false</default>
+                <label>Woodley, Damian</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

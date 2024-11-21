@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Scope__c</fullName>
+    <description>For D and B to hold the type of work</description>
+    <inlineHelpText>Please select a value</inlineHelpText>
+    <label>Scope</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>true</sorted>
+            <value>
+                <fullName>AMP</fullName>
+                <default>false</default>
+                <label>AMP</label>
+            </value>
+            <value>
+                <fullName>AV / Interactives</fullName>
+                <default>false</default>
+                <label>AV / Interactives</label>
+            </value>
+            <value>
+                <fullName>Catering</fullName>
+                <default>false</default>
+                <label>Catering</label>
+            </value>
+            <value>
+                <fullName>Chalet</fullName>
+                <default>false</default>
+                <label>Chalet</label>
+            </value>
+            <value>
+                <fullName>Collaterals</fullName>
+                <default>false</default>
+                <label>Collaterals</label>
+            </value>
+            <value>
+                <fullName>Congress</fullName>
+                <default>false</default>
+                <label>Congress</label>
+            </value>
+            <value>
+                <fullName>Corporate Event</fullName>
+                <default>false</default>
+                <label>Corporate Event</label>
+            </value>
+            <value>
+                <fullName>Events</fullName>
+                <default>false</default>
+                <label>Events</label>
+            </value>
+            <value>
+                <fullName>Exhibitions</fullName>
+                <default>false</default>
+                <label>Exhibitions</label>
+            </value>
+            <value>
+                <fullName>Feature</fullName>
+                <default>false</default>
+                <label>Feature</label>
+            </value>
+            <value>
+                <fullName>Graphic Design</fullName>
+                <default>false</default>
+                <label>Graphic Design</label>
+            </value>
+            <value>
+                <fullName>Graphic Production</fullName>
+                <default>false</default>
+                <label>Graphic Production</label>
+            </value>
+            <value>
+                <fullName>Hospitality Suite</fullName>
+                <default>false</default>
+                <label>Hospitality Suite</label>
+            </value>
+            <value>
+                <fullName>Hybrid</fullName>
+                <default>false</default>
+                <label>Hybrid</label>
+            </value>
+            <value>
+                <fullName>Live Event Core</fullName>
+                <default>false</default>
+                <label>Live Event Core</label>
+            </value>
+            <value>
+                <fullName>Live Events</fullName>
+                <default>false</default>
+                <label>Live Events</label>
+            </value>
+            <value>
+                <fullName>Marketing Projects</fullName>
+                <default>false</default>
+                <label>Marketing Projects</label>
+            </value>
+            <value>
+                <fullName>Meeting Rooms</fullName>
+                <default>false</default>
+                <label>Meeting Rooms</label>
+            </value>
+            <value>
+                <fullName>Miscellaneous</fullName>
+                <default>false</default>
+                <label>Miscellaneous</label>
+            </value>
+            <value>
+                <fullName>MSD</fullName>
+                <default>false</default>
+                <label>MSD</label>
+            </value>
+            <value>
+                <fullName>Outdoor exhibit/stand</fullName>
+                <default>false</default>
+                <label>Outdoor exhibit/stand</label>
+            </value>
+            <value>
+                <fullName>Pavilion</fullName>
+                <default>false</default>
+                <label>Pavilion</label>
+            </value>
+            <value>
+                <fullName>Permanent fit out</fullName>
+                <default>false</default>
+                <label>Permanent fit out</label>
+            </value>
+            <value>
+                <fullName>Pop-Up</fullName>
+                <default>false</default>
+                <label>Pop-Up</label>
+            </value>
+            <value>
+                <fullName>Refurb</fullName>
+                <default>false</default>
+                <label>Refurb</label>
+            </value>
+            <value>
+                <fullName>Registration</fullName>
+                <default>false</default>
+                <label>Registration</label>
+            </value>
+            <value>
+                <fullName>Retail</fullName>
+                <default>false</default>
+                <label>Retail</label>
+            </value>
+            <value>
+                <fullName>Security</fullName>
+                <default>false</default>
+                <label>Security</label>
+            </value>
+            <value>
+                <fullName>Show Ready</fullName>
+                <default>false</default>
+                <label>Show Ready</label>
+            </value>
+            <value>
+                <fullName>SO</fullName>
+                <default>false</default>
+                <label>SO</label>
+            </value>
+            <value>
+                <fullName>SP</fullName>
+                <default>false</default>
+                <label>SP</label>
+            </value>
+            <value>
+                <fullName>SP1</fullName>
+                <default>false</default>
+                <label>SP1</label>
+            </value>
+            <value>
+                <fullName>SP2</fullName>
+                <default>false</default>
+                <label>SP2</label>
+            </value>
+            <value>
+                <fullName>SP3</fullName>
+                <default>false</default>
+                <label>SP3</label>
+            </value>
+            <value>
+                <fullName>SR</fullName>
+                <default>false</default>
+                <label>SR</label>
+            </value>
+            <value>
+                <fullName>Stand</fullName>
+                <default>false</default>
+                <label>Stand</label>
+            </value>
+            <value>
+                <fullName>Stand by</fullName>
+                <default>false</default>
+                <label>Stand by</label>
+            </value>
+            <value>
+                <fullName>Static Exhibit</fullName>
+                <default>false</default>
+                <label>Static Exhibit</label>
+            </value>
+            <value>
+                <fullName>Storage</fullName>
+                <default>false</default>
+                <label>Storage</label>
+            </value>
+            <value>
+                <fullName>Summits</fullName>
+                <default>false</default>
+                <label>Summits</label>
+            </value>
+            <value>
+                <fullName>Transportation</fullName>
+                <default>false</default>
+                <label>Transportation</label>
+            </value>
+            <value>
+                <fullName>Virtual Exhibit</fullName>
+                <default>false</default>
+                <label>Virtual Exhibit</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

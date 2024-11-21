@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>API_User__c</fullName>
+    <deleteConstraint>Restrict</deleteConstraint>
+    <label>API User</label>
+    <referenceTo>Booth_Upload_API_User__c</referenceTo>
+    <relationshipLabel>Booth Upload Header (API)</relationshipLabel>
+    <relationshipName>Booth_Upload_Header_API</relationshipName>
+    <required>true</required>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

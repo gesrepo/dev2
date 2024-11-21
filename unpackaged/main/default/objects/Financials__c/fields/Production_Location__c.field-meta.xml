@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Production_Location__c</fullName>
+    <description>Maps the Production location of the linked Show Occurrence to the Financials through the use of a workflow update.  Needed to open up visibility to area DOS</description>
+    <externalId>false</externalId>
+    <label>Production Location</label>
+    <length>50</length>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

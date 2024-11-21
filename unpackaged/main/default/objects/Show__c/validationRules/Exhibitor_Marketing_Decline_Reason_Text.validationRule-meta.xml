@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Exhibitor_Marketing_Decline_Reason_Text</fullName>
+    <active>true</active>
+    <description>If Exhibitor marketing is declined, a reason must be provided in the text box.</description>
+    <errorConditionFormula>ISPICKVAL(  Exhibitor_Marketing_Preferences__c  ,&quot;Decline Email Marketing&quot;) &amp;&amp; ISBLANK(  Exhibitor_Marketing_Decline_Reason__c  )</errorConditionFormula>
+    <errorDisplayField>Exhibitor_Marketing_Decline_Reason__c</errorDisplayField>
+    <errorMessage>Please provide the reason that exhibitor marketing has been declined.</errorMessage>
+</ValidationRule>

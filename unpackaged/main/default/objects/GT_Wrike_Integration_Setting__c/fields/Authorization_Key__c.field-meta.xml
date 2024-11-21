@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Authorization_Key__c</fullName>
+    <defaultValue>&quot;Authorization&quot;</defaultValue>
+    <description>Type Of Authorization to connect to Wrike</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Type Of Authorization to connect to Wrike</inlineHelpText>
+    <label>Authorization Key</label>
+    <length>50</length>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Target_Group__c</fullName>
+    <description>This is a field for UK Marketing to set to represent which &#39;team&#39; are handing the show</description>
+    <inlineHelpText>Please select an option from the list</inlineHelpText>
+    <label>Target Group</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>true</sorted>
+            <value>
+                <fullName>AV</fullName>
+                <default>false</default>
+                <label>AV</label>
+            </value>
+            <value>
+                <fullName>Congress</fullName>
+                <default>false</default>
+                <label>Congress</label>
+            </value>
+            <value>
+                <fullName>Europe</fullName>
+                <default>false</default>
+                <label>Europe</label>
+            </value>
+            <value>
+                <fullName>LOG</fullName>
+                <default>false</default>
+                <label>LOG</label>
+            </value>
+            <value>
+                <fullName>Summit</fullName>
+                <default>false</default>
+                <label>Summit</label>
+            </value>
+            <value>
+                <fullName>UAE</fullName>
+                <default>false</default>
+                <label>UAE</label>
+            </value>
+            <value>
+                <fullName>UK</fullName>
+                <default>false</default>
+                <label>UK</label>
+            </value>
+            <value>
+                <fullName>UK AM</fullName>
+                <default>false</default>
+                <label>UK AM</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

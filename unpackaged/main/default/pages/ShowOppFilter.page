@@ -1,0 +1,236 @@
+<apex:page standardController="Show__c" extensions="OpportunityListContExt" lightningStylesheets="true">
+<apex:slds />  
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+
+<script type="text/javascript">
+    function editSFDCRecord(sfdcID) {
+        // Go back to the Account detail page
+        if( (typeof sforce != 'undefined') && (sforce != null) ) {
+            // Salesforce1 navigation
+            sforce.one.editRecord(sfdcID);
+        }
+        else {
+            window.open('/'+sfdcID+'/e?retURL='+sfdcID);
+            
+        }
+    }
+    function navigateSFDCRecord(sfdcID) {
+        // Go back to the Account detail page
+        if( (typeof sforce != 'undefined') && (sforce != null) ) {
+            // Salesforce1 navigation
+            sforce.one.navigateToSObject(sfdcID);
+        }
+        else {
+            window.open('/'+sfdcID);
+            
+        }
+    }
+    var j$ = jQuery.noConflict();
+    
+    
+    j$ (function() {
+        if( (typeof sforce != 'undefined') && (sforce != null) ) {
+            // Salesforce1 navigation
+            j$( "input[id$=newOpp]" ).hide();   
+                
+        }
+       
+    
+  });
+       
+</script>
+  <div class="slds-scope">
+  <apex:form id="theForm" >
+<apex:pageBlock id="opplist">
+
+    <apex:pageblockbuttons location="top" >
+       <!---
+        <apex:commandbutton onclick="window.open('{!URLFOR($Action.Show__c.New_Opportunity_from_Show,ID)}')" id="newOpp" value="New Show Opportunity"  />
+       ----->
+        <apex:commandbutton onclick="window.open('{!URLFOR($Action.Show__c.New_Opportunity_from_Show,ID)}');" id="newOpp" value="New Show Opportunity" styleclass="slds-button slds-button_brand"  />
+        
+    </apex:pageblockbuttons> 
+    <apex:outputPanel id="panel" styleClass="width: 299%;">
+     <table>
+     <tr>
+        <th>LOB</th>
+        <th>Stage</th>
+        <th>Account</th>
+        <th>Owner</th>
+        <th>Facility City</th>      
+        
+     </tr>
+     <tr>
+        <td>
+            <apex:selectList value="{!selectedLOB}" size="1" styleclass="slds-input">
+            
+                  <apex:selectOptions value="{!LOB}"/>
+                  <apex:actionSupport event="onchange"  action="{!newSearchResult}" rerender="panel" />
+            </apex:selectList> 
+        </td>
+        <td>
+      <apex:selectList value="{!stage}" size="1" styleclass="slds-input">
+    
+          <apex:selectOptions value="{!stages}"/>
+          <apex:actionSupport event="onchange"  action="{!newSearchResult}" rerender="panel" />
+      </apex:selectList> 
+        </td>
+        <td>
+      <apex:selectList value="{!selectedAcctID}" size="1" styleclass="slds-input">
+    
+          <apex:selectOptions value="{!Accounts}"/>
+          <apex:actionSupport event="onchange"  action="{!newSearchResult}" rerender="panel" />
+      </apex:selectList>
+     
+        </td>
+        <td>
+      <apex:selectList value="{!selectedUserID}" size="1" styleclass="slds-input">
+    
+          <apex:selectOptions value="{!Users}"/>
+          <apex:actionSupport event="onchange"  action="{!newSearchResult}" rerender="panel" />
+      </apex:selectList>
+      </td>
+      <td>
+      <apex:selectList value="{!selectedFacilityCity}" size="1" styleclass="slds-input">
+    
+          <apex:selectOptions value="{!FacilityCities}"/>
+          <apex:actionSupport event="onchange"  action="{!newSearchResult}" rerender="panel" />
+      </apex:selectList>
+      </td>
+      </tr>
+      
+     </table>
+    <apex:outputPanel title="Results " id="results" >
+
+
+
+
+  <apex:pageBlockTable value="{!oppWrapList}" var="wrap" styleclass="slds-table slds-table_bordered slds-table_resizable-cols">
+  
+        <!--  <apex:column headerValue="Action" style="{!if(wrap.directlyRelated=true,'background-color:#00BFFF;','background-color:#F0F8FF;')}">
+        -->
+      <apex:column headerValue="Action" >   
+            <a href="#" onclick="editSFDCRecord('{!wrap.opp.id}')">Edit</a>
+    
+   &nbsp;|&nbsp;
+    <apex:commandLink rendered="{!$ObjectType.Opportunity.deletable}"
+    action="{!deleteOpp}" onclick="if(!confirm('Are you sure?')) return false;">Del
+        <apex:param value="{!wrap.opp.id}" name="idToDel" assignTo="{!selectedOppID}"/>
+    </apex:commandLink>
+    
+      </apex:column>
+   
+       <apex:column headerValue="LOB" >
+            <apex:outputtext value="{!wrap.lob}"/>
+      </apex:column>
+      
+       <apex:column >
+        <apex:facet name="header">   
+           <apex:commandLink action="{!searchresult}" value="Opportunity {!IF(sortExpression=='name',IF(sortDirection='ASC','▼','▲'),'')}" >
+                <apex:param value="name" name="column" assignTo="{!sortExpression}" ></apex:param>
+            </apex:commandLink>
+          </apex:facet>
+            <a href="#" onclick="navigateSFDCRecord('{!wrap.opp.id}')"><apex:outputField value="{!wrap.opp.Name}"/></a>
+          
+      </apex:column>
+      
+       <apex:column >
+        <apex:facet name="header">   
+           <apex:commandLink action="{!searchresult}" value="{!$ObjectType.Account.fields.name.label} {!IF(sortExpression=='account.name',IF(sortDirection='ASC','▼','▲'),'')}" >
+                <apex:param value="account.name" name="column" assignTo="{!sortExpression}" ></apex:param>
+            </apex:commandLink>
+          </apex:facet>
+            <a href="#" onclick="navigateSFDCRecord('{!wrap.opp.accountid}')"><apex:outputField value="{!wrap.opp.account.Name}"/></a>
+          
+      </apex:column>
+      
+      <apex:column >
+        <apex:facet name="header">   
+           <apex:commandLink action="{!searchresult}" value="Facility City {!IF(sortExpression=='Facility_City__c',IF(sortDirection='ASC','▼','▲'),'')}" >
+                <apex:param value="Facility_City__c" name="column" assignTo="{!sortExpression}" ></apex:param>
+            </apex:commandLink>
+          </apex:facet>
+           <apex:outputField value="{!wrap.opp.Facility_City__c}"/>
+          
+      </apex:column>
+
+      <apex:column >
+            <apex:facet name="header">   
+                <apex:commandLink action="{!searchresult}" value="Prime Contractor {!IF(sortExpression=='Prime_Contractor__c',IF(sortDirection='ASC','▼','▲'),'')}" >
+                    <apex:param value="Prime_Contractor__c" name="column" assignTo="{!sortExpression}" ></apex:param>
+                </apex:commandLink>
+            </apex:facet>
+            <apex:outputField value="{!wrap.opp.Prime_Contractor__c}"/>
+            
+      </apex:column>
+      
+      
+     
+      <!--  
+      <apex:column  >
+            <apex:facet name="header">   
+                <apex:commandLink action="{!searchresult}" value="{!$ObjectType.Opportunity.fields.GBMSProjectStatus__c.label} {!IF(sortExpression=='GBMSProjectStatus__c',IF(sortDirection='ASC','▼','▲'),'')}" >
+                    <apex:param value="GBMSProjectStatus__c" name="column" assignTo="{!sortExpression}" ></apex:param>
+                </apex:commandLink>
+            </apex:facet>
+            <apex:outputField value="{!wrap.opp.GBMSProjectStatus__c}"/>
+      </apex:column>
+      
+       <apex:column >
+            <apex:facet name="header">   
+                <apex:commandLink action="{!searchresult}" value="{!$ObjectType.Opportunity.fields.GBMS_Show_ID__c.label} {!IF(sortExpression=='GBMS_Show_ID__c',IF(sortDirection='ASC','▼','▲'),'')}" >
+                    <apex:param value="GBMS_Show_ID__c" name="column" assignTo="{!sortExpression}" ></apex:param>
+                </apex:commandLink>
+            </apex:facet>
+            <apex:outputField value="{!wrap.opp.GBMS_Show_ID__c}"/>
+      </apex:column>
+      
+   -->
+   
+        <apex:column >
+            <apex:facet name="header">   
+                <apex:commandLink action="{!searchresult}" value="{!$ObjectType.Opportunity.fields.stagename.label} {!IF(sortExpression=='stagename',IF(sortDirection='ASC','▼','▲'),'')}" >
+                    <apex:param value="stagename" name="column" assignTo="{!sortExpression}" ></apex:param>
+                </apex:commandLink>
+            </apex:facet>
+        <apex:outputField value="{!wrap.opp.Stagename}"/>
+      </apex:column>
+       <apex:column >
+            <apex:facet name="header">   
+                <apex:commandLink action="{!searchresult}" value="{!$ObjectType.Opportunity.fields.amount.label} {!IF(sortExpression=='amount',IF(sortDirection='ASC','▼','▲'),'')}" >
+                    <apex:param value="amount" name="column" assignTo="{!sortExpression}" ></apex:param>
+                </apex:commandLink>
+            </apex:facet>
+        <apex:outputField value="{!wrap.opp.amount}"/>
+      </apex:column>
+      <apex:column >
+            <apex:facet name="header">   
+                <apex:commandLink action="{!searchresult}" value="Owner {!IF(sortExpression=='owner.name',IF(sortDirection='ASC','▼','▲'),'')}" >
+                    <apex:param value="owner.name" name="column" assignTo="{!sortExpression}" ></apex:param>
+                </apex:commandLink>
+            </apex:facet>
+            <a href="#" onclick="navigateSFDCRecord('{!wrap.opp.ownerid}')"><apex:outputField value="{!wrap.opp.owner.name}"/></a>
+      </apex:column>
+   
+      
+    
+  </apex:pageBlockTable>
+  <span>
+  <apex:outputtext value="{!counter +1}"/> -
+  <apex:outputtext value="{!if((limits + counter ) < recNum,limits + counter ,recNum) }"/> 
+ &nbsp; of &nbsp;
+  
+   <apex:outputtext value="{!recNum}"/> 
+   </span>
+    
+
+  <apex:commandButton value="FIRST" action="{!fstbtn}" disabled="{!prv}"/>
+  <apex:commandButton value="PRE" action="{!prvbtn}" disabled="{!prv}"/>
+  <apex:commandButton value="NXT" action="{!nextbtn}" disabled="{!nxt}"/>
+  <apex:commandButton value="END" action="{!endbtn}" disabled="{!nxt}"/>
+</apex:outputPanel>
+</apex:outputPanel>
+</apex:pageBlock>
+ </apex:form>
+</div>
+</apex:page>

@@ -1,0 +1,266 @@
+<apex:page standardStylesheets="true"  showHeader="false" sidebar="false" applyHtmlTag="false" tabStyle="Account" standardController="GES_Connect_Corporate_Accounts__c" extensions="CongressSummaryReport">
+ <html xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <head>
+            <apex:includeScript value="{!$Resource.jQuery}" />
+            <apex:stylesheet value="{!URLFOR($Resource.Lightning_Design_System, 'assets/styles/salesforce-lightning-design-system.min.css')}" />
+            <apex:stylesheet value="{!URLFOR($Resource.GC_Assets, 'GC_Assets/css/GC_Styles.css')}" />
+            <apex:includeScript value="{!URLFOR($Resource.GC_Assets, 'GC_Assets/js/GC_init.js')}" />
+        </head>
+         <div class="slds">
+                <c:GC_Community_Header /> 
+        <apex:form id="fm">
+       
+            <apex:pageBlock id="pb">
+                  <apex:pageBlockSection title="Congress Summary" id="pbs" collapsible="false">
+                    <apex:commandButton value="Export Report" action="{!save}" style="right:10px;position:relative;" styleClass="slds-button slds-button--brand gc-teal-button"/> 
+                   <apex:commandButton value="Back" action="{!back}" style="right:10px;position:relative;" styleClass="slds-button slds-button--brand gc-teal-button"/>
+                </apex:pageBlockSection>
+            </apex:pageBlock>
+            <apex:pageBlock id="pbst" title="Congress Details">
+            <style type="text/css">
+                        .bPageBlock .pbTitle {
+                            width: 100%;    
+                            text-align: center;
+                                             }
+             </style>
+             <apex:pageBlockTable value="{!geslst}" var="a">
+                     <apex:column width="20%" value="{!a.Name_of_Congress__c}"/>
+                     <apex:column width="20%" value="{!a.Acronym_of_Congress__c}"/>
+                     <apex:column width="20%" value="{!a.Congress_Start_Date__c}"/>
+                     <apex:column width="20%" value="{!a.Congress_End_Date__c}"/>
+                     <apex:column width="20%" value="{!a.Facility_Name__c}"/>
+             </apex:pageBlockTable>
+             <apex:pageBlockTable value="{!geslst}" var="a">
+                    <apex:column width="20%" value="{!a.Shipping_Street__c}"/>
+                    <apex:column width="20%" value="{!a.Shipping_City__c}"/>
+                    <apex:column width="20%" value="{!a.Shipping_State_Province__c}"/>
+                    <apex:column width="20%" value="{!a.Shipping_Zip_Postal_Code__c}"/>
+                    <apex:column width="20%" value="{!a.Shipping_Country__c}"/>
+                 </apex:pageBlockTable>
+             <apex:pageBlockTable value="{!geslst}" var="a">
+                    <apex:column width="20%" value="{!a.Exhibit_Date_Day1__c}"/>
+                    <apex:column width="20%" value="{!a.Exhibit_Hours_Open_Day_1__c}"/>
+                    <apex:column width="20%" value="{!a.Exhibit_Hours_Close_Day_1__c}"/>
+                    <apex:column width="20%">&nbsp;</apex:column>
+                    <apex:column width="20%">&nbsp;</apex:column>
+             </apex:pageBlockTable>
+             <apex:pageBlockTable value="{!geslst}" var="a">
+                    <apex:column width="20%" value="{!a.Exhibit_Date_Day_2__c}"/>
+                    <apex:column width="20%" value="{!a.Exhibit_Hours_Open_Day_2__c}"/>
+                    <apex:column width="20%" value="{!a.Exhibit_Hours_Close_Day_2__c}"/>
+                    <apex:column width="20%">&nbsp;</apex:column>
+                    <apex:column width="20%">&nbsp;</apex:column>
+             </apex:pageBlockTable>
+             <apex:pageBlockTable value="{!geslst}" var="a">
+                    <apex:column width="20%" value="{!a.Exhibit_Date_Day_3__c}"/>
+                    <apex:column width="20%" value="{!a.Exhibit_Hours_Open_Day_3__c}"/>
+                    <apex:column width="20%" value="{!a.Exhibit_Hours_Close_Day_3__c}"/>
+                    <apex:column width="20%">&nbsp;</apex:column>
+                    <apex:column width="20%">&nbsp;</apex:column>
+             </apex:pageBlockTable>
+             <apex:pageBlockTable value="{!geslst}" var="a">
+                    <apex:column width="20%" value="{!a.Exhibit_Date_Day_4__c}"/>
+                    <apex:column width="20%" value="{!a.Exhibit_Hours_Open_Day_4__c}"/>
+                    <apex:column width="20%" value="{!a.Exhibit_Hours_Close_Day_4__c }"/>
+                    <apex:column width="20%">&nbsp;</apex:column>
+                    <apex:column width="20%">&nbsp;</apex:column>
+             </apex:pageBlockTable>
+             </apex:pageBlock>
+             <apex:pageBlock title="Exhibits">
+             <style type="text/css">
+                        .bPageBlock .pbTitle {
+                            width: 100%;    
+                            text-align: center;
+                                             }
+             </style>
+              <apex:pageBlockTable value="{!dispWrapper}" var="a" id="pbt">
+                   <!--<apex:column >
+                            <apex:facet name="header">Exhibit ID</apex:facet>
+                            <apex:outputText value="{!a.ExhibitId}" />
+                    </apex:column>-->
+                    <apex:column >
+                            <apex:facet name="header">Exhibit Name</apex:facet>
+                            <apex:outputText value="{!a.ExhibitName}" />
+                    </apex:column>
+                    <apex:column >
+                            <apex:facet name="header">Booth Length</apex:facet>
+                            <apex:outputText value="{!a.BoothLength}" />
+                    </apex:column>
+                    <apex:column >
+                            <apex:facet name="header">Booth Width</apex:facet>
+                           <apex:outputText value="{!a.BoothWidth}" />
+                    </apex:column>
+                    <apex:column >
+                            <apex:facet name="header">Booth Number</apex:facet>
+                           <apex:outputText value="{!a.BoothNumber}" />
+                    </apex:column>
+                    <apex:column width="20%">
+                            <apex:facet name="header">Brand Name</apex:facet>
+                            <apex:outputText value="{!a.Brand}" />
+                    </apex:column> 
+                    <apex:column headerValue="Cancelled" width="20%">
+                        <apex:inputCheckbox value="{!a.cancelled}" disabled="true" id="Cancelled" />
+                     </apex:column>                                
+                </apex:pageBlockTable>
+                </apex:pageBlock>
+                <apex:pageBlock title="Sponsorships">
+                <style type="text/css">
+                        .bPageBlock .pbTitle {
+                            width: 100%;    
+                            text-align: center;
+                                             }
+             </style>
+                <apex:pageBlockTable value="{!sponWrapper}" var="ab">
+                   <!--<apex:column >
+                            <apex:facet name="header">Sponsorship ID</apex:facet>
+                            <apex:outputText value="{!ab.SponId}" />
+                    </apex:column>-->
+                    <apex:column width="35%">
+                            <apex:facet name="header">Sponsorship Name</apex:facet>
+                            <apex:outputText value="{!ab.SponName}" />
+                    </apex:column>
+                    <apex:column width="35%">
+                            <apex:facet name="header">Brand Name</apex:facet>
+                            <apex:outputText value="{!ab.BrandName}" />
+                    </apex:column>
+                    <apex:column headerValue="Cancelled" width="20%">
+                        <apex:inputCheckbox value="{!ab.cancelled}" disabled="true" id="Cancelled" />
+                     </apex:column>
+                </apex:pageBlockTable>
+                </apex:pageBlock>
+                <apex:pageBlock title="Product Theaters">
+                <style type="text/css">
+                        .bPageBlock .pbTitle {
+                            width: 100%;    
+                            text-align: center;
+                                             }
+             </style>
+                <apex:pageBlockTable value="{!prdtrWrapper}" var="pd">
+                   <!--<apex:column width="20%">
+                            <apex:facet name="header">Product Theater ID</apex:facet>
+                            <apex:outputText value="{!pd.PrdtrId}" />
+                    </apex:column>-->
+                    <apex:column width="20%">
+                            <apex:facet name="header">Product Theater Name</apex:facet>
+                            <apex:outputText value="{!pd.PrdtrName}" />
+                    </apex:column>
+                    <apex:column width="20%">
+                            <apex:facet name="header">Product Theater Date and Time</apex:facet>
+                            <apex:outputText value="{!pd.ProductTheaterDateandTime}" />
+                    </apex:column>
+                    <apex:column width="20%">
+                            <apex:facet name="header">Product Theater Location</apex:facet>
+                            <apex:outputText value="{!pd.ProductTheaterLocation}" />
+                    </apex:column>   
+                    <apex:column width="20%">
+                            <apex:facet name="header">Brand Name</apex:facet>
+                            <apex:outputText value="{!pd.BrandName}" />
+                    </apex:column>   
+                    <apex:column headerValue="Cancelled" width="20%">
+                        <apex:inputCheckbox value="{!pd.cancelled}" disabled="true" id="Cancelled" />
+                     </apex:column>              
+                </apex:pageBlockTable>
+                </apex:pageBlock>
+                <apex:pageBlock title="Symposia">
+                <style type="text/css">
+                        .bPageBlock .pbTitle {
+                            width: 100%;    
+                            text-align: center;
+                                             }
+             </style>
+                <apex:pageBlockTable value="{!syWrapper}" var="sy">
+                   <!--<apex:column width="20%">
+                            <apex:facet name="header">Symposia ID</apex:facet>
+                            <apex:outputText value="{!sy.SypmId}" />
+                    </apex:column>-->
+                    <apex:column width="20%">
+                            <apex:facet name="header">Symposia Name</apex:facet>
+                            <apex:outputText value="{!sy.SypmName}" />
+                    </apex:column>
+                    
+                    <apex:column width="20%">
+                            <apex:facet name="header">Symposia Date and Time</apex:facet>
+                            <apex:outputText value="{!sy.SymposiaDateandTime}" />
+                    </apex:column>
+                    <apex:column width="20%">
+                            <apex:facet name="header">Symposia  Location</apex:facet>
+                            <apex:outputText value="{!sy.SymposiaLocation}" />
+                    </apex:column> 
+                    <apex:column width="20%">
+                            <apex:facet name="header">Brand Name</apex:facet>
+                            <apex:outputText value="{!sy.BrandName}" />
+                    </apex:column>
+                    <apex:column headerValue="Cancelled" width="20%">
+                        <apex:inputCheckbox value="{!sy.cancelled}" disabled="true" id="Cancelled" />
+                     </apex:column>                 
+                </apex:pageBlockTable>
+                </apex:pageBlock>
+                <apex:pageBlock title="Meeting Room">
+                <style type="text/css">
+                        .bPageBlock .pbTitle {
+                            width: 100%;    
+                            text-align: center;
+                                             }
+             </style>
+                <apex:pageBlockTable value="{!MtrmWrapper}" var="mtrm">
+                   <!--<apex:column width="20%">
+                            <apex:facet name="header">Meeting Room</apex:facet>
+                            <apex:outputText value="{!mtrm.MtrmId}" />
+                    </apex:column>-->
+                    <apex:column width="20%">
+                            <apex:facet name="header">Meeting Room Name</apex:facet>
+                            <apex:outputText value="{!mtrm.MtrmName}" />
+                    </apex:column>
+                    <apex:column width="20%">
+                            <apex:facet name="header">Meeting Room Date and Time</apex:facet>
+                            <apex:outputText value="{!mtrm.MeetingRoomDateandTime}" />
+                    </apex:column>
+                    <apex:column width="20%">
+                            <apex:facet name="header">Meeting Room Number</apex:facet>
+                            <apex:outputText value="{!mtrm.MeetingRoomNumber}" />
+                    </apex:column> 
+                    <apex:column width="20%">
+                            <apex:facet name="header">Brand Name</apex:facet>
+                            <apex:outputText value="{!mtrm.BrandName}" />
+                    </apex:column> 
+                    <apex:column headerValue="Cancelled" width="20%">
+                        <apex:inputCheckbox value="{!mtrm.cancelled}" disabled="true" id="Cancelled" />
+                     </apex:column>
+                    </apex:pageblocktable>
+                <apex:pageblock title="Housing">
+                <style type="text/css">
+                        .bPageBlock .pbTitle {
+                            width: 100%;    
+                            text-align: center;
+                                             }
+             </style>
+                    <apex:pageblocktable value="{!geslst}" var="a">
+                        <apex:column width="25%" value="{!a.Housing_Opens__c}"/>
+                        <apex:column width="25%" value="{!a.Housing_Deadline__c}"/>
+                        <apex:column width="25%" value="{!a.Number_of_rooms_to_Secure__c}"/>
+                        <apex:column width="25%" value="{!a.Number_of_rooms_Secured__c}"/>
+                    </apex:pageblocktable>
+                    <apex:pageblocktable value="{!geslst}" var="a">
+                        <apex:column width="25%" value="{!a.Hotel_1_Name__c}"/>
+                        <apex:column width="25%" value="{!a.Hotel_1_cancellation_date__c}"/>
+                        <apex:column width="25%" value="{!a.Hotel_1_cancellation_policy__c}"/>
+                        <apex:column width="25%" value="{!a.Hotel_1_room_rate__c}"/>
+                    </apex:pageblocktable>
+                    <apex:pageblocktable value="{!geslst}" var="a">
+                        <apex:column width="25%" value="{!a.Hotel_2_Name__c}"/>
+                        <apex:column width="25%" value="{!a.Hotel_2_cancellation_date__c}"/>
+                        <apex:column width="25%" value="{!a.Hotel_2_cancellation_policy__c}"/>
+                        <apex:column width="25%" value="{!a.Hotel_2_room_rate__c}"/>
+                    </apex:pageblocktable>
+                    <apex:pageblocktable value="{!geslst}" var="a">
+                        <apex:column width="25%" value="{!a.Hotel_3_Name__c}"/>
+                        <apex:column width="25%" value="{!a.Hotel_3_cancellation_date__c}"/>
+                        <apex:column width="25%" value="{!a.Hotel_3_cancellation_policy__c }"/>
+                        <apex:column width="25%" value="{!a.Hotel_3_room_rate__c}"/>
+                    </apex:pageblocktable>
+                </apex:pageblock>
+            </apex:pageBlock>
+        </apex:form>                          
+        </div>
+</html>                                
+</apex:page>

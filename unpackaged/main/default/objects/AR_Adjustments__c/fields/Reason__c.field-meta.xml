@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Reason__c</fullName>
+    <label>Reason</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Agency Fee</fullName>
+                <default>false</default>
+                <label>Agency Fee</label>
+            </value>
+            <value>
+                <fullName>Bank Fee</fullName>
+                <default>false</default>
+                <label>Bank Fee</label>
+            </value>
+            <value>
+                <fullName>Charges</fullName>
+                <default>false</default>
+                <label>Charges</label>
+            </value>
+            <value>
+                <fullName>Discount</fullName>
+                <default>false</default>
+                <label>Discount</label>
+            </value>
+            <value>
+                <fullName>Foreign Currency Adjustment</fullName>
+                <default>false</default>
+                <label>Foreign Currency Adjustment</label>
+            </value>
+            <value>
+                <fullName>G50 Clearing</fullName>
+                <default>false</default>
+                <label>G50 Clearing</label>
+            </value>
+            <value>
+                <fullName>Int Adjust</fullName>
+                <default>false</default>
+                <label>Int Adjust</label>
+            </value>
+            <value>
+                <fullName>Invoice</fullName>
+                <default>false</default>
+                <label>Invoice</label>
+            </value>
+            <value>
+                <fullName>Bad Debt</fullName>
+                <default>false</default>
+                <label>Bad Debt</label>
+            </value>
+            <value>
+                <fullName>Invoice Balance Write Off</fullName>
+                <default>false</default>
+                <label>Invoice Balance Write Off</label>
+            </value>
+            <value>
+                <fullName>Off Set</fullName>
+                <default>false</default>
+                <label>Off Set</label>
+            </value>
+            <value>
+                <fullName>Reclass Inv</fullName>
+                <default>false</default>
+                <label>Reclass Inv</label>
+            </value>
+            <value>
+                <fullName>Recover Bad Debt</fullName>
+                <default>false</default>
+                <label>Recover Bad Debt</label>
+            </value>
+            <value>
+                <fullName>Reverse Bad Debt</fullName>
+                <default>false</default>
+                <label>Reverse Bad Debt</label>
+            </value>
+            <value>
+                <fullName>Settlement Credit Memo</fullName>
+                <default>false</default>
+                <label>Settlement Credit Memo</label>
+            </value>
+            <value>
+                <fullName>Small Amt Remaining</fullName>
+                <default>false</default>
+                <label>Small Amt Remaining</label>
+            </value>
+            <value>
+                <fullName>Write Off</fullName>
+                <default>false</default>
+                <label>Write Off</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,13 @@
+<apex:page >
+<table>
+<tr>
+<td>
+<a id="_lpChatBtn" onclick="lpButtonCTTUrl = 'http://server.iad.liveperson.net/hc/68166738/?cmd=file&file=visitorWantsToChat&site=68166738&SESSIONVAR!skill=Help%20Desk&imageUrl=http://server.iad.liveperson.net/hcp/Gallery/ChatButton-Gallery/English/General/1a&referrer='+escape(document.location); lpButtonCTTUrl = (typeof(lpAppendVisitorCookies) != 'undefined' ? lpAppendVisitorCookies(lpButtonCTTUrl) : lpButtonCTTUrl); lpButtonCTTUrl = ((typeof(lpMTag)!='undefined' && typeof(lpMTag.addFirstPartyCookies)!='undefined')?lpMTag.addFirstPartyCookies(lpButtonCTTUrl):lpButtonCTTUrl);window.open(lpButtonCTTUrl,'chat68166738','width=475,height=400,resizable=yes');return false;" href="https://server.iad.liveperson.net/hc/68166738/?cmd=file&file=visitorWantsToChat&site=68166738&byhref=1&SESSIONVAR!skill=Help%20Desk&imageUrl=https://server.iad.liveperson.net/hcp/Gallery/ChatButton-Gallery/English/General/1a" target="chat68166738">
+
+<img height="91" alt="Chat Button" src="http://server.iad.liveperson.net/hc/68166738/?cmd=repstate&site=68166738&channel=web&&ver=1&imageUrl=http://server.iad.liveperson.net/hcp/Gallery/ChatButton-Gallery/English/General/1a&skill=Help%20Desk&monitor=1&d=1308763740118&monitor=1&d=1308763740179" width="171" border="0" name="hcIcon"></img>
+
+</a>
+</td>
+</tr>
+</table>
+</apex:page>

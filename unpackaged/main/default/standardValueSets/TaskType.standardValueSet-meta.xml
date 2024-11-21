@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StandardValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sorted>false</sorted>
+    <standardValue>
+        <fullName>Account Planning</fullName>
+        <default>false</default>
+        <label>Account Planning</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Attached Competitor Show Report</fullName>
+        <default>false</default>
+        <label>Attached Competitor Show Report</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Capabilities Presentation</fullName>
+        <default>false</default>
+        <label>Capabilities Presentation</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Complete Competitor Show Report</fullName>
+        <default>false</default>
+        <label>Complete Competitor Show Report</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email</fullName>
+        <default>true</default>
+        <label>Email</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Face to Face</fullName>
+        <default>false</default>
+        <label>Face to Face</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Follow-up</fullName>
+        <default>false</default>
+        <label>Follow-up</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Gift</fullName>
+        <default>false</default>
+        <label>Gift</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Industry Event</fullName>
+        <default>false</default>
+        <label>Industry Event</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Letter</fullName>
+        <default>false</default>
+        <label>Letter</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Meeting - External</fullName>
+        <default>false</default>
+        <label>Meeting - External</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Meeting - Internal</fullName>
+        <default>false</default>
+        <label>Meeting - Internal</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Phone</fullName>
+        <default>false</default>
+        <label>Phone</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Reassignment</fullName>
+        <default>false</default>
+        <label>Reassignment</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Sent GES Show Business</fullName>
+        <default>false</default>
+        <label>Sent GES Show Business</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Sent Proposal</fullName>
+        <default>false</default>
+        <label>Sent Proposal</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Site Visit</fullName>
+        <default>false</default>
+        <label>Site Visit</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Solutions Presentation</fullName>
+        <default>false</default>
+        <label>Solutions Presentation</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Task</fullName>
+        <default>false</default>
+        <label>Task</label>
+    </standardValue>
+    <standardValue>
+        <fullName>File Transferred</fullName>
+        <default>false</default>
+        <label>File Transferred</label>
+    </standardValue>
+    <standardValue>
+        <fullName>File Returned</fullName>
+        <default>false</default>
+        <label>File Returned</label>
+    </standardValue>
+    <standardValue>
+        <fullName>File Received</fullName>
+        <default>false</default>
+        <label>File Received</label>
+    </standardValue>
+    <standardValue>
+        <fullName>File Sent</fullName>
+        <default>false</default>
+        <label>File Sent</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Researching Lost File</fullName>
+        <default>false</default>
+        <label>Researching Lost File</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Requested Return from Current Owner</fullName>
+        <default>false</default>
+        <label>Requested Return from Current Owner</label>
+    </standardValue>
+    <standardValue>
+        <fullName>File Requested from Show Close</fullName>
+        <default>false</default>
+        <label>File Requested from Show Close</label>
+    </standardValue>
+    <standardValue>
+        <fullName>File Requested from Puliz</fullName>
+        <default>false</default>
+        <label>File Requested from Puliz</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Retrieve File</fullName>
+        <default>false</default>
+        <label>Retrieve File</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Electrical Problem Orders</fullName>
+        <default>false</default>
+        <label>Electrical Problem Orders</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Reminder</fullName>
+        <default>false</default>
+        <label>Reminder</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Internal communication</fullName>
+        <default>false</default>
+        <label>Internal communication</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Meeting Arrangement</fullName>
+        <default>false</default>
+        <label>Meeting Arrangement</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Call: Chase order (pre invoice call)</fullName>
+        <default>false</default>
+        <label>Call: Chase order (pre invoice call)</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Call: Up-sell attempt made</fullName>
+        <default>false</default>
+        <label>Call: Up-sell attempt made</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Call: Lead Generation</fullName>
+        <default>false</default>
+        <label>Call: Lead Generation</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Call: Inbound- Lead Generation</fullName>
+        <default>false</default>
+        <label>Call: Inbound- Lead Generation</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Call: Courtesy intro as event contractor</fullName>
+        <default>false</default>
+        <label>Call: Courtesy intro as event contractor</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Call: Courtesy following invoice</fullName>
+        <default>false</default>
+        <label>Call: Courtesy following invoice</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Call: General Inbound</fullName>
+        <default>false</default>
+        <label>Call: General Inbound</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Call: Inbound -From Site</fullName>
+        <default>false</default>
+        <label>Call: Inbound -From Site</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Outbound call</fullName>
+        <default>false</default>
+        <label>Outbound call</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Order Feedback Coaching</fullName>
+        <default>false</default>
+        <label>Order Feedback Coaching</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Order Feedback Error</fullName>
+        <default>false</default>
+        <label>Order Feedback Error</label>
+    </standardValue>
+</StandardValueSet>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>IsManualIntervention__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>It is used to identify the record which goes for manual Intervention</description>
+    <label>IsManualIntervention</label>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

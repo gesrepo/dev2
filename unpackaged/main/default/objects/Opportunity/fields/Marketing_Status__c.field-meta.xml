@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Marketing_Status__c</fullName>
+    <description>Used to hold the UK Marketing status</description>
+    <inlineHelpText>Please set the status, default is STATUS NOT SET</inlineHelpText>
+    <label>Marketing Status</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Awaiting organiser approval</fullName>
+                <default>false</default>
+                <label>Awaiting organiser approval</label>
+            </value>
+            <value>
+                <fullName>Complete</fullName>
+                <default>false</default>
+                <label>Complete</label>
+            </value>
+            <value>
+                <fullName>Hold</fullName>
+                <default>false</default>
+                <label>Hold</label>
+            </value>
+            <value>
+                <fullName>List incomplete</fullName>
+                <default>false</default>
+                <label>List incomplete</label>
+            </value>
+            <value>
+                <fullName>Marketing Campaign required</fullName>
+                <default>false</default>
+                <label>Marketing Campaign required</label>
+            </value>
+            <value>
+                <fullName>Marketing cancelled</fullName>
+                <default>false</default>
+                <label>Marketing cancelled</label>
+            </value>
+            <value>
+                <fullName>Need more information</fullName>
+                <default>false</default>
+                <label>Need more information</label>
+            </value>
+            <value>
+                <fullName>No information</fullName>
+                <default>false</default>
+                <label>No information</label>
+            </value>
+            <value>
+                <fullName>No list</fullName>
+                <default>false</default>
+                <label>No list</label>
+            </value>
+            <value>
+                <fullName>No marketing required-Org will not approve</fullName>
+                <default>false</default>
+                <label>No marketing required-Org will not approve</label>
+            </value>
+            <value>
+                <fullName>No marketing required-Other</fullName>
+                <default>false</default>
+                <label>No marketing required-Other</label>
+            </value>
+            <value>
+                <fullName>No marketing required-Show too small</fullName>
+                <default>false</default>
+                <label>No marketing required-Show too small</label>
+            </value>
+            <value>
+                <fullName>No marketing required-Top Spec</fullName>
+                <default>false</default>
+                <label>No marketing required-Top Spec</label>
+            </value>
+            <value>
+                <fullName>No services to market</fullName>
+                <default>false</default>
+                <label>No services to market</label>
+            </value>
+            <value>
+                <fullName>Proofs required</fullName>
+                <default>false</default>
+                <label>Proofs required</label>
+            </value>
+            <value>
+                <fullName>Speak to Account Manager</fullName>
+                <default>false</default>
+                <label>Speak to Account Manager</label>
+            </value>
+            <value>
+                <fullName>Speak to BDM</fullName>
+                <default>false</default>
+                <label>Speak to BDM</label>
+            </value>
+            <value>
+                <fullName>Speak to GPX</fullName>
+                <default>false</default>
+                <label>Speak to GPX</label>
+            </value>
+            <value>
+                <fullName>Speak to LOG</fullName>
+                <default>false</default>
+                <label>Speak to LOG</label>
+            </value>
+            <value>
+                <fullName>Special Instructions</fullName>
+                <default>false</default>
+                <label>Special Instructions</label>
+            </value>
+            <value>
+                <fullName>STATUS NOT SET</fullName>
+                <default>true</default>
+                <label>STATUS NOT SET</label>
+            </value>
+            <value>
+                <fullName>Awaiting AM</fullName>
+                <default>false</default>
+                <label>Awaiting AM</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

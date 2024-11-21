@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Hedy_Watters</fullName>
+    <columns>NAME</columns>
+    <columns>Account__c</columns>
+    <columns>Show_ID__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Sales_Person__c</field>
+        <operation>contains</operation>
+        <value>Hedy Watters</value>
+    </filters>
+    <filters>
+        <field>Show_Inactive__c</field>
+        <operation>equals</operation>
+        <value>0</value>
+    </filters>
+    <label>Hedy Watters</label>
+    <language>en_US</language>
+    <sharedTo>
+        <group>Hedy_Watters</group>
+    </sharedTo>
+</ListView>

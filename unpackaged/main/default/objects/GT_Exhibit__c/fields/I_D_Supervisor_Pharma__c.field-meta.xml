@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>I_D_Supervisor_Pharma__c</fullName>
+    <label>I&amp;D Supervisor</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Dennis Skarupa</fullName>
+                <default>false</default>
+                <label>Dennis Skarupa</label>
+            </value>
+            <value>
+                <fullName>Don Hadrava</fullName>
+                <default>false</default>
+                <label>Don Hadrava</label>
+            </value>
+            <value>
+                <fullName>Gary Vanderpol</fullName>
+                <default>false</default>
+                <label>Gary Vanderpol</label>
+            </value>
+            <value>
+                <fullName>I&amp;D Supervisor 1</fullName>
+                <default>false</default>
+                <label>I&amp;D Supervisor 1</label>
+            </value>
+            <value>
+                <fullName>I&amp;D Supervisor 2</fullName>
+                <default>false</default>
+                <label>I&amp;D Supervisor 2</label>
+            </value>
+            <value>
+                <fullName>I&amp;D Supervisor 3</fullName>
+                <default>false</default>
+                <label>I&amp;D Supervisor 3</label>
+            </value>
+            <value>
+                <fullName>Kari Storm</fullName>
+                <default>false</default>
+                <label>Kari Storm</label>
+            </value>
+            <value>
+                <fullName>Scott Mattson</fullName>
+                <default>false</default>
+                <label>Scott Mattson</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

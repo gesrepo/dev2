@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Services_Required_CrownCastle__c</fullName>
+    <inlineHelpText>Hold Shift key to select multiple options.</inlineHelpText>
+    <label>Services Required</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>AV</fullName>
+                <default>false</default>
+                <label>AV</label>
+            </value>
+            <value>
+                <fullName>Carpet</fullName>
+                <default>false</default>
+                <label>Carpet</label>
+            </value>
+            <value>
+                <fullName>Cleaning</fullName>
+                <default>false</default>
+                <label>Cleaning</label>
+            </value>
+            <value>
+                <fullName>Electrical</fullName>
+                <default>false</default>
+                <label>Electrical</label>
+            </value>
+            <value>
+                <fullName>Furniture</fullName>
+                <default>false</default>
+                <label>Furniture</label>
+            </value>
+            <value>
+                <fullName>Internet</fullName>
+                <default>false</default>
+                <label>Internet</label>
+            </value>
+            <value>
+                <fullName>Labor</fullName>
+                <default>false</default>
+                <label>Labor</label>
+            </value>
+            <value>
+                <fullName>Lead Retrieval</fullName>
+                <default>false</default>
+                <label>Lead Retrieval</label>
+            </value>
+            <value>
+                <fullName>Material Handling</fullName>
+                <default>false</default>
+                <label>Material Handling</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

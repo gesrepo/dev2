@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Normal_Requested_Date_Time</fullName>
+    <active>true</active>
+    <description>Normal Requested must have 4-48 hours specified</description>
+    <errorConditionFormula>If (ISPICKVAL (Priority__c, &quot;Normal (1 Business Day)&quot;) &amp;&amp; (Requested_Complete_Date_Time__c &lt; NOW()+0.1667  || Requested_Complete_Date_Time__c &gt; NOW()+2) &amp;&amp; ISPICKVAL (Status__c, &quot;New&quot;), TRUE, FALSE)</errorConditionFormula>
+    <errorDisplayField>Requested_Complete_Date_Time__c</errorDisplayField>
+    <errorMessage>You must specify the complete time within 4 and 48 hours.</errorMessage>
+</ValidationRule>

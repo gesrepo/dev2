@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>GES_NOT_ALLOWED</fullName>
+    <active>true</active>
+    <description>Please do not enter a GES location. Select it from the Facility field above.</description>
+    <errorConditionFormula>AND( LEN(  Ship_To_Company__c  ) &gt;0,  LEFT(UPPER(Ship_To_Company__c), 3)  = &quot;GES&quot;  )
+&amp;&amp; NOT(OR($Profile.Name = &#39;GES Interface&#39;, $Profile.Name = &#39;EMEA Spiro Interface&#39;, $Profile.Name = &#39;EDAdmin_Interface&#39;,$Profile.Name = &#39;System Administrator&#39;,
+$User.Id = &quot;00540000003NbAFAA0&quot;, 
+$User.Id = &quot;0051W000004H7uHQAS&quot;)) 
+
+/*Connie Masters and Shelly Barnes for AV Non-shows */</errorConditionFormula>
+    <errorDisplayField>Ship_To_Company__c</errorDisplayField>
+    <errorMessage>Please do not enter a GES location. Select it from the Facility field above.</errorMessage>
+</ValidationRule>

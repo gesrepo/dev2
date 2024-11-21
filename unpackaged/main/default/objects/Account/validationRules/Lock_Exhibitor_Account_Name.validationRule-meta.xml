@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Lock_Exhibitor_Account_Name</fullName>
+    <active>true</active>
+    <description>Make Name field of &quot;Exhibitor&quot; type account to read-only for everyone except certain profiles.</description>
+    <errorConditionFormula>AND( $RecordType.Name = &#39;Exhibitor&#39;, 
+ISCHANGED(Name), 
+
+NOT(OR($Profile.Name = &#39;EDAdmin&#39;,
+$Profile.Name = &#39;EDAdmin_Interface&#39;,
+$Profile.Name = &#39;GES Interface&#39;, 
+$Profile.Name = &#39;EMEA Spiro Interface&#39;,
+$Profile.Name = &#39;AV Support User&#39;, 
+$Profile.Name = &#39;System Administrator&#39;, 
+$Profile.Name = &#39;EMEA System Administrator&#39;, 
+$Profile.Name = &#39;EMEA Salesforce Support User&#39;, 
+$Profile.Name = &#39;Salesforce Support User&#39;,
+$Profile.Name = &#39;Events Salesforce Support User&#39;, 
+$Profile.Name = &quot;GES EMEA Service Manager&quot;, 
+$Profile.Name = &quot;EMEA Credit Control&quot;, 
+$Profile.Name = &quot;GES Administrator Interface&quot;,
+$Profile.Name = &quot;Blitz Sales Rep&quot;,
+$Profile.Name = &quot;SOP Interface&quot;,
+$Profile.Name = &quot;Marketing Super Users&quot;,
+$Profile.Name = &quot;Digital Products/IT Admin&quot;,
+$User.Last_Name_First_Name__c  = &quot;Giles, Rebecca&quot;,
+$User.Last_Name_First_Name__c  = &quot;Chiong, Jo Ann&quot;,
+$User.Last_Name_First_Name__c  = &quot;Manuel, Carlysle&quot;
+ )))</errorConditionFormula>
+    <errorDisplayField>Name</errorDisplayField>
+    <errorMessage>Account Name cannot be modified. Please send an email to creditrequests@ges.com to update customer information.</errorMessage>
+</ValidationRule>

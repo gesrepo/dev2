@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Transport_From_Exhibitor_Premises__c</fullName>
+    <defaultValue>false</defaultValue>
+    <inlineHelpText>Has the customer requested transport from their Premises? If &quot;Yes&quot;, check box</inlineHelpText>
+    <label>Transport From Exhibitor Premises</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

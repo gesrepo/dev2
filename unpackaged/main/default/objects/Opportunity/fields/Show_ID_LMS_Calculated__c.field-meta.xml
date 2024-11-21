@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Show_ID_LMS_Calculated__c</fullName>
+    <description>Determines the Show ID (LMS) even on E&amp;E Opportunities by going through the linked Show Occurrence. Updated for Housing opportunities to pull Show ID of related Tradeshow Show Occurrence. Housing opportunities also have some Stage Name&#39;s that are less than 4 characters in length, so that logic is being revised to use record type name instead for Housing only.</description>
+    <externalId>false</externalId>
+    <formula>IF(OR(Record_Type_Developer_Name__c == &#39;US_Housing&#39;, Record_Type_Developer_Name__c == &#39;AV_TS&#39;, Record_Type_Developer_Name__c == &#39;AV_CR&#39;, Record_Type_Developer_Name__c == &#39;AV_DB&#39;, Record_Type_Developer_Name__c == &#39;AV_IA&#39;, Record_Type_Developer_Name__c == &#39;AV_LO&#39;, Record_Type_Developer_Name__c == &#39;AV&#39;, Record_Type_Developer_Name__c == &#39;AV_PO&#39;, Record_Type_Developer_Name__c == &#39;AV_PS&#39;, Record_Type_Developer_Name__c == &#39;AV_CV&#39; ), Show_Occurrence__r.Show_Name__r.Show_ID__c,IF(LEN(TEXT(StageName)) &lt;4, Show_Name__r.Show_ID__c, Show_Occurrence__r.Show_Name__r.Show_ID__c))</formula>
+    <label>Show ID (LMS) - Calculated</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

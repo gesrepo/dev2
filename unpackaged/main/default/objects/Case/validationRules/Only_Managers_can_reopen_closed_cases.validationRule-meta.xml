@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Only_Managers_can_reopen_closed_cases</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND( 
+ ISCHANGED( Status ) ,
+ TEXT( Status ) &lt;&gt; &#39;Closed&#39;,
+ TEXT( PRIORVALUE( Status ) ) = &#39;Closed&#39; ,
+ NOT(OR( $Profile.Name = &#39;System Administrator&#39;,  $UserRole.DeveloperName = &#39;GES_NSC_Order_Entry_Supervisor&#39;, $UserRole.DeveloperName = &#39;GES_NSC_Resolutions_Supervisor&#39;, $UserRole.DeveloperName = &#39;GES_NSC_Director&#39;, $UserRole.DeveloperName = &#39;GES_NSC_Inbound_Supervisor&#39;, $UserRole.DeveloperName = &#39;GES_NSC_Admin&#39;,$Profile.Name = &#39;GES EMEA Service Manager&#39;,$Profile.Name = &#39;GES EMEA Service Supervisor&#39;,$Profile.Name = &#39;GES EMEA Service&#39;,$Profile.Name = &#39;GES Interface&#39;)) 
+)</errorConditionFormula>
+    <errorMessage>You do not have sufficient privileges to modify closed case(s).</errorMessage>
+</ValidationRule>

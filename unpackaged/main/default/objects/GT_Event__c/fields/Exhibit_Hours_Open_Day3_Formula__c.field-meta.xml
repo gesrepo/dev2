@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Exhibit_Hours_Open_Day3_Formula__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(HOUR(Exhibit_Hours_Open_Day_3__c) = 0, TEXT(12),
+IF(AND(HOUR(Exhibit_Hours_Open_Day_3__c) &gt; 0, HOUR(Exhibit_Hours_Open_Day_3__c) &lt;= 12),
+TEXT(HOUR(Exhibit_Hours_Open_Day_3__c)),
+TEXT(HOUR(Exhibit_Hours_Open_Day_3__c) - 12))) +
+IF(NOT(ISBLANK(Exhibit_Hours_Open_Day_3__c)),
+&quot;:&quot; + LPAD(TEXT(MINUTE(Exhibit_Hours_Open_Day_3__c)), 2, &#39;0&#39;) + &quot; &quot; + IF(HOUR(Exhibit_Hours_Open_Day_3__c) &lt; 12, &quot;AM&quot;, &quot;PM&quot;),&quot;&quot;)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Exhibit Hours Open-Day3</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

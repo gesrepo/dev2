@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>When_did_your_issue_occur__c</fullName>
+    <label>When did your issue occur</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Pre-show</fullName>
+                <default>false</default>
+                <label>Pre-show</label>
+            </value>
+            <value>
+                <fullName>During show build</fullName>
+                <default>false</default>
+                <label>During show build</label>
+            </value>
+            <value>
+                <fullName>While the show was open</fullName>
+                <default>false</default>
+                <label>While the show was open</label>
+            </value>
+            <value>
+                <fullName>During the breakdown</fullName>
+                <default>false</default>
+                <label>During the breakdown</label>
+            </value>
+            <value>
+                <fullName>Post-show</fullName>
+                <default>false</default>
+                <label>Post-show</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

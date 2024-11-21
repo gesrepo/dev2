@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ED_PRFSubmit_EstShipDateNotBlank</fullName>
+    <active>true</active>
+    <description>The Estimated ship date must be filled in on PRF Submit.</description>
+    <errorConditionFormula>PRF_Submitted__c =true &amp;&amp; 
+ISPICKVAL(GBMS_CORE__c, &quot;GBMS&quot;) &amp;&amp; 
+(GBMSProjectStatus__c = &quot;Forecast&quot; || ISBLANK(GBMSProjectStatus__c ) ) 
+&amp;&amp; $RecordType.DeveloperName = &quot;E_D_Projects&quot; 
+&amp;&amp; ISBLANK( PRFShip_Date__c )
+&amp;&amp; ($Profile.Name != &quot;GES Administrator Interface&quot;)</errorConditionFormula>
+    <errorDisplayField>PRFShip_Date__c</errorDisplayField>
+    <errorMessage>An Estimated ship date is required to submit this PRF.</errorMessage>
+</ValidationRule>

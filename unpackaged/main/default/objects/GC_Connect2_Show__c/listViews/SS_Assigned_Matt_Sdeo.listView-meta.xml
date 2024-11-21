@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SS_Assigned_Matt_Sdeo</fullName>
+    <booleanFilter>1 AND 2 AND (3 OR 4 OR 5 OR 6 OR 7)</booleanFilter>
+    <columns>Show_Start_Date__c</columns>
+    <columns>Show_End_Date__c</columns>
+    <columns>Client_Services_Manager__c</columns>
+    <columns>Opportunity_Name__c</columns>
+    <columns>Probability__c</columns>
+    <columns>StageName__c</columns>
+    <columns>NAME</columns>
+    <columns>Show_Name__c</columns>
+    <columns>Facility__c</columns>
+    <columns>Production_Location__c</columns>
+    <columns>Opportunity_Owner__c</columns>
+    <columns>Job_Number__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Show_End_Date__c</field>
+        <operation>greaterOrEqual</operation>
+        <value>THIS_YEAR</value>
+    </filters>
+    <filters>
+        <field>StageName__c</field>
+        <operation>equals</operation>
+        <value>CR,CV,PS,PO</value>
+    </filters>
+    <filters>
+        <field>Client_Services_Manager__c</field>
+        <operation>equals</operation>
+        <value>Matt Sdeo</value>
+    </filters>
+    <filters>
+        <field>Client_Services_Manager_2__c</field>
+        <operation>equals</operation>
+        <value>Matt Sdeo</value>
+    </filters>
+    <filters>
+        <field>Client_Services_Manager_3__c</field>
+        <operation>equals</operation>
+        <value>Matt Sdeo</value>
+    </filters>
+    <filters>
+        <field>Client_Services_Manager_4__c</field>
+        <operation>equals</operation>
+        <value>Matt Sdeo</value>
+    </filters>
+    <filters>
+        <field>Client_Services_Manager_5__c</field>
+        <operation>equals</operation>
+        <value>Matt Sdeo</value>
+    </filters>
+    <label>SS: Assigned Matt Sdeo</label>
+    <language>en_US</language>
+</ListView>

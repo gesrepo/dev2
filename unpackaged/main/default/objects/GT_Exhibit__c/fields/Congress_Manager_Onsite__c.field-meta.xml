@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Congress_Manager_Onsite__c</fullName>
+    <label>Congress Manager</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Joe Walsh</fullName>
+                <default>false</default>
+                <label>Joe Walsh</label>
+            </value>
+            <value>
+                <fullName>John Hasemann</fullName>
+                <default>false</default>
+                <label>John Hasemann</label>
+            </value>
+            <value>
+                <fullName>Rebecca Baker</fullName>
+                <default>false</default>
+                <label>Rebecca Baker</label>
+            </value>
+            <value>
+                <fullName>Kaitlyn Reynolds</fullName>
+                <default>false</default>
+                <label>Kaitlyn Reynolds</label>
+            </value>
+            <value>
+                <fullName>Rogers, Kayla</fullName>
+                <default>false</default>
+                <label>Rogers, Kayla</label>
+            </value>
+            <value>
+                <fullName>Kelly, Sue</fullName>
+                <default>false</default>
+                <label>Kelly, Sue</label>
+            </value>
+            <value>
+                <fullName>Holland, Linda</fullName>
+                <default>false</default>
+                <label>Holland, Linda</label>
+            </value>
+            <value>
+                <fullName>Chambers, Brenda</fullName>
+                <default>false</default>
+                <label>Chambers, Brenda</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>EMEA_Account__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Will be set to true if this is an uploaded EMEA account e.g. from R2 Blitz, SOP etc</description>
+    <inlineHelpText>Is this an EMEA account?</inlineHelpText>
+    <label>EMEA_Account</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

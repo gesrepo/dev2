@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CC_Project_Manager__c</fullName>
+    <label>CC Project Manager</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Juanita Timney</fullName>
+                <default>false</default>
+                <label>Juanita Timney</label>
+            </value>
+            <value>
+                <fullName>Stephanie Naida</fullName>
+                <default>false</default>
+                <label>Stephanie Naida</label>
+            </value>
+            <value>
+                <fullName>Cassandra Zwick</fullName>
+                <default>false</default>
+                <label>Cassandra Zwick</label>
+            </value>
+            <value>
+                <fullName>Kayleigh Fortuna</fullName>
+                <default>false</default>
+                <label>Kayleigh Fortuna</label>
+            </value>
+            <value>
+                <fullName>Lisandra Fernandez</fullName>
+                <default>false</default>
+                <label>Lisandra Fernandez</label>
+            </value>
+            <value>
+                <fullName>Katie Lillie</fullName>
+                <default>false</default>
+                <label>Katie Lillie</label>
+            </value>
+            <value>
+                <fullName>Lisa Gebhart</fullName>
+                <default>false</default>
+                <label>Lisa Gebhart</label>
+            </value>
+            <value>
+                <fullName>Mulvey, Mike</fullName>
+                <default>false</default>
+                <label>Mulvey, Mike</label>
+            </value>
+            <value>
+                <fullName>Pesch, Patty</fullName>
+                <default>false</default>
+                <label>Pesch, Patty</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

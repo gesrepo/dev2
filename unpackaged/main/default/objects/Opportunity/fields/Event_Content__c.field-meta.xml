@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Event_Content__c</fullName>
+    <label>Event Content</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Virtual Event Always</fullName>
+                <default>false</default>
+                <label>Virtual Event Always</label>
+            </value>
+            <value>
+                <fullName>Virtual Event only for certain years.</fullName>
+                <default>false</default>
+                <label>Virtual Event only for certain years.</label>
+            </value>
+            <value>
+                <fullName>General Session Always</fullName>
+                <default>false</default>
+                <label>General Session Always</label>
+            </value>
+            <value>
+                <fullName>General Session for certain years.</fullName>
+                <default>false</default>
+                <label>General Session for certain years.</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

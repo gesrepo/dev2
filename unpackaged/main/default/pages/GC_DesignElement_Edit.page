@@ -1,0 +1,176 @@
+<apex:page showHeader="true" sidebar="true" standardController="GC_Design_Element__c" docType="html-5.0" tabStyle="GC_Design_Element__c" extensions="GC_DesignElement_EditController" action="{!checkandValidate}">
+      <apex:stylesheet value="{!URLFOR($Resource.GC_Assets, 'GC_Assets/css/GC_PageStyles.css')}" />
+  <apex:includeScript value="https://code.jquery.com/jquery-1.10.2.js" />
+  <apex:includeScript value="https://code.jquery.com/ui/1.11.4/jquery-ui.js" />
+  <apex:styleSheet value="https://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css" />
+    
+    <apex:form id="gotForm">
+        <apex:sectionHeader title="Design Element Task Edit" subtitle="{!designElement.NAME}"></apex:sectionHeader>
+        <apex:pageMessages id="messages" />
+        <apex:pageBlock title="">
+            <apex:pageBlockButtons >
+                <apex:commandButton value="Save" action="{!saveRecord}"/>
+                <apex:commandButton value="Cancel" action="{!cancelAndBack}" immediate="true"  html-formnovalidate="formnovalidate"/>
+            </apex:pageBlockButtons>
+            <!--<apex:pageBlockSection title="Show Details">
+                
+            </apex:pageBlockSection>-->
+            <apex:pageBlockSection title="Information" id="infoPageBlock">
+                <apex:inputField value="{!designElement.Date_Assigned__c}"/> 
+                <apex:outputText ></apex:outputText>
+                <apex:inputField value="{!designElement.Requested_Due_Date__c}"/> 
+                <apex:outputField value="{!designElement.Status__c}"/>  
+                <apex:inputField value="{!designElement.Estimated_Design_Hours__c}"/>               
+                <!--added re-render 1/29/2019 to allow for task type condition-CB-->
+                <apex:pageBlockSectionItem >
+                <apex:outputLabel value="Task Type" />
+                <apex:actionRegion >
+                <apex:inputField value="{!designElement.Task_Type__c}" required="true">
+                    <apex:actionSupport event="onchange" action="{!checkandValidate}" reRender="infoPageBlock2" />
+                            </apex:inputField>
+                            </apex:actionRegion>
+                 </apex:pageBlockSectionItem>
+                <!--apex:inputField value="{!designElement.Design_Request_Form__c}" required="true" /--> <!--SAL-1293 this is no longer required -12/20/23 - Sajid -->
+                <apex:inputField value="{!designElement.Connect2_Show__c}" required="true" /> <!--SAL-1293 added Show field -12/20/23 - Sajid -->
+                <!--added re-render 1/29/2019 to allow for Design Element condition-CB-->
+                <apex:pageBlockSectionItem >
+                <apex:outputLabel value="Design Element" />
+                <apex:actionRegion >
+                <apex:inputField value="{!designElement.Design_Element__c}" required="true">
+                <apex:actionSupport event="onchange" action="{!checkandValidate}" reRender="infoPageBlock2" />
+                            </apex:inputField>
+                            </apex:actionRegion>
+                 </apex:pageBlockSectionItem>
+                <apex:outputText ></apex:outputText>
+                <apex:inputField value="{!designElement.Task_Description__c}" required="true" />
+            </apex:pageBlockSection>    
+            <apex:pageBlockSection id="infoPageBlock2">
+                <apex:inputField value="{!designElement.Requester__c}" required="true" />               
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="Deliverable" />
+                        <apex:actionRegion >
+                            <apex:inputField value="{!designElement.Deliverable__c}" required="true" >
+                                <apex:actionSupport event="onchange" action="{!checkandValidate}" reRender="infoPageBlock2" />
+                            </apex:inputField>
+                        </apex:actionRegion>
+                </apex:pageBlockSectionItem>
+                
+               <!-- <apex:inputField value="{!designElement.Deliverable__c}" required="true" /> -->
+                <apex:inputField value="{!designElement.Rework__c}"/>
+                <apex:inputField value="{!designElement.Deliverable_Other__c}"  />
+                <apex:inputField value="{!designElement.Unit_Budget_Structure_and_Graphics__c}"/>
+                <apex:inputField value="{!designElement.Justification_For_Deliverable__c}" rendered="{!checkFlagForDeliverable}" required="{!checkFlagForDeliverable}" />
+                <apex:OutputText rendered="{! !checkFlagForDeliverable}" ></apex:OutputText>
+                <apex:inputField value="{!designElement.Active__c}"/>  
+                <apex:inputField value="{!designElement.Submit_Date__c}"/>
+                <apex:inputField value="{!designElement.Metal_Color__c}"/>
+                <apex:inputField value="{!designElement.Fill_Panel_Description__c}"/>  
+            </apex:pageBlockSection>
+            <apex:pageBlockSection id="renu">  
+                    <apex:pageBlockSectionItem >
+                        <apex:outputLabel value="Fast Track" />
+                            <apex:actionRegion >
+                                <apex:inputField value="{!designElement.Fast_Track__c }">
+                                    <apex:actionSupport event="onchange"  reRender="renu"/>
+                                </apex:inputField>
+                            </apex:actionRegion>
+                    </apex:pageBlockSectionItem>
+                   
+                    <apex:pageBlockSectionItem >                  
+                        <apex:outputLabel value="Fast Track Justification" rendered="{!designElement.Fast_Track__c== true}" />
+                        <apex:actionRegion >
+                            <apex:inputField value="{!designElement.Fast_Track_Justification__c }" required="true" rendered="{!designElement.Fast_Track__c}" >
+                                <apex:actionSupport event="onchange"  reRender="renu"/>
+                            </apex:inputField>
+                        </apex:actionRegion>
+                        
+                    </apex:pageBlockSectionItem>
+                    <apex:inputField value="{!designElement.Requestor_Shared_Files_Link__c}"/>
+            </apex:pageBlockSection> 
+           <!--
+           <apex:pageBlockSection title="LOC CODES">
+            </apex:pageBlockSection>
+            <div>
+               <table >
+                    <tr colspan="10">
+                        <td >
+                            <apex:outputLink value="http://defyconvention.ges.intra/design/LOC%20Codes/Forms/AllItems.aspx" target="_blank">LOC Codes</apex:outputLink>
+                        </td >
+                    </tr>
+                    <tr>
+                        <td colspan="10" style="padding-right: 100px;">
+                            <apex:outputtext label="" />
+                        </td>
+                        <td style="padding-right:10px;">
+                            <apex:inputField label="" style="width:40px; " value="{!designElement.LOC1__c}" required="true"/>
+                        </td >
+                        <td style="padding-right:10px;">
+                            <apex:inputField label="" style="width:40px; " value="{!designElement.LOC2__c}" required="true"/>
+                        </td >
+                        <td style="padding-right:10px;">
+                            <apex:inputField label="" style="width:40px; " value="{!designElement.LOC3__c}" required="true"/>
+                        </td >
+                        <td style="padding-right:10px;" >
+                            <apex:inputField label="" style="width:40px; " value="{!designElement.LOC4__c}" />
+                        </td >
+                        <td  style="padding-right:10px;" >
+                            <apex:inputField label="" style="width:40px; " value="{!designElement.LOC5__c}" />
+                        </td >
+                        <td  style="padding-right:10px;" >
+                            <apex:inputField label="" style="width:40px; " value="{!designElement.LOC6__c}" />
+                        </td >
+                        <td  style="padding-right:10px;" >
+                            <apex:inputField label="" style="width:40px; " value="{!designElement.LOC7__c}" />
+                        </td >
+                        <td  style="padding-right:10px;" >
+                            <apex:inputField label="" style="width:40px; " value="{!designElement.LOC8__c}" />
+                        </td >
+                        <td  style="padding-right:10px;" >
+                            <apex:inputField label="" style="width:40px; " value="{!designElement.LOC9__c}" />
+                        </td >
+                        <td  style="padding-right:10px;" >
+                            <apex:inputField label="" style="width:40px; " value="{!designElement.LOC10__c}" />
+                        </td >
+                    </tr>
+                </table>
+                
+                <div id="helpSection">
+                    <br />
+                <br />
+                1) Click on the “LOC Codes” link.<br />
+                2) Click your Venue<br />
+                3) Find the location of your unit on the floorplan<br />
+                4) Enter up to ten (10) LOC Codes (3 required) closest to your structure location(s)<br />
+                5) If your venue is not listed or if you are requesting a graphic you may enter “0000” in the required fields.<br />
+                </div>
+            </div>
+               -->
+            <apex:pageBlockSection title="Instructions">
+                <apex:inputField value="{!designElement.Task_Instruction__c}" style="width:150%" required="true" />
+                <apex:outputText />
+                <apex:inputField value="{!designElement.Revision__c}"/>
+                <apex:outputField value="{!designElement.Previous_Task_Instructions__c}" style="width:75%" />
+            </apex:pageBlockSection>
+            <apex:pageBlockSection title="Approvers">
+                <apex:inputField value="{!designElement.Account_Manager__c}" required="true"/> 
+                <!--<apex:inputField value="{!designElement.Detailer_Approver__c}"/>--> <!--Amarab 04062021 SAL-1243 Replacing old Designer/Detailer Approver1 field with new field-->
+                <apex:inputField value="{!designElement.Contact_Designer_Detailer_Approver1__c}"/>
+                                
+                <apex:inputField value="{!designElement.Secondary_Account_Manager__c}"/> 
+                <apex:inputField value="{!designElement.Detailer_Approver2__c}"/>
+                
+                <apex:inputField value="{!designElement.Director_of_Account_Manager__c}" required="true"/> 
+                <apex:inputField value="{!designElement.Detailer_Approver3__c}"/>
+                
+                <apex:inputField value="{!designElement.Creative_Director_Approvers__c}" required="true"/> 
+                <apex:inputField value="{!designElement.Detailer_Approver4__c}"/> 
+                
+                <apex:inputField value="{!designElement.Traffic_Administrator_Approver__c}" required="true"/> 
+                <apex:inputField value="{!designElement.Detailer_Approver5__c}"/>
+            </apex:pageBlockSection>
+            <apex:pageBlockSection title="Design Notes">
+                <apex:inputField value="{!designElement.Designer_Notes__c}" style="width:150%" />
+            </apex:pageBlockSection>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

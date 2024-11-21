@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Labor_Basis_Year__c</fullName>
+    <label>Labor Basis Year</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Conv Ctr - Low</fullName>
+                <default>false</default>
+                <label>Conv Ctr - Low</label>
+            </value>
+            <value>
+                <fullName>Conv Ctr - Med</fullName>
+                <default>false</default>
+                <label>Conv Ctr - Med</label>
+            </value>
+            <value>
+                <fullName>Conv Ctr - High</fullName>
+                <default>false</default>
+                <label>Conv Ctr - High</label>
+            </value>
+            <value>
+                <fullName>Hotel - Low</fullName>
+                <default>false</default>
+                <label>Hotel - Low</label>
+            </value>
+            <value>
+                <fullName>Hotel - Med</fullName>
+                <default>false</default>
+                <label>Hotel - Med</label>
+            </value>
+            <value>
+                <fullName>Hotel - High</fullName>
+                <default>false</default>
+                <label>Hotel - High</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

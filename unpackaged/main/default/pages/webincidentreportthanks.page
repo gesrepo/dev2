@@ -1,0 +1,29 @@
+<apex:page controller="WebIncidentReportController_Custom" showHeader="false" sidebar="false" standardStylesheets="true">
+
+    <head>
+        <apex:stylesheet value="{!URLFOR($Resource.IncidentReportsForm, 'css/IncidentThanksPage.css')}"/>
+    </head>
+
+    <body >
+        <div id="content" class="shadow">
+            <div id="header">
+                <apex:image value="{!URLFOR($Resource.IncidentReportsForm, 'images/GESLogo.jpeg')}" />
+                <h1>&nbsp; {!$Label.Thank_You}</h1>
+            </div>
+            <p>
+                {!$Label.Thank_You_Message}
+                <a href="{!$Label.Site_Link}" target="_self">{!$Label.Here}</a>
+                {!$Label.To_Submit_Another}
+            </p>
+
+            <apex:outputPanel layout="none" rendered="{!notSubmitted}">
+                <p>
+                    <b>{!$Label.Please_Note}</b> 
+                    {!$Label.Incident_Report} <b>"{!report.Name}"</b> {!$Label.Not_Submitted_Message}
+                    <a href="{!$Label.Site_Link}" target="_self">{!$Label.Here}</a>
+                    {!$Label.Not_Submitted_Message2}
+                </p>
+            </apex:outputPanel>            
+        </div>
+    </body>
+</apex:page>

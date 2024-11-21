@@ -1,0 +1,4 @@
+<apex:page standardController="GC_Design_Element__c" extensions="GC_ReviseDesignElement_Controller" action="{!createRevision}">
+    <apex:pageMessages />
+    <apex:outputLink value="/{!designElement.Id}">&lt; Return to Design Element</apex:outputLink>
+</apex:page>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>X3rd_Party_List__c</fullName>
+    <description>Predefined list of 3rd party vendors. Values within this field will auto populated into the 3rd party vendor text field.</description>
+    <label>3rd Party List</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Van Der Veen (Electrical)</fullName>
+                <default>false</default>
+                <label>Van Der Veen (Electrical)</label>
+            </value>
+            <value>
+                <fullName>Hesta (Stand-Fitting)</fullName>
+                <default>false</default>
+                <label>Hesta (Stand-Fitting)</label>
+            </value>
+            <value>
+                <fullName>JMT Furniture (Furniture)</fullName>
+                <default>false</default>
+                <label>JMT Furniture (Furniture)</label>
+            </value>
+            <value>
+                <fullName>JMT Carpets (Carpets)</fullName>
+                <default>false</default>
+                <label>JMT Carpets (Carpets)</label>
+            </value>
+            <value>
+                <fullName>Hapeco (Furniture)</fullName>
+                <default>false</default>
+                <label>Hapeco (Furniture)</label>
+            </value>
+            <value>
+                <fullName>Creative Hire (Furniture)</fullName>
+                <default>false</default>
+                <label>Creative Hire (Furniture)</label>
+            </value>
+            <value>
+                <fullName>Provision (Name-boards)</fullName>
+                <default>false</default>
+                <label>Provision (Name-boards)</label>
+            </value>
+            <value>
+                <fullName>David de Dios (Furniture)</fullName>
+                <default>false</default>
+                <label>David de Dios (Furniture)</label>
+            </value>
+            <value>
+                <fullName>Onsite Name-board Printing UK</fullName>
+                <default>false</default>
+                <label>Onsite Name-board Printing UK</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

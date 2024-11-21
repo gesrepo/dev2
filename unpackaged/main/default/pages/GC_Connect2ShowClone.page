@@ -1,0 +1,67 @@
+<apex:page standardController="GC_Connect2_Show__c" extensions="GC_Connect2ShowController">
+
+<script type="text/javascript">
+    function checkAll(cb, checkId) {
+        var inputElem = document.getElementsByTagName("input");
+        for (var i = 0; i < inputElem.length; i++) {
+            if (inputElem[i].id.indexOf(checkId) != -1) {
+                if (checkId == "selectedItems" || checkId =="selectedStms") {
+                    if (!cb.checked) {
+                        for (var j = 0; j < inputElem.length; j++) {
+                            inputElem[j].checked = cb.checked;
+                        }
+                    }
+                    inputElem[i].checked = cb.checked;
+                }
+            }
+        }
+    }
+</script>
+    <apex:form >
+        <apex:pageMessages id="messages" />
+        <apex:pageBlock title="{!show.Name} - {!show.Show_Name__c}">
+            <apex:pageBlockSection columns="1" title="Show Attributes">
+            <apex:pageBlockTable value="{!showAttHolders}" var="sa">
+                <apex:column >
+                    <apex:facet name="header">
+                        <apex:inputCheckbox onclick="checkAll(this, 'selectedItems');">
+                        </apex:inputCheckbox>
+                    </apex:facet>
+                    <apex:inputCheckbox value="{!sa.selected}" id="selectedItems" />
+                </apex:column>
+                <apex:column value="{!sa.showAttribute.Name}" />
+                <apex:column value="{!sa.showAttribute.RecordType.Name}" headerValue="Attribute Type"/>
+            </apex:pageBlockTable>
+            </apex:pageBlockSection>
+            <apex:pageBlockSection columns="1" title="Show Team">
+            <apex:pageBlockTable value="{!stmHolders}" var="stm">
+                <apex:column >
+                    <apex:facet name="header">
+                        <apex:inputCheckbox onclick="checkAll(this, 'selectedStms');">
+                        </apex:inputCheckbox>
+                    </apex:facet>
+                    <apex:inputCheckbox value="{!stm.selected}" id="selectedStms" />
+                </apex:column>
+                <apex:column value="{!stm.showTeam.Name}" />
+                <apex:column value="{!stm.showTeam.User__c}" />
+                <apex:column value="{!stm.showTeam.User_Information__c}" />
+                <apex:column value="{!stm.showTeam.Show_Role__c}" />
+            </apex:pageBlockTable>
+            </apex:pageBlockSection>
+        </apex:pageBlock>
+        <apex:pageBlock title="Target Show to Copy Attributes/Members">
+            <apex:pageBlockSection id="pb1">
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="Connect2 Show"/>
+                    <apex:inputField value="{!tempShowAtt.Connect2_Show__c}" onchange="af1();"/>
+                </apex:pageBlockSectionItem>
+                <apex:outputLabel value="{!targetShow.Show_Name__c}" rendered="{!targetShow != null}" />
+            </apex:pageBlockSection>
+        <apex:pageBlockButtons location="Bottom">
+            <apex:commandButton value="Clone" action="{!itemsSelected}" styleClass="pageButton" reRender="messages" />
+            <apex:commandButton value="Cancel" action="{!cancel}" styleClass="pageButton" reRender="messages" />
+        </apex:pageBlockButtons>
+        </apex:pageBlock>
+        <apex:actionFunction name="af1" reRender="pb1,messages" action="{!doQuery}"/>
+    </apex:form>
+</apex:page>

@@ -1,0 +1,98 @@
+<apex:page showHeader="false" title="GES Online Chat">
+    <!-- This script takes the endpoint URL parameter passed from the deployment page and makes it the action for the form -->
+    <script type="text/javascript">
+    (function() { function handlePageLoad() {
+        var endpointMatcher = new RegExp("[\\?\\&]endpoint=([^&#]*)");
+        document.getElementById('prechatForm').setAttribute('action',
+        decodeURIComponent(endpointMatcher.exec(document.location.search)[1]));
+        }
+        
+        if (window.addEventListener) {
+            window.addEventListener('load', handlePageLoad, false);
+        }
+        else { 
+            window.attachEvent('onload', handlePageLoad, false);
+        }
+    })();
+    </script>
+    
+    <script type='text/javascript' src='https://c.la2c1.salesforceliveagent.com/content/g/deployment.js'/>
+	<script type='text/javascript'>
+		liveagent.addCustomDetail('Channel','Web').map('Case','Origin','true',false,true);
+	</script>
+    
+    <script type="text/javascript">
+		function OnSubmitValidate(chatForm)
+		{
+			for(var i=0; i<chatForm.length; i++)
+			{
+				var element = chatForm.elements[i];
+				
+				if (element.id.indexOf("reqText") >= 0)
+				{
+					var elNum = element.id.substring(7,element.id.length);
+					var lbl = document.getElementById("reqLabel"+elNum);
+						
+					if (element.value == null || element.value == "")
+					{
+						lbl.style.color = "red";
+						element.focus();
+						return false;
+					}
+					else
+					{
+						lbl.style.color = "black";
+					}
+					
+					lbl = null;
+				}
+			}		
+		}        
+    </script> 
+	
+    <p class="banner" id="bannerHeader">
+    	Welcome to the Global Experience Specialists (GES) National Servicenter!<br/>
+    	To help us provide you Outstanding Service, please provide some information before we begin your chat.
+    </p>
+    
+    <form method='post' id='prechatForm' onsubmit='return OnSubmitValidate(this);'>
+    <div>
+	
+		<p>Required items indicated with<span style="color: red">*</span>.</p>
+    	<p>
+			<span class="questionLabel" id="reqLabel1">Your First and Last Name<span style="color: red">*</span></span><br/>
+    		<input type='text' id="reqText1" name='liveagent.prechat.name' size='75' /> <!-- id='prechat_field' -->
+		</p>
+	
+    	<p>
+			<span class="questionLabel" id="reqLabel2">Your Company Name<span style="color: red">*</span></span><br/>
+    		<input type='text' id="reqText2" name='liveagent.prechat:Company' size='75' /> <!-- id='prechat_companyname_field' -->
+		</p>
+		
+		<p>
+			<span class="questionLabel" id="reqLabel3">Your Email Address<span style="color: red">*</span></span><br/>
+		   	<input type='text' id="reqText3" name='liveagent.prechat:Email' size='75' />
+		</p>
+		
+		<p>
+			<span class="questionLabel" id="reqLabel4">Your Telephone Number<span style="color: red">*</span></span><br/>	
+		   	<input type='text' id="reqText4" name='liveagent.prechat:Phone' />
+		</p>
+		
+		<p>
+			<span class="questionLabel" id="optLabel1">Booth Number</span><br/>
+		   	<input type='text' id="optText1" name='liveagent.prechat:Booth' />
+		</p>
+		
+		<br/>  	
+    	
+    	<input type='submit' value='Request Chat' id='prechat_submit'/>
+    </div>
+    <style type="text/css">
+    	div {margin-left: 10px }
+		p.banner {margin-left: 10px; font-weight: bolder; color: blue;}
+		span.questionLabel {font-weight: bold}
+    </style>
+    </form>
+    
+</apex:page>

@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Sector__c</fullName>
+    <label>Sector</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Medical &amp; Healthcare</fullName>
+                <default>false</default>
+                <label>Medical &amp; Healthcare</label>
+            </value>
+            <value>
+                <fullName>Cosmetics/ Aesthetics</fullName>
+                <default>false</default>
+                <label>Cosmetics/ Aesthetics</label>
+            </value>
+            <value>
+                <fullName>Music/ Entertainment</fullName>
+                <default>false</default>
+                <label>Music/ Entertainment</label>
+            </value>
+            <value>
+                <fullName>Aerospace</fullName>
+                <default>false</default>
+                <label>Aerospace</label>
+            </value>
+            <value>
+                <fullName>HR Tech</fullName>
+                <default>false</default>
+                <label>HR Tech</label>
+            </value>
+            <value>
+                <fullName>Tech</fullName>
+                <default>false</default>
+                <label>Tech</label>
+            </value>
+            <value>
+                <fullName>Sport</fullName>
+                <default>false</default>
+                <label>Sport</label>
+            </value>
+            <value>
+                <fullName>FMCG</fullName>
+                <default>false</default>
+                <label>FMCG</label>
+            </value>
+            <value>
+                <fullName>Mobile Communications</fullName>
+                <default>false</default>
+                <label>Mobile Communications</label>
+            </value>
+            <value>
+                <fullName>Audio Visual</fullName>
+                <default>false</default>
+                <label>Audio Visual</label>
+            </value>
+            <value>
+                <fullName>Insurance</fullName>
+                <default>false</default>
+                <label>Insurance</label>
+            </value>
+            <value>
+                <fullName>Travel</fullName>
+                <default>false</default>
+                <label>Travel</label>
+            </value>
+            <value>
+                <fullName>Luxury</fullName>
+                <default>false</default>
+                <label>Luxury</label>
+            </value>
+            <value>
+                <fullName>Food Sector</fullName>
+                <default>false</default>
+                <label>Food Sector</label>
+            </value>
+            <value>
+                <fullName>Gaming</fullName>
+                <default>false</default>
+                <label>Gaming</label>
+            </value>
+            <value>
+                <fullName>Toy</fullName>
+                <default>false</default>
+                <label>Toy</label>
+            </value>
+            <value>
+                <fullName>Building, Construction, Home Repair</fullName>
+                <default>false</default>
+                <label>Building, Construction, Home Repair</label>
+            </value>
+            <value>
+                <fullName>Engineering</fullName>
+                <default>false</default>
+                <label>Engineering</label>
+            </value>
+            <value>
+                <fullName>Education</fullName>
+                <default>false</default>
+                <label>Education</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

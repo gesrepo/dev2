@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Cannot_edit_Name_field</fullName>
+    <active>true</active>
+    <description>Only Allow Craig Dingwall to change Job Classification field after record creation
+(change this to user ID after test)</description>
+    <errorConditionFormula>AND
+(ISCHANGED(Name), 
+NOT(OR(
+$Profile.Name = &#39;System Administrator&#39;,
+$Profile.Name = &#39;EMEA System Administrator&#39;,
+$Profile.Name = &#39;EMEA Salesforce Support User&#39;,
+$Profile.Name = &#39;EMEA Mark Eddy Admin&#39;,
+$Profile.Name = &#39;Salesforce Support User&#39;,
+$Profile.Name = &#39;Events Salesforce Support User&#39;, 
+$Profile.Name = &#39;EMEA GES System Administrator&#39;, 
+$Profile.Name = &#39;GES Interface&#39;, 
+$Profile.Name = &#39;SOP Interface&#39;,  
+$Profile.Name = &#39;IT Support - EMEA&#39;,
+$Profile.Name = &#39;IT Deployer - EMEA&#39;,
+$Profile.Name = &#39;Sales Admin - Housing&#39;)))</errorConditionFormula>
+    <errorMessage>Please contact Craig Dingwall to make changes to the Show Name field.
+Please Contact Chloe Smith for EMEA Show Name changes,</errorMessage>
+</ValidationRule>

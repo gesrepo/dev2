@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>LOB_Contracting_Count_US__c</fullName>
+    <description>Utility is to provide report filtering within the LOB Reports folder. Automatically populated with Process - Opportunity LOB Count Flow Launcher. References formula field - LOB Category. Tyler@vertiba.com</description>
+    <externalId>false</externalId>
+    <label>LOB Contracting Count US</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>GES_Project_Manager_Phone__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF((TEXT(GES_Project_Manager__c) == &quot;Mike Porter&quot;),&quot;630-671-7983&quot;, 
+IF((TEXT(GES_Project_Manager__c) == &quot;Sarah Montagne&quot;),&quot;+ 44 114 231 7835&quot;, 
+IF((TEXT(GES_Project_Manager__c) == &quot;Nick Ward&quot;),&quot;+ 44 114 231 7818&quot;, 
+IF((TEXT(GES_Project_Manager__c) == &quot;Chris Wright&quot;),&quot;+ 44 114 261 5787&quot;, 
+IF((TEXT(GES_Project_Manager__c) == &quot;Camille Da silva&quot;),&quot;+ 44 114 231 7839&quot;, 
+IF((TEXT(GES_Project_Manager__c) == &quot;Antonio Ferraro&quot;),&quot;+ 44 114 204 4177&quot;, 
+IF((TEXT(GES_Project_Manager__c) == &quot;Alexa Kelly&quot;),&quot;+ 44 114 261 5770&quot;, 
+IF((TEXT(GES_Project_Manager__c) == &quot;Heather Medus&quot;),&quot;+ 44 114 204 4161&quot;, 
+IF((TEXT(GES_Project_Manager__c) == &quot;Ana Wainman&quot;),&quot;+ 44 114 204 4178&quot;, 
+&quot;&quot;)))))))))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>GES Project Manager Phone</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

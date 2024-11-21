@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Order__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>Lookup to the order which this log belongs to.</description>
+    <inlineHelpText>Lookup to the order which this log belongs to.</inlineHelpText>
+    <label>Order</label>
+    <referenceTo>GC_Order__c</referenceTo>
+    <relationshipLabel>GC Core Interface Logs</relationshipLabel>
+    <relationshipName>GC_Core_Interface_Logs</relationshipName>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

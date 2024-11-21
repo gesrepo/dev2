@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Is_Account_Manager_Populated__c</fullName>
+    <externalId>false</externalId>
+    <formula>if(isblank(Account_Manager__c), &quot;No&quot;, &quot;Yes&quot;)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>Check Field for Account Manager Completed.</inlineHelpText>
+    <label>Is Account Manager Populated?</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

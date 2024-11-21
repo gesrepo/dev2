@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Proforma_Pricing__c</fullName>
+    <label>Proforma Pricing</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>CC Low</fullName>
+                <default>false</default>
+                <label>CC Low</label>
+            </value>
+            <value>
+                <fullName>CC Medium</fullName>
+                <default>false</default>
+                <label>CC Medium</label>
+            </value>
+            <value>
+                <fullName>CC High</fullName>
+                <default>false</default>
+                <label>CC High</label>
+            </value>
+            <value>
+                <fullName>Hotel Low</fullName>
+                <default>false</default>
+                <label>Hotel Low</label>
+            </value>
+            <value>
+                <fullName>Hotel Medium</fullName>
+                <default>false</default>
+                <label>Hotel Medium</label>
+            </value>
+            <value>
+                <fullName>Hotel High</fullName>
+                <default>false</default>
+                <label>Hotel High</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

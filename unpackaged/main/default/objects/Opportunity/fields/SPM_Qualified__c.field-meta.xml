@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SPM_Qualified__c</fullName>
+    <formula>AND(TEXT(StageName) != &#39;SL1&#39;, TEXT(StageName) != &#39;TS&#39;, TEXT(StageName) != &#39;SL3&#39;)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>SPM Qualified</label>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

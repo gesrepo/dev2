@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>GES_Move_In_Date_2__c</fullName>
+    <inlineHelpText>GES Move-in Day 2.</inlineHelpText>
+    <label>GES Move-In Date 2</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Date</type>
+</CustomField>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Pre_show_Planning_Ordering__c</fullName>
+    <label>Pre- show  Planning / Ordering</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Confusing process</fullName>
+                <default>false</default>
+                <label>Confusing process</label>
+            </value>
+            <value>
+                <fullName>Delays</fullName>
+                <default>false</default>
+                <label>Delays</label>
+            </value>
+            <value>
+                <fullName>Difficult to get in touch</fullName>
+                <default>false</default>
+                <label>Difficult to get in touch</label>
+            </value>
+            <value>
+                <fullName>Order/invoice error</fullName>
+                <default>false</default>
+                <label>Order/invoice error</label>
+            </value>
+            <value>
+                <fullName>Technical issues</fullName>
+                <default>false</default>
+                <label>Technical issues</label>
+            </value>
+            <value>
+                <fullName>Unprofessional service</fullName>
+                <default>false</default>
+                <label>Unprofessional service</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

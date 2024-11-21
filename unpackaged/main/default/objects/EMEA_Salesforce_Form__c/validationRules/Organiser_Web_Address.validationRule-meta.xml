@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Organiser_Web_Address</fullName>
+    <active>true</active>
+    <errorConditionFormula>Organiser_Website__c = &quot;http://.&quot; ||
+ Organiser_Website__c = &quot;N/A&quot; ||
+ Organiser_Website__c = &quot;n/a&quot; ||
+ Organiser_Website__c = &quot;TBC&quot; ||
+ Organiser_Website__c = &quot;tbc&quot; ||
+ Organiser_Website__c = &quot;TBD&quot; ||
+ Organiser_Website__c = &quot;tbd&quot; ||
+ Organiser_Website__c == &quot;Already Set Up&quot; ||
+ Organiser_Website__c == &quot;already set up&quot; ||
+ Organiser_Website__c == &quot;unknown&quot; ||
+ Organiser_Website__c = &quot;.&quot;</errorConditionFormula>
+    <errorMessage>Please enter the Organiser web address. Data quality is important</errorMessage>
+</ValidationRule>

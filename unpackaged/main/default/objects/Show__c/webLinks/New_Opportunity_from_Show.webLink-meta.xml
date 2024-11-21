@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>New_Opportunity_from_Show</fullName>
+    <availability>online</availability>
+    <displayType>massActionButton</displayType>
+    <encodingKey>UTF-8</encodingKey>
+    <linkType>url</linkType>
+    <masterLabel>New Opportunity from Show</masterLabel>
+    <openType>replace</openType>
+    <protected>false</protected>
+    <requireRowSelection>false</requireRowSelection>
+    <url>/setup/ui/recordtypeselect.jsp?ent=Opportunity&amp;retURL=/{!Show__c.Id}&amp;save_new_url=&quot;
+/006/e?CF00N40000001pkbZ={!URLENCODE(Show__c.Name)}&amp;CF00N40000001pkbZ_lkid={!Show__c.Id}&amp;retURL=/{!Show__c.Id}&quot;</url>
+</WebLink>

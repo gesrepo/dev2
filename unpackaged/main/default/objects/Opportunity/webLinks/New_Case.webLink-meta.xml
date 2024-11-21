@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>New_Case</fullName>
+    <availability>online</availability>
+    <description>Create a new case for Opportunity</description>
+    <displayType>button</displayType>
+    <linkType>javascript</linkType>
+    <masterLabel>New Case</masterLabel>
+    <openType>onClickJavaScript</openType>
+    <protected>false</protected>
+    <url>{!REQUIRESCRIPT(&quot;/xdomain/xdomain.js&quot;)} 
+{!REQUIRESCRIPT(&quot;/support/console/26.0/integration.js&quot;)}
+
+/*if (typeof(srcUp) == &#39;function&#39;) */
+if (sforce.console.isInConsole())
+{ 
+//sforce.console.openPrimaryTab(null, &#39;/apex/PageRedirect?Object=Opportunity&amp;Id={!Opportunity.Id}&amp;IsConsole=Yes&amp;RetUrl={!$Site.OriginalUrl}&#39;, true, &#39;New Case&#39;);
+sforce.console.openPrimaryTab(null, &#39;/500/e?CF00N40000002SoBx={!URLENCODE(Opportunity.Name)}&amp;CF00N40000002SoBx_lkid={!Opportunity.Id}&amp;CF00N40000002SoBw={!URLENCODE(Opportunity.Show_Name__c)}&amp;CF00N40000002SoBw_lkid={!Opportunity.Show_NameId__c}&amp;00N40000002SoBd=Exhibitor&#39;, true, &#39;New Case&#39;);
+} 
+else 
+{ 
+window.parent.location.href=&#39;/apex/PageRedirect?Object=Opportunity&amp;Id={!Opportunity.Id}&amp;IsConsole=No&amp;RetUrl=&#39;+ window.parent.location.href; 
+}</url>
+</WebLink>

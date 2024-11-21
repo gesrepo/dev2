@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SOP_Tax_Code_Percentage__c</fullName>
+    <description>Evaluates &quot;SOP Tax Code&quot; &amp; outputs the corresponding percentage.</description>
+    <formula>CASE( MainsCurrentTaxCode__c , 
+&quot;A&quot;, 00.2, 
+&quot;B&quot;, 00.21, 
+&quot;C&quot;, 00.2, 
+&quot;D&quot;, 00.25, 
+&quot;E&quot;, 00.21, 
+&quot;F&quot;, 00.196, 
+&quot;G&quot;, 00.19, 
+&quot;H&quot;, 0, 
+&quot;I&quot;, 00.2, 
+
+&quot;L&quot;, 00.15, 
+&quot;N&quot;, 00.21, 
+&quot;O&quot;, 0, 
+&quot;P&quot;, 00.23, 
+&quot;S&quot;, 00.076, 
+&quot;T&quot;, 00.08, 
+&quot;V&quot;, 00.175, 
+&quot;W&quot;, 00.2, 
+&quot;Z&quot;, 0, 
+
+
+
+
+
+0)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>Evaluates &quot;SOP Tax Code&quot; &amp; outputs the corresponding percentage.</inlineHelpText>
+    <label>SOP Tax Code Percentage</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Percent</type>
+</CustomField>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Speaking_Engagement_Date_Start_and_End_T__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(AND(
+ISBLANK(Speaking_Engagement_Date__c),
+ISBLANK(Speaking_Engagement_Start_Time__c),
+ISBLANK(Speaking_Engagement_End_Time__c) 
+),
+&quot;&quot;,
+IF(NOT(ISBLANK(Speaking_Engagement_Date__c)),
+TEXT(MONTH(Speaking_Engagement_Date__c)) + &quot;/&quot; + TEXT(DAY(Speaking_Engagement_Date__c)) + &quot;/&quot; +TEXT(YEAR(Speaking_Engagement_Date__c)) + &quot; &quot;,&quot;&quot;) + 
+IF(HOUR(Speaking_Engagement_Start_Time__c) = 0, TEXT(12), 
+IF(AND(HOUR(Speaking_Engagement_Start_Time__c) &gt; 0, HOUR(Speaking_Engagement_Start_Time__c) &lt;= 12),
+TEXT(HOUR(Speaking_Engagement_Start_Time__c)),
+TEXT(HOUR(Speaking_Engagement_Start_Time__c) - 12))) + 
+IF(NOT(ISBLANK(Speaking_Engagement_Start_Time__c)),
+&quot;:&quot; + LPAD(TEXT(MINUTE(Speaking_Engagement_Start_Time__c)), 2, &#39;0&#39;) + &quot; &quot; + IF(HOUR(Speaking_Engagement_Start_Time__c) &lt; 12, &quot;AM&quot;, &quot;PM&quot;),&quot;&quot;) +
+IF(NOT(ISBLANK(Speaking_Engagement_End_Time__c)),
+IF(NOT(ISBLANK(Speaking_Engagement_Start_Time__c)),&quot; - &quot;,&quot;&quot;) + 
+IF(HOUR(Speaking_Engagement_End_Time__c) = 0, TEXT(12), 
+IF(AND(HOUR(Speaking_Engagement_End_Time__c) &gt; 0, HOUR(Speaking_Engagement_End_Time__c) &lt;= 12),
+TEXT(HOUR(Speaking_Engagement_End_Time__c)),
+TEXT(HOUR(Speaking_Engagement_End_Time__c) - 12))) 
++ &quot;:&quot; + LPAD(TEXT(MINUTE(Speaking_Engagement_End_Time__c )), 2, &#39;0&#39;) + &quot; &quot; + IF(HOUR(Speaking_Engagement_End_Time__c) &lt; 12, &quot;AM&quot;, &quot;PM&quot;),&quot;&quot;))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Speaking Engagement Date,Start and End T</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

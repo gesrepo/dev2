@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>EMEA_Hotel_Resort_Innovation_Expo_Case</fullName>
+    <filterScope>Queue</filterScope>
+    <label>EMEA Hotel &amp; Resort Innovation Expo</label>
+    <queue>EMEA_Hotel_Resort_Innovation_Expo</queue>
+    <sharedTo>
+        <allInternalUsers />
+    </sharedTo>
+</ListView>

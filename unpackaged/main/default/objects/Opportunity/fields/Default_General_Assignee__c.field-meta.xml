@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Default_General_Assignee__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>User lookup to agent responsible for delegating or handling all service requests that do not automatically re-route to the specialist.</description>
+    <label>Default General Assignee</label>
+    <referenceTo>User</referenceTo>
+    <relationshipName>Opportunities1</relationshipName>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Lookup</type>
+</CustomField>

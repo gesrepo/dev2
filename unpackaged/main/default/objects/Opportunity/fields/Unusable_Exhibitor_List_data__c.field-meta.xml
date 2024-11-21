@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Unusable_Exhibitor_List_data__c</fullName>
+    <defaultValue>false</defaultValue>
+    <inlineHelpText>Please select this option only if the exhibitor list data was unusable. If it has subsequently been cleaned and is usable, please uncheck this field.</inlineHelpText>
+    <label>Unusable Exhibitor List data</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

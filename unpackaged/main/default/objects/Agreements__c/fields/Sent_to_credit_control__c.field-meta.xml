@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Sent_to_credit_control__c</fullName>
+    <defaultValue>false</defaultValue>
+    <inlineHelpText>Check this if sent to credit control</inlineHelpText>
+    <label>Sent to credit control</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

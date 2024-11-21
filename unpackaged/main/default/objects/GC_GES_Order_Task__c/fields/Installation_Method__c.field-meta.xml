@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Installation_Method__c</fullName>
+    <description>Installation Method for Graphics Order.</description>
+    <inlineHelpText>Installation Method for Graphics Order.</inlineHelpText>
+    <label>Installation Method</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>1M Eco Cardboard</fullName>
+                <default>false</default>
+                <label>Cardboard Base</label>
+            </value>
+            <value>
+                <fullName>1M GEM Frame</fullName>
+                <default>false</default>
+                <label>1M GEM Frame</label>
+            </value>
+            <value>
+                <fullName>1M Railroad Base</fullName>
+                <default>false</default>
+                <label>1M Railroad Base</label>
+            </value>
+            <value>
+                <fullName>22&quot; x 28&quot; Chrome Sign Holder</fullName>
+                <default>false</default>
+                <label>22&quot; x 28&quot; Chrome Sign Holder</label>
+            </value>
+            <value>
+                <fullName>Aluminum Easel</fullName>
+                <default>false</default>
+                <label>Aluminum Easel</label>
+            </value>
+            <value>
+                <fullName>Banner Rigging</fullName>
+                <default>false</default>
+                <label>Banner Rigging</label>
+            </value>
+            <value>
+                <fullName>Billboard</fullName>
+                <default>false</default>
+                <label>Billboard</label>
+            </value>
+            <value>
+                <fullName>Custom/Other</fullName>
+                <default>false</default>
+                <label>Custom/Other</label>
+            </value>
+            <value>
+                <fullName>Easel Back</fullName>
+                <default>false</default>
+                <label>Easel Back</label>
+            </value>
+            <value>
+                <fullName>GEM Unit</fullName>
+                <default>false</default>
+                <label>GEM Unit</label>
+            </value>
+            <value>
+                <fullName>Grommets</fullName>
+                <default>false</default>
+                <label>Grommets</label>
+            </value>
+            <value>
+                <fullName>S Hooks</fullName>
+                <default>false</default>
+                <label>S Hooks</label>
+            </value>
+            <value>
+                <fullName>Sandwich Board</fullName>
+                <default>false</default>
+                <label>Sandwich Board</label>
+            </value>
+            <value>
+                <fullName>Stanchion Topper</fullName>
+                <default>false</default>
+                <label>Stanchion Topper</label>
+            </value>
+            <value>
+                <fullName>Velcro/Detachable</fullName>
+                <default>false</default>
+                <label>Velcro/Detachable</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

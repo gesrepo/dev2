@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>MarketWorks_Assigned_Team_Member__c</fullName>
+    <inlineHelpText>MW team member assigned bid/project</inlineHelpText>
+    <label>MarketWorks Assigned Team Member</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Cathy Hopkins</fullName>
+                <default>false</default>
+                <label>Cathy Hopkins</label>
+            </value>
+            <value>
+                <fullName>David Saef</fullName>
+                <default>false</default>
+                <label>David Saef</label>
+            </value>
+            <value>
+                <fullName>Regan Cook</fullName>
+                <default>false</default>
+                <label>Regan Cook</label>
+            </value>
+            <value>
+                <fullName>Steve Duberchin</fullName>
+                <default>false</default>
+                <label>Steve Duberchin</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

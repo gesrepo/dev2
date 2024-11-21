@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>I_D_Supervisor__c</fullName>
+    <label>I&amp;D Supervisor</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Ken Pantoliano</fullName>
+                <default>false</default>
+                <label>Ken Pantoliano</label>
+            </value>
+            <value>
+                <fullName>Randy Frields</fullName>
+                <default>false</default>
+                <label>Randy Frields</label>
+            </value>
+            <value>
+                <fullName>Pat Gallagher</fullName>
+                <default>false</default>
+                <label>Pat Gallagher</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

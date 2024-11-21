@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Mark_Eddy_View</fullName>
+    <columns>OBJECT_ID</columns>
+    <columns>NAME</columns>
+    <columns>Show_Type__c</columns>
+    <columns>Sub_Type__c</columns>
+    <columns>OWNER.ALIAS</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Exhibition_Region__c</field>
+        <operation>equals</operation>
+        <value>EMEA</value>
+    </filters>
+    <filters>
+        <field>RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Show__c.Tradeshow</value>
+    </filters>
+    <label>Mark Eddy View</label>
+    <language>en_US</language>
+    <sharedTo>
+        <role>SystemAdministrator</role>
+        <role>System_Support_Admin</role>
+    </sharedTo>
+</ListView>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>EMEA_International_Golf_Travel_Market_Case</fullName>
+    <filterScope>Queue</filterScope>
+    <label>EMEA International Golf Travel Market</label>
+    <queue>EMEA_International_Golf_Travel_Market</queue>
+    <sharedTo>
+        <allInternalUsers />
+    </sharedTo>
+</ListView>

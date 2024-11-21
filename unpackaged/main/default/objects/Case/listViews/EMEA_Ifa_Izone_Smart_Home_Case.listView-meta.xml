@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>EMEA_Ifa_Izone_Smart_Home_Case</fullName>
+    <filterScope>Queue</filterScope>
+    <label>NL IFA iZone/Smart Home</label>
+    <queue>NL_IFA_iZone_Smart_Home</queue>
+    <sharedTo>
+        <allInternalUsers />
+    </sharedTo>
+</ListView>

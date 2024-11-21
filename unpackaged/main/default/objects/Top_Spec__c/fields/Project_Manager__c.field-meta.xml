@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Project_Manager__c</fullName>
+    <inlineHelpText>Select the relevant Show Ready project manager. More than 1 can be selected</inlineHelpText>
+    <label>Project Manager</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Andrew Dobbs</fullName>
+                <default>false</default>
+                <label>Andrew Dobbs</label>
+            </value>
+            <value>
+                <fullName>Max Southall</fullName>
+                <default>false</default>
+                <label>Max Southall</label>
+            </value>
+            <value>
+                <fullName>Matthew Johnson</fullName>
+                <default>false</default>
+                <label>Matthew Johnson</label>
+            </value>
+            <value>
+                <fullName>Deana Sheldon</fullName>
+                <default>false</default>
+                <label>Deana Sheldon</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

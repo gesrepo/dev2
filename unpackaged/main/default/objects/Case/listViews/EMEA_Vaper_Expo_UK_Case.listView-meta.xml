@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>EMEA_Vaper_Expo_UK_Case</fullName>
+    <filterScope>Queue</filterScope>
+    <label>EMEA Vaper Expo UK</label>
+    <queue>EMEA_Vaper_Expo_UK</queue>
+    <sharedTo>
+        <allInternalUsers />
+    </sharedTo>
+</ListView>

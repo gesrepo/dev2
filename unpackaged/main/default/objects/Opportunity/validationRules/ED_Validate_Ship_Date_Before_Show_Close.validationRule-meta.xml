@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ED_Validate_Ship_Date_Before_Show_Close</fullName>
+    <active>true</active>
+    <description>Checks to see if the ship date provided is past the show close date on either a show or non-show.</description>
+    <errorConditionFormula>PRF_Submitted__c =true &amp;&amp; 
+NOT( ISPICKVAL( EAC__c , &quot;&quot;) )&amp;&amp; 
+$RecordType.DeveloperName = &quot;E_D_Projects&quot; 
+&amp;&amp;( GBMSProjectStatus__c =&quot;Forecast&quot; || ISBLANK(GBMSProjectStatus__c )) 
+&amp;&amp; !ISPICKVAL(StageName , &quot;Lost&quot;) 
+
+&amp;&amp; ( (! ISBLANK(Non_Show__c ) 
+&amp;&amp; Non_Show__r.Show_Close__c &lt; PRFShip_Date__c) 
+|| 
+(! ISBLANK( Show_Occurrence__c ) 
+&amp;&amp; Show_Occurrence__r.Show_Close_Date__c &lt; PRFShip_Date__c ))&amp;&amp; ($Profile.Name != &quot;GES Administrator Interface&quot;)</errorConditionFormula>
+    <errorMessage>The Est. Ship Date cannot be past the show close date.</errorMessage>
+</ValidationRule>

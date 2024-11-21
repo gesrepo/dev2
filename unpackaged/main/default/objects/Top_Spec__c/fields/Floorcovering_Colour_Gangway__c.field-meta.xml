@@ -1,0 +1,2144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Floorcovering_Colour_Gangway__c</fullName>
+    <label>Floorcovering Colour Gangway</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Floorcovering_Type_Gangway__c</controllingField>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Beech Vinyl/BV01</fullName>
+                <default>false</default>
+                <label>Beech Vinyl/BV01</label>
+            </value>
+            <value>
+                <fullName>Beige/2251</fullName>
+                <default>false</default>
+                <label>Beige/2251</label>
+            </value>
+            <value>
+                <fullName>Beige/230</fullName>
+                <default>false</default>
+                <label>Beige/230</label>
+            </value>
+            <value>
+                <fullName>Beige/401</fullName>
+                <default>false</default>
+                <label>Beige/401</label>
+            </value>
+            <value>
+                <fullName>Beige/WC05</fullName>
+                <default>false</default>
+                <label>Beige/WC05</label>
+            </value>
+            <value>
+                <fullName>Black/1999</fullName>
+                <default>false</default>
+                <label>Black/1999</label>
+            </value>
+            <value>
+                <fullName>Black/810</fullName>
+                <default>false</default>
+                <label>Black/810</label>
+            </value>
+            <value>
+                <fullName>Black/957</fullName>
+                <default>false</default>
+                <label>Black/957</label>
+            </value>
+            <value>
+                <fullName>Black/WC08</fullName>
+                <default>false</default>
+                <label>Black/WC08</label>
+            </value>
+            <value>
+                <fullName>Black Penny Dot/BPV1</fullName>
+                <default>false</default>
+                <label>Black Penny Dot/BPV1</label>
+            </value>
+            <value>
+                <fullName>Blue/ET05</fullName>
+                <default>false</default>
+                <label>Blue/ET05</label>
+            </value>
+            <value>
+                <fullName>Bright Green/722</fullName>
+                <default>false</default>
+                <label>Bright Green/722</label>
+            </value>
+            <value>
+                <fullName>Bright Green/WC07</fullName>
+                <default>false</default>
+                <label>Bright Green/WC07</label>
+            </value>
+            <value>
+                <fullName>Bright Red/WC02</fullName>
+                <default>false</default>
+                <label>Bright Red/WC02</label>
+            </value>
+            <value>
+                <fullName>Brown/ET09</fullName>
+                <default>false</default>
+                <label>Brown/ET09</label>
+            </value>
+            <value>
+                <fullName>Charcoal/ET04</fullName>
+                <default>false</default>
+                <label>Charcoal/ET04</label>
+            </value>
+            <value>
+                <fullName>Charcoal/WC06</fullName>
+                <default>false</default>
+                <label>Charcoal/WC06</label>
+            </value>
+            <value>
+                <fullName>Coir Matting/CM01</fullName>
+                <default>false</default>
+                <label>Coir Matting/CM01</label>
+            </value>
+            <value>
+                <fullName>Dark Blue/WC10</fullName>
+                <default>false</default>
+                <label>Dark Blue/WC10</label>
+            </value>
+            <value>
+                <fullName>Dark Grey/923</fullName>
+                <default>false</default>
+                <label>Dark Grey/923</label>
+            </value>
+            <value>
+                <fullName>Dark Wood Vinyl/BV02</fullName>
+                <default>false</default>
+                <label>Dark Wood Vinyl/BV02</label>
+            </value>
+            <value>
+                <fullName>Gold/ET02</fullName>
+                <default>false</default>
+                <label>Gold/ET02</label>
+            </value>
+            <value>
+                <fullName>Green/629</fullName>
+                <default>false</default>
+                <label>Green/629</label>
+            </value>
+            <value>
+                <fullName>Green/ET08</fullName>
+                <default>false</default>
+                <label>Green/ET08</label>
+            </value>
+            <value>
+                <fullName>Grey/ET06</fullName>
+                <default>false</default>
+                <label>Grey/ET06</label>
+            </value>
+            <value>
+                <fullName>Grey/WC03</fullName>
+                <default>false</default>
+                <label>Grey/WC03</label>
+            </value>
+            <value>
+                <fullName>Light Blue/6343</fullName>
+                <default>false</default>
+                <label>Light Blue/6343</label>
+            </value>
+            <value>
+                <fullName>Light Grey/905</fullName>
+                <default>false</default>
+                <label>Light Grey/905</label>
+            </value>
+            <value>
+                <fullName>Mid Blue/780</fullName>
+                <default>false</default>
+                <label>Mid Blue/780</label>
+            </value>
+            <value>
+                <fullName>Midnight Blue/790</fullName>
+                <default>false</default>
+                <label>Midnight Blue/790</label>
+            </value>
+            <value>
+                <fullName>Midnight Blue/837</fullName>
+                <default>false</default>
+                <label>Midnight Blue/837</label>
+            </value>
+            <value>
+                <fullName>Pink/542</fullName>
+                <default>false</default>
+                <label>Pink/542</label>
+            </value>
+            <value>
+                <fullName>Pink/724</fullName>
+                <default>false</default>
+                <label>Pink/724</label>
+            </value>
+            <value>
+                <fullName>Pink/WC12</fullName>
+                <default>false</default>
+                <label>Pink/WC12</label>
+            </value>
+            <value>
+                <fullName>Purple/539</fullName>
+                <default>false</default>
+                <label>Purple/539</label>
+            </value>
+            <value>
+                <fullName>Purple/752</fullName>
+                <default>false</default>
+                <label>Purple/752</label>
+            </value>
+            <value>
+                <fullName>Purple/WC11</fullName>
+                <default>false</default>
+                <label>Purple/WC11</label>
+            </value>
+            <value>
+                <fullName>Red/110</fullName>
+                <default>false</default>
+                <label>Red/110</label>
+            </value>
+            <value>
+                <fullName>Red/720</fullName>
+                <default>false</default>
+                <label>Red/720</label>
+            </value>
+            <value>
+                <fullName>Red/ET07</fullName>
+                <default>false</default>
+                <label>Red/ET07</label>
+            </value>
+            <value>
+                <fullName>Royal Blue/627</fullName>
+                <default>false</default>
+                <label>Royal Blue/627</label>
+            </value>
+            <value>
+                <fullName>Royal Blue/710</fullName>
+                <default>false</default>
+                <label>Royal Blue/710</label>
+            </value>
+            <value>
+                <fullName>Royal Blue/WC04</fullName>
+                <default>false</default>
+                <label>Royal Blue/WC04</label>
+            </value>
+            <value>
+                <fullName>Silver Grey/1260</fullName>
+                <default>false</default>
+                <label>Silver Grey/1260</label>
+            </value>
+            <value>
+                <fullName>Silver Grey/90</fullName>
+                <default>false</default>
+                <label>Silver Grey/90</label>
+            </value>
+            <value>
+                <fullName>Silver Treadplate/STV1</fullName>
+                <default>false</default>
+                <label>Silver Treadplate/STV1</label>
+            </value>
+            <value>
+                <fullName>Slate Grey/830</fullName>
+                <default>false</default>
+                <label>Slate Grey/830</label>
+            </value>
+            <value>
+                <fullName>White Penny Dot/WPV2</fullName>
+                <default>false</default>
+                <label>White Penny Dot/WPV2</label>
+            </value>
+            <value>
+                <fullName>Nero/270</fullName>
+                <default>false</default>
+                <label>Nero/270</label>
+            </value>
+            <value>
+                <fullName>Nero/370</fullName>
+                <default>false</default>
+                <label>Nero/370</label>
+            </value>
+            <value>
+                <fullName>Antracite/202</fullName>
+                <default>false</default>
+                <label>Antracite/202</label>
+            </value>
+            <value>
+                <fullName>Antracite/302</fullName>
+                <default>false</default>
+                <label>Antracite/302</label>
+            </value>
+            <value>
+                <fullName>Grigio/208</fullName>
+                <default>false</default>
+                <label>Grigio/208</label>
+            </value>
+            <value>
+                <fullName>Grigio/308</fullName>
+                <default>false</default>
+                <label>Grigio/308</label>
+            </value>
+            <value>
+                <fullName>Ferro/240</fullName>
+                <default>false</default>
+                <label>Ferro/240</label>
+            </value>
+            <value>
+                <fullName>Ferro/340</fullName>
+                <default>false</default>
+                <label>Ferro/340</label>
+            </value>
+            <value>
+                <fullName>Fumo/215</fullName>
+                <default>false</default>
+                <label>Fumo/215</label>
+            </value>
+            <value>
+                <fullName>Fumo/315</fullName>
+                <default>false</default>
+                <label>Fumo/315</label>
+            </value>
+            <value>
+                <fullName>Cenere/242</fullName>
+                <default>false</default>
+                <label>Cenere/242</label>
+            </value>
+            <value>
+                <fullName>Cenere/342</fullName>
+                <default>false</default>
+                <label>Cenere/342</label>
+            </value>
+            <value>
+                <fullName>Caligine/262</fullName>
+                <default>false</default>
+                <label>Caligine/262</label>
+            </value>
+            <value>
+                <fullName>Caligine/362</fullName>
+                <default>false</default>
+                <label>Caligine/362</label>
+            </value>
+            <value>
+                <fullName>Nuvola/232</fullName>
+                <default>false</default>
+                <label>Nuvola/232</label>
+            </value>
+            <value>
+                <fullName>Nuvola/332</fullName>
+                <default>false</default>
+                <label>Nuvola/332</label>
+            </value>
+            <value>
+                <fullName>Cacao/213</fullName>
+                <default>false</default>
+                <label>Cacao/213</label>
+            </value>
+            <value>
+                <fullName>Cacao/313</fullName>
+                <default>false</default>
+                <label>Cacao/313</label>
+            </value>
+            <value>
+                <fullName>Mogano/214</fullName>
+                <default>false</default>
+                <label>Mogano/214</label>
+            </value>
+            <value>
+                <fullName>Mogano/314</fullName>
+                <default>false</default>
+                <label>Mogano/314</label>
+            </value>
+            <value>
+                <fullName>Castoro/206</fullName>
+                <default>false</default>
+                <label>Castoro/206</label>
+            </value>
+            <value>
+                <fullName>Castoro/306</fullName>
+                <default>false</default>
+                <label>Castoro/306</label>
+            </value>
+            <value>
+                <fullName>Tuareg/245</fullName>
+                <default>false</default>
+                <label>Tuareg/245</label>
+            </value>
+            <value>
+                <fullName>Tuareg/345</fullName>
+                <default>false</default>
+                <label>Tuareg/345</label>
+            </value>
+            <value>
+                <fullName>Ghisa/219</fullName>
+                <default>false</default>
+                <label>Ghisa/219</label>
+            </value>
+            <value>
+                <fullName>Ghisa/319</fullName>
+                <default>false</default>
+                <label>Ghisa/319</label>
+            </value>
+            <value>
+                <fullName>Beige/272</fullName>
+                <default>false</default>
+                <label>Beige/272</label>
+            </value>
+            <value>
+                <fullName>Beige/372</fullName>
+                <default>false</default>
+                <label>Beige/372</label>
+            </value>
+            <value>
+                <fullName>Sabbia/223</fullName>
+                <default>false</default>
+                <label>Sabbia/223</label>
+            </value>
+            <value>
+                <fullName>Sabbia/323</fullName>
+                <default>false</default>
+                <label>Sabbia/323</label>
+            </value>
+            <value>
+                <fullName>Lama/248</fullName>
+                <default>false</default>
+                <label>Lama/248</label>
+            </value>
+            <value>
+                <fullName>Lama/348</fullName>
+                <default>false</default>
+                <label>Lama/348</label>
+            </value>
+            <value>
+                <fullName>Uva/228</fullName>
+                <default>false</default>
+                <label>Uva/228</label>
+            </value>
+            <value>
+                <fullName>Uva/328</fullName>
+                <default>false</default>
+                <label>Uva/328</label>
+            </value>
+            <value>
+                <fullName>Prugna/233</fullName>
+                <default>false</default>
+                <label>Prugna/233</label>
+            </value>
+            <value>
+                <fullName>Prugna/333</fullName>
+                <default>false</default>
+                <label>Prugna/333</label>
+            </value>
+            <value>
+                <fullName>Ribes/200</fullName>
+                <default>false</default>
+                <label>Ribes/200</label>
+            </value>
+            <value>
+                <fullName>Ribes/300</fullName>
+                <default>false</default>
+                <label>Ribes/300</label>
+            </value>
+            <value>
+                <fullName>Lavanda/236</fullName>
+                <default>false</default>
+                <label>Lavanda/236</label>
+            </value>
+            <value>
+                <fullName>Lavanda/336</fullName>
+                <default>false</default>
+                <label>Lavanda/336</label>
+            </value>
+            <value>
+                <fullName>Fucsia/222</fullName>
+                <default>false</default>
+                <label>Fucsia/222</label>
+            </value>
+            <value>
+                <fullName>Fucsia/322</fullName>
+                <default>false</default>
+                <label>Fucsia/322</label>
+            </value>
+            <value>
+                <fullName>Lampone/239</fullName>
+                <default>false</default>
+                <label>Lampone/239</label>
+            </value>
+            <value>
+                <fullName>Lampone/339</fullName>
+                <default>false</default>
+                <label>Lampone/339</label>
+            </value>
+            <value>
+                <fullName>Magenta/254</fullName>
+                <default>false</default>
+                <label>Magenta/254</label>
+            </value>
+            <value>
+                <fullName>Magenta/354</fullName>
+                <default>false</default>
+                <label>Magenta/354</label>
+            </value>
+            <value>
+                <fullName>Confetto/212</fullName>
+                <default>false</default>
+                <label>Confetto/212</label>
+            </value>
+            <value>
+                <fullName>Confetto/312</fullName>
+                <default>false</default>
+                <label>Confetto/312</label>
+            </value>
+            <value>
+                <fullName>Terra/261</fullName>
+                <default>false</default>
+                <label>Terra/261</label>
+            </value>
+            <value>
+                <fullName>Terra/361</fullName>
+                <default>false</default>
+                <label>Terra/361</label>
+            </value>
+            <value>
+                <fullName>Aragosta/210</fullName>
+                <default>false</default>
+                <label>Aragosta/210</label>
+            </value>
+            <value>
+                <fullName>Aragosta/310</fullName>
+                <default>false</default>
+                <label>Aragosta/310</label>
+            </value>
+            <value>
+                <fullName>Papaya/263</fullName>
+                <default>false</default>
+                <label>Papaya/263</label>
+            </value>
+            <value>
+                <fullName>Papaya/363</fullName>
+                <default>false</default>
+                <label>Papaya/363</label>
+            </value>
+            <value>
+                <fullName>Arancio/252</fullName>
+                <default>false</default>
+                <label>Arancio/252</label>
+            </value>
+            <value>
+                <fullName>Arancio/352</fullName>
+                <default>false</default>
+                <label>Arancio/352</label>
+            </value>
+            <value>
+                <fullName>Zucca/264</fullName>
+                <default>false</default>
+                <label>Zucca/264</label>
+            </value>
+            <value>
+                <fullName>Zucca/364</fullName>
+                <default>false</default>
+                <label>Zucca/364</label>
+            </value>
+            <value>
+                <fullName>Grano/268</fullName>
+                <default>false</default>
+                <label>Grano/268</label>
+            </value>
+            <value>
+                <fullName>Grano/368</fullName>
+                <default>false</default>
+                <label>Grano/368</label>
+            </value>
+            <value>
+                <fullName>Sole/269</fullName>
+                <default>false</default>
+                <label>Sole/269</label>
+            </value>
+            <value>
+                <fullName>Sole/369</fullName>
+                <default>false</default>
+                <label>Sole/369</label>
+            </value>
+            <value>
+                <fullName>Giallo/266</fullName>
+                <default>false</default>
+                <label>Giallo/266</label>
+            </value>
+            <value>
+                <fullName>Giallo/366</fullName>
+                <default>false</default>
+                <label>Giallo/366</label>
+            </value>
+            <value>
+                <fullName>Prussia/276</fullName>
+                <default>false</default>
+                <label>Prussia/276</label>
+            </value>
+            <value>
+                <fullName>Prussia/376</fullName>
+                <default>false</default>
+                <label>Prussia/376</label>
+            </value>
+            <value>
+                <fullName>Notte/256</fullName>
+                <default>false</default>
+                <label>Notte/256</label>
+            </value>
+            <value>
+                <fullName>Notte/356</fullName>
+                <default>false</default>
+                <label>Notte/356</label>
+            </value>
+            <value>
+                <fullName>Volturno/227</fullName>
+                <default>false</default>
+                <label>Volturno/227</label>
+            </value>
+            <value>
+                <fullName>Volturno/327</fullName>
+                <default>false</default>
+                <label>Volturno/327</label>
+            </value>
+            <value>
+                <fullName>Zaffiro/278</fullName>
+                <default>false</default>
+                <label>Zaffiro/278</label>
+            </value>
+            <value>
+                <fullName>Zaffiro/378</fullName>
+                <default>false</default>
+                <label>Zaffiro/378</label>
+            </value>
+            <value>
+                <fullName>Marina/279</fullName>
+                <default>false</default>
+                <label>Marina/279</label>
+            </value>
+            <value>
+                <fullName>Marina/379</fullName>
+                <default>false</default>
+                <label>Marina/379</label>
+            </value>
+            <value>
+                <fullName>Caraibi/265</fullName>
+                <default>false</default>
+                <label>Caraibi/265</label>
+            </value>
+            <value>
+                <fullName>Caraibi/365</fullName>
+                <default>false</default>
+                <label>Caraibi/365</label>
+            </value>
+            <value>
+                <fullName>Elettrico/281</fullName>
+                <default>false</default>
+                <label>Elettrico/281</label>
+            </value>
+            <value>
+                <fullName>Elettrico/381</fullName>
+                <default>false</default>
+                <label>Elettrico/381</label>
+            </value>
+            <value>
+                <fullName>Celeste/282</fullName>
+                <default>false</default>
+                <label>Celeste/282</label>
+            </value>
+            <value>
+                <fullName>Celeste/382</fullName>
+                <default>false</default>
+                <label>Celeste/382</label>
+            </value>
+            <value>
+                <fullName>Selva/284</fullName>
+                <default>false</default>
+                <label>Selva/284</label>
+            </value>
+            <value>
+                <fullName>Selva/384</fullName>
+                <default>false</default>
+                <label>Selva/384</label>
+            </value>
+            <value>
+                <fullName>Bosco/294</fullName>
+                <default>false</default>
+                <label>Bosco/294</label>
+            </value>
+            <value>
+                <fullName>Bosco/394</fullName>
+                <default>false</default>
+                <label>Bosco/394</label>
+            </value>
+            <value>
+                <fullName>Erica/274</fullName>
+                <default>false</default>
+                <label>Erica/274</label>
+            </value>
+            <value>
+                <fullName>Erica/374</fullName>
+                <default>false</default>
+                <label>Erica/374</label>
+            </value>
+            <value>
+                <fullName>Mela/267</fullName>
+                <default>false</default>
+                <label>Mela/267</label>
+            </value>
+            <value>
+                <fullName>Mela/367</fullName>
+                <default>false</default>
+                <label>Mela/367</label>
+            </value>
+            <value>
+                <fullName>Campestre/286</fullName>
+                <default>false</default>
+                <label>Campestre/286</label>
+            </value>
+            <value>
+                <fullName>Campestre/386</fullName>
+                <default>false</default>
+                <label>Campestre/386</label>
+            </value>
+            <value>
+                <fullName>Muschio/287</fullName>
+                <default>false</default>
+                <label>Muschio/287</label>
+            </value>
+            <value>
+                <fullName>Muschio/387</fullName>
+                <default>false</default>
+                <label>Muschio/387</label>
+            </value>
+            <value>
+                <fullName>Pistacchio/288</fullName>
+                <default>false</default>
+                <label>Pistacchio/288</label>
+            </value>
+            <value>
+                <fullName>Pistacchio/388</fullName>
+                <default>false</default>
+                <label>Pistacchio/388</label>
+            </value>
+            <value>
+                <fullName>Cedro/295</fullName>
+                <default>false</default>
+                <label>Cedro/295</label>
+            </value>
+            <value>
+                <fullName>Cedro/395</fullName>
+                <default>false</default>
+                <label>Cedro/395</label>
+            </value>
+            <value>
+                <fullName>Teatro/251</fullName>
+                <default>false</default>
+                <label>Teatro/251</label>
+            </value>
+            <value>
+                <fullName>Teatro/351</fullName>
+                <default>false</default>
+                <label>Teatro/351</label>
+            </value>
+            <value>
+                <fullName>Bordeaux/249</fullName>
+                <default>false</default>
+                <label>Bordeaux/249</label>
+            </value>
+            <value>
+                <fullName>Bordeaux/349</fullName>
+                <default>false</default>
+                <label>Bordeaux/349</label>
+            </value>
+            <value>
+                <fullName>Cardinale/289</fullName>
+                <default>false</default>
+                <label>Cardinale/289</label>
+            </value>
+            <value>
+                <fullName>Cardinale/389</fullName>
+                <default>false</default>
+                <label>Cardinale/389</label>
+            </value>
+            <value>
+                <fullName>Amarena/293</fullName>
+                <default>false</default>
+                <label>Amarena/293</label>
+            </value>
+            <value>
+                <fullName>Amarena/393</fullName>
+                <default>false</default>
+                <label>Amarena/393</label>
+            </value>
+            <value>
+                <fullName>Rubino/283</fullName>
+                <default>false</default>
+                <label>Rubino/283</label>
+            </value>
+            <value>
+                <fullName>Rubino/383</fullName>
+                <default>false</default>
+                <label>Rubino/383</label>
+            </value>
+            <value>
+                <fullName>Rosso/271</fullName>
+                <default>false</default>
+                <label>Rosso/271</label>
+            </value>
+            <value>
+                <fullName>Rosso/371</fullName>
+                <default>false</default>
+                <label>Rosso/371</label>
+            </value>
+            <value>
+                <fullName>Vermiglio/296</fullName>
+                <default>false</default>
+                <label>Vermiglio/296</label>
+            </value>
+            <value>
+                <fullName>Vermiglio/396</fullName>
+                <default>false</default>
+                <label>Vermiglio/396</label>
+            </value>
+            <value>
+                <fullName>Fiamma/277</fullName>
+                <default>false</default>
+                <label>Fiamma/277</label>
+            </value>
+            <value>
+                <fullName>Fiamma/377</fullName>
+                <default>false</default>
+                <label>Fiamma/377</label>
+            </value>
+            <value>
+                <fullName>Petrolio/299</fullName>
+                <default>false</default>
+                <label>Petrolio/299</label>
+            </value>
+            <value>
+                <fullName>Petrolio/399</fullName>
+                <default>false</default>
+                <label>Petrolio/399</label>
+            </value>
+            <value>
+                <fullName>Abisso/258</fullName>
+                <default>false</default>
+                <label>Abisso/258</label>
+            </value>
+            <value>
+                <fullName>Abisso/358</fullName>
+                <default>false</default>
+                <label>Abisso/358</label>
+            </value>
+            <value>
+                <fullName>Nautica/204</fullName>
+                <default>false</default>
+                <label>Nautica/204</label>
+            </value>
+            <value>
+                <fullName>Nautica/304</fullName>
+                <default>false</default>
+                <label>Nautica/304</label>
+            </value>
+            <value>
+                <fullName>Cielo/259</fullName>
+                <default>false</default>
+                <label>Cielo/259</label>
+            </value>
+            <value>
+                <fullName>Cielo/359</fullName>
+                <default>false</default>
+                <label>Cielo/359</label>
+            </value>
+            <value>
+                <fullName>Nilo/290</fullName>
+                <default>false</default>
+                <label>Nilo/290</label>
+            </value>
+            <value>
+                <fullName>Nilo/390</fullName>
+                <default>false</default>
+                <label>Nilo/390</label>
+            </value>
+            <value>
+                <fullName>Atollo/205</fullName>
+                <default>false</default>
+                <label>Atollo/205</label>
+            </value>
+            <value>
+                <fullName>Atollo/305</fullName>
+                <default>false</default>
+                <label>Atollo/305</label>
+            </value>
+            <value>
+                <fullName>Maldive/207</fullName>
+                <default>false</default>
+                <label>Maldive/207</label>
+            </value>
+            <value>
+                <fullName>Maldive/307</fullName>
+                <default>false</default>
+                <label>Maldive/307</label>
+            </value>
+            <value>
+                <fullName>Jeans/203</fullName>
+                <default>false</default>
+                <label>Jeans/203</label>
+            </value>
+            <value>
+                <fullName>Jeans/303</fullName>
+                <default>false</default>
+                <label>Jeans/303</label>
+            </value>
+            <value>
+                <fullName>Bianco/280</fullName>
+                <default>false</default>
+                <label>Bianco/280</label>
+            </value>
+            <value>
+                <fullName>Bianco/380</fullName>
+                <default>false</default>
+                <label>Bianco/380</label>
+            </value>
+            <value>
+                <fullName>Ghiaccio/225</fullName>
+                <default>false</default>
+                <label>Ghiaccio/225</label>
+            </value>
+            <value>
+                <fullName>Ghiaccio/325</fullName>
+                <default>false</default>
+                <label>Ghiaccio/325</label>
+            </value>
+            <value>
+                <fullName>Camomilla/217</fullName>
+                <default>false</default>
+                <label>Camomilla/217</label>
+            </value>
+            <value>
+                <fullName>Camomilla/317</fullName>
+                <default>false</default>
+                <label>Camomilla/317</label>
+            </value>
+            <value>
+                <fullName>Peonia/255</fullName>
+                <default>false</default>
+                <label>Peonia/255</label>
+            </value>
+            <value>
+                <fullName>Peonia/355</fullName>
+                <default>false</default>
+                <label>Peonia/355</label>
+            </value>
+            <value>
+                <fullName>Egeo/253</fullName>
+                <default>false</default>
+                <label>Egeo/253</label>
+            </value>
+            <value>
+                <fullName>Egeo/353</fullName>
+                <default>false</default>
+                <label>Egeo/353</label>
+            </value>
+            <value>
+                <fullName>Bebe/235</fullName>
+                <default>false</default>
+                <label>Bebe/235</label>
+            </value>
+            <value>
+                <fullName>Bebe/335</fullName>
+                <default>false</default>
+                <label>Bebe/335</label>
+            </value>
+            <value>
+                <fullName>Salvia/234</fullName>
+                <default>false</default>
+                <label>Salvia/234</label>
+            </value>
+            <value>
+                <fullName>Salvia/334</fullName>
+                <default>false</default>
+                <label>Salvia/334</label>
+            </value>
+            <value>
+                <fullName>Offwhite/238</fullName>
+                <default>false</default>
+                <label>Offwhite/238</label>
+            </value>
+            <value>
+                <fullName>Offwhite/338</fullName>
+                <default>false</default>
+                <label>Offwhite/338</label>
+            </value>
+            <value>
+                <fullName>Turquoise/0924</fullName>
+                <default>false</default>
+                <label>Turquoise/0924</label>
+            </value>
+            <value>
+                <fullName>Sky Blue/0904</fullName>
+                <default>false</default>
+                <label>Sky Blue/0904</label>
+            </value>
+            <value>
+                <fullName>Electric Blue/0064</fullName>
+                <default>false</default>
+                <label>Electric Blue/0064</label>
+            </value>
+            <value>
+                <fullName>Royal Blue/0824</fullName>
+                <default>false</default>
+                <label>Royal Blue/0824</label>
+            </value>
+            <value>
+                <fullName>Hawaiian Blue/1334</fullName>
+                <default>false</default>
+                <label>Hawaiian Blue/1334</label>
+            </value>
+            <value>
+                <fullName>Atoll Blue/1234</fullName>
+                <default>false</default>
+                <label>Atoll Blue/1234</label>
+            </value>
+            <value>
+                <fullName>Marine/0954</fullName>
+                <default>false</default>
+                <label>Marine/0954</label>
+            </value>
+            <value>
+                <fullName>Blue Jean/0024</fullName>
+                <default>false</default>
+                <label>Blue Jean/0024</label>
+            </value>
+            <value>
+                <fullName>Night Blue/0014</fullName>
+                <default>false</default>
+                <label>Night Blue/0014</label>
+            </value>
+            <value>
+                <fullName>Black Tulip/1059</fullName>
+                <default>false</default>
+                <label>Black Tulip/1059</label>
+            </value>
+            <value>
+                <fullName>Violet/0939</fullName>
+                <default>false</default>
+                <label>Violet/0939</label>
+            </value>
+            <value>
+                <fullName>Candy Pink/1722</fullName>
+                <default>false</default>
+                <label>Candy Pink/1722</label>
+            </value>
+            <value>
+                <fullName>Petunia/9289</fullName>
+                <default>false</default>
+                <label>Petunia/9289</label>
+            </value>
+            <value>
+                <fullName>Prune/1129</fullName>
+                <default>false</default>
+                <label>Prune/1129</label>
+            </value>
+            <value>
+                <fullName>Lavender/1339</fullName>
+                <default>false</default>
+                <label>Lavender/1339</label>
+            </value>
+            <value>
+                <fullName>Fushia/9302</fullName>
+                <default>false</default>
+                <label>Fushia/9302</label>
+            </value>
+            <value>
+                <fullName>Farmboise/1262</fullName>
+                <default>false</default>
+                <label>Farmboise/1262</label>
+            </value>
+            <value>
+                <fullName>Kaki/1571</fullName>
+                <default>false</default>
+                <label>Kaki/1571</label>
+            </value>
+            <value>
+                <fullName>Citronnelle Green/1251</fullName>
+                <default>false</default>
+                <label>Citronnelle Green/1251</label>
+            </value>
+            <value>
+                <fullName>Apple Green/0961</fullName>
+                <default>false</default>
+                <label>Apple Green/0961</label>
+            </value>
+            <value>
+                <fullName>Olive Green/0061</fullName>
+                <default>false</default>
+                <label>Olive Green/0061</label>
+            </value>
+            <value>
+                <fullName>Spring Green/9631</fullName>
+                <default>false</default>
+                <label>Spring Green/9631</label>
+            </value>
+            <value>
+                <fullName>Pustachio/9661</fullName>
+                <default>false</default>
+                <label>Pustachio/9661</label>
+            </value>
+            <value>
+                <fullName>Grass Green/0041</fullName>
+                <default>false</default>
+                <label>Grass Green/0041</label>
+            </value>
+            <value>
+                <fullName>Mid Green/0901</fullName>
+                <default>false</default>
+                <label>Mid Green/0901</label>
+            </value>
+            <value>
+                <fullName>Dark Green/0011</fullName>
+                <default>false</default>
+                <label>Dark Green/0011</label>
+            </value>
+            <value>
+                <fullName>Yellow/9213</fullName>
+                <default>false</default>
+                <label>Yellow/9213</label>
+            </value>
+            <value>
+                <fullName>Mandarine/9347</fullName>
+                <default>false</default>
+                <label>Mandarine/9347</label>
+            </value>
+            <value>
+                <fullName>Orange/0007</fullName>
+                <default>false</default>
+                <label>Orange/0007</label>
+            </value>
+            <value>
+                <fullName>Brick Red/9312</fullName>
+                <default>false</default>
+                <label>Brick Red/9312</label>
+            </value>
+            <value>
+                <fullName>Dark Red/0012</fullName>
+                <default>false</default>
+                <label>Dark Red/0012</label>
+            </value>
+            <value>
+                <fullName>Richelieu Red/9522</fullName>
+                <default>false</default>
+                <label>Richelieu Red/9522</label>
+            </value>
+            <value>
+                <fullName>Theatre Red/0962</fullName>
+                <default>false</default>
+                <label>Theatre Red/0962</label>
+            </value>
+            <value>
+                <fullName>Tomato/9662</fullName>
+                <default>false</default>
+                <label>Tomato/9662</label>
+            </value>
+            <value>
+                <fullName>Sahara Beige/0906</fullName>
+                <default>false</default>
+                <label>Sahara Beige/0906</label>
+            </value>
+            <value>
+                <fullName>Cocos/0036</fullName>
+                <default>false</default>
+                <label>Cocos/0036</label>
+            </value>
+            <value>
+                <fullName>Cacao/9248</fullName>
+                <default>false</default>
+                <label>Cacao/9248</label>
+            </value>
+            <value>
+                <fullName>Buff Coloured/0956</fullName>
+                <default>false</default>
+                <label>Buff Coloured/0956</label>
+            </value>
+            <value>
+                <fullName>Taupe/9395</fullName>
+                <default>false</default>
+                <label>Taupe/9395</label>
+            </value>
+            <value>
+                <fullName>Nut/0916</fullName>
+                <default>false</default>
+                <label>Nut/0916</label>
+            </value>
+            <value>
+                <fullName>Grey/0905</fullName>
+                <default>false</default>
+                <label>Grey/0905</label>
+            </value>
+            <value>
+                <fullName>Anthracite/0045</fullName>
+                <default>false</default>
+                <label>Anthracite/0045</label>
+            </value>
+            <value>
+                <fullName>Carbon/1195</fullName>
+                <default>false</default>
+                <label>Carbon/1195</label>
+            </value>
+            <value>
+                <fullName>White/0950</fullName>
+                <default>false</default>
+                <label>White/0950</label>
+            </value>
+            <value>
+                <fullName>Light Grey/0985</fullName>
+                <default>false</default>
+                <label>Light Grey/0985</label>
+            </value>
+            <value>
+                <fullName>Black/0910</fullName>
+                <default>false</default>
+                <label>Black/0910</label>
+            </value>
+            <value>
+                <fullName>Mousy Grey/0915</fullName>
+                <default>false</default>
+                <label>Mousy Grey/0915</label>
+            </value>
+            <value>
+                <fullName>Elephant Grey/1575</fullName>
+                <default>false</default>
+                <label>Elephant Grey/1575</label>
+            </value>
+            <value>
+                <fullName>Graphite/0965</fullName>
+                <default>false</default>
+                <label>Graphite/0965</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Harmony Velour</controllingFieldValue>
+            <valueName>Beige/401</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Harmony Velour</controllingFieldValue>
+            <valueName>Black/957</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Harmony Velour</controllingFieldValue>
+            <valueName>Dark Grey/923</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Harmony Velour</controllingFieldValue>
+            <valueName>Green/629</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Harmony Velour</controllingFieldValue>
+            <valueName>Light Grey/905</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Harmony Velour</controllingFieldValue>
+            <valueName>Midnight Blue/837</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Harmony Velour</controllingFieldValue>
+            <valueName>Pink/542</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Harmony Velour</controllingFieldValue>
+            <valueName>Purple/539</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Harmony Velour</controllingFieldValue>
+            <valueName>Red/720</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Harmony Velour</controllingFieldValue>
+            <valueName>Royal Blue/627</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Shanghai Velour</controllingFieldValue>
+            <valueName>Beige/230</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Shanghai Velour</controllingFieldValue>
+            <valueName>Black/810</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Shanghai Velour</controllingFieldValue>
+            <valueName>Bright Green/722</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Shanghai Velour</controllingFieldValue>
+            <valueName>Mid Blue/780</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Shanghai Velour</controllingFieldValue>
+            <valueName>Midnight Blue/790</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Shanghai Velour</controllingFieldValue>
+            <valueName>Pink/724</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Shanghai Velour</controllingFieldValue>
+            <valueName>Purple/752</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Shanghai Velour</controllingFieldValue>
+            <valueName>Red/110</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Shanghai Velour</controllingFieldValue>
+            <valueName>Royal Blue/710</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Shanghai Velour</controllingFieldValue>
+            <valueName>Silver Grey/90</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Shanghai Velour</controllingFieldValue>
+            <valueName>Slate Grey/830</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Willow Cord</controllingFieldValue>
+            <valueName>Turquoise/0924</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Willow Cord</controllingFieldValue>
+            <valueName>Sky Blue/0904</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Willow Cord</controllingFieldValue>
+            <valueName>Electric Blue/0064</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Willow Cord</controllingFieldValue>
+            <valueName>Royal Blue/0824</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Willow Cord</controllingFieldValue>
+            <valueName>Hawaiian Blue/1334</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Willow Cord</controllingFieldValue>
+            <valueName>Atoll Blue/1234</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Willow Cord</controllingFieldValue>
+            <valueName>Marine/0954</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Willow Cord</controllingFieldValue>
+            <valueName>Blue Jean/0024</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Willow Cord</controllingFieldValue>
+            <valueName>Night Blue/0014</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Willow Cord</controllingFieldValue>
+            <valueName>Black Tulip/1059</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Willow Cord</controllingFieldValue>
+            <valueName>Violet/0939</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Willow Cord</controllingFieldValue>
+            <valueName>Candy Pink/1722</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Willow Cord</controllingFieldValue>
+            <valueName>Petunia/9289</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Willow Cord</controllingFieldValue>
+            <valueName>Prune/1129</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Willow Cord</controllingFieldValue>
+            <valueName>Lavender/1339</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Willow Cord</controllingFieldValue>
+            <valueName>Fushia/9302</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Willow Cord</controllingFieldValue>
+            <valueName>Farmboise/1262</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Willow Cord</controllingFieldValue>
+            <valueName>Kaki/1571</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Willow Cord</controllingFieldValue>
+            <valueName>Citronnelle Green/1251</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Willow Cord</controllingFieldValue>
+            <valueName>Apple Green/0961</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Willow Cord</controllingFieldValue>
+            <valueName>Olive Green/0061</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Willow Cord</controllingFieldValue>
+            <valueName>Spring Green/9631</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Willow Cord</controllingFieldValue>
+            <valueName>Pustachio/9661</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Willow Cord</controllingFieldValue>
+            <valueName>Grass Green/0041</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Willow Cord</controllingFieldValue>
+            <valueName>Mid Green/0901</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Willow Cord</controllingFieldValue>
+            <valueName>Dark Green/0011</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Willow Cord</controllingFieldValue>
+            <valueName>Yellow/9213</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Willow Cord</controllingFieldValue>
+            <valueName>Mandarine/9347</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Willow Cord</controllingFieldValue>
+            <valueName>Orange/0007</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Willow Cord</controllingFieldValue>
+            <valueName>Brick Red/9312</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Willow Cord</controllingFieldValue>
+            <valueName>Dark Red/0012</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Willow Cord</controllingFieldValue>
+            <valueName>Richelieu Red/9522</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Willow Cord</controllingFieldValue>
+            <valueName>Theatre Red/0962</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Willow Cord</controllingFieldValue>
+            <valueName>Tomato/9662</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Willow Cord</controllingFieldValue>
+            <valueName>Sahara Beige/0906</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Willow Cord</controllingFieldValue>
+            <valueName>Cocos/0036</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Willow Cord</controllingFieldValue>
+            <valueName>Cacao/9248</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Willow Cord</controllingFieldValue>
+            <valueName>Buff Coloured/0956</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Willow Cord</controllingFieldValue>
+            <valueName>Taupe/9395</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Willow Cord</controllingFieldValue>
+            <valueName>Nut/0916</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Willow Cord</controllingFieldValue>
+            <valueName>Grey/0905</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Willow Cord</controllingFieldValue>
+            <valueName>Anthracite/0045</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Willow Cord</controllingFieldValue>
+            <valueName>Carbon/1195</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Willow Cord</controllingFieldValue>
+            <valueName>White/0950</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Willow Cord</controllingFieldValue>
+            <valueName>Light Grey/0985</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Willow Cord</controllingFieldValue>
+            <valueName>Black/0910</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Willow Cord</controllingFieldValue>
+            <valueName>Mousy Grey/0915</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Willow Cord</controllingFieldValue>
+            <valueName>Elephant Grey/1575</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Willow Cord</controllingFieldValue>
+            <valueName>Graphite/0965</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Escolita Carpet Tiles</controllingFieldValue>
+            <valueName>Blue/ET05</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Escolita Carpet Tiles</controllingFieldValue>
+            <valueName>Brown/ET09</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Escolita Carpet Tiles</controllingFieldValue>
+            <valueName>Charcoal/ET04</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Escolita Carpet Tiles</controllingFieldValue>
+            <valueName>Gold/ET02</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Escolita Carpet Tiles</controllingFieldValue>
+            <valueName>Green/ET08</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Escolita Carpet Tiles</controllingFieldValue>
+            <valueName>Grey/ET06</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Escolita Carpet Tiles</controllingFieldValue>
+            <valueName>Red/ET07</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Safety Slate Floor</controllingFieldValue>
+            <valueName>Beige/2251</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Safety Slate Floor</controllingFieldValue>
+            <valueName>Black/1999</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Safety Slate Floor</controllingFieldValue>
+            <valueName>Light Blue/6343</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Safety Slate Floor</controllingFieldValue>
+            <valueName>Silver Grey/1260</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Other Flooring</controllingFieldValue>
+            <valueName>Beech Vinyl/BV01</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Other Flooring</controllingFieldValue>
+            <valueName>Black Penny Dot/BPV1</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Other Flooring</controllingFieldValue>
+            <valueName>Dark Wood Vinyl/BV02</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Other Flooring</controllingFieldValue>
+            <valueName>Silver Treadplate/STV1</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Other Flooring</controllingFieldValue>
+            <valueName>White Penny Dot/WPV2</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Coir Matting</controllingFieldValue>
+            <valueName>Coir Matting/CM01</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ELEA Quality</controllingFieldValue>
+            <valueName>Nero/270</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ELEA Quality</controllingFieldValue>
+            <valueName>Antracite/202</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ELEA Quality</controllingFieldValue>
+            <valueName>Grigio/208</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ELEA Quality</controllingFieldValue>
+            <valueName>Ferro/240</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ELEA Quality</controllingFieldValue>
+            <valueName>Fumo/215</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ELEA Quality</controllingFieldValue>
+            <valueName>Cenere/242</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ELEA Quality</controllingFieldValue>
+            <valueName>Caligine/262</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ELEA Quality</controllingFieldValue>
+            <valueName>Nuvola/232</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ELEA Quality</controllingFieldValue>
+            <valueName>Cacao/213</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ELEA Quality</controllingFieldValue>
+            <valueName>Mogano/214</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ELEA Quality</controllingFieldValue>
+            <valueName>Castoro/206</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ELEA Quality</controllingFieldValue>
+            <valueName>Tuareg/245</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ELEA Quality</controllingFieldValue>
+            <valueName>Ghisa/219</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ELEA Quality</controllingFieldValue>
+            <valueName>Beige/272</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ELEA Quality</controllingFieldValue>
+            <valueName>Sabbia/223</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ELEA Quality</controllingFieldValue>
+            <valueName>Lama/248</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ELEA Quality</controllingFieldValue>
+            <valueName>Uva/228</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ELEA Quality</controllingFieldValue>
+            <valueName>Prugna/233</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ELEA Quality</controllingFieldValue>
+            <valueName>Ribes/200</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ELEA Quality</controllingFieldValue>
+            <valueName>Lavanda/236</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ELEA Quality</controllingFieldValue>
+            <valueName>Fucsia/222</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ELEA Quality</controllingFieldValue>
+            <valueName>Lampone/239</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ELEA Quality</controllingFieldValue>
+            <valueName>Magenta/254</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ELEA Quality</controllingFieldValue>
+            <valueName>Confetto/212</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ELEA Quality</controllingFieldValue>
+            <valueName>Terra/261</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ELEA Quality</controllingFieldValue>
+            <valueName>Aragosta/210</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ELEA Quality</controllingFieldValue>
+            <valueName>Papaya/263</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ELEA Quality</controllingFieldValue>
+            <valueName>Arancio/252</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ELEA Quality</controllingFieldValue>
+            <valueName>Zucca/264</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ELEA Quality</controllingFieldValue>
+            <valueName>Grano/268</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ELEA Quality</controllingFieldValue>
+            <valueName>Sole/269</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ELEA Quality</controllingFieldValue>
+            <valueName>Giallo/266</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ELEA Quality</controllingFieldValue>
+            <valueName>Prussia/276</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ELEA Quality</controllingFieldValue>
+            <valueName>Notte/256</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ELEA Quality</controllingFieldValue>
+            <valueName>Volturno/227</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ELEA Quality</controllingFieldValue>
+            <valueName>Zaffiro/278</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ELEA Quality</controllingFieldValue>
+            <valueName>Marina/279</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ELEA Quality</controllingFieldValue>
+            <valueName>Caraibi/265</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ELEA Quality</controllingFieldValue>
+            <valueName>Elettrico/281</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ELEA Quality</controllingFieldValue>
+            <valueName>Celeste/282</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ELEA Quality</controllingFieldValue>
+            <valueName>Selva/284</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ELEA Quality</controllingFieldValue>
+            <valueName>Bosco/294</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ELEA Quality</controllingFieldValue>
+            <valueName>Erica/274</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ELEA Quality</controllingFieldValue>
+            <valueName>Mela/267</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ELEA Quality</controllingFieldValue>
+            <valueName>Campestre/286</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ELEA Quality</controllingFieldValue>
+            <valueName>Muschio/287</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ELEA Quality</controllingFieldValue>
+            <valueName>Pistacchio/288</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ELEA Quality</controllingFieldValue>
+            <valueName>Cedro/295</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ELEA Quality</controllingFieldValue>
+            <valueName>Teatro/251</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ELEA Quality</controllingFieldValue>
+            <valueName>Bordeaux/249</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ELEA Quality</controllingFieldValue>
+            <valueName>Cardinale/289</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ELEA Quality</controllingFieldValue>
+            <valueName>Amarena/293</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ELEA Quality</controllingFieldValue>
+            <valueName>Rubino/283</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ELEA Quality</controllingFieldValue>
+            <valueName>Rosso/271</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ELEA Quality</controllingFieldValue>
+            <valueName>Vermiglio/296</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ELEA Quality</controllingFieldValue>
+            <valueName>Fiamma/277</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ELEA Quality</controllingFieldValue>
+            <valueName>Petrolio/299</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ELEA Quality</controllingFieldValue>
+            <valueName>Abisso/258</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ELEA Quality</controllingFieldValue>
+            <valueName>Nautica/204</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ELEA Quality</controllingFieldValue>
+            <valueName>Cielo/259</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ELEA Quality</controllingFieldValue>
+            <valueName>Nilo/290</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ELEA Quality</controllingFieldValue>
+            <valueName>Atollo/205</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ELEA Quality</controllingFieldValue>
+            <valueName>Maldive/207</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ELEA Quality</controllingFieldValue>
+            <valueName>Jeans/203</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ELEA Quality</controllingFieldValue>
+            <valueName>Bianco/280</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ELEA Quality</controllingFieldValue>
+            <valueName>Ghiaccio/225</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ELEA Quality</controllingFieldValue>
+            <valueName>Camomilla/217</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ELEA Quality</controllingFieldValue>
+            <valueName>Peonia/255</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ELEA Quality</controllingFieldValue>
+            <valueName>Egeo/253</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ELEA Quality</controllingFieldValue>
+            <valueName>Bebe/235</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ELEA Quality</controllingFieldValue>
+            <valueName>Salvia/234</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ELEA Quality</controllingFieldValue>
+            <valueName>Offwhite/238</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ELEA ELITE Quality</controllingFieldValue>
+            <valueName>Nero/370</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ELEA ELITE Quality</controllingFieldValue>
+            <valueName>Antracite/302</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ELEA ELITE Quality</controllingFieldValue>
+            <valueName>Grigio/308</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ELEA ELITE Quality</controllingFieldValue>
+            <valueName>Ferro/340</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ELEA ELITE Quality</controllingFieldValue>
+            <valueName>Fumo/315</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ELEA ELITE Quality</controllingFieldValue>
+            <valueName>Cenere/342</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ELEA ELITE Quality</controllingFieldValue>
+            <valueName>Caligine/362</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ELEA ELITE Quality</controllingFieldValue>
+            <valueName>Nuvola/332</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ELEA ELITE Quality</controllingFieldValue>
+            <valueName>Cacao/313</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ELEA ELITE Quality</controllingFieldValue>
+            <valueName>Mogano/314</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ELEA ELITE Quality</controllingFieldValue>
+            <valueName>Castoro/306</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ELEA ELITE Quality</controllingFieldValue>
+            <valueName>Tuareg/345</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ELEA ELITE Quality</controllingFieldValue>
+            <valueName>Ghisa/319</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ELEA ELITE Quality</controllingFieldValue>
+            <valueName>Beige/372</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ELEA ELITE Quality</controllingFieldValue>
+            <valueName>Sabbia/323</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ELEA ELITE Quality</controllingFieldValue>
+            <valueName>Lama/348</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ELEA ELITE Quality</controllingFieldValue>
+            <valueName>Uva/328</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ELEA ELITE Quality</controllingFieldValue>
+            <valueName>Prugna/333</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ELEA ELITE Quality</controllingFieldValue>
+            <valueName>Ribes/300</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ELEA ELITE Quality</controllingFieldValue>
+            <valueName>Lavanda/336</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ELEA ELITE Quality</controllingFieldValue>
+            <valueName>Fucsia/322</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ELEA ELITE Quality</controllingFieldValue>
+            <valueName>Lampone/339</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ELEA ELITE Quality</controllingFieldValue>
+            <valueName>Magenta/354</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ELEA ELITE Quality</controllingFieldValue>
+            <valueName>Confetto/312</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ELEA ELITE Quality</controllingFieldValue>
+            <valueName>Terra/361</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ELEA ELITE Quality</controllingFieldValue>
+            <valueName>Aragosta/310</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ELEA ELITE Quality</controllingFieldValue>
+            <valueName>Papaya/363</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ELEA ELITE Quality</controllingFieldValue>
+            <valueName>Arancio/352</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ELEA ELITE Quality</controllingFieldValue>
+            <valueName>Zucca/364</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ELEA ELITE Quality</controllingFieldValue>
+            <valueName>Grano/368</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ELEA ELITE Quality</controllingFieldValue>
+            <valueName>Sole/369</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ELEA ELITE Quality</controllingFieldValue>
+            <valueName>Giallo/366</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ELEA ELITE Quality</controllingFieldValue>
+            <valueName>Prussia/376</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ELEA ELITE Quality</controllingFieldValue>
+            <valueName>Notte/356</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ELEA ELITE Quality</controllingFieldValue>
+            <valueName>Volturno/327</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ELEA ELITE Quality</controllingFieldValue>
+            <valueName>Zaffiro/378</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ELEA ELITE Quality</controllingFieldValue>
+            <valueName>Marina/379</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ELEA ELITE Quality</controllingFieldValue>
+            <valueName>Caraibi/365</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ELEA ELITE Quality</controllingFieldValue>
+            <valueName>Elettrico/381</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ELEA ELITE Quality</controllingFieldValue>
+            <valueName>Celeste/382</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ELEA ELITE Quality</controllingFieldValue>
+            <valueName>Selva/384</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ELEA ELITE Quality</controllingFieldValue>
+            <valueName>Bosco/394</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ELEA ELITE Quality</controllingFieldValue>
+            <valueName>Erica/374</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ELEA ELITE Quality</controllingFieldValue>
+            <valueName>Mela/367</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ELEA ELITE Quality</controllingFieldValue>
+            <valueName>Campestre/386</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ELEA ELITE Quality</controllingFieldValue>
+            <valueName>Muschio/387</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ELEA ELITE Quality</controllingFieldValue>
+            <valueName>Pistacchio/388</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ELEA ELITE Quality</controllingFieldValue>
+            <valueName>Cedro/395</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ELEA ELITE Quality</controllingFieldValue>
+            <valueName>Teatro/351</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ELEA ELITE Quality</controllingFieldValue>
+            <valueName>Bordeaux/349</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ELEA ELITE Quality</controllingFieldValue>
+            <valueName>Cardinale/389</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ELEA ELITE Quality</controllingFieldValue>
+            <valueName>Amarena/393</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ELEA ELITE Quality</controllingFieldValue>
+            <valueName>Rubino/383</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ELEA ELITE Quality</controllingFieldValue>
+            <valueName>Rosso/371</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ELEA ELITE Quality</controllingFieldValue>
+            <valueName>Vermiglio/396</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ELEA ELITE Quality</controllingFieldValue>
+            <valueName>Fiamma/377</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ELEA ELITE Quality</controllingFieldValue>
+            <valueName>Petrolio/399</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ELEA ELITE Quality</controllingFieldValue>
+            <valueName>Abisso/358</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ELEA ELITE Quality</controllingFieldValue>
+            <valueName>Nautica/304</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ELEA ELITE Quality</controllingFieldValue>
+            <valueName>Cielo/359</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ELEA ELITE Quality</controllingFieldValue>
+            <valueName>Nilo/390</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ELEA ELITE Quality</controllingFieldValue>
+            <valueName>Atollo/305</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ELEA ELITE Quality</controllingFieldValue>
+            <valueName>Maldive/307</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ELEA ELITE Quality</controllingFieldValue>
+            <valueName>Jeans/303</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ELEA ELITE Quality</controllingFieldValue>
+            <valueName>Bianco/380</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ELEA ELITE Quality</controllingFieldValue>
+            <valueName>Ghiaccio/325</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ELEA ELITE Quality</controllingFieldValue>
+            <valueName>Camomilla/317</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ELEA ELITE Quality</controllingFieldValue>
+            <valueName>Peonia/355</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ELEA ELITE Quality</controllingFieldValue>
+            <valueName>Egeo/353</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ELEA ELITE Quality</controllingFieldValue>
+            <valueName>Bebe/335</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ELEA ELITE Quality</controllingFieldValue>
+            <valueName>Salvia/334</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ELEA ELITE Quality</controllingFieldValue>
+            <valueName>Offwhite/338</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

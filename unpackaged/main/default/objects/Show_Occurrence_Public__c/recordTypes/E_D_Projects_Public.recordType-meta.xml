@@ -1,0 +1,699 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>E_D_Projects_Public</fullName>
+    <active>true</active>
+    <description>Projects Public</description>
+    <label>E&amp;D - Projects Public</label>
+    <picklistValues>
+        <picklist>Booth_Type__c</picklist>
+        <values>
+            <fullName>Corner</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Inline</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Island</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Not Applicable</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Peninsula</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Permanent Install</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Canadian_Sales_Person__c</picklist>
+        <values>
+            <fullName>Mike Lecour</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Contract_Type__c</picklist>
+        <values>
+            <fullName>Direct</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Subcontract from GES</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Subcontract to GES</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Frequency__c</picklist>
+        <values>
+            <fullName>B1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>B2</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>B3</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>B4</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>B5</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>OT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>R1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>R2</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>R3</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>R4</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>R5</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Job_Number_Status__c</picklist>
+        <values>
+            <fullName>Complete</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Open</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pending</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Mobile_App_Company__c</picklist>
+        <values>
+            <fullName>Pathable</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Multi_Year_Step__c</picklist>
+        <values>
+            <fullName>0 of 0</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>1 of 1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>1 of 2</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>1 of 3</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>1 of 4</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>1 of 5</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>1 of 6</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>1 of 7</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2 of 2</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2 of 3</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2 of 4</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2 of 5</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2 of 6</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2 of 7</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>3 of 3</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>3 of 4</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>3 of 5</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>3 of 6</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>3 of 7</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>4 of 4</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>4 of 5</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>4 of 6</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>4 of 7</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>5 of 5</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>5 of 6</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>5 of 7</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>6 of 6</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>6 of 7</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>7 of 7</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>New_Repeat__c</picklist>
+        <values>
+            <fullName>New</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Repeat</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>PSP__c</picklist>
+        <values>
+            <fullName>NM%3A  No - Mgmt Decision No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NP%3A  NE%2C Lost%2C Sub</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PI%3A  Price Increase in lieu</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PM%3A  Unique PSP Terms</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PS%3A  3%25 PSP</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>S2%3A  2%25 PSP</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Primary_Interest__c</picklist>
+        <values>
+            <fullName>Junk</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Measurement %26 Intelligence</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sponsorship</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Strategy</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Strategy %2F Experiential Design</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Production_Location__c</picklist>
+        <values>
+            <fullName>110- Las Vegas</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>140- Salt Lake City</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>150- Reno</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>160- Denver</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>170- Phoenix</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>220- Los Angeles%2C CA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>240- San Francisco%2C San Jose</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>250- San Diego</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>270- Corporate Events</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>420- Austin%2C Dallas%2C Houston%2C San Antonio</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>480- Montreal%2C Canada</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>510- Atlanta</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>520- Miami%2C Tampa</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>530- New Orleans</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>610- Portland%2C Seattle</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>710- Chicago%2C Cleveland%2C Milwaukee%2C St%2E Louis</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>790- Minneapolis</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>810- New York</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>830-DC%2C Philadelphia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>890- Calgary%2C Edmonton%2C %26 Toronto%2C Canada</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>940- Foreign</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>SIT_Scenario__c</picklist>
+        <values>
+            <fullName>Actuals</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>May Fcst Data</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Sales_Location__c</picklist>
+        <values>
+            <fullName>110- Las Vegas</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>140- Salt Lake City</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>150- Reno</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>160- Denver</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>170- Phoenix</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>220- Los Angeles</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>240- San Francisco%2C San Jose</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>250- San Diego</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>270- Corporate Events</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>420- Austin%2C Dallas%2C Houston%2C San Antonio</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>460- Calgary%2C Canada</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>470- Edmonton%2C Canada</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>510- Atlanta</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>520- Miami%2C Orlando%2C Tampa</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>530- New Orleans</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>610- Portland%2C Seattle</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>710- Chicago%2C Cleveland%2C Milwaukee</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>720- St%2E Louis</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>790- Minneapolis</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>810- New York</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>830- DC%2C Philadelphia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>890- Toronto%2C Canada</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>930- Washington DC Natl Sales</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>940- National Sales</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Stage__c</picklist>
+        <values>
+            <fullName>CR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CV</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DB</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FI</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>LO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>LR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>OF</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SC</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TS</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Target_Occurrence__c</picklist>
+        <values>
+            <fullName>0</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>3</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>4</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>5</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>6</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>7</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>8</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>9</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Type__c</picklist>
+        <values>
+            <fullName>ITYFTY</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Plan 1990</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Plan 1991</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Plan 1992</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Plan 1993</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Plan 1994</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Plan 1995</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Plan 1996</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Plan 1997</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Plan 1998</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Plan 1999</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Plan 2000</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Plan 2001</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Plan 2002</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Plan 2003</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Plan 2004</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Plan 2005</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Plan 2006</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Plan 2007</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Plan 2008</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Plan 2009</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Plan 2010</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Plan 2011</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

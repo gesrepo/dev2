@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Order_Task__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>Lookup to the Order Task that this error belongs to.</description>
+    <inlineHelpText>Lookup to the Order Task that this error belongs to.</inlineHelpText>
+    <label>Order Task</label>
+    <referenceTo>GC_GES_Order_Task__c</referenceTo>
+    <relationshipLabel>GC Core Interface Logs</relationshipLabel>
+    <relationshipName>GC_Core_Interface_Logs</relationshipName>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Disat_AV_error__c</fullName>
+    <label>Disat. AV error</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Invoice/order error</fullName>
+                <default>false</default>
+                <label>Invoice/order error</label>
+            </value>
+            <value>
+                <fullName>Missing item/s</fullName>
+                <default>false</default>
+                <label>Missing item/s</label>
+            </value>
+            <value>
+                <fullName>Not as expected</fullName>
+                <default>false</default>
+                <label>Not as expected</label>
+            </value>
+            <value>
+                <fullName>On-site</fullName>
+                <default>false</default>
+                <label>On-site</label>
+            </value>
+            <value>
+                <fullName>Positioning</fullName>
+                <default>false</default>
+                <label>Positioning</label>
+            </value>
+            <value>
+                <fullName>Pre-show</fullName>
+                <default>false</default>
+                <label>Pre-show</label>
+            </value>
+            <value>
+                <fullName>Technical</fullName>
+                <default>false</default>
+                <label>Technical</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

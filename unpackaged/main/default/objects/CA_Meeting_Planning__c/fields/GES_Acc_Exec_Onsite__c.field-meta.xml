@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>GES_Acc_Exec_Onsite__c</fullName>
+    <label>GES Acc Exec Onsite</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Jennifer Spencer</fullName>
+                <default>false</default>
+                <label>Jennifer Spencer</label>
+            </value>
+            <value>
+                <fullName>GES Account Executive 1</fullName>
+                <default>false</default>
+                <label>GES Account Executive 1</label>
+            </value>
+            <value>
+                <fullName>GES Account Executive 2</fullName>
+                <default>false</default>
+                <label>GES Account Executive 2</label>
+            </value>
+            <value>
+                <fullName>GES Account Executive 3</fullName>
+                <default>false</default>
+                <label>GES Account Executive 3</label>
+            </value>
+            <value>
+                <fullName>N/A</fullName>
+                <default>false</default>
+                <label>N/A</label>
+            </value>
+            <value>
+                <fullName>Boncek, Debbie</fullName>
+                <default>false</default>
+                <label>Boncek, Debbie</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

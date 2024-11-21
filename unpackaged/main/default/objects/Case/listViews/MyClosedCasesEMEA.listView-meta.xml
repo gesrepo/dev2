@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>MyClosedCasesEMEA</fullName>
+    <columns>CASES.CASE_NUMBER</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>Customer_Name__c</columns>
+    <columns>Exhibitor_Name__c</columns>
+    <columns>NAME</columns>
+    <columns>Show_Name__c</columns>
+    <columns>Show_Open_Date__c</columns>
+    <columns>Booth_Number__c</columns>
+    <columns>CASES.PRIORITY</columns>
+    <columns>Severe__c</columns>
+    <columns>Substatus__c</columns>
+    <columns>Age__c</columns>
+    <columns>Age_Current_Owner__c</columns>
+    <filterScope>Mine</filterScope>
+    <filters>
+        <field>CASES.STATUS</field>
+        <operation>equals</operation>
+        <value>Closed</value>
+    </filters>
+    <label>*My Closed Customer Service Inqs (Cases)</label>
+    <language>en_US</language>
+    <sharedTo>
+        <roleAndSubordinatesInternal>Exhibitor_Services_Co_Ordinator</roleAndSubordinatesInternal>
+        <roleAndSubordinatesInternal>GES_EMEA_Operations</roleAndSubordinatesInternal>
+        <roleAndSubordinatesInternal>GES_EMEA_Servi_Centre</roleAndSubordinatesInternal>
+        <roleAndSubordinatesInternal>GES_EMEA_Servi_Centre_Manager</roleAndSubordinatesInternal>
+        <roleAndSubordinatesInternal>GES_EMEA_Servi_Centre_Supervisor</roleAndSubordinatesInternal>
+    </sharedTo>
+</ListView>

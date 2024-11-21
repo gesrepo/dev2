@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CRR_Wedge_Counter_RGB_Color__c</fullName>
+    <label>Wedge Counter RGB Color</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>White - 255/255/255</fullName>
+                <default>true</default>
+                <label>White - 255/255/255</label>
+            </value>
+            <value>
+                <fullName>Blue - 0/0/225</fullName>
+                <default>false</default>
+                <label>Blue - 0/0/225</label>
+            </value>
+            <value>
+                <fullName>Coral - 255/0/128</fullName>
+                <default>false</default>
+                <label>Coral - 255/0/128</label>
+            </value>
+            <value>
+                <fullName>Cyan - 0/255/255</fullName>
+                <default>false</default>
+                <label>Cyan - 0/255/255</label>
+            </value>
+            <value>
+                <fullName>Light Blue - 0/128/255</fullName>
+                <default>false</default>
+                <label>Light Blue - 0/128/255</label>
+            </value>
+            <value>
+                <fullName>Green - 0/255/0</fullName>
+                <default>false</default>
+                <label>Green - 0/255/0</label>
+            </value>
+            <value>
+                <fullName>Orange - 255/128/0</fullName>
+                <default>false</default>
+                <label>Orange - 255/128/0</label>
+            </value>
+            <value>
+                <fullName>Pink - 255/0/255</fullName>
+                <default>false</default>
+                <label>Pink - 255/0/255</label>
+            </value>
+            <value>
+                <fullName>Purple - 128/0/255</fullName>
+                <default>false</default>
+                <label>Purple - 128/0/255</label>
+            </value>
+            <value>
+                <fullName>Red - 255/0/0</fullName>
+                <default>false</default>
+                <label>Red - 255/0/0</label>
+            </value>
+            <value>
+                <fullName>Yellow - 255/255/0</fullName>
+                <default>false</default>
+                <label>Yellow - 255/255/0</label>
+            </value>
+            <value>
+                <fullName>Specialty Color</fullName>
+                <default>false</default>
+                <label>Specialty Color</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

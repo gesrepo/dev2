@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Request_CC</fullName>
+    <availability>online</availability>
+    <description>Button which will allow the user to generate the email with credit card submission link to the customer from Salesforce.</description>
+    <displayType>button</displayType>
+    <linkType>javascript</linkType>
+    <masterLabel>Request CC</masterLabel>
+    <openType>onClickJavaScript</openType>
+    <protected>false</protected>
+    <url>{!REQUIRESCRIPT(&quot;/soap/ajax/55.0/connection.js&quot;)} 
+{!REQUIRESCRIPT(&quot;/soap/ajax/55.0/apex.js&quot;)} 
+
+var boothRecId = &quot;{!Case.Booth__c}&quot;; 
+if(boothRecId != &quot;&quot;) { 
+var boothArea = sforce.connection.query(&quot;SELECT BOOTH_ID__c from Oracle_Show_Booth__c WHERE id =&#39;{!Case.BoothId__c}&#39; LIMIT 1&quot;); 
+//var caseVar = sforce.connection.query(&quot;SELECT Mail_has_been_sent_for_requesting_CC__c from Case WHERE Id =&#39;{!Case.BoothId__c}&#39; LIMIT 1&quot;); 
+var Records = boothArea.getArray(&quot;records&quot;); 
+var boothId = Records[0].BOOTH_ID__c; 
+if(boothId != null) { 
+var confirmationFlag =sforce.apex.execute(&quot;ACCC_SendEmail&quot;,&quot;sendMinimalPaymentMail&quot;,{caseId:&quot;{!Case.Id}&quot;}); 
+if(confirmationFlag==&quot;true&quot;){	
+alert(&quot;Email sent successfully&quot;); 
+location.reload(true); 
+}else{ 
+alert(&quot;The web services are down. Please try after some time. Thank you.&quot;); 
+} 
+
+} 
+else { 
+alert(&quot;Please enter the Valid Booth ID&quot;); 
+} 
+}</url>
+</WebLink>

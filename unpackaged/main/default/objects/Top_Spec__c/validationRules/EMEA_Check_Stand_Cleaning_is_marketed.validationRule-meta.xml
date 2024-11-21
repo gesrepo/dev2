@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>EMEA_Check_Stand_Cleaning_is_marketed</fullName>
+    <active>false</active>
+    <errorConditionFormula>Contracted_Stand_Cleaning__c  == True &amp;&amp; (
+  Marketing_Stand_Cleaning__c   == False
+&amp;&amp;  LEN(  Stand_Cleaning_Details__c  ) = 0)</errorConditionFormula>
+    <errorMessage>If Stand cleaning is contracted and is not being marketed you must enter a reason why</errorMessage>
+</ValidationRule>

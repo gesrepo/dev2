@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ServiceType__c</fullName>
+    <label>Service Type</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>ADRP BOOTH</fullName>
+                <default>false</default>
+                <label>ADRP BOOTH</label>
+            </value>
+            <value>
+                <fullName>Audio Visual</fullName>
+                <default>false</default>
+                <label>Audio Visual</label>
+            </value>
+            <value>
+                <fullName>Audio/Visual</fullName>
+                <default>false</default>
+                <label>Audio/Visual</label>
+            </value>
+            <value>
+                <fullName>BULLETIN BOARD</fullName>
+                <default>false</default>
+                <label>BULLETIN BOARD</label>
+            </value>
+            <value>
+                <fullName>Catering</fullName>
+                <default>false</default>
+                <label>Catering</label>
+            </value>
+            <value>
+                <fullName>Cleaning</fullName>
+                <default>false</default>
+                <label>Cleaning</label>
+            </value>
+            <value>
+                <fullName>Electrical</fullName>
+                <default>false</default>
+                <label>Electrical</label>
+            </value>
+            <value>
+                <fullName>Entrance Unit</fullName>
+                <default>false</default>
+                <label>Entrance Unit</label>
+            </value>
+            <value>
+                <fullName>Exhibit Booths</fullName>
+                <default>false</default>
+                <label>Exhibit Booths</label>
+            </value>
+            <value>
+                <fullName>EXHIBITOR BOOTH PACKAGE</fullName>
+                <default>false</default>
+                <label>EXHIBITOR BOOTH PACKAGE</label>
+            </value>
+            <value>
+                <fullName>Facility</fullName>
+                <default>false</default>
+                <label>Facility</label>
+            </value>
+            <value>
+                <fullName>Food &amp; Beverage</fullName>
+                <default>false</default>
+                <label>Food &amp; Beverage</label>
+            </value>
+            <value>
+                <fullName>GES</fullName>
+                <default>false</default>
+                <label>GES</label>
+            </value>
+            <value>
+                <fullName>GES Service Desk</fullName>
+                <default>false</default>
+                <label>GES Service Desk</label>
+            </value>
+            <value>
+                <fullName>Graphics</fullName>
+                <default>false</default>
+                <label>Graphics</label>
+            </value>
+            <value>
+                <fullName>Internet</fullName>
+                <default>false</default>
+                <label>Internet</label>
+            </value>
+            <value>
+                <fullName>Labor</fullName>
+                <default>false</default>
+                <label>Labor</label>
+            </value>
+            <value>
+                <fullName>Lead Retrieval</fullName>
+                <default>false</default>
+                <label>Lead Retrieval</label>
+            </value>
+            <value>
+                <fullName>Mannequins</fullName>
+                <default>false</default>
+                <label>Mannequins</label>
+            </value>
+            <value>
+                <fullName>MISC</fullName>
+                <default>false</default>
+                <label>MISC</label>
+            </value>
+            <value>
+                <fullName>Modeling &amp; Talent</fullName>
+                <default>false</default>
+                <label>Modeling &amp; Talent</label>
+            </value>
+            <value>
+                <fullName>Office Equipment</fullName>
+                <default>false</default>
+                <label>Office Equipment</label>
+            </value>
+            <value>
+                <fullName>Plant &amp; Floral</fullName>
+                <default>false</default>
+                <label>Plant &amp; Floral</label>
+            </value>
+            <value>
+                <fullName>Plant and Floral</fullName>
+                <default>false</default>
+                <label>Plant and Floral</label>
+            </value>
+            <value>
+                <fullName>Plant-Floral</fullName>
+                <default>false</default>
+                <label>Plant-Floral</label>
+            </value>
+            <value>
+                <fullName>Poster Boards</fullName>
+                <default>false</default>
+                <label>Poster Boards</label>
+            </value>
+            <value>
+                <fullName>Registration</fullName>
+                <default>false</default>
+                <label>Registration</label>
+            </value>
+            <value>
+                <fullName>Security</fullName>
+                <default>false</default>
+                <label>Security</label>
+            </value>
+            <value>
+                <fullName>SIGNS AND BANNERS</fullName>
+                <default>false</default>
+                <label>SIGNS AND BANNERS</label>
+            </value>
+            <value>
+                <fullName>Staff Pro Security</fullName>
+                <default>false</default>
+                <label>Staff Pro Security</label>
+            </value>
+            <value>
+                <fullName>Structure</fullName>
+                <default>false</default>
+                <label>Structure</label>
+            </value>
+            <value>
+                <fullName>Telecommunications</fullName>
+                <default>false</default>
+                <label>Telecommunications</label>
+            </value>
+            <value>
+                <fullName>Telephones</fullName>
+                <default>false</default>
+                <label>Telephones</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

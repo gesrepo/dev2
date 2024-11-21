@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Job_Number_Fields</fullName>
+    <active>true</active>
+    <description>Prevents job number fields such as Facility, Production Location, Job Number &amp; Job Number Status from being updated</description>
+    <errorConditionFormula>AND(
+NOT(ISBLANK( Job_Number__c )),
+OR
+(ISCHANGED( Job_Number__c),
+ISCHANGED( Job_Number_Status__c ),
+ISCHANGED( Production_Location__c ),
+ISCHANGED( Facility__c )),
+$User.Update_Job_Number_Fields__c =false,
+NOT($Profile.Name = &quot;GES Administrator Interface&quot;))</errorConditionFormula>
+    <errorDisplayField>Job_Number__c</errorDisplayField>
+    <errorMessage>You cannot change the job number, production location, facility or job number status once a job number has been issued. Please contact Craig Dingwall cdingwall@ges.com and Gerry Morales @ gmorales@ges.com to change them.</errorMessage>
+</ValidationRule>

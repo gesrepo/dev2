@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>EMEA_Girls_Day_Out_Case</fullName>
+    <filterScope>Queue</filterScope>
+    <label>EMEA Girls Day Out</label>
+    <queue>EMEA_Girls_Day_Out</queue>
+    <sharedTo>
+        <allInternalUsers />
+    </sharedTo>
+</ListView>

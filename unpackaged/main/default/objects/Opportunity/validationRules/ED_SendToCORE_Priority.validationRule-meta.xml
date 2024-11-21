@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ED_SendToCORE_Priority</fullName>
+    <active>true</active>
+    <description>Checks to see if the user is a CORE user.</description>
+    <errorConditionFormula>(PRF_Sent_to_CORE__c = true || ISPICKVAL(GBMS_CORE__c, &quot;CORE&quot;))
+&amp;&amp;
+($RecordType.DeveloperName = &quot;E_D_Projects&quot; || 
+$RecordType.DeveloperName = &quot;E_D_Projects_Proposal&quot; || 
+$RecordType.DeveloperName = &quot;E_D_Projects_Read_Only&quot;) 
+&amp;&amp; NOT ISPICKVAL( $User.Default_Target_System__c, &quot;CORE&quot;)
+&amp;&amp; NOT ( $User.Id = &quot;005400000010HAt&quot;)
+&amp;&amp; NOT ( $User.Id = &quot;005400000010Htz&quot;)
+&amp;&amp; NOT ( $User.Id = &quot;00540000004Lebt&quot;)
+&amp;&amp; NOT ($User.Id = &quot;005400000010Hty&quot;)
+&amp;&amp; NOT($Profile.Name = &quot;GES Interface&quot;)
+&amp;&amp; NOT($Profile.Name = &quot;Salesforce Support User&quot;)
+&amp;&amp; NOT($Profile.Name = &quot;System Administrator&quot;)
+&amp;&amp; NOT($Profile.Name = &quot;GES Administrator Interface&quot;)</errorConditionFormula>
+    <errorDisplayField>GBMS_CORE__c</errorDisplayField>
+    <errorMessage>Your user profile is not set up to send opportunities to CORE.</errorMessage>
+</ValidationRule>

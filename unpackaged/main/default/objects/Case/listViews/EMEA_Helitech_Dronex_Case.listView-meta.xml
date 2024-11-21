@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>EMEA_Helitech_Dronex_Case</fullName>
+    <filterScope>Queue</filterScope>
+    <label>EMEA Helitech &amp; Dronex</label>
+    <queue>EMEA_Helitech_Dronex</queue>
+    <sharedTo>
+        <allInternalUsers />
+    </sharedTo>
+</ListView>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>TEMPLATE_ALL_ORDERS</fullName>
+    <columns>NAME</columns>
+    <columns>Booth_Area__c</columns>
+    <columns>Order_Number__c</columns>
+    <columns>Order_Area_Description__c</columns>
+    <columns>Status__c</columns>
+    <columns>Connect2_Show__c</columns>
+    <columns>CREATEDBY_USER</columns>
+    <columns>CREATED_DATE</columns>
+    <columns>UPDATEDBY_USER</columns>
+    <columns>LAST_UPDATE</columns>
+    <columns>Completion_Date_Time__c</columns>
+    <columns>Delivery_Date_Time__c</columns>
+    <columns>Removal_Date_Time__c</columns>
+    <columns>ParentCloneOrder__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Connect2_Show__c</field>
+        <operation>equals</operation>
+        <value>ENTER CS/PC-0000</value>
+    </filters>
+    <label>01 TEMPLATE: ALL ORDERS</label>
+</ListView>

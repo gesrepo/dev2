@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Install_Day3__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(AND(
+ISBLANK(Install_Date_Day_3__c),
+ ISBLANK(Install_Hours_Open_Day_3__c),
+ ISBLANK(Install_Hours_Close_Day_3__c) 
+ ),
+&quot;&quot;,
+   IF(NOT(ISBLANK(Install_Date_Day_3__c)),
+TEXT(MONTH(Install_Date_Day_3__c)) + &quot;/&quot; + TEXT(DAY(Install_Date_Day_3__c)) + &quot;/&quot; +TEXT(YEAR(Install_Date_Day_3__c)) + &quot; &quot;,&quot;&quot;) + 
+IF(HOUR(Install_Hours_Open_Day_3__c) = 0, TEXT(12), 
+IF(AND(HOUR(Install_Hours_Open_Day_3__c) &gt; 0, HOUR(Install_Hours_Open_Day_3__c) &lt;= 12),
+TEXT(HOUR(Install_Hours_Open_Day_3__c)),
+TEXT(HOUR(Install_Hours_Open_Day_3__c) - 12))) + 
+   IF(NOT(ISBLANK(Install_Hours_Open_Day_3__c)),
+&quot;:&quot; + LPAD(TEXT(MINUTE(Install_Hours_Open_Day_3__c)), 2, &#39;0&#39;) + &quot; &quot; + IF(HOUR(Install_Hours_Open_Day_3__c) &lt; 12, &quot;AM&quot;, &quot;PM&quot;),&quot;&quot;) +
+   IF(NOT(ISBLANK(Install_Hours_Close_Day_3__c)),
+      IF(NOT(ISBLANK(Install_Hours_Open_Day_3__c)),&quot; - &quot;,&quot;&quot;) +
+IF(HOUR(Install_Hours_Close_Day_3__c) = 0, TEXT(12), 
+IF(AND(HOUR(Install_Hours_Close_Day_3__c) &gt; 0, HOUR(Install_Hours_Close_Day_3__c) &lt;= 12),
+TEXT(HOUR(Install_Hours_Close_Day_3__c)),
+TEXT(HOUR(Install_Hours_Close_Day_3__c) - 12))) 
++ &quot;:&quot; + LPAD(TEXT(MINUTE(Install_Hours_Close_Day_3__c )), 2, &#39;0&#39;) + &quot; &quot; + IF(HOUR(Install_Hours_Close_Day_3__c) &lt; 12, &quot;AM&quot;, &quot;PM&quot;),&quot;&quot;))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Install Day3</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

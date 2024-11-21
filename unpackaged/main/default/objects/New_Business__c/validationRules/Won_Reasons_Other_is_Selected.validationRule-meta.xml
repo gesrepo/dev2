@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Won_Reasons_Other_is_Selected</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+  INCLUDES( Won_Reasons__c , &quot;Won Other&quot;),
+ ISBLANK( Other__c )  )</errorConditionFormula>
+    <errorMessage>Please Fill reason for Other</errorMessage>
+</ValidationRule>

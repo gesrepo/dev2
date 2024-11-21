@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Update_Job_Number_Fields__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>User permissions to update job number fields such as Facility, Production Location, Job Number &amp; Job Number Status.</description>
+    <label>Update Job Number Fields</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Checkbox</type>
+</CustomField>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>MASTER_FACILITY_HEADER_ID__c</fullName>
+    <description>Stores values from Oracle Customer Booth XGEC_SW_CUST_BOOTH_V.MAST_FCLT_HDR_ID column. This column is derived from XGEC_SW_FCLT_HDR_V.MAST_FCLT_HDR_ID column.</description>
+    <externalId>false</externalId>
+    <label>Master Facility Header ID</label>
+    <length>20</length>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

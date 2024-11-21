@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>EMEA_Dairy_Industries_Expo_Case</fullName>
+    <filterScope>Queue</filterScope>
+    <label>EMEA Dairy Industries Expo</label>
+    <queue>EMEA_Dairy_Industries_Expo</queue>
+    <sharedTo>
+        <allInternalUsers />
+    </sharedTo>
+</ListView>

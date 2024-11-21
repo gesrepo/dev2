@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>EMEA_Top_Draw_Inbox_Case</fullName>
+    <filterScope>Queue</filterScope>
+    <label>EMEA Top Draw</label>
+    <queue>EMEA_Top_Draw</queue>
+    <sharedTo>
+        <allInternalUsers />
+    </sharedTo>
+</ListView>

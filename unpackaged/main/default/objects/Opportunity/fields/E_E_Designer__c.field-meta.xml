@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>E_E_Designer__c</fullName>
+    <description>Holds the E&amp;E Designer, from a picklist. Added at request of Mark Eddy</description>
+    <inlineHelpText>Please select the designer</inlineHelpText>
+    <label>E&amp;E Designer</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>true</sorted>
+            <value>
+                <fullName>1 - AGENCY SUPPLIED</fullName>
+                <default>false</default>
+                <label>1 - AGENCY SUPPLIED</label>
+            </value>
+            <value>
+                <fullName>2 - ALFA DISPLAY</fullName>
+                <default>false</default>
+                <label>2 - ALFA DISPLAY</label>
+            </value>
+            <value>
+                <fullName>3 - CLIENT SUPPLIED</fullName>
+                <default>false</default>
+                <label>3 - CLIENT SUPPLIED</label>
+            </value>
+            <value>
+                <fullName>4 - ONE SYSTEM</fullName>
+                <default>false</default>
+                <label>4 - ONE SYSTEM</label>
+            </value>
+            <value>
+                <fullName>5 - FREELANCE DESIGNER</fullName>
+                <default>false</default>
+                <label>5 - FREELANCE DESIGNER</label>
+            </value>
+            <value>
+                <fullName>Adam Peel</fullName>
+                <default>false</default>
+                <label>Adam Peel</label>
+            </value>
+            <value>
+                <fullName>Alan Li</fullName>
+                <default>false</default>
+                <label>Alan Li</label>
+            </value>
+            <value>
+                <fullName>Alison Steel-Williams</fullName>
+                <default>false</default>
+                <label>Alison Steel-Williams</label>
+            </value>
+            <value>
+                <fullName>Anita Apostolova</fullName>
+                <default>false</default>
+                <label>Anita Apostolova</label>
+            </value>
+            <value>
+                <fullName>Bren Susim</fullName>
+                <default>false</default>
+                <label>Bren Susim</label>
+            </value>
+            <value>
+                <fullName>Daniel Calland</fullName>
+                <default>false</default>
+                <label>Daniel Calland</label>
+            </value>
+            <value>
+                <fullName>Fowzudeen Mohammed</fullName>
+                <default>false</default>
+                <label>Fowzudeen Mohammed</label>
+            </value>
+            <value>
+                <fullName>F- Peter Martin</fullName>
+                <default>false</default>
+                <label>F- Peter Martin</label>
+            </value>
+            <value>
+                <fullName>Holly Brookes</fullName>
+                <default>false</default>
+                <label>Holly Brookes</label>
+            </value>
+            <value>
+                <fullName>India</fullName>
+                <default>false</default>
+                <label>India</label>
+            </value>
+            <value>
+                <fullName>Jack Brough</fullName>
+                <default>false</default>
+                <label>Jack Brough</label>
+            </value>
+            <value>
+                <fullName>Jason Sorabji</fullName>
+                <default>false</default>
+                <label>Jason Sorabji</label>
+            </value>
+            <value>
+                <fullName>Jeanne Gonzales</fullName>
+                <default>false</default>
+                <label>Jeanne Gonzales</label>
+            </value>
+            <value>
+                <fullName>John Romero</fullName>
+                <default>false</default>
+                <label>John Romero</label>
+            </value>
+            <value>
+                <fullName>Jon Rylands</fullName>
+                <default>false</default>
+                <label>Jon Rylands</label>
+            </value>
+            <value>
+                <fullName>Julie Hallsworth</fullName>
+                <default>false</default>
+                <label>Julie Hallsworth</label>
+            </value>
+            <value>
+                <fullName>Kanval Sayadain</fullName>
+                <default>false</default>
+                <label>Kanval Sayadain</label>
+            </value>
+            <value>
+                <fullName>Kevin Wilkes</fullName>
+                <default>false</default>
+                <label>Kevin Wilkes</label>
+            </value>
+            <value>
+                <fullName>Lewis Owens</fullName>
+                <default>false</default>
+                <label>Lewis Owens</label>
+            </value>
+            <value>
+                <fullName>Lucy Pearson</fullName>
+                <default>false</default>
+                <label>Lucy Pearson</label>
+            </value>
+            <value>
+                <fullName>Mark Beringuel</fullName>
+                <default>false</default>
+                <label>Mark Beringuel</label>
+            </value>
+            <value>
+                <fullName>Mark Dunford</fullName>
+                <default>false</default>
+                <label>Mark Dunford</label>
+            </value>
+            <value>
+                <fullName>Mark Sykes, Design Director</fullName>
+                <default>false</default>
+                <label>Mark Sykes, Design Director</label>
+            </value>
+            <value>
+                <fullName>Martin Hodgkins</fullName>
+                <default>false</default>
+                <label>Martin Hodgkins</label>
+            </value>
+            <value>
+                <fullName>Marvin Alipio</fullName>
+                <default>false</default>
+                <label>Marvin Alipio</label>
+            </value>
+            <value>
+                <fullName>Maxine Sykes</fullName>
+                <default>false</default>
+                <label>Maxine Sykes</label>
+            </value>
+            <value>
+                <fullName>Mike Salvati</fullName>
+                <default>false</default>
+                <label>Mike Salvati</label>
+            </value>
+            <value>
+                <fullName>Mohamed Shameem</fullName>
+                <default>false</default>
+                <label>Mohamed Shameem</label>
+            </value>
+            <value>
+                <fullName>Muhammed Pulikkal</fullName>
+                <default>false</default>
+                <label>Muhammed Pulikkal</label>
+            </value>
+            <value>
+                <fullName>Not Applicable</fullName>
+                <default>false</default>
+                <label>Not Applicable</label>
+            </value>
+            <value>
+                <fullName>Pauline Villaruz</fullName>
+                <default>false</default>
+                <label>Pauline Villaruz</label>
+            </value>
+            <value>
+                <fullName>Paulo Moreno</fullName>
+                <default>false</default>
+                <label>Paulo Moreno</label>
+            </value>
+            <value>
+                <fullName>Priya Gohill</fullName>
+                <default>false</default>
+                <label>Priya Gohill</label>
+            </value>
+            <value>
+                <fullName>Ramy Mohamed</fullName>
+                <default>false</default>
+                <label>Ramy Mohamed</label>
+            </value>
+            <value>
+                <fullName>Riyaz Ahamed</fullName>
+                <default>false</default>
+                <label>Riyaz Ahamed</label>
+            </value>
+            <value>
+                <fullName>Seckin Kahraman</fullName>
+                <default>false</default>
+                <label>Seckin Kahraman</label>
+            </value>
+            <value>
+                <fullName>Shauna Luckett</fullName>
+                <default>false</default>
+                <label>Shauna Luckett</label>
+            </value>
+            <value>
+                <fullName>Shirley Hermanto</fullName>
+                <default>false</default>
+                <label>Shirley Hermanto</label>
+            </value>
+            <value>
+                <fullName>Stefan Seyda</fullName>
+                <default>false</default>
+                <label>Stefan Seyda</label>
+            </value>
+            <value>
+                <fullName>Tasmin Coleman</fullName>
+                <default>false</default>
+                <label>Tasmin Coleman</label>
+            </value>
+            <value>
+                <fullName>TBD</fullName>
+                <default>false</default>
+                <label>TBD</label>
+            </value>
+            <value>
+                <fullName>Vincent Freville</fullName>
+                <default>false</default>
+                <label>Vincent Freville</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

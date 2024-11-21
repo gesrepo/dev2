@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>BypassValidation__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Field is used to bypass opp from validation rules  when a non AV opp is updated where it updates  Opp record types with following opp record types:
+1)AV record type(record type name contains &quot;Field&quot;)
+2)Master Show Occurrence
+3)Sales Rep Show Occurrence</description>
+    <label>BypassValidation</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

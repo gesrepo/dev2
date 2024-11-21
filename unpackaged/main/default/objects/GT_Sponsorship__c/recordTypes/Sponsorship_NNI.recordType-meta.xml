@@ -1,0 +1,344 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Sponsorship_NNI</fullName>
+    <active>true</active>
+    <description>Sponsorship for NNI</description>
+    <label>Sponsorship NNI</label>
+    <picklistValues>
+        <picklist>Activity_Level__c</picklist>
+        <values>
+            <fullName>Tier 1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tier 2</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tier 3</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Congress_Lead__c</picklist>
+        <values>
+            <fullName>Congress Lead 1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Congress Lead 2</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Congress Lead 3</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Congress_Manager__c</picklist>
+        <values>
+            <fullName>Joe Walsh</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>John Hasemann</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Kaitlyn Reynolds</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rebecca Baker</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Event_Manager__c</picklist>
+        <values>
+            <fullName>Cassandra Zwick</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Joanne Hynes</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Juanita Timney</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Katie Lillie</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Kayleigh Fortuna</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lisandra Fernandez</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Stephanie Naida</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Exhibit_Manager__c</picklist>
+        <values>
+            <fullName>Test</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>GES_Account_Executive__c</picklist>
+        <values>
+            <fullName>Jennifer Spencer</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>GES_Account_Manager__c</picklist>
+        <values>
+            <fullName>Jill Johnson</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Kevin Jones</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mary Jones</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Melinda Peterson</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>GES_Congress_Manager__c</picklist>
+        <values>
+            <fullName>GES Congress Manager 1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>GES Congress Manager 2</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>GES Congress Manager 3</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>GES_Event_Manager__c</picklist>
+        <values>
+            <fullName>Test</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>GES_Project_Manager__c</picklist>
+        <values>
+            <fullName>Al Grauzinis</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Andrew Vanhorn</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Carl Ahrens</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Courtney Rowe</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Dave Botsford</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Donny Spray</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Duane Glossa</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Elizabeth Zajda</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Frank Cacciato</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Greg Rawe</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>James Haas</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Jim Angle</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Michael Samuel</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mike Mulvey</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mike Porter</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Patty Welch</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sam Hornsby</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tim Murphy</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Troy Devenberg</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>I_D_Supervisor__c</picklist>
+        <values>
+            <fullName>Dennis Skarupa</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Don Hadrava</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Gary Vanderpol</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Kari Storm</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Scott Mattson</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Market__c</picklist>
+        <values>
+            <fullName>Consumer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Law Enforcement</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Media</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Military</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sport</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Product__c</picklist>
+        <values>
+            <fullName>Academy</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Air</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ammunition</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Electro-Optics</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Firearms</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Suppressors</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Project_Manager_CrownCastle__c</picklist>
+        <values>
+            <fullName>Juanita Timney</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Katie Lillie</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lisandra Fernandez</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Stephanie Naida</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Reason_for_Cancellation__c</picklist>
+        <values>
+            <fullName>Budget Cut</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Exhibit Space Sold Out</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Influenza Outbreak</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Product Owner Decision</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Strategy Change</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

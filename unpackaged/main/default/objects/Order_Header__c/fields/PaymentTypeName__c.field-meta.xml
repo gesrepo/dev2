@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PaymentTypeName__c</fullName>
+    <description>SOP FIELD - PaymentTypeName.</description>
+    <label>Payment Type</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>NULL</fullName>
+                <default>true</default>
+                <label>NULL</label>
+            </value>
+            <value>
+                <fullName>Bank Transfer</fullName>
+                <default>false</default>
+                <label>Bank Transfer</label>
+            </value>
+            <value>
+                <fullName>Cash</fullName>
+                <default>false</default>
+                <label>Cash</label>
+            </value>
+            <value>
+                <fullName>CC Surcharge Only</fullName>
+                <default>false</default>
+                <label>CC Surcharge Only</label>
+            </value>
+            <value>
+                <fullName>Cheque</fullName>
+                <default>false</default>
+                <label>Cheque</label>
+            </value>
+            <value>
+                <fullName>Credit/Debit Card</fullName>
+                <default>false</default>
+                <label>Credit/Debit Card</label>
+            </value>
+            <value>
+                <fullName>Dashboard</fullName>
+                <default>false</default>
+                <label>Dashboard</label>
+            </value>
+            <value>
+                <fullName>Foreign Cheque</fullName>
+                <default>false</default>
+                <label>Foreign Cheque</label>
+            </value>
+            <value>
+                <fullName>No Payment</fullName>
+                <default>false</default>
+                <label>No Payment</label>
+            </value>
+            <value>
+                <fullName>On Site Payment</fullName>
+                <default>false</default>
+                <label>On Site Payment</label>
+            </value>
+            <value>
+                <fullName>Worldpay</fullName>
+                <default>false</default>
+                <label>Worldpay</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

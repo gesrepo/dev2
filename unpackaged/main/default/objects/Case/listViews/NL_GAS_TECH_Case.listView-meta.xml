@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>NL_GAS_TECH_Case</fullName>
+    <filterScope>Queue</filterScope>
+    <label>NL GAS TECH</label>
+    <queue>NL_GAS_TECH</queue>
+    <sharedTo>
+        <allInternalUsers />
+    </sharedTo>
+</ListView>

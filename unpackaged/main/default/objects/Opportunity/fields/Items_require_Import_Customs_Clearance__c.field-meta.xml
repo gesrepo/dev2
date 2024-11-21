@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Items_require_Import_Customs_Clearance__c</fullName>
+    <defaultValue>false</defaultValue>
+    <inlineHelpText>Do the products require Import Customs Clearance? If &quot;Yes&quot;, check box</inlineHelpText>
+    <label>Items require Import Customs Clearance</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

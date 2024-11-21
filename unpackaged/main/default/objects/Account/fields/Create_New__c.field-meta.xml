@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Create_New__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Check box on custom page (PageNewAccount) to force customer creation even if it is duplicate i.e. there is an existing customer</description>
+    <label>Create New</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

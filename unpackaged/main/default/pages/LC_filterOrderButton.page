@@ -1,0 +1,15 @@
+<apex:page standardController="GC_Order__c" recordSetVar="order" extensions="LC_OrderFilterViewApexController">
+    <apex:includeLightning />
+    <div id="displayOrderFilterView"></div>
+    <script>
+    $Lightning.use("c:LC_OrderFilterViewApp", function() {
+        $Lightning.createComponent("c:LC_OrderFilterView",
+                                   { 
+                                       recordId : '{!recordId}'
+                                   },
+                                   "displayOrderFilterView",
+                                   function(component) {
+                                   });
+    });
+    </script>
+</apex:page>

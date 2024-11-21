@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Facility_Electrical_Provider_Type__c</fullName>
+    <label>Electrical Provider Type</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Preferred</fullName>
+                <default>false</default>
+                <label>Preferred</label>
+            </value>
+            <value>
+                <fullName>Exclusive</fullName>
+                <default>false</default>
+                <label>Exclusive</label>
+            </value>
+            <value>
+                <fullName>Open</fullName>
+                <default>false</default>
+                <label>Open</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

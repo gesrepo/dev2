@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Grouped_Probability__c</fullName>
+    <description>This field is used to group the probability value into specific ranges. 1 to 38 is 25%, 38 to 64 is 50%, 64 to 75, is 75% and 100 is 100%</description>
+    <externalId>false</externalId>
+    <formula>IF(Probability &gt; 0 &amp;&amp; Probability &lt; 0.38, 25,  
+IF(Probability &gt; 0.37 &amp;&amp; Probability &lt; 0.64, 50,
+IF(Probability &gt; 0.63 &amp;&amp; Probability &lt; 1, 75,
+IF(Probability = 1, 100, 0 ))))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>Uses the probability value and assigns it into a range</inlineHelpText>
+    <label>Grouped Probability(%)</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackHistory>false</trackHistory>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

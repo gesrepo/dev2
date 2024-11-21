@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>IsTaskDue__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>This check box is modified by a time trigger on a task workflow rule when the task is due.</description>
+    <label>IsTaskDue</label>
+    <type>Checkbox</type>
+</CustomField>

@@ -1,0 +1,159 @@
+<apex:page controller="SOP_DataAccessController" action="{!getServiceOrderHistory}" showHeader="false" sideBar="false">
+    <style>
+        .custPopup{
+                background-color: white;
+                border-width: 2px;
+                border-style: solid;
+                z-index: 9999;
+                left: 50%;
+                padding:10px;
+                position: absolute;
+                width: 1000px;
+                
+                margin-left: -500px;
+                top:100px;
+            }
+            .popupBackground{
+                background-color:black;
+                opacity: 0.20;
+                filter: alpha(opacity = 20);
+                position: absolute;
+                width: 100%;
+                height: 200%;
+                top: 0;
+                left: 0;
+                z-index: 9998;
+            }
+    </style>
+    <div align="left">
+        <apex:image value="{!$Resource.GESLogo}" />
+    </div>
+    <apex:form >
+        <apex:pageBlock >
+            <div align="center">
+                <apex:outputText value="Please click on an order number to view the order detail"/><br/>
+                <apex:outputText value="To return to the previous page click the 'Return' button"/>
+            </div><br/><br/>
+            <div align="center">
+                <apex:commandButton value="Return" action="{!returnToSelect}" />
+            </div>
+            <apex:dataTable value="{!orderHistoryList}" var="o" cellSpacing="30">
+                <apex:column >
+                    <apex:facet name="header">Order Number</apex:facet>
+                    <apex:commandLink value="{!o.orderNo}" action="{!showHidePopup}" status="actStatusId">
+                        <apex:param value="{!o.orderNo}" name="orderNum"/>
+                    </apex:commandLink>
+                </apex:column>
+                <apex:column >
+                    <apex:facet name="header">Project Name</apex:facet>
+                    <apex:outputText value="{!o.projectName}" />
+                </apex:column>
+                <apex:column >
+                    <apex:facet name="header">Invoice Date</apex:facet>
+                    <apex:outputText value="{0,date,MM'/'dd'/'yyyy}">
+                        <apex:param value="{!o.invoiceDate}" />
+                    </apex:outputText>
+                </apex:column>
+                <apex:column >
+                    <apex:facet name="header">Basket Type</apex:facet>
+                    <apex:outputText value="{!o.BasketType}" />                  
+                </apex:column>
+            </apex:dataTable>
+            <div align="center">
+                <apex:commandButton value="Return" action="{!returnToSelect}" />
+            </div>
+        </apex:pageBlock>
+        <apex:outputPanel id="popup">
+            <apex:outputPanel styleClass="popupBackground" layout="block" rendered="{!showPopup}"/>
+            <apex:outputPanel styleClass="custPopup" layout="block" rendered="{!showPopup}">
+                <apex:pageBlock title="Order Details">
+                    <apex:pageBlockSection columns="3">
+                        <apex:pageBlockSectionItem >
+                            <apex:outputPanel >
+                                <apex:outputText value="{!thisOrder.Customer}" style="font-weight:800;" /><br/>
+                                <apex:outputText value="{!thisOrder.AddressLine1}" rendered="{!NOT(ISNULL(thisOrder.AddressLine1))}"/><br/>
+                                <apex:outputText value="{!thisOrder.AddressLine2}" rendered="{!NOT(ISNULL(thisOrder.AddressLine2))}"/><br/>
+                                <apex:outputText value="{!thisOrder.AddressLine3}" rendered="{!NOT(ISNULL(thisOrder.AddressLine3))}"/><br/>
+                                <apex:outputText value="{!thisOrder.AddressLine4}" rendered="{!NOT(ISNULL(thisOrder.AddressLine4))}"/><br/>
+                                <apex:outputText value="{!thisOrder.AddressLine4}" rendered="{!NOT(ISNULL(thisOrder.AddressLine4))}"/><br/>
+                                <apex:outputText value="{!thisOrder.State}, {!thisOrder.Postcode}" /><br/><br/>
+                                <apex:outputText value="Contact: {!thisOrder.Contact}" style="font-weight:800;" /><br/>
+                            </apex:outputPanel>
+                        </apex:pageBlockSectionItem>
+                        <apex:pageBlockSectionItem >
+                            <apex:outputPanel >
+                                <apex:outputText value="Event:" style="font-weight:800;" />&nbsp;&nbsp;&nbsp;
+                                    <apex:outputText value="{!thisOrder.EventName}" /><br/><br/>
+                                <apex:outputText value="Catalogue:" style="font-weight:800;" />&nbsp;&nbsp;&nbsp;
+                                    <apex:outputText value="{!thisOrder.CatalogueName}" /><br/><br/>
+                                <apex:outputText value="Stand:" style="font-weight:800;" />&nbsp;&nbsp;&nbsp;
+                                    <apex:outputText value="{!thisOrder.StandNo}" /><br/><br/>
+                            </apex:outputPanel>
+                        </apex:pageBlockSectionItem>
+                        <apex:pageBlockSectionItem >
+                            <apex:outputPanel >
+                                <apex:outputText value="Order:" style="font-weight:800;" />&nbsp;&nbsp;&nbsp;
+                                    <apex:outputText value="{!thisOrder.OrderNo}" /><br/><br/>
+                                <apex:outputText value="JobRef:" style="font-weight:800;" />&nbsp;&nbsp;&nbsp;
+                                    <apex:outputText value="No variable for this" /><br/><br/>
+                                <apex:outputText value="Placed:" style="font-weight:800;" />&nbsp;&nbsp;&nbsp;
+                                    <apex:outputText value="{0,date,MM'/'dd'/'yyyy}"><apex:param value="{!thisOrder.DatePlaced}" /></apex:outputText><br/><br/>
+                            </apex:outputPanel>
+                        </apex:pageBlockSectionItem>
+                    </apex:pageBlockSection>
+                    <apex:pageBlockSection columns="1" title="Order History Items" collapsible="false">
+                        <br/><br/><br/>                     
+                        <apex:outputPanel layout="block" style="max-height:500px; overflow:scroll; width:100%" id="main" >
+                            <apex:dataTable value="{!osiList}" var="i" columns="8" cellSpacing="20">
+                                <apex:column >
+                                    <apex:facet name="header">Quantity</apex:facet>
+                                    <apex:outputText value="{!i.Quantity}" />
+                                </apex:column>
+                                <apex:column >
+                                    <apex:facet name="header">Code</apex:facet>
+                                    <apex:outputText value="{!i.Code}" />
+                                </apex:column>
+                                <apex:column >
+                                    <apex:facet name="header">Item Name</apex:facet>
+                                    <apex:outputText value="{!i.Name}" />
+                                </apex:column>
+                                <apex:column >
+                                    <apex:facet name="header">Options</apex:facet>
+                                    <apex:outputText value="{!i.Options}" />
+                                </apex:column>
+                                <apex:column >
+                                    <apex:facet name="header">Hire Price</apex:facet>
+                                    <apex:outputText value="{!i.HirePrice}" />
+                                </apex:column>
+                                <apex:column >
+                                    <apex:facet name="header">VAT</apex:facet>
+                                    <apex:outputText value="{!i.VAT}" />
+                                </apex:column>
+                                <apex:column >
+                                    <apex:facet name="header">Current Price</apex:facet>
+                                    <apex:outputText value="{!i.CurrentPrice}" />
+                                </apex:column>
+                                <apex:column >
+                                    <apex:facet name="header">Sub-Total</apex:facet>
+                                    <apex:outputText value="{!i.SubTotal}" />
+                                </apex:column>
+                            </apex:dataTable>
+                        </apex:outputPanel>
+                    </apex:pageBlockSection>
+                    <apex:pageBlockSection collapsible="false">
+                    <div align="right">
+                        <br/><br/>
+                        <apex:outputPanel >
+                            <apex:outputText value="Total Line Items:" style="font-weight:800;"/>&nbsp;&nbsp;&nbsp;&nbsp;
+                            <apex:outputText value="{!subTotal} {!currencySym}" />
+                        </apex:outputPanel>
+                    </div>
+                    </apex:pageBlockSection>
+                </apex:pageBlock>                  
+                <div align="center">
+                    <apex:commandButton value="Close" action="{!showHidePopup}" />
+                </div>
+            </apex:outputPanel>
+        </apex:outputPanel>
+    </apex:form>
+</apex:page>

@@ -1,0 +1,120 @@
+<apex:page standardStylesheets="true" standardController="GES_Connect_Corporate_Accounts__c" extensions="SymposiaEdit" showHeader="false" sidebar="false" applyHtmlTag="false" tabStyle="Account">
+    <html xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <head>
+            <apex:includeScript value="{!$Resource.jQuery}" />
+            <apex:stylesheet value="{!URLFOR($Resource.Lightning_Design_System, 'assets/styles/salesforce-lightning-design-system.min.css')}" />
+            <apex:stylesheet value="{!URLFOR($Resource.GC_Assets, 'GC_Assets/css/GC_Styles.css')}" />
+            <apex:includeScript value="{!URLFOR($Resource.GC_Assets, 'GC_Assets/js/GC_init.js')}" />
+        </head>
+        <div class="slds">
+            <c:GC_Community_Header />   
+            <div class="slds-page-header gc-navigation--subHeader" role="banner">
+                <div class="slds-media">
+                    <div class="slds-media__figure">
+                        <apex:image url="{!URLFOR($Resource.GC_Assets, 'GC_Assets/img/custom13_60_teal.png')}" />
+                    </div>
+                    <div class="slds-media__body">
+                        <p class="slds-page-header__title slds-align-middle">
+                            <span>Symposium Details</span>
+                            <span class="slds-truncate">{!congName}</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            <apex:form >
+                <apex:pageBlock title="Symposium Detail" id="pb">
+                    <apex:pageBlockButtons >
+                        <apex:commandButton value="Save" action="{!SymposiaSave}" styleClass="slds-button slds-button--brand gc-teal-button"/>
+                        <apex:commandButton value="Cancel" action="{!symposiaCancel}" styleClass="slds-button slds-button--brand gc-teal-button" immediate="true"/>
+                    </apex:pageBlockButtons>
+                    <apex:pageBlockSection title="Symposium Detail">                        
+                        
+                        <apex:outputtext label="Congress ID" value="{!congName}" rendered="{!(toClone !='true')}" />   
+                        <apex:pageBlockSectionItem rendered="{!(toClone =='true')}">
+                            <apex:outputLabel value="Congress ID"/>
+                            <apex:inputField value="{!sy.Congress__c}" />
+                        </apex:pageBlockSectionItem>
+                        <apex:inputField value="{!sy.Symposia_Name__c}" required="true"/>
+                        <apex:inputField value="{!sy.Requested_Symposium_Date_and_Time__c }"/>
+                        <apex:inputField value="{!sy.Symposium_Location__c}"/>
+                        <apex:inputField value="{!sy.Symposium_Time__c}"/>
+                        <!--<apex:inputField value="{!sy.Activity_Level__c}"  required="true"/>  Amarab 03/25/2021 SCA-878 Remove required setting -->
+                        <apex:inputField value="{!sy.Activity_Level__c}"/>
+                        <apex:inputField value="{!sy.Symposium_End_Date_and_Time__c}"/>
+                        <apex:inputField value="{!sy.Symposia_Type__c}"  required="true"/>
+                        <apex:inputField value="{!sy.Activity_Not_Confirmed__c}"/>
+                        <apex:inputField value="{!sy.Meal_included_with_Symposium__c}"/> 
+                        <apex:inputField value="{!sy.Symposium_Bundled_w_Sponsorship__c}"/>
+                        <apex:outputText ></apex:outputText>  
+                                                                       
+                    </apex:pageBlockSection>
+                    
+                    <apex:pageBlockSection id="renu" columns="1"> 
+                        
+                        <apex:pageBlockSectionItem dataStyle="width:auto;float:left;" >
+                            <apex:outputLabel value="Data Collection Methods" />
+                            <apex:actionRegion >
+                                <!--<apex:inputField value="{!sy.Reality_Engineering_Utilized__c }" required="true" >  Amarab 03/25/2021 SCA-878 Remove required setting -->
+                                <apex:inputField value="{!sy.Reality_Engineering_Utilized__c }" >
+                                </apex:inputField>
+                            </apex:actionRegion>
+                        </apex:pageBlockSectionItem>
+                    </apex:pageBlockSection>
+                        
+                        <!--
+<apex:pageBlockSectionItem >                  
+<apex:outputLabel value="Reason RE not used" rendered="{!sy.Reality_Engineering_Utilized__c=='No'}" />
+<apex:actionRegion >
+<apex:inputField value="{!sy.Reason_RE_not_used__c }" rendered="{!sy.Reality_Engineering_Utilized__c=='No'}" >
+<apex:actionSupport event="onchange"  reRender="renu"/>
+</apex:inputField>
+</apex:actionRegion>
+</apex:pageBlockSectionItem>
+<apex:pageBlockSectionItem >  
+<apex:outputText rendered="{!sy.Reason_RE_not_used__c!='Not appropriate audience'}" ></apex:outputText>
+</apex:pageBlockSectionItem>
+<apex:inputField value="{!sy.If_not_appropriate_audience_Explanation__c}" rendered="{!(sy.Reason_RE_not_used__c=='Not appropriate audience' && sy.Reality_Engineering_Utilized__c=='No')}"  />  
+-->
+                                        
+                    
+                    <apex:pageBlockSection >
+                        <apex:inputField value="{!sy.Symposium_Notes__c}"/> 
+                        <apex:inputField value="{!sy.Symposia_Registrants__c}"/> 
+                        <!--<apex:outputText ></apex:outputText>-->
+                        <apex:inputField value="{!sy.Chair_Person__c}"/> 
+                        <apex:outputText ></apex:outputText>
+                        <apex:inputField value="{!sy.Speaker_1__c}"/>
+                        <apex:outputText ></apex:outputText>
+                        <apex:inputField value="{!sy.Speaker_2__c}"/>
+                        <apex:pageBlockSectionItem >
+                            <apex:outputLabel value="Canceled" />
+                            <apex:actionRegion >
+                                <apex:inputField value="{!sy.Canceled__c}">
+                                    <apex:actionSupport event="onchange" action="{!cancelOperation}" reRender="pbs1,pbs2"/>
+                                </apex:inputField>
+                            </apex:actionRegion>
+                        </apex:pageBlockSectionItem>
+                        <apex:inputField value="{!sy.Speaker_3__c}"/>
+                        <apex:inputField value="{!sy.CancelReason__c}" required="{!cancelReason}" id="pbs2"/>
+                        <apex:inputField value="{!sy.Speaker_4__c}"/>   
+                        <apex:outputField value="{!sy.CanceledDate__c}" id="pbs1"/>
+                                             
+                        
+                    </apex:pageBlockSection>
+                    <!--</apex:pageBlockSection>-->
+                    <apex:pageBlockSection title="Symposium Contacts">
+                        <apex:inputField value="{!sy.GES_Congress_Manager__c}"/> <apex:inputField value="{!sy.Agency_Name__c}"/> 
+                        <apex:inputField value="{!sy.Congress_Lead__c}"/> <apex:inputField value="{!sy.Agency_Contact_Name__c}"/> 
+                        <apex:inputField value="{!sy.GES_Account_Executive__c}"/> <apex:inputField value="{!sy.Agency_Contact_Phone__c}"/>
+                        
+                        <apex:inputField value="{!sy.GES_Account_Manager__c}"/> <apex:inputField value="{!sy.Agency_Contact_E_mail__c}"/> 
+                        
+                        
+                    </apex:pageBlockSection>
+                </apex:pageBlock>
+                
+                <apex:inlineEditSupport event="ondblClick" />
+            </apex:form></div>
+    </html>    
+</apex:page>

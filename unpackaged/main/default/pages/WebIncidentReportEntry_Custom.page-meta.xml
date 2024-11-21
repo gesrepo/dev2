@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ApexPage xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>30.0</apiVersion>
+    <availableInTouch>false</availableInTouch>
+    <confirmationTokenRequired>false</confirmationTokenRequired>
+    <description>Custom version of the web incident report form, which can be configured as required</description>
+    <label>WebIncidentReportEntry_Custom</label>
+    <packageVersions>
+        <majorNumber>1</majorNumber>
+        <minorNumber>37</minorNumber>
+        <namespace>Claims</namespace>
+    </packageVersions>
+</ApexPage>

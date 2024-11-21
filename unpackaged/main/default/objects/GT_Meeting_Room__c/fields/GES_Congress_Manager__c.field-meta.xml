@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>GES_Congress_Manager__c</fullName>
+    <label>GES Congress Manager</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Manager 1</fullName>
+                <default>false</default>
+                <label>Manager 1</label>
+            </value>
+            <value>
+                <fullName>Manager 2</fullName>
+                <default>false</default>
+                <label>Manager 2</label>
+            </value>
+            <value>
+                <fullName>Manager 3</fullName>
+                <default>false</default>
+                <label>Manager 3</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

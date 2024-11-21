@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Service_Type__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <label>Service Type</label>
+    <lookupFilter>
+        <active>true</active>
+        <filterItems>
+            <field>GC_Show_Attribute__c.Connect2_Show__c</field>
+            <operation>equals</operation>
+            <valueField>$Source.Connect2_Show__c</valueField>
+        </filterItems>
+        <isOptional>false</isOptional>
+    </lookupFilter>
+    <referenceTo>GC_Show_Attribute__c</referenceTo>
+    <relationshipLabel>Show Team Members</relationshipLabel>
+    <relationshipName>Show_Team_Members</relationshipName>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

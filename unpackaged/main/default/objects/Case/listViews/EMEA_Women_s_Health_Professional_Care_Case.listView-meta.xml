@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>EMEA_Women_s_Health_Professional_Care_Case</fullName>
+    <filterScope>Queue</filterScope>
+    <label>EMEA Women&#39;s Health Professional Care</label>
+    <queue>EMEA_Women_s_Health_Professional_Care</queue>
+    <sharedTo>
+        <allInternalUsers />
+    </sharedTo>
+</ListView>

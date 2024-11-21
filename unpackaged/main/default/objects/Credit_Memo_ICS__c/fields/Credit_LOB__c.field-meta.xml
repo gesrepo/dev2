@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Credit_LOB__c</fullName>
+    <label>LOB</label>
+    <required>true</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>None</fullName>
+                <default>true</default>
+                <label>None</label>
+            </value>
+            <value>
+                <fullName>AUDIO VISUAL</fullName>
+                <default>false</default>
+                <label>AUDIO VISUAL</label>
+            </value>
+            <value>
+                <fullName>DECO</fullName>
+                <default>false</default>
+                <label>DECO</label>
+            </value>
+            <value>
+                <fullName>ELECTRICAL</fullName>
+                <default>false</default>
+                <label>ELECTRICAL</label>
+            </value>
+            <value>
+                <fullName>FREIGHT</fullName>
+                <default>false</default>
+                <label>FREIGHT</label>
+            </value>
+            <value>
+                <fullName>GRAPHICS</fullName>
+                <default>false</default>
+                <label>GRAPHICS</label>
+            </value>
+            <value>
+                <fullName>HANGING SIGN/ RIGGING</fullName>
+                <default>false</default>
+                <label>HANGING SIGN/ RIGGING</label>
+            </value>
+            <value>
+                <fullName>I&amp;D LABOR</fullName>
+                <default>false</default>
+                <label>I&amp;D LABOR</label>
+            </value>
+            <value>
+                <fullName>JANITORIAL</fullName>
+                <default>false</default>
+                <label>JANITORIAL</label>
+            </value>
+            <value>
+                <fullName>LOGISTICS</fullName>
+                <default>false</default>
+                <label>LOGISTICS</label>
+            </value>
+            <value>
+                <fullName>PLUMBING</fullName>
+                <default>false</default>
+                <label>PLUMBING</label>
+            </value>
+            <value>
+                <fullName>Corporate Accounts (program/priority)</fullName>
+                <default>false</default>
+                <label>Corporate Accounts (program/priority)</label>
+            </value>
+            <value>
+                <fullName>Furniture/Accessories (aka: Deco)</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Furniture/Accessories (aka: Deco)</label>
+            </value>
+            <value>
+                <fullName>Hanging Sign</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Hanging Sign</label>
+            </value>
+            <value>
+                <fullName>I&amp;D</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>I&amp;D</label>
+            </value>
+            <value>
+                <fullName>Labor</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Labor</label>
+            </value>
+            <value>
+                <fullName>RIGGING</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>RIGGING</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

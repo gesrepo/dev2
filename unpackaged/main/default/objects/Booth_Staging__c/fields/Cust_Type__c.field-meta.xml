@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Cust_Type__c</fullName>
+    <label>Cust Type</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Business_Type__c</controllingField>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>01 Organiser</fullName>
+                <default>false</default>
+                <label>01 Organiser</label>
+            </value>
+            <value>
+                <fullName>11 Contractor</fullName>
+                <default>false</default>
+                <label>11 Contractor</label>
+            </value>
+            <value>
+                <fullName>12 Contractor</fullName>
+                <default>false</default>
+                <label>12 Contractor</label>
+            </value>
+            <value>
+                <fullName>13 Inter Company - Non Mes</fullName>
+                <default>false</default>
+                <label>13 Inter Company - Non Mes</label>
+            </value>
+            <value>
+                <fullName>14 Melville Beck (Furniture)</fullName>
+                <default>false</default>
+                <label>14 Melville Beck (Furniture)</label>
+            </value>
+            <value>
+                <fullName>15 Gold Contractor</fullName>
+                <default>false</default>
+                <label>15 Gold Contractor</label>
+            </value>
+            <value>
+                <fullName>17 Melville Events</fullName>
+                <default>false</default>
+                <label>17 Melville Events</label>
+            </value>
+            <value>
+                <fullName>20 Silver Contractor</fullName>
+                <default>false</default>
+                <label>20 Silver Contractor</label>
+            </value>
+            <value>
+                <fullName>24 Graphics</fullName>
+                <default>false</default>
+                <label>24 Graphics</label>
+            </value>
+            <value>
+                <fullName>25 Elite</fullName>
+                <default>false</default>
+                <label>25 Elite</label>
+            </value>
+            <value>
+                <fullName>99 Exibitor</fullName>
+                <default>false</default>
+                <label>99 Exibitor</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Contractor</controllingFieldValue>
+            <controllingFieldValue>Facility</controllingFieldValue>
+            <controllingFieldValue>Firm</controllingFieldValue>
+            <controllingFieldValue>International</controllingFieldValue>
+            <valueName>01 Organiser</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Contractor</controllingFieldValue>
+            <controllingFieldValue>Facility</controllingFieldValue>
+            <controllingFieldValue>Firm</controllingFieldValue>
+            <controllingFieldValue>International</controllingFieldValue>
+            <valueName>11 Contractor</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Contractor</controllingFieldValue>
+            <controllingFieldValue>Facility</controllingFieldValue>
+            <controllingFieldValue>Firm</controllingFieldValue>
+            <controllingFieldValue>International</controllingFieldValue>
+            <valueName>12 Contractor</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Contractor</controllingFieldValue>
+            <controllingFieldValue>Facility</controllingFieldValue>
+            <controllingFieldValue>Firm</controllingFieldValue>
+            <controllingFieldValue>International</controllingFieldValue>
+            <valueName>13 Inter Company - Non Mes</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Contractor</controllingFieldValue>
+            <controllingFieldValue>Facility</controllingFieldValue>
+            <controllingFieldValue>Firm</controllingFieldValue>
+            <controllingFieldValue>International</controllingFieldValue>
+            <valueName>14 Melville Beck (Furniture)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Contractor</controllingFieldValue>
+            <controllingFieldValue>Facility</controllingFieldValue>
+            <controllingFieldValue>Firm</controllingFieldValue>
+            <controllingFieldValue>International</controllingFieldValue>
+            <valueName>15 Gold Contractor</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Contractor</controllingFieldValue>
+            <controllingFieldValue>Facility</controllingFieldValue>
+            <controllingFieldValue>Firm</controllingFieldValue>
+            <controllingFieldValue>International</controllingFieldValue>
+            <valueName>17 Melville Events</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Contractor</controllingFieldValue>
+            <controllingFieldValue>Facility</controllingFieldValue>
+            <controllingFieldValue>Firm</controllingFieldValue>
+            <controllingFieldValue>International</controllingFieldValue>
+            <valueName>20 Silver Contractor</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Contractor</controllingFieldValue>
+            <controllingFieldValue>Facility</controllingFieldValue>
+            <controllingFieldValue>Firm</controllingFieldValue>
+            <controllingFieldValue>International</controllingFieldValue>
+            <valueName>24 Graphics</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Contractor</controllingFieldValue>
+            <controllingFieldValue>Facility</controllingFieldValue>
+            <controllingFieldValue>Firm</controllingFieldValue>
+            <controllingFieldValue>International</controllingFieldValue>
+            <valueName>25 Elite</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Contractor</controllingFieldValue>
+            <controllingFieldValue>Exhibitor</controllingFieldValue>
+            <controllingFieldValue>Facility</controllingFieldValue>
+            <controllingFieldValue>Firm</controllingFieldValue>
+            <controllingFieldValue>International</controllingFieldValue>
+            <valueName>99 Exibitor</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>EMEA_Occupational_Therapy_Therapy_Expo_Case</fullName>
+    <filterScope>Queue</filterScope>
+    <label>EMEA Occupational Therapy &amp; Therapy Expo</label>
+    <queue>EMEA_Occupational_Therapy_Therapy_Expo</queue>
+    <sharedTo>
+        <allInternalUsers />
+    </sharedTo>
+</ListView>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Update_URL_Needed</fullName>
+    <active>true</active>
+    <description>The Article Number or URL must be specified for any Update Request Type</description>
+    <errorConditionFormula>IF ((ISPICKVAL (Request_Type__c, &quot;Update Article Categories&quot;) || ISPICKVAL (Request_Type__c, &quot;Update Article (Minor Change)&quot;) || ISPICKVAL (Request_Type__c, &quot;Update Article (Major Change)&quot;)) &amp;&amp; ISBLANK (Article_Number_or_URL__c), TRUE, FALSE)</errorConditionFormula>
+    <errorDisplayField>Article_Number_or_URL__c</errorDisplayField>
+    <errorMessage>You must specify the article URL or the article number so we may quickly find the article to apply this update.</errorMessage>
+</ValidationRule>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Completed_All_or_None</fullName>
+    <active>true</active>
+    <description>You must either specify who this was completed by and the date, or enter nothing at all for it to be automatically populated.</description>
+    <errorConditionFormula>IF (ISPICKVAL(Status__c, &quot;Completed&quot;) &amp;&amp; (ISBLANK (Completed_By__c) &amp;&amp; !ISBLANK (Completed_Date_Time__c)) || (!ISBLANK (Completed_By__c) &amp;&amp; ISBLANK(Completed_Date_Time__c)), TRUE, FALSE)</errorConditionFormula>
+    <errorMessage>You must either specify who completed this Article Update Request, and the time it was completed, or leave the fields blank and let Salesforce populate that information with your information, and the time and date.</errorMessage>
+</ValidationRule>

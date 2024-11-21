@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Delivery_Contact_Fax__c</fullName>
+    <description>Delivery Contact Fax</description>
+    <inlineHelpText>Delivery Contact Fax</inlineHelpText>
+    <label>Delivery Contact Fax</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Phone</type>
+</CustomField>

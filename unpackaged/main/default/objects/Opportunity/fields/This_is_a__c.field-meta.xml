@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>This_is_a__c</fullName>
+    <description>Used on the international side to determine the workflow needed - either a Show or a Non Show should be created (currently manually) based on this selection.</description>
+    <label>This is a:</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Event</fullName>
+                <default>false</default>
+                <label>Event</label>
+            </value>
+            <value>
+                <fullName>Show</fullName>
+                <default>false</default>
+                <label>Show</label>
+            </value>
+            <value>
+                <fullName>Retail</fullName>
+                <default>false</default>
+                <label>Retail</label>
+            </value>
+            <value>
+                <fullName>EXHIBITION</fullName>
+                <default>false</default>
+                <label>EXHIBITION</label>
+            </value>
+            <value>
+                <fullName>CORPORATE EVENT</fullName>
+                <default>false</default>
+                <label>CORPORATE EVENT</label>
+            </value>
+            <value>
+                <fullName>BOOTH</fullName>
+                <default>false</default>
+                <label>BOOTH</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Sales_Goal</fullName>
+    <columns>OPPORTUNITY.NAME</columns>
+    <columns>OPPORTUNITY.AMOUNT</columns>
+    <columns>Opportunity_Owner__c</columns>
+    <columns>OPPORTUNITY.CLOSE_DATE</columns>
+    <columns>OPPORTUNITY.STAGE_NAME</columns>
+    <columns>OPPORTUNITY.TYPE</columns>
+    <columns>Sales_Goal_Type__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>RecordType_Name__c</field>
+        <operation>contains</operation>
+        <value>Sales Goal</value>
+    </filters>
+    <filters>
+        <field>Sales_Goal_Type__c</field>
+        <operation>equals</operation>
+        <value>Corporate Accounts,Plan,Show Profit,F5</value>
+    </filters>
+    <filters>
+        <field>Year__c</field>
+        <operation>equals</operation>
+        <value>2023</value>
+    </filters>
+    <label>Sales Goal</label>
+    <sharedTo>
+        <role>SystemAdministrator</role>
+        <role>System_Support_Admin</role>
+    </sharedTo>
+</ListView>

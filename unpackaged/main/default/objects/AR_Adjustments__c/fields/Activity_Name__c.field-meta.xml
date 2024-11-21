@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Activity_Name__c</fullName>
+    <label>Activity Name</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Collection Agency Fee</fullName>
+                <default>false</default>
+                <label>Collection Agency Fee</label>
+            </value>
+            <value>
+                <fullName>Finance Charge</fullName>
+                <default>false</default>
+                <label>Finance Charge</label>
+            </value>
+            <value>
+                <fullName>Intercompany Adjustment</fullName>
+                <default>false</default>
+                <label>Intercompany Adjustment</label>
+            </value>
+            <value>
+                <fullName>Inv. Adj. - Currency Exchange</fullName>
+                <default>false</default>
+                <label>Inv. Adj. - Currency Exchange</label>
+            </value>
+            <value>
+                <fullName>Invoice Balance Write Off</fullName>
+                <default>false</default>
+                <label>Invoice Balance Write Off</label>
+            </value>
+            <value>
+                <fullName>Invoice Reclass</fullName>
+                <default>false</default>
+                <label>Invoice Reclass</label>
+            </value>
+            <value>
+                <fullName>Show Mgt Comm-Assn</fullName>
+                <default>false</default>
+                <label>Show Mgt Comm-Assn</label>
+            </value>
+            <value>
+                <fullName>Show Mgt Comm-Exhibitor</fullName>
+                <default>false</default>
+                <label>Show Mgt Comm-Exhibitor</label>
+            </value>
+            <value>
+                <fullName>Contractual Revenue - 47000</fullName>
+                <default>false</default>
+                <label>Contractual Revenue - 47000</label>
+            </value>
+            <value>
+                <fullName>Wire Transfer Fee Adjustment</fullName>
+                <default>false</default>
+                <label>Wire Transfer Fee Adjustment</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

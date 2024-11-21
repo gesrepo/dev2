@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Status__c</fullName>
+    <description>Values to be validated. Must match SOP field with the same name.</description>
+    <label>Status</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Quote</fullName>
+                <default>true</default>
+                <label>Quote</label>
+            </value>
+            <value>
+                <fullName>Quote Closed</fullName>
+                <default>false</default>
+                <label>Quote Closed</label>
+            </value>
+            <value>
+                <fullName>Order in Progress</fullName>
+                <default>false</default>
+                <label>Order in Progress</label>
+            </value>
+            <value>
+                <fullName>Order Invoiced</fullName>
+                <default>false</default>
+                <label>Order Invoiced</label>
+            </value>
+            <value>
+                <fullName>Order Canceled</fullName>
+                <default>false</default>
+                <label>Order Canceled</label>
+            </value>
+            <value>
+                <fullName>Refund</fullName>
+                <default>false</default>
+                <label>Refund</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

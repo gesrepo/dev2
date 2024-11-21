@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Total_Show_Rev_PY__c</fullName>
+    <formula>Freight_PY__c+ Logistics_PY__c  +  Packages_PY__c  +  Std_Furniture_PY__c + Special_Furniture_PY__c + Carpet_PY__c + Rigging_PY__c + Graphics_PY__c + Cleaning_PY__c + Other_Subs_PY__c + Electrical_PY__c + GEM_PY__c + I_D_PY__c + General_Showsite_PY__c + Contract_Adjust_PY__c +  Exhibitor_Revenue_PY__c</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Total Show Rev</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Currency</type>
+</CustomField>

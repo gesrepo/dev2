@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>EMEA_ICE_Barcelona_Case</fullName>
+    <filterScope>Queue</filterScope>
+    <label>NL ICE Barcelona</label>
+    <queue>NL_ICE_Barcelona</queue>
+    <sharedTo>
+        <allInternalUsers />
+    </sharedTo>
+</ListView>

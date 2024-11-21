@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>GES_Account_Executive__c</fullName>
+    <label>GES Account Executive</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>true</sorted>
+            <value>
+                <fullName>Andrew Callen</fullName>
+                <default>false</default>
+                <label>Andrew Callen</label>
+            </value>
+            <value>
+                <fullName>Boncek, Debbie</fullName>
+                <default>false</default>
+                <label>Boncek, Debbie</label>
+            </value>
+            <value>
+                <fullName>GES Account Executive 1</fullName>
+                <default>false</default>
+                <label>GES Account Executive 1</label>
+            </value>
+            <value>
+                <fullName>GES Account Executive 2</fullName>
+                <default>false</default>
+                <label>GES Account Executive 2</label>
+            </value>
+            <value>
+                <fullName>GES Account Executive 3</fullName>
+                <default>false</default>
+                <label>GES Account Executive 3</label>
+            </value>
+            <value>
+                <fullName>Heather Rosenow</fullName>
+                <default>false</default>
+                <label>Heather Rosenow</label>
+            </value>
+            <value>
+                <fullName>Jennifer Spencer</fullName>
+                <default>false</default>
+                <label>Jennifer Spencer</label>
+            </value>
+            <value>
+                <fullName>Lori Chester</fullName>
+                <default>false</default>
+                <label>Lori Chester</label>
+            </value>
+            <value>
+                <fullName>Sean Nagle</fullName>
+                <default>false</default>
+                <label>Sean Nagle</label>
+            </value>
+            <value>
+                <fullName>Steve Maurer</fullName>
+                <default>false</default>
+                <label>Steve Maurer</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

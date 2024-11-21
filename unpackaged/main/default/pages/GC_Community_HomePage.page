@@ -1,0 +1,725 @@
+<apex:page standardStylesheets="true" showHeader="false" sidebar="false" applyHtmlTag="false" applyBodyTag="false" docType="html-5.0" controller="GC_Community_HomePageController" action="{!loadPage}">
+    <html
+        xmlns="http://www.w3.org/2000/svg"
+        xmlns:xlink="http://www.w3.org/1999/xlink">
+        <head>
+            <apex:stylesheet value="{!URLFOR($Resource.GC_DateTimePicker, 'GC_DateTimePicker/jquery.datetimepicker.css')}" />
+            <apex:stylesheet value="{!URLFOR($Resource.Lightning_Design_System, 'assets/styles/salesforce-lightning-design-system.min.css')}" />
+            <apex:stylesheet value="{!URLFOR($Resource.GC_Assets, 'GC_Assets/css/GC_Styles.css')}" />
+            <apex:includeScript value="{!$Resource.jQuery}" />
+            <apex:includeScript value="{!URLFOR($Resource.GC_DateTimePicker, 'GC_DateTimePicker/build/jquery.datetimepicker.full.min.js')}" />
+            <!--<apex:includeScript value="{!URLFOR($Resource.GC_Assets, 'GC_Assets/js/GC_init.js')}" />-->
+            <script>
+      $( document ).ready(function() {
+        $('#datetimepicker').datetimepicker({closeOnDateSelect: true,timepicker:false});
+        $('#datetimepicker1').datetimepicker({closeOnDateSelect: true});
+        $('#datetimepicker2').datetimepicker({closeOnDateSelect: true});
+        
+        var acc = document.getElementsByClassName("accordion");
+        var i;
+        
+        for (i = 0; i < acc.length; i++) {
+            acc[i].onclick = function()
+            {
+                /* Toggle between adding and removing the "active" class,
+                to highlight the button that controls the panel */
+                this.classList.toggle("active");
+        
+                /* Toggle between hiding and showing the active panel */
+                var panel = this.nextElementSibling;
+                if (panel.style.display === "block") {
+                    panel.style.display = "none";
+                } else {
+                    panel.style.display = "block";
+                }
+            }
+        }
+        
+      });
+      
+      setTimeout(timeOuts,200);
+          
+      function timeOuts() {
+        }
+        
+        function noReload()
+        {
+        }
+        
+        function reloadAccordion()
+        {
+            var acc = document.getElementsByClassName("accordion");
+            var i;
+            
+            for (i = 0; i < acc.length; i++) {
+                acc[i].onclick = function(){
+                    /* Toggle between adding and removing the "active" class,
+                    to highlight the button that controls the panel */
+                    this.classList.toggle("active");
+            
+                    /* Toggle between hiding and showing the active panel */
+                    var panel = this.nextElementSibling;
+                    if (panel.style.display === "block") {
+                        panel.style.display = "none";
+                    } else {
+                        panel.style.display = "block";
+                    }
+                }
+            }
+        }
+      
+    </script>
+            <style>
+        .inputstyle {
+            background-color: #fff!important;
+            color: #16325c!important;
+            border: 1px solid #d8dde6!important;
+            border-radius: .25rem!important;
+            width: 100%!important;
+            transition: border .1s linear,background-color .1s linear!important;
+            display: inline-block!important;
+            padding: 0 1rem 0 .75rem!important;
+            
+                <!--line-height: 1.875rem!important;-->
+            min-height: calc(1.551rem + (1px * 2));
+        }
+        
+            /* Style the buttons that are used to open and close the accordion panel */
+            button.accordion {
+                background: #00a0af;
+                color: white;
+                border-radius: 4px;
+                padding: 0 16px;
+                border: none;
+                font-weight: normal;
+                text-align: left;
+                vertical-align: middle;
+                font-size: .75rem;
+                line-height: 1.875rem;
+                text-decoration: none;
+                -webkit-appearance: none;
+                white-space: normal;
+                user-select: none;
+                transition: color 50ms linear,background-color 50ms linear;
+                margin-left: 16px;
+                width: 150px;
+            }
+            
+            /* Style the accordion panel. Note: hidden by default */
+            div.panel {
+            padding: 0 0px;
+            display: none;
+            }
+            
+            button.accordion:after {
+            content: '\002B'; /* Unicode character for "plus" sign (+) */
+            font-size: 18px;
+            color: Black;
+            font-weight:bold;
+            float: right;
+            margin-left: 5px;
+            }
+            
+            button.accordion.active:after {
+            content: "\2212"; /* Unicode character for "minus" sign (-) */
+            }
+            
+                
+            </style>
+        </head>
+        <body>
+            <div class="slds">
+                <c:GC_Community_Header />
+                <apex:outputPanel rendered="{!show != null}">
+                    <div class="slds-page-header gc-navigation--subHeader" role="banner">
+                        <div class="slds-media">
+                            <div class="slds-media__figure">
+                                <apex:image url="{!URLFOR($Resource.GC_Assets, 'GC_Assets/img/custom13_60_teal.png')}" />
+                            </div>
+                            <div class="slds-media__body">
+                                <p class="slds-page-header__title slds-align-middle">
+                                    <span>Orders Home Page for Show:</span>
+                                    <span class="slds-truncate">{!show.Show_Name__c}</span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </apex:outputPanel>
+                
+                <!--SAL:540 Image -->
+                <apex:outputPanel rendered="{!show != null}">
+                    <div class="slds-card__header slds-grid--align-center">
+                           <!-- <div class="slds-media slds-media--center slds-has-flexi-truncate">
+                                <div class="slds-media__body">
+                                    <h2 class="slds-text-heading--small slds-truncate">Orders</h2>
+                                </div>
+                            </div>-->
+                            <apex:form >
+                            <apex:outputPanel rendered="{!orderCreatedByFlag}">
+                                <div class="slds-grid slds-grid--align-center">
+                                        <apex:image url="{!URLFOR($Resource.GC_Assert2, 'GC_Assert2/img/ClickHere.png')}" />
+                                </div> 
+                            </apex:outputPanel>                             
+                                <!--<div class="slds-no-flex">-->
+                                <div class="slds-grid slds-grid--align-center">
+                                        <apex:outputPanel layout="none" rendered="{!CanCreate}">
+                                        <apex:commandButton action="{!createOrder}" value="New Delivery Location" style="left:1px;position:relative;" styleClass="slds-button slds-button--brand gc-teal-button slds-button__icon--left" />
+                                        </apex:outputPanel>
+                                        <apex:commandButton action="{!cloneOrder}" value="Clone Show" style="left:10px;position:relative;" styleClass="slds-button slds-button--brand gc-teal-button" />
+                                        <apex:commandButton action="{!printShow}" value="Print Show" style="left:20px;position:relative;" styleClass="slds-button slds-button--brand gc-teal-button" />
+                                </div>
+                            </apex:form>
+                      </div>
+                </apex:outputPanel>
+                                                          
+                <apex:pageMessages id="messages" />
+                <div class="slds-grid slds-wrap gc-main-body">
+                    <section class="slds-col--padded slds-size--1-of-1 slds-medium-size--1-of-1 slds-large-size--2-of-3">
+                        <div class="slds-grid slds-wrap">
+                            <div class=" slds-size--1-of-1" id="gc-left-section--main">
+                                <div class="slds-card gc-grey-background">
+                                    <!-- CARD HEADER -->
+                                    <div class="slds-card__header slds-grid">
+                                        <div class="slds-media slds-media--center slds-has-flexi-truncate">
+                                            <div class="slds-media__body">
+                                                <h2 class="slds-text-heading--small slds-truncate">Order Filters</h2>
+                                                <!-- Need to add some help text -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    
+                                    <div class="slds-card__body">
+                                        <!-- Filter Form -->
+                                        <apex:outputPanel id="filterControls">
+                                            <apex:form >
+                                                <apex:actionFunction name="doSearch" action="{!searchResults}" reRender="outputQueries" status="serachStatusSpinner" oncomplete="saveFilters()"/>
+                                                <apex:actionFunction name="doReset" action="{!resetSearch}" reRender="filterControls, outputQueries" oncomplete="reloadAccordion()" />
+                                                <apex:actionFunction name="doPrintOrder" action="{!printShow}" reRender="messages" />
+                                                <apex:actionFunction name="doCreateOrder" action="{!createOrder}" reRender="messages" />
+                                                <apex:actionFunction name="saveFilters" action="{!SaveOrderFilter}" reRender="messages" status="savingFiltersSpinner"/>
+                                                <apex:actionStatus id="serachStatusSpinner">
+                                                    <apex:facet name="start">
+                                                        <c:GC_Community_StatusSpinner statusMessage="Searching." />
+                                                    </apex:facet>
+                                                </apex:actionStatus>
+                                                <apex:actionStatus id="setDateStatusSpinner">
+                                                    <apex:facet name="start">
+                                                        <c:GC_Community_StatusSpinner statusMessage="Setting Date." />
+                                                    </apex:facet>
+                                                </apex:actionStatus>
+                                                <apex:actionStatus id="savingFiltersSpinner">
+                                                    <apex:facet name="start">
+                                                        <c:GC_Community_StatusSpinner statusMessage="Saving Filter Values" />
+                                                    </apex:facet>
+                                                </apex:actionStatus>
+                                                <div class="slds-grid slds-wrap slds-grid--pull-padded">
+                                                    <div class="slds-col--padded slds-size--1-of-1 slds-medium-size--1-of-2 slds-large-size--1-of-3">
+                                                        <div class="slds-form-element">
+                                                            <label class="slds-form-element__label">Delivery Location</label>
+                                                            <div class="slds-form-element__control">
+                                                                <div class="gc-relative">
+                                                                    <apex:selectList value="{!boothName}" size="1" styleClass="slds-select">
+                                                                        <apex:selectOptions value="{!deliveryLocations}"></apex:selectOptions>
+                                                                    </apex:selectList>
+                                                                </div>
+                                                                <!-- <apex:inputText styleClass="slds-input" style="width: 100%;" value="{!boothName}" /> -->
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="slds-col--padded slds-size--1-of-1 slds-medium-size--1-of-2 slds-large-size--1-of-3">
+                                                        <div class="slds-form-element">
+                                                            <label class="slds-form-element__label">Area Description</label>
+                                                            <div class="slds-form-element__control">
+                                                                <div class="gc-relative">
+                                                                    <apex:selectList value="{!areaDescription}" size="1" styleClass="slds-select">
+                                                                        <apex:selectOptions value="{!orderAreaDescriptions}"></apex:selectOptions>
+                                                                    </apex:selectList>
+                                                                </div>
+                                                                <!-- <apex:inputText styleClass="slds-input" style="width: 100%;" value="{!delivery}" /> -->
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="slds-col--padded slds-size--1-of-1 slds-medium-size--1-of-2 slds-large-size--1-of-3">
+                                                        <div class="slds-form-element">
+                                                            <label class="slds-form-element__label">Delivery Area</label>
+                                                            <div class="slds-form-element__control">
+                                                                <div class="gc-relative">
+                                                                    <apex:selectList value="{!delivery}" size="1" styleClass="slds-select">
+                                                                        <apex:selectOptions value="{!deliveryAreas}"></apex:selectOptions>
+                                                                    </apex:selectList>
+                                                                </div>
+                                                                <!-- <apex:inputText styleClass="slds-input" style="width: 100%;" value="{!delivery}" /> -->
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="slds-col--padded slds-size--1-of-1 slds-medium-size--1-of-2 slds-large-size--1-of-3">
+                                                        <div class="slds-form-element">
+                                                            <label class="slds-form-element__label">Department</label>
+                                                            <div class="slds-form-element__control">
+                                                                <div class="gc-relative">
+                                                                    <apex:selectList value="{!department}" size="1" styleClass="slds-select">
+                                                                        <apex:selectOptions value="{!departments}"></apex:selectOptions>
+                                                                    </apex:selectList>
+                                                                </div>
+                                                                <!-- <apex:inputText styleClass="slds-input" style="width: 100%;" value="{!department}" /> -->
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="slds-col--padded slds-size--1-of-1 slds-medium-size--1-of-2 slds-large-size--1-of-3">
+                                                        <div class="slds-form-element">
+                                                            <label class="slds-form-element__label">User Name</label>
+                                                            <div class="slds-form-element__control">
+                                                                <div class="gc-relative">
+                                                                    <apex:selectList value="{!username}" size="6" styleClass="slds-select"
+                                                                    multiselect="true" style="height: 100px;">
+                                                                        <apex:selectOptions value="{!usernames}"></apex:selectOptions>
+                                                                    </apex:selectList>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <!--<div class="slds-col--padded slds-size--1-of-1 slds-medium-size--1-of-2 slds-large-size--1-of-3"><div class="slds-form-element"><label class="slds-form-element__label">TypeOfUser</label><div class="slds-form-element__control"><div class="gc-relative"><apex:selectList value="{!TypeOfUser}" size="1" styleClass="slds-select"><apex:selectOptions value="{!TypeOfUser}"></apex:selectOptions></apex:selectList></div></div></div></div>--->
+                                                    <div class="slds-col--padded slds-size--1-of-1 slds-medium-size--1-of-2 slds-large-size--1-of-3">
+                                                        <div class="slds-form-element">
+                                                            <label class="slds-form-element__label">Venue Location</label>
+                                                            <div class="slds-form-element__control">
+                                                                <div class="gc-relative">
+                                                                    <apex:selectList value="{!venue}" size="1" styleClass="slds-select">
+                                                                        <apex:selectOptions value="{!venueLocations}"></apex:selectOptions>
+                                                                    </apex:selectList>
+                                                                </div>
+                                                                <!-- <apex:inputText styleClass="slds-input" style="width: 100%;" value="{!venue}" /> -->
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <button class="accordion" onclick="noReload();return false;" type="button">More</button>
+                                                        <div class="panel">
+                                                            <div class="slds-grid slds-wrap slds-grid--pull-padded" style="margin-left: 2px;important">
+                                                                            <div class="slds-col--padded slds-size--1-of-1 slds-medium-size--1-of-2 slds-large-size--1-of-3">
+                                                                                <div class="slds-form-element">
+                                                                                    <label class="slds-form-element__label">Modified Date From</label>
+                                                                                    <div class="slds-form-element__control">
+                                                                                        <div class="gc-relative">
+                                                                                            <apex:input type="date" styleClass="slds-input"  value="{!modifiedDateFrom}" />
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        
+                                                                        <div class="slds-col--padded slds-size--1-of-1 slds-medium-size--1-of-2 slds-large-size--1-of-3">
+                                                                            <div class="slds-form-element">
+                                                                                <label class="slds-form-element__label">Modified Date To</label>
+                                                                                <div class="slds-form-element__control">
+                                                                                    <div class="gc-relative">
+                                                                                        <apex:input type="date" styleClass="slds-input" style="width: 100%;" value="{!modifiedDateTo}" />
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="slds-col--padded slds-size--1-of-1 slds-medium-size--1-of-2 slds-large-size--1-of-3">
+                                                                            <div class="slds-form-element">
+                                                                                <div class="slds-form-element__control">
+                                                                                    <div class="gc-relative"></div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        
+                                                                            <div class="slds-col--padded slds-size--1-of-1 slds-medium-size--1-of-2 slds-large-size--1-of-3">
+                                                                                <div class="slds-form-element">
+                                                                                    <label class="slds-form-element__label">Creation Date From</label>
+                                                                                    <div class="slds-form-element__control">
+                                                                                        <div class="gc-relative">
+                                                                                            <apex:input type="date" styleClass="slds-input" style="width: 100%;" value="{!createdDateFrom}" />
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        
+                                                                        <div class="slds-col--padded slds-size--1-of-1 slds-medium-size--1-of-2 slds-large-size--1-of-3">
+                                                                            <div class="slds-form-element">
+                                                                                <label class="slds-form-element__label">Creation Date To</label>
+                                                                                <div class="slds-form-element__control">
+                                                                                    <div class="gc-relative">
+                                                                                        <apex:input type="date" styleClass="slds-input" style="width: 100%;" value="{!createdDateTo}" />
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="slds-col--padded slds-size--1-of-1 slds-medium-size--1-of-2 slds-large-size--1-of-3">
+                                                                            <div class="slds-form-element">
+                                                                                <div class="slds-form-element__control">
+                                                                                    <div class="gc-relative"></div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        
+                                                                            <div class="slds-col--padded slds-size--1-of-1 slds-medium-size--1-of-2 slds-large-size--1-of-3">
+                                                                                <div class="slds-form-element">
+                                                                                    <label class="slds-form-element__label">Delivery Date/Time</label>
+                                                                                    <div class="slds-form-element__control">
+                                                                                        <div class="gc-relative">
+                                                                                            <apex:input type="date" styleClass="slds-input" style="width: 100%;" value="{!showDateDelivery}" />
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        
+                                                                        <div class="slds-col--padded slds-size--1-of-1 slds-medium-size--1-of-2 slds-large-size--1-of-3">
+                                                                            <div class="slds-form-element">
+                                                                                <label class="slds-form-element__label">Completion Date/Time</label>
+                                                                                <div class="slds-form-element__control">
+                                                                                    <div class="gc-relative">
+                                                                                        <apex:input type="date" styleClass="slds-input" style="width: 100%;" value="{!showDateCompletion}" />
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="slds-col--padded slds-size--1-of-1 slds-medium-size--1-of-2 slds-large-size--1-of-3">
+                                                                            <div class="slds-form-element">
+                                                                                <label class="slds-form-element__label">Removal Date/Time</label>
+                                                                                <div class="slds-form-element__control">
+                                                                                    <div class="gc-relative">
+                                                                                        <apex:input type="date" styleClass="slds-input" style="width: 100%;" value="{!showDateRemoval}" />
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        
+                                                                            <div class="slds-col--padded slds-size--1-of-1 slds-medium-size--1-of-2 slds-large-size--1-of-3">
+                                                                                <div class="slds-form-element">
+                                                                                    <label class="slds-form-element__label">Keyword Search</label>
+                                                                                    <div class="slds-form-element__control">
+                                                                                        <div class="gc-relative">
+                                                                                            <apex:inputText styleClass="slds-input" style="width: 100%;" value="{!searchString}"/>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        
+                                                                        <div class="slds-col--padded slds-size--1-of-1 slds-medium-size--1-of-2 slds-large-size--1-of-3">
+                                                                            <div class="slds-form-element">
+                                                                                <label class="slds-form-element__label">Vendor</label>
+                                                                                <div class="slds-form-element__control">
+                                                                                    <div class="gc-relative">
+                                                                                        <apex:selectList value="{!vendor}" size="1" styleClass="slds-select">
+                                                                                            <apex:selectOptions value="{!vendors}"></apex:selectOptions>
+                                                                                        </apex:selectList>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        
+                                                                         <div class="slds-col--padded slds-size--1-of-1 slds-medium-size--1-of-2 slds-large-size--1-of-3">
+                                                                            <div class="slds-form-element">
+                                                                                <label class="slds-form-element__label">OnsiteContactPerson</label>
+                                                                                <div class="slds-form-element__control">
+                                                                                    <div class="gc-relative">
+                                                                                        <apex:selectList value="{!oponsiteContactPerson}" size="6" multiselect="true" styleClass="slds-select" style="height: 100px;">
+                                                                                            <apex:selectOptions value="{!OPOnsiteContactPersons}"></apex:selectOptions>
+                                                                                        </apex:selectList>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        
+                                                                         <div class="slds-col--padded slds-size--1-of-1 slds-medium-size--1-of-2 slds-large-size--1-of-3">
+                                                                            <div class="slds-form-element">
+                                                                                <label class="slds-form-element__label">OnsiteContactPersonOther</label>
+                                                                                <div class="slds-form-element__control">
+                                                                                    <div class="gc-relative">
+                                                                                        <apex:selectList value="{!oponsiteContactPersonOther}" size="6"  multiselect="true" styleClass="slds-select" style="height: 100px;">
+                                                                                            <apex:selectOptions value="{!OPOnsiteContactPersonOthers}"></apex:selectOptions>
+                                                                                        </apex:selectList>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        
+                                                                        <div class="slds-col--padded slds-size--1-of-1 slds-medium-size--1-of-2 slds-large-size--1-of-3">
+                                                                            <div class="slds-form-element">
+                                                                                <div class="slds-form-element__control">
+                                                                                    <div class="gc-relative"></div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div></div>
+                                                                
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="slds-grid slds-grid--align-center">
+                                                    <br/>
+                                                    <br/>
+                                                    <div>
+                                                        <br/>
+                                                        <button class="slds-button slds-button--brand gc-teal-button" style="left:1px;position:relative;" onclick="doSearch(); return false;">
+                                                            Search
+                                                          </button>
+                                                    </div>
+                                                    <div>
+                                                        <br/>
+                                                        <button class="slds-button slds-button--brand gc-teal-button" style="left:10px;position:relative;" onclick="doReset(); return false;">
+                                                            Reset
+                                                          </button>
+                                                    </div>
+                                                </div>
+                                            </apex:form>
+                                        </apex:outputPanel>
+                                    </div>
+                                    <!-- END FORM -->
+                                    <br />
+                                </div>
+                                <!-- TASKS AND DEADLINES -->
+                                <div class="slds-card gc-grey-background">
+                                    <!-- CARD HEADER -->
+                                    <div class="slds-card__header slds-grid--align-center">
+                                        <div class="slds-media slds-media--center slds-has-flexi-truncate">
+                                            <div class="slds-media__body">
+                                                <h2 class="slds-text-heading--small slds-truncate">Orders</h2>
+                                            </div>
+                                        </div>
+                                        <div class="slds-card__header slds-grid--align-center">
+                                            <apex:form >
+                                                <div class="slds-grid slds-grid--align-center">
+                                                    <!-- <div><button class="slds-button slds-button--brand gc-teal-button" style="left:0px;position:relative;" onclick="doPrintShow();" onended="return false;">
+                                                        Print Show
+                                                    </button></div><div><apex:outputPanel layout="none" rendered="{!CanCreate}"><button class="slds-button slds-button--brand gc-teal-button" style="right:15px;position:relative;" onclick="doCreateOrder(); return false;">
+                                                            Create New Order
+                                                        </button></apex:outputPanel></div> -->
+                                                    <apex:outputPanel layout="none" rendered="{!CanCreate}">
+                                                        <apex:commandButton action="{!createOrder}" value="New Delivery Location" style="left:-10px;position:relative;" styleClass="slds-button slds-button--brand gc-teal-button slds-button__icon--left" />
+                                                    </apex:outputPanel>
+                                                    <apex:commandButton action="{!cloneOrder}" value="Clone Show" style="left:0px;position:relative;" styleClass="slds-button slds-button--brand gc-teal-button" />
+                                                    <apex:commandButton action="{!printShow}" value="Print Show" style="left:10px;position:relative;" styleClass="slds-button slds-button--brand gc-teal-button" />
+                                                
+                                                </div>
+                                            </apex:form>
+                                        </div>
+                                    </div>
+                                    <!-- /CARD HEADER -->
+                                    <!-- CARD BODY -->
+                                    <div class="slds-card__body">
+                                        <!-- TASK LIST -->
+                                        <apex:outputPanel id="outputQueries" styleClass="tableScrollBox">
+                                            <apex:form >
+                                                <table class="slds-table slds-table--bordered slds-max-medium-table--stacked-horizontal">
+                                                    <thead>
+                                                        <tr class="slds-text-heading--label">
+                                                            <th scope="col">
+                                                                <span class="slds-truncate">
+                                                                    <apex:commandLink action="{!sortColumn}" reRender="messages, outputQueries" value="Order Name">
+                                                                        <apex:param name="orderByCol" value="Name"></apex:param>
+                                                                        <apex:outputPanel layout="none" rendered="{!sortOrder == 'asc' && orderByQuery == 'Name'}">
+                                                                &#x25B2;
+                                                                </apex:outputPanel>
+                                                                        <apex:outputPanel layout="none" rendered="{!sortOrder == 'desc' && orderByQuery == 'Name'}">
+                                                                  &#x25BC;
+                                                                </apex:outputPanel>
+                                                                    </apex:commandLink>
+                                                                </span>
+                                                            </th>
+                                                            <th scope="col">
+                                                                <span class="slds-truncate">
+                                                                    <apex:commandLink action="{!sortColumn}" reRender="messages, outputQueries" value="Delivery Location">
+                                                                        <apex:param name="orderByCol" value="Booth_Area__c"></apex:param>
+                                                                        <apex:outputPanel layout="none" rendered="{!sortOrder == 'asc' && orderByQuery == 'Booth_Area__c'}">
+                                                                &#x25B2;
+                                                                </apex:outputPanel>
+                                                                        <apex:outputPanel layout="none" rendered="{!sortOrder == 'desc' && orderByQuery == 'Booth_Area__c'}">
+                                                                 &#x25BC;
+                                                                </apex:outputPanel>
+                                                                    </apex:commandLink>
+                                                                </span>
+                                                            </th>
+                                                            <th scope="col">
+                                                                <span class="slds-truncate">
+                                                                    <apex:commandLink action="{!sortColumn}" reRender="messages, outputQueries" value="Area Description">
+                                                                        <apex:param name="orderByCol" value="Order_Area_Description__c"></apex:param>
+                                                                        <apex:outputPanel layout="none" rendered="{!sortOrder == 'asc' && orderByQuery == 'Order_Area_Description__c'}">
+                                                                &#x25B2;
+                                                                </apex:outputPanel>
+                                                                        <apex:outputPanel layout="none" rendered="{!sortOrder == 'desc' && orderByQuery == 'Order_Area_Description__c'}">
+                                                                  &#x25BC;
+                                                                </apex:outputPanel>
+                                                                    </apex:commandLink>
+                                                                </span>
+                                                            </th>
+                                                            <th scope="col">
+                                                                <span class="slds-truncate">
+                                                                    <apex:commandLink action="{!sortColumn}" reRender="messages, outputQueries" value="Delivery Date">
+                                                                        <apex:param name="orderByCol" value="Delivery_Date_Time__c"></apex:param>
+                                                                        <apex:outputPanel layout="none" rendered="{!sortOrder == 'asc' && orderByQuery == 'Delivery_Date_Time__c'}">
+                                                                &#x25B2;
+                                                                </apex:outputPanel>
+                                                                        <apex:outputPanel layout="none" rendered="{!sortOrder == 'desc' && orderByQuery == 'Delivery_Date_Time__c'}">
+                                                                 &#x25BC;
+                                                                </apex:outputPanel>
+                                                                    </apex:commandLink>
+                                                                </span>
+                                                            </th>
+                                                            <th scope="col">
+                                                                <span class="slds-truncate">
+                                                                    <apex:commandLink action="{!sortColumn}" reRender="messages, outputQueries" value="Completion Date">
+                                                                        <apex:param name="orderByCol" value="Completion_Date_Time__c"></apex:param>
+                                                                        <apex:outputPanel layout="none" rendered="{!sortOrder == 'asc' && orderByQuery == 'Completion_Date_Time__c'}">
+                                                                &#x25B2;
+                                                                </apex:outputPanel>
+                                                                        <apex:outputPanel layout="none" rendered="{!sortOrder == 'desc' && orderByQuery == 'Completion_Date_Time__c'}">
+                                                                 &#x25BC;
+                                                                </apex:outputPanel>
+                                                                    </apex:commandLink>
+                                                                </span>
+                                                            </th>
+                                                            <th scope="col">
+                                                                <span class="slds-truncate">
+                                                                    <apex:commandLink action="{!sortColumn}" reRender="messages, outputQueries" value="Removal Date">
+                                                                        <apex:param name="orderByCol" value="Removal_Date_Time__c"></apex:param>
+                                                                        <apex:outputPanel layout="none" rendered="{!sortOrder == 'asc' && orderByQuery == 'Removal_Date_Time__c'}">
+                                                                &#x25B2;
+                                                                </apex:outputPanel>
+                                                                        <apex:outputPanel layout="none" rendered="{!sortOrder == 'desc' && orderByQuery == 'Removal_Date_Time__c'}">
+                                                                  &#x25BC;
+                                                                </apex:outputPanel>
+                                                                    </apex:commandLink>
+                                                                </span>
+                                                            </th>
+                                                            <th scope="col">
+                                                                <span class="slds-truncate">
+                                                                    <apex:commandLink action="{!sortColumn}" reRender="messages, outputQueries" value="Order Number">
+                                                                        <apex:param name="orderByCol" value="Order_Number__c"></apex:param>
+                                                                        <apex:outputPanel layout="none" rendered="{!sortOrder == 'asc' && orderByQuery == 'Order_Number__c'}">
+                                                                &#x25B2;
+                                                                </apex:outputPanel>
+                                                                        <apex:outputPanel layout="none" rendered="{!sortOrder == 'desc' && orderByQuery == 'Order_Number__c'}">
+                                                                  &#x25BC;
+                                                                </apex:outputPanel>
+                                                                    </apex:commandLink>
+                                                                </span>
+                                                            </th>
+                                                            <th scope="col">
+                                                                <span class="slds-truncate">
+                                                                    <apex:commandLink action="{!sortColumn}" reRender="messages, outputQueries" value="status">
+                                                                        <apex:param name="orderByCol" value="Status__c"></apex:param>
+                                                                        <apex:outputPanel layout="none" rendered="{!sortOrder == 'asc' && orderByQuery == 'Status__c'}">
+                                                                &#x25B2;
+                                                                </apex:outputPanel>
+                                                                        <apex:outputPanel layout="none" rendered="{!sortOrder == 'desc' && orderByQuery == 'Status__c'}">
+                                                                   &#x25BC;
+                                                                </apex:outputPanel>
+                                                                    </apex:commandLink>
+                                                                </span>
+                                                            </th>
+                                                            <th scope="col">
+                                                                <span class="slds-truncate">
+                                                                    <apex:commandLink action="{!sortColumn}" reRender="messages, outputQueries" value="User Name">
+                                                                        <apex:param name="orderByCol" value="User_Name__c"></apex:param>
+                                                                        <apex:outputPanel layout="none" rendered="{!sortOrder == 'asc' && orderByQuery == 'User_Name__c'}">
+                                                                &#x25B2;
+                                                                </apex:outputPanel>
+                                                                        <apex:outputPanel layout="none" rendered="{!sortOrder == 'desc' && orderByQuery == 'User_Name__c'}">
+                                                                   &#x25BC;
+                                                                </apex:outputPanel>
+                                                                    </apex:commandLink>
+                                                                </span>
+                                                            </th>
+                                                            <th scope="col">
+                                                                <span class="slds-truncate">
+                                                                    <apex:commandLink action="{!sortColumn}" reRender="messages, outputQueries" value="Creation Date">
+                                                                        <apex:param name="orderByCol" value="Createddate"></apex:param>
+                                                                        <apex:outputPanel layout="none" rendered="{!sortOrder == 'asc' && orderByQuery == 'Createddate'}">
+                                                                &#x25B2;
+                                                                </apex:outputPanel>
+                                                                        <apex:outputPanel layout="none" rendered="{!sortOrder == 'desc' && orderByQuery == 'Createddate'}">
+                                                                   &#x25BC;
+                                                                </apex:outputPanel>
+                                                                    </apex:commandLink>
+                                                                </span>
+                                                            </th>
+                                                            <th scope="col">
+                                                                <span class="slds-truncate">
+                                                                    <apex:commandLink action="{!sortColumn}" reRender="messages, outputQueries" value="Modified Date">
+                                                                        <apex:param name="orderByCol" value="LastModifiedDate"></apex:param>
+                                                                        <apex:outputPanel layout="none" rendered="{!sortOrder == 'asc' && orderByQuery == 'LastModifiedDate'}">
+                                                                &#x25B2;
+                                                                </apex:outputPanel>
+                                                                        <apex:outputPanel layout="none" rendered="{!sortOrder == 'desc' && orderByQuery == 'LastModifiedDate'}">
+                                                                   &#x25BC;
+                                                                </apex:outputPanel>
+                                                                    </apex:commandLink>
+                                                                </span>
+                                                            </th>
+                                                            <!--<th scope="col"><span class="slds-truncate"><apex:commandLink action="{!sortColumn}" reRender="messages, outputQueries" value="Type Of User"><apex:param name="orderByCol" value="Type_Of_User__c"></apex:param><apex:outputPanel layout="none" rendered="{!sortOrder == 'asc' && orderByQuery == 'Type_Of_User__c'}">
+                                                                &#x25B2;
+                                                                </apex:outputPanel><apex:outputPanel layout="none" rendered="{!sortOrder == 'desc' && orderByQuery == 'Type_Of_User__c'}">
+                                                                   &#x25BC;
+                                                                </apex:outputPanel></apex:commandLink></span></th>-->
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <apex:repeat value="{!gesOrders}" var="go">
+                                                            <tr class="slds-hint-parent">
+                                                                <td data-label="ges-order-name" role="row">
+                                                                    <apex:outputLink value="{!$Page.GC_Community_OrderView}">
+                                                                     {!go.Name}
+                                  
+                                                                        <apex:param name="orderId" value="{!go.Id}" assignTo="{!orderId}" />
+                                                                        <apex:param name="showId" value="{!show.Id}" assignTo="{!showId}" />
+                                                                    </apex:outputLink>
+                                                                </td>
+                                                                <td data-label="booth">
+                                                                    <apex:outputText value="{!go.Booth_Area__c}" />
+                                                                </td>
+                                                                <td data-label="areadescription">
+                                                                    <apex:outputText value="{!go.Order_Area_Description__c}" />
+                                                                </td>
+                                                                <td data-label="delivery">
+                                                                    <apex:outputField value="{!go.Delivery_Date_Time__c}" styleClass="slds-input--small" />
+                                                                </td>
+                                                                <td data-label="completion">
+                                                                    <apex:outputField value="{!go.Completion_Date_Time__c}" styleClass="slds-input--small" />
+                                                                </td>
+                                                                <td data-label="removal">
+                                                                    <apex:outputField value="{!go.Removal_Date_Time__c}" styleClass="slds-input--small" />
+                                                                </td>
+                                                                <td data-label="order-number">
+                                                                    <apex:outputText value="{!go.Order_Number__c}" />
+                                                                </td>
+                                                                <td data-label="Status">
+                                                                    <apex:outputText value="{!go.Status__c}" />
+                                                                </td>
+                                                                <td data-label="Username">
+                                                                    <apex:outputText value="{!go.User_Name__c}" />
+                                                                </td>
+                                                                <td data-label="Created Date">
+                                                                    <!--<apex:outputText value="{!go.Createddate}" styleClass="slds-input--small"/>-->
+                                                                    <apex:outputText value="{0,date,MM'/'dd'/'yyyy}">
+                                                                        <apex:param value="{!go.Createddate}" />
+                                                                    </apex:outputText>
+                                                                </td>
+                                                                <td data-label="Created Date">
+                                                                    <!--<apex:outputText value="{!go.LastModifiedDate}" styleClass="slds-input--small"/>-->
+                                                                    <apex:outputText value="{0,date,MM'/'dd'/'yyyy}">
+                                                                        <apex:param value="{!go.LastModifiedDate}" />
+                                                                    </apex:outputText>
+                                                                </td>
+                                                                <!--<td data-label="TypeOfUser"><apex:outputText value="{!go.Type_Of_User__c}" /></td>-->
+                                                            </tr>
+                                                        </apex:repeat>
+                                                    </tbody>
+                                                </table>
+                                            </apex:form>
+                                        </apex:outputPanel>
+                                    </div>
+                                </div>
+                                <!--<div class="slds-card gc-grey-background"><div class="slds-p-around--small slds-grid gc-hide-RelatedListBorder"><div class="slds-has-flexi-truncate"><apex:relatedList subject="{!show}" list="CombinedAttachments" /></div></div></div>-->
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </body>
+    </html>
+</apex:page>

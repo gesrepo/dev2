@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SL_PO_Probability</fullName>
+    <active>false</active>
+    <description>Restricts the manual override of the Probability to only these values: 0, 25, 50, 75 for stages SL1, SL2, SL3, SL4 and PO.</description>
+    <errorConditionFormula>AND (OR (ISPICKVAL( StageName , &#39;SL1&#39;), ISPICKVAL( StageName , &#39;SL2&#39;), ISPICKVAL( StageName , &#39;SL3&#39;), ISPICKVAL( StageName , &#39;SL4&#39;), ISPICKVAL( StageName , &#39;PO&#39;), ISPICKVAL( StageName , &#39;Needs Analysis&#39;), ISPICKVAL( StageName , &#39;Proposal Opportunity&#39;)),IF (CASE ( Probability, 0, &#39;False&#39;, 0.25, &#39;False&#39;,0.50, &#39;False&#39;,0.75,&#39;False&#39;, &#39;True&#39;)= &#39;True&#39;, TRUE,FALSE), NOT($Profile.Name = &quot;GES Administrator Interface&quot;), NOT($Profile.Name = &quot;GES Interface&quot;))</errorConditionFormula>
+    <errorDisplayField>Probability</errorDisplayField>
+    <errorMessage>For stages SL1, SL2, SL3, SL4 , PO,  Needs Analysis and Proposal Opportunity, you must select one of these values for Probability: 0, 25, 50, or 75.</errorMessage>
+</ValidationRule>

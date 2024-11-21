@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>I_D_Supervisor__c</fullName>
+    <label>I &amp; D Supervisor</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>Finstrom, Brad</fullName>
+                <default>false</default>
+                <label>Finstrom, Brad</label>
+            </value>
+            <value>
+                <fullName>Vanderpol, Gary</fullName>
+                <default>false</default>
+                <label>Vanderpol, Gary</label>
+            </value>
+            <value>
+                <fullName>Storm, Kari</fullName>
+                <default>false</default>
+                <label>Storm, Kari</label>
+            </value>
+            <value>
+                <fullName>Mattson, Scott</fullName>
+                <default>false</default>
+                <label>Mattson, Scott</label>
+            </value>
+            <value>
+                <fullName>Hadrava, Don</fullName>
+                <default>false</default>
+                <label>Hadrava, Don</label>
+            </value>
+            <value>
+                <fullName>Skarupa, Dennis</fullName>
+                <default>false</default>
+                <label>Skarupa, Dennis</label>
+            </value>
+            <value>
+                <fullName>Wilma, Mark</fullName>
+                <default>false</default>
+                <label>Wilma, Mark</label>
+            </value>
+            <value>
+                <fullName>Monahan, Shane</fullName>
+                <default>false</default>
+                <label>Monahan, Shane</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Case_Required_Date_Committed</fullName>
+    <active>false</active>
+    <description>Date Committed is required when Priority is First Call Resolution</description>
+    <errorConditionFormula>IF(ISPICKVAL(Priority,&#39;First Call Resolution&#39;),IF(ISNULL(Date_Committed__c ), true, false), false)</errorConditionFormula>
+    <errorMessage>Date Committed is required when Priority is First Call Resolution.</errorMessage>
+</ValidationRule>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>UAE_Cityscape_Global_Case</fullName>
+    <filterScope>Queue</filterScope>
+    <label>UAE Cityscape Global</label>
+    <queue>UAE_Cityscape_Global</queue>
+    <sharedTo>
+        <allInternalUsers />
+    </sharedTo>
+</ListView>

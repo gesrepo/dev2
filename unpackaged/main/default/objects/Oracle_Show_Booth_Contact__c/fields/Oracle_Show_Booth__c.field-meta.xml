@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Oracle_Show_Booth__c</fullName>
+    <description>Master Detail relationship to parent Booth</description>
+    <label>Booth</label>
+    <referenceTo>Oracle_Show_Booth__c</referenceTo>
+    <relationshipLabel>Booth Contacts</relationshipLabel>
+    <relationshipName>Booth_Contacts</relationshipName>
+    <relationshipOrder>0</relationshipOrder>
+    <reparentableMasterDetail>false</reparentableMasterDetail>
+    <trackTrending>false</trackTrending>
+    <type>MasterDetail</type>
+    <writeRequiresMasterRead>false</writeRequiresMasterRead>
+</CustomField>

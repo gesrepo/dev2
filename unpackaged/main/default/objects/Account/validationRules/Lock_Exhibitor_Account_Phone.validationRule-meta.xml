@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Lock_Exhibitor_Account_Phone</fullName>
+    <active>true</active>
+    <description>Make Account Phone read-only for a selected list of profiles.</description>
+    <errorConditionFormula>AND($RecordType.Name = &#39;Exhibitor&#39;, 
+ISCHANGED(Phone), 
+
+NOT(OR($Profile.Name = &#39;Sales, Non US&#39;,
+$User.Id = &quot;0051W000004f2tv&quot;, /*Sarah Vind - Sales Support*/
+$User.Id = &quot;0058Z000009iNt1&quot;, /*Shelby - Sales Support*/
+$Profile.Name = &#39;EDAdmin_Interface&#39;, 
+$Profile.Name = &#39;GES Interface&#39;, 
+$Profile.Name = &#39;EMEA Spiro Interface&#39;,
+$Profile.Name = &#39;AV Support User&#39;, 
+$Profile.Name = &#39;AV Support User&#39;, 
+$Profile.Name = &#39;Salesforce Support User&#39;, 
+$Profile.Name = &#39;Events Salesforce Support User&#39;,
+$Profile.Name = &#39;System Administrator&#39;, 
+$Profile.Name = &#39;IT Support - EMEA&#39;, 
+$Profile.Name = &#39;EMEA System Administrator&#39;, 
+$Profile.Name = &#39;GES EMEA Service Manager&#39; , 
+$Profile.Name = &#39;GES EMEA Service Supervisor&#39; ,
+$Profile.Name = &#39;GES EMEA Service&#39; ,
+$Profile.Name = &#39;EMEA Credit Control&#39;, 
+$Profile.Name = &#39;EMEA Salesforce Support User&#39;, 
+$Profile.Name = &#39;SOP Interface&#39;, 
+$Profile.Name = &quot;GES Administrator Interface&quot;,
+$Profile.Name = &quot;SOP Interface&quot;,
+$Profile.Name = &quot;Marketing Super Users&quot;,
+$User.Update_Locked_Account_Fields__c)))</errorConditionFormula>
+    <errorDisplayField>Phone</errorDisplayField>
+    <errorMessage>Account Phone cannot be modified. Please send an email to creditrequests@ges.com to update Account information</errorMessage>
+</ValidationRule>

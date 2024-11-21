@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Marketing_Activity_ROI_Contact_Activity</fullName>
+    <availability>online</availability>
+    <description>Displays Activity History for Contact</description>
+    <displayType>link</displayType>
+    <encodingKey>UTF-8</encodingKey>
+    <hasMenubar>false</hasMenubar>
+    <hasScrollbars>true</hasScrollbars>
+    <hasToolbar>false</hasToolbar>
+    <height>600</height>
+    <isResizable>true</isResizable>
+    <linkType>url</linkType>
+    <masterLabel>Marketing Activity</masterLabel>
+    <openType>newWindow</openType>
+    <position>none</position>
+    <protected>false</protected>
+    <showsLocation>false</showsLocation>
+    <showsStatus>false</showsStatus>
+    <url>https://clm.rightonin.com/Lifecycle/SalesforceContact?contactid={!Contact.Id}&amp;sessionid={!User.Session_ID}&amp;organizationid={!$Organization.Id}&amp;serverurl={!API.Partner_Server_URL_240}</url>
+</WebLink>

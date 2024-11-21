@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Content_Management_Company__c</fullName>
+    <label>Content Management Company</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Cadmium CD</fullName>
+                <default>false</default>
+                <label>Cadmium CD</label>
+            </value>
+            <value>
+                <fullName>M3 Events</fullName>
+                <default>false</default>
+                <label>M3 Events</label>
+            </value>
+            <value>
+                <fullName>Ovation</fullName>
+                <default>false</default>
+                <label>Ovation</label>
+            </value>
+            <value>
+                <fullName>Webges</fullName>
+                <default>false</default>
+                <label>Webges</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

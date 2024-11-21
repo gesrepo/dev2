@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Profile_Status__c</fullName>
+    <externalId>false</externalId>
+    <formula>(IF(ISBLANK(Profile_Check__c),0,1)
++IF(ISBLANK(Title),0,1)+IF(ISBLANK(Phone
+),0,1)+IF(ISBLANK(Manager.LastName ),0,1)) /4*100</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Profile Status</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

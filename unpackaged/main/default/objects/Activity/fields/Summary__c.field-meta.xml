@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Summary__c</fullName>
+    <description>Summary field to display description summary in Activity and Activity History Related Lists. Created to support NSC. This field should not be displayed in any Task/Activity page layout, only in Activities related-list in other object&#39;s page layout(s).</description>
+    <externalId>false</externalId>
+    <label>Summary</label>
+    <length>255</length>
+    <required>false</required>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

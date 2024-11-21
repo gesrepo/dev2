@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Proof_Approver_4__c</fullName>
+    <description>Name of the graphics approver for this task.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Name of the graphics approver for this task.</inlineHelpText>
+    <label>Proof Approver 4</label>
+    <length>255</length>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

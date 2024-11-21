@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PRF_Lighting__c</fullName>
+    <label>Lighting</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Arm</fullName>
+                <default>false</default>
+                <label>Arm</label>
+            </value>
+            <value>
+                <fullName>Track</fullName>
+                <default>false</default>
+                <label>Track</label>
+            </value>
+            <value>
+                <fullName>Backlit Header</fullName>
+                <default>false</default>
+                <label>Backlit Header</label>
+            </value>
+            <value>
+                <fullName>Light Box</fullName>
+                <default>false</default>
+                <label>Light Box</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>3</visibleLines>
+</CustomField>

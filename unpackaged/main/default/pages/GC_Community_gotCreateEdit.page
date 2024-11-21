@@ -1,0 +1,269 @@
+<apex:page standardStylesheets="true" showHeader="false" sidebar="false" applyHtmlTag="false" applyBodyTag="false" docType="html-5.0" controller="GC_GESOrderTaskEditController" action="{!loadAction}">
+  <html xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+
+  <head>
+    <apex:includeScript value="{!$Resource.jQuery}" />
+    <apex:stylesheet value="{!URLFOR($Resource.Lightning_Design_System, 'assets/styles/salesforce-lightning-design-system.min.css')}" />
+    <apex:stylesheet value="{!URLFOR($Resource.GC_Assets, 'GC_Assets/css/GC_Styles.css')}" />
+    <apex:stylesheet value="{!URLFOR($Resource.GC_Assets, 'GC_Assets/css/GC_PageStyles.css')}" />
+    <apex:includeScript value="{!URLFOR($Resource.GC_Assets, 'GC_Assets/js/GC_init.js')}" />
+    <apex:stylesheet value="{!URLFOR($Resource.GC_DateTimePicker, 'GC_DateTimePicker/jquery.datetimepicker.css')}" />
+    <apex:includeScript value="{!URLFOR($Resource.GC_DateTimePicker, 'GC_DateTimePicker/build/jquery.datetimepicker.full.min.js')}" />
+  </head>
+
+  <body>
+    <div class="slds">
+      <c:GC_Community_Header />
+      <apex:outputPanel rendered="{!got != null}">
+        <div class="slds-page-header gc-navigation--subHeader" role="banner">
+          <div class="slds-media">
+            <div class="slds-media__figure">
+              <apex:image url="{!URLFOR($Resource.GC_Assets, 'GC_Assets/img/custom13_60_teal.png')}" />
+            </div>
+            <div class="slds-media__body">
+              <apex:outputPanel rendered="{!referenceOrder.Id != null && cloneFlag}">
+                <p class="slds-page-header__title slds-truncate slds-align-middle">GES Order Task Clone Page for Task: {!got.Name}</p>
+                <p class="slds-text-body--small slds-page-header__info">Clone Task • &nbsp;
+                  <apex:outputField value="{!referenceOrder.CreatedDate}" /> </p>
+              </apex:outputPanel>
+              <apex:outputPanel rendered="{!got.Id != null && !cloneFlag}">
+                <!-- <apex:outputPanel rendered="{!got.Id != null}"> -->
+                <p class="slds-page-header__title slds-truncate slds-align-middle">GES Order Task Edit Page for Task: {!got.Name}</p>
+                <p class="slds-text-body--small slds-page-header__info">{!got.Owner.Name} • &nbsp;
+                  <apex:outputField value="{!got.CreatedDate}" /> </p>
+              </apex:outputPanel>
+              <apex:outputPanel rendered="{!got.Id == null}">
+                <p class="slds-page-header__title slds-truncate slds-align-middle">GES Order Task Create Page</p>
+                <p class="slds-text-body--small slds-page-header__info">New Task</p>
+              </apex:outputPanel>
+            </div>
+          </div>
+        </div>
+      </apex:outputPanel>
+      <apex:form style="width: 100%" id="gotForm">
+        <apex:pageMessages id="messages" />
+        <script>
+        window.onload = function() {
+          SessionLoad_JS();
+        };
+        </script>
+        <apex:actionFunction action="{!SessionLoad}" name="SessionLoad_JS" status="Status1" reRender="statuses" oncomplete="ProductsLoad_JS();" />
+        <apex:actionFunction action="{!coreApi.obtainProducts}" name="ProductsLoad_JS" status="Status2" oncomplete="ReloadCkEditor();" reRender="statuses, messages, boothOutputPanel, itemOutputPanel" />
+        <apex:outputPanel id="statuses">
+          <apex:actionStatus id="Status1">
+            <apex:facet name="start">
+              <div class="slds-spinner_container">
+                <div class="popupBackground" />
+                <div class="popupPanel">
+                  <div class="slds-spinner--brand slds-spinner slds-spinner--large" aria-hidden="false" role="alert">
+                    <div class="slds-spinner__dot-a"></div>
+                    <div class="slds-spinner__dot-b"></div>
+                  </div>
+                  <table border="0" width="100%" height="100%" style="text-align: center;">
+                    <tr>
+                      <td align="center" style="text-align: center;"><b>Please Wait...</b></td>
+                    </tr>
+                  </table>
+                </div>
+              </div>
+            </apex:facet>
+          </apex:actionStatus>
+          <apex:actionStatus id="Status2">
+            <apex:facet name="start">
+              <div class="slds-spinner_container">
+                <div class="popupBackground" />
+                <div class="popupPanel">
+                  <div class="slds-spinner--brand slds-spinner slds-spinner--large" aria-hidden="false" role="alert">
+                    <div class="slds-spinner__dot-a"></div>
+                    <div class="slds-spinner__dot-b"></div>
+                  </div>
+                  <table border="0" width="100%" height="100%" style="text-align: center;">
+                    <tr>
+                      <td align="center" style="text-align: center;"><b>Please Wait...</b></td>
+                    </tr>
+                  </table>
+                </div>
+              </div>
+            </apex:facet>
+          </apex:actionStatus>
+        </apex:outputPanel>
+        <div class="slds-grid slds-wrap">
+          <!-- PAGE HEADER -->
+          <div class="slds-page-header slds-col slds-size--1-of-1" role="banner">
+            <div class="slds-grid">
+              <div class="slds-col slds-has-flexi-truncate">
+                <div class="slds-media">
+                  <div class="slds-media__body">
+                    <h1 class="slds-text-heading--medium slds-m-right--small slds-truncate slds-align-middle">GES Order Task</h1>
+                  </div>
+                </div>
+              </div>
+              <div class="slds-col slds-no-flex">
+                <div class="slds-grid">
+                  <div class="slds-button">
+                    <apex:commandButton title="{!SaveTitle}" action="{!saveAction}" value="Save" id="saveRecord" styleClass="slds-button slds-button--brand gc-teal-button" oncomplete="ReloadCkEditor();" reRender="messages, itemOutputPanel" />
+                    <apex:commandButton title="{!SaveAndSubmitTitle}" action="{!submitForApproval}" value="Save and Submit" styleClass="slds-button slds-button--brand gc-teal-button" oncomplete="ReloadCkEditor();" reRender="messages, itemOutputPanel" />
+                    <apex:commandButton title="{!CancelTitle}" action="{!cancelAction}" value="Cancel" id="cancelRecord" styleClass="slds-button slds-button--brand gc-teal-button" rendered="{!CanCancel}" reRender="messages" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- /PAGE HEADER -->
+          <!-- FORM -->
+          <section class="slds-p-horizontal--small slds-size--1-of-1 gc-section-margin-bottom">
+            <!-- GES ORDER TASK DETAIL -->
+            <fieldset class="form-element__legend slds-form--compound">
+              <legend class="slds-form-element__label slds-text-title--caps gc-section-margin-top">GES Order Task Detail</legend>
+              <div class="slds-grid">
+                <!-- Left Side -->
+                <div class="slds-p-horizontal--small slds-size--1-of-1 slds-medium-size--1-of-1 slds-large-size--1-of-1">
+                  <div class="slds-form--stacked">
+                    <!-- Order -->
+                    <div class="slds-form-element">
+                      <apex:outputLabel value="Order" styleClass="slds-form-element__label" />
+                      <div class="slds-form-element__control">
+                        <div class="gc-relative">
+                          <apex:inputField required="true" value="{!got.Order__c}" styleClass="gc-lookup" />
+                        </div>
+                      </div>
+                    </div>
+                    <c:GC_CustomRTF targetclass="showManagement" rendered="true" toolbar="full" uniqueid="showManagement" />
+                    <div class="slds-form-element">
+                      <apex:outputLabel value="Show Management Field" for="showMgtField" styleClass="slds-form-element__label" />
+                      <div class="slds-form-element__control">
+                        <div class="gc-relative">
+                          <apex:inputTextarea styleClass="showManagement ckeditor" richText="false" value="{!got.Show_Management_Field__c}" style="width:100%" />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </fieldset>
+            <!-- </fieldset> -->
+            <!-- ITEM Options -->
+            <!-- <div class="slds-grid"> -->
+            <!-- Left Side -->
+            <apex:outputPanel id="itemOutputPanel" rendered="{!coreApi.selectedBooth != null}">
+              <fieldset class="slds-form--compound">
+                <legend class="slds-form-element__label slds-text-title--caps gc-section-margin-top">Item Selection</legend>
+                <div class="form-element__group">
+                  <div class="slds-form-element__row">
+                    <div class="slds-form-element slds-size--1-of-3 slds-p-horizontal--small">
+                      <apex:outputLabel value="Category" styleClass="slds-form-element__label" />
+                      <div class="slds-form-element__control">
+                        <div class="gc-relative">
+                          <apex:selectList id="productSelect" value="{!coreApi.selectedCategory}" size="1" styleClass="slds-select">
+                            <apex:selectOptions value="{!coreApi.productCategories}" rendered="{!coreApi.selectedBooth != null}"></apex:selectOptions>
+                            <apex:actionSupport action="{!coreApi.selectCategories}" event="onchange" reRender="itemOutputPanel, messages" />
+                          </apex:selectList>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="slds-form-element slds-size--1-of-3 slds-p-horizontal--small">
+                      <apex:outputLabel value="Item" styleClass="slds-form-element__label" />
+                      <div class="slds-form-element__control">
+                        <div class="gc-relative">
+                          <apex:selectList id="itemSelect" value="{!coreApi.selectedItemNumberAndDescription}" size="1" styleClass="slds-select">
+                            <apex:selectOptions value="{!coreApi.productList.0}"></apex:selectOptions>
+                            <apex:selectOptions value="{!coreApi.productList.1}"></apex:selectOptions>
+                            <apex:actionSupport action="{!coreApi.selectItem}" event="onchange" oncomplete="ReloadCkEditor();" reRender="itemOutputPanel, messages" />
+                          </apex:selectList>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="slds-form-element slds-size--1-of-3 slds-p-horizontal--small">
+                      <apex:outputLabel value="Item Image" styleClass="slds-form-element__label" />
+                      <div class="slds-form-element__control">
+                        <div class="gc-relative">
+                          <apex:image url="{!coreApi.selectedItem.ImageUrl}" />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </fieldset>
+              <fieldset class="slds-form--compound">
+                <legend class="slds-form-element__label slds-text-title--caps gc-section-margin-top">Item Details</legend>
+                <div class="form-element__group">
+                  <div class="slds-form-element__row">
+                    <div class="slds-form-element slds-size--1-of-3 slds-p-horizontal--small">
+                      <apex:outputLabel value="Price" styleClass="slds-form-element__label" />
+                      <div class="slds-form-element__control">
+                        <div class="gc-relative">
+                          <apex:outputText value="{!coreApi.selectedItem.Price}" styleClass="slds-input" />
+                        </div>
+                      </div>
+                    </div>
+                    <div class="slds-form-element slds-size--1-of-3 slds-p-horizontal--small">
+                      <apex:outputLabel value="UOM" styleClass="slds-form-element__label" />
+                      <div class="slds-form-element__control">
+                        <div class="gc-relative">
+                          <apex:outputText value="{!coreApi.selectedItem.Units}" styleClass="slds-input" />
+                        </div>
+                      </div>
+                    </div>
+                    <div class="slds-form-element slds-size--1-of-3 slds-p-horizontal--small">
+                      <apex:outputLabel value="Delivery Location Discount" styleClass="slds-form-element__label" />
+                      <div class="slds-form-element__control">
+                        <div class="gc-relative">
+                          <apex:outputText value="{!coreApi.selectedItem.BoothAreaDiscount}" styleClass="slds-input" />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </fieldset>
+              <c:GC_Community_ItemOptions gotAttribute="{!got}" coreApiAttribute="{!coreApi}" materialOptions="{!materialAttributes}" activeGemStructureTaskOptions="{!activeGemStructureTasks}">
+              </c:GC_Community_ItemOptions>
+              <c:GC_Community_ItemOptionsArea gotAttribute="{!got}" venueOptions="{!venueLocations}" defaultDeliveryTimeInput="{!referenceOrder.Delivery_Date_Time__c}" defaultCompletionTimeInput="{!referenceOrder.Completion_Date_Time__c}" defaultRemovalTimeInput="{!referenceOrder.Removal_Date_Time__c}">
+              </c:GC_Community_ItemOptionsArea>
+              <!-- DEPARTMENT -->
+              <!-- <fieldset class="slds-form--compound gc-section-margin-top"> -->
+              <legend class="form-element__legend slds-form-element__label slds-text-title--caps gc-section-margin-top">Department</legend>
+              <div class="slds-grid">
+                <!-- Left Side -->
+                <div class="slds-p-horizontal--small slds-size--1-of-1 slds-medium-size--1-of-1 slds-large-size--1-of-2">
+                  <div class="slds-form--stacked">
+                    <apex:outputLabel value="Department" styleClass="slds-form-element__label" />
+                    <div class="slds-form-element__control">
+                      <div class="gc-relative">
+                        <apex:selectList value="{!got.Department__c}" size="1" styleClass="slds-select">
+                          <apex:selectOptions value="{!departmentAttributes}"></apex:selectOptions>
+                        </apex:selectList>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Right Side -->
+                <div class="slds-p-horizontal--small slds-size--1-of-1 slds-medium-size--1-of-1 slds-large-size--1-of-2">
+                  <div class="slds-form--stacked">
+                    <div class="slds-form-element">
+                      <apex:outputLabel value="Budget Code" styleClass="slds-form-element__label" />
+                      <div class="slds-form-element__control">
+                        <div class="gc-relative">
+                          <apex:inputField styleClass="slds-input" value="{!got.Budget_Code__c}" />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </apex:outputPanel>
+            <!-- </div> -->
+            <!-- /ITEM -->
+            <div class="gc-button-section gc-page-bottom-margin gc-section-margin-top">
+              <apex:commandButton title="{!SaveTitle}" action="{!saveAction}" value="Save" id="saveRecordBottom" styleClass="slds-button slds-button--brand gc-teal-button" oncomplete="ReloadCkEditor();" reRender="messages, itemOutputPanel" />
+              <apex:commandButton title="{!SaveAndSubmitTitle}" action="{!submitForApproval}" value="Save and Submit" styleClass="slds-button slds-button--brand gc-teal-button" oncomplete="ReloadCkEditor();" reRender="messages, itemOutputPanel" />
+              <apex:commandButton title="{!CancelTitle}" action="{!cancelAction}" value="Cancel" id="cancelRecordBottom" styleClass="slds-button slds-button--brand gc-teal-button" reRender="messages" />
+            </div>
+          </section>
+          <!-- /FORM -->
+        </div>
+      </apex:form>
+    </div>
+  </body>
+
+  </html>
+</apex:page>

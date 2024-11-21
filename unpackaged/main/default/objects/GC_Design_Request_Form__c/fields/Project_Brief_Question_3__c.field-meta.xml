@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Project_Brief_Question_3__c</fullName>
+    <defaultValue>IF( $RecordType.Name == &#39;RFP (Exhibition or Event)&#39;, &#39;What 3 things do we need to do to win this account and how can design support? (Creativity is a given)&#39;, &#39;What 3 things do we need to do to ensure account retention and how can design support? (Creativity is a given)&#39;)</defaultValue>
+    <description>What 3 things do we need to do to win this account and how can design support? (Creativity is a given)</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Actions necessary to win account and gain support.</inlineHelpText>
+    <label>Project Brief Question 3</label>
+    <length>255</length>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

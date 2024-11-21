@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>EMEA_Create_Your_Future_Case</fullName>
+    <filterScope>Queue</filterScope>
+    <label>EMEA UCAS Create Your Future Manchester</label>
+    <queue>EMEA_UCAS_Create_Your_Future_Manchester</queue>
+    <sharedTo>
+        <allInternalUsers />
+    </sharedTo>
+</ListView>

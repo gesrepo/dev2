@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Exhibitor_Graphics_Marketing__c</fullName>
+    <defaultValue>false</defaultValue>
+    <inlineHelpText>Are we allowed to market the Exhibitor Graphics?</inlineHelpText>
+    <label>Exhibitor Graphics</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CORE_Non_Shows</fullName>
+    <columns>NAME</columns>
+    <columns>Show_ID__c</columns>
+    <columns>Job_Number__c</columns>
+    <columns>LMS_Facility_ID__c</columns>
+    <columns>Production_Location__c</columns>
+    <columns>Show_Open__c</columns>
+    <columns>CREATED_DATE</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>NAME</field>
+        <operation>startsWith</operation>
+        <value>M1</value>
+    </filters>
+    <label>CORE Non-Shows</label>
+</ListView>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Number_of_Target_Show_Criteria_Checked__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(Key_Influencers__c,1,0) + 
+IF(F2F_Meeting__c,1,0) + 
+IF(Capabilities__c,1,0) + 
+IF(Competitor_Show_Visit__c,1,0) + 
+IF(Industry_Event_F2F__c,1,0) + 
+IF(Identified_Compelling_Event__c,1,0) +
+IF(Cross_sell_Introduction_Made__c,1,0)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Number of Target Show Criteria Checked</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

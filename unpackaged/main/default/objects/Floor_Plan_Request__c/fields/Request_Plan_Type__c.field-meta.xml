@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Request_Plan_Type__c</fullName>
+    <label>Plan Type (Multi Select)</label>
+    <required>true</required>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Initial</fullName>
+                <default>false</default>
+                <label>Initial</label>
+            </value>
+            <value>
+                <fullName>Revision</fullName>
+                <default>false</default>
+                <label>Revision</label>
+            </value>
+            <value>
+                <fullName>Fire Marshal</fullName>
+                <default>false</default>
+                <label>Fire Marshal</label>
+            </value>
+            <value>
+                <fullName>Zone File Upload</fullName>
+                <default>false</default>
+                <label>Zone Upload</label>
+            </value>
+            <value>
+                <fullName>Management/Official Plan</fullName>
+                <default>false</default>
+                <label>Management/Official</label>
+            </value>
+            <value>
+                <fullName>Wall Build Plan</fullName>
+                <default>false</default>
+                <label>Wall Build Plan</label>
+            </value>
+            <value>
+                <fullName>Meeting/Skype with Drafter</fullName>
+                <default>false</default>
+                <label>Meeting/Drafter Collaboration</label>
+            </value>
+            <value>
+                <fullName>Building Maintenance</fullName>
+                <default>false</default>
+                <label>Building Maintenance</label>
+            </value>
+            <value>
+                <fullName>Target Plan</fullName>
+                <default>false</default>
+                <label>Ops - Target Plan</label>
+            </value>
+            <value>
+                <fullName>Operations - Empty Plan</fullName>
+                <default>false</default>
+                <label>Ops - Empty Plan</label>
+            </value>
+            <value>
+                <fullName>Floor Marking</fullName>
+                <default>false</default>
+                <label>Ops - Floor Marking</label>
+            </value>
+            <value>
+                <fullName>Operations - Pipe &amp; Drape Plan</fullName>
+                <default>false</default>
+                <label>Ops - Pipe &amp; Drape</label>
+            </value>
+            <value>
+                <fullName>Operations - General Plan</fullName>
+                <default>false</default>
+                <label>Ops - General Plan</label>
+            </value>
+            <value>
+                <fullName>Exhibitor Service Plan</fullName>
+                <default>false</default>
+                <label>Exhibitor Service Plan</label>
+            </value>
+            <value>
+                <fullName>Carpet Visual Delivery</fullName>
+                <default>false</default>
+                <label>Visual Delivery - Carpet</label>
+            </value>
+            <value>
+                <fullName>Deco Plan</fullName>
+                <default>false</default>
+                <label>Visual Delivery - Deco</label>
+            </value>
+            <value>
+                <fullName>NSC Heat Map</fullName>
+                <default>false</default>
+                <label>NSC Heat Map</label>
+            </value>
+            <value>
+                <fullName>TSE Electrical Download Plan</fullName>
+                <default>false</default>
+                <label>TSE Electrical Download</label>
+            </value>
+            <value>
+                <fullName>Prints</fullName>
+                <default>false</default>
+                <label>Prints</label>
+            </value>
+            <value>
+                <fullName>Electronic File Request - Internal Use Only</fullName>
+                <default>false</default>
+                <label>Electronic File Request - Internal Distribution</label>
+            </value>
+            <value>
+                <fullName>Electronic File Request</fullName>
+                <default>false</default>
+                <label>Electronic File Request - External Distribution</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>6</visibleLines>
+</CustomField>

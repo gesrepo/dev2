@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Wrike_Space_Id__c</fullName>
+    <caseSensitive>false</caseSensitive>
+    <description>Used to Store the ID of the space created uniquely for this record type/customer in Wrike</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Used to Store the ID of the space created uniquely for this record type/customer in Wrike</inlineHelpText>
+    <label>Wrike Space Id</label>
+    <length>30</length>
+    <required>true</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>true</unique>
+</CustomField>

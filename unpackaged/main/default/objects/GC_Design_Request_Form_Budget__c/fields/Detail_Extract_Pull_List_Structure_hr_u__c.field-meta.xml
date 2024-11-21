@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Detail_Extract_Pull_List_Structure_hr_u__c</fullName>
+    <defaultValue>2.5</defaultValue>
+    <description>Estimate of how many hours per unit pertaining to new detail/extract/pull list structures.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Estimate of how many hours per unit pertaining to new detail/extract/pull list structures</inlineHelpText>
+    <label>Detail/Extract/Pull List Structures-hr/u</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

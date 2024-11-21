@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>KSA_Big_5_Week_2_Case</fullName>
+    <filterScope>Queue</filterScope>
+    <label>KSA Big 5 Week 2</label>
+    <queue>KSA_Big_5_Week_2</queue>
+    <sharedTo>
+        <allInternalUsers />
+    </sharedTo>
+</ListView>

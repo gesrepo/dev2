@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>EMEA_WWEM_AQE_Case</fullName>
+    <filterScope>Queue</filterScope>
+    <label>EMEA WWEM &amp; AQE</label>
+    <queue>EMEA_WWEM_AQE</queue>
+    <sharedTo>
+        <allInternalUsers />
+    </sharedTo>
+</ListView>

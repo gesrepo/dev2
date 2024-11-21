@@ -1,0 +1,58 @@
+<apex:page sidebar="false" standardController="Opportunity" extensions="EMEAShowCalendarPrint" recordSetVar="shows" renderAs="pdf" applyBodyTag="false" applyHtmlTag="false" showHeader="false">
+<html>
+    <head>
+        <style>
+            @page {
+                size: letter landscape;
+                @top-left {
+                    content: element(header);
+                }
+            }
+            div.header {
+                position: running(header);
+            }
+        </style>
+    </head>
+    
+    <div class="header">
+        <div style="color:gray;">Show Calendar - {!monthLabel} <br /><apex:outputText value="{0,date,MM/dd/yyyy}"><apex:param value="{!TODAY()}"/></apex:outputText></div>
+    </div>
+    
+    <table border="1" cellspacing="0" cellpadding="3px" style="margin-top:30px; font-size:10px;">
+        <thead>
+            <tr>
+                <th>Sop Event ID</th>
+                <th>Show Name</th>
+                <th>Opportunity Name</th>
+                <th>Venue</th> 
+                <th>Account</th>
+                <th>Show Open</th>
+                <th>Show Close</th>
+                <th>Sales Manager</th>
+                <th>GES Move In</th>
+                <th>GES Move Out</th>
+                <th>Event Manager</th>
+                <th>Products</th>
+            </tr>
+        </thead>
+        <tbody>
+            <apex:repeat value="{!show}" var="s">
+                <tr style="page-break-inside: avoid;">
+                    <td>{!s.opp.SOP_Event_ID__c}</td>
+                    <td>{!s.opp.Show_Name__r.Name}</td>
+                    <td>{!s.opp.Name}</td>
+                    <td>{!s.opp.Facility__r.Name}</td>
+                    <td>{!s.opp.Account.Name}</td>
+                    <td><apex:outputField value="{!s.opp.Show_Open_Date__c}" /></td>
+                    <td><apex:outputField value="{!s.opp.Show_Close_Date__c}" /></td>
+                    <td>{!s.opp.Sales_Person__r.Name}</td>
+                    <td><apex:outputField value="{!s.opp.GES_Move_In__c}" /></td>
+                    <td><apex:outputField value="{!s.opp.GES_Move_Out_Date_1__c}" /></td>
+                    <td>{!s.opp.Event_Manager__r.Name}</td>
+                    <td>{!s.products}</td>
+                </tr>
+            </apex:repeat>
+        </tbody>
+    </table>
+</html>
+</apex:page>

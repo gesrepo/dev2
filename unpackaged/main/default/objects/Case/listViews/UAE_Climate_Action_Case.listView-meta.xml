@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>UAE_Climate_Action_Case</fullName>
+    <filterScope>Queue</filterScope>
+    <label>UAE Climate Action</label>
+    <queue>UAE_Climate_Action</queue>
+    <sharedTo>
+        <allInternalUsers />
+    </sharedTo>
+</ListView>

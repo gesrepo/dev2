@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Default_AV_Assignee__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>This contains the person who is responsible for AV tickets at the show</description>
+    <inlineHelpText>Please select the default person who will be assigned AV tickets for this show</inlineHelpText>
+    <label>Default AV Assignee</label>
+    <lookupFilter>
+        <active>true</active>
+        <filterItems>
+            <field>User.IsActive</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </filterItems>
+        <infoMessage>Please select the Default AV Assignee. They must have an active Salesforce Account.</infoMessage>
+        <isOptional>false</isOptional>
+    </lookupFilter>
+    <referenceTo>User</referenceTo>
+    <relationshipName>UsertoOpportunitiesAVAssignee</relationshipName>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Lookup</type>
+</CustomField>

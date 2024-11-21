@@ -1,0 +1,356 @@
+<apex:page standardStylesheets="true"  showHeader="false" sidebar="false" applyHtmlTag="false" tabStyle="Account" standardController="GES_Connect_Corporate_Accounts__c" extensions="CongressFinancialSummaryReport">
+ <html xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <head>
+            <apex:includeScript value="{!$Resource.jQuery}" />
+            <apex:stylesheet value="{!URLFOR($Resource.Lightning_Design_System, 'assets/styles/salesforce-lightning-design-system.min.css')}" />
+            <apex:stylesheet value="{!URLFOR($Resource.GC_Assets, 'GC_Assets/css/GC_Styles.css')}" />
+            <apex:includeScript value="{!URLFOR($Resource.GC_Assets, 'GC_Assets/js/GC_init.js')}" />
+        </head>
+         <div class="slds">
+                <c:GC_Community_Header /> 
+        <apex:form id="fm">
+       
+            <apex:pageBlock id="pb">
+                  <apex:pageBlockSection title="Congress Financial Summary" id="pbs" collapsible="false">
+                    <apex:commandButton value="Export Report" action="{!save}" style="right:10px;position:relative;" styleClass="slds-button slds-button--brand gc-teal-button"/> 
+                   <apex:commandButton value="Back" action="{!back}" style="right:10px;position:relative;" styleClass="slds-button slds-button--brand gc-teal-button"/>
+                </apex:pageBlockSection>
+            </apex:pageBlock>
+            <apex:pageBlock id="pbst">           
+              <apex:pageBlockTable value="{!geslst}" var="a">
+                    <apex:column value="{!a.Name_of_Congress__c}"/>
+                    <apex:column value="{!a.Congress_Website__c}"/>
+                    <apex:column value="{!a.Exhibit_Open_Date__c}"/>
+                    <apex:column value="{!a.Exhibit_Close_Date__c}"/>
+                 </apex:pageBlockTable>
+             </apex:pageBlock>
+              <apex:pageBlock id="pbst1">           
+              <apex:pageBlockTable value="{!Results}" var="a1">
+                     <apex:column width="10%">&nbsp;</apex:column>
+                    <apex:column width="10%">&nbsp;</apex:column>
+                    <apex:column width="16%">&nbsp;</apex:column>
+                    <apex:column width="16%">&nbsp;</apex:column>
+                    <apex:column width="16%">&nbsp;</apex:column>
+                    <apex:column width="16%">
+                        <apex:facet name="header">Total Est. Cost</apex:facet>
+                        <!--<apex:outputText value="$ {!a1.TotalEstCost}"/>-->
+                        <span>{!currSymbol} <apex:outputText value="{0, number, ###,##0.00}" >
+                                <apex:param value="{!totalEstimatedCost}" />
+                            </apex:outputText></span>
+                    </apex:column>
+                    <apex:column width="16%">
+                        <apex:facet name="header">Total Act. Cost</apex:facet>
+                        <!--<apex:outputText value="$ {!a1.TotalActCost}"/>-->
+                        <span>{!currSymbol} <apex:outputText value="{0, number, ###,##0.00}" >
+                                <apex:param value="{!totalActualCost}" />
+                            </apex:outputText></span>
+                    </apex:column>
+                 </apex:pageBlockTable>
+             </apex:pageBlock>
+             <apex:pageBlock title="Exhibit">
+             <td WIDTH="15%" ALIGN="CENTER">
+              <apex:pageBlockTable value="{!Results}" var="agr">
+                    <apex:column width="10%">&nbsp;</apex:column>
+                    <apex:column width="10%">&nbsp;</apex:column>
+                    <apex:column width="16%">&nbsp;</apex:column>
+                    <apex:column width="16%">
+                            <apex:facet name="header">Total Booth Space Est. Cost</apex:facet>
+                            <!--<apex:outputText value="$ {!agr.BoothEstCost}"/>-->
+                        <span>{!currSymbol} <apex:outputText value="{0, number, ###,##0.00}" >
+                                <apex:param value="{!totalBoothSpaceEstimatedCost}" />
+                            </apex:outputText></span>
+                    </apex:column>
+                   <apex:column width="16%">
+                            <apex:facet name="header">Total Booth Space Act. Cost</apex:facet>
+                            <!--<apex:outputText value="$ {!agr.BoothActCost}" />-->
+                       <span>{!currSymbol} <apex:outputText value="{0, number, ###,##0.00}" >
+                                <apex:param value="{!totalBoothSpaceActualCost}" />
+                            </apex:outputText></span>
+                    </apex:column>
+                    <apex:column width="16%">
+                            <apex:facet name="header">Total GES Services Est. Costs</apex:facet>
+                            <!--<apex:outputText value="$ {!agr.ExhibitEstCost}" />-->
+                        <span>{!currSymbol} <apex:outputText value="{0, number, ###,##0.00}" >
+                                <apex:param value="{!totalExhibitEstimatedCost}" />
+                            </apex:outputText></span>
+                    </apex:column>
+                    <apex:column width="16%">
+                            <apex:facet name="header">Total GES Services Act. Costs</apex:facet>
+                            <!--<apex:outputText value="$ {!agr.ExhibitActCost}" />-->
+                        <span>{!currSymbol} <apex:outputText value="{0, number, ###,##0.00}" >
+                                <apex:param value="{!totalExhibitActualCost}" />
+                            </apex:outputText></span>
+                    </apex:column>       
+             </apex:pageBlockTable></td>
+              <apex:pageBlockTable value="{!dispWrapper}" var="a" id="pbt">
+                   <apex:column width="10%">
+                            <apex:facet name="header">Exhibit</apex:facet>
+                            <apex:outputText value="{!a.ExhibitId}" />
+                    </apex:column>
+                    <apex:column width="10%">
+                            <apex:facet name="header">Exhibit Name</apex:facet>
+                            <apex:outputText value="{!a.ExhibitName}" />
+                    </apex:column>
+                    <apex:column width="16%">
+                            <apex:facet name="header">Brand Name</apex:facet>
+                            <apex:outputText value="{!a.Brand}" />
+                    </apex:column>
+                    <apex:column width="16%">
+                            <apex:facet name="header">Booth Space Est. Costs</apex:facet>
+                            <!--<apex:outputText value="$ {!a.BoothSpaceEstimatedCost}" />-->
+                        <span>{!currSymbol} <apex:outputText value="{0, number, ###,##0.00}" >
+                                <apex:param value="{!a.BoothSpaceEstimatedCost}" />
+                            </apex:outputText></span>
+                    </apex:column>
+                    <apex:column width="16%">
+                            <apex:facet name="header">Booth Space Act. Costs</apex:facet>
+                            <!--<apex:outputText value="$ {!a.BoothSpaceActualCost}" />-->
+                        <span>{!currSymbol} <apex:outputText value="{0, number, ###,##0.00}" >
+                                <apex:param value="{!a.BoothSpaceActualCost}" />
+                            </apex:outputText></span>
+                    </apex:column>
+                    <apex:column width="16%">
+                            <apex:facet name="header">GES Services Est. Costs</apex:facet>
+                            <!--<apex:outputText value="$ {!a.ExhibitCostEstimated}" />-->
+                        <span>{!currSymbol} <apex:outputText value="{0, number, ###,##0.00}" >
+                                <apex:param value="{!a.ExhibitCostEstimated}" />
+                            </apex:outputText></span>
+                    </apex:column>
+                    <apex:column width="16%">
+                            <apex:facet name="header">GES Services Act. Costs</apex:facet>
+                            <!--<apex:outputText value="$ {!a.ExhibitCostActual}" />-->
+                        <span>{!currSymbol} <apex:outputText value="{0, number, ###,##0.00}" >
+                                <apex:param value="{!a.ExhibitCostActual}" />
+                            </apex:outputText></span>
+                    </apex:column>                                  
+                </apex:pageBlockTable>
+                </apex:pageBlock>
+                <apex:pageBlock title="Sponsorship"> 
+                <apex:pageBlockTable value="{!Results}" var="spnd">
+                     <apex:column width="20%">&nbsp;</apex:column>
+                     <apex:column width="15%">&nbsp;</apex:column>
+                     <apex:column width="25%">&nbsp;</apex:column>
+                     <apex:column width="20%">
+                            <apex:facet name="header">Total Sponsorship Est. Cost</apex:facet>
+                            <!--<apex:outputText value="$ {!spnd.SponEstCost}"/>-->
+                         <span>{!currSymbol} <apex:outputText value="{0, number, ###,##0.00}" >
+                                <apex:param value="{!totalSponsorshipEstimatedCost}" />
+                            </apex:outputText></span>
+                    </apex:column>
+                   <apex:column width="20%">
+                            <apex:facet name="header">Total Sponsorship Act. Cost</apex:facet>
+                            <!--<apex:outputText value="$ {!spnd.SponActCost}" />-->
+                       <span>{!currSymbol} <apex:outputText value="{0, number, ###,##0.00}" >
+                                <apex:param value="{!totalSponsorshipActualCost}" />
+                            </apex:outputText></span>
+                    </apex:column>
+             </apex:pageBlockTable>
+                <apex:pageBlockTable value="{!sponWrapper}" var="ab">
+                   <apex:column width="20%">
+                            <apex:facet name="header">Sponsorship</apex:facet>
+                            <apex:outputText value="{!ab.SponId}" />
+                    </apex:column>
+                    <apex:column width="15%">
+                            <apex:facet name="header">Sponsorship Name</apex:facet>
+                            <apex:outputText value="{!ab.SponName}" />
+                    </apex:column>
+                    <apex:column width="25%">
+                            <apex:facet name="header">Brand Name</apex:facet>
+                            <apex:outputText value="{!ab.BrandName}" />
+                    </apex:column>
+                    <apex:column width="20%">
+                            <apex:facet name="header">Sponsorship Est. Cost</apex:facet>
+                            <!--<apex:outputText value="$ {!ab.BrandSponEstimatedCost}" />-->
+                        <span>{!currSymbol} <apex:outputText value="{0, number, ###,##0.00}" >
+                                <apex:param value="{!ab.BrandSponEstimatedCost}" />
+                            </apex:outputText></span>
+                    </apex:column>
+                    <apex:column width="20%">
+                            <apex:facet name="header">Sponsorship Act. Cost</apex:facet>
+                            <!--<apex:outputText value="$ {!ab.BrandSponActualCost}" />-->
+                        <span>{!currSymbol} <apex:outputText value="{0, number, ###,##0.00}" >
+                                <apex:param value="{!ab.BrandSponActualCost}" />
+                            </apex:outputText></span>
+                    </apex:column>                    
+                </apex:pageBlockTable>
+                </apex:pageBlock>
+                <apex:pageBlock title="Product Theater">
+                <apex:pageBlockTable value="{!Results}" var="prd">
+                    <apex:column width="20%">&nbsp;</apex:column>
+                    <apex:column width="15%">&nbsp;</apex:column>
+                    <apex:column width="25%">&nbsp;</apex:column>
+                    <apex:column width="20%">
+                            <apex:facet name="header">Total Product Theater Est. Cost</apex:facet>
+                            <!--<apex:outputText value="$ {!prd.PrdEstCost}"/>-->
+                        <span>{!currSymbol} <apex:outputText value="{0, number, ###,##0.00}" >
+                                <apex:param value="{!totalProductTheaterEstimatedCost}" />
+                            </apex:outputText></span>
+                    </apex:column>
+                   <apex:column width="20%">
+                            <apex:facet name="header">Total Product Theater Act. Cost</apex:facet>
+                            <!--<apex:outputText value="$ {!prd.PrdActCost}" />-->
+                       <span>{!currSymbol} <apex:outputText value="{0, number, ###,##0.00}" >
+                                <apex:param value="{!totalProductTheaterActualCost}" />
+                            </apex:outputText></span>
+                    </apex:column>
+             </apex:pageBlockTable>
+                 <apex:pageBlockTable value="{!prdtrWrapper}" var="pd">
+                   <apex:column width="20%">
+                            <apex:facet name="header">Product Theater</apex:facet>
+                            <apex:outputText value="{!pd.PrdtrId}" />
+                    </apex:column>
+                    <apex:column width="15%">
+                            <apex:facet name="header">Product Theater Name</apex:facet>
+                            <apex:outputText value="{!pd.PrdtrName}" />
+                    </apex:column>
+                    <apex:column width="25%">
+                            <apex:facet name="header">Brand Name</apex:facet>
+                            <apex:outputText value="{!pd.BrandName}" />
+                    </apex:column>
+                    <apex:column width="20%">
+                            <apex:facet name="header">Product Theater Est. Cost</apex:facet>
+                            <!--<apex:outputText value="$ {!pd.PrdtrEstimatedCost}" />-->
+                        <span>{!currSymbol} <apex:outputText value="{0, number, ###,##0.00}" >
+                                <apex:param value="{!pd.PrdtrEstimatedCost}" />
+                            </apex:outputText></span>
+                    </apex:column>
+                    <apex:column width="20%">
+                            <apex:facet name="header">Product Theater Act. Cost</apex:facet>
+                            <!--<apex:outputText value="$ {!pd.PrdtrActualCost}" />-->
+                        <span>{!currSymbol} <apex:outputText value="{0, number, ###,##0.00}" >
+                                <apex:param value="{!pd.PrdtrActualCost}" />
+                            </apex:outputText></span>
+                    </apex:column>                    
+                </apex:pageBlockTable>
+                </apex:pageBlock>
+                <apex:pageBlock title="Symposia">
+                <apex:pageBlockTable value="{!Results}" var="sym">
+                    <apex:column width="20%">&nbsp;</apex:column>
+                     <apex:column width="15%">&nbsp;</apex:column>
+                     <apex:column width="25%">&nbsp;</apex:column>
+                     <apex:column width="20%">
+                            <apex:facet name="header">Total Symposia Budget Est. Cost</apex:facet>
+                            <!--<apex:outputText value="{!sym.symEstCost}"/>-->
+                         <span>{!currSymbol} <apex:outputText value="{0, number, ###,##0.00}" >
+                                <apex:param value="{!totalSymposiaEstimatedCost}" />
+                            </apex:outputText></span>
+                    </apex:column>
+                   <apex:column width="20%">
+                            <apex:facet name="header">Total Symposia Budget Act. Cost</apex:facet>
+                            <!--<apex:outputText value="$ {!sym.symActCost}" />-->
+                       <span>{!currSymbol} <apex:outputText value="{0, number, ###,##0.00}" >
+                                <apex:param value="{!totalSymposiaActualCost}" />
+                            </apex:outputText></span>
+                    </apex:column>
+             </apex:pageBlockTable>
+                <apex:pageBlockTable value="{!syWrapper}" var="sy">
+                   <apex:column width="20%">
+                            <apex:facet name="header">Symposia</apex:facet>
+                            <apex:outputText value="{!sy.SypmId}" />
+                    </apex:column>
+                    <apex:column width="15%">
+                            <apex:facet name="header">Symposia Name</apex:facet>
+                            <apex:outputText value="{!sy.SypmName}" />
+                    </apex:column>
+                    <apex:column width="25%">
+                            <apex:facet name="header">Brand Name</apex:facet>
+                            <apex:outputText value="{!sy.BrandName}" />
+                    </apex:column>
+                    <apex:column width="20%">
+                            <apex:facet name="header">Symposia Est. Cost</apex:facet>
+                            <!--<apex:outputText value="$ {!sy.SypmEstimatedCost}" />-->
+                        <span>{!currSymbol} <apex:outputText value="{0, number, ###,##0.00}" >
+                                <apex:param value="{!sy.SypmEstimatedCost}" />
+                            </apex:outputText></span>
+                    </apex:column>
+                    <apex:column width="20%">
+                            <apex:facet name="header">Symposia  Act. Cost</apex:facet>
+                            <!--<apex:outputText value="$ {!sy.SypmActualCost}" />-->
+                        <span>{!currSymbol} <apex:outputText value="{0, number, ###,##0.00}" >
+                                <apex:param value="{!sy.SypmActualCost}" />
+                            </apex:outputText></span>
+                    </apex:column>                    
+                </apex:pageBlockTable>
+                </apex:pageBlock>
+                <apex:pageBlock title="Meeting Room">
+                <apex:pageBlockTable value="{!Results}" var="mtrm">
+                     <apex:column width="10%">&nbsp;</apex:column>
+                     <apex:column width="10%">&nbsp;</apex:column>
+                     <apex:column width="16%">&nbsp;</apex:column>
+                     <apex:column width="20%">
+                            <apex:facet name="header">Total MR Services Est. Cost</apex:facet>
+                            <!--<apex:outputText value="$ {!mtrm.MtrmSerEstCost}"/>-->
+                         <span>{!currSymbol} <apex:outputText value="{0, number, ###,##0.00}" >
+                                <apex:param value="{!totalMeetingRoomServiceEstimatedCost}" />
+                            </apex:outputText></span>
+                    </apex:column>
+                   <apex:column width="20%">
+                            <apex:facet name="header">Total MR Services Act. Costs</apex:facet>
+                            <!--<apex:outputText value="$ {!mtrm.MtrmSerActCost}" />-->
+                       <span>{!currSymbol} <apex:outputText value="{0, number, ###,##0.00}" >
+                                <apex:param value="{!totalMeetingRoomServiceActualCost}" />
+                            </apex:outputText></span>
+                    </apex:column>
+                     <apex:column width="20%">
+                            <apex:facet name="header">Total Meeting Room Est. Cost</apex:facet>
+                            <!--<apex:outputText value="$ {!mtrm.MtrmEstCost}"/>-->
+                         <span>{!currSymbol} <apex:outputText value="{0, number, ###,##0.00}" >
+                                <apex:param value="{!totalMeetingRoomEstimatedCost}" />
+                            </apex:outputText></span>
+                    </apex:column>
+                   <apex:column width="20%">
+                            <apex:facet name="header">Total Meeting Room Act. Cost</apex:facet>
+                            <!--<apex:outputText value="$ {!mtrm.MtrmActCost}" />-->
+                       <span>{!currSymbol} <apex:outputText value="{0, number, ###,##0.00}" >
+                                <apex:param value="{!totalMeetingRoomActualCost}" />
+                            </apex:outputText></span>
+                    </apex:column>
+             </apex:pageBlockTable>
+                <apex:pageBlockTable value="{!MtrmWrapper}" var="mtrm">
+                   <apex:column width="10%">
+                            <apex:facet name="header">Meeting Room</apex:facet>
+                            <apex:outputText value="{!mtrm.MtrmId}" />
+                    </apex:column>
+                    <apex:column width="10%">
+                            <apex:facet name="header">Meeting Room Name</apex:facet>
+                            <apex:outputText value="{!mtrm.MtrmName}" />
+                    </apex:column>
+                    <apex:column width="10%">
+                            <apex:facet name="header">Brand Name</apex:facet>
+                            <apex:outputText value="{!mtrm.BrandName}" />
+                    </apex:column>
+                    <apex:column width="20%">
+                            <apex:facet name="header">MR Services Est. Costs</apex:facet>
+                            <!--<apex:outputText value="$ {!mtrm.MtrmSerEstimatedCost}" />-->
+                        <span>{!currSymbol} <apex:outputText value="{0, number, ###,##0.00}" >
+                                <apex:param value="{!mtrm.MtrmSerEstimatedCost}" />
+                            </apex:outputText></span>
+
+                    </apex:column>
+                    <apex:column width="20%">
+                            <apex:facet name="header">MR Services Act. Costs</apex:facet>
+                            <!--<apex:outputText value="$ {!mtrm.MtrmSerActualCost}" />-->
+                        <span>{!currSymbol} <apex:outputText value="{0, number, ###,##0.00}" >
+                                <apex:param value="{!mtrm.MtrmSerActualCost}" />
+                            </apex:outputText></span>
+                    </apex:column>
+                    <apex:column width="20%">
+                            <apex:facet name="header">Meeting Room Est. Cost</apex:facet>
+                            <!--<apex:outputText value="$ {!mtrm.MtrmEstimatedCost}" />-->
+                        <span>{!currSymbol} <apex:outputText value="{0, number, ###,##0.00}" >
+                                <apex:param value="{!mtrm.MtrmEstimatedCost}" />
+                            </apex:outputText></span>
+                    </apex:column>
+                    <apex:column width="20%">
+                            <apex:facet name="header">Meeting Room Act. Cost</apex:facet>
+                            <!--<apex:outputText value="$ {!mtrm.MtrmActualCost}" />-->
+                        <span>{!currSymbol} <apex:outputText value="{0, number, ###,##0.00}" >
+                                <apex:param value="{!mtrm.MtrmActualCost}" />
+                            </apex:outputText></span>
+                    </apex:column>                    
+                </apex:pageBlockTable>
+            </apex:pageBlock>
+        </apex:form>                          
+        </div>
+</html>                                
+</apex:page>

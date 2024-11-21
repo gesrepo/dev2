@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Completed_by_Michael_Hogue1</fullName>
+    <columns>NAME</columns>
+    <columns>LAST_UPDATE</columns>
+    <columns>Claimed_By__c</columns>
+    <columns>Production_Location__c</columns>
+    <columns>FPR_Show_Job_Number__c</columns>
+    <columns>FPR_Show_ID__c</columns>
+    <columns>FPR_Facility_ID__c</columns>
+    <columns>FPR_Show_Name__c</columns>
+    <columns>UserEntered_Requested_Due_Date__c</columns>
+    <columns>FPR_Show_Start_Date__c</columns>
+    <columns>Request_Plan_Type__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Claimed_By__c</field>
+        <operation>equals</operation>
+        <value>Michael Hogue</value>
+    </filters>
+    <filters>
+        <field>Status__c</field>
+        <operation>equals</operation>
+        <value>Complete,Plan Review</value>
+    </filters>
+    <filters>
+        <field>CREATED_DATE</field>
+        <operation>greaterThan</operation>
+        <value>1/1/2022 12:00 AM</value>
+    </filters>
+    <label>Completed by Michael Hogue</label>
+</ListView>

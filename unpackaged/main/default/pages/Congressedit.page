@@ -1,0 +1,382 @@
+<apex:page standardStylesheets="true" standardController="GES_Connect_Corporate_Accounts__c" extensions="Congress" showHeader="false" sidebar="false" applyHtmlTag="false" tabStyle="Account">
+    <html xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <head>
+            <apex:includeScript value="{!$Resource.jQuery}" />
+            <apex:stylesheet value="{!URLFOR($Resource.Lightning_Design_System, 'assets/styles/salesforce-lightning-design-system.min.css')}" />
+            <apex:stylesheet value="{!URLFOR($Resource.GC_Assets, 'GC_Assets/css/GC_Styles.css')}" />
+            <apex:includeScript value="{!URLFOR($Resource.GC_Assets, 'GC_Assets/js/GC_init.js')}" />
+            <style>
+                .demarcate
+                {
+                border-bottom:2px solid #1797c0;
+                }
+                a.lookup {
+                color: blue;
+                }
+                .myclass{
+                color:white;
+                }
+                
+                .tempClass{
+                color:black;
+                }
+            </style>
+            <script>
+            var oldVal;
+            var congressShippingVal;
+            var congressWHSVal;
+            $( document ).ready(function() {
+                $("[id$='NameOfCongressId']").focusout(function() {
+                    var nameOfCongressValue = 'FOR: '+$("[id$='NameOfCongressId']").val();
+                    $("[id$='congressShippingId']").val(nameOfCongressValue);
+                    $("[id$='congressWHSId']").val(nameOfCongressValue);
+                });
+                //  twistSection(document.getElementById('{!$Component.fm.pb.pbs3}').getElementsByTagName('img')[0]);
+                twistSection(document.getElementById('{!$Component.fm.pb.pbs4}').getElementsByTagName('img')[0]);
+            });
+            var newWin=null;
+            function openLookupPopup(name, id)
+            {
+                $( ".addressField" ).val('');
+                oldVal = $( "input[id$='targetName']" ).val();
+                var url="/GESConnect/CongressFacilityPopup?namefield=" + name + "&idfield=" + id + "&facilityName=" + oldVal;
+                newWin=window.open(url, 'Popup','height=500,width=600,left=100,top=100,resizable=no,scrollbars=yes,toolbar=no,status=no');
+                if (window.focus) 
+                {
+                    newWin.focus();
+                }
+                
+                return false;
+            }
+            
+            function closeLookupPopup()
+            {
+                var newVal = $( "input[id$='targetName']" ).val();
+                if(oldVal != newVal) {
+                    var facilityId = $( "input[id$='targetId']" ).val();
+                    congressShippingVal = $("[id$='congressShippingId']").val();
+                    congressWHSVal = $("[id$='congressWHSId']").val();
+                    facilityChange(facilityId);
+                }
+                if (null!=newWin)
+                {
+                    newWin.close();
+                }  
+            }
+            
+            function onFacilityChange() {
+                $( "input[id$='targetId']" ).val('');
+            }
+            
+            function populateCongressFields() {
+                $("[id$='congressShippingId']").val(congressShippingVal);
+                $("[id$='congressWHSId']").val(congressWHSVal);
+            }
+            </script>
+            
+        </head>
+        <div class="slds">
+            <c:GC_Community_Header />   
+            <div class="slds-page-header gc-navigation--subHeader" role="banner">
+                <div class="slds-media">
+                    <div class="slds-media__figure">
+                        <apex:image url="{!URLFOR($Resource.GC_Assets, 'GC_Assets/img/custom13_60_teal.png')}" />
+                    </div>
+                    <div class="slds-media__body">
+                        <p class="slds-page-header__title slds-truncate slds-align-middle">Congress Create Page</p>
+                        <p class="slds-text-body--small slds-page-header__info">New Congress</p>
+                    </div>
+                </div>
+            </div>
+            
+            <apex:form id="fm">
+                <apex:actionRegion >
+                    <apex:actionFunction name="facilityChange" action="{!onFacilitySelect}" rerender="pbs2" onComplete="populateCongressFields();">
+                        <apex:param name="firstParam" assignTo="{!a.Facility_Name_Account__c}" value="" />
+                    </apex:actionFunction>
+                </apex:actionRegion>
+                <apex:pageBlock id="pb">
+                    <apex:pageBlockButtons location="both">
+                        
+                        <apex:commandButton value="Save" action="{!Congressedit}" styleClass="slds-button slds-button--brand gc-teal-button"/>
+                        <apex:commandButton title="{!CancelTitle}" action="{!CancelAction}" value="Cancel" id="cancelRecord" styleClass="slds-button slds-button--brand gc-teal-button" immediate="true" > 
+                        </apex:commandButton>
+                    </apex:pageBlockButtons>
+                    <apex:pageBlockSection title="GES Connect - Corporate Accounts Detail" id="pbs" collapsible="true">
+                        <apex:inputField value="{!a.Name_of_Congress__c}" required="true" id="NameOfCongressId"/>
+                        <apex:pageBlockSectionItem >
+                            <apex:outputLabel value="Connect2Show" />
+                            <apex:actionRegion >
+                                <apex:inputField value="{!a.Show_Name__c}">
+                                    <apex:actionSupport event="onblur" action="{!fetchConnect2ShowDetails}" reRender="pbs,pbs2"/> 
+                                </apex:inputField>
+                            </apex:actionRegion>
+                        </apex:pageBlockSectionItem>
+                        <apex:inputField value="{!a.Acronym_of_Congress__c}" required="true"/>
+                        <apex:inputField value="{!a.Congress_Website__c}"/>
+                        <apex:inputField value="{!a.Congress_Type__c}"/>
+                        <apex:inputField value="{!a.Congress_Level__c}" required="true"/>
+                        
+                        <apex:inputField value="{!a.Exhibit_Open_Date__c}"/>
+                        <apex:inputField value="{!a.Congress_Start_Date__c}" required="true"/>
+                        <apex:inputField value="{!a.Exhibit_Close_Date__c}" />
+                        <apex:inputField value="{!a.Congress_End_Date__c}" required="true" />   
+                        <apex:inputField value="{!a.Exhibit_Hours_Open_Day_1__c}"/>
+                        <apex:inputField value="{!a.Exhibit_Hours_Close_Day_1__c}"/>
+                        <apex:inputField value="{!a.Exhibit_Hours_Open_Day_2__c}"/>
+                        <apex:inputField value="{!a.Exhibit_Hours_Close_Day_2__c}"/> 
+                        <apex:inputField value="{!a.Exhibit_Hours_Open_Day_3__c}"/>
+                        <apex:inputField value="{!a.Exhibit_Hours_Close_Day_3__c}"/>
+                        <apex:inputField value="{!a.Exhibit_Hours_Open_Day_4__c}"/>
+                        <apex:inputField value="{!a.Exhibit_Hours_Close_Day_4__c}"/>     
+                        
+                        <apex:pageBlockSectionItem > 
+                            <div style="border-bottom:2px solid #1797c0;"/>
+                        </apex:pageBlockSectionItem>
+                        <apex:pageBlockSectionItem > 
+                            <div style="border-bottom:2px solid #1797c0;"/>
+                        </apex:pageBlockSectionItem>  
+                        
+                        <apex:inputCheckbox value="{!a.CSI_form_submitted_by_CM__c}"/>
+                        <apex:inputField value="{!a.Planning_Commenced__c}"/>
+                        
+                        
+                        
+                        <apex:pageBlockSectionItem > 
+                            <div style="border-bottom:2px  #1797c0;"/>  
+                        </apex:pageBlockSectionItem>                  
+                        <apex:pageBlockSectionItem > 
+                            <div style="border-bottom:2px  #1797c0;"/>
+                        </apex:pageBlockSectionItem>    
+                    </apex:pageBlockSection>
+                    <apex:pageBlockSection id="smu">                              
+                        <apex:pageBlockSectionItem >
+                            <apex:outputLabel value="Social Media Utilized" />
+                            <apex:actionRegion >
+                                <apex:inputCheckbox value="{!a.Social_Media_Utilized__c  }">
+                                    <apex:actionSupport event="onchange"  reRender="smu"/>
+                                </apex:inputCheckbox>
+                            </apex:actionRegion>
+                        </apex:pageBlockSectionItem>
+                        <apex:inputField value="{!a.Congress_Occurence__c}"/>
+                        <apex:inputField value="{!a.Social_Media_Used__c}" rendered="{!a.Social_Media_Utilized__c=True}"  />  
+                        <apex:pageBlockSectionItem > 
+                            <div style="border-bottom:2px  #1797c0;"/>  
+                        </apex:pageBlockSectionItem>                  
+                        <apex:pageBlockSectionItem > 
+                            <div style="border-bottom:2px  #1797c0;"/>
+                        </apex:pageBlockSectionItem> 
+                    </apex:pageBlockSection> 
+                    
+                    <apex:pageBlockSection id="subsec">
+                        <apex:inputField value="{!a.of_HCP_s_in_Attendance__c}"/>
+                        <!--<apex:inputField value="{!a.Number_of_Attendees__c}" />-->
+                        <apex:inputCheckbox value="{!a.Pfizer_Previously_Attended__c}"/>
+                        <!-- added for SCA-405-->
+                        <apex:inputField value="{!a.CurrencyIsoCode}"/>
+                        <apex:inputField value="{!a.Project_Complete__c}"/>
+                        <!--<apex:outputText ></apex:outputText>-->
+                        <apex:inputField value="{!a.Sales_Direct_to_GES__c}"/>
+                        <apex:inputField value="{!a.Event_Type__c}" required="true"/>
+                        
+                        <!--<apex:pageBlockSectionItem >
+                            <apex:outputLabel value="Congress Cancelled" />
+                            <apex:actionRegion >
+                                <apex:inputCheckbox value="{!a.Congress_Cancelled__c}">
+                                    <apex:actionSupport event="onchange"   action="{!updateCancelledDate}" reRender="subsec"/>
+                                </apex:inputCheckbox>
+                            </apex:actionRegion>
+                        </apex:pageBlockSectionItem><-->
+                        <!--<apex:outputText ></apex:outputText>-->
+                        <apex:inputField value="{!a.NonShowPRJ__c}"/> 
+                        <apex:outputText ></apex:outputText>
+                        <!--Amarab 03252021 SCA-874 Adding new fields -->
+                        <apex:pageBlockSectionItem > 
+                            <div style="border-bottom:2px solid #1797c0;"/>
+                        </apex:pageBlockSectionItem>
+                        <apex:pageBlockSectionItem > 
+                            <div style="border-bottom:2px solid #1797c0;"/>
+                        </apex:pageBlockSectionItem>  
+                        
+                        <apex:inputField value="{!a.Assoc_Activity_Type_offered__c}"/>
+                        <apex:inputField value="{!a.Congress_Registrants__c}"/>
+                        <apex:inputField value="{!a.Assoc_Provided_Data__c}"/>
+                        <apex:inputField value="{!a.Active_Registrants__c}"/>
+                        <apex:outputText ></apex:outputText>
+                        <apex:inputField value="{!a.Exhibit_Hall_Registrants__c}"/>
+                        <apex:outputText ></apex:outputText>
+                        <apex:outputText ></apex:outputText>
+                        <apex:pageBlockSectionItem >
+                            <apex:outputLabel value="Congress Cancelled" />
+                            <apex:actionRegion >
+                                <apex:inputCheckbox value="{!a.Congress_Cancelled__c}">
+                                    <apex:actionSupport event="onchange"   action="{!updateCancelledDate}" reRender="subsec"/>
+                                </apex:inputCheckbox>
+                            </apex:actionRegion>
+                        </apex:pageBlockSectionItem>
+                        <apex:outputText ></apex:outputText>
+                        <apex:inputField value="{!a.Reason_for_Cancellation__c}"/>
+                        <apex:outputText ></apex:outputText>
+                        <apex:outputField value="{!a.Congress_Cancellation_Date__c}"/>
+                    </apex:pageBlockSection>
+                    
+                    
+                    <apex:pageBlockSection title="Contact Information" collapsible="true" id="pbs1">
+                        <apex:outputText ></apex:outputText>
+                        <apex:pageBlockSectionItem >
+                            <apex:outputLabel value="Secretariat Same as Association" />
+                            <apex:actionRegion >
+                                <apex:inputField value="{!a.Secretariat_Same_as_Association__c}">
+                                    <apex:actionSupport event="onchange" action="{!copyAssociationValues}" reRender="pbs1"/>
+                                </apex:inputField>
+                            </apex:actionRegion>
+                        </apex:pageBlockSectionItem>
+                        <apex:inputField value="{!a.Association_Name__c}"/>
+                        <apex:inputField value="{!a.Secretariat_Name__c}"/>     
+                        <apex:inputField value="{!a.Association_Contact_Name__c}"/> 
+                        <apex:inputField value="{!a.Secretariat_Contact_Name__c}"/>                 
+                        <apex:inputField value="{!a.Association_phone__c}"/> 
+                        <apex:inputField value="{!a.Secretariat_Contact_Phone__c}"/>
+                        
+                        <apex:inputField value="{!a.Association_Email__c}"/> 
+                        <apex:inputField value="{!a.Secretariat_Contact_Email__c}"/>
+                        <apex:outputText style="color:blue"><big>______________________________________________________________________</big></apex:outputText>
+                        <apex:outputText style="color:blue"><big>______________________________________________________________________</big></apex:outputText>
+                        <apex:inputField value="{!a.General_Contractor_Name__c}"/>
+                        <apex:inputField value="{!a.General_Contractor_Contact_Name__c}"/>
+                        <apex:inputField value="{!a.General_Contractor_Phone__c}"/>
+                        <apex:inputField value="{!a.General_Contractor_Website__c}"/>
+                    </apex:pageBlockSection>
+                    <apex:pageBlockSection title="Location" id="pbs2" collapsible="true">
+                        
+                        <apex:inputField value="{!a.Congress_Shipping__c}" id="congressShippingId"/>
+                        <apex:inputField value="{!a.Congress_WHS__c}" id="congressWHSId"/>
+                        <apex:pageBlockSectionitem >
+                            <apex:outputLabel value="Facility"/>
+                            <apex:outputPanel >
+                                <apex:outputPanel styleClass="requiredInput" layout="block">
+                                    <apex:outputPanel styleClass="requiredBlock" layout="block"/>
+                                    <apex:inputHidden value="{!a.Facility_Name_Account__c}" id="targetId" />
+                                    <apex:inputText value="{!a.Facility_Name__c}" id="targetName" onchange="onFacilityChange();"/> <a class="lookup" onclick="openLookupPopup('{!$Component.targetName}', '{!$Component.targetId}'); return false"><img src="/GESConnect/img/s.gif" alt="Facility Lookup (New Window)" class="lookupIcon" onblur="this.className = 'lookupIcon';" onfocus="this.className = 'lookupIconOn';" onmouseout="this.className = 'lookupIcon';this.className = 'lookupIcon';" onmouseover="this.className = 'lookupIconOn';this.className = 'lookupIconOn';" title="Facility Lookup (New Window)"/></a>
+                                    <div class="errorMsg">
+                                        <strong></strong>&nbsp;{!emailError}
+                                    </div>
+                                </apex:outputPanel>
+                            </apex:outputPanel>
+                        </apex:pageBlockSectionitem>
+                        
+                        
+                        <apex:inputField value="{!a.Advanced_Warehouse_Location_Name__c}"/>
+                        <apex:inputField value="{!a.Shipping_Street__c}"/>
+                        <apex:inputField value="{!a.Shipping_Street_c__c}"/>
+                        <apex:inputField value="{!a.Shipping_City__c}" required="true"/>
+                        <apex:inputField value="{!a.Shipping_City_c__c}"/>
+                        <apex:inputField value="{!a.Shipping_State_Province__c}" />
+                        <apex:inputField value="{!a.Shipping_State_Province_c__c}"/>
+                        <apex:inputField value="{!a.Shipping_Zip_Postal_Code__c}" required="true"/>
+                        <apex:inputField value="{!a.Shipping_Zip_Postal_Code_c__c}"/>
+                        <apex:inputField value="{!a.Shipping_Country__c}" styleClass="demarcate"/>
+                        <apex:inputField value="{!a.Shipping_Country_c__c}"/>
+                        <apex:inputField value="{!a.First_Day_Freight__c}"/>
+                        <apex:inputField value="{!a.Last_Day_Freight__c}"/> 
+                    </apex:pageBlockSection>
+                    <!-- Amarab 03/25/2021 SCA-878 Remove Housing Section-->
+                    <!--<apex:pageBlockSection title="Housing" collapsible="true" id="pbs3">
+                        
+                        <apex:inputField value="{!a.Housing_Required_PL__c}" required="true">
+                            <apex:actionSupport event="onchange"   action="{!showHousingRequiredFields}" reRender="pbs3"/>
+                        </apex:inputField> 
+                        
+                        <apex:outputText rendered="{!showHousingFields}"></apex:outputText>
+                        
+                        <apex:outputField value="{!a.Total_No_of_Rooms_Req__c}" rendered="{!!showHousingFields}"/>
+                        
+                        <apex:pageBlockSectionitem >
+                            <apex:outputLabel value="Brand 1" rendered="{!showHousingFields}"/>
+                            <apex:outputPanel rendered="{!showHousingFields}">
+                                <apex:outputPanel styleClass="requiredInput" layout="block">
+                                    <apex:outputPanel styleClass="requiredBlock" layout="block"/>
+                                    <apex:inputText value="{!a.Brand_1__c}" id="targetName"/>
+                                    <apex:outputText rendered="{!BrandError != null}">
+                                        <div class="errorMsg">
+                                            <strong></strong>&nbsp;{!BrandError}
+                                        </div>
+                                    </apex:outputText>
+                                </apex:outputPanel>
+                            </apex:outputPanel>
+                        </apex:pageBlockSectionitem>
+                        
+                        <apex:pageBlockSectionitem >
+                            <apex:outputLabel value="Number of Rooms Requested" rendered="{!showHousingFields}"/>
+                            <apex:outputPanel rendered="{!showHousingFields}">
+                                <apex:outputPanel styleClass="requiredInput" layout="block">
+                                    <apex:outputPanel styleClass="requiredBlock" layout="block"/>
+                                    <apex:inputText value="{!a.Number_of_Rooms_Requested_1__c}" id="targetName"/>
+                                    <apex:outputText rendered="{!noOfRoomsRequiredError != null}">
+                                        <div class="errorMsg">
+                                            <strong></strong>&nbsp;{!noOfRoomsRequiredError}
+                                        </div>
+                                    </apex:outputText>
+                                </apex:outputPanel>
+                            </apex:outputPanel>
+                        </apex:pageBlockSectionitem>
+                        <apex:inputField value="{!a.Brand_2__c}" rendered="{!showHousingFields}"/>
+                        <apex:inputField value="{!a.Number_of_Rooms_Requested_2__c}" rendered="{!showHousingFields}"/>
+                        <apex:inputField value="{!a.Brand_3__c}" rendered="{!showHousingFields}"/>
+                        <apex:inputField value="{!a.Number_of_Rooms_Requested_3__c}" rendered="{!showHousingFields}"/>
+                        <apex:inputField value="{!a.Brand_4__c}" rendered="{!showHousingFields}"/>
+                        <apex:inputField value="{!a.Number_of_Rooms_Requested_4__c}" rendered="{!showHousingFields}"/>
+                        <apex:inputField value="{!a.Brand_5__c}" rendered="{!showHousingFields}"/>
+                        <apex:inputField value="{!a.Number_of_Rooms_Requested_5__c}" rendered="{!showHousingFields}"/>
+                        <apex:outputText rendered="{!showHousingFields}"></apex:outputText>
+                        <apex:outputField value="{!a.Total_No_of_Rooms_Req__c}" rendered="{!showHousingFields}"/>
+                        
+                        <apex:pageBlockSectionItem > 
+                            <div style="border-bottom:2px solid #1797c0;"/>
+                        </apex:pageBlockSectionItem>
+                        <apex:pageBlockSectionItem > 
+                            <div style="border-bottom:2px solid #1797c0;"/>
+                        </apex:pageBlockSectionItem> 
+                        <apex:inputField value="{!a.Housing_Logistics_Vendor__c}" >
+                            <apex:actionSupport event="onchange"   action="{!showHousingLogisticVendorOtherField}" reRender="pbs3"/>
+                            <apex:outputText rendered="{!housingLogisticVendorError != null}">
+                                <div class="errorMsg">
+                                    <strong></strong>&nbsp;{!housingLogisticVendorError}
+                                </div>
+                            </apex:outputText>
+                        </apex:inputField>
+                        
+                        <apex:outputText rendered="{!!showHousingLogisticVendorOther}"></apex:outputText>
+                        <apex:pageBlockSectionitem >
+                            <apex:outputLabel value="Housing Logistics Vendor Other" rendered="{!showHousingLogisticVendorOther}"/>
+                            <apex:outputPanel rendered="{!showHousingLogisticVendorOther}">
+                                <apex:outputPanel styleClass="requiredInput" layout="block">
+                                    <apex:outputPanel styleClass="requiredBlock" layout="block"/>
+                                    <apex:inputText value="{!a.Housing_Logistics_Vendor_Other__c}" id="targetName"/>
+                                    <apex:outputText rendered="{!housingLogisticVendorOtherError != null}">
+                                        <div class="errorMsg">
+                                            <strong></strong>&nbsp;{!housingLogisticVendorOtherError}
+                                        </div>
+                                    </apex:outputText>
+                                </apex:outputPanel>
+                            </apex:outputPanel>
+                        </apex:pageBlockSectionitem>
+                        <apex:outputText rendered="{!!showHousingLogisticVendorOther}"></apex:outputText>
+                        <apex:inputField value="{!a.Housing_Contact__c}" />
+                        <apex:outputText ></apex:outputText>
+                        <apex:inputField value="{!a.Housing_Contact_Phone__c}" />
+                        <apex:outputText ></apex:outputText>
+                        <apex:inputField value="{!a.Housing_Contact_e_mail__c}" />
+                        <apex:outputText ></apex:outputText>
+                    </apex:pageBlockSection>
+                    
+                    
+                    
+                    <apex:pageBlockSection >          
+                        <apex:inputField value="{!a.Notes__c}" style="width:100%" />
+                    </apex:pageBlockSection> -->                                 
+                </apex:pageBlock>
+            </apex:form>
+        </div>
+    </html>
+</apex:page>

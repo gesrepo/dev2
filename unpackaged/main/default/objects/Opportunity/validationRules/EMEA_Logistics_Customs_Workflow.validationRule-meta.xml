@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>EMEA_Logistics_Customs_Workflow</fullName>
+    <active>true</active>
+    <description>BOL / AWB / CMR Number, Vessel / Flight / Vehicle Number, ETA, Container Number are mandatory, if Transport to exhibitor premises is selected.</description>
+    <errorConditionFormula>AND(  Items_require_Import_Customs_Clearance__c = True, 
+OR( ISBLANK( BOL_AWB_CMR_Number__c ), 
+ISBLANK( ETA__c ), 
+ISBLANK( Vessel_Flight_Vehicle_Number__c ), 
+ISBLANK( Container_Number__c )         ) )</errorConditionFormula>
+    <errorDisplayField>Items_require_Import_Customs_Clearance__c</errorDisplayField>
+    <errorMessage>Please complete all fields within the &quot;Customs Clearance&quot; section.</errorMessage>
+</ValidationRule>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Project_Brief_Question_2__c</fullName>
+    <defaultValue>IF( $RecordType.Name == &#39;RFP (Exhibition or Event)&#39;, &#39;Please provide an overview of client expectations within the RFP that defines deliverables, and budgets for design time, structures &amp; graphics&#39;, &#39;Please provide an overview of client expectations within the contract that defines budgets for design support, structures &amp; graphics&#39;)</defaultValue>
+    <description>Please provide an overview of client expectations within the RFP that defines deliverables, and budgets for design time, structures &amp; graphics</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Overview of clients expectations within the RFP that define necessary fields.</inlineHelpText>
+    <label>Project Brief Question 2</label>
+    <length>255</length>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

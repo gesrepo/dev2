@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Product_Category_CrownCastle__c</fullName>
+    <label>Division</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>BioPharm</fullName>
+                <default>false</default>
+                <label>BioPharm</label>
+            </value>
+            <value>
+                <fullName>Biopharmaceuticals</fullName>
+                <default>false</default>
+                <label>Biopharmaceuticals</label>
+            </value>
+            <value>
+                <fullName>Clinical Trial / Global</fullName>
+                <default>false</default>
+                <label>Clinical Trial / Global</label>
+            </value>
+            <value>
+                <fullName>Corporate</fullName>
+                <default>false</default>
+                <label>Corporate</label>
+            </value>
+            <value>
+                <fullName>Diabetes</fullName>
+                <default>false</default>
+                <label>Diabetes</label>
+            </value>
+            <value>
+                <fullName>Diabetes Care</fullName>
+                <default>false</default>
+                <label>Diabetes Care</label>
+            </value>
+            <value>
+                <fullName>Fiber</fullName>
+                <default>false</default>
+                <label>Fiber</label>
+            </value>
+            <value>
+                <fullName>Healthcare Professionals (HCP)</fullName>
+                <default>false</default>
+                <label>Healthcare Professionals (HCP)</label>
+            </value>
+            <value>
+                <fullName>Human Resources</fullName>
+                <default>false</default>
+                <label>Human Resources</label>
+            </value>
+            <value>
+                <fullName>Market Access</fullName>
+                <default>false</default>
+                <label>Market Access</label>
+            </value>
+            <value>
+                <fullName>Medical Information</fullName>
+                <default>false</default>
+                <label>Medical Information</label>
+            </value>
+            <value>
+                <fullName>Obesity</fullName>
+                <default>false</default>
+                <label>Obesity</label>
+            </value>
+            <value>
+                <fullName>Patients &amp; HCP</fullName>
+                <default>false</default>
+                <label>Patients &amp; HCP</label>
+            </value>
+            <value>
+                <fullName>Product Communication</fullName>
+                <default>false</default>
+                <label>Product Communication</label>
+            </value>
+            <value>
+                <fullName>Product Communications</fullName>
+                <default>false</default>
+                <label>Product Communications</label>
+            </value>
+            <value>
+                <fullName>Research &amp; Development</fullName>
+                <default>false</default>
+                <label>Research &amp; Development</label>
+            </value>
+            <value>
+                <fullName>Trade</fullName>
+                <default>false</default>
+                <label>Trade</label>
+            </value>
+            <value>
+                <fullName>Wireless</fullName>
+                <default>false</default>
+                <label>Wireless</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

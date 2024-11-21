@@ -1,0 +1,111 @@
+<apex:page standardStylesheets="true" controller="SponsorshipDetail" showHeader="false" sidebar="false" applyHtmlTag="false" tabStyle="Account">
+    <html xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <head>
+            <apex:includeScript value="{!$Resource.jQuery}" />
+            <apex:stylesheet value="{!URLFOR($Resource.Lightning_Design_System, 'assets/styles/salesforce-lightning-design-system.min.css')}" />
+            <apex:stylesheet value="{!URLFOR($Resource.GC_Assets, 'GC_Assets/css/GC_Styles.css')}" />
+            <apex:includeScript value="{!URLFOR($Resource.GC_Assets, 'GC_Assets/js/GC_init.js')}" />
+        </head>
+        <div class="slds">
+            <c:GC_Community_Header />  
+            <div class="slds-page-header gc-navigation--subHeader" role="banner">
+                <div class="slds-media">
+                    <div class="slds-media__figure">
+                        <apex:image url="{!URLFOR($Resource.GC_Assets, 'GC_Assets/img/custom13_60_teal.png')}" />
+                    </div>
+                    <div class="slds-media__body">
+                        <p class="slds-page-header__title slds-align-middle">
+                            <span>Sponsorship Details</span>
+                            <span class="slds-truncate">{!sp.Name}</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            <apex:form >
+                <apex:pageBlock title="">
+                    <apex:pageBlockButtons location="top">
+                        <apex:commandButton value="Edit" action="{!sponsorSave}" styleClass="slds-button slds-button--brand gc-teal-button"/>
+                        <apex:commandButton value="Back" action="{!sponsorcancel}" styleClass="slds-button slds-button--brand gc-teal-button"/>
+                        <apex:commandButton value="Clone" action="{!sponsorClone}" styleClass="slds-button slds-button--brand gc-teal-button" style="float:right" />
+                    </apex:pageBlockButtons>
+                    <apex:pageBlockSection title="Sponsorship Detail"> 
+                        <apex:outputField value="{!sp.Sponsorship_Name__c}"/>                   
+                        <apex:outputText label="Congress ID">
+                            <apex:outputLink value="{!$Page.Congressdetails}">
+                                {!congName}
+                                <apex:param name="id" value="{!congid}"/>                       
+                            </apex:outputLink>
+                        </apex:outputText>
+                        
+                        <!-- <apex:outputField value="{!sp.Name}"/>-->
+                        
+                        <!-- <apex:outputField value="{!sp.Sponsorship_Costs_Estimated__c}"/>-->
+                        <apex:outputField value="{!sp.Exhibit_Bundled_with_Sponsorsip__c}"/>
+                        <apex:outputField value="{!sp.Activity_Level__c}"/>
+                        <apex:outputField value="{!sp.Sponsorship_Notes__c}"/>
+                        <apex:outputField value="{!sp.Sponsorship_Type__c}"/>
+                        <apex:outputField value="{!sp.Activity_Not_Confirmed__c}"/>
+                        <!--Amarab 03252021 SCA-874 Adding new fields -->                       
+                        <apex:outputField value="{!sp.Alternate_Activity__c}"/>
+                        <apex:outputText ></apex:outputText>
+                        <apex:outputField value="{!sp.Sponsorship_Registrants__c}"/>
+                        <!-- <apex:outputField value="{!sp.Sponsorship_Costs_Actual__c}"/>-->
+                        <apex:outputField value="{!sp.Canceled__c}"/>
+                        
+                        <!--<apex:outputField value="{!sp.CurrencyIsoCode}"/>-->
+                        <apex:outputText ></apex:outputText>
+                        <apex:outputField value="{!sp.CanceledDate__c}"/>  
+                        <apex:outputText ></apex:outputText> 
+                        <apex:outputField value="{!sp.CancelReason__c}"/>    
+                        
+                    </apex:pageBlockSection>
+                    <apex:pageBlockSection title="Sponsorship Contacts">
+                        <apex:outputField value="{!sp.GES_Congress_Manager__c}"/> <apex:outputField value="{!sp.Agency_Name__c}"/> 
+                        <apex:outputField value="{!sp.Congress_Lead__c}"/> <apex:outputField value="{!sp.Agency_Contact_Name__c}"/> 
+                        <apex:outputField value="{!sp.GES_Account_Executive__c}"/> <apex:outputField value="{!sp.Agency_Contact_Phone__c}"/>                
+                        <apex:outputField value="{!sp.GES_Account_Manager__c}"/> <apex:outputField value="{!sp.Agency_Contact_E_mail__c}"/> 
+                        
+                    </apex:pageBlockSection>
+                </apex:pageBlock>
+                
+                <!-- <apex:inlineEditSupport event="ondblClick" /> -->
+            </apex:form>
+            <apex:form >
+                <apex:pageBlock title="Brand">
+                    <apex:pageBlockButtons location="top">
+                        <apex:commandButton value="New Brand" action="{!SponsorshipNewBrand}" styleClass="slds-button slds-button--brand gc-teal-button"/>
+                    </apex:pageBlockButtons>            
+                    <apex:pageBlockTable value="{!brdlist}" var="spbr">
+                        <apex:column headerValue="Action" >
+                            <apex:outputLink value="{!$Page.SponsorshipBrandEdit}"> Edit  
+                                <apex:param name="brandid" value="{!spbr.Id}"/> 
+                                <apex:param name="sponid" value="{!sponid}"/>
+                                <apex:param name="sponName" value="{!sp.Name}"/>
+                                <apex:param name="congid" value="{!congid}"/>   
+                                <apex:param name="congName" value="{!congName}"/>                                                           
+                            </apex:outputLink>
+                        </apex:column>
+                        <apex:column headerValue="Brand Instance Name">
+                            <apex:outputLink value="{!$Page.SponsorshipBrandDetail}"> {!spbr.Name}
+                                <apex:param name="sponbrandid" value="{!spbr.Id}"/> 
+                                <apex:param name="sponid" value="{!sponid}"/>
+                                <apex:param name="sponName" value="{!sp.Name}"/>
+                                <apex:param name="congid" value="{!congid}"/>   
+                                <apex:param name="congName" value="{!congName}"/>                                                           
+                            </apex:outputLink>
+                        </apex:column>
+                        <apex:column headerValue="Brand Name" value="{!spbr.Brand_Name__c}"/>
+                        <apex:column headerValue="Brand Category" value="{!spbr.Brand_Category__c}"/>
+                        <apex:column headerValue="Business Unit" value="{!spbr.Business_Unit__c}"/>
+                        <apex:column headerValue="Canceled" value="{!spbr.Canceled__c}"/>
+                        <!--<apex:column headervalue="Created Date" value="{!spbr.Createddate}">                
+</apex:column>
+<apex:column headervalue="modified Date" value="{!spbr.lastmodifieddate }"/>-->
+                    </apex:pageBlockTable>
+                </apex:pageBlock>
+            </apex:form>  </div>
+        <!-- <apex:relatedList list="Activity_Type_Exhibit_Instance__r" title="{!a.name} Exhibit"/>
+<apex:relatedList list="Sponsorship_Instance__r" title="{!a.name} Sponsorship"/>-->
+    </html>    
+</apex:page>

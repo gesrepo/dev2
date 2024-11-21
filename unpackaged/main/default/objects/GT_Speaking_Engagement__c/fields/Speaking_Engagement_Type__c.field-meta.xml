@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Speaking_Engagement_Type__c</fullName>
+    <label>Speaking Engagement Type</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>true</sorted>
+            <value>
+                <fullName>Breakout session</fullName>
+                <default>false</default>
+                <label>Breakout session</label>
+            </value>
+            <value>
+                <fullName>Education Session speaker</fullName>
+                <default>false</default>
+                <label>Education Session speaker</label>
+            </value>
+            <value>
+                <fullName>Keynote speaker</fullName>
+                <default>false</default>
+                <label>Keynote speaker</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>Panel speaker</fullName>
+                <default>false</default>
+                <label>Panel speaker</label>
+            </value>
+            <value>
+                <fullName>Product Theater</fullName>
+                <default>false</default>
+                <label>Product Theater</label>
+            </value>
+            <value>
+                <fullName>Sales session</fullName>
+                <default>false</default>
+                <label>Sales session</label>
+            </value>
+            <value>
+                <fullName>Scientific Posters</fullName>
+                <default>false</default>
+                <label>Scientific Posters</label>
+            </value>
+            <value>
+                <fullName>Symposia</fullName>
+                <default>false</default>
+                <label>Symposia</label>
+            </value>
+            <value>
+                <fullName>Symposium</fullName>
+                <default>false</default>
+                <label>Symposium</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

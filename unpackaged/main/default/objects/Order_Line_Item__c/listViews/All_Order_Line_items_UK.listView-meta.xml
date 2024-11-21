@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>All_Order_Line_items_UK</fullName>
+    <columns>NAME</columns>
+    <columns>OrderID__c</columns>
+    <columns>OrderVersionNumber__c</columns>
+    <columns>ItemPosition__c</columns>
+    <columns>ItemCode__c</columns>
+    <columns>ItemName__c</columns>
+    <columns>ExtCodes__c</columns>
+    <columns>LineDescription__c</columns>
+    <columns>Line_Price_Subtotal__c</columns>
+    <columns>SOP_Supplier_Name__c</columns>
+    <columns>Instance__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Instance__c</field>
+        <operation>equals</operation>
+        <value>UK</value>
+    </filters>
+    <label>All Order Line items UK</label>
+</ListView>

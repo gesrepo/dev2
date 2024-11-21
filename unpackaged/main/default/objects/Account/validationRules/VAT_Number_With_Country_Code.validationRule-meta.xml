@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>VAT_Number_With_Country_Code</fullName>
+    <active>true</active>
+    <errorConditionFormula>IF(OR(
+(ISNEW() &amp;&amp; !ISNULL(TEXT(VAT_Number_Country_Code__c)) &amp;&amp; !ISBLANK(TEXT(VAT_Number_Country_Code__c)) &amp;&amp; !ISNULL( Vat_Number__c) &amp;&amp; !ISBLANK(Vat_Number__c)
+&amp;&amp; !CONTAINS(Vat_Number__c , TEXT(VAT_Number_Country_Code__c))),
+( !ISNEW() &amp;&amp; (ISCHANGED(VAT_Number_Country_Code__c) || ISCHANGED(Vat_Number__c)) &amp;&amp; !ISNULL(TEXT(VAT_Number_Country_Code__c)) &amp;&amp; !ISBLANK(TEXT(VAT_Number_Country_Code__c)) &amp;&amp; !ISNULL( Vat_Number__c) &amp;&amp; !ISBLANK(Vat_Number__c)
+&amp;&amp; !CONTAINS(Vat_Number__c , TEXT(VAT_Number_Country_Code__c)))
+)
+, true,false
+)</errorConditionFormula>
+    <errorDisplayField>Vat_Number__c</errorDisplayField>
+    <errorMessage>Enter the VAT number along with the country code selected</errorMessage>
+</ValidationRule>

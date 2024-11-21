@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CompactLayout xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>DSPP_Compact</fullName>
+    <fields>Name</fields>
+    <fields>Exhibition_Opportunity__c</fields>
+    <fields>Exhibition_Opportunity_Owner__c</fields>
+    <fields>Design_Support__c</fields>
+    <fields>Strategy_Support__c</fields>
+    <fields>Proposal_Support__c</fields>
+    <fields>Presentation_Support__c</fields>
+    <fields>Submitted_for_Approval__c</fields>
+    <fields>Approved__c</fields>
+    <fields>Account_Name__c</fields>
+    <label>DSPP Compact</label>
+</CompactLayout>

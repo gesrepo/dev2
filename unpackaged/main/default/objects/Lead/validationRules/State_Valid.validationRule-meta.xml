@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>State_Valid</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND (
+Country  = &#39;US&#39;,
+LEN( State )  &gt; 0,
+NOT(
+CONTAINS(&quot;AL:AK:AS:AZ:AR:CA:CO:CT:DE:DC:FL:GA:GU:HI:ID:&quot; &amp;
+&quot;IL:IN:IA:KS:KY:LA:ME:MD:MA:MI:MN:MP:MS:MO:MT:NE:NV:NH:&quot; &amp;
+&quot;NJ:NM:NY:NC:ND:OH:OK:OR:PA:PR:RI:SC:SD:TN:TX:UT:VT:VA:&quot; &amp;
+&quot;VI:WA:WV:WI:WY&quot;,  State )))</errorConditionFormula>
+    <errorDisplayField>State</errorDisplayField>
+    <errorMessage>Please enter a valid State (ex: Nevada = NV).</errorMessage>
+</ValidationRule>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Opportunity_Type__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(ISPICKVAL(StageName,&quot;Closed Won&quot;),&quot;Won&quot;,
+IF(ISPICKVAL(StageName,&quot;CR&quot;),&quot;Won&quot;,
+IF(ISPICKVAL(StageName,&quot;CV&quot;),&quot;Won&quot;,
+IF(ISPICKVAL(StageName,&quot;Confirmed Project 100%&quot;),&quot;Won&quot;,
+IF(ISPICKVAL(StageName,&quot;Needs Analysis&quot;),&quot;Open&quot;,
+IF(ISPICKVAL(StageName,&quot;Meeting Scheduled&quot;),&quot;Open&quot;,
+IF(ISPICKVAL(StageName,&quot;Resource Allocation&quot;),&quot;Open&quot;,
+IF(ISPICKVAL(StageName,&quot;Present Proposal/RFP Response&quot;),&quot;Open&quot;,
+IF(ISPICKVAL(StageName,&quot;Proposal/Price&quot;),&quot;Open&quot;,
+IF(ISPICKVAL(StageName,&quot;Objectives Resolved/Questions Answered&quot;),&quot;Open&quot;,
+IF(ISPICKVAL(StageName,&quot;Verbal Agreement&quot;),&quot;Open&quot;,
+IF(ISPICKVAL(StageName,&quot;Negotiation/Review&quot;),&quot;Open&quot;,
+IF(ISPICKVAL(StageName,&quot;Contract &amp; Transition to Accnt Team&quot;),&quot;Open&quot;,
+IF(ISPICKVAL(StageName,&quot;SL1&quot;),&quot;Open&quot;,
+IF(ISPICKVAL(StageName,&quot;SL2&quot;),&quot;Open&quot;,
+IF(ISPICKVAL(StageName,&quot;SL3&quot;),&quot;Open&quot;,
+IF(ISPICKVAL(StageName,&quot;SL4&quot;),&quot;Open&quot;,
+IF(ISPICKVAL(StageName,&quot;PO&quot;),&quot;Open&quot;,
+IF(ISPICKVAL(StageName,&quot;PS&quot;),&quot;Open&quot;,
+IF(ISPICKVAL(StageName,&quot;TS&quot;),&quot;Open&quot;,
+IF(ISPICKVAL(StageName,&quot;Sales Goal&quot;),&quot;Sales Goal&quot;,
+IF(ISPICKVAL(StageName,&quot;Closed Lost&quot;),&quot;Lost&quot;,
+IF(ISPICKVAL(StageName,&quot;LO&quot;),&quot;Lost&quot;,
+IF(ISPICKVAL(StageName,&quot;LR&quot;),&quot;Lost&quot;,
+IF(ISPICKVAL(StageName,&quot;LP&quot;),&quot;Lost&quot;,
+IF(ISPICKVAL(StageName,&quot;LPM&quot;),&quot;Lost&quot;,
+IF(ISPICKVAL(StageName,&quot;LPE&quot;),&quot;Lost&quot;,
+&quot;Nothing&quot;)))))))))))))))))))))))))))</formula>
+    <label>Opportunity Type</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Traffic_Administrator_Approver__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>Name of Traffic Administrator set to Approve the Design Element</description>
+    <inlineHelpText>Name of Traffic Administrator is set to Approve the Design Element.  This will automatically add this member to the Show Team.</inlineHelpText>
+    <label>Traffic Administrator Approver</label>
+    <referenceTo>User</referenceTo>
+    <relationshipName>Design_Element_Tasks</relationshipName>
+    <required>false</required>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

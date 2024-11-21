@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>EMEA_Scotland_s_Trade_Fair_Autumn_Case</fullName>
+    <filterScope>Queue</filterScope>
+    <label>EMEA Scotland&#39;s Trade Fair Autumn</label>
+    <queue>EMEA_Scotland_s_Trade_Fair_Autumn</queue>
+    <sharedTo>
+        <allInternalUsers />
+    </sharedTo>
+</ListView>

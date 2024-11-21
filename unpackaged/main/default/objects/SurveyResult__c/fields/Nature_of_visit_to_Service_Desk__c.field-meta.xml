@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Nature_of_visit_to_Service_Desk__c</fullName>
+    <label>Nature of visit to Service Desk</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Making enquiries/seeking assistance</fullName>
+                <default>false</default>
+                <label>Making enquiries/seeking assistance</label>
+            </value>
+            <value>
+                <fullName>Placing new/last minute order/s</fullName>
+                <default>false</default>
+                <label>Placing new/last minute order/s</label>
+            </value>
+            <value>
+                <fullName>To amend existing order/s</fullName>
+                <default>false</default>
+                <label>To amend existing order/s</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

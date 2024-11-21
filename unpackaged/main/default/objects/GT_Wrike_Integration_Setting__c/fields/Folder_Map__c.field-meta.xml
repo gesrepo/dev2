@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Folder_Map__c</fullName>
+    <description>This field will keep the folder names mapped to their IDs. It will be a json string of an Object having a Map of List&lt;string, string&gt; and data would be in format =&gt;Folder_Name, WrikeID</description>
+    <inlineHelpText>This field will keep the folder names mapped to their IDs. It will be a json string of an Object having a Map of List&lt;string, string&gt; and data would be in format =&gt;Folder_Name, WrikeID</inlineHelpText>
+    <label>Folder Map</label>
+    <length>50000</length>
+    <trackTrending>false</trackTrending>
+    <type>LongTextArea</type>
+    <visibleLines>3</visibleLines>
+</CustomField>

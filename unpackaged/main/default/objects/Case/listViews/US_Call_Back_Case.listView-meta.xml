@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>US_Call_Back_Case</fullName>
+    <columns>CASES.CASE_NUMBER</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>Customer_Name__c</columns>
+    <columns>Exhibitor_Name__c</columns>
+    <columns>NAME</columns>
+    <columns>Show_Name__c</columns>
+    <columns>Booth_Number__c</columns>
+    <columns>CASES.PRIORITY</columns>
+    <columns>CASES.ORIGIN</columns>
+    <columns>Severe__c</columns>
+    <columns>OWNER_NAME</columns>
+    <columns>CASES.TYPE</columns>
+    <columns>Age__c</columns>
+    <columns>CASES.CREATED_DATE</columns>
+    <columns>Substatus__c</columns>
+    <filterScope>Queue</filterScope>
+    <filters>
+        <field>CASES.STATUS</field>
+        <operation>equals</operation>
+        <value>Open,In Process,Pending</value>
+    </filters>
+    <label>US-Call Back</label>
+    <language>en_US</language>
+    <queue>US_Call_Back</queue>
+    <sharedTo>
+        <allInternalUsers />
+        <roleAndSubordinatesInternal>GESNSCExhibitorSalesSupervisor</roleAndSubordinatesInternal>
+        <roleAndSubordinatesInternal>GES_ES_Admin</roleAndSubordinatesInternal>
+        <roleAndSubordinatesInternal>GES_Exhibitor_Services_Central_Leader</roleAndSubordinatesInternal>
+        <roleAndSubordinatesInternal>GES_Exhibitor_Services_Central_Rep</roleAndSubordinatesInternal>
+        <roleAndSubordinatesInternal>GES_Exhibitor_Services_Las_Vegas_PIM_West_Leader</roleAndSubordinatesInternal>
+        <roleAndSubordinatesInternal>GES_Exhibitor_Services_Las_Vegas_and_PIM_Rep</roleAndSubordinatesInternal>
+        <roleAndSubordinatesInternal>GES_Exhibitor_Services_North_Atlantic_Leader</roleAndSubordinatesInternal>
+        <roleAndSubordinatesInternal>GES_Exhibitor_Services_North_Atlantic_Rep</roleAndSubordinatesInternal>
+        <roleAndSubordinatesInternal>GES_Exhibitor_Services_South_Atlantic_Leader</roleAndSubordinatesInternal>
+        <roleAndSubordinatesInternal>GES_Exhibitor_Services_South_Atlantic_Rep</roleAndSubordinatesInternal>
+        <roleAndSubordinatesInternal>GES_Exhibitor_Services_West_Rep</roleAndSubordinatesInternal>
+        <roleAndSubordinatesInternal>GES_NSC_Admin</roleAndSubordinatesInternal>
+        <roleAndSubordinatesInternal>GES_NSC_CAS_Rep</roleAndSubordinatesInternal>
+        <roleAndSubordinatesInternal>GES_NSC_Director</roleAndSubordinatesInternal>
+        <roleAndSubordinatesInternal>GES_NSC_File_Archivist</roleAndSubordinatesInternal>
+        <roleAndSubordinatesInternal>GES_NSC_Inbound_Rep</roleAndSubordinatesInternal>
+        <roleAndSubordinatesInternal>GES_NSC_Inbound_Supervisor</roleAndSubordinatesInternal>
+        <roleAndSubordinatesInternal>GES_NSC_Kit_Admin_Rep</roleAndSubordinatesInternal>
+        <roleAndSubordinatesInternal>GES_NSC_Kit_Admin_Supervisor</roleAndSubordinatesInternal>
+        <roleAndSubordinatesInternal>GES_NSC_LeadGen_Rep</roleAndSubordinatesInternal>
+        <roleAndSubordinatesInternal>GES_NSC_Logistics_Rep</roleAndSubordinatesInternal>
+        <roleAndSubordinatesInternal>GES_NSC_Order_Entry_Director</roleAndSubordinatesInternal>
+        <roleAndSubordinatesInternal>GES_NSC_Order_Entry_Rep</roleAndSubordinatesInternal>
+        <roleAndSubordinatesInternal>GES_NSC_Order_Entry_Supervisor</roleAndSubordinatesInternal>
+        <roleAndSubordinatesInternal>GES_NSC_Outbound_Rep</roleAndSubordinatesInternal>
+        <roleAndSubordinatesInternal>GES_NSC_Resolutions_Rep</roleAndSubordinatesInternal>
+        <roleAndSubordinatesInternal>GES_NSC_Resolutions_Supervisor</roleAndSubordinatesInternal>
+        <roleAndSubordinatesInternal>GES_NSC_Support_Desk_Rep</roleAndSubordinatesInternal>
+        <roleAndSubordinatesInternal>GES_National_Servicenter</roleAndSubordinatesInternal>
+    </sharedTo>
+</ListView>

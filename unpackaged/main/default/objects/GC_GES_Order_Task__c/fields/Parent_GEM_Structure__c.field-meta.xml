@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Parent_GEM_Structure__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>Parent GEM Structure to link a GEM Structure with Graphics to.  Only Active GEM Structures on the current show with Graphics are allowed to be linked.</description>
+    <inlineHelpText>Parent GEM Structure to link a GEM Structure with Graphics to.  Only Active GEM Structures on the current show with Graphics are allowed to be linked.  Submit the GEM Structure first then modify the graphics for the structure.</inlineHelpText>
+    <label>Parent GEM Structure</label>
+    <referenceTo>GC_GES_Order_Task__c</referenceTo>
+    <relationshipName>Linked_Gem_Structures</relationshipName>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

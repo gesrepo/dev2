@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ApexPage xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>35.0</apiVersion>
+    <availableInTouch>false</availableInTouch>
+    <confirmationTokenRequired>false</confirmationTokenRequired>
+    <description>Custom detail page for the design budget to remove the Submit for approval button on the standard related approval history list.</description>
+    <label>GC_DesignBudgetCustom</label>
+</ApexPage>

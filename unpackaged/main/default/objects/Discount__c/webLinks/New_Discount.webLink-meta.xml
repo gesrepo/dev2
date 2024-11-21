@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>New_Discount</fullName>
+    <availability>online</availability>
+    <displayType>massActionButton</displayType>
+    <linkType>javascript</linkType>
+    <masterLabel>New Discount</masterLabel>
+    <openType>onClickJavaScript</openType>
+    <protected>false</protected>
+    <requireRowSelection>false</requireRowSelection>
+    <url>var recId = window.location.href.substring(window.location.href.lastIndexOf(&#39;/&#39;) + 1); 
+window.location = &#39;/apex/NewDiscountFromBoothArea?Id=&#39;+recId + &#39;&amp;isCommunity=false&#39;;</url>
+</WebLink>

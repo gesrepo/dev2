@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Congress_Manager_Phone_Auto__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF((TEXT(Congress_Manager__c) == &quot;Andrew Rolls&quot;),&quot;&quot;, 
+IF((TEXT(Congress_Manager__c) == &quot;Joe Walsh&quot;),&quot;(609) 786-4680&quot;, 
+IF((TEXT(Congress_Manager__c) == &quot;John Hasemann&quot;),&quot;(609) 786-8321&quot;, 
+IF((TEXT(Congress_Manager__c) == &quot;Rebecca Baker&quot;),&quot;(609) 786-4088&quot;, 
+IF((TEXT(Congress_Manager__c) == &quot;Jacqueline Campo&quot;),&quot;(609) 786-3991&quot;, 
+IF((TEXT(Congress_Manager__c) == &quot;Corrine Landolt&quot;),&quot;41 79 909 69 23&quot;, 
+IF((TEXT(Congress_Manager__c) == &quot;Laurie Stein-Richards&quot;),&quot;(201) 273-3645&quot;, 
+IF((TEXT(Congress_Manager__c) == &quot;Kaitlyn Reynolds&quot;),&quot;(609) 495-6590&quot;,
+IF((TEXT(Congress_Manager__c) == &quot;Nadine Curtin&quot;),&quot;908-740-6455&quot;,
+IF((TEXT(Congress_Manager__c) == &quot;Ralph Lopez&quot;),&quot;908-740-6536&quot;,
+IF((TEXT(Congress_Manager__c) == &quot;Aleida Rosete&quot;),&quot;908-740-6544&quot;,
+IF((TEXT(Congress_Manager__c) == &quot;Erica Kepes&quot;),&quot;908-740-6194&quot;,
+IF((TEXT(Congress_Manager__c) == &quot;Andrea Throckmorton&quot;),&quot;908-740-6341&quot;,
+IF((TEXT(Congress_Manager__c) == &quot;Dan Schuler&quot;),&quot;267-305-2564&quot;,
+IF((TEXT(Congress_Manager__c) == &quot;Dawn Syntcha&quot;),&quot;908-740-6184&quot;,
+IF((TEXT(Congress_Manager__c) == &quot;Rose Marie Zarrillo&quot;),&quot;908-740-6555&quot;,
+&quot; &quot;))))))))))))))))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Congress Manager Phone</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

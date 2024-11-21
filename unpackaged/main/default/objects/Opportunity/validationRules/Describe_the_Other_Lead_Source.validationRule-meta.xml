@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Describe_the_Other_Lead_Source</fullName>
+    <active>false</active>
+    <errorConditionFormula>NOT(ISPICKVAL( LeadSource , &#39;Other&#39;))</errorConditionFormula>
+    <errorDisplayField>If_Other_please_describe__c</errorDisplayField>
+    <errorMessage>Please define what &quot;Other&quot; is.</errorMessage>
+</ValidationRule>

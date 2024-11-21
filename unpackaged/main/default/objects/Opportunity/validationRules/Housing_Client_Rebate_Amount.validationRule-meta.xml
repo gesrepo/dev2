@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Housing_Client_Rebate_Amount</fullName>
+    <active>true</active>
+    <description>Client Rebate Amount is required when Client Revenue Share/Rebate = &quot;Rebate Per Reservation&quot; or &quot;Rebate Per Room Night&quot;</description>
+    <errorConditionFormula>AND( OR(ISPICKVAL( Client_Revenue_ShareRebate__c,&quot;Rebate Per Reservation&quot;),ISPICKVAL(Client_Revenue_ShareRebate__c,&quot;Rebate Per Room Night&quot;)), ISBLANK(  Client_Rebate_Amount__c  ),NOT($Profile.Name = &quot;GES Administrator Interface&quot;))</errorConditionFormula>
+    <errorDisplayField>Client_Rebate_Amount__c</errorDisplayField>
+    <errorMessage>Please fill out the Client Rebate Amount field. If Client Revenue Share/Rebate is equal to &quot;Rebate Per Reservation&quot; or &quot;Rebate Per Room Night&quot;, the Client Rebate Amount field is required.</errorMessage>
+</ValidationRule>

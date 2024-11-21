@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Case_Required_Refund_Reason_Code</fullName>
+    <active>true</active>
+    <description>Refund Reason Code is required when Refund/Adj Amount is non-zero</description>
+    <errorConditionFormula>AND(Refund_Adj_Amount__c != 0,  ISPICKVAL(Refund_Adj_Reason_Code__c,&#39;&#39;))</errorConditionFormula>
+    <errorMessage>Refund Reason Code is required when Refund/Adj Amount is non-zero.</errorMessage>
+</ValidationRule>

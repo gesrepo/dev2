@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>COVID_Cancelled_Project__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Used to identify projects that were cancelled due to COVID or other reasons (budget reduction)</description>
+    <label>Cancelled Project</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

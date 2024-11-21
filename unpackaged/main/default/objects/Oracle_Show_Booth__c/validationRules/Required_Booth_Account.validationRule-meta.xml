@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Required_Booth_Account</fullName>
+    <active>true</active>
+    <description>Booth must be associated to an Exhibitor Account record. The error message should be displayed when Exhibitor is not specified (i.e. Account__c field is blank).</description>
+    <errorConditionFormula>AND( ($Profile.Name != &quot;GES Administrator Interface&quot;), ISBLANK(Account__c))</errorConditionFormula>
+    <errorDisplayField>Account__c</errorDisplayField>
+    <errorMessage>Account is required on Booth. Please provide a valid Account Id in the Account__c field.</errorMessage>
+</ValidationRule>

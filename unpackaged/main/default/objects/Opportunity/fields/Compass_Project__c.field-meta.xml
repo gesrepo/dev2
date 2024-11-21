@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Compass_Project__c</fullName>
+    <description>Holds the OnPeak Compass Number</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Please enter the 7 character Compass Project #, in the format of 2 numeric, 3 alpha, 2 numeric</inlineHelpText>
+    <label>Compass Project #</label>
+    <length>7</length>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

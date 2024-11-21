@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>New_AV_Opportunity</fullName>
+    <availability>online</availability>
+    <description>Allows user to create Opportunity of AV record type</description>
+    <displayType>massActionButton</displayType>
+    <encodingKey>UTF-8</encodingKey>
+    <linkType>url</linkType>
+    <masterLabel>New AV Opportunity</masterLabel>
+    <openType>replace</openType>
+    <protected>false</protected>
+    <requireRowSelection>true</requireRowSelection>
+    <url>/006/e?retURL=%2F{!Opportunity.Id}&amp;cancelURL=%2F{!Opportunity.Id}&amp;RecordType=012400000001Dqk&amp;CF00N40000001nD0M={!Opportunity.Show_Occurrence_Calculated__c}</url>
+</WebLink>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>YRMO__c</fullName>
+    <externalId>false</externalId>
+    <formula>TEXT(YEAR( Show_Close_Date__c )) &amp; CASE(TEXT(MONTH(Show_Close_Date__c )), &#39;1&#39;,&#39;01&#39;,&#39;2&#39;,&#39;02&#39;,&#39;3&#39;,&#39;03&#39;,&#39;4&#39;,&#39;04&#39;,&#39;5&#39;,&#39;05&#39;,&#39;6&#39;,&#39;06&#39;,&#39;7&#39;,&#39;07&#39;,&#39;8&#39;,&#39;08&#39;,&#39;9&#39;,&#39;09&#39;,TEXT(MONTH(Show_Close_Date__c )))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>YRMO</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ED_ProjectRequiresGraphicDesign</fullName>
+    <active>true</active>
+    <description>Checks to see if Graphic Design detail has been filled in if project needs Graphic Design.</description>
+    <errorConditionFormula>PRF_Submitted__c =true &amp;&amp;
+$RecordType.DeveloperName = &quot;E_D_Projects&quot;  
+&amp;&amp;( GBMSProjectStatus__c =&quot;Forecast&quot; ||  ISBLANK(GBMSProjectStatus__c )) 
+&amp;&amp;  ISPICKVAL(PRFRequest_Type__c , &quot;Graphic Design Only &amp; Estimate&quot;)
+&amp;&amp;  ISPICKVAL( PRFGraphics_Req__c , &quot;&quot;)
+&amp;&amp;  PRFMarketing_Services__c =false
+&amp;&amp;  PRFMultimedia_Services__c =false
+&amp;&amp; ($Profile.Name != &quot;GES Administrator Interface&quot;)</errorConditionFormula>
+    <errorDisplayField>PRFGraphics_Req__c</errorDisplayField>
+    <errorMessage>Graphic Design &amp; Estimate Only Request Type requires a selection in the Graphics Req pick list or Marketing/Multimedia Services.</errorMessage>
+</ValidationRule>

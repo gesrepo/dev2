@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>TSNN_Fastest_50__c</fullName>
+    <defaultValue>false</defaultValue>
+    <inlineHelpText>If checked, opportunity is part of TSNN Fastest 50.</inlineHelpText>
+    <label>TSNN Fastest 50</label>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

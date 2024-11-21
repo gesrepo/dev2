@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Material_Handling_UOM__c</fullName>
+    <inlineHelpText>Default Unit of Measure for Material Handling Billing to determine if straight time or over time will be billed.</inlineHelpText>
+    <label>Material Handling Default Billing UOM</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>ST/ST</fullName>
+                <default>false</default>
+                <label>ST/ST</label>
+            </value>
+            <value>
+                <fullName>ST/OT</fullName>
+                <default>false</default>
+                <label>ST/OT</label>
+            </value>
+            <value>
+                <fullName>OT/ST</fullName>
+                <default>false</default>
+                <label>OT/ST</label>
+            </value>
+            <value>
+                <fullName>OT/OT</fullName>
+                <default>false</default>
+                <label>OT/OT</label>
+            </value>
+            <value>
+                <fullName>CWT</fullName>
+                <default>false</default>
+                <label>CWT</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

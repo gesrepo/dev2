@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>EMEA_Finance_Approved__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>This is automatically checked if not type Contractor or Firm. Only finance / admins can change this manually</description>
+    <inlineHelpText>This indicates if the record can be synced with Salesforce. It is automatically set when not a firm or contractor. Only Finance and admins can manually check this box.</inlineHelpText>
+    <label>EMEA Finance Approved</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

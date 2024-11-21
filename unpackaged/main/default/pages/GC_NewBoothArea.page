@@ -1,0 +1,8 @@
+<apex:page showHeader="true" sidebar="true" standardController="Booth_Area__c">
+    <header>
+    <H1><b> Booth Area should only be Created / Edited via the Show. </b></H1>
+    <br/>
+    <br/>
+        <H1><b> Please use the Show to update/Create Booth Areas. </b></H1>
+    </header>
+</apex:page>

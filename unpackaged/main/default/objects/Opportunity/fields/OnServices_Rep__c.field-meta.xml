@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>OnServices_Rep__c</fullName>
+    <description>Audited - KEEP per SR 9/24/2019 Need for Cross-Sell</description>
+    <inlineHelpText>For cross-selling commission tracking</inlineHelpText>
+    <label>OnServices Rep</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>TextArea</type>
+</CustomField>

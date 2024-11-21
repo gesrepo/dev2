@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Order__c</fullName>
+    <deleteConstraint>Restrict</deleteConstraint>
+    <description>Lookup to the GES Order associated with this vendor order task.</description>
+    <inlineHelpText>Lookup to the GES Order associated with this vendor order task.</inlineHelpText>
+    <label>Delivery Location</label>
+    <referenceTo>GC_Order__c</referenceTo>
+    <relationshipLabel>Vendor Order Tasks</relationshipLabel>
+    <relationshipName>Vendor_Order_Tasks</relationshipName>
+    <required>true</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Invoice_Sent__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Used on D&amp;B Opportunities, has an invoice been sent yet, yes or no</description>
+    <inlineHelpText>Please select if the invoice has been sent</inlineHelpText>
+    <label>Invoice Sent</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

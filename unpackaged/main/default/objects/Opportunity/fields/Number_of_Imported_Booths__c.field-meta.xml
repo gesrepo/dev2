@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Number_of_Imported_Booths__c</fullName>
+    <inlineHelpText>Count of Completed Booths from related Booth Uploads</inlineHelpText>
+    <label>Number of Imported Booths</label>
+    <summarizedField>Booth_Upload__c.Number_of_Booths__c</summarizedField>
+    <summaryForeignKey>Booth_Upload__c.Opportunity__c</summaryForeignKey>
+    <summaryOperation>sum</summaryOperation>
+    <trackHistory>false</trackHistory>
+    <type>Summary</type>
+</CustomField>

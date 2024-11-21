@@ -1,0 +1,15 @@
+<apex:page standardController="GC_GES_Order_Task__c" recordSetVar="tasks" extensions="LC_GESItemsSubmitToCoreCtrl">
+    <apex:includeLightning />
+    <div id="displayGESItemsSubmitToCore"></div>
+    <script>
+    $Lightning.use("c:LC_GESItemsSubmitToCoreApp", function() {
+        $Lightning.createComponent("c:LC_GESItemsSubmitToCore",
+                                   { 
+                                       selectedRecords : '{!gots}'
+                                   },
+                                   "displayGESItemsSubmitToCore",
+                                   function(component) {
+                                   });
+    });
+    </script>
+</apex:page>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PRFGraphics_Req__c</fullName>
+    <label>Graphics Req</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>New Creative Concept(s)</fullName>
+                <default>false</default>
+                <label>New Creative Concept(s)</label>
+            </value>
+            <value>
+                <fullName>Revise Existing Artwork</fullName>
+                <default>false</default>
+                <label>Revise Existing Artwork</label>
+            </value>
+            <value>
+                <fullName>Client Provided</fullName>
+                <default>false</default>
+                <label>Client Provided</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

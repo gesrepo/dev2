@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Agreements_EMEA_Show_Contract_Commission</fullName>
+    <active>false</active>
+    <description>If Allowances = Yes, Allowances Amount field cannot be blank</description>
+    <errorConditionFormula>AND(ISPICKVAL( Commissions__c ,&quot;Yes&quot;), ISBLANK( Commissions_Amount__c ))</errorConditionFormula>
+    <errorDisplayField>Commissions_Amount__c</errorDisplayField>
+    <errorMessage>Commissions Amount is required when Commissions is equal to Yes. Please fill out the Commissions Amount.</errorMessage>
+</ValidationRule>

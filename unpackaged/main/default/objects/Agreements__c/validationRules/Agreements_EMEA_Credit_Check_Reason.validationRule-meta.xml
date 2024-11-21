@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Agreements_EMEA_Credit_Check_Reason</fullName>
+    <active>true</active>
+    <description>If credit check is no, we need to have a reason</description>
+    <errorConditionFormula>AND(ISPICKVAL( Credit_Check_Required__c , &quot;No&quot;), Len( If_no_credit_check_what_is_the_reason__c )=0)</errorConditionFormula>
+    <errorMessage>If you select that a credit check is not required, you must enter a reason.</errorMessage>
+</ValidationRule>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Creative_Director_Approvers__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>Name of Creative Director is set to Approve the Design Element</description>
+    <inlineHelpText>Name of Creative Director is set to Approve the Design Element.  This will automatically add this member to the Show Team.</inlineHelpText>
+    <label>Creative Director Approver</label>
+    <referenceTo>User</referenceTo>
+    <relationshipName>Creative_Director_For</relationshipName>
+    <required>false</required>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

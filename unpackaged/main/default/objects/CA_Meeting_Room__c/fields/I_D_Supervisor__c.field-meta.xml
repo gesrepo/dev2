@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>I_D_Supervisor__c</fullName>
+    <label>I&amp;D Supervisor</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Alan Squyres</fullName>
+                <default>false</default>
+                <label>Alan Squyres</label>
+            </value>
+            <value>
+                <fullName>Dave Dragoone</fullName>
+                <default>false</default>
+                <label>Dave Dragoone</label>
+            </value>
+            <value>
+                <fullName>Finstrom, Brad</fullName>
+                <default>false</default>
+                <label>Finstrom, Brad</label>
+            </value>
+            <value>
+                <fullName>Hadrava, Don</fullName>
+                <default>false</default>
+                <label>Hadrava, Don</label>
+            </value>
+            <value>
+                <fullName>Heather Campbell</fullName>
+                <default>false</default>
+                <label>Heather Campbell</label>
+            </value>
+            <value>
+                <fullName>I&amp;D Supervisor 1</fullName>
+                <default>false</default>
+                <label>I&amp;D Supervisor 1</label>
+            </value>
+            <value>
+                <fullName>I&amp;D Supervisor 2</fullName>
+                <default>false</default>
+                <label>I&amp;D Supervisor 2</label>
+            </value>
+            <value>
+                <fullName>I&amp;D Supervisor 3</fullName>
+                <default>false</default>
+                <label>I&amp;D Supervisor 3</label>
+            </value>
+            <value>
+                <fullName>Joe Holland</fullName>
+                <default>false</default>
+                <label>Joe Holland</label>
+            </value>
+            <value>
+                <fullName>Ken Pantoliano</fullName>
+                <default>false</default>
+                <label>Ken Pantoliano</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>Pat Gallagher</fullName>
+                <default>false</default>
+                <label>Pat Gallagher</label>
+            </value>
+            <value>
+                <fullName>Randy Frields</fullName>
+                <default>false</default>
+                <label>Randy Frields</label>
+            </value>
+            <value>
+                <fullName>Skarupa, Dennis</fullName>
+                <default>false</default>
+                <label>Skarupa, Dennis</label>
+            </value>
+            <value>
+                <fullName>Steve Burgess</fullName>
+                <default>false</default>
+                <label>Steve Burgess</label>
+            </value>
+            <value>
+                <fullName>Storm, Kari</fullName>
+                <default>false</default>
+                <label>Storm, Kari</label>
+            </value>
+            <value>
+                <fullName>test</fullName>
+                <default>false</default>
+                <label>test</label>
+            </value>
+            <value>
+                <fullName>Tom Kessler</fullName>
+                <default>false</default>
+                <label>Tom Kessler</label>
+            </value>
+            <value>
+                <fullName>Vanderpol, Gary</fullName>
+                <default>false</default>
+                <label>Vanderpol, Gary</label>
+            </value>
+            <value>
+                <fullName>Mattson, Scott</fullName>
+                <default>false</default>
+                <label>Mattson, Scott</label>
+            </value>
+            <value>
+                <fullName>Wilma, Mark</fullName>
+                <default>false</default>
+                <label>Wilma, Mark</label>
+            </value>
+            <value>
+                <fullName>Monahan, Shane</fullName>
+                <default>false</default>
+                <label>Monahan, Shane</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

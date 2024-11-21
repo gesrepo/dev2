@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>IF_CVB_Checked_Enter_Account_Housing</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND (CVB_Project__c = TRUE,
+ISBLANK(Organizer_Client__c),
+NOT($Profile.Name = &quot;GES Administrator Interface&quot;))</errorConditionFormula>
+    <errorDisplayField>Organizer_Client__c</errorDisplayField>
+    <errorMessage>Please choose an Organizer Client Account.</errorMessage>
+</ValidationRule>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Spiro_Exhibitor_List__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Identify exhibitor list upload records to be used in an exhibit show nurture campaign</description>
+    <label>Spiro Exhibitor List</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

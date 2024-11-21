@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Registration_Company__c</fullName>
+    <label>Registration Company</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>AET</fullName>
+                <default>false</default>
+                <label>AET</label>
+            </value>
+            <value>
+                <fullName>ARI</fullName>
+                <default>false</default>
+                <label>ARI</label>
+            </value>
+            <value>
+                <fullName>ATS</fullName>
+                <default>false</default>
+                <label>ATS</label>
+            </value>
+            <value>
+                <fullName>CDS</fullName>
+                <default>false</default>
+                <label>CDS</label>
+            </value>
+            <value>
+                <fullName>Channel 1</fullName>
+                <default>false</default>
+                <label>Channel 1</label>
+            </value>
+            <value>
+                <fullName>CompuSystems</fullName>
+                <default>false</default>
+                <label>CompuSystems</label>
+            </value>
+            <value>
+                <fullName>CTE</fullName>
+                <default>false</default>
+                <label>CTE</label>
+            </value>
+            <value>
+                <fullName>DIETZE</fullName>
+                <default>false</default>
+                <label>DIETZE</label>
+            </value>
+            <value>
+                <fullName>EGenex</fullName>
+                <default>false</default>
+                <label>EGenex</label>
+            </value>
+            <value>
+                <fullName>Eland</fullName>
+                <default>false</default>
+                <label>Eland</label>
+            </value>
+            <value>
+                <fullName>Epic</fullName>
+                <default>false</default>
+                <label>Epic</label>
+            </value>
+            <value>
+                <fullName>Event Ready / TMI</fullName>
+                <default>false</default>
+                <label>Event Ready / TMI</label>
+            </value>
+            <value>
+                <fullName>Experient</fullName>
+                <default>false</default>
+                <label>Experient</label>
+            </value>
+            <value>
+                <fullName>Expo Logic</fullName>
+                <default>false</default>
+                <label>Expo Logic</label>
+            </value>
+            <value>
+                <fullName>Foresight</fullName>
+                <default>false</default>
+                <label>Foresight</label>
+            </value>
+            <value>
+                <fullName>ITN</fullName>
+                <default>false</default>
+                <label>ITN</label>
+            </value>
+            <value>
+                <fullName>J. Spargo</fullName>
+                <default>false</default>
+                <label>J. Spargo</label>
+            </value>
+            <value>
+                <fullName>Laser Registration</fullName>
+                <default>false</default>
+                <label>Laser Registration</label>
+            </value>
+            <value>
+                <fullName>Meeting / aide Inc</fullName>
+                <default>false</default>
+                <label>Meeting / aide Inc</label>
+            </value>
+            <value>
+                <fullName>MGL Management</fullName>
+                <default>false</default>
+                <label>MGL Management</label>
+            </value>
+            <value>
+                <fullName>Ntag</fullName>
+                <default>false</default>
+                <label>Ntag</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>RCS</fullName>
+                <default>false</default>
+                <label>RCS</label>
+            </value>
+            <value>
+                <fullName>Showcare</fullName>
+                <default>false</default>
+                <label>Showcare</label>
+            </value>
+            <value>
+                <fullName>Smart Source</fullName>
+                <default>false</default>
+                <label>Smart Source</label>
+            </value>
+            <value>
+                <fullName>Smart-Reg International</fullName>
+                <default>false</default>
+                <label>Smart-Reg International</label>
+            </value>
+            <value>
+                <fullName>Specialty Sensor Technologies</fullName>
+                <default>false</default>
+                <label>Specialty Sensor Technologies</label>
+            </value>
+            <value>
+                <fullName>Trade Show Leads</fullName>
+                <default>false</default>
+                <label>Trade Show Leads</label>
+            </value>
+            <value>
+                <fullName>Trakker</fullName>
+                <default>false</default>
+                <label>Trakker</label>
+            </value>
+            <value>
+                <fullName>Windham Jade</fullName>
+                <default>false</default>
+                <label>Windham Jade</label>
+            </value>
+            <value>
+                <fullName>Wingate Web</fullName>
+                <default>false</default>
+                <label>Wingate Web</label>
+            </value>
+            <value>
+                <fullName>Xpress Leads</fullName>
+                <default>false</default>
+                <label>Xpress Leads</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

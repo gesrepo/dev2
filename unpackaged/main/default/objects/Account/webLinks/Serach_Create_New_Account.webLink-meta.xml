@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Serach_Create_New_Account</fullName>
+    <availability>online</availability>
+    <displayType>massActionButton</displayType>
+    <linkType>javascript</linkType>
+    <masterLabel>Search and Create</masterLabel>
+    <openType>onClickJavaScript</openType>
+    <protected>false</protected>
+    <requireRowSelection>true</requireRowSelection>
+    <url>if (typeof(srcUp) == &#39;function&#39;)
+{
+    srcUp(&#39;/apex/PageNewAccount?isdtp=vw&#39;);
+} 
+else 
+{    
+     window.open(&#39;/apex/PageNewAccount&#39;);
+}</url>
+</WebLink>

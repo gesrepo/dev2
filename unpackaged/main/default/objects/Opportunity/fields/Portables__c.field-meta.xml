@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Portables__c</fullName>
+    <inlineHelpText>These are the portables. Select all that apply.</inlineHelpText>
+    <label>Portables</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Banner Stand</fullName>
+                <default>false</default>
+                <label>Banner Stand</label>
+            </value>
+            <value>
+                <fullName>Folding Panel</fullName>
+                <default>false</default>
+                <label>Folding Panel</label>
+            </value>
+            <value>
+                <fullName>Laminated Panel System</fullName>
+                <default>false</default>
+                <label>Laminated Panel System</label>
+            </value>
+            <value>
+                <fullName>Pop-Up</fullName>
+                <default>false</default>
+                <label>Pop-Up</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

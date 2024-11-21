@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Sales_Location__c</fullName>
+    <inlineHelpText>Please select the Sales Location from the list</inlineHelpText>
+    <label>Sales Location</label>
+    <required>false</required>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>true</sorted>
+            <value>
+                <fullName>Coventry</fullName>
+                <default>false</default>
+                <label>Coventry</label>
+            </value>
+            <value>
+                <fullName>Elstree</fullName>
+                <default>false</default>
+                <label>Elstree</label>
+            </value>
+            <value>
+                <fullName>Germany</fullName>
+                <default>false</default>
+                <label>Germany</label>
+            </value>
+            <value>
+                <fullName>Glasgow</fullName>
+                <default>false</default>
+                <label>Glasgow</label>
+            </value>
+            <value>
+                <fullName>Holland</fullName>
+                <default>false</default>
+                <label>Holland</label>
+            </value>
+            <value>
+                <fullName>Hong Kong</fullName>
+                <default>false</default>
+                <label>Hong Kong</label>
+            </value>
+            <value>
+                <fullName>London</fullName>
+                <default>false</default>
+                <label>London</label>
+            </value>
+            <value>
+                <fullName>Manchester</fullName>
+                <default>false</default>
+                <label>Manchester</label>
+            </value>
+            <value>
+                <fullName>Romania</fullName>
+                <default>false</default>
+                <label>Romania</label>
+            </value>
+            <value>
+                <fullName>Sheffield</fullName>
+                <default>false</default>
+                <label>Sheffield</label>
+            </value>
+            <value>
+                <fullName>UAE</fullName>
+                <default>false</default>
+                <label>UAE</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

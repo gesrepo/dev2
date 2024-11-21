@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ED_Event_Probability_Selection</fullName>
+    <active>true</active>
+    <description>Restricts the manual override of the Probability to only these values: 0, 25, 50, 75 and 100 for E_D_Projects and EventAndExperiential</description>
+    <errorConditionFormula>AND(($RecordType.DeveloperName = &quot;E_D_Projects&quot; ||
+$RecordType.DeveloperName = &quot;E_D_Projects_Proposal&quot; ||
+$RecordType.DeveloperName = &quot;E_D_Projects_Read_Only&quot; ||
+$RecordType.DeveloperName = &quot;EMEA_Custom_Build&quot; ||
+$RecordType.DeveloperName = &quot;EventAndExperiential&quot; ),
+IF (CASE ( Probability, 0, &#39;False&#39;, 0.25, &#39;False&#39;,0.50, &#39;False&#39;,0.75, &#39;False&#39;,1.0, &#39;False&#39;,&#39;True&#39;)= &#39;True&#39;, TRUE,FALSE))</errorConditionFormula>
+    <errorMessage>You must only select one of these values for Probability: 0, 25, 50, 75 or 100</errorMessage>
+</ValidationRule>

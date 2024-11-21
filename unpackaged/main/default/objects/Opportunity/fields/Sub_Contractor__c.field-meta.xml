@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Sub_Contractor__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>Audited - KEEP per SR 9/24/2019</description>
+    <inlineHelpText>Secondary contractor producing exhibition</inlineHelpText>
+    <label>Exhibition Sub Contractor</label>
+    <referenceTo>Account</referenceTo>
+    <relationshipLabel>Opportunities (Subcontractor)</relationshipLabel>
+    <relationshipName>R00N40000001pjqzEAA</relationshipName>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <type>Lookup</type>
+</CustomField>

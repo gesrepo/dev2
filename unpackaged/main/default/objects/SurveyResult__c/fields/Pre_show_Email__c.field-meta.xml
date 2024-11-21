@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Pre_show_Email__c</fullName>
+    <label>Pre- show  Email</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Confusion caused</fullName>
+                <default>false</default>
+                <label>Confusion caused</label>
+            </value>
+            <value>
+                <fullName>Inaccurate information</fullName>
+                <default>false</default>
+                <label>Inaccurate information</label>
+            </value>
+            <value>
+                <fullName>Slow response times</fullName>
+                <default>false</default>
+                <label>Slow response times</label>
+            </value>
+            <value>
+                <fullName>Too many/unnecessary interactions</fullName>
+                <default>false</default>
+                <label>Too many/unnecessary interactions</label>
+            </value>
+            <value>
+                <fullName>Unprofessional communication</fullName>
+                <default>false</default>
+                <label>Unprofessional communication</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

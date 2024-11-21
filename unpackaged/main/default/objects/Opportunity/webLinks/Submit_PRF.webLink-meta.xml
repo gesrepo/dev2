@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Submit_PRF</fullName>
+    <availability>online</availability>
+    <description>Validates all data has been provided, customer is approved and then sets the project to go into workflow in GBMS.</description>
+    <displayType>button</displayType>
+    <linkType>javascript</linkType>
+    <masterLabel>Submit PRF</masterLabel>
+    <openType>onClickJavaScript</openType>
+    <protected>false</protected>
+    <url>{!REQUIRESCRIPT(&quot;/soap/ajax/57.0/connection.js&quot;)}
+{!REQUIRESCRIPT(&quot;/soap/ajax/57.0/apex.js&quot;)}
+
+var Opp = new sforce.SObject(&quot;Opportunity&quot;); 
+
+Opp.Id = &#39;{!Opportunity.Id}&#39;; 
+Opp.PRF_Submitted__c=1; 
+
+var result = sforce.connection.update([Opp]); 
+
+if (result[0].success == &#39;false&#39;) 
+{ 
+alert(result[0].errors.message); 
+} 
+else 
+{ 
+//If Opportunity update was successful, update the child line items 
+var QR = sforce.connection.query(&quot;Select Id From OpportunityLineItem Where OpportunityId = &#39;&quot; + &#39;{!Opportunity.Id}&#39; + &quot;&#39;&quot;); 
+var Prods = QR.getArray(&quot;records&quot;); 
+
+sforce.connection.update(Prods); 
+
+location.reload(true); 
+}</url>
+</WebLink>

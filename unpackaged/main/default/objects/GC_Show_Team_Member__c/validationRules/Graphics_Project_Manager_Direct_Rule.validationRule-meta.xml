@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Graphics_Project_Manager_Direct_Rule</fullName>
+    <active>true</active>
+    <description>Rules for Graphics Project Manager Direct</description>
+    <errorConditionFormula>AND(
+    ISPICKVAL(Show_Role__c, &#39;Graphics Project Manager Direct&#39;),
+   (NOT(INCLUDES(User__r.GC_Show_Role__c, &#39;GC Graphics Project Manager&#39;)))
+)</errorConditionFormula>
+    <errorMessage>Only Users with Graphics Project Manager Allowed Roles can have the Graphics Project Manager Role.</errorMessage>
+</ValidationRule>

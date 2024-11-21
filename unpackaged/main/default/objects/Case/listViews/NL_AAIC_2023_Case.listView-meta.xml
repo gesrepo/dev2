@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>NL_AAIC_2023_Case</fullName>
+    <filterScope>Queue</filterScope>
+    <label>NL AAIC 2023</label>
+    <queue>NL_AAIC_2023</queue>
+    <sharedTo>
+        <allInternalUsers />
+    </sharedTo>
+</ListView>

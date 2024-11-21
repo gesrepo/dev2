@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Congress_Occurence__c</fullName>
+    <label>Congress Occurence</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Annual</fullName>
+                <default>false</default>
+                <label>Annual</label>
+            </value>
+            <value>
+                <fullName>One Time Event</fullName>
+                <default>false</default>
+                <label>One Time Event</label>
+            </value>
+            <value>
+                <fullName>Bi-Annual</fullName>
+                <default>false</default>
+                <label>Bi-Annual</label>
+            </value>
+            <value>
+                <fullName>Tri-Annual</fullName>
+                <default>false</default>
+                <label>Tri-Annual</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

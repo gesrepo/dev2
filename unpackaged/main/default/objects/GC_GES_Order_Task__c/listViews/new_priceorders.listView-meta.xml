@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>new_priceorders</fullName>
+    <columns>NAME</columns>
+    <columns>UPDATEDBY_USER</columns>
+    <columns>Show_Name__c</columns>
+    <columns>Job_Number__c</columns>
+    <columns>Item_Number__c</columns>
+    <columns>Description__c</columns>
+    <columns>Price__c</columns>
+    <columns>New_Price__c</columns>
+    <columns>QuantityNum__c</columns>
+    <columns>Status__c</columns>
+    <columns>CREATED_DATE</columns>
+    <columns>CREATEDBY_USER</columns>
+    <columns>Order_Number__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Order_Number__c</field>
+        <operation>notEqual</operation>
+    </filters>
+    <filters>
+        <field>Item_Number__c</field>
+        <operation>notContain</operation>
+        <value>999999,900,902001,902000,600517,3006,705,3008,3004,6005,6008,3002,3001,3019,9021</value>
+    </filters>
+    <filters>
+        <field>Status__c</field>
+        <operation>notEqual</operation>
+        <value>Canceled,Archived</value>
+    </filters>
+    <filters>
+        <field>CREATED_DATE</field>
+        <operation>greaterThan</operation>
+        <value>3/1/2022 12:00 AM</value>
+    </filters>
+    <filters>
+        <field>New_Price__c</field>
+        <operation>notEqual</operation>
+    </filters>
+    <label>New Price - MUST FIX</label>
+</ListView>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>NL_Rigging_Case</fullName>
+    <filterScope>Queue</filterScope>
+    <label>NL Rigging</label>
+    <queue>NL_Rigging</queue>
+    <sharedTo>
+        <allInternalUsers />
+    </sharedTo>
+</ListView>

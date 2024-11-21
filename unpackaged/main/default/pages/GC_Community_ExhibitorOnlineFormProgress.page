@@ -1,0 +1,241 @@
+<apex:page standardStylesheets="true"  showHeader="{!showHeaderVal}" sidebar="false" applyHtmlTag="{!showHeaderVal}" controller="ExhibitorOrderShowProgressController" readonly="true" >
+ <html xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <head>
+            <apex:includeScript value="{!$Resource.jQuery}" />
+            <apex:stylesheet value="{!URLFOR($Resource.Lightning_Design_System, 'assets/styles/salesforce-lightning-design-system.min.css')}" />
+            <apex:stylesheet value="{!URLFOR($Resource.GC_Assets, 'GC_Assets/css/GC_Styles.css')}" />
+            <apex:includeScript value="{!URLFOR($Resource.GC_Assets, 'GC_Assets/js/GC_init.js')}" />
+            <apex:includeScript value="{!$Resource.Alasql}"/>
+            <script>
+            Visualforce.remoting.timeout = 120000; // Set timeout at page level
+            $( document ).ready(function() {
+                $("#divId1").hide();
+            });
+                var standName='Booth Number';
+                var fName='CheckListOverView';
+                var projectNumber = GetURLParameter('projectNumber');
+                var showId = GetURLParameter('showId');
+                var secondTableStrtRow ;
+                
+                if(projectNumber == undefined) {
+                    projectNumber = null;
+                }
+                if(showId == undefined) {
+                    showId = null;
+                }
+            ExhibitorOrderShowProgressController.GetExhibitorFormProgress(
+                projectNumber,
+                showId,
+                function(results, event) {
+                    if(projectNumber.includes("0000")){
+                            standName='Stand Number';
+                            document.getElementById("standId").innerHTML = standName; 
+                    }
+                    if(event.type === 'exception'){
+                        console.log("exception");
+                        console.log(event);
+                    }else if(event.status){
+                        var json = results.replace(/&(lt|gt|quot);/g, function (m, p) { 
+                              //console.log(p);
+                            return (p == "lt") ? "<" : ((p == "gt") ? ">" : '"');
+                          });
+                            results = JSON.parse(json);
+                            if(results.ShowFormProWrapList== null && results.ExFoProWrapList == null){
+                                $("#spinnerDiv").hide();
+                                
+                                window.alert("Woops.. No report data available for this show. Please contact your GES Account Manager if you need assistance. Thank you!");
+                                $("#divId1").show();
+                            }
+                        if(results.ShowFormProWrapList!= null){
+                            secondTableStrtRow=results.ShowFormProWrapList.length+2;
+                            var table1 = '';
+                            fName+=results.ShowFormProWrapList[0].ShowName;
+                            for(i=0; i<results.ShowFormProWrapList.length; i++){
+                                table1 += '<tr>';
+                                
+                                table1 += ' <td>  '+results.ShowFormProWrapList[i].FormTitle+'</td>';
+                                table1 += ' <td>  '+results.ShowFormProWrapList[i].Submitted+'</td>';
+                                table1 += ' <td>  '+results.ShowFormProWrapList[i].Total+'</td>';
+                                table1 += ' <td>  '+results.ShowFormProWrapList[i].percentage+'</td>';
+                                
+                                table1 += '</tr>';
+                            }
+                            table1 += '<tr>';
+                            
+                            table1 += '   <td> </td>';
+                            table1 += '   <td> </td>';
+                            table1 += '   <td> </td>';
+                            table1 += '   <td> </td>';
+                            
+                            table1 += '</tr>';
+                            $("#idTable1 tbody").append(table1);
+                        }
+                        if(results.ExFoProWrapList != null){
+                            var content= '';
+                                content +=  '<tr>';
+                                content +=  '<td>  '+results.ExFoProWrapList[0].CustomerName+'</td>';
+                                content +=  '<td>  '+results.ExFoProWrapList[0].BoothNumber+'</td>';
+                                content +=  '<td>  '+results.ExFoProWrapList[0].FormTitle+'</td>';
+                                content +=  '<td>  '+results.ExFoProWrapList[0].Submitted+'</td>';
+                                content +=  '</tr>';
+                            for(i=1; i<results.ExFoProWrapList.length; i++){
+                                content +=  '<tr>';
+                                if(results.ExFoProWrapList[i].CustomerName== results.ExFoProWrapList[i-1].CustomerName){
+                                    content +=  '<td>  </td>';
+                                    content +=  '<td>  </td>';
+                                }else{
+                                    content +=  '<td>  '+results.ExFoProWrapList[i].CustomerName+'</td>';
+                                    content +=  '<td>  '+results.ExFoProWrapList[i].BoothNumber+'</td>';
+                                    
+                                }
+                                content +=  '<td>  '+results.ExFoProWrapList[i].FormTitle+'</td>';
+                                content +=  '<td>  '+results.ExFoProWrapList[i].Submitted+'</td>';
+                                
+                                content +=  '</tr>';
+                            }                   
+                            $("#idTable2 tbody").append(content);
+                        }
+                        }else{
+                        console.log(event.message);
+                    }
+                    $("#spinnerDiv").hide();
+                    $("#divId1").show();
+                }
+            );
+            
+            function exportCSV() {
+                var excelStyling={
+                    sheetid: 'Exhibitor Information',
+                    headers: false,
+                    caption: {
+                        title:'Show Details',
+                        style:'align:left;font-size:50px; font-weight:bold;'
+                    },
+                    column: {
+                        style:'font-size:30px'
+                    },
+                    row: {
+                        style: function(sheet,row,rowidx){
+                            if(rowidx==secondTableStrtRow){
+                                return 'background:#00a0af;border:1px black solid; font-weight:bold; font-size:15px';
+                            }
+                            return 'border:1px black solid; padding-left:5px; padding-right:5px;font-size:13px';
+                        }
+                    },
+                    rows: {
+                        0:{cell:{style:'background:#00a0af;border:1px black solid; font-weight:bold; font-size:15px'}}
+                        
+                    },
+                };
+                fName+=".xls";
+                var data1 = alasql('SELECT * FROM HTML("#idTable1",{headers:false})');
+                var data2 = alasql('SELECT * FROM HTML("#idTable2",{headers:false})');
+                var data = data1.concat(data2);
+                alasql('SELECT * INTO XLS("'+fName+'",?) FROM ?', [excelStyling,data]);
+            }
+            
+            function GetURLParameter(sParam) {
+                var sPageURL = window.location.search.substring(1);
+                var sURLVariables = sPageURL.split('&');
+                for (var i = 0; i < sURLVariables.length; i++)
+                {
+                    var sParameterName = sURLVariables[i].split('=');
+                    if (sParameterName[0] == sParam)
+                    {
+                        return sParameterName[1];
+                    }
+                }
+            }
+             
+            
+            </script>
+            <style>
+                
+                table tbody tr:first-child {
+                    
+                    background-color: #00a0af;
+                }       
+
+            </style>
+        </head>
+        
+        <div class="slds">
+            <c:GC_Community_Header rendered="{!((!isClassic) && (!isLightningComm))}" /> 
+            <div id="divId1">
+                <div class="slds-page-header gc-navigation--subHeader" role="banner">
+                    <div class="slds-media">
+                          <div class="slds-media__body">
+                            <p class="slds-page-header__title slds-align-middle">
+                                <span><b>Exhibitor Online Form Progress</b></span>
+                                <apex:form id="fm">
+                                    <apex:actionStatus id="serachStatusSpinner">
+                                        <apex:facet name="start">
+                                          <c:GC_Community_StatusSpinner statusMessage="Please Wait" /> 
+                                        </apex:facet>
+                                    </apex:actionStatus>
+                                    <apex:commandButton value="Back" action="{!returnToReportList}" style="right:10px;position:relative;" styleClass="slds-button slds-button--brand gc-teal-button"  rerender="none" status="serachStatusSpinner" />                                   
+                                    
+                                    <apex:commandButton value="Export Report" style="right:10px;position:relative;" styleClass="slds-button slds-button--brand gc-teal-button" onclick="exportCSV();" rerender="none" status="serachStatusSpinner"/>
+                                </apex:form>
+                                <div id="tableDivId" > 
+                                    <table  id="idTable1" border="1"  align="center" >
+                                        <caption><b>Show Information</b></caption>
+                                        <thead>
+                                            
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td style="color:  white; width:25%" ><b>Form Name</b></td>
+                                                <td style="color:  white;width:25%" ><b>Submitted</b></td> 
+                                                <td style="color:  white;width:25%" ><b>Total</b></td>
+                                                <td style="color:  white;width:25%" ><b>Progress</b></td>
+                                                
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    
+                                    <table  id="idTable2" border="1"  align="center" >
+                                        <caption><b>Exhibitor Information</b></caption>
+                                        <thead>                                         
+                                            
+                                        </thead>
+                                        <tbody>
+                                            <tr> 
+                                                <td style="color:  white;width:25%" ><b>Customer Name</b></td>
+                                                <td id="standId"  style="color:  white;width:25%" >  <b>Booth Number</b></td>
+                                                <td style="color:  white;width:25%" >  <b>Form Title</b></td>
+                                                <td style="color:  white;width:25%" >  <b>Submitted</b></td>
+                                                
+                                            </tr>
+                                        </tbody>                                    
+                                    </table>
+                                
+                                </div>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            <div id="spinnerDiv" >
+
+                    <div class="slds-spinner_container">
+                        <div class="popupBackground" />
+                        <div class="popupPanel">
+                          <div class="slds-spinner--brand slds-spinner slds-spinner--large" aria-hidden="false" role="alert">
+                            <div class="slds-spinner__dot-a"></div>
+                            <div class="slds-spinner__dot-b"></div>
+                          </div>
+                          <table border="0" width="100%" height="100%" style="text-align: center;">
+                            <tr>
+                              <td align="center" style="text-align: center;color:  white;"><b>Fetching Report... Please wait<br/></b></td>
+                            </tr>
+                          </table>
+                        </div>
+                    </div>
+<!-- style="overflow-y: auto; height:390px;" -->
+            </div>
+        
+                          
+    </div>
+</html>                                
+</apex:page>

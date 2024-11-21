@@ -1,0 +1,20 @@
+<apex:page standardController="Sales_Information_Tool__c" lightningStylesheets="true">  
+        <apex:sectionHeader title="{!$ObjectType.Sales_Information_Tool__c.label} Edit" subtitle="New {!$ObjectType.Sales_Information_Tool__c.name}"/>
+        <apex:form styleClass="input-slds">
+        <apex:pageBlock title="{!$ObjectType.Sales_Information_Tool__c.label} Edit" mode="edit">
+              
+                <apex:pageBlockButtons style="slds-align_absolute-center" location="bottom">
+                        <apex:commandButton action="{!save}" value="Save" style="slds-input" />
+                        <apex:commandButton action="{!cancel}" value="Cancel" style="slds-input"/>
+                </apex:pageBlockButtons>
+             
+                <apex:pageBlockSection showHeader="true" title="Information" columns="2">
+                     
+                        <apex:inputField required="true" value="{!Sales_Information_Tool__c.Show__c}"/>
+                        <apex:inputField required="true" value="{!Sales_Information_Tool__c.Occurrence_for_Plan__c}" />
+                        <apex:inputField required="true" value="{!Sales_Information_Tool__c.Show_Opportunity_Public_Ref__c}" />
+                    
+                </apex:pageBlockSection>
+        </apex:pageBlock>
+        </apex:form>
+</apex:page>

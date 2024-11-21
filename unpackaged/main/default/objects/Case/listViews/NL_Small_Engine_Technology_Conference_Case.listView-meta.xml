@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>NL_Small_Engine_Technology_Conference_Case</fullName>
+    <filterScope>Queue</filterScope>
+    <label>NL Small Engine Technology Conference</label>
+    <queue>NL_Small_Engine_Technology_Conference</queue>
+    <sharedTo>
+        <allInternalUsers />
+    </sharedTo>
+</ListView>

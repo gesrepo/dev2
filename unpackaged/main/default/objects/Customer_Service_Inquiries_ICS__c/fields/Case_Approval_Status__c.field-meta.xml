@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Case_Approval_Status__c</fullName>
+    <label>Case Approval Status</label>
+    <required>false</required>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>InProgress</fullName>
+                <default>false</default>
+                <label>InProgress</label>
+            </value>
+            <value>
+                <fullName>Pending</fullName>
+                <default>false</default>
+                <label>Pending</label>
+            </value>
+            <value>
+                <fullName>Case Approved</fullName>
+                <default>false</default>
+                <label>Case Approved</label>
+            </value>
+            <value>
+                <fullName>Rejected</fullName>
+                <default>false</default>
+                <label>Rejected</label>
+            </value>
+            <value>
+                <fullName>Case Open</fullName>
+                <default>true</default>
+                <label>Case Open</label>
+            </value>
+            <value>
+                <fullName>Requestor Submitted</fullName>
+                <default>false</default>
+                <label>Requestor Submitted</label>
+            </value>
+            <value>
+                <fullName>Requestor Approved</fullName>
+                <default>false</default>
+                <label>Requestor Approved</label>
+            </value>
+            <value>
+                <fullName>Requestor Rejected</fullName>
+                <default>false</default>
+                <label>Requestor Rejected</label>
+            </value>
+            <value>
+                <fullName>LOB Open</fullName>
+                <default>false</default>
+                <label>LOB Open</label>
+            </value>
+            <value>
+                <fullName>LOB Submitted</fullName>
+                <default>false</default>
+                <label>LOB Submitted</label>
+            </value>
+            <value>
+                <fullName>LOB Approved</fullName>
+                <default>false</default>
+                <label>LOB Approved</label>
+            </value>
+            <value>
+                <fullName>LOB Rejected</fullName>
+                <default>false</default>
+                <label>LOB Rejected</label>
+            </value>
+            <value>
+                <fullName>F&amp;R Open</fullName>
+                <default>false</default>
+                <label>F&amp;R Open</label>
+            </value>
+            <value>
+                <fullName>F&amp;R Submitted</fullName>
+                <default>false</default>
+                <label>F&amp;R Submitted</label>
+            </value>
+            <value>
+                <fullName>F&amp;R Approved</fullName>
+                <default>false</default>
+                <label>F&amp;R Approved</label>
+            </value>
+            <value>
+                <fullName>F&amp;R Rejected</fullName>
+                <default>false</default>
+                <label>F&amp;R Rejected</label>
+            </value>
+            <value>
+                <fullName>AR1 Open</fullName>
+                <default>false</default>
+                <label>AR1 Open</label>
+            </value>
+            <value>
+                <fullName>AR1 Submitted</fullName>
+                <default>false</default>
+                <label>AR1 Submitted</label>
+            </value>
+            <value>
+                <fullName>AR1 Approved</fullName>
+                <default>false</default>
+                <label>AR1 Approved</label>
+            </value>
+            <value>
+                <fullName>AR1 Rejected</fullName>
+                <default>false</default>
+                <label>AR1 Rejected</label>
+            </value>
+            <value>
+                <fullName>CSO Open</fullName>
+                <default>false</default>
+                <label>CSO Open</label>
+            </value>
+            <value>
+                <fullName>CSO Submitted</fullName>
+                <default>false</default>
+                <label>CSO Submitted</label>
+            </value>
+            <value>
+                <fullName>CSO Approved</fullName>
+                <default>false</default>
+                <label>CSO Approved</label>
+            </value>
+            <value>
+                <fullName>CSO Rejected</fullName>
+                <default>false</default>
+                <label>CSO Rejected</label>
+            </value>
+            <value>
+                <fullName>AR2 Open</fullName>
+                <default>false</default>
+                <label>AR2 Open</label>
+            </value>
+            <value>
+                <fullName>AR2 Submitted</fullName>
+                <default>false</default>
+                <label>AR2 Submitted</label>
+            </value>
+            <value>
+                <fullName>AR2 Approved</fullName>
+                <default>false</default>
+                <label>AR2 Approved</label>
+            </value>
+            <value>
+                <fullName>AR2 Rejected</fullName>
+                <default>false</default>
+                <label>AR2 Rejected</label>
+            </value>
+            <value>
+                <fullName>Additional Open</fullName>
+                <default>false</default>
+                <label>Additional Open</label>
+            </value>
+            <value>
+                <fullName>Additional Submitted</fullName>
+                <default>false</default>
+                <label>Additional Submitted</label>
+            </value>
+            <value>
+                <fullName>Additional Approved</fullName>
+                <default>false</default>
+                <label>Additional Approved</label>
+            </value>
+            <value>
+                <fullName>Additional Rejected</fullName>
+                <default>false</default>
+                <label>Additional Rejected</label>
+            </value>
+            <value>
+                <fullName>Case Closed</fullName>
+                <default>false</default>
+                <label>Case Closed</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

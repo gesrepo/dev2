@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>X75_Objectives_Resolved_Questions_Anse__c</fullName>
+    <description>Date Opportunity moved to 75% - Objectives Rslvd/Qstns Answered.</description>
+    <label>75% - Objectives Rslvd/Qstns Answered</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Date</type>
+</CustomField>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>UAE_AUH_Global_Healthcare_Week_Case</fullName>
+    <filterScope>Queue</filterScope>
+    <label>UAE AUH Global Healthcare Week</label>
+    <queue>UAE_AUH_Global_Healthcare_Week</queue>
+    <sharedTo>
+        <allInternalUsers />
+    </sharedTo>
+</ListView>

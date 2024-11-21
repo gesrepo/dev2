@@ -1,0 +1,5 @@
+<apex:page standardController="Oracle_Show_Booth__c" extensions="RedirectFlowController" tabStyle="Oracle_Show_Booth__c" >
+    <flow:interview name="Case_Raise_Case_from_Booth" finishLocation="{!redirectCaseFromB}" interview="{!createFromB}" >
+        <apex:param name="start_booth_id" value="{!Oracle_Show_Booth__c.Id}"/>
+    </flow:interview>
+</apex:page>

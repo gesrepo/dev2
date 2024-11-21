@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Lost_Reason__c</fullName>
+    <label>Lost Reason</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Design/Creative Direction</fullName>
+                <default>false</default>
+                <label>Design/Creative Direction</label>
+            </value>
+            <value>
+                <fullName>Existing Relationship with Vendor</fullName>
+                <default>false</default>
+                <label>Existing Relationship with Vendor</label>
+            </value>
+            <value>
+                <fullName>Insufficient Internal Resources</fullName>
+                <default>false</default>
+                <label>Insufficient Internal Resources</label>
+            </value>
+            <value>
+                <fullName>Lack of Presence in Local Market</fullName>
+                <default>false</default>
+                <label>Lack of Presence in Local Market</label>
+            </value>
+            <value>
+                <fullName>Pricing/Client Chose Less Expensive Solution</fullName>
+                <default>false</default>
+                <label>Pricing/Client Chose Less Expensive Solution</label>
+            </value>
+            <value>
+                <fullName>Project Canceled by Client</fullName>
+                <default>false</default>
+                <label>Project Canceled by Client</label>
+            </value>
+            <value>
+                <fullName>_None</fullName>
+                <default>false</default>
+                <label>_None</label>
+            </value>
+            <value>
+                <fullName>RFP Win</fullName>
+                <default>false</default>
+                <label>RFP Win</label>
+            </value>
+            <value>
+                <fullName>Decline to Bid</fullName>
+                <default>false</default>
+                <label>Decline to Bid</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

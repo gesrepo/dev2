@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Onsite_Contact_Person_Number_Other__c</fullName>
+    <description>Manual phone number entry when onsite contact person&#39;s name is used.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Manual phone number entry when onsite contact person&#39;s name is used.</inlineHelpText>
+    <label>Onsite Contact Person # Other</label>
+    <length>30</length>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

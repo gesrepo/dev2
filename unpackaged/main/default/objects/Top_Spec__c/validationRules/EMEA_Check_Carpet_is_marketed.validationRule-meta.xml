@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>EMEA_Check_Carpet_is_marketed</fullName>
+    <active>false</active>
+    <errorConditionFormula>Contracted_Carpet__c == True &amp;&amp; (
+Marketing_Carpet__c == False
+&amp;&amp;  LEN(Marketing_If_no_to_carpet_why__c) = 0)</errorConditionFormula>
+    <errorMessage>If Carpet is contracted and is not being marketed you must enter a reason why</errorMessage>
+</ValidationRule>

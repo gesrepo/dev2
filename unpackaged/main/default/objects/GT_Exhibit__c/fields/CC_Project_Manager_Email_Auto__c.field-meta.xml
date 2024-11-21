@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CC_Project_Manager_Email_Auto__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF((TEXT(Project_Manager_CrownCastle__c) == &quot;Katie Lillie&quot;),&quot;Katie.Lillie@crowncastle.com&quot;, 
+IF((TEXT(Project_Manager_CrownCastle__c) == &quot;Lisandra Fernandez&quot;),&quot;Lisandra.Fernandez@crowncastle.com&quot;, 
+IF((TEXT(Project_Manager_CrownCastle__c) == &quot;Kayleigh Fortuna&quot;),&quot;Kayleigh.Fortuna@crowncastle.com&quot;, 
+IF((TEXT(Project_Manager_CrownCastle__c) == &quot;Cassandra Zwick&quot;),&quot;Cassandra.Zwick@crowncastle.com&quot;, 
+IF((TEXT(Project_Manager_CrownCastle__c) == &quot;Stephanie Naida&quot;),&quot;Stephanie.Naida@crowncastle.com&quot;, 
+IF((TEXT(Project_Manager_CrownCastle__c) == &quot;Juanita Timney&quot;),&quot;Juanita.Timney@crowncastle.com&quot;,
+IF((TEXT(Project_Manager_CrownCastle__c) == &quot;Gina Carroll&quot;),&quot;Gina.Carroll@crowncastle.com&quot;,
+IF((TEXT(Project_Manager_CrownCastle__c) == &quot;Lisa Gebhart&quot;),&quot;Lisa.Gebhart@crowncastle.com&quot;,
+IF((TEXT(Project_Manager_CrownCastle__c) == &quot;Lacey Hull&quot;),&quot;lacey.hull@crowncastle.com&quot;,
+IF((TEXT(Project_Manager_CrownCastle__c) == &quot;Oswin Chackochan&quot;),&quot;Oswin.Chackochan@crowncastle.com&quot;,&quot; &quot;))))))))))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>CC Project Manager Email</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

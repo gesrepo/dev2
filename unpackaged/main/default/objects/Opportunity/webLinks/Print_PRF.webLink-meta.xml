@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Print_PRF</fullName>
+    <availability>online</availability>
+    <description>Prints PRF report. Data MUST sync with GBMS first.</description>
+    <displayType>button</displayType>
+    <linkType>javascript</linkType>
+    <masterLabel>Print PRF Report</masterLabel>
+    <openType>onClickJavaScript</openType>
+    <protected>false</protected>
+    <url>var myProjectType =&quot;{!Opportunity.Project_Type__c}&quot;;
+var myProjectID=&quot;{!Opportunity.GBMS_Project_ID__c}&quot;;
+
+if (myProjectID==&quot;&quot;)
+{
+alert (&quot;A Project ID has not been assigned by GBMS yet. Please wait up to 15 minutes for synchronization.&quot;);
+}
+else
+{
+if ( myProjectType == &quot;EG Retail&quot; )
+{
+//Amarab 6/24/2017 GBMS Report Server changed
+//window.open(&quot;http://reportserver.eg-home.com/ReportServer/Pages/ReportViewer.aspx?%2fGBMSReports%2fEGRetailPRFReport&amp;rs:Command=Render&amp;ProjectID=&quot;+myProjectID);
+//Amarab 1/11/2021 GBMS Upgrade Report Server changed
+//window.open(&quot;http://sqlrpt01.ges.intra/ReportServer/Pages/ReportViewer.aspx?%2fGBMSReports%2fEGRetailPRFReport&amp;rs:Command=Render&amp;ProjectID=&quot;+myProjectID);
+window.open(&quot;http://reports1.ges.com/Reports/report/GBMSReports/EGRetailPRFReport?&amp;rs:Command=Render&amp;ProjectID=&quot;+myProjectID);
+}
+else
+{
+//Amarab 6/24/2017 GBMS Report Server changed
+//window.open(&quot;http://reportserver.eg-home.com/ReportServer/Pages/ReportViewer.aspx?%2fGBMSReports%2fEGPRFReport&amp;rs:Command=Render&amp;ProjectID=&quot;+myProjectID);
+//Amarab 1/11/2021 GBMS Upgrade Report Server changed
+//window.open(&quot;http://sqlrpt01.ges.intra/ReportServer/Pages/ReportViewer.aspx?%2fGBMSReports%2fEGPRFReport&amp;rs:Command=Render&amp;ProjectID=&quot;+myProjectID);
+window.open(&quot;http://reports1.ges.com/Reports/report/GBMSReports/EGPRFReport?&amp;rs:Command=Render&amp;ProjectID=&quot;+myProjectID);
+}
+}</url>
+</WebLink>

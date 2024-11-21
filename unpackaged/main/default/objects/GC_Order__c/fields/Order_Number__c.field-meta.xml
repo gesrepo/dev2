@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Order_Number__c</fullName>
+    <description>Order Number used from the External System.  When this is filled out, the External CORE instance knows about the order and has a direct link of this order.  Field is read only on the page layouts and system but can be used for display purposes.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Order Number used from the External System.</inlineHelpText>
+    <label>Order Number</label>
+    <length>255</length>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

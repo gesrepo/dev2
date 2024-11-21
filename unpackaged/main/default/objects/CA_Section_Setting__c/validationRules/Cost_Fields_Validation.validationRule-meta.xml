@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Cost_Fields_Validation</fullName>
+    <active>true</active>
+    <description>Enter the cost fields for the Product</description>
+    <errorConditionFormula>AND(ISPICKVAL(Object_Name__c, &quot;CA_Product__c&quot;),ISBLANK( Exhibit_Cost_Fields__c ), ISBLANK( Sponsorship_Cost_Fields__c ), ISBLANK( Speaking_Engagement_Cost_Fields__c ), ISBLANK( Meeting_Room_Cost_Fields__c ), ISBLANK( Meeting_Planning_Cost_Fields__c ),ISBLANK( Event_Cost_Fields__c ))</errorConditionFormula>
+    <errorMessage>Enter field api names in all the cost fields for the object &quot;Product&quot;</errorMessage>
+</ValidationRule>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Know_Your_Show_Used_By__c</fullName>
+    <label>Used By</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Values</fullName>
+                <default>false</default>
+                <label>Values</label>
+            </value>
+            <value>
+                <fullName>To</fullName>
+                <default>false</default>
+                <label>To</label>
+            </value>
+            <value>
+                <fullName>Be</fullName>
+                <default>false</default>
+                <label>Be</label>
+            </value>
+            <value>
+                <fullName>Determined</fullName>
+                <default>false</default>
+                <label>Determined</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

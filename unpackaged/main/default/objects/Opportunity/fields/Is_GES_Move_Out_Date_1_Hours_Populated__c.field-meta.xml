@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Is_GES_Move_Out_Date_1_Hours_Populated__c</fullName>
+    <externalId>false</externalId>
+    <formula>if(isblank(GES_Move_Out_Date_1_Hours__c), &quot;No&quot;, &quot;Yes&quot;)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>Check Field for GES Move Out Date Completed.</inlineHelpText>
+    <label>Is GES Move-Out Date 1 Hours Populated?</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

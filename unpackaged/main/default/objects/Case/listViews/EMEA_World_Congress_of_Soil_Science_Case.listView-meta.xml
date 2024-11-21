@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>EMEA_World_Congress_of_Soil_Science_Case</fullName>
+    <filterScope>Queue</filterScope>
+    <label>EMEA World Congress of Soil Science</label>
+    <queue>EMEA_World_Congress_of_Soil_Science</queue>
+    <sharedTo>
+        <allInternalUsers />
+    </sharedTo>
+</ListView>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SHOW_Service_Requests__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Determine if this is a @SHOW Service Request Desk</description>
+    <inlineHelpText>Select if this is a @SHOW Service Desk show</inlineHelpText>
+    <label>@SHOW Service Requests</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>I_D_House__c</fullName>
+    <label>I&amp;D House</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>ACES</fullName>
+                <default>false</default>
+                <label>ACES</label>
+            </value>
+            <value>
+                <fullName>Coastal</fullName>
+                <default>false</default>
+                <label>Coastal</label>
+            </value>
+            <value>
+                <fullName>CSI</fullName>
+                <default>false</default>
+                <label>CSI</label>
+            </value>
+            <value>
+                <fullName>Czarnowski</fullName>
+                <default>false</default>
+                <label>Czarnowski</label>
+            </value>
+            <value>
+                <fullName>EIS</fullName>
+                <default>false</default>
+                <label>EIS</label>
+            </value>
+            <value>
+                <fullName>Elite Expo</fullName>
+                <default>false</default>
+                <label>Elite Expo</label>
+            </value>
+            <value>
+                <fullName>Expo Pros</fullName>
+                <default>false</default>
+                <label>Expo Pros</label>
+            </value>
+            <value>
+                <fullName>Expo Services</fullName>
+                <default>false</default>
+                <label>Expo Services</label>
+            </value>
+            <value>
+                <fullName>Freeman</fullName>
+                <default>false</default>
+                <label>Freeman</label>
+            </value>
+            <value>
+                <fullName>GES</fullName>
+                <default>false</default>
+                <label>GES</label>
+            </value>
+            <value>
+                <fullName>Laser</fullName>
+                <default>false</default>
+                <label>Laser</label>
+            </value>
+            <value>
+                <fullName>MS2</fullName>
+                <default>false</default>
+                <label>MS2</label>
+            </value>
+            <value>
+                <fullName>Nth Degree</fullName>
+                <default>false</default>
+                <label>Nth Degree</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>Professional Exhibitor Serv</fullName>
+                <default>false</default>
+                <label>Professional Exhibitor Serv</label>
+            </value>
+            <value>
+                <fullName>Sho-Aids</fullName>
+                <default>false</default>
+                <label>Sho-Aids</label>
+            </value>
+            <value>
+                <fullName>Sho-Link</fullName>
+                <default>false</default>
+                <label>Sho-Link</label>
+            </value>
+            <value>
+                <fullName>The Term Group</fullName>
+                <default>false</default>
+                <label>The Term Group</label>
+            </value>
+            <value>
+                <fullName>WillWork</fullName>
+                <default>false</default>
+                <label>WillWork</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PRFOther_Info__c</fullName>
+    <inlineHelpText>Select all that apply to this project.</inlineHelpText>
+    <label>PRF Other Info</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>ExpoServices Labor Only</fullName>
+                <default>false</default>
+                <label>ExpoServices Labor Only</label>
+            </value>
+            <value>
+                <fullName>Final Load Out</fullName>
+                <default>false</default>
+                <label>Final Load Out</label>
+            </value>
+            <value>
+                <fullName>International Project</fullName>
+                <default>false</default>
+                <label>International Project</label>
+            </value>
+            <value>
+                <fullName>Lease Prequal</fullName>
+                <default>false</default>
+                <label>Lease Prequal</label>
+            </value>
+            <value>
+                <fullName>Metric</fullName>
+                <default>false</default>
+                <label>Metric</label>
+            </value>
+            <value>
+                <fullName>Requires iCE</fullName>
+                <default>false</default>
+                <label>Requires iCE</label>
+            </value>
+            <value>
+                <fullName>RFP/RFI Response</fullName>
+                <default>false</default>
+                <label>RFP/RFI Response</label>
+            </value>
+            <value>
+                <fullName>SDD</fullName>
+                <default>false</default>
+                <label>SDD</label>
+            </value>
+            <value>
+                <fullName>Voblo</fullName>
+                <default>false</default>
+                <label>Voblo</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>5</visibleLines>
+</CustomField>

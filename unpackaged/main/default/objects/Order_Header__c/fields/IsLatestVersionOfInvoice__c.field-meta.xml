@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>IsLatestVersionOfInvoice__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Identifies if the invoice (excluding credits) is the latest version of the invoice. Each amendment creates an new invoice version with only the details of the amendment</description>
+    <inlineHelpText>Identifies if the invoice (excluding credits) is the latest version of the invoice.</inlineHelpText>
+    <label>Is Latest Version Of Invoice</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

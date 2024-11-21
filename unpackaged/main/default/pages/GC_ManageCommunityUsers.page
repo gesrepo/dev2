@@ -1,0 +1,122 @@
+<apex:page controller="GC_ManageCommunityUsersController" tabStyle="Manage_Community_Users__tab">
+  <apex:pageMessages id="messages" />
+  
+  <apex:form id="myForm">
+    <apex:sectionHeader title="Manage Community Users" />
+    <div>
+      <apex:outputPanel id="addUser">
+        <apex:panelGrid >
+        <apex:commandButton value="+ Add User" action="{!addUser}" rerender="popup" status="status" />
+        </apex:panelGrid>
+      </apex:outputPanel>
+    </div>
+    <c:PageBlockTableEnhancerADV targetPbTableIds="pbc, pbv" paginate="true" defaultPageSize="5" pageSizeOptions="5,10,20,30,40,50,100" enableExport="false"/>
+      <apex:pageBlock title="Client Users">
+        <apex:pageBlockTable value="{!clientResults}" var="clientUser" id="pbc">
+          <apex:column headerValue="Client User">
+            <apex:outputLink value="/{!clientUser.Id}" target="_blank">{!clientUser.FirstName} {!clientUser.LastName}</apex:outputLink>
+          </apex:column>
+          <apex:column value="{!clientUser.Email}" />
+          <apex:column value="{!clientUser.Username}" />
+          <apex:column value="{!clientUser.ContactId}" />
+          <apex:column value="{!clientUser.IsActive}" />
+          <apex:column value="{!clientProfile}" headerValue="Profile" />
+          <apex:column >
+            <apex:commandLink value="{!IF(clientUser.IsActive, 'Deactivate', 'Activate')}" action="{!updateClientRecord}">
+              <apex:param name="userId" value="{!clientUser.Id}" />
+            </apex:commandLink>
+          </apex:column>
+        </apex:pageBlockTable>
+      </apex:pageBlock>
+
+      <apex:pageBlock title="Vendor Users">
+        <apex:pageBlockTable value="{!vendorResults}" var="vendorUser" id="pbv">
+          <apex:column headerValue="Vendor User">
+            <apex:outputLink value="/{!vendorUser.Id}" target="_blank">{!vendorUser.FirstName} {!vendorUser.LastName}</apex:outputLink>
+          </apex:column>
+          <apex:column value="{!vendorUser.Email}" />
+          <apex:column value="{!vendorUser.Username}" />
+          <apex:column value="{!vendorUser.ContactId}" />
+          <apex:column value="{!vendorUser.IsActive}" />
+          <apex:column value="{!vendorProfile}" headerValue="Profile" />
+          <apex:column >
+            <apex:commandLink value="{!IF(vendorUser.IsActive, 'Deactivate', 'Activate')}" action="{!updateVendorRecord}">
+              <apex:param name="userId" value="{!vendorUser.Id}" />
+            </apex:commandLink>
+          </apex:column>
+        </apex:pageBlockTable>
+      </apex:pageBlock>
+
+    <apex:outputPanel id="popup">
+      <apex:outputPanel id="popInnerOutputPnl" styleClass="customPopup" layout="block" rendered="{!displayPopUp}">
+        <h1>Add Community User from Contact</h1>
+        <apex:commandButton value="X" title="Close the popup" action="{!closePopup}" reRender="popup" styleClass="closeButton" html-formnovalidate="formnovalidate" immediate="true"></apex:commandButton>
+        <apex:pageBlock >
+          <apex:actionStatus id="serachStatusSpinner">
+                <apex:facet name="start">
+                  <c:GC_StatusSpinner statusMessage="" /> 
+                </apex:facet>
+            </apex:actionStatus>
+
+          <apex:pageBlockSection columns="1" id="pbs1">
+            <apex:inputField value="{!tempUser.ContactId}">
+              <apex:actionSupport event="onchange" reRender="messages, popup" action="{!tempUserContactChanged}" />
+            </apex:inputField>
+            <apex:selectList value="{!selectedUserOption}" size="1" label="Type ">
+              <apex:selectOptions value="{!UserOptions}" />
+              <apex:actionSupport action="{!displayServiceType}" event="onchange" rerender="popup" status="serachStatusSpinner"/>
+            </apex:selectList>
+            
+            <!-- <apex:outputPanel id="showServiceType">
+              <apex:outputPanel id="showServiceType1" rendered="{!showServiceType}"> -->
+                <apex:selectList value="{!selectedServiceTypeOption}" size="1" label="Service Type" rendered="{!showServiceType}">
+                  <apex:selectOptions value="{!serviceTypes}" />
+                </apex:selectList>
+              <!-- </apex:outputPanel>
+            </apex:outputPanel> -->
+            <apex:inputText value="{!tempUser.FirstName}" style="width: 100%" />
+            <apex:inputText value="{!tempUser.LastName}" style="width: 100%" />
+            <apex:inputText value="{!tempUser.Email}" style="width: 100%" />
+            <apex:inputText value="{!tempUser.Username}" style="width: 100%" />
+          </apex:pageBlockSection>
+          <apex:pageBlockButtons location="bottom">
+            <apex:commandButton value="Cancel" action="{!closePopup}" styleClass="closeButton" reRender="messages, popup" html-formnovalidate="formnovalidate" immediate="true" />
+            <apex:commandButton value="Save" action="{!saveUser}" styleClass="closeButton" />
+          </apex:pageBlockButtons>
+        </apex:pageBlock>
+      </apex:outputPanel>
+    </apex:outputPanel>
+  </apex:form>
+  <style type="text/css">
+  .customPopup {
+    background-color: white;
+    border-style: solid;
+    border-width: 2px;
+    left: 20%;
+    padding: 10px;
+    position: absolute;
+    z-index: 9999;
+    /* These are the 3 css properties you will need to tweak so the pop
+                            up displays in the center of the screen. First set the width. Then set
+                            margin-left to negative half of what the width is. You can also add
+                            the height property for a fixed size pop up.*/
+    width: 500px;
+    top: 60%;
+  }
+
+  .disabledTextBox {
+    background-color: white;
+    border: 1px solid;
+    color: black;
+    cursor: default;
+    width: 90px;
+    display: table;
+    padding: 2px 1px;
+    text-align: right;
+  }
+
+  .closeButton {
+    float: right;
+  }
+  </style>
+</apex:page>

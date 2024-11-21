@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>If_Urgent_Date_Time_Required</fullName>
+    <active>true</active>
+    <description>If Urgent, Date/Time Required</description>
+    <errorConditionFormula>AND(
+URGENT__c = TRUE,
+ISBLANK(Date_Time_Needed_By__c))</errorConditionFormula>
+    <errorDisplayField>Date_Time_Needed_By__c</errorDisplayField>
+    <errorMessage>If Urgent, please enter a Date/Time Needed By.</errorMessage>
+</ValidationRule>

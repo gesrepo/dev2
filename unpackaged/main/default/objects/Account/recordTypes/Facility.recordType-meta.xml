@@ -1,0 +1,1631 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Facility</fullName>
+    <active>true</active>
+    <compactLayoutAssignment>Facility</compactLayoutAssignment>
+    <description>A physical location where a Show will occur.</description>
+    <label>Facility</label>
+    <picklistValues>
+        <picklist>AccountSource</picklist>
+        <values>
+            <fullName>Commissionable Venue Recommendation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Customer Service</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Digital CTA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Event%2FTradeshow</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Exhibitor List</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Expresso</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Inbound Call</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Inbound Email</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>LinkedIn Sales Navigator</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Marketing Sponsorship</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Organiser Referral</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Outbound Marketing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Purchased List</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Self-Generated</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Show Walk</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Social</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Web</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Website Chat</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>BX_Cross_Sell__c</picklist>
+        <values>
+            <fullName>EMEA referral to US</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Events referral to Exhibits</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Events referral to OnServices</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Exhibits referral to Events</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Exhibits referral to OnServices</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>OnServices referral to Events</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>OnServices referral to Exhibits</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>US referral to EMEA</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>BX_Customer_Type__c</picklist>
+        <values>
+            <fullName>MSA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Occasional Client</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Program</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Classification__c</picklist>
+        <values>
+            <fullName>Classic</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Portfolio</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Strategic</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>DOZISF__ZoomInfo_Enrich_Status__c</picklist>
+        <values>
+            <fullName>Enriched</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Error</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No-Match</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>EMEA_Sales_Tag__c</picklist>
+        <values>
+            <fullName>Conference</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Congress</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>D%26B</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Exhibitions</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Summit</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Exhibitor_Account_Type__c</picklist>
+        <values>
+            <fullName>Other</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Priority</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Program</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tradeshow</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Facility_AV_Provider_Type__c</picklist>
+        <values>
+            <fullName>Exclusive</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Open</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Preferred</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Facility_AV_Provider__c</picklist>
+        <values>
+            <fullName>ADM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>AEE Productions</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>AG Light and Sound</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ASP Group</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>AV Concepts</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>AV Connections</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>AV Experience</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>AV Matters</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>AV Network</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>AV Outsource</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>AV PRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>AV Partners</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>AV-Canada</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>AVI SPL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>AVMS %28Audio Visual Management Solutions%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>AVPG</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>AVPS - Audio Visual Production Services</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Absolute Productions</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Access Audio Visual</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Aesthetic Visual Solutions</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Alford Media</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Alliance AV</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Alliant</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>American AV</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Atlanta AV</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Audio Visual One</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Audio Visual One%2C Ltd%2E</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Audio Visual Technology Services %28AVTS%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BAV Services</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Backstage Logic</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bartha</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bartha Audio Visual</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bear AV</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bishop McCann</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Broadstreet</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CCR Events</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CEAVCO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CMI Communications</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CRS Rental</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cenero</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Center Stage AV</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Century Audio Visual</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Clark%E2%80%99s Audio Visual Services%2C Ltd%2E</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Concept X</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Conferencetech</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cornerstone AV</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cornerstone Technologies</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Creative Technology</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DMP Productions</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Datasis Corp</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>David Michael Productions</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Directions AV</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Dodd Technologies</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EPRAV Productions</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ETS %28Event Technology Services%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Encore AV</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EventEQ</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Evolution</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Fastforward Marketing Communications</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Fern Exposition %26 Events</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Four Moon Productions</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Freeman AV</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Freestyle Productions</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Frischkorn MEDIACO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Front Runner Productions</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Gary Musick Productions</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Glickman Productions</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Group Incorporated</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hargrove</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Harvest Productions%2C Inc%2E</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Heroic Productions</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Honeysweet Productions</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hotel Direct</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IMS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Image Technologies</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Impact Lighting %26 Production</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>In-House</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>InVision</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Inland AV</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>J %26 H</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>J%26S AV</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>JM Stamp Company</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>KVL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Kelly Companies</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Kuala Lumpur Convention Center</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>LMG</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lakeshore AV</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Leading Authorities</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>M Squared Onstage</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MIG</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MIS Audio Visual Services</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MIlls Jones</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MP Productions</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MSI</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Markey%E2%80%99s Stage Production</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Marks Productions</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mass AV</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>McCune</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Meeting Services International %28MSI%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Merkel</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Metro MultiMedia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mike Mallinson</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NMR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Provider</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Not Yet Contracted</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ON Services</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>OSA International</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Occam Events</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>On Event Services</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Onsite AV</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ovation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PRG</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PSAV</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Palazzo Lighting</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pixel</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Planitomaha</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Prestige Audio Visual</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Production Association</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Production World</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Projection</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pulse Staging</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>RRG</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Random International</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Razor Exhibits</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Reaction AV</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rick Bloom Audio Visual</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Riverview Systems</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rosemont in house</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Royal Productions</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SES</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sands AV</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sardis Media</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Seamless Event Solutions</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Self Provided</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Show Gear Productions</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ShowTec</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Smart City</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Smart Source</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Solin AV</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Southwest AV</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Specialized Event Services</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Spectrum Audio Visual</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Stage-it Inc%2E</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Stagevision Inc%2E</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Synergy - Mobiletape</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>T3</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TECHNOLOGY RESOURCE CORPORATION</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TPI Productions</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tallen Technology Rentals</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Temporary Technology</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Touch</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Trade Show Technical</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Unbridled Solutions</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Unknown</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>VAE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>VCI Event Technology</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>VEP</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>VSC AV</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>VX3</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Video West%2C Inc%2E</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Visual Technologies</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Viva</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Volume Eventz</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Webb Audio Visual</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Williams%2FGerard Productions</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>World Stage</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>avts group</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>etech</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>inVNT AV</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>invert720 productions inc</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Facility_Cleaning_Provider_Type__c</picklist>
+        <values>
+            <fullName>Exclusive</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Open</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Preferred</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Facility_Constr_Renov_New_Constr__c</picklist>
+        <values>
+            <fullName>New Construction</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Renovation</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Facility_Electrical_Provider_Type__c</picklist>
+        <values>
+            <fullName>Exclusive</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Open</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Preferred</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Facility_Electrical_Provider__c</picklist>
+        <values>
+            <fullName>Test1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Test2</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Test3</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Facility_Graphics_Provider_Type__c</picklist>
+        <values>
+            <fullName>Exclusive</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Open</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Preferred</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Facility_Graphics_Provider_del__c</picklist>
+        <values>
+            <fullName>Test1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Test2</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Test3</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Facility_Rigging_Provider_Type__c</picklist>
+        <values>
+            <fullName>Exclusive</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Open</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Preferred</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Facility_Rigging_Provider__c</picklist>
+        <values>
+            <fullName>Test1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Test2</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Test3</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Facility_Sponsorship_Provider_Type__c</picklist>
+        <values>
+            <fullName>Exclusive</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Open</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Preferred</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>GES_Relationship__c</picklist>
+        <values>
+            <fullName>Priority</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Program</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>GES_Status__c</picklist>
+        <values>
+            <fullName>Exclusive</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>None of the above</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Preferred</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>In_House_Decorator_Type__c</picklist>
+        <values>
+            <fullName>Exclusive</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Open</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Preferred</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>In_House_Decorator__c</picklist>
+        <values>
+            <fullName>Test1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Test2</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Test3</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Industry</picklist>
+        <values>
+            <fullName>Building%2C Construction%2C Home Repair</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Communications %26 Information Technology</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Education</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Financial%2C Legal%2C Real Estate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Food Sector</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Government</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Industrial%2FHeavyMachinery</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Professional Business Services</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Raw Materials %26 Science</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sports%2C Travel%2C Art %26 Consumer Services</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Transportation</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Intellecutal_Property_Rights_Ownership__c</picklist>
+        <values>
+            <fullName>Included</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Invoice_Indicator__c</picklist>
+        <values>
+            <fullName>Spiro Germany</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Invoice_Terms__c</picklist>
+        <values>
+            <fullName>100%25</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>30%25 %2F 40%25 %2F 30%25</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>50%25 %2F 50%25</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>75%25 %2F 25%25</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Number_of_Shows__c</picklist>
+        <values>
+            <fullName>Multiple Shows%2FYear</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>One Show%2FYear</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Ownership</picklist>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Private</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Public</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Subsidiary</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Payment_Terms__c</picklist>
+        <values>
+            <fullName>CT1-100%25 DEP NET 30</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CT2-55%25 DEP NET 30</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CT3-75%25 DEP NET 30</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CT4-100%25 BEFORE PROD</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CT5-CONTRACT TERMS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CT6-33-33%25 DEP NET</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CT7-50-25%25 DEP NET 30</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CT8-NET 30</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CT9 -100%25 PRIOR SHIP</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CTL - 100%25 FINAL LOAD OUT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CTLG-50%25 DEP NET 30</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>HLD-HOLD ALL ORDERS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>T10 - BALANCE DUE NET 45</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>T11 - BALANCE DUE NET 60</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>T12-75%25 DEP NET 10</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>T13-55%25 DEP NET 45</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>T14-75%25 DEP NET 45</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>T15-75%25 DEP NET 60</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>T16-55%25 DEP NET 60</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>T17-50%25 DEP NET 45</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>T18-2%25 20 NET 60</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>T19-2%25 10 NET 30</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>T20 - 15%25 DEP 50%25 INT N 60</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>T21 - 50%25 DEP 50%25 INT N 30</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>T22 - 25%25 DEP NET 30</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>T23 - 50%25 DEP 2%25 15 NET 45</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>T24-50%25 DEP NET 30</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>T25-50%25 DEP 40%25 INT N 30</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>T26-2%2E5%25 15 NET 90</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>T27-55%25 DEP NET 30</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>T28 - NET 15</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>T29-55%25 DEP NET 80</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>T30-40%25 DEP NET 90</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>T44-50%25 DEP NET 75</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Portfolio_Code__c</picklist>
+        <values>
+            <fullName>Gartner</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SME</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Portfolio__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Provider__c</picklist>
+        <values>
+            <fullName>2020</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>3D Exhibits</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Apple Rock displays</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Atmosphere</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CEP</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CSI</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Catalyst Exhibits</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Condit</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Czarnowski</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Derse</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Display Works</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Exhibit Fair</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Exhibit Plus</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Exhibit Tree</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Exhibit Works</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Exhibit Worx</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Expo Group</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Expo Technique</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Fern</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Freddie George</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Freeman</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>George P%2E Johnson</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Gilbert Displays</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Group Delphi</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>H%2EB%2E Stubbs</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hamilton Displays</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Jack Morton Productions</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Journey</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Kubrick</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Las Vegas Expo</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lazer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MC2</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mash Group</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Metro Exhibits</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Nth Degree</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pico</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pinnacle Exhibits</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Premier Dispays</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Renaissance Management</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rochester Exhibits</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rosemont Expositions</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>STAK</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Shepard Convention Services</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Skyline</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Southwest Exhibits</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sparks Exhibits</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Steel Head Exhibits</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Taylor Displays</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Term Group</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Xhibit Solutions</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Rating</picklist>
+        <values>
+            <fullName>Cold</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hot</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Warm</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Relationship_Type__c</picklist>
+        <values>
+            <fullName>Customer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Prospect</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Type</picklist>
+        <values>
+            <fullName>Convention Center</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hotel</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other Facility Types</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Vendor</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>VAT_Number_Country_Code__c</picklist>
+        <values>
+            <fullName>AE</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>crms14__reg_direct_Background_Sync__c</picklist>
+        <values>
+            <fullName>Disabled</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Enabled</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

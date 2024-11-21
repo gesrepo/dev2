@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Designer_Rule</fullName>
+    <active>true</active>
+    <description>Rules for Designers</description>
+    <errorConditionFormula>AND(
+ISPICKVAL(Show_Role__c, &#39;Designer&#39;),
+( NOT(INCLUDES(User__r.GC_Show_Role__c, &#39;GC Detailer&#39;)))
+)</errorConditionFormula>
+    <errorMessage>Only Users with Detailer Profiles can have the Designer Role.</errorMessage>
+</ValidationRule>

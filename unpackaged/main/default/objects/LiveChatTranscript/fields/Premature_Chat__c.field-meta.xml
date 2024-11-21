@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Premature_Chat__c</fullName>
+    <defaultValue>true</defaultValue>
+    <description>When a Chat Transcript does not contain any outbound messages (indicating the chat was closed without agent responding), It is considered a Premature Chat and this checkbox is set to &quot;True&quot;.</description>
+    <label>Premature Chat</label>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

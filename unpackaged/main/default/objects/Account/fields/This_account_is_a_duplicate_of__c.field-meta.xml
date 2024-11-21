@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>This_account_is_a_duplicate_of__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>This field is to be used in conjuction with the DUPLICATE_C checkbox.  When checked, one must identify which account this account is a duplicate of.</description>
+    <label>This account is a duplicate of:</label>
+    <referenceTo>Account</referenceTo>
+    <relationshipLabel>Accounts (This account is a duplicate of:)</relationshipLabel>
+    <relationshipName>DUPE_ACCOUNT</relationshipName>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Lookup</type>
+</CustomField>

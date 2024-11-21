@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Needs_Analy_and_Mtg_Schedule_Probability</fullName>
+    <active>false</active>
+    <description>Restricts the manual override of the Probability to only these values: 0, 10, 25 for stages Needs Analysis and Meeting Scheduled</description>
+    <errorConditionFormula>AND (OR (ISPICKVAL( StageName , &#39;Needs Analysis&#39;), ISPICKVAL( StageName , &#39;Meeting Scheduled&#39;)), IF (CASE ( Probability, 0, &#39;False&#39;, 0.10, &#39;False&#39;,0.25, &#39;False&#39;, &#39;True&#39;)= &#39;True&#39;, TRUE,FALSE),NOT(OR($Profile.Name = &#39;GES Interface&#39;,$Profile.Name = &#39;System Administrator&#39;)))</errorConditionFormula>
+    <errorDisplayField>Probability</errorDisplayField>
+    <errorMessage>For stages stages Needs Analysis and Meeting Scheduled, you must select one of these values for Probability: 0, 10, or 25.</errorMessage>
+</ValidationRule>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>EMEA_Luxury_Travel_Fair_Case</fullName>
+    <filterScope>Queue</filterScope>
+    <label>EMEA Luxury Travel Fair</label>
+    <queue>EMEA_Luxury_Travel_Fair</queue>
+    <sharedTo>
+        <allInternalUsers />
+    </sharedTo>
+</ListView>

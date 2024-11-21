@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>GES_Account_Executive__c</fullName>
+    <label>GES Account Executive</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Alex Boyd</fullName>
+                <default>false</default>
+                <label>Alex Boyd</label>
+            </value>
+            <value>
+                <fullName>Lori Filloon</fullName>
+                <default>false</default>
+                <label>Lori Filloon</label>
+            </value>
+            <value>
+                <fullName>Megan Siconolfi</fullName>
+                <default>false</default>
+                <label>Megan Siconolfi</label>
+            </value>
+            <value>
+                <fullName>Tammy Dettling</fullName>
+                <default>false</default>
+                <label>Tammy Dettling</label>
+            </value>
+            <value>
+                <fullName>Tara Nigro</fullName>
+                <default>false</default>
+                <label>Tara Nigro</label>
+            </value>
+            <value>
+                <fullName>n/a</fullName>
+                <default>false</default>
+                <label>n/a</label>
+            </value>
+            <value>
+                <fullName>John Boy</fullName>
+                <default>false</default>
+                <label>John Boy</label>
+            </value>
+            <value>
+                <fullName>Bullock, Deana</fullName>
+                <default>false</default>
+                <label>Bullock, Deana</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

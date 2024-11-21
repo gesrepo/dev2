@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Region_Code__c</fullName>
+    <label>Region Code</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>1:West Coast National</fullName>
+                <default>false</default>
+                <label>1:West Coast National</label>
+            </value>
+            <value>
+                <fullName>2:West Coast California</fullName>
+                <default>false</default>
+                <label>2:West Coast California</label>
+            </value>
+            <value>
+                <fullName>3:Las Vegas</fullName>
+                <default>false</default>
+                <label>3:Las Vegas</label>
+            </value>
+            <value>
+                <fullName>4:Central</fullName>
+                <default>false</default>
+                <label>4:Central</label>
+            </value>
+            <value>
+                <fullName>5:DC/Central National</fullName>
+                <default>false</default>
+                <label>5:DC/Central National</label>
+            </value>
+            <value>
+                <fullName>6:SE, Texas, NO, NY, DC</fullName>
+                <default>false</default>
+                <label>6:SE, Texas, NO, NY, DC</label>
+            </value>
+            <value>
+                <fullName>7:East National</fullName>
+                <default>false</default>
+                <label>7:East National</label>
+            </value>
+            <value>
+                <fullName>8:Quade National Sales</fullName>
+                <default>false</default>
+                <label>8:Quade National Sales</label>
+            </value>
+            <value>
+                <fullName>9:Northwest</fullName>
+                <default>false</default>
+                <label>9:Northwest</label>
+            </value>
+            <value>
+                <fullName>10:Phoenix</fullName>
+                <default>false</default>
+                <label>10:Phoenix</label>
+            </value>
+            <value>
+                <fullName>11:Reno&amp;SLC</fullName>
+                <default>false</default>
+                <label>11:Reno&amp;SLC</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>3</visibleLines>
+</CustomField>

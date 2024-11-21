@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>BMGQCE_202308_ECL_Case</fullName>
+    <filterScope>Queue</filterScope>
+    <label>BMGQCE-202308-ECL</label>
+    <queue>BMGQCE_202308_ECL</queue>
+    <sharedTo>
+        <allInternalUsers />
+    </sharedTo>
+</ListView>

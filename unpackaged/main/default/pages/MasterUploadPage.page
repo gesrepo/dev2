@@ -1,0 +1,141 @@
+<apex:page showHeader="true" sidebar="false"  standardStylesheets="true" standardController="Booth_Upload__c" extensions="MasterUploadController" action="{!RedirectIfNotFound}">
+    
+    <apex:includeScript value="{!$Resource.jQueryLib}"/>
+    <apex:stylesheet value="{!$Resource.CssTableCustomization}" />
+    <script type="text/javascript" src="/media/js/site.js?_=207805c784725de7bada944126dbaa67"></script>
+    <script type="text/javascript" src="/media/js/dynamic.php?comments-page=examples%2Fbasic_init%2Fzero_configuration.html" async=""></script>
+    <script type="text/javascript" language="javascript" src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" language="javascript" src="//cdn.datatables.net/1.10.7/js/jquery.dataTables.min.js"></script>
+    <script type="text/javascript" language="javascript" src="../resources/demo.js"></script>
+    <script type="text/javascript" class="init">
+        function initTable() {
+            $('#boothtable').DataTable(); 
+            $('#boothcontacttable').DataTable();
+        }
+        $(document).ready(function() {
+            initTable();
+        } );
+    </script>
+    
+    <apex:form id="mainForm">
+        <apex:pageMessages id="mymsg" />
+        
+        <apex:outputPanel id="header">
+            <apex:actionRegion >
+                <apex:pageBlock title="">
+                    <apex:pageBlockSection columns="1">
+                        <apex:pageBlockSectionItem >
+                            <apex:outputLabel value="{!$ObjectType.Booth_Upload__c.fields.Name.label}" />
+                            <apex:outputField value="{!boothUpload.Name}" />
+                        </apex:pageBlockSectionItem>
+                        <apex:pageBlockSectionItem >
+                            <apex:outputLabel value="{!$ObjectType.Booth_Upload__c.fields.Opportunity__c.label}" />
+                            <apex:outputPanel >
+                                <apex:inputField value="{!boothUpload.Opportunity__c}" rendered="{!boothUpload.Status__c != 'Complete'}" />
+                                <apex:outputField value="{!boothUpload.Opportunity__c}" rendered="{!boothUpload.Status__c == 'Complete'}" />
+                            </apex:outputPanel>
+                        </apex:pageBlockSectionItem>
+                        <apex:pageBlockSectionItem >
+                            <apex:outputLabel value="{!$ObjectType.Booth_Upload__c.fields.Organiser_2__c.label}" />
+                            <apex:outputPanel >
+                                <apex:inputField value="{!boothUpload.Organiser_2__c}" rendered="{!boothUpload.Status__c != 'Complete'}" />
+                                <apex:outputField value="{!boothUpload.Organiser_2__c}" rendered="{!boothUpload.Status__c == 'Complete'}" />
+                            </apex:outputPanel>
+                        </apex:pageBlockSectionItem>
+                        <apex:pageBlockSectionItem >
+                            <apex:outputLabel value="{!$ObjectType.Booth_Upload__c.fields.Status__c.label}" />
+                            <apex:outputField value="{!boothUpload.Status__c}" />
+                        </apex:pageBlockSectionItem>
+                        <apex:pageBlockSectionItem >
+                            <apex:outputLabel value="{!$ObjectType.Booth_Upload__c.fields.Confirmation_Date_Time__c.label}" />
+                            <apex:outputField value="{!boothUpload.Confirmation_Date_Time__c}" />
+                        </apex:pageBlockSectionItem>
+                    </apex:pageBlockSection>
+                    <apex:pageBlockButtons location="top" rendered="{!boothUpload.Status__c != 'Complete'}">
+                        <apex:commandButton action="{!saveRecords}" value="Save" />
+                        <apex:commandButton action="{!gotoImportBuddy}" value="Import" />
+                    </apex:pageBlockButtons> 
+                </apex:pageBlock>
+            </apex:actionRegion>
+        </apex:outputPanel>
+        <apex:outputPanel rendered="{!BatchStarted}">
+            <apex:pageBlock >
+                <apex:pageBlockSection columns="1">
+                    <apex:pageBlockSectionItem >
+                        <apex:outputPanel >
+                            {!BatchMessage} 
+                        </apex:outputPanel>
+                    </apex:pageBlockSectionItem>
+                </apex:pageBlockSection>
+                <apex:pageBlockButtons location="bottom">
+                    <apex:commandButton value="Cancel" action="{!CancelBatch}" />
+                    <apex:actionPoller action="{!CheckBatch}" interval="5" rerender="mainForm" oncomplete="initTable();" />
+                </apex:pageBlockButtons>
+            </apex:pageBlock>
+        </apex:outputPanel>
+        <apex:outputPanel id="mainBody" rendered="{!NOT(BatchStarted)}">
+            <div class="fw-container">
+                <div class="fw-body">
+                    <apex:actionRegion >
+                        <apex:pageBlock title="{!numberOfRecords} records (Page {!currentPage}/{!noPages})">
+                            <apex:pageBlockButtons location="bottom">
+                                <apex:commandButton action="{!firstPage}" value="First Page" rendered="{!currentPage > 1}" />
+                                <apex:commandButton action="{!previousPage}" value="Previous Page" rendered="{!currentPage > 1}" />
+                                <apex:commandButton action="{!nextPage}" value="Next Page" rendered="{!currentPage < noPages}" />
+                                <apex:commandButton action="{!lastPage}" value="Last Page" rendered="{!currentPage < noPages}" />
+                                <apex:commandButton rendered="{!boothUpload.Status__c != 'Complete'}" action="{!confirmRecords}" value="Confirm" onclick="if (!confirm('This cannot be undone. Are you sure?')) return false;" disabled="{!disableButtons}"/>
+                            </apex:pageBlockButtons>
+                            <apex:pageBlockSection columns="1">
+                                <apex:pageBlockSectionItem >
+                                    <apex:outputPanel >
+                                        <apex:inputText value="{!Filter}" />
+                                        <apex:commandButton value="Filter" action="{!Reload}" />
+                                    </apex:outputPanel>
+                                </apex:pageBlockSectionItem>
+                            </apex:pageBlockSection>
+                            <apex:actionFunction name="resetAlerts" action="{!resetAlerts}" rerender="empty" />
+                            <apex:outputPanel id="empty">
+                                <apex:pageMessages />
+                            </apex:outputPanel>
+                            <apex:outputPanel rendered="{!confirmalert}">
+                                <script>
+                                     alert('The Exhibitor Upload completed successfully');
+                                     resetAlerts();
+                                </script>
+                            </apex:outputPanel>
+                            <apex:outputPanel rendered="{!errorsalert}">
+                                <script>
+                                     alert('The Exhibitor Upload completed with errors. Verify the failed stagings for errors.');
+                                     resetAlerts();
+                                </script>
+                            </apex:outputPanel>
+                            <apex:pageBlockTable value="{!boothStagingList}" var="b">
+                                <apex:column headerValue="">
+                                    <apex:commandButton value="Delete" action="{!isdeleting}" id="deleteButton" onclick="if (!confirm('Are you sure?')) return;" rerender="mainBody,mymsg" oncomplete="initTable();" rendered="{!boothUpload.Status__c != 'Complete'}">
+                                        <apex:param name="bId" value="{!b.staging.Id}" />
+                                    </apex:commandButton>
+                                </apex:column>
+                                <apex:column headerValue="Status" value="{!b.staging.Status__c}" />
+                                <apex:column headerValue="Booth Staging Id">
+                                    <a href="/{!b.staging.Id}" style="display:block;">
+                                        {!b.staging.Name}
+                                    </a>
+                                </apex:column>
+                                <apex:column headerValue="Company Name" value="{!b.staging.Company__c}" />
+                                <apex:column headerValue="Address" value="{!b.staging.Address_1__c}" />
+                                <apex:column headerValue="Postal Code" value="{!b.staging.Post_Zip_Code__c}" />
+                                <apex:column headerValue="Country" value="{!b.staging.Country__c}" />
+                                <apex:column headerValue="Stand Number" value="{!b.staging.Stand_Number__c}" />
+                                <apex:column headerValue="Stand Type" value="{!b.staging.Stand_Type__c}" />
+                                <apex:column headerValue="First Name" value="{!b.staging.First_Name__c}" />
+                                <apex:column headerValue="Last Name" value="{!b.staging.Last_Name__c}" />
+                                <apex:column headerValue="Phone Number" value="{!b.staging.Phone_Number__c}" />
+                            </apex:pageBlockTable>
+                        </apex:pageBlock>
+                    </apex:actionRegion>
+                </div>
+            </div>
+        </apex:outputPanel>
+    </apex:form>
+
+</apex:page>

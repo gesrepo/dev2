@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Product_Forecast_Sales_Margin__c</fullName>
+    <description>Holds the forecasted Sales Margin Value</description>
+    <inlineHelpText>Estimated profit value by product</inlineHelpText>
+    <label>Product Forecast Sales Margin</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <type>Currency</type>
+</CustomField>

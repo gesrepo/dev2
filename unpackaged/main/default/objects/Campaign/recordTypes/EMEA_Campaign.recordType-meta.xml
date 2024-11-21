@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>EMEA_Campaign</fullName>
+    <active>true</active>
+    <description>Created to differentiate between US and EMEA for Marketo sync</description>
+    <label>EMEA Campaign</label>
+    <picklistValues>
+        <picklist>Campaign_Goal__c</picklist>
+        <values>
+            <fullName>Brand Building</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lead Generation</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Inbound_Outbound__c</picklist>
+        <values>
+            <fullName>Inbound</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Outbound</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Line_Of_Business__c</picklist>
+        <values>
+            <fullName>EMEA Exhibitions</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>North America Exhibitions</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>On Services</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Spiro</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Visit</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>onPeak</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Region__c</picklist>
+        <values>
+            <fullName>AMER</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>APAC</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EMEA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Global</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Spiro_Outbound_Sales_Targeting__c</picklist>
+        <values>
+            <fullName>General Nurture</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Newsletter Campaign</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sales Rep Nurture</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Show Targeting Campaign</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Vertical Campaign</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Status</picklist>
+        <values>
+            <fullName>Aborted</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Canceled</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Completed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>In Progress</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Launched</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Planned</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Proposed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ready to Launch</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>TwilioSF__Deliverability_Status__c</picklist>
+        <values>
+            <fullName>complete</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>pending</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>stale</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Type</picklist>
+        <values>
+            <fullName>Advertisement</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Direct Marketing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Email</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Event</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Seminar %2F Conference</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Show</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Telemarketing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Web</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Webinar</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

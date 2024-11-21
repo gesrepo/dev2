@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SHOW_OPEN_DATE__c</fullName>
+    <description>Stores values from Oracle Show Occurrence XGEC_SW_SHOW_OCCR.SHOW_OPEN_DATE column.</description>
+    <label>Show Open Date</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>DateTime</type>
+</CustomField>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Include_In_SPM__c</fullName>
+    <formula>AND( 
+NOT(CONTAINS(&#39;,Budgeted – Show by Show,Budgeted, not quoted for,CC,Closed Lost,Closed Won,Confirmed Project 100%,Contract &amp; Transition to Accnt Team,DB,DONE,Floorplanning,Forecast,IA,Lost,Meeting Scheduled,NE,Needs Analysis,Negotiation/Review,OPEN,Open / Pending,Present Proposal/RFP Response,Proposal/Price,Proposal/Quotation Sent,Prospect,Qualified,Renewal Pending,Resource Allocation,SC,SL,SL2,SL4,SM,TS - New business,Value Proposition/Proposal,Verbal Agreement,Won,&#39;, &#39;,&#39;&amp; Text(StageName)&amp;&#39;,&#39;)), 
+NOT(CONTAINS(&#39;,AV - CC,AV - CR,AV - CV,AV - DB,AV - IA,AV - LO,AV - Master,AV - PO,AV - PS,AV - TS,US - Housing,US Registration,&#39;, &#39;,&#39;&amp; RecordType.Name&amp;&#39;,&#39;)), 
+Show_Close_Date__c &lt; (TODAY() + 1460) 
+)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Include_In_SPM_Exhibition</label>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>US_TSNN_Top_250_Show__c</fullName>
+    <formula>Show_Occurrence__r.Show_Name__r.US_TSNN_Top_250__c</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>US TSNN Top 250 Show</label>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>TPS_Opt_Out__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Telephone Preference Center</description>
+    <inlineHelpText>Please check the TPS field should a customer or prospect request to be opted out.</inlineHelpText>
+    <label>TPS Opt Out</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

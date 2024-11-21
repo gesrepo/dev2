@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Carpet_Width__c</fullName>
+    <description>Carpet Width Option (Required) when Submitting a Carpet Line Item Order.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Carpet Width Option (Required) when Submitting a Carpet Line Item Order.</inlineHelpText>
+    <label>Carpet Width</label>
+    <precision>5</precision>
+    <required>false</required>
+    <scale>1</scale>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

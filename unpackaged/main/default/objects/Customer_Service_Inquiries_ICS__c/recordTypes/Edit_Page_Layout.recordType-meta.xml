@@ -1,0 +1,336 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Edit_Page_Layout</fullName>
+    <active>true</active>
+    <label>Edit Page Layout</label>
+    <picklistValues>
+        <picklist>Case_Approval_Status__c</picklist>
+        <values>
+            <fullName>AR1 Approved</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>AR1 Open</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>AR1 Rejected</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>AR1 Submitted</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>AR2 Approved</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>AR2 Open</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>AR2 Rejected</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>AR2 Submitted</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Additional Approved</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Additional Open</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Additional Rejected</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Additional Submitted</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CSO Approved</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CSO Open</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CSO Rejected</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CSO Submitted</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Case Approved</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Case Closed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Case Open</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>F%26R Approved</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>F%26R Open</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>F%26R Rejected</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>F%26R Submitted</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>InProgress</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>LOB Approved</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>LOB Open</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>LOB Rejected</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>LOB Submitted</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pending</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rejected</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Requestor Approved</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Requestor Rejected</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Requestor Submitted</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Case_Requestor_Approval_Status__c</picklist>
+        <values>
+            <fullName>Approved</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Open</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rejected</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Submitted</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Priority__c</picklist>
+        <values>
+            <fullName>First Call Resolution</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>High Priority</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Low Priority</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Medium Priority</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Urgent</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Sales_Channel__c</picklist>
+        <values>
+            <fullName>E%26E %28Trade Show%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>E%26E Logistics %28Trade Show%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>E%26E%28GBMS%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Revenue Exhibitor</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Revenue Logistics</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Revenue Show Org</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Storage</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Source__c</picklist>
+        <values>
+            <fullName>Chat</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Email</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Fax</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Outbound</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Phone</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Showsite</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Social Media</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Voicemail</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Web</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Status__c</picklist>
+        <values>
+            <fullName>AR1 Approved</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>AR1 Open</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>AR1 Submitted</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>AR2 Approved</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>AR2 Open</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>AR2 Submitted</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Approved</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>F%26R Approved</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>F%26R Open</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>F%26R Submitted</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>InProgress</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>LOB Approved</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>LOB Open</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>LOB Submitted</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Open</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pending</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Requestor Approved</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Requestor Open</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Requestor Submitted</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Submitted</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

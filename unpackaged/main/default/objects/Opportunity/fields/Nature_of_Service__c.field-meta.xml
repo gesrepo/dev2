@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Nature_of_Service__c</fullName>
+    <label>Nature of Service</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>ADVANTAGE PACKAGE</fullName>
+                <default>false</default>
+                <label>ADVANTAGE PACKAGE</label>
+            </value>
+            <value>
+                <fullName>FIRM QUOTE</fullName>
+                <default>false</default>
+                <label>FIRM QUOTE</label>
+            </value>
+            <value>
+                <fullName>I&amp;D ONLY</fullName>
+                <default>false</default>
+                <label>I&amp;D ONLY</label>
+            </value>
+            <value>
+                <fullName>I&amp;D TURNKEY</fullName>
+                <default>false</default>
+                <label>I&amp;D TURNKEY</label>
+            </value>
+            <value>
+                <fullName>MULTI-EVENT</fullName>
+                <default>false</default>
+                <label>MULTI-EVENT</label>
+            </value>
+            <value>
+                <fullName>MULTI-YEAR</fullName>
+                <default>false</default>
+                <label>MULTI-YEAR</label>
+            </value>
+            <value>
+                <fullName>PRODUCTION I&amp;D</fullName>
+                <default>false</default>
+                <label>PRODUCTION I&amp;D</label>
+            </value>
+            <value>
+                <fullName>PRODUCTION &amp; SERVICES &amp; I&amp;D</fullName>
+                <default>false</default>
+                <label>PRODUCTION &amp; SERVICES &amp; I&amp;D</label>
+            </value>
+            <value>
+                <fullName>PRODUCTION ONLY</fullName>
+                <default>false</default>
+                <label>PRODUCTION ONLY</label>
+            </value>
+            <value>
+                <fullName>SERVICES &amp; I&amp;D</fullName>
+                <default>false</default>
+                <label>SERVICES &amp; I&amp;D</label>
+            </value>
+            <value>
+                <fullName>SERVICES ONLY</fullName>
+                <default>false</default>
+                <label>SERVICES ONLY</label>
+            </value>
+            <value>
+                <fullName>SPECIAL</fullName>
+                <default>false</default>
+                <label>SPECIAL</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

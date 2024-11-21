@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Graphics_Order_Tasks</fullName>
+    <columns>NAME</columns>
+    <columns>Show_Name__c</columns>
+    <columns>Order__c</columns>
+    <columns>Description__c</columns>
+    <columns>Item_Number__c</columns>
+    <columns>Sign_Title__c</columns>
+    <columns>QuantityNum__c</columns>
+    <columns>User_Item_Description__c</columns>
+    <columns>Show_Management_Field__c</columns>
+    <columns>Status__c</columns>
+    <columns>Order_Number__c</columns>
+    <columns>Line_Item_Number__c</columns>
+    <columns>Line_Item_Status__c</columns>
+    <columns>CREATEDBY_USER</columns>
+    <columns>UPDATEDBY_USER</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Item_Template__c</field>
+        <operation>contains</operation>
+        <value>Graphics</value>
+    </filters>
+    <filters>
+        <field>Status__c</field>
+        <operation>notEqual</operation>
+        <value>Archived</value>
+    </filters>
+    <label>Graphics Order Tasks</label>
+    <language>en_US</language>
+</ListView>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>EMEA_Check_Rigging_is_marketed</fullName>
+    <active>false</active>
+    <errorConditionFormula>Contracted_Rigging__c  == True &amp;&amp; (
+ Marketing_Rigging__c  == False
+&amp;&amp;  LEN(  Rigging_Detail__c   ) = 0)</errorConditionFormula>
+    <errorMessage>If rigging is contracted and are not being marketed you must enter a reason why</errorMessage>
+</ValidationRule>

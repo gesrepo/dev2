@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Included_in_Lead_Gen_Move__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Those opportunities that were moved from a Tradeshow Owner to be used in the New (2013) Lead Gen process for Small Tradeshows</description>
+    <label>Included in Lead Gen Move</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

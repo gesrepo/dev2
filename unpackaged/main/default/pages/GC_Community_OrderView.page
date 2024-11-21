@@ -1,0 +1,1782 @@
+<apex:page standardStylesheets="true" showHeader="false" sidebar="false" applyHtmlTag="false" applyBodyTag="false" docType="html-5.0" controller="GC_OrderViewController" action="{!loadAction}">
+    
+    <html xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        
+        <head> 
+            <apex:includeScript value="{!$Resource.jQuery}" /> 
+            <!--<apex:includeScript value="{!URLFOR($Resource.GC_Assets, 'GC_Assets/js/jquery-ui.js')}" />
+<apex:stylesheet value="{!URLFOR($Resource.GC_Assets, 'GC_Assets/css/jquery-ui.css')}" />-->
+            <apex:includeScript value="{!URLFOR($Resource.GC_Assets, 'GC_Assets/js/GC_init.js')}" />
+            <!-- <apex:includeScript value="{!URLFOR($Resource.GC_DateTimePicker, 'GC_DateTimePicker/build/jquery.datetimepicker.full.min.js')}" /> -->
+            <apex:stylesheet value="{!URLFOR($Resource.Lightning_Design_System, 'assets/styles/salesforce-lightning-design-system.min.css')}" />
+            <apex:stylesheet value="{!URLFOR($Resource.GC_Assets, 'GC_Assets/css/GC_Styles.css')}" />
+            <!-- <apex:stylesheet value="{!URLFOR($Resource.GC_DateTimePicker, 'GC_DateTimePicker/jquery.datetimepicker.css')}" /> -->
+            
+            
+        </head>
+        <script type="text/javascript"> 
+        var obtainedProducts = false;
+        
+        
+        
+        // $j = jQuery.noConflict();
+        //jQuery(document).ready(function(){
+        //     $j(".prompt_close").click(function(){
+        //         console.log('tst');
+        //         $j(".prompt").hide();
+        //     });
+        
+        
+        
+        //     function bindEvent(){
+        //         $j('[id$=close]').bind( "click", function() {
+        //           alert( "Test" );
+        //         });
+        //     }
+        // });
+        
+        function cancelPopUp()
+        {
+            console.log('tst');
+            jQuery(".prompt").hide();
+        }
+        
+        function uploadFile()
+        {
+            jQuery('#fileUploadDialog').hide();
+            uploadFileAction();
+            return false;
+        }
+        
+        function sendEmail()
+        {
+            jQuery(".prompt").hide(); 
+            var listEmailIds = [];
+            var listEmailIds1 = [];
+            var listEmailIds2 = [];
+            var stringlistEmailIds = '';
+            
+            jQuery('#emailList input:checkbox:checked').each(function() {
+                listEmailIds.push(jQuery(this).parent().parent().parent().find('#emailShowMem').html());
+                console.log('checked', listEmailIds);
+            })
+            
+            jQuery('#emailList1 input:checkbox:checked').each(function() {
+                listEmailIds1.push(jQuery(this).parent().parent().parent().find('#emailShowMem1').html());
+                console.log('checked1', listEmailIds1);
+            })
+            
+            jQuery('#emailList2 input:checkbox:checked').each(function() {
+                listEmailIds2.push(jQuery(this).parent().parent().parent().find('#emailShowMem2').html());
+                console.log('checked2', listEmailIds2);
+            })
+            
+            for (i = 0; i < listEmailIds.length; i++) { 
+                stringlistEmailIds += listEmailIds[i] + ",";
+            }
+            
+            for (i = 0; i < listEmailIds1.length; i++) { 
+                stringlistEmailIds += listEmailIds1[i] + ",";
+            }
+            
+            for (i = 0; i < listEmailIds2.length; i++) { 
+                stringlistEmailIds += listEmailIds2[i] + ",";
+            }
+            
+            jQuery('[id$=emailDefaultList]').val(stringlistEmailIds);
+            
+            passEmailListToController();
+        }
+        
+        function saveDefault() 
+        {
+            jQuery(".prompt").hide(); 
+            var listEmailIds = [];
+            var listEmailIds1 = [];
+            var listEmailIds2 = [];
+            var stringlistEmailIds = '';
+            jQuery('#emailList input:checkbox:checked').each(function() {
+                listEmailIds.push(jQuery(this).parent().parent().parent().find('#emailShowMem').html());
+                console.log('checked', listEmailIds);
+            })
+            
+            jQuery('#emailList1 input:checkbox:checked').each(function() {
+                listEmailIds1.push(jQuery(this).parent().parent().parent().find('#emailShowMem1').html());
+                console.log('checked1', listEmailIds1);
+            })
+            
+            jQuery('#emailList2 input:checkbox:checkaed').each(function() {
+                listEmailIds2.push(jQuery(this).parent().parent().parent().find('#emailShowMem2').html());
+                console.log('checked2', listEmailIds2);
+            })
+            
+            for (i = 0; i < listEmailIds.length; i++) { 
+                stringlistEmailIds += listEmailIds[i] + ","; 
+            }
+            
+            for (i = 0; i < listEmailIds1.length; i++) { 
+                stringlistEmailIds += listEmailIds1[i] + ",";
+            }
+            
+            for (i = 0; i < listEmailIds2.length; i++) { 
+                stringlistEmailIds += listEmailIds2[i] + ",";
+            }
+            
+            jQuery('[id$=emailDefaultList]').val(stringlistEmailIds);
+            
+            passEmailListToController1();
+        }
+        
+        function DeleteOrders() {
+            if ({!checkVendorStatus}) {
+                if (confirm('Task has been sent to Vendor.  Are you sure you want to delete?')) {
+                    DeleteOrder();
+                    return true;
+                } else 
+                {
+                    return false; 
+                }
+            } else {
+                DeleteOrder();
+                return true;
+            }
+            
+        }
+        
+        function searchItems()
+        {
+            console.log('Inside SearchItem');
+            var content;
+            var searchText = jQuery('#searchInput').val().toLowerCase();
+            jQuery('[id$=serachItemHidden]').val('searchItemHidden');
+            var listOfItems = [];
+            jQuery('[id$=itemSelect] option').filter(function(){
+                if(jQuery(this).val().toLowerCase().indexOf(searchText) > -1)
+                {
+                    listOfItems.push(jQuery(this).val());
+                    //return true;
+                }
+                
+                /* Modified the search for SAL 519 */
+                
+            });
+            if(listOfItems.length == 0) {
+                jQuery('#noSearchText').show();
+            } else
+                if(listOfItems.length == 1) {
+                    jQuery('[id$=itemSelect]').val(listOfItems[0]).change();
+                } else
+                {
+                    content = '';
+                    for(i=0; i<listOfItems.length; i++){
+                        content +=  '<tr>';
+                        content +=  '       <td role="gridcell" class="slds-cell-shrink" scope="col" width="100%">';
+                        content +=  '               <input name="itemName" type="radio" style="margin-right: 2" value="' + listOfItems[i]  + '"/>';
+                        content +=  '       </td>';
+                        content +=  '       <td> &nbsp;&nbsp;'+ listOfItems[i]  + '</td>';
+                        content +=  '   </tr>';
+                    }
+                    jQuery("#itemTable tbody").append(content);
+                    jQuery('#itemSelectionDialog').show();
+                }
+            return true;
+        }
+        
+        function selectItemFromList() {
+            var radioValue = jQuery("input[name='itemName']:checked").val();
+            listOfItems=[];
+            content = null;
+            searchText=null;
+            jQuery('#itemSelectionDialog').hide();
+            jQuery('[id$=itemSelect]').val(radioValue).change();
+            jQuery('#itemTable tbody').empty();
+        }
+        
+        function closeItemPopup() {
+            jQuery('#itemTable tbody').empty();
+            jQuery('#itemSelectionDialog').hide();
+        }
+        
+        function closeItemPopup() {
+            jQuery('#itemTable tbody').empty();
+            jQuery('#itemSelectionDialog').hide();
+        }
+        
+        
+        
+        //Rahul: Added this function for SAL 512 
+        jQuery(document).ready(function(){    
+            
+            jQuery(document).on("keypress", "input", function() {
+                if(event.keyCode == 13){
+                    
+                    if(event.target.id == 'searchInput' ) {
+                        //searchItems();
+                        populateProductList();
+                    } 
+                    return false;
+                }
+            });
+        });
+        
+        
+        <!--SAL - 586 -->
+            function showFileUploadPopup() {
+                jQuery('#fileUploadDialog').show();
+            }
+        
+        function closefileUploadDialog() {
+            jQuery('#fileUploadDialog').hide();
+        }
+        
+        <!--SAL - 586 Ends Here-->
+            
+            $( document ).ready(function() {
+                window.parent.document.getElementsByName("NewFile" )[0].style.visibility ='hidden';
+                var url_string = window.location.href;
+                var url = new URL(url_string);
+                var scrollDiv = url.searchParams.get("scrolltodiv");
+                if(scrollDiv != undefined) {
+                    $('html, body').animate({ scrollTop: $('#'+scrollDiv).offset().top }, 'slow');
+                }
+                
+                $('#publisherAttachContentPost').trigger('click');
+                $('#chatterUploadFileAction').trigger('click');
+                //$('.uploadFileSizeLimit').hide();           
+                $('.contentPublisherSlideDown.customPanel.alignTop').css('border', '0');
+                $('.clearContentPanelButtonContainer').hide();
+                $('.publisherFeedItemTypeChoices').hide();      
+                $('.cxfeedinnerwrapper').hide();  
+                $('.publisherBottomBarPlaceholder').hide();
+                $('.publisherTextAreaPlaceholder.alignCenter').hide();
+            })
+            
+            function uploadJSAction(){
+                if($('.file')[1].files.length > 0){
+                    $('#publishersharebutton').trigger('click');
+                    alert('Please refresh the page once the upload is finished. Thank you. Press Ok to continue.');
+                    
+                }else{
+                    alert('Please select a file');
+                }
+            }
+        
+        
+        </script>
+        <style>
+            .bPageBlock .pbBody.dataCol {
+            border:0px;
+            }
+            
+            .bPageBlock .pbBody.labelCol {
+            border:0px;
+            }  
+            .pbSubheader { 
+            border-style: hidden!important;
+            background-color: #edeff2!important;
+            } 
+        </style>
+        
+        <body>
+            <div class="slds">
+                <c:GC_Community_Header />               
+                <apex:form >
+                    <apex:outputPanel id="HomeGesPanel">
+                        <apex:outputPanel rendered="{!!(selectedGesTask != null)}"> 
+                            <apex:outputPanel id="HomeVendorPanel">
+                                <apex:outputPanel rendered="{!!(selectedVendorTask != null)}"> 
+                                    <apex:outputPanel rendered="{!CurrentOrder != null}">
+                                        <div class="slds-page-header gc-navigation--subHeader" role="banner">
+                                            <div class="slds-media">
+                                                <div class="slds-media__figure">
+                                                    <apex:image url="{!URLFOR($Resource.GC_Assets, 'GC_Assets/img/custom13_60_teal.png')}" />
+                                                </div>
+                                                <div class="slds-media__body">
+                                                    <p class="slds-page-header__title slds-truncate slds-align-middle">Order View Page for Order: {!CurrentOrder.Name}</p>
+                                                    <!-- <p class="slds-text-body--small slds-page-header__info">{!CurrentOrder.Owner.Name} • {!CurrentOrder.CreatedDate}</p> -->
+                                                    <p class="slds-text-body--small slds-page-header__info">{!CurrentOrder.Owner.Name} • &nbsp;
+                                                        <apex:outputField value="{!CurrentOrder.CreatedDate}" /> </p>
+                                                </div>
+                                                <div class="slds-col slds-no-flex--align-center">
+                                                    <div class="slds-grid--align-center">
+                                                        <div class="slds-button">
+                                                            <apex:commandButton title=" Go back to Connect2 Show" action="{!URLFOR($Page.GC_Community_HomePage,null,[showId=CurrentOrder.Connect2_Show__c])}" value="Back To Show" id="backToShow" styleClass="slds-button slds-button--brand gc-teal-button"  />
+                                                            <apex:commandButton action="{!SelectTaskToSubmit}" value="Submit All" style="left:20px;position:relative;" styleClass="slds-button slds-button--brand gc-teal-button" rendered="{!($Profile.Name !='GC Community Vendor')}" />
+                                                            
+                                                            <!--   <apex:commandButton title="{!CommunitySubmitTitle}" onkeypress="code = e.keyCode ? e.keyCode : e.which;if(code==13){alert('hi');this.blur();actionFunction();}" action="{!submitOrder}" value="Submit All" styleClass="slds-button slds-button--brand gc-teal-button" rendered="{!CanSubmit}"  status="submitOrderStatusSpinner" /> -->
+                                                            <!-- reRender="statuses, messages, outputQueries" -->
+                                                            
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </apex:outputPanel>
+                                </apex:outputPanel>
+                            </apex:outputPanel>
+                        </apex:outputPanel>
+                    </apex:outputPanel>
+                </apex:form>
+                <!--  <div id="fileUploadDialog"  align = "center" style="display:none;">
+<div role="alertdialog" class="slds-modal slds-fade-in-open slds-modal--prompt prompt">
+<!--<div class="slds-modal__container" style="width:600px;height: 500px;">
+<div class="slds-modal__header">
+<button class="slds-button slds-modal__close slds-button--icon-inverse prompt_close" title="Close" style="color: #b41955!important;" onclick="closefileUploadDialog();return false;">
+<svg aria-hidden="true" class="slds-button__icon slds-button__icon--large">
+<use href="{!URLFOR($Resource.Lightning_Design_System, '/assets/icons/action-sprite/svg/symbols.svg#close')}"></use>
+</svg>
+<span class="slds-assistive-text">Close</span>
+</button>
+<h2 class="slds-text-heading--medium" id="prompt-heading-id">Upload File</h2>
+</div>
+<div class="slds-modal__content slds-p-around--medium">
+<apex:inputFile value="{!fileToUpload.versionData}" fileName="{!fileToUpload.pathOnClient}" />
+</div>  
+<div class="slds-modal__footer slds-theme--default">  
+<apex:commandbutton styleclass="slds-button slds-button--brand gc-teal-button prompt_close" id="uploadFileButton" action="{!doUpload}" value="Upload" ></apex:commandbutton> 
+<apex:commandbutton styleclass="slds-button slds-button--brand gc-teal-button prompt_close" id="closeFileButton" onclick="closefileUploadDialog();return false;" value="Cancel" ></apex:commandbutton> 
+</div>
+</div>  
+
+<div class="slds-form-element__row">
+<div class="slds-form-element slds-size--1-of-2 slds-p-horizontal--small " role="banner">
+<table>
+<tr>
+<td>
+<chatter:feed entityId="{!uploadToThisVOT.id }" />
+</td>
+<td style="margin-top: 10px; position: absolute; width:100%;">
+<div class="slds-card__header slds-grid" role="banner">
+<div class="slds-col slds-no-flex--align-center">
+<div class="slds-grid--align-center">
+<div class="slds-button" >  
+
+<button onclick="uploadJSAction()" Class="slds-button slds-button--brand gc-teal-button">Upload File</button>   
+</div>
+</div>
+</div>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+
+</div>
+<div class="slds-backdrop slds-backdrop--open prompt"></div>
+</div> -->
+                <apex:form style="width: 100%" id="theForm">
+                    <apex:actionFunction name="DeleteOrder" action="{!deleteOrderAction}" status="deleteStatus" reRender="statuses, messages" />
+                    <apex:outputPanel id="statuses">
+                        <apex:actionStatus id="connectingStatusSpinner">
+                            <apex:facet name="start">
+                                <c:GC_Community_StatusSpinner statusMessage="Connecting." />
+                            </apex:facet>
+                        </apex:actionStatus>
+                        <apex:actionStatus id="obtainBoothAreasStatusSpinner">
+                            <apex:facet name="start">
+                                <c:GC_Community_StatusSpinner statusMessage="Obtaining Delivery Locations." />
+                            </apex:facet>
+                        </apex:actionStatus>
+                        <apex:actionStatus id="changingBoothAreaStatusSpinner">
+                            <apex:facet name="start">
+                                <c:GC_Community_StatusSpinner statusMessage="Updating Delivery Locations." />
+                            </apex:facet>
+                        </apex:actionStatus>
+                        <apex:actionStatus id="obtainProductsStatusSpinner">
+                            <apex:facet name="start">
+                                <c:GC_Community_StatusSpinner statusMessage="Obtaining Products." />
+                            </apex:facet>
+                        </apex:actionStatus>
+                        <apex:actionStatus id="submitTaskStatusSpinner">
+                            <apex:facet name="start">
+                                <!-- <c:GC_Community_StatusSpinner statusMessage="Submitting Task to AM." /> -->
+                                <c:GC_Community_StatusSpinner statusMessage="Submitting." />
+                            </apex:facet>
+                        </apex:actionStatus>
+                        <apex:actionStatus id="savedefaultStatusSpinner">
+                            <apex:facet name="start">
+                                <!-- <c:GC_Community_StatusSpinner statusMessage="Submitting Task to AM." /> -->
+                                <c:GC_Community_StatusSpinner statusMessage="Saving." />
+                            </apex:facet>
+                        </apex:actionStatus>
+                        <apex:actionStatus id="selectCategoryStatus">
+                            <apex:facet name="start">
+                                <c:GC_Community_StatusSpinner statusMessage="Changing Category." />
+                            </apex:facet>
+                        </apex:actionStatus>
+                        <apex:actionStatus id="selectItemStatus">
+                            <apex:facet name="start">
+                                <c:GC_Community_StatusSpinner statusMessage="Selecting Item." />
+                            </apex:facet>
+                        </apex:actionStatus>
+                        <apex:actionStatus id="submitOrderStatusSpinner">
+                            <apex:facet name="start">
+                                <c:GC_Community_StatusSpinner statusMessage="Submitting Order." />
+                            </apex:facet>
+                        </apex:actionStatus>
+                        <apex:actionStatus id="deleteStatus">
+                            <apex:facet name="start">
+                                <c:GC_Community_StatusSpinner statusMessage="Deleting order and its associated tasks." />
+                            </apex:facet>
+                        </apex:actionStatus>
+                        <apex:actionStatus id="loadVendorsSpinner">
+                            <apex:facet name="start">
+                                <c:GC_Community_StatusSpinner statusMessage="Loading Vendors." />
+                            </apex:facet>
+                        </apex:actionStatus>
+                        <apex:actionStatus id="cancelTaskStatusSpinner">
+                            <apex:facet name="start">
+                                <c:GC_Community_StatusSpinner statusMessage="Canceling" />
+                            </apex:facet>
+                        </apex:actionStatus>
+                        <apex:actionStatus id="deleteTaskSpinner">
+                            <apex:facet name="start">
+                                <c:GC_Community_StatusSpinner statusMessage="Removing task" />
+                            </apex:facet>
+                        </apex:actionStatus>
+                        <apex:actionStatus id="sendTaskSpinner">
+                            <apex:facet name="start">
+                                <c:GC_Community_StatusSpinner statusMessage="Sending e-mail" />
+                            </apex:facet>
+                        </apex:actionStatus>
+                        
+                        <apex:actionStatus id="reworkTaskStatusSpinner">
+                            <apex:facet name="start">
+                                <c:GC_StatusSpinner statusMessage="Resetting to new for Update." />
+                            </apex:facet>
+                        </apex:actionStatus>
+                    </apex:outputPanel>
+                    <!-- PAGE HEADER -->
+                    <apex:outputPanel id="orderPanel">
+                        <apex:outputPanel rendered="{!!(selectedGesTask != null)}"> 
+                            <apex:outputPanel id="OrderPanelVendor">
+                                <apex:outputPanel rendered="{!!(selectedVendorTask!= null)}">   
+                                </apex:outputpanel>
+                            </apex:outputpanel>
+                        </apex:outputpanel>
+                    </apex:outputpanel>
+                    <!-- /PAGE HEADER -->
+                    <apex:pageMessages id="messages" />
+                    <apex:actionFunction action="{!sessionLoad}" name="SessionLoad_JS" status="connectingStatusSpinner" reRender="statuses, messages" oncomplete="ObtainProducts_JS();" />
+                    <!-- <apex:actionFunction action="{!coreApi.obtainBoothAreas}" name="ObtainBoothAreas_JS" status="obtainBoothAreasStatusSpinner" reRender="statuses" oncomplete="ChangeBoothArea_JS();" />
+<apex:actionFunction action="{!coreApi.selectBoothArea}" name="ChangeBoothArea_JS" status="changingBoothAreaStatusSpinner" reRender="statuses" oncomplete="ObtainProducts_JS();" />
+-->
+                    <apex:actionFunction action="{!coreApi.obtainProducts}" name="ObtainProducts_JS" status="obtainProductsStatusSpinner" reRender="statuses, messages, boothOutputPanel, pbRelatedTasks, pbVendorRelatedTasks, selectedItemOP" oncomplete="obtainedProducts = true;" />
+                    <!-- FORM -->
+                    
+                    
+                    
+                    <div class="gc-main-body--top slds-col--padded" >
+                        
+                        
+                        <apex:outputPanel id="deliveryInformation" >
+                            <apex:outputPanel rendered="{!!(selectedGesTask != null)}"> 
+                                <apex:outputPanel id="deliveryInformationVendor">
+                                    <apex:outputPanel rendered="{!!(selectedVendorTask!= null)}"> 
+                                        
+                                        <apex:pageblock id="pb" mode="maindetail">  
+                                            
+                                            <apex:pageblockSection id="pbs"  collapsible="true" title="View Delivery Information">
+                                                <tr width="100%">
+                                                    <apex:pageblock mode="maindetail" >
+                                                        
+                                                        
+                                                        <script>
+                                                        twistSection(document.getElementById('{!$Component.theForm.pb.pbs}').getElementsByTagName('img')[0])    
+                                                        </script>
+                                                        <!-- TASKS AND DEADLINES -->                            
+                                                        <div class="slds-card gc-grey-background">
+                                                            <!-- CARD HEADER -->
+                                                            
+                                                            <div class="slds-card__header slds-grid">
+                                                                <div class="slds-media slds-media--center slds-has-flexi-truncate">
+                                                                    <div class="slds-media__body" collapsible="true">
+                                                                        <h2 class="slds-text-heading--small slds-truncate"></h2>
+                                                                    </div>
+                                                                    <!--SAL-540-->
+                                                                    <div class="slds-button" role="banner">
+                                                                        <apex:commandButton title="{!EditTitle}" action="{!editAction}" value="Edit" id="editRecord" styleClass="slds-button slds-button--brand gc-teal-button" rendered="{!CanEdit}" reRender="messages" />
+                                                                        <apex:commandButton value="Delete" title="{!DeleteTitle}" rendered="{!canDelete}"   reRender="messages" styleClass="slds-button slds-button--brand gc-teal-button" onclick="DeleteOrders();"/> <!-- rendered="{!canDelete}" -->
+                                                                        <apex:commandButton action="{!exportToCSV}" value="Export to CSV" styleClass="slds-button slds-button--brand gc-teal-button" reRender="messages">
+                                                                            <apex:param name="isCommunity" value="true"></apex:param>
+                                                                        </apex:commandButton>
+                                                                        <apex:commandButton title="{!CloneTitle}" action="{!cloneAction}" value="Clone Delivery Location" styleClass="slds-button slds-button--brand gc-teal-button" rendered="{!CanClone}" reRender="messages" />
+                                                                        <apex:commandButton title="{!PrintOrderTitle}" onclick="window.open('{!URLFOR($Page.GC_ShowOnTheGoPDF, null, [orderIds=currentOrder.Id])}');" value="Print Order" styleClass="slds-button slds-button--brand gc-teal-button" reRender="messages" />
+                                                                        
+                                                                        <!-- <apex:commandButton value="Test SAL-391" reRender="messages" styleClass="slds-button slds-button--brand gc-teal-button" action="{!executeBatch}">
+</apex:commandButton> -->
+                                                                    </div>                                  
+                                                                    
+                                                                </div>
+                                                            </div>
+                                                            
+                                                            <!--SAL-540-->
+                                                            
+                                                            
+                                                            <!-- /CARD HEADER -->
+                                                            <!-- CARD BODY -->
+                                                            <div class="slds-card__body">
+                                                                <section class="slds-col--padded slds-size--1-of-1 gc-section-margin-bottom" id="sec1">
+                                                                    <!-- GES ORDER TASK DETAIL -->
+                                                                    <fieldset class="slds-form--compound gc-section-margin-top">
+                                                                        <legend class="slds-form-element__label slds-text-title--caps gc-section-margin-top">Show</legend>
+                                                                        <div class="slds-grid" style="width:935px;">
+                                                                            <!-- Left Side -->
+                                                                            <div class="slds-col--padded slds-size--1-of-1 slds-medium-size--1-of-1 slds-large-size--1-of-4">
+                                                                                <div class="slds-form-element">
+                                                                                    <apex:outputLabel value="Connect2 Show" styleClass="slds-form-element__label" />
+                                                                                    <div class="slds-form-element__control">
+                                                                                        <apex:outputLink value="{!$Page.GC_Community_HomePage}">
+                                                                                            <apex:outputText value="{!CurrentOrder.Connect2_Show__r.Name}" styleClass="slds-input--small" />
+                                                                                            <apex:param name="showId" value="{!CurrentOrder.Connect2_Show__c}" assignTo="{!showId}" />
+                                                                                        </apex:outputLink>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="slds-form-element">
+                                                                                    <apex:outputLabel value="Job Number" styleClass="slds-form-element__label" />
+                                                                                    <div class="slds-form-element__control">
+                                                                                        <apex:outputText value="{!CurrentOrder.Connect2_Show__r.Job_Number__c}" styleClass="slds-input--small" />
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <!-- Right Side -->
+                                                                            <div class="slds-col--padded slds-size--1-of-1 slds-medium-size--1-of-1 slds-large-size--1-of-4">
+                                                                                <div class="slds-form-element">
+                                                                                    <apex:outputLabel value="Show Name" styleClass="slds-form-element__label" />
+                                                                                    <div class="slds-form-element__control">
+                                                                                        <apex:outputText value="{!CurrentOrder.Connect2_Show__r.Show_Name__c}" styleClass="slds-input--small" />
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="slds-form-element">
+                                                                                    <apex:outputLabel value="Order Number" styleClass="slds-form-element__label" />
+                                                                                    <div class="slds-form-element__control">
+                                                                                        <apex:outputText value="{!CurrentOrder.Order_Number__c}" styleClass="slds-input--small" />
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="slds-col--padded slds-size--1-of-1 slds-medium-size--1-of-1 slds-large-size--1-of-4">
+                                                                                <div class="slds-form-element">
+                                                                                    <br/><br/>
+                                                                                </div>
+                                                                                <div class="slds-form-element">
+                                                                                    <apex:outputLabel value="Order Status" styleClass="slds-form-element__label" />
+                                                                                    <div class="slds-form-element__control">
+                                                                                        <apex:outputText value="{!CurrentOrder.Status__c}" styleClass="slds-input--small" />
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="slds-col--padded slds-size--1-of-1 slds-medium-size--1-of-1 slds-large-size--1-of-4">
+                                                                            </div>
+                                                                        </div>
+                                                                    </fieldset>
+                                                                    <!-- /GES ORDER TASK DETAIL -->
+                                                                    
+                                                                    <!-- DEPARTMENT AND SERVICE -->
+                                                                    <fieldset class="slds-form--compound gc-section-margin-top">
+                                                                        <legend class="slds-form-element__label slds-text-title--caps gc-section-margin-top">Delivery Information</legend>
+                                                                        <div class="slds-grid" style="width:935px;">
+                                                                            <!-- Left Side -->
+                                                                            <div class="slds-col--padded slds-size--1-of-1 slds-medium-size--1-of-1 slds-large-size--1-of-4" >
+                                                                                <div class="slds-form-element">
+                                                                                    <apex:outputLabel value="Delivery Location" styleClass="slds-form-element__label" />
+                                                                                    <div class="slds-form-element__control">
+                                                                                        <apex:outputText value="{!CurrentOrder.Booth_Area__c}" styleClass="slds-input--small" />
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="slds-form-element">
+                                                                                    <apex:outputLabel value="Order Area Description" styleClass="slds-form-element__label" />
+                                                                                    <div class="slds-form-element__control">
+                                                                                        <apex:outputText value="{!CurrentOrder.Order_Area_Description__c}" styleClass="slds-input--small" />
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="slds-col--padded slds-size--1-of-1 slds-medium-size--1-of-1 slds-large-size--1-of-4" >
+                                                                                <!-- Delivery Date/time-->
+                                                                                <div class="slds-form-element">
+                                                                                    <apex:outputLabel value="Delivery Date/Time" for="deliveryDate" styleClass="slds-form-element__label" />
+                                                                                    <div class="slds-form-element__control">
+                                                                                        <apex:outputField value="{!CurrentOrder.Delivery_Date_Time__c}" styleClass="slds-input--small" id="deliveryDate" />
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="slds-col--padded slds-size--1-of-1 slds-medium-size--1-of-1 slds-large-size--1-of-4" >
+                                                                                <!-- Completion Date/time-->
+                                                                                <div class="slds-form-element">
+                                                                                    <apex:outputLabel value="Completion Date/Time" for="completionDate" styleClass="slds-form-element__label"  />
+                                                                                    <div class="slds-form-element__control">
+                                                                                        <apex:outputField value="{!CurrentOrder.Completion_Date_Time__c}" styleClass="slds-input--small" id="completionDate" />
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="slds-col--padded slds-size--1-of-1 slds-medium-size--1-of-1 slds-large-size--1-of-4">
+                                                                                <!-- Removal Date/time-->
+                                                                                <div class="slds-form-element">
+                                                                                    <apex:outputLabel value="Removal Date/Time" for="removalDate" styleClass="slds-form-element__label" />
+                                                                                    <div class="slds-form-element__control">
+                                                                                        <apex:outputField value="{!CurrentOrder.Removal_Date_Time__c}" styleClass="slds-input--small" id="removalDate" />
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            
+                                                                        </div>
+                                                                    </fieldset>                         
+                                                                    <!--<div class="slds-grid slds-grid--align-center">
+<!--<div class="slds-col--padded slds-size--1-of-1 slds-medium-size--1-of-1 slds-large-size--1-of-4--align-center"> -->
+                                                                    <!--   <apex:image url="{!URLFOR($Resource.GC_Assert3, 'GC_Assert3/img/AddSomeOrder.jpeg')}" />                                   
+</div>-->
+                                                                    <!-- /DEPARTMENT AND SERVICE -->
+                                                                </section>
+                                                            </div>
+                                                        </div>  
+                                                        
+                                                    </apex:pageblock>  
+                                                </tr>
+                                            </apex:pageblockSection>
+                                            
+                                        </apex:pageblock>  
+                                    </apex:outputpanel>
+                                </apex:outputpanel>                     
+                            </apex:outputpanel>
+                        </apex:outputpanel>
+                        
+                        <!-- /FORM -->
+                        <!-- PAGE HEADER -->
+                        <!-- Avinash - 19/04/2017  - Start-->
+                        
+                        <!-- <div class="slds-card">  -->
+                        <apex:actionFunction name="passEmailListToController" action="{!sendEmail}" rerender="emailDefaultList, teamMemebers1,statuses, messages, pbRelatedTasks, selectedItemOP" status="submitTaskStatusSpinner"/>
+                        <apex:actionFunction name="passEmailListToController1" action="{!saveDefaultandSendEmail}" rerender="emailDefaultList, teamMemebers1"/>
+                        <apex:actionFunction name="populateProductList" action="{!coreApi.populateProductList}" status="obtainProductsStatusSpinner" oncomplete="searchItems();" reRender="itemSelect"/>
+                        <apex:outputPanel id="teamMemebers1">
+                            <apex:outputPanel rendered="{!isModalViewDisplay}" id="teamMemebers">
+                                <apex:inputHidden value="{!emailDefaultList}" id="emailDefaultList"/>
+                                <div role="alertdialog" class="slds-modal slds-fade-in-open slds-modal--prompt prompt">
+                                    <div class="slds-modal__container" style="width:600px;height: 500px;">
+                                        <div class="slds-modal__header">
+                                            <button class="slds-button slds-modal__close slds-button--icon-inverse prompt_close" title="Close" style="color: #b41955!important;" onclick="cancelPopUp();return false;">
+                                                <svg aria-hidden="true" class="slds-button__icon slds-button__icon--large">
+                                                    <use href="{!URLFOR($Resource.Lightning_Design_System, '/assets/icons/action-sprite/svg/symbols.svg#close')}"></use>
+                                                </svg>
+                                                <span class="slds-assistive-text">Close</span>
+                                            </button>
+                                            <h2 class="slds-text-heading--medium" id="prompt-heading-id">Show Team Members</h2>
+                                        </div>
+                                        <div class="slds-modal__content slds-p-around--medium">
+                                            <h3 class="slds-section-title--divider" style="display: inherit;"><b>Internal Users</b></h3>
+                                            
+                                            <table class="slds-table slds-table--bordered slds-max-medium-table--stacked-horizontal" id="emailList" style="margin-top: 12px;">
+                                                <thead>
+                                                    <tr class="slds-text-heading--label">
+                                                        <td role="gridcell" class="slds-cell-shrink" scope="col">
+                                                            <label class="slds-checkbox">
+                                                                
+                                                            </label>
+                                                        </td>
+                                                        <th scope="col">
+                                                            <span class="slds-truncate">User</span>
+                                                        </th>
+                                                        <th scope="col">
+                                                            <span class="slds-truncate">Role</span>
+                                                        </th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <apex:repeat value="{!shwTeamMemWrapList}" var="shwTM">
+                                                        <tr >
+                                                            <td role="gridcell" class="slds-cell-shrink" scope="col" >
+                                                                <label class="slds-checkbox">
+                                                                    <!-- <input type="checkbox" name="options" /> -->
+                                                                    <apex:inputCheckbox styleClass="slds-input" value="{!shwTM.isDefault}"/>
+                                                                    <span class="slds-checkbox--faux"></span>
+                                                                </label>
+                                                            </td>
+                                                            <td id="" style="display:none;">{!shwTM.memberId}</td>
+                                                            <td id="nameShowMem">{!shwTM.memberName}</td>
+                                                            <td id="">{!shwTM.memberRole}</td>
+                                                            <td id="emailShowMem" style="display:none;">{!shwTM.memberEmail}</td>
+                                                        </tr>
+                                                    </apex:repeat>
+                                                </tbody>
+                                            </table>
+                                            <br/>
+                                            
+                                            <h3 class="slds-section-title--divider" style="display: inherit;"><b>External Users</b></h3>
+                                            <br/>
+                                            <h4 class="slds-section-title--divider"><b>Show Organizer</b></h4>
+                                            <table class="slds-table slds-table--bordered slds-max-medium-table--stacked-horizontal" id="emailList1" style="margin-top: 12px;">
+                                                <br/>
+                                                <thead>
+                                                    <tr class="slds-text-heading--label">
+                                                        <td role="gridcell" class="slds-cell-shrink" scope="col">
+                                                            <label class="slds-checkbox">
+                                                                
+                                                            </label>
+                                                        </td>
+                                                        <th scope="col">
+                                                            <span class="slds-truncate">User</span>
+                                                        </th>
+                                                        <th scope="col">
+                                                            <span class="slds-truncate">Role</span>
+                                                        </th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <apex:repeat value="{!shwTeamMemWrapExList}" var="shwTMEx">
+                                                        <tr width="100%">
+                                                            <td role="gridcell" class="slds-cell-shrink" scope="col">
+                                                                <label class="slds-checkbox">
+                                                                    <!-- <input type="checkbox" name="options" /> -->
+                                                                    <apex:inputCheckbox styleClass="slds-input" value="{!shwTMEx.isDefault}"/>
+                                                                    <span class="slds-checkbox--faux"></span>
+                                                                </label>
+                                                            </td>
+                                                            <td id="" style="display:none;">{!shwTMEx.memberId}</td>
+                                                            <td id="nameShowMem1">{!shwTMEx.memberName}</td>
+                                                            <td id="">{!shwTMEx.memberRole}</td>
+                                                            <td id="emailShowMem1" style="display:none;">{!shwTMEx.memberEmail}</td>
+                                                        </tr>
+                                                    </apex:repeat>
+                                                </tbody>
+                                            </table> 
+                                            <h4 class="slds-section-title--divider"><b>Vendor</b></h4>
+                                            <table class="slds-table slds-table--bordered slds-max-medium-table--stacked-horizontal" id="emailList2" style="margin-top: 12px;">
+                                                <br/>
+                                                <thead>
+                                                    <tr class="slds-text-heading--label">
+                                                        <td role="gridcell" class="slds-cell-shrink" scope="col">
+                                                            <label class="slds-checkbox">
+                                                                
+                                                            </label>
+                                                        </td>
+                                                        <th scope="col">
+                                                            <span class="slds-truncate">User</span>
+                                                        </th>
+                                                        <th scope="col">
+                                                            <span class="slds-truncate">Role</span>
+                                                        </th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <apex:repeat value="{!shwTeamMemWrapExListVen}" var="shwTMExVen">
+                                                        <tr>
+                                                            <td role="gridcell" class="slds-cell-shrink" scope="col">
+                                                                <label class="slds-checkbox">
+                                                                    <!-- <input type="checkbox" name="options" /> -->
+                                                                    <apex:inputCheckbox styleClass="slds-input" value="{!shwTMExVen.isDefault}"/>
+                                                                    <span class="slds-checkbox--faux"></span>
+                                                                </label>
+                                                            </td>
+                                                            <td id="" style="display:none;">{!shwTMExVen.memberId}</td>
+                                                            <td id="nameShowMem2">{!shwTMExVen.memberName}</td>
+                                                            <td id="">{!shwTMExVen.memberRole}</td>
+                                                            <td id="emailShowMem2" style="display:none;">{!shwTMExVen.memberEmail}</td>
+                                                        </tr>
+                                                    </apex:repeat>
+                                                </tbody>
+                                            </table> 
+                                        </div>  
+                                        <div class="slds-modal__footer slds-theme--default"> 
+                                            <!-- <button class="slds-button slds-button--brand gc-teal-button" id="saveDefault"  onclick="return false;">Save Default</button> -->
+                                            <apex:commandButton value="Save Default" styleClass="slds-button slds-button--brand gc-teal-button" onclick="saveDefault();" /><!--oncomplete="cancelPopUp();"-->
+                                            <apex:commandButton value="Submit to Users" styleClass="slds-button slds-button--brand gc-teal-button" onclick="sendEmail();" oncomplete="cancelPopUp();"/>  
+                                            <button class="slds-button slds-button--brand gc-teal-button prompt_close" id="close"  onclick="cancelPopUp();return false;" >Cancel</button> 
+                                            <!-- <apex:commandButton value="Cancel" action="{!cancelButtonCLick}" styleClass="slds-button slds-button--brand gc-teal-button" onclick="cancelPopUp();" /> -->
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="slds-backdrop slds-backdrop--open prompt"></div>
+                            </apex:outputPanel>
+                        </apex:outputPanel> 
+                        <!-- </div> -->
+                        <!-- Avinash - 19/04/2017  - End-->
+                        <div class="slds-card">
+                            <apex:outputPanel id="GESTabs">
+                                <apex:outputPanel rendered="{!!(selectedVendorTask!= null)}">   
+                                    <apex:outputPanel id="GESNewOrderTab">
+                                        <apex:outputPanel rendered="{!!(selectedGesTask != null)}"> 
+                                            
+                                            <!-- <apex:outputPanel id="AddSomeOrders"> -->
+                                            <apex:outputpanel rendered="{!gesOrderTasks.size=0}">
+                                                
+                                                <div class="slds-grid slds-grid--align-center" >
+                                                    <br>
+                                                    <br>
+                                                    
+                                                    <apex:image url="{!URLFOR($Resource.GC_Assert3, 'GC_Assert3/img/AddSomeOrder.png')}" rendered="{!($Profile.Name !='GC Community Vendor')}" /> 
+                                                    
+                                                </br>
+                                            </br>
+                                        </div> 
+                                        
+                                        
+                                    </apex:outputPanel>
+                                    <!--  </apex:outputPanel> -->
+                                    
+                                    
+                                    <apex:outputPanel rendered="{!!isReadOnlyView}">
+                                        <div class="slds-card__header slds-grid" role="banner">
+                                            <div class="slds-col slds-has-flexi-truncate">
+                                                <div class="slds-media">
+                                                    <div class="slds-media__body">
+                                                        <h1 class="slds-text-heading--medium slds-m-right--small slds-truncate slds-align-middle">GES Order Tasks</h1>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <apex:outputPanel rendered="{!($Profile.Name !='GC Community Vendor')}" >
+                                                <div class="slds-col slds-no-flex--align-center">
+                                                    <div class="slds-grid--align-center">
+                                                        <div class="slds-button">   
+                                                        
+                                                            <apex:commandButton action="{!newTask}" value="New GES Order Task" style="left:0px;position:relative;" styleClass="slds-button slds-button--brand gc-teal-button" reRender="messages, pbRelatedTasks, selectedItemOP, deliveryInformation, orderPanel, VendorInformation, orderHistoryGES, orderHistoryVendor, GESOrderTable, HomeGesPanel, GESNewOrderTab, ImageWhenNoTask " oncomplete="if (!obtainedProducts) { SessionLoad_JS(); }" rendered="{!!isReadOnlyView}" />
+                                                            <apex:commandButton action="{!cloneOrderTask}" value="Clone GES Order Task"  style="left:10px;position:relative;" styleClass="slds-button slds-button--brand gc-teal-button" />
+                                                        
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </apex:outputPanel>
+                                        </div>
+                                    </apex:outputPanel>
+                                </apex:outputPanel>
+                            </apex:outputPanel>
+                        </apex:outputPanel>
+                    </apex:outputPanel>
+                    
+                    <!-- -SAL- 586-->
+                    <apex:actionFunction name="fileUploadLink" action="{!retrieveFiles}" oncomplete="showFileUploadPopup();"/>
+                    <!-- /PAGE HEADER -->
+                    <section class="slds-col--padded slds-size--1-of-1 tableScrollBox" id="theOrders">
+                        <apex:outputPanel id="GESInformation">
+                            <apex:outputPanel rendered="{!!(selectedVendorTask!= null)}">   
+                                <apex:outputPanel id="GESOrderTable">
+                                    <apex:outputPanel rendered="{!!(selectedGesTask != null)}"> 
+                                        
+                                        <apex:outputPanel id="pbRelatedTasks" layout="block" rendered="{!(!isReadOnlyView || $Profile.Name =='GC Community Vendor')}">
+                                            <table class="slds-table slds-table--bordered slds-max-medium-table--stacked-horizontal">
+                                                <thead>
+                                                    <tr class="slds-text-heading--label">
+                                                        <th scope="col">
+                                                            <span class="slds-truncate">Action</span>
+                                                        </th>
+                                                        <!--SAL-586-->
+                                                        <th scope="col">
+                                                            <span class="slds-truncate">GES Order #</span>
+                                                        </th>
+                                                        <th scope="col">
+                                                            <span class="slds-truncate">Files</span>
+                                                        </th>
+                                                        <th scope="col">
+                                                            <span class="slds-truncate">Status</span>
+                                                        </th>
+                                                        <!--SAL-586 ends Here-->
+                                                        <th scope="col">
+                                                            <span class="slds-truncate">Sign Title</span>
+                                                        </th>
+                                                        <th scope="col">
+                                                            <span class="slds-truncate">Item #</span>
+                                                        </th>
+                                                        <th scope="col">
+                                                            <span class="slds-truncate">Description</span>
+                                                        </th>
+                                                        <th scope="col">
+                                                            <span class="slds-truncate">User Item Description</span>
+                                                        </th>
+                                                        <th scope="col">
+                                                            <span class="slds-truncate">Price</span>
+                                                        </th>
+                                                        <th scope="col">
+                                                            <span class="slds-truncate">Total Price</span>
+                                                        </th>
+                                                        <th scope="col">
+                                                            <span class="slds-truncate">Units</span>
+                                                        </th>
+                                                        <th scope="col">
+                                                            <span class="slds-truncate">Quantity</span>
+                                                        </th>
+                                                        
+                                                        <th scope="col">
+                                                            <span class="slds-truncate">Owner</span>
+                                                        </th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <apex:repeat value="{!gesOrderTasks}" var="gesTask">
+                                                        <tr class="slds-hint-parent">
+                                                        <apex:outputPanel rendered="{!($Profile.Name !='GC Community Vendor')}" >
+                                                            <td data-label="ges-action" role="row">
+                                                                <apex:commandLink value="Clone" rendered="{!taskPermissions[gesTask.task.Id].CanClone}" target="_top" action="{!cloneTask}" reRender="statuses, messages, pbRelatedTasks, selectedItemOP, deliveryInformation, orderPanel, VendorInformation, orderHistoryGES, 
+                                                                                                                                                                                                      orderHistoryVendor, GESOrderTable, HomeGesPanel, GESNewOrderTab, ImageWhenNoTask" status="cloneTaskStatusSpinner" oncomplete="if (!obtainedProducts) { SessionLoad_JS(); }">
+                                                                    <apex:param name="taskId" value="{!gesTask.task.Id}" />
+                                                                </apex:commandLink>
+                                                                <apex:outputText rendered="{!taskPermissions[gesTask.task.Id].CanCommunityEdit}" value=" | " />
+                                                                <apex:commandLink value="Edit " rendered="{!taskPermissions[gesTask.task.Id].CanCommunityEdit}" target="_top" action="{!editTask}" reRender="statuses, messages, pbRelatedTasks, selectedItemOP, deliveryInformation, orderPanel, VendorInformation, orderHistoryGES, 
+                                                                                                                                                                                                             orderHistoryVendor, GESOrderTable, HomeGesPanel, GESNewOrderTab, ImageWhenNoTask" status="editTaskSpinner" oncomplete="if (!obtainedProducts) { SessionLoad_JS(); }">
+                                                                    <apex:param name="taskId" value="{!gesTask.task.Id}" />
+                                                                </apex:commandLink>
+                                                                <apex:outputText rendered="{!taskPermissions[gesTask.task.Id].CanRevise}" value=" | " />
+                                                                <apex:commandLink value="Revise" rendered="{!taskPermissions[gesTask.task.Id].CanRevise}" target="_top" action="{!reviseTask}" reRender="statuses, messages, pbRelatedTasks, selectedItemOP" status="reviseTaskStatusSpinner" oncomplete="if (!obtainedProducts) { SessionLoad_JS(); }">
+                                                                    <apex:param name="taskId" value="{!gesTask.task.Id}" />
+                                                                </apex:commandLink>
+                                                                <apex:outputText rendered="{!taskPermissions[gesTask.task.Id].CanCommunityCancel}" value=" | " />
+                                                                <apex:commandLink value="Cancel" rendered="{!taskPermissions[gesTask.task.Id].CanCommunityCancel}" target="_top" action="{!cancelTask}" reRender="statuses, messages, pbRelatedTasks, selectedItemOP" status="cancelTaskStatusSpinner">
+                                                                    <apex:param name="taskId" value="{!gesTask.task.Id}" />
+                                                                </apex:commandLink>
+                                                                <apex:outputText rendered="{!taskPermissions[gesTask.task.Id].CanSubmit}" value=" | " />
+                                                                <apex:commandLink value="Submit" rendered="{!taskPermissions[gesTask.task.Id].CanSubmit}" target="_top" action="{!submitTask}" reRender="statuses, messages, pbRelatedTasks, selectedItemOP, teamMemebers1" status="submitTaskStatusSpinner">
+                                                                    <apex:param name="taskId" value="{!gesTask.task.Id}" />
+                                                                </apex:commandLink>
+                                                                <apex:outputText rendered="{!taskPermissions[gesTask.task.Id].CanRecall}" value=" | " />
+                                                                <apex:commandLink value="Recall" rendered="{!taskPermissions[gesTask.task.Id].CanRecall}" target="_top" action="{!recallTask}" reRender="statuses, messages, pbRelatedTasks, selectedItemOP" status="reworkTaskStatusSpinner">
+                                                                    <apex:param name="taskId" value="{!gesTask.task.Id}" />
+                                                                </apex:commandLink> 
+                                                                <apex:outputText rendered="{!taskPermissions[gesTask.task.Id].CanDelete}" value=" | " />
+                                                                <apex:commandLink value="Remove" rendered="{!taskPermissions[gesTask.task.Id].CanDelete}" action="{!deleteTask}" reRender="statuses, messages, pbRelatedTasks, selectedItemOP" status="deleteTaskSpinner" >
+                                                                    <apex:param name="taskId" value="{!gesTask.task.Id}" />
+                                                                </apex:commandLink>
+                                                                <apex:outputText rendered="{!taskPermissions[gesTask.task.Id].CanReset}" value=" | " />
+                                                                <apex:commandLink value="Rework" rendered="{!taskPermissions[gesTask.task.Id].CanReset}" target="_top" action="{!reworkTask}" reRender="statuses, messages, pbRelatedTasks, selectedItemPB,pbPanel" status="reworkTaskStatusSpinner">
+                                                                    <apex:param name="taskId" value="{!gesTask.task.Id}" />
+                                                                </apex:commandLink>
+                                                                
+                                                                <!--  <apex:commandLink value="Submit" action="{!testModal}" reRender="teamMemebers1" status="submitTaskStatusSpinner" oncomplete="bindEvent();"> 
+<apex:param name="taskId" value="{!gesTask.task.Id}" />
+</apex:commandLink> -->
+                                                            </td>
+                                                        </apex:outputPanel>
+                                                        <apex:outputPanel rendered="{!($Profile.Name =='GC Community Vendor')}" >
+                                                            <td data-label="ges-action" role="row">
+                                                                <apex:outputLink value="{!$Page.GC_Community_gotView}">
+                                                                    View
+                                                                    <apex:param name="gotId" value="{!gesTask.task.Id}" assignTo="{!gotId}" />
+                                                                    <apex:param name="showId" value="{!gesTask.task.Order__r.Connect2_Show__c}" assignTo="{!showId}" />
+                                                                    <apex:param name="orderId" value="{!currentOrder.Id}" assignTo="{!orderId}" />
+                                                                </apex:outputLink>
+                                                            </td>
+                                                        </apex:outputPanel>
+                                                            <td data-label="ges-order-task-name" role="row">
+                                                                <apex:outputLink value="{!$Page.GC_Community_gotView}">
+                                                                    {!gesTask.task.Name}
+                                                                    <apex:param name="gotId" value="{!gesTask.task.Id}" assignTo="{!gotId}" />
+                                                                    <apex:param name="showId" value="{!gesTask.task.Order__r.Connect2_Show__c}" assignTo="{!showId}" />
+                                                                    <apex:param name="orderId" value="{!currentOrder.Id}" assignTo="{!orderId}" />
+                                                                </apex:outputLink>
+                                                            </td>
+                                                            
+                                                            <!--SAL-586-->
+                                                            <td data-label="ges-files">
+                                                                <apex:commandLink id="theCommandLink" action="{!URLFOR($Page.GC_FileUploadPage,null,[recordId=gesTask.task.Id, recordName=gesTask.task.Name])}" target="_blank" >
+                                                                    <apex:param name="taskId" value="{!gesTask.task.Id}" />
+                                                                    <apex:image id="theImage" value="{!$Resource.GC_OrdertaskUpload}" width="25" height="5" alt="Upload" />
+                                                                </apex:commandLink> &nbsp;
+                                                                <apex:outputLink value="{!$Page.GC_Community_gotView}">                                                 
+                                                                    <apex:param name="gotId" value="{!gesTask.task.Id}"/>
+                                                                    <apex:param name="showId" value="{!gesTask.task.Order__r.Connect2_Show__c}"/>
+                                                                    <apex:param name="orderId" value="{!currentOrder.Id}"/>
+                                                                    <apex:param name="scrolltodiv" value="relatedListId"/>
+                                                                    <apex:outputText value="{!gesTask.fileCount}" />
+                                                                </apex:outputLink>
+                                                            </td>                                                       
+                                                            <td data-label="ges-status">
+                                                                <apex:outputField value="{!gesTask.task.Status__c}" />
+                                                            </td>
+                                                            <!--SAL-586-->
+                                                            <td data-label="ges-signtitle">
+                                                                <apex:outputField value="{!gesTask.task.Sign_Title__c}" />
+                                                            </td>
+                                                            <td data-label="ges-itemNumber">
+                                                                <apex:outputField value="{!gesTask.task.Item_Number__c}" />
+                                                            </td>
+                                                            <td data-label="ges-description">
+                                                                <apex:outputField value="{!gesTask.task.Description__c}" />
+                                                            </td>
+                                                            <td data-label="ges-UserIdescription">
+                                                                <apex:outputField value="{!gesTask.task.User_Item_Description__c}" />
+                                                            </td>
+                                                            <td data-label="ges-price">
+                                                                <apex:outputField value="{!gesTask.task.Price__c}" />
+                                                            </td>
+                                                            <td data-label="ges-price">
+                                                                <apex:outputField value="{!gesTask.task.Total__c}" />
+                                                            </td>
+                                                            <td data-label="ges-uom">
+                                                                <apex:outputField value="{!gesTask.task.UOM__c}" />
+                                                            </td>
+                                                            <td data-label="ges-quantity">
+                                                                <apex:outputField value="{!gesTask.task.QuantityNum__c}" />
+                                                            </td>
+                                                            
+                                                            <td data-label="ges-status">
+                                                                <apex:outputField value="{!gesTask.task.Owner.Name}" />
+                                                            </td>
+                                                        </tr>
+                                                    </apex:repeat>
+                                                </tbody>
+                                            </table>
+                                        </apex:outputPanel>
+                                    </apex:outputPanel>
+                                </apex:outputPanel>
+                                
+                                
+                                
+                                <apex:outputPanel id="selectedItemOP">
+                                    
+                                    <apex:outputPanel rendered="{!selectedGesTask != null}">
+                                        <div class="slds-page-header gc-navigation--subHeader slds-col slds-size--1-of-1" role="banner">
+                                            <div class="slds-grid">
+                                                <div class="slds-col">
+                                                    <div class="slds-grid slds-grid--align-center">
+                                                        <apex:commandButton value="Save Task" action="{!saveTask}" styleClass="slds-button slds-button--brand gc-teal-button" reRender="messages, pbRelatedTasks, selectedItemOP, deliveryInformation, orderPanel, VendorInformation, orderHistoryGES, orderHistoryVendor, GESOrderTable, HomeGesPanel, GESNewOrderTab" />
+                                                        <apex:commandButton value="Cancel Edit" action="{!cancelEditTask}" styleClass="slds-button slds-button--brand gc-teal-button" reRender="messages, pbRelatedTasks, selectedItemOP, deliveryInformation, orderPanel, VendorInformation, orderHistoryGES, orderHistoryVendor, GESOrderTable,HomeGesPanel, GESNewOrderTab" />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <fieldset class="slds-form--compound"> 
+                                            <div class="form-element__group">
+                                                <apex:outputPanel rendered="{!coreApi.selectedBooth != null && !selectedGesTask.isRevision}">
+                                                    <legend class="form-element__legend slds-form-element__label slds-text-title--caps gc-section-margin-top">Item Selection</legend>
+                                                    <div class="slds-form-element__row">
+                                                        <div class="slds-size--1-of-3 slds-p-horizontal--small">
+                                                            <div class="slds-form-element__control">
+                                                                <input Class="slds-select slds-input slds-input--small" value="" id="searchInput"/>
+                                                                <button class="slds-button slds-button--neutral slds-button--small" id="serachItem" onclick="populateProductList();return false;" target="_top">Search Item</button> 
+                                                                <apex:inputHidden value="{!coreApi.searchItemClick}" id="serachItemHidden"/>
+                                                            </div>
+                                                        </div>
+                                                        <div class="slds-size--1-of-3 slds-p-horizontal--small">
+                                                            <div id="noSearchText" style="display: none;">
+                                                                <label style="color: #ff0000;font-size: large;">Item Not Found</label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="slds-form-element__row">
+                                                        <div class="slds-form-element is-required slds-size--1-of-3 slds-p-horizontal--small">
+                                                            <label class="slds-form-element__label">
+                                                                <abbr class="slds-required" title="required">*</abbr>
+                                                                Category
+                                                            </label>
+                                                            <div class="slds-form-element__control">
+                                                                <div class="gc-relative">
+                                                                    <apex:selectList id="categorySelect" value="{!coreApi.selectedCategory}" size="1" styleClass="slds-select">
+                                                                        <apex:selectOptions value="{!coreApi.productCategories}" rendered="{!coreApi.selectedBooth != null}"></apex:selectOptions>
+                                                                        <apex:actionSupport action="{!coreApi.selectCategories}" event="onchange" reRender="statuses, messages, selectedItemOP" status="selectCategoryStatus" />
+                                                                    </apex:selectList>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="slds-form-element is-required slds-size--1-of-3 slds-p-horizontal--small">
+                                                            <label class="slds-form-element__label">
+                                                                <abbr class="slds-required" title="required">*</abbr>
+                                                                Item
+                                                            </label>
+                                                            <div class="slds-form-element__control">
+                                                                <div class="gc-relative">
+                                                                    <apex:selectList id="itemSelect" value="{!coreApi.selectedItemNumberAndDescription}" size="1" styleClass="slds-select">
+                                                                        <!--<apex:selectOptions value="{!coreApi.ProductList}" rendered="{!coreApi.selectedBooth != null}"></apex:selectOptions>-->
+                                                                        <apex:selectOptions value="{!coreApi.ProductList.0}" rendered="{!coreApi.selectedBooth != null}"></apex:selectOptions>
+                                                                        <apex:selectOptions value="{!coreApi.ProductList.1}" rendered="{!coreApi.selectedBooth != null}"></apex:selectOptions>
+                                                                        
+                                                                        <apex:actionSupport action="{!coreApi.selectItem}" event="onchange" reRender="statuses, messages, selectedItemOP" status="selectItemStatus" />
+                                                                    </apex:selectList>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="slds-form-element slds-size--1-of-3 slds-p-horizontal--small">
+                                                            <label class="slds-form-element__label">
+                                                                Image
+                                                            </label>
+                                                            <div class="slds-form-element__control">
+                                                                <div class="gc-relative">
+                                                                    <apex:image url="{!coreApi.selectedItem.ImageUrl}" />
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </apex:outputPanel>
+                                                <apex:outputPanel rendered="{!selectedGesTask.task != null}" layout="none">
+                                                    <legend class="form-element__legend slds-form-element__label slds-text-title--caps gc-section-margin-top">Item Information</legend>
+                                                    <div class="slds-form-element__row">
+                                                        <div class="slds-form-element slds-size--1-of-3 slds-p-horizontal--small">
+                                                            <!-- Item Description -->
+                                                            <div class="slds-form-element">
+                                                                <apex:outputLabel value="Item Description" for="itemDescription" styleClass="slds-form-element__label" />
+                                                                <div class="slds-form-element__control">
+                                                                    <apex:outputText value="{!selectedGesTask.task.Description__c}" styleClass="slds-form-element__static" id="itemDescription" />
+                                                                </div>
+                                                            </div>
+                                                            <div class="slds-form-element">
+                                                                <apex:outputLabel value="User Item Description" for="UseritemDescription" styleClass="slds-form-element__label" />
+                                                                <div class="slds-form-element__control">
+                                                                    <apex:outputText value="{!selectedGesTask.task.User_Item_Description__c}" styleClass="slds-form-element__static" id="UseritemDescription" />
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="slds-form-element slds-size--1-of-3 slds-p-horizontal--small">
+                                                            <!-- Price-->
+                                                            <div class="slds-form-element">
+                                                                <apex:outputLabel value="Price" for="price" styleClass="slds-form-element__label" />
+                                                                <div class="slds-form-element__control">
+                                                                    <apex:outputText value="{!selectedGesTask.task.Price__c}" styleClass="slds-form-element__static" id="price" />
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="slds-form-element slds-size--1-of-3 slds-p-horizontal--small">
+                                                            <!-- UOM-->
+                                                            <div class="slds-form-element">
+                                                                <apex:outputLabel value="Units" for="uom" styleClass="slds-form-element__label" />
+                                                                <div class="slds-form-element__control">
+                                                                    <apex:outputText value="{!selectedGesTask.task.UOM__c}" styleClass="slds-form-element__static" id="uom" />
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="slds-form-element__row">
+                                                        <div class="slds-form-element slds-size--1-of-3 slds-p-horizontal--small">
+                                                            <!-- Delivery Location Discount -->
+                                                            <div class="slds-form-element">
+                                                                <apex:outputLabel value="Delivery Location Discount" for="boothDiscount" styleClass="slds-form-element__label" />
+                                                                <div class="slds-form-element__control">
+                                                                    <apex:outputText value="{!selectedGesTask.task.Booth_Area_Discount__c}" styleClass="slds-form-element__static" id="boothDiscount" />
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="slds-form-element slds-size--1-of-3 slds-p-horizontal--small">
+                                                            <!-- Item Number -->
+                                                            <div class="slds-form-element">
+                                                                <apex:outputLabel value="Item Number" for="itemNumber" styleClass="slds-form-element__label" />
+                                                                <div class="slds-form-element__control">
+                                                                    <apex:outputText value="{!selectedGesTask.task.Item_Number__c}" styleClass="slds-form-element__static" id="itemNumber" />
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="slds-form-element slds-size--1-of-3 slds-p-horizontal--small">
+                                                            <!-- File Reference Link -->
+                                                            <div class="slds-form-element">
+                                                                <apex:outputLabel value="File Reference Link" for="fileLink" styleClass="slds-form-element__label" />
+                                                                <div class="slds-form-element__control">
+                                                                    <apex:inputField value="{!selectedGesTask.task.File_Reference_Link__c}" styleClass="slds-input" id="fileLink" />
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </apex:outputPanel>
+                                            </div>
+                                        </fieldset>
+                                        <c:GC_CustomRTF targetclass="showManagement" rendered="true" toolbar="full" uniqueid="showManagement" />
+                                        <c:GC_Community_ItemOptions gotAttribute="{!selectedGesTask.task}" coreApiAttribute="{!coreApi}" materialOptions="{!materialOptions}" activeGemStructureTaskOptions="{!activeGemStructureTasks}">
+                                        </c:GC_Community_ItemOptions>
+                                        <legend class="form-element__legend slds-form-element__label slds-text-title--caps gc-section-margin-top">Show Management</legend>
+                                        <div class="slds-form-element slds-size--1-of-1 slds-p-horizontal--small gc-section-margin-bottom">
+                                            <apex:outputLabel value="Special Instructions" styleClass="slds-form-element__label" />
+                                            <div class="slds-form-element__control">
+                                                <div class="gc-relative">
+                                                    <apex:inputTextarea styleClass="showManagement ckeditor" richText="false" value="{!selectedGesTask.task.Show_Management_Field__c}" style="width:100%" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <c:GC_Community_ItemOptionsArea gotAttribute="{!selectedGesTask.task}" venueOptions="{!venueLocations}" defaultDeliveryTimeInput="{!currentOrder.Delivery_Date_Time__c}" defaultCompletionTimeInput="{!currentOrder.Completion_Date_Time__c}" defaultRemovalTimeInput="{!currentOrder.Removal_Date_Time__c}">
+                                        </c:GC_Community_ItemOptionsArea>
+                                        <!-- DEPARTMENT -->
+                                        <!-- <fieldset class="slds-form--compound gc-section-margin-top"> -->
+                                        <legend class="form-element__legend slds-form-element__label slds-text-title--caps gc-section-margin-top">Department</legend>
+                                        <div class="slds-grid">
+                                            <!-- Left Side -->
+                                            <div class="slds-p-horizontal--small slds-size--1-of-1 slds-medium-size--1-of-1 slds-large-size--1-of-2">
+                                                <div class="slds-form--stacked">
+                                                    <apex:outputLabel value="Department" styleClass="slds-form-element__label" />
+                                                    <div class="slds-form-element__control">
+                                                        <div class="gc-relative">
+                                                            <apex:selectList value="{!selectedGesTask.task.Department__c}" size="1" styleClass="slds-select">
+                                                                <apex:selectOptions value="{!departmentAttributes}"></apex:selectOptions>
+                                                            </apex:selectList>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- Right Side -->
+                                            <div class="slds-p-horizontal--small slds-size--1-of-1 slds-medium-size--1-of-1 slds-large-size--1-of-2">
+                                                <div class="slds-form--stacked">
+                                                    <div class="slds-form-element">
+                                                        <apex:outputLabel value="Budget Code" styleClass="slds-form-element__label" />
+                                                        <div class="slds-form-element__control">
+                                                            <div class="gc-relative">
+                                                                <apex:inputField styleClass="slds-input" value="{!selectedGesTask.task.Budget_Code__c}" />
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="slds-page-header gc-navigation--subHeader slds-col slds-size--1-of-1" role="banner">
+                                            <div class="slds-grid">
+                                                <div class="slds-col">
+                                                    <div class="slds-grid slds-grid--align-center">
+                                                        <apex:commandButton value="Save Task" action="{!saveTask}" styleClass="slds-button slds-button--brand gc-teal-button" reRender="messages, pbRelatedTasks, selectedItemOP, deliveryInformation, orderPanel, VendorInformation, orderHistoryGES, orderHistoryVendor, GESOrderTable, HomeGesPanel, HomeGesPanel, GESNewOrderTab" />
+                                                        <apex:commandButton value="Cancel Edit" action="{!cancelEditTask}" styleClass="slds-button slds-button--brand gc-teal-button" reRender="messages, pbRelatedTasks, selectedItemOP, deliveryInformation, orderPanel, VendorInformation, orderHistoryGES, orderHistoryVendor, GESOrderTable, HomeGesPanel, GESNewOrderTab" />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </apex:outputPanel>
+                                </apex:outputPanel>
+                            </apex:outputPanel>
+                        </apex:outputPanel>
+                    </section>
+                    
+                    
+                    <!--Vendor Order Task -->   
+                    <apex:outputPanel id="VendorInformation" rendered="{!showAttrFlag}" >
+                        <apex:outputPanel rendered="{!!(selectedGesTask != null)}"> 
+                            <div class="slds-card">                 
+                                <apex:outputPanel id="NewVendorTask">
+                                    <apex:outputPanel rendered="{!!(selectedVendorTask != null)}"> 
+                                        <div class="slds-card__header slds-grid" role="banner">
+                                            <div class="slds-col slds-has-flexi-truncate">
+                                                <div class="slds-media">
+                                                    <div class="slds-media__body">
+                                                        <h1 class="slds-text-heading--medium slds-m-right--small slds-truncate slds-align-middle">Vendor Order Tasks</h1>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="slds-col slds-no-flex--align-center">
+                                                <div class="slds-grid--align-center">
+                                                    <div class="slds-button">
+                                                        <apex:commandButton action="{!newVendorTask}" value="New Vendor Order Task" status="loadVendorsSpinner"  styleClass="slds-button slds-button--brand gc-teal-button" reRender="messages, pbVendorRelatedTasks, selectedVendorItemPB, GESInformation, GESTabs, deliveryInformationVendor, OrderPanelVendor, orderHistoryGES, orderHistoryVendor, HomeVendorPanel, NewVendorTask, VendorTaskTable" rendered="{!!isReadOnlyView}" />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </apex:outputPanel>
+                                </apex:outputPanel> 
+                                
+                                <!-- /PAGE HEADER -->
+                                <section class="slds-col--padded slds-size--1-of-1 tableScrollBox" id="theVendorOrders" >
+                                    <!-- TASK LIST -->
+                                    <apex:outputPanel id="VendorTaskTable"  >
+                                        <apex:outputPanel rendered="{!!(selectedVendorTask != null)}">                                          
+                                            <apex:outputPanel id="pbVendorRelatedTasks" layout="block" >
+                                                <table class="slds-table slds-table--bordered slds-max-medium-table--stacked-horizontal">
+                                                    <thead>
+                                                        <tr class="slds-text-heading--label">
+                                                            <apex:outputPanel rendered="{!!isReadOnlyView}">
+                                                                <th scope="col">
+                                                                    <span class="slds-truncate">Action</span>
+                                                                </th>
+                                                            </apex:outputPanel>
+                                                            <th scope="col">
+                                                                <span class="slds-truncate">VENDOR ORDER #</span>
+                                                            </th>
+                                                            <!--SAL-586-->
+                                                            <th scope="col">
+                                                                <span class="slds-truncate">Files</span>
+                                                            </th>
+                                                            <th scope="col">
+                                                                <span class="slds-truncate">Status</span>
+                                                            </th>
+                                                            <th scope="col">
+                                                                <span class="slds-truncate">Vendor</span>
+                                                            </th>
+                                                            <!--  <th scope="col">
+<span class="slds-truncate">Vendor Instructions</span>
+</th> -->
+                                                            <th scope="col">
+                                                                <span class="slds-truncate">Services</span>
+                                                            </th>
+                                                            
+                                                            <th scope="col">
+                                                                <span class="slds-truncate">Date Sent</span>
+                                                            </th>
+                                                            <th scope="col">
+                                                                <span class="slds-truncate">Last Modified By</span>
+                                                            </th>
+                                                            <th scope="col">
+                                                                <span class="slds-truncate">Last Modified Date</span>
+                                                            </th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <apex:repeat value="{!vendorOrderTasks}" var="vendorTask">
+                                                            <tr class="slds-hint-parent">
+                                                                <apex:outputPanel rendered="{!(!isReadOnlyView && $Profile.Name !='GC Community Vendor')}" >
+                                                                    <td data-label="ges-action" role="row">
+                                                                        <apex:commandLink value="Clone" target="_top" action="{!cloneVendorTask}" reRender="statuses, messages, pbVendorRelatedTasks, selectedVendorItemPB, GESInformation, GESTabs, deliveryInformationVendor, OrderPanelVendor, orderHistoryGES, orderHistoryVendor, HomeVendorPanel,NewVendorTask, VendorTaskTable" status="cloneTaskStatusSpinner">
+                                                                            <apex:param name="taskId" value="{!vendorTask.task.Id}" />
+                                                                        </apex:commandLink>
+                                                                        <apex:outputText value=" | " />
+                                                                        <apex:commandLink value="Edit" target="_top" action="{!editVendorTask}" reRender="statuses, messages, pbVendorRelatedTasks, selectedVendorItemPB, GESInformation, GESTabs, deliveryInformationVendor, OrderPanelVendor, orderHistoryGES, orderHistoryVendor, HomeVendorPanel,NewVendorTask, VendorTaskTable" status="editTaskSpinner">
+                                                                            <apex:param name="taskId" value="{!vendorTask.task.Id}" />
+                                                                        </apex:commandLink>
+                                                                        <apex:outputText value=" | " />
+                                                                        <apex:commandLink value="Remove" target="_top" action="{!deleteVendorTask}" reRender="statuses, messages, pbVendorRelatedTasks, selectedVendorItemPB" status="deleteTaskSpinner">
+                                                                            <apex:param name="taskId" value="{!vendorTask.task.Id}" />
+                                                                        </apex:commandLink>
+                                                                        <apex:outputText value=" | " />
+                                                                        <apex:commandLink value="Send to Vendor(s)" target="_top" action="{!sendVendorTask}" reRender="statuses, messages" status="sendTaskSpinner" rendered="{!(vendorTask.task.Status__c=='New')}" >
+                                                                            <apex:param name="taskId" value="{!vendorTask.task.Id}"  />
+                                                                        </apex:commandLink>
+                                                                        <apex:commandLink value="Re-Send to Vendor(s)" target="_top" action="{!sendVendorTask}" reRender="statuses, messages" status="sendTaskSpinner" rendered="{!(vendorTask.task.Status__c!='New')}" >
+                                                                            <apex:param name="taskId" value="{!vendorTask.task.Id}"  />
+                                                                        </apex:commandLink>
+                                                                    </td>
+                                                                </apex:outputPanel>
+                                                                <apex:outputPanel rendered="{!(isReadOnlyView || $Profile.Name =='GC Community Vendor')}" >
+                                                                <td data-label="ges-action" role="row">
+                                                                    <apex:outputLink value="{!$Page.GC_Community_votView}">
+                                                                        View
+                                                                        <apex:param name="votId" value="{!vendorTask.task.Id}" assignTo="{!votId}" />
+                                                                        <apex:param name="showId" value="{!vendorTask.task.Order__r.Connect2_Show__c}" assignTo="{!showId}" />
+                                                                        <apex:param name="orderId" value="{!currentOrder.Id}" assignTo="{!orderId}" />
+                                                                    </apex:outputLink>
+                                                                </td>
+                                                                </apex:outputPanel>
+                                                                <td data-label="ges-order-task-name" role="row">
+                                                                    <apex:outputLink value="{!$Page.GC_Community_votView}">
+                                                                        {!vendorTask.task.Name}
+                                                                        <apex:param name="votId" value="{!vendorTask.task.Id}" assignTo="{!votId}" />
+                                                                        <apex:param name="showId" value="{!vendorTask.task.Order__r.Connect2_Show__c}" assignTo="{!showId}" />
+                                                                        <apex:param name="orderId" value="{!currentOrder.Id}" assignTo="{!orderId}" />
+                                                                    </apex:outputLink>
+                                                                </td>
+                                                                <!--SAL-586-->
+                                                                <td data-label="VOT-files">
+                                                                    <apex:commandLink id="theCommandLink" action="{!URLFOR($Page.GC_FileUploadPage,null,[recordId=vendorTask.task.Id,recordName=vendorTask.task.Name])}" target="_blank">
+                                                                        <apex:param name="taskId" value="{!vendorTask.task.Id}" />
+                                                                        <apex:image id="theImage" value="{!$Resource.GC_OrdertaskUpload}" width="25" height="5" alt="Upload"/>
+                                                                    </apex:commandLink> &nbsp;                      
+                                                                    <apex:outputLink value="{!$Page.GC_Community_votView}">                                                 
+                                                                        <apex:param name="votId" value="{!vendorTask.task.Id}"/>
+                                                                        <apex:param name="scrolltodiv" value="relatedListId"/>
+                                                                        <apex:param name="showId" value="{!vendorTask.task.Order__r.Connect2_Show__c}" assignTo="{!showId}" />
+                                                                        <apex:param name="orderId" value="{!currentOrder.Id}" assignTo="{!orderId}" />
+                                                                        <apex:outputText value="{!vendorTask.fileCount}" />
+                                                                    </apex:outputLink>
+                                                                    
+                                                                </td>
+                                                                <td data-label="ges-status">
+                                                                    <apex:outputField value="{!vendorTask.task.Status__c}" />
+                                                                </td>
+                                                                
+                                                                <td data-label="ges-vendor">
+                                                                    <apex:outputField value="{!vendorTask.task.Vendors__c}" />
+                                                                </td>
+                                                                <!-- <td data-label="ges-vendorinstructions">
+<apex:outputField value="{!vendorTask.task.Vendor_Instructions__c}" styleClass="slds-textarea" />
+</td> -->
+                                                                <td data-label="ges-servicetype">
+                                                                    <apex:outputText value="{!vendorTask.task.Services__c}" />
+                                                                </td>
+                                                                
+                                                                <td data-label="ges-submitteddate">
+                                                                    <apex:outputField value="{!vendorTask.task.Submitted_Date__c}" />
+                                                                </td>
+                                                                <td data-label="ges-lastmodifiedbyid">
+                                                                    <apex:outputField value="{!vendorTask.task.LastModifiedById}" />
+                                                                </td>
+                                                                <td data-label="ges-lastmodifieddate">
+                                                                    <apex:outputField value="{!vendorTask.task.LastModifiedDate}" />
+                                                                </td>
+                                                            </tr>
+                                                        </apex:repeat>
+                                                    </tbody>
+                                                </table>
+                                            </apex:outputPanel>
+                                        </apex:outputPanel>
+                                    </apex:outputPanel> 
+                                    <apex:outputPanel id="selectedVendorItemPB" >
+                                        <apex:outputPanel rendered="{!selectedVendorTask != null }"  >
+                                            <legend class="form-element__legend slds-form-element__label slds-text-title--caps gc-section-margin-top">Vendor Task Details</legend>
+                                            <div class="slds-page-header gc-navigation--subHeader slds-col slds-size--1-of-1" role="banner">
+                                                <div class="slds-grid">
+                                                    <div class="slds-col">
+                                                        <div class="slds-grid slds-grid--align-center">
+                                                            <apex:commandButton value="Save Task" action="{!saveVendorTask}" styleClass="slds-button slds-button--brand gc-teal-button" reRender="statuses, messages, pbVendorRelatedTasks, selectedVendorItemPB, GESInformation, GESTabs, deliveryInformationVendor, OrderPanelVendor, orderHistoryGES, orderHistoryVendor, HomeVendorPanel, NewVendorTask, VendorTaskTable" status="savedefaultStatusSpinner"/>
+                                                            <apex:commandButton value="Cancel Edit" action="{!cancelEditVendorTask}" styleClass="slds-button slds-button--brand gc-teal-button" reRender="statuses, messages, pbVendorRelatedTasks, selectedVendorItemPB, GESInformation, GESTabs, deliveryInformationVendor, OrderPanelVendor, orderHistoryGES, orderHistoryVendor, HomeVendorPanel, NewVendorTask, VendorTaskTable" status="cancelTaskStatusSpinner"/>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <fieldset class="slds-form--compound">
+                                                <div class="form-element__group">
+                                                    <div class="slds-form-element__row">
+                                                        
+                                                        <div class="slds-form-element slds-size--1-of-2 slds-p-horizontal--small">
+                                                            <apex:outputLabel value="Service Type" styleClass="slds-form-element__label" />
+                                                            <div class="slds-form-element__control">
+                                                                <div class="gc-relative">
+                                                                    <apex:selectList value="{!selectedVendorTask.task.Service_Type__c}" size="1" styleClass="slds-select">
+                                                                        <apex:selectOptions value="{!serviceTypes}"></apex:selectOptions>
+                                                                        <apex:actionSupport event="onchange" action="{!filterVendors}" rerender="vendor1" status="loadVendorsSpinner">
+                                                                            <apex:param name="vendor1Select" value="Vendor1" assignTo="{!vendorSelect}"/>
+                                                                        </apex:actionSupport>
+                                                                    </apex:selectList>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="slds-form-element slds-size--1-of-2 slds-p-horizontal--small">
+                                                            <apex:outputLabel value="Vendor" styleClass="slds-form-element__label" />
+                                                            <div class="slds-form-element__control">
+                                                                <div class="gc-relative">
+                                                                    <!-- <apex:inputField value="{!selectedVendorTask.task.Vendor__c}" styleClass="gc-lookup" id="vendor" /> -->
+                                                                    <apex:selectList value="{!selectedVendorTask.task.Vendor__c}" id="vendor1" size="1" styleClass="slds-select">
+                                                                        <apex:selectOptions value="{!userslist}"></apex:selectOptions> 
+                                                                    </apex:selectList>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="slds-form-element__row">
+                                                        
+                                                        <div class="slds-form-element slds-size--1-of-2 slds-p-horizontal--small">
+                                                            <apex:outputLabel value="Service Type 2" styleClass="slds-form-element__label" />
+                                                            <div class="slds-form-element__control">
+                                                                <div class="gc-relative">
+                                                                    <apex:selectList value="{!selectedVendorTask.task.Service_Type2__c}" size="1" styleClass="slds-select">
+                                                                        <apex:selectOptions value="{!serviceTypes}"></apex:selectOptions>
+                                                                        <apex:actionSupport event="onchange" action="{!filterVendors}" rerender="vendor2" status="loadVendorsSpinner">
+                                                                            <apex:param name="vendor2Select" value="Vendor2" assignTo="{!vendorSelect}"/>
+                                                                        </apex:actionSupport>
+                                                                    </apex:selectList>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="slds-form-element slds-size--1-of-2 slds-p-horizontal--small">
+                                                            <apex:outputLabel value="Vendor 2" styleClass="slds-form-element__label" />
+                                                            <div class="slds-form-element__control">
+                                                                <div class="gc-relative">
+                                                                    <!-- <apex:inputField value="{!selectedVendorTask.task.Vendor2__c}" styleClass="gc-lookup" /> -->
+                                                                    <apex:selectList value="{!selectedVendorTask.task.Vendor2__c}" id="vendor2" size="1" styleClass="slds-select">
+                                                                        <apex:selectOptions value="{!userslist1}"></apex:selectOptions> 
+                                                                    </apex:selectList>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="slds-form-element__row">
+                                                        
+                                                        <div class="slds-form-element slds-size--1-of-2 slds-p-horizontal--small">
+                                                            <apex:outputLabel value="Service Type 3" styleClass="slds-form-element__label" />
+                                                            <div class="slds-form-element__control">
+                                                                <div class="gc-relative">
+                                                                    <apex:selectList value="{!selectedVendorTask.task.Service_Type3__c}" size="1" styleClass="slds-select">
+                                                                        <apex:selectOptions value="{!serviceTypes}"></apex:selectOptions>
+                                                                        <apex:actionSupport event="onchange" action="{!filterVendors}" rerender="vendor3" status="loadVendorsSpinner">
+                                                                            <apex:param name="vendor3Select" value="Vendor3" assignTo="{!vendorSelect}"/>
+                                                                        </apex:actionSupport>
+                                                                    </apex:selectList>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="slds-form-element slds-size--1-of-2 slds-p-horizontal--small">
+                                                            <apex:outputLabel value="Vendor 3" styleClass="slds-form-element__label" />
+                                                            <div class="slds-form-element__control">
+                                                                <div class="gc-relative">
+                                                                    <!-- <apex:inputField value="{!selectedVendorTask.task.Vendor3__c}" styleClass="gc-lookup" /> -->
+                                                                    <apex:selectList value="{!selectedVendorTask.task.Vendor3__c}" id="vendor3" size="1" styleClass="slds-select">
+                                                                        <apex:selectOptions value="{!userslist2}"></apex:selectOptions> 
+                                                                    </apex:selectList>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="slds-form-element__row">
+                                                        
+                                                        <div class="slds-form-element slds-size--1-of-2 slds-p-horizontal--small">
+                                                            <apex:outputLabel value="Service Type 4" styleClass="slds-form-element__label" />
+                                                            <div class="slds-form-element__control">
+                                                                <div class="gc-relative">
+                                                                    <apex:selectList value="{!selectedVendorTask.task.Service_Type4__c}" size="1" styleClass="slds-select">
+                                                                        <apex:selectOptions value="{!serviceTypes}"></apex:selectOptions>
+                                                                        <apex:actionSupport event="onchange" action="{!filterVendors}" rerender="vendor4" status="loadVendorsSpinner">
+                                                                            <apex:param name="vendor4Select" value="Vendor4" assignTo="{!vendorSelect}"/>
+                                                                        </apex:actionSupport>
+                                                                    </apex:selectList>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="slds-form-element slds-size--1-of-2 slds-p-horizontal--small">
+                                                            <apex:outputLabel value="Vendor 4" styleClass="slds-form-element__label" />
+                                                            <div class="slds-form-element__control">
+                                                                <div class="gc-relative">
+                                                                    <!-- <apex:inputField value="{!selectedVendorTask.task.Vendor4__c}" styleClass="gc-lookup" /> -->
+                                                                    <apex:selectList value="{!selectedVendorTask.task.Vendor4__c}" id="vendor4" size="1" styleClass="slds-select">
+                                                                        <apex:selectOptions value="{!userslist3}"></apex:selectOptions> 
+                                                                    </apex:selectList>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="slds-form-element__row">
+                                                        
+                                                        <div class="slds-form-element slds-size--1-of-2 slds-p-horizontal--small">
+                                                            <apex:outputLabel value="Service Type 5" styleClass="slds-form-element__label" />
+                                                            <div class="slds-form-element__control">
+                                                                <div class="gc-relative">
+                                                                    <apex:selectList value="{!selectedVendorTask.task.Service_Type5__c}" size="1" styleClass="slds-select">
+                                                                        <apex:selectOptions value="{!serviceTypes}"></apex:selectOptions>
+                                                                        <apex:actionSupport event="onchange" action="{!filterVendors}" rerender="vendor5" status="loadVendorsSpinner">
+                                                                            <apex:param name="vendor5Select" value="Vendor5" assignTo="{!vendorSelect}"/>
+                                                                        </apex:actionSupport>
+                                                                    </apex:selectList>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="slds-form-element slds-size--1-of-2 slds-p-horizontal--small">
+                                                            <apex:outputLabel value="Vendor 5" styleClass="slds-form-element__label" />
+                                                            <div class="slds-form-element__control">
+                                                                <div class="gc-relative">
+                                                                    <!-- <apex:inputField value="{!selectedVendorTask.task.Vendor5__c}" styleClass="gc-lookup" /> -->
+                                                                    <apex:selectList value="{!selectedVendorTask.task.Vendor5__c}" id="vendor5" size="1" styleClass="slds-select">
+                                                                        <apex:selectOptions value="{!userslist4}"></apex:selectOptions> 
+                                                                    </apex:selectList>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <c:GC_CustomRTF targetclass="vendorInstructions" rendered="true" toolbar="full" uniqueid="vendorInstructions" />
+                                                    <div class="slds-form-element__row">
+                                                        <div class="slds-form-element slds-size--1-of-2 slds-p-horizontal--small">
+                                                            <apex:outputLabel value="Vendor Instructions" styleClass="slds-form-element__label" />
+                                                            <div class="slds-form-element__control">
+                                                                <div class="gc-relative">
+                                                                    <apex:inputTextarea styleClass="vendorInstructions ckeditor" richText="false" value="{!selectedVendorTask.task.Vendor_Instructions__c}" style="width:100%" />
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                
+                                                <div class="slds-form-element__row">
+                                                    <div class="slds-form-element slds-size--1-of-2 slds-p-horizontal--small">
+                                                        <apex:outputLabel value="Select All GES Order Tasks" styleClass="slds-form-element__label" />
+                                                        <apex:inputCheckbox value="{!selectAllGesOT}">
+                                                            <apex:actionSupport event="onchange" action="{!otDropDownReadOnly}" rerender="gesot111" status="loadVendorsSpinner"/>
+                                                        </apex:inputCheckbox>
+                                                    </div>
+                                                </div>
+                                                
+                                                <apex:outputPanel id="gesot111">
+                                                    <!-- <apex:outputPanel> -->
+                                                    <div class="slds-form-element__row">
+                                                        <div class="slds-form-element slds-size--1-of-2 slds-p-horizontal--small">
+                                                            <apex:outputLabel value="GES Order Task 1" styleClass="slds-form-element__label" />
+                                                            <div class="slds-form-element__control">
+                                                                <div class="gc-relative">
+                                                                    <apex:selectList value="{!selectedVendorTask.task.GESOrderTask1__c}" size="1" styleClass="slds-select" disabled="false" rendered="{!disableGESOT==false}" id="gesot1">
+                                                                        <apex:selectOptions value="{!gesOrderTasksForVendors}"></apex:selectOptions>
+                                                                    </apex:selectList>
+                                                                    
+                                                                    <apex:selectList value="{!selectedVendorTask.task.GESOrderTask1__c}" size="1" styleClass="slds-select" disabled="true" rendered="{!disableGESOT==true}" id="gesotdis1">
+                                                                        <apex:selectOptions value="{!gesOrderTasksForVendors}"></apex:selectOptions>
+                                                                    </apex:selectList> 
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <!-- </apex:outputPanel> -->
+                                                    
+                                                    <div class="slds-form-element__row">
+                                                        <div class="slds-form-element slds-size--1-of-2 slds-p-horizontal--small">
+                                                            <apex:outputLabel value="GES Order Task 2" styleClass="slds-form-element__label" />
+                                                            <div class="slds-form-element__control">
+                                                                <div class="gc-relative">
+                                                                    <apex:selectList value="{!selectedVendorTask.task.GESOrderTask2__c}" size="1" styleClass="slds-select" disabled="false" rendered="{!disableGESOT==false}">
+                                                                        <apex:selectOptions value="{!gesOrderTasksForVendors}"></apex:selectOptions>
+                                                                    </apex:selectList>
+                                                                    
+                                                                    <apex:selectList value="{!selectedVendorTask.task.GESOrderTask2__c}" size="1" styleClass="slds-select" disabled="true" rendered="{!disableGESOT==true}">
+                                                                        <apex:selectOptions value="{!gesOrderTasksForVendors}"></apex:selectOptions>
+                                                                    </apex:selectList>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="slds-form-element__row">
+                                                        <div class="slds-form-element slds-size--1-of-2 slds-p-horizontal--small">
+                                                            <apex:outputLabel value="GES Order Task 3" styleClass="slds-form-element__label" />
+                                                            <div class="slds-form-element__control">
+                                                                <div class="gc-relative">
+                                                                    <apex:selectList value="{!selectedVendorTask.task.GESOrderTask3__c}" size="1" styleClass="slds-select" disabled="false" rendered="{!disableGESOT==false}">
+                                                                        <apex:selectOptions value="{!gesOrderTasksForVendors}"></apex:selectOptions>
+                                                                    </apex:selectList>
+                                                                    
+                                                                    <apex:selectList value="{!selectedVendorTask.task.GESOrderTask3__c}" size="1" styleClass="slds-select" disabled="true" rendered="{!disableGESOT==true}">
+                                                                        <apex:selectOptions value="{!gesOrderTasksForVendors}"></apex:selectOptions>
+                                                                    </apex:selectList>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="slds-form-element__row">
+                                                        <div class="slds-form-element slds-size--1-of-2 slds-p-horizontal--small">
+                                                            <apex:outputLabel value="GES Order Task 4" styleClass="slds-form-element__label" />
+                                                            <div class="slds-form-element__control">
+                                                                <div class="gc-relative">
+                                                                    <apex:selectList value="{!selectedVendorTask.task.GESOrderTask4__c}" size="1" styleClass="slds-select" disabled="false" rendered="{!disableGESOT==false}">
+                                                                        <apex:selectOptions value="{!gesOrderTasksForVendors}"></apex:selectOptions>
+                                                                    </apex:selectList>
+                                                                    
+                                                                    <apex:selectList value="{!selectedVendorTask.task.GESOrderTask4__c}" size="1" styleClass="slds-select" disabled="true" rendered="{!disableGESOT==true}">
+                                                                        <apex:selectOptions value="{!gesOrderTasksForVendors}"></apex:selectOptions>
+                                                                    </apex:selectList>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="slds-form-element__row">
+                                                        <div class="slds-form-element slds-size--1-of-2 slds-p-horizontal--small">
+                                                            <apex:outputLabel value="GES Order Task 5" styleClass="slds-form-element__label" />
+                                                            <div class="slds-form-element__control">
+                                                                <div class="gc-relative">
+                                                                    <apex:selectList value="{!selectedVendorTask.task.GESOrderTask5__c}" size="1" styleClass="slds-select" disabled="false" rendered="{!disableGESOT==false}">
+                                                                        <apex:selectOptions value="{!gesOrderTasksForVendors}"></apex:selectOptions>
+                                                                    </apex:selectList>
+                                                                    
+                                                                    <apex:selectList value="{!selectedVendorTask.task.GESOrderTask5__c}" size="1" styleClass="slds-select" disabled="true" rendered="{!disableGESOT==true}">
+                                                                        <apex:selectOptions value="{!gesOrderTasksForVendors}"></apex:selectOptions>
+                                                                    </apex:selectList>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </apex:outputPanel>
+                                            </fieldset>
+                                            
+                                            <c:GC_Community_ItemOptionsArea_VOT gotAttribute="{!selectedVendorTask.task}" venueOptions="{!venueLocations}" defaultDeliveryTimeInput="{!currentOrder.Delivery_Date_Time__c}" defaultCompletionTimeInput="{!currentOrder.Completion_Date_Time__c}" defaultRemovalTimeInput="{!currentOrder.Removal_Date_Time__c}">
+                                            </c:GC_Community_ItemOptionsArea_VOT>
+                                            
+                                            <div class="slds-page-header gc-navigation--subHeader slds-col slds-size--1-of-1" role="banner">
+                                                <div class="slds-grid">
+                                                    <div class="slds-col">
+                                                        <div class="slds-grid slds-grid--align-center">
+                                                            <apex:commandButton value="Save Task" styleClass="slds-button slds-button--brand gc-teal-button" action="{!saveVendorTask}" reRender="statuses, messages, pbVendorRelatedTasks, selectedVendorItemPB, GESInformation, GESTabs, deliveryInformationVendor, OrderPanelVendor, HomeVendorPanel, NewVendorTask, VendorTaskTable" status="savedefaultStatusSpinner" />
+                                                            <apex:commandButton value="Cancel Edit" styleClass="slds-button slds-button--brand gc-teal-button" action="{!cancelEditVendorTask}" reRender="statuses, messages, pbVendorRelatedTasks, selectedVendorItemPB, GESInformation, GESTabs, deliveryInformationVendor, OrderPanelVendor, HomeVendorPanel, NewVendorTask, VendorTaskTable" status="cancelTaskStatusSpinner" />
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </apex:outputPanel>
+                                    </apex:outputPanel>
+                                </section>
+                            </div>
+                        </apex:outputPanel>
+                    </apex:outputPanel>
+                </div>
+            </div>
+        </apex:form>
+        
+        
+        <apex:outputPanel id="orderHistoryGES">
+            <apex:outputPanel rendered="{!!(selectedGesTask != null)}"> 
+                <apex:outputPanel id="orderHistoryVendor">
+                    <apex:outputPanel rendered="{!!(selectedVendorTask!= null)}">  
+                        <div class="gc-main-body--bottom slds-col--padded slds-m-top--medium">
+                            <div class="slds-card slds-p-around--small gc-hide-RelatedListBorder" role="banner">
+                                <div class="slds-grid">
+                                    <div class="slds-col slds-has-flexi-truncate">
+                                        <div class="slds-media">
+                                            <div class="slds-media__body">
+                                                <c:GC_TaskHistoryComponent recordLimits="50" mysObject="{!CurrentOrder}" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <apex:form >
+                                <div class="slds-card__header slds-grid" role="banner" style="text-align: center;">
+                                    <div class="slds-col slds-no-flex--align-center">
+                                        <div class="slds-grid--align-center">
+                                            <apex:commandLink target="_blank" action="{!URLFOR($Page.GC_FileUploadPage, null, [recordId = CurrentOrder.Id, recordName = CurrentOrder.Name])}">
+                                                <div class="slds-button" >    
+                                                    <apex:commandButton value="Upload Files" styleClass="slds-button slds-button--brand gc-teal-button"  rendered="{!(!taskFieldManager.Hide_Order_Level_File_Upload__c)}" /> <!-- SAL-662 -->
+                                                </div>
+                                            </apex:commandLink>
+                                        </div>
+                                    </div>
+                                </div>
+                            </apex:form>
+                            
+                            <div class="slds-card slds-p-around--small gc-hide-RelatedListBorder" role="banner">
+                                <div class="slds-grid">
+                                    <div class="slds-col slds-has-flexi-truncate">
+                                        <div class="slds-media">
+                                            <div class="slds-media__body">
+                                                <apex:relatedList subject="{!CurrentOrder}" list="AttachedContentDocuments" rendered="{!(!taskFieldManager.Hide_Order_Level_File_Upload__c)}"/> <!-- SAL-662 -->
+                                                <apex:relatedList subject="{!CurrentOrder}" list="AttachedContentNotes" />
+                                                <apex:relatedList subject="{!CurrentOrder}" list="CombinedAttachments" rendered="{!(!taskFieldManager.Hide_Order_Level_File_Upload__c)}" />  <!-- SAL-662 -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </apex:outputPanel>
+                </apex:outputPanel>
+            </apex:outputPanel>
+        </apex:outputPanel>
+        
+        
+        <!--SAl 522-->
+        <div id="itemSelectionDialog"  align = "center" style="display:none;">
+            <div role="alertdialog" class="slds-modal slds-fade-in-open slds-modal--prompt prompt">
+                <div class="slds-modal__container" style="width:600px;height: 500px;">
+                    <div class="slds-modal__header">
+                        <button class="slds-button slds-modal__close slds-button--icon-inverse prompt_close" title="Close" style="color: #b41955!important;" onclick="closeItemPopup();return false;">
+                            <svg aria-hidden="true" class="slds-button__icon slds-button__icon--large">
+                                <use href="{!URLFOR($Resource.Lightning_Design_System, '/assets/icons/action-sprite/svg/symbols.svg#close')}"></use>
+                            </svg>
+                            <span class="slds-assistive-text">Close</span>
+                        </button>
+                        <h2 class="slds-text-heading--medium" id="prompt-heading-id">Select An Item</h2>
+                    </div>
+                    <div class="slds-modal__content slds-p-around--medium">
+                        <h3 class="slds-section-title--divider" style="display: inherit;"><b>Items</b></h3>
+                        
+                        <table class="slds-table slds-table--bordered slds-max-medium-table--stacked-horizontal" id="itemTable" style="margin-top: 12px;">
+                            <thead>
+                                <tr class="slds-text-heading--label">
+                                    <td role="gridcell" class="slds-cell-shrink" scope="col">
+                                        <label class="slds-checkbox">
+                                            
+                                        </label>
+                                    </td>
+                                    <th scope="col">
+                                        <span class="slds-truncate">Item Name</span>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                
+                            </tbody>
+                        </table> 
+                        <br/>
+                    </div>  
+                    <div class="slds-modal__footer slds-theme--default">  
+                        <button class="slds-button slds-button--brand gc-teal-button prompt_close" id="selectItemButton" onclick="selectItemFromList();" >Select</button> 
+                    </div>
+                </div>
+            </div>
+            <div class="slds-backdrop slds-backdrop--open prompt"></div>
+        </div>
+    </div>
+    
+    <div id="fileUploadDialog"  align = "center" style="display:none;">
+        <div role="alertdialog" class="slds-modal slds-fade-in-open slds-modal--prompt prompt">
+            
+            <div class="slds-form-element__row">
+                <div class="slds-form-element slds-size--1-of-2 slds-p-horizontal--small " role="banner">
+                    <apex:outputPanel id="fileUploadTable">
+                        <c:GC_CustomFileUpload recordId="{!orderTaskId}"/>                                 
+                    </apex:outputPanel>    
+                </div>
+            </div>
+            
+        </div>
+        <div class="slds-backdrop slds-backdrop--open prompt"></div>
+    </div> 
+    
+    
+</body>
+
+</html>
+</apex:page>

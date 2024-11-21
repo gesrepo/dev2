@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Know_Your_Show_Information__c</fullName>
+    <defaultValue>&quot;Below is an assumption list for the NSC.&quot; + &#39; &#39; + &quot;Unless noted in the Comments Section by a Client Services Manager, these would be protocol:&quot; + BR() + BR() +
+
+&quot;•	All shows will follow the IAEE Guidelines.&quot; + BR() +
+&quot;•	NSC will add/update Core exhibitors.&quot; + BR() +
+&quot;•	Discount Deadline will be extended on a case-by-case basis at the NSC discretion up to 7&quot; + &#39; &#39;
+        + &quot;business days prior to GES move-in date.&quot; + BR() +
+&quot;•	Multiple pieces of carpet are allowed.&quot; + BR() +
+           &quot;•	Order Entry will reach out to the customer for Dye Lots and Seams&quot; + BR() +
+&quot;•	Cutoff for Specialty Furniture is 7 days of show open.&quot; + BR() +
+&quot;•	Cutoff for Custom Carpet 7 days of show open.&quot; + BR() +
+&quot;•	Exhibitors cannot exchange or swap package item(s) at no cost.&quot; + BR() +
+&quot;•	If part of the booth package, drape colors cannot be changed.&quot; + BR() +
+&quot;•	Booth cleaning is not included the day/night before show opening, unless noted.&quot; + BR() +
+&quot;•	If an exhibitor is ordering a 20amp service or more and do not submit a floor plan,&quot; + &#39; &#39; + &quot;labor, and payment; they will be charged at the regular rate.&quot;</defaultValue>
+    <label>Assumption List</label>
+    <length>32768</length>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>LongTextArea</type>
+    <visibleLines>15</visibleLines>
+</CustomField>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Win_Rate__c</fullName>
+    <description>Calculate Win rate by : (won opportunities)/ (total closed opportunities)</description>
+    <formula>IF(Won_opportunities__c &gt;0,( Won_opportunities__c / Closed_Opportunities__c ),0)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Win Rate</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackHistory>false</trackHistory>
+    <type>Percent</type>
+</CustomField>

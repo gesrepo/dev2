@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Budget__c</fullName>
+    <label>Budget</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>No Budget</fullName>
+                <default>false</default>
+                <label>No Budget</label>
+            </value>
+            <value>
+                <fullName>Insufficient Budget</fullName>
+                <default>false</default>
+                <label>Insufficient Budget</label>
+            </value>
+            <value>
+                <fullName>Will Create Business Case for Sufficient Budget</fullName>
+                <default>false</default>
+                <label>Will Create Business Case for Sufficient Budget</label>
+            </value>
+            <value>
+                <fullName>Sufficient Budget - Not Approved</fullName>
+                <default>false</default>
+                <label>Sufficient Budget - Not Approved</label>
+            </value>
+            <value>
+                <fullName>Sufficient, Approved Budget</fullName>
+                <default>false</default>
+                <label>Sufficient, Approved Budget</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

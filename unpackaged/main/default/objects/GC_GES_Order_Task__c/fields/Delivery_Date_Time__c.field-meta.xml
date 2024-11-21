@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Delivery_Date_Time__c</fullName>
+    <description>If Set, will use this time instead of the Default Order&#39;s Delivery Date/Time</description>
+    <inlineHelpText>If Set, will use this time instead of the Default Order&#39;s Delivery Date/Time</inlineHelpText>
+    <label>Installation/Delivery Date/Time</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>DateTime</type>
+</CustomField>

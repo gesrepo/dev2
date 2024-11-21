@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>EMEA_Contact_must_have_email</fullName>
+    <active>false</active>
+    <errorConditionFormula>Account.EMEA__c == True &amp;&amp; len( Email) = 0</errorConditionFormula>
+    <errorMessage>When creating a contact for an EMEA account, you must have an email address or it will not transfer to SOP</errorMessage>
+</ValidationRule>

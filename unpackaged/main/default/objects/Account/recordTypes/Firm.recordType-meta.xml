@@ -1,0 +1,1327 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Firm</fullName>
+    <active>true</active>
+    <compactLayoutAssignment>Account_Firm_Compact_Layout</compactLayoutAssignment>
+    <description>A Management Company, Sponsor, Contractor (Prime and Sub), and Competitor related to Shows and Show Occurrences.</description>
+    <label>Firm</label>
+    <picklistValues>
+        <picklist>AccountSource</picklist>
+        <values>
+            <fullName>Commissionable Venue Recommendation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Customer Service</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Digital CTA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Event%2FTradeshow</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Exhibitor List</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Expresso</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Inbound Call</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Inbound Email</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>LinkedIn Sales Navigator</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Marketing Sponsorship</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Organiser Referral</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Outbound Marketing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Purchased List</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Self-Generated</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Show Walk</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Social</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Web</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Website Chat</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>BX_Cross_Sell__c</picklist>
+        <values>
+            <fullName>EMEA referral to US</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Events referral to Exhibits</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Events referral to OnServices</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Exhibits referral to Events</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Exhibits referral to OnServices</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>OnServices referral to Events</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>OnServices referral to Exhibits</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>US referral to EMEA</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>BX_Customer_Type__c</picklist>
+        <values>
+            <fullName>MSA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Occasional Client</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Program</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Brand__c</picklist>
+        <values>
+            <fullName>Pfizer - CH</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Business_Type__c</picklist>
+        <values>
+            <fullName>Contractor</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Exhibitor</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Facility</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Firm</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>International</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Classification__c</picklist>
+        <values>
+            <fullName>Classic</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Portfolio</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Strategic</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Cust_Type__c</picklist>
+        <values>
+            <fullName>01 Organiser</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>11 Contractor</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>12 Contractor</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>13 Inter Company - Non Mes</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>14 Melville Beck %28Furniture%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>15 Gold Contractor</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>17 Melville Events</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>20 Silver Contractor</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>24 Graphics</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>25 Elite</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>99 Exhibitor</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>DOZISF__ZoomInfo_Enrich_Status__c</picklist>
+        <values>
+            <fullName>Enriched</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Error</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No-Match</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>EMEA_Sales_Tag__c</picklist>
+        <values>
+            <fullName>Conference</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Congress</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>D%26B</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Exhibitions</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Summit</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Exhibitor_Account_Type__c</picklist>
+        <values>
+            <fullName>Other</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Priority</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Program</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tradeshow</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Facility_AV_Provider__c</picklist>
+        <values>
+            <fullName>MIlls Jones</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Facility_Constr_Renov_New_Constr__c</picklist>
+        <values>
+            <fullName>New Construction</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Renovation</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Facility_Electrical_Provider__c</picklist>
+        <values>
+            <fullName>Test1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Test2</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Test3</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Facility_Graphics_Provider_del__c</picklist>
+        <values>
+            <fullName>Test1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Test2</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Test3</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Facility_Rigging_Provider__c</picklist>
+        <values>
+            <fullName>Test1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Test2</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Test3</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>GES_Relationship__c</picklist>
+        <values>
+            <fullName>Priority</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Program</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>GES_Status__c</picklist>
+        <values>
+            <fullName>Exclusive</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>None of the above</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Preferred</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>In_House_Decorator__c</picklist>
+        <values>
+            <fullName>Test1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Test2</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Test3</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Industry</picklist>
+        <values>
+            <fullName>Building%2C Construction%2C Home Repair</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Communications %26 Information Technology</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Education</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Financial%2C Legal%2C Real Estate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Food Sector</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Government</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Industrial%2FHeavyMachinery</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Professional Business Services</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sports%2C Travel%2C Art %26 Consumer Services</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Transportation</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Intellecutal_Property_Rights_Ownership__c</picklist>
+        <values>
+            <fullName>Included</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Invoice_Indicator__c</picklist>
+        <values>
+            <fullName>Spiro Germany</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Invoice_Terms__c</picklist>
+        <values>
+            <fullName>100%25</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>30%25 %2F 40%25 %2F 30%25</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>50%25 %2F 50%25</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>75%25 %2F 25%25</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Number_of_Shows__c</picklist>
+        <values>
+            <fullName>Multiple Shows%2FYear</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>One Show%2FYear</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>One show every two years or more</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Ownership</picklist>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Private</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Public</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Subsidiary</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Payment_Terms__c</picklist>
+        <values>
+            <fullName>CT1-100%25 DEP NET 30</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CT2-55%25 DEP NET 30</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CT3-75%25 DEP NET 30</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CT4-100%25 BEFORE PROD</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CT5-CONTRACT TERMS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CT6-33-33%25 DEP NET</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CT7-50-25%25 DEP NET 30</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CT8-NET 30</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CT9 -100%25 PRIOR SHIP</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CTL - 100%25 FINAL LOAD OUT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CTLG-50%25 DEP NET 30</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>HLD-HOLD ALL ORDERS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>T10 - BALANCE DUE NET 45</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>T11 - BALANCE DUE NET 60</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>T12-75%25 DEP NET 10</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>T13-55%25 DEP NET 45</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>T14-75%25 DEP NET 45</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>T15-75%25 DEP NET 60</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>T16-55%25 DEP NET 60</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>T17-50%25 DEP NET 45</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>T18-2%25 20 NET 60</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>T19-2%25 10 NET 30</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>T20 - 15%25 DEP 50%25 INT N 60</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>T21 - 50%25 DEP 50%25 INT N 30</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>T22 - 25%25 DEP NET 30</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>T23 - 50%25 DEP 2%25 15 NET 45</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>T24-50%25 DEP NET 30</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>T25-50%25 DEP 40%25 INT N 30</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>T26-2%2E5%25 15 NET 90</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>T27-55%25 DEP NET 30</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>T28 - NET 15</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>T29-55%25 DEP NET 80</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>T30-40%25 DEP NET 90</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>T44-50%25 DEP NET 75</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>T57-70%25 DEP NET 30</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Portfolio_Code__c</picklist>
+        <values>
+            <fullName>%28Gartner%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>1105 Media</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>AMC</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ASI</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Access Intelligence</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Active</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Advanstar</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Americasmart</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BNP</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Barron%27s</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bobit</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Brett</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Business Journals</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cambridge</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Clarion</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Comexposium</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Convention Management Group %28CMG%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Corcoran</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cure Media Group</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cygnus</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DMG</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Dallas Market Center</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Diversified Communications %28DEI%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>E5 Global Media</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EH</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ENK Productions</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Emap</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Emerald Expositions</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Experient</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>F%2BW</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Gartner</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>George Little Management</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>George P%2E Johnson</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Global Lifestyle Markets</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hall-Erickson</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hanley Wood</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hart</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IDG World Expo</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Inciscive</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Informa</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Jupiter Events</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>M%7CC Communications</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mace Media</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Market Group</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Motor Trend</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Networld Media Group</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Paradice</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Penton Media</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Portfolio Summit</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pulver%2Ecom</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Questex Media</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Reed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SME</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Shared Insights</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Smith-Bucklin</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Source Media %28Thompson Media%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tarsus</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>UBM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>UBM Canon Communications</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>UP Media Group</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Virgo Publishing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>WT Glasgow</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>World Shoe %28WSA Holdings%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ad-tech</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Portfolio__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Provider__c</picklist>
+        <values>
+            <fullName>2020</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>3D Exhibits</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Apple Rock displays</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Atmosphere</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CEP</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CSI</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Catalyst Exhibits</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Condit</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Czarnowski</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Derse</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Display Works</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Exhibit Fair</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Exhibit Plus</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Exhibit Tree</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Exhibit Works</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Exhibit Worx</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Expo Group</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Expo Technique</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Fern</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Freddie George</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Freeman</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>GES %28US%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>George P%2E Johnson</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Gilbert Displays</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Group Delphi</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>H%2EB%2E Stubbs</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hamilton Displays</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Jack Morton Productions</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Journey</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Kubrick</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Las Vegas Expo</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lazer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MC2</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mash Group</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Metro Exhibits</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Nth Degree</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pico</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pinnacle Exhibits</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Premier Dispays</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Renaissance Management</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rochester Exhibits</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rosemont Expositions</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>STAK</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Shepard Convention Services</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Skyline</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Southwest Exhibits</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sparks Exhibits</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Steel Head Exhibits</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Taylor Displays</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Term Group</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Xhibit Solutions</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Rating</picklist>
+        <values>
+            <fullName>Cold</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hot</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Warm</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Relationship_Type__c</picklist>
+        <values>
+            <fullName>Competitor</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Customer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Prospect</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Type</picklist>
+        <values>
+            <fullName>Agency</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Association</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Contractor Competitor</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Corporation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Event Management</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Independent Organizer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Industry Associate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Portfolio</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Show Management</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Vendor</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>VAT_Number_Country_Code__c</picklist>
+        <values>
+            <fullName>AE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>AT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BG</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CH</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CY</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CZ</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DK</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ES</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FI</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>GB</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>HR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>HU</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>LT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>LU</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>LV</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>RO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SI</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SK</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>crms14__reg_direct_Background_Sync__c</picklist>
+        <values>
+            <fullName>Disabled</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Enabled</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

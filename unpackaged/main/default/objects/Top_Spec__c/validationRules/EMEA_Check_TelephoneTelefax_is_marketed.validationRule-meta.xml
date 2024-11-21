@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>EMEA_Check_TelephoneTelefax_is_marketed</fullName>
+    <active>false</active>
+    <errorConditionFormula>Contracted_Telephone_and_Telefax__c  == True &amp;&amp; (
+ Marketing_Telephone_and_Telefax__c   == False
+&amp;&amp;  LEN( Telephone_and_Telefax_Details__c ) = 0)</errorConditionFormula>
+    <errorDisplayField>Account__c</errorDisplayField>
+    <errorMessage>If Telephone and Telefax is contracted and is not being marketed you must enter a reason why</errorMessage>
+</ValidationRule>

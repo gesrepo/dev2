@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>EMEA_UBM_UK_Ltd_IFSEC_Case</fullName>
+    <filterScope>Queue</filterScope>
+    <label>EMEA UBM IFSEC</label>
+    <queue>EMEA_UBM_IFSEC</queue>
+    <sharedTo>
+        <allInternalUsers />
+    </sharedTo>
+</ListView>

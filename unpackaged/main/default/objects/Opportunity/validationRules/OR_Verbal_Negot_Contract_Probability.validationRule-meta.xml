@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>OR_Verbal_Negot_Contract_Probability</fullName>
+    <active>false</active>
+    <description>Restricts the manual override of the Probability to only these values: 50, 75 for stages Objectives Resolved / Questions Answered, Verbal Agreement and Negotiation / Review, Contract &amp; Transition to Accnt Team</description>
+    <errorConditionFormula>AND (OR (ISPICKVAL( StageName , &#39;Objectives Resolved/Questions Answered&#39;), ISPICKVAL( StageName , &#39;Verbal Agreement&#39;), ISPICKVAL( StageName , &#39;Negotiation/Review&#39;),ISPICKVAL( StageName , &#39;Contract &amp; Transition to Accnt Team&#39;)),IF (CASE ( Probability, 0.50, &#39;False&#39;,0.75,&#39;False&#39;, &#39;True&#39;)= &#39;True&#39;, TRUE,FALSE),NOT(OR($Profile.Name = &#39;GES Interface&#39;,$Profile.Name = &#39;System Administrator&#39;)))</errorConditionFormula>
+    <errorDisplayField>Probability</errorDisplayField>
+    <errorMessage>For stages Objectives Resolved / Questions Answered, Verbal Agreement and Negotiation / Review,Contract &amp; Transition to Accnt Team, you must select one of these values for Probability: 50, or 75.</errorMessage>
+</ValidationRule>

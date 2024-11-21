@@ -1,0 +1,486 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Categories__c</fullName>
+    <label>Categories</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>All</fullName>
+                <default>false</default>
+                <label>All</label>
+            </value>
+            <value>
+                <fullName>Information from G1 (Quick Facts)</fullName>
+                <default>false</default>
+                <label>Information from G1 (Quick Facts)</label>
+            </value>
+            <value>
+                <fullName>Discount Deadline</fullName>
+                <default>false</default>
+                <label>Discount Deadline</label>
+            </value>
+            <value>
+                <fullName>Important Dates</fullName>
+                <default>false</default>
+                <label>Important Dates</label>
+            </value>
+            <value>
+                <fullName>Installation</fullName>
+                <default>false</default>
+                <label>Installation</label>
+            </value>
+            <value>
+                <fullName>Show Hours</fullName>
+                <default>false</default>
+                <label>Show Hours</label>
+            </value>
+            <value>
+                <fullName>Dismantle</fullName>
+                <default>false</default>
+                <label>Dismantle</label>
+            </value>
+            <value>
+                <fullName>Carrier Check in Post Show</fullName>
+                <default>false</default>
+                <label>Carrier Check in Post Show</label>
+            </value>
+            <value>
+                <fullName>Facility Clear</fullName>
+                <default>false</default>
+                <label>Facility Clear</label>
+            </value>
+            <value>
+                <fullName>Target Date</fullName>
+                <default>false</default>
+                <label>Target Date</label>
+            </value>
+            <value>
+                <fullName>Off Target</fullName>
+                <default>false</default>
+                <label>Off Target</label>
+            </value>
+            <value>
+                <fullName>Shipping Dates/Addresses</fullName>
+                <default>false</default>
+                <label>Shipping Dates/Addresses</label>
+            </value>
+            <value>
+                <fullName>Adv Receiving	 (SD)</fullName>
+                <default>false</default>
+                <label>Adv Receiving	 (SD)</label>
+            </value>
+            <value>
+                <fullName>Delivery Dates (SDAR)</fullName>
+                <default>false</default>
+                <label>Delivery Dates (SDAR)</label>
+            </value>
+            <value>
+                <fullName>Direct to Show (SD)</fullName>
+                <default>false</default>
+                <label>Direct to Show (SD)</label>
+            </value>
+            <value>
+                <fullName>Delivery Dates (SDDS)</fullName>
+                <default>false</default>
+                <label>Delivery Dates (SDDS)</label>
+            </value>
+            <value>
+                <fullName>Marshalling Yard (SD)</fullName>
+                <default>false</default>
+                <label>Marshalling Yard (SD)</label>
+            </value>
+            <value>
+                <fullName>Payment/Billing Information</fullName>
+                <default>false</default>
+                <label>Payment/Billing Information</label>
+            </value>
+            <value>
+                <fullName>Tax exemption</fullName>
+                <default>false</default>
+                <label>Tax exemption</label>
+            </value>
+            <value>
+                <fullName>Check Payment Address</fullName>
+                <default>false</default>
+                <label>Check Payment Address</label>
+            </value>
+            <value>
+                <fullName>Wire Transfer Information</fullName>
+                <default>false</default>
+                <label>Wire Transfer Information</label>
+            </value>
+            <value>
+                <fullName>PO&#39;s</fullName>
+                <default>false</default>
+                <label>PO&#39;s</label>
+            </value>
+            <value>
+                <fullName>3rd Parties</fullName>
+                <default>false</default>
+                <label>3rd Parties</label>
+            </value>
+            <value>
+                <fullName>EAC&#39;s</fullName>
+                <default>false</default>
+                <label>EAC&#39;s</label>
+            </value>
+            <value>
+                <fullName>Liability Insurance (3rd)</fullName>
+                <default>false</default>
+                <label>Liability Insurance (3rd)</label>
+            </value>
+            <value>
+                <fullName>Pavilion</fullName>
+                <default>false</default>
+                <label>Pavilion</label>
+            </value>
+            <value>
+                <fullName>Logistics</fullName>
+                <default>false</default>
+                <label>Logistics</label>
+            </value>
+            <value>
+                <fullName>Bill of Lading</fullName>
+                <default>false</default>
+                <label>Bill of Lading</label>
+            </value>
+            <value>
+                <fullName>Forced Freight</fullName>
+                <default>false</default>
+                <label>Forced Freight</label>
+            </value>
+            <value>
+                <fullName>Shipping Dates/Addresses (Log)</fullName>
+                <default>false</default>
+                <label>Shipping Dates/Addresses (Log)</label>
+            </value>
+            <value>
+                <fullName>Adv Receiving (Log)</fullName>
+                <default>false</default>
+                <label>Adv Receiving (Log)</label>
+            </value>
+            <value>
+                <fullName>Shipping Labels</fullName>
+                <default>false</default>
+                <label>Shipping Labels</label>
+            </value>
+            <value>
+                <fullName>Domestic</fullName>
+                <default>false</default>
+                <label>Domestic</label>
+            </value>
+            <value>
+                <fullName>International</fullName>
+                <default>false</default>
+                <label>International</label>
+            </value>
+            <value>
+                <fullName>Material Handling</fullName>
+                <default>false</default>
+                <label>Material Handling</label>
+            </value>
+            <value>
+                <fullName>Shipping Dates/Addresses (MH)</fullName>
+                <default>false</default>
+                <label>Shipping Dates/Addresses (MH)</label>
+            </value>
+            <value>
+                <fullName>Adv Reciving	(MH)</fullName>
+                <default>false</default>
+                <label>Adv Reciving	(MH)</label>
+            </value>
+            <value>
+                <fullName>Delivery Dates (MH SD)</fullName>
+                <default>false</default>
+                <label>Delivery Dates (MH SD)</label>
+            </value>
+            <value>
+                <fullName>Direct to Show (MH)</fullName>
+                <default>false</default>
+                <label>Direct to Show (MH)</label>
+            </value>
+            <value>
+                <fullName>Delivery Dates (MH DS)</fullName>
+                <default>false</default>
+                <label>Delivery Dates (MH DS)</label>
+            </value>
+            <value>
+                <fullName>Marshalling Yard (MH)</fullName>
+                <default>false</default>
+                <label>Marshalling Yard (MH)</label>
+            </value>
+            <value>
+                <fullName>Special Handling</fullName>
+                <default>false</default>
+                <label>Special Handling</label>
+            </value>
+            <value>
+                <fullName>Accesible Storage</fullName>
+                <default>false</default>
+                <label>Accesible Storage</label>
+            </value>
+            <value>
+                <fullName>Cartload Services</fullName>
+                <default>false</default>
+                <label>Cartload Services</label>
+            </value>
+            <value>
+                <fullName>POV</fullName>
+                <default>false</default>
+                <label>POV</label>
+            </value>
+            <value>
+                <fullName>Vehicle Placement</fullName>
+                <default>false</default>
+                <label>Vehicle Placement</label>
+            </value>
+            <value>
+                <fullName>Hanging Signs</fullName>
+                <default>false</default>
+                <label>Hanging Signs</label>
+            </value>
+            <value>
+                <fullName>Non-Electrical Signs</fullName>
+                <default>false</default>
+                <label>Non-Electrical Signs</label>
+            </value>
+            <value>
+                <fullName>Electrical Signs</fullName>
+                <default>false</default>
+                <label>Electrical Signs</label>
+            </value>
+            <value>
+                <fullName>Labor</fullName>
+                <default>false</default>
+                <label>Labor</label>
+            </value>
+            <value>
+                <fullName>I&amp;D</fullName>
+                <default>false</default>
+                <label>I&amp;D</label>
+            </value>
+            <value>
+                <fullName>Liability Insurance (Labor)</fullName>
+                <default>false</default>
+                <label>Liability Insurance (Labor)</label>
+            </value>
+            <value>
+                <fullName>In-Booth Forklift &amp; Labor</fullName>
+                <default>false</default>
+                <label>In-Booth Forklift &amp; Labor</label>
+            </value>
+            <value>
+                <fullName>Booth Layout (Labor)</fullName>
+                <default>false</default>
+                <label>Booth Layout (Labor)</label>
+            </value>
+            <value>
+                <fullName>Furnishings</fullName>
+                <default>false</default>
+                <label>Furnishings</label>
+            </value>
+            <value>
+                <fullName>Standard Furnishings</fullName>
+                <default>false</default>
+                <label>Standard Furnishings</label>
+            </value>
+            <value>
+                <fullName>Accessories</fullName>
+                <default>false</default>
+                <label>Accessories</label>
+            </value>
+            <value>
+                <fullName>Speciality Furnishings</fullName>
+                <default>false</default>
+                <label>Speciality Furnishings</label>
+            </value>
+            <value>
+                <fullName>Standard Exhibit Systems</fullName>
+                <default>false</default>
+                <label>Standard Exhibit Systems</label>
+            </value>
+            <value>
+                <fullName>Booth Layout (Furn)</fullName>
+                <default>false</default>
+                <label>Booth Layout (Furn)</label>
+            </value>
+            <value>
+                <fullName>Carpet</fullName>
+                <default>false</default>
+                <label>Carpet</label>
+            </value>
+            <value>
+                <fullName>Pre-Cut Carpet</fullName>
+                <default>false</default>
+                <label>Pre-Cut Carpet</label>
+            </value>
+            <value>
+                <fullName>Padding</fullName>
+                <default>false</default>
+                <label>Padding</label>
+            </value>
+            <value>
+                <fullName>Visqueen</fullName>
+                <default>false</default>
+                <label>Visqueen</label>
+            </value>
+            <value>
+                <fullName>Custom Cut Carpet</fullName>
+                <default>false</default>
+                <label>Custom Cut Carpet</label>
+            </value>
+            <value>
+                <fullName>Carpet Package</fullName>
+                <default>false</default>
+                <label>Carpet Package</label>
+            </value>
+            <value>
+                <fullName>Booth Layout</fullName>
+                <default>false</default>
+                <label>Booth Layout</label>
+            </value>
+            <value>
+                <fullName>Graphics</fullName>
+                <default>false</default>
+                <label>Graphics</label>
+            </value>
+            <value>
+                <fullName>Digital File Preperation</fullName>
+                <default>false</default>
+                <label>Digital File Preperation</label>
+            </value>
+            <value>
+                <fullName>Booth Package</fullName>
+                <default>false</default>
+                <label>Booth Package</label>
+            </value>
+            <value>
+                <fullName>Standard Packages</fullName>
+                <default>false</default>
+                <label>Standard Packages</label>
+            </value>
+            <value>
+                <fullName>Show Specific Packages</fullName>
+                <default>false</default>
+                <label>Show Specific Packages</label>
+            </value>
+            <value>
+                <fullName>Cleaning</fullName>
+                <default>false</default>
+                <label>Cleaning</label>
+            </value>
+            <value>
+                <fullName>Vaccuming</fullName>
+                <default>false</default>
+                <label>Vaccuming</label>
+            </value>
+            <value>
+                <fullName>Porter Services</fullName>
+                <default>false</default>
+                <label>Porter Services</label>
+            </value>
+            <value>
+                <fullName>Electrical</fullName>
+                <default>false</default>
+                <label>Electrical</label>
+            </value>
+            <value>
+                <fullName>Electrical Labor</fullName>
+                <default>false</default>
+                <label>Electrical Labor</label>
+            </value>
+            <value>
+                <fullName>Truss</fullName>
+                <default>false</default>
+                <label>Truss</label>
+            </value>
+            <value>
+                <fullName>Chain Host</fullName>
+                <default>false</default>
+                <label>Chain Host</label>
+            </value>
+            <value>
+                <fullName>Stagehand</fullName>
+                <default>false</default>
+                <label>Stagehand</label>
+            </value>
+            <value>
+                <fullName>Plumbing</fullName>
+                <default>false</default>
+                <label>Plumbing</label>
+            </value>
+            <value>
+                <fullName>Steamer Outlet</fullName>
+                <default>false</default>
+                <label>Steamer Outlet</label>
+            </value>
+            <value>
+                <fullName>Rules &amp; Regulations</fullName>
+                <default>false</default>
+                <label>Rules &amp; Regulations</label>
+            </value>
+            <value>
+                <fullName>Vendor Forms</fullName>
+                <default>false</default>
+                <label>Vendor Forms</label>
+            </value>
+            <value>
+                <fullName>Policies &amp; Procedure</fullName>
+                <default>false</default>
+                <label>Policies &amp; Procedure</label>
+            </value>
+            <value>
+                <fullName>Attendance</fullName>
+                <default>false</default>
+                <label>Attendance</label>
+            </value>
+            <value>
+                <fullName>Inbound</fullName>
+                <default>false</default>
+                <label>Inbound</label>
+            </value>
+            <value>
+                <fullName>Outbound</fullName>
+                <default>false</default>
+                <label>Outbound</label>
+            </value>
+            <value>
+                <fullName>Resolutions</fullName>
+                <default>false</default>
+                <label>Resolutions</label>
+            </value>
+            <value>
+                <fullName>Archivist</fullName>
+                <default>false</default>
+                <label>Archivist</label>
+            </value>
+            <value>
+                <fullName>Logistics (P&amp;P)</fullName>
+                <default>false</default>
+                <label>Logistics (P&amp;P)</label>
+            </value>
+            <value>
+                <fullName>Lead Generation</fullName>
+                <default>false</default>
+                <label>Lead Generation</label>
+            </value>
+            <value>
+                <fullName>Order Entry</fullName>
+                <default>false</default>
+                <label>Order Entry</label>
+            </value>
+            <value>
+                <fullName>Kit Adminsitration</fullName>
+                <default>false</default>
+                <label>Kit Adminsitration</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

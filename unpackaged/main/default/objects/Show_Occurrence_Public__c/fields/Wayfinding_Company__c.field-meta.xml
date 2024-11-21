@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Wayfinding_Company__c</fullName>
+    <label>Wayfinding Company</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>eTech Events</fullName>
+                <default>false</default>
+                <label>eTech Events</label>
+            </value>
+            <value>
+                <fullName>Map Your Show</fullName>
+                <default>false</default>
+                <label>Map Your Show</label>
+            </value>
+            <value>
+                <fullName>Prism</fullName>
+                <default>false</default>
+                <label>Prism</label>
+            </value>
+            <value>
+                <fullName>Sherpa Solutions</fullName>
+                <default>false</default>
+                <label>Sherpa Solutions</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

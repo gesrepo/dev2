@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Open_Opprtunities__c</fullName>
+    <description>Store count of opportunities of record types (E&amp;D Projects, Events &amp; Experiential, EMEA Custom Build)</description>
+    <label>Open Opprtunities</label>
+    <summaryFilterItems>
+        <field>Opportunity.Open__c</field>
+        <operation>equals</operation>
+        <value>1</value>
+    </summaryFilterItems>
+    <summaryForeignKey>Opportunity.AccountId</summaryForeignKey>
+    <summaryOperation>count</summaryOperation>
+    <trackHistory>false</trackHistory>
+    <type>Summary</type>
+</CustomField>

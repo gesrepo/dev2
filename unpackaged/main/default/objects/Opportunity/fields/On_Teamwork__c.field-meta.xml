@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>On_Teamwork__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Is the opportunity on Teamworks App?</description>
+    <inlineHelpText>Is the opportunity on the Teamworks App?</inlineHelpText>
+    <label>On Teamwork</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

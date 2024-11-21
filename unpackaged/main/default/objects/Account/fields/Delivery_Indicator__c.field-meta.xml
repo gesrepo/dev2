@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Delivery_Indicator__c</fullName>
+    <description>Address Type to determine if residential or company for US addresses</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Address Type to determine if residential or company for US addresses</inlineHelpText>
+    <label>Delivery Indicator</label>
+    <length>250</length>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

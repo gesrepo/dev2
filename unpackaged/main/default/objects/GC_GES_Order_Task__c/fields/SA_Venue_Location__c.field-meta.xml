@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SA_Venue_Location__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>Venue Location setup by the Account Manager.</description>
+    <inlineHelpText>Venue Location setup by the Account Manager.</inlineHelpText>
+    <label>Venue Location</label>
+    <lookupFilter>
+        <active>true</active>
+        <filterItems>
+            <field>GC_Show_Attribute__c.RecordType.Name</field>
+            <operation>equals</operation>
+            <value>Venue Location</value>
+        </filterItems>
+        <isOptional>false</isOptional>
+    </lookupFilter>
+    <referenceTo>GC_Show_Attribute__c</referenceTo>
+    <relationshipName>GES_Order_Tasks33</relationshipName>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

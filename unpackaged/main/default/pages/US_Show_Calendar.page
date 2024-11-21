@@ -1,0 +1,273 @@
+<apex:page sidebar="false" standardController="Opportunity" extensions="USShowCalendar" recordSetVar="shows" lightningStylesheets="true">
+
+    <apex:sectionHeader title="Show Calendar"/>
+    <apex:form style="width:100%;" >
+    
+        <apex:pageBlock title="Please select the month to view" mode="edit" id="block">
+            <apex:pageBlockButtons location="bottom">
+                <apex:commandButton value="Search" action="{!search}"/>
+                <apex:commandButton value="Clear" action="{!clear}"/>
+                 <!---<apex:commandLink value="Export" >  --->
+                 <div class="btn" style="padding: 5px;">
+  <apex:commandLink action="{!exportxlsmeth}"    target="_blank" value="Export"  >
+               </apex:commandLink>
+               </div>
+        
+
+            </apex:pageBlockButtons>
+            <apex:pageBlockSection columns="3" >
+                        
+               <apex:pageBlockSectionItem labelTitle="Month"  >
+                   Month:
+                    <apex:selectlist value="{!monthValue}" multiselect="true" size="5" label="Month:" id="month" > 
+                        <apex:selectOption itemValue="1" itemLabel="Jan"/>
+                        <apex:selectOption itemValue="2" itemLabel="Feb"/>
+                        <apex:selectOption itemValue="3" itemLabel="Mar"/>
+                        <apex:selectOption itemValue="4" itemLabel="Apr"/>
+                        <apex:selectOption itemValue="5" itemLabel="May"/>
+                        <apex:selectOption itemValue="6" itemLabel="Jun"/>
+                        <apex:selectOption itemValue="7" itemLabel="Jul"/>
+                        <apex:selectOption itemValue="8" itemLabel="Aug"/>
+                        <apex:selectOption itemValue="9" itemLabel="Sep"/>
+                        <apex:selectOption itemValue="10" itemLabel="Oct"/>
+                        <apex:selectOption itemValue="11" itemLabel="Nov"/>
+                        <apex:selectOption itemValue="12" itemLabel="Dec"/>
+                        
+                    </apex:selectlist>
+                </apex:pageBlockSectionItem>
+                 <apex:pageBlockSectionItem > 
+                    Year:
+                    <apex:selectlist value="{!yearValue}" multiselect="true" size="5">    
+                        <apex:selectOption itemValue="2016" itemLabel="2016"/>
+                        <apex:selectOption itemValue="2017" itemLabel="2017"/>
+                        <apex:selectOption itemValue="2018" itemLabel="2018"/>
+                        <apex:selectOption itemValue="2019" itemLabel="2019"/>
+                        <apex:selectOption itemValue="2020" itemLabel="2020"/>
+                        <apex:selectOption itemValue="2021" itemLabel="2021"/>
+                        <apex:selectOption itemValue="2022" itemLabel="2022"/>    
+                        <!-- Add 2023,2024 to the Year Mounika Atluri 10/26/2022 -->
+                        <apex:selectOption itemValue="2023" itemLabel="2023"/> 
+                        <apex:selectOption itemValue="2024" itemLabel="2024"/> 
+                        <!-- Add 2023,2024 to the Year Mounika Atluri 04/11/2024 -->
+                        <apex:selectOption itemValue="2025" itemLabel="2025"/> 
+                        <apex:selectOption itemValue="2026" itemLabel="2026"/>
+                        <apex:selectOption itemValue="2027" itemLabel="2027"/> 
+                        <apex:selectOption itemValue="2028" itemLabel="2028"/>
+                        <apex:selectOption itemValue="2029" itemLabel="2029"/> 
+                        <apex:selectOption itemValue="2030" itemLabel="2030"/>
+                        
+                    </apex:selectlist>
+            </apex:pageBlockSectionItem>
+
+                                <apex:pageBlockSectionItem > 
+                    Production Location:
+                    <apex:selectList id="mylistselected" value="{!productionLocation}" multiselect="true" size="5" >
+                        <apex:selectoption itemValue="All"/>
+                        <apex:selectoption itemValue="110- Las Vegas"/>
+                        <apex:selectoption itemValue="140- Salt Lake City"/>    
+                        <apex:selectoption itemValue="150- Reno"/>    
+                        <apex:selectoption itemValue="160- Denver"/>
+                        <apex:selectoption itemValue="170- Phoenix"/>
+                        <apex:selectoption itemValue="220- Los Angeles, CA"/>
+                        <apex:selectoption itemValue="240- San Francisco, San Jose"/>
+                        <apex:selectoption itemValue="250- San Diego"/>
+                        <apex:selectoption itemValue="270- Corporate Events(Marketing Dept only)"/>
+                        <apex:selectoption itemValue="420- Austin, Dallas, Houston, San Antonio"/>
+                        <apex:selectoption itemValue="460 - Calgary, Canada"/>
+                        <apex:selectoption itemValue="470 - Edmonton, Canada"/>
+                        <apex:selectoption itemValue="471 - Vancouver, Canada"/>
+                        <apex:selectoption itemValue="480- Montreal, Canada - ESS"/>
+                        <apex:selectoption itemValue="481 - Quebec City, Canada"/>
+                        <apex:selectoption itemValue="483 - Montreal, Canada - CCI"/>
+                        <apex:selectoption itemValue="510- Atlanta"/>
+                        <apex:selectoption itemValue="520- Florida"/>
+                        <apex:selectoption itemValue="530- New Orleans"/>
+                        <apex:selectoption itemValue="610- Portland, Seattle"/>
+                        <apex:selectoption itemValue="710- Chicago, Cleveland, Milwaukee, St. Louis"/>
+                        <apex:selectoption itemValue="790- Minneapolis"/>
+                        <apex:selectoption itemValue="810- New York & Boston"/>
+                        <apex:selectoption itemValue="830-DC, Philadelphia"/>
+                        <apex:selectoption itemValue="890- Toronto, Canada"/>
+                        <apex:selectoption itemValue="940 - Tradeshow Foreign"/>
+                       <!--- <apex:selectoption itemValue="944 - E&E Foreign"/>
+                        <apex:selectoption itemValue="Coventry"/>
+                        <apex:selectoption itemValue="Germany"/>
+                        <apex:selectoption itemValue="Glasgow"/>
+                        <apex:selectoption itemValue="Holland"/>
+                        <apex:selectoption itemValue="London"/>
+                        <apex:selectoption itemValue="Sheffield"/>
+                        <apex:selectoption itemValue="UAE"/>
+                        <apex:selectoption itemValue="120- Housing"/> --->
+                    </apex:selectList> 
+               </apex:pageBlockSectionItem>
+                
+                <apex:pageBlockSectionItem >  
+                    Stage:
+                    <apex:selectList value="{!stageFilter}" multiselect="false" size="1" >
+                        <apex:selectoption itemValue="CR/CV"/>      
+                        <apex:selectoption itemValue="PO/PS"/>
+                        <apex:selectoption itemValue="SL1/SL3"/>
+                        <apex:selectoption itemValue="Open (PO/PS/SL1/SL3)"/>
+                        <apex:selectoption itemValue="TS"/>
+                        <apex:selectoption itemValue="LO/LR/LPE/LPM"/>
+                        <apex:selectoption itemValue="CC/DB/IA/SC/NE/SM">
+                        </apex:selectoption>
+                        
+                    </apex:selectList>
+                </apex:PageBlockSectionItem> 
+                <apex:pageBlockSectionItem >  
+                    Venue:
+                    <apex:selectlist value="{!venueFilter}"  multiselect="false" size="1">
+                    <apex:selectoption itemValue="All"/>
+                        <apex:selectoption itemValue="Anaheim Convention Center"/>
+                        <apex:selectoption itemValue="Aria Resort & Casino"/>
+                        <apex:selectoption itemValue="Arizona Biltmore"/>
+                        <apex:selectoption itemValue="Austin Convention Center"/>
+                        <apex:selectoption itemValue="Baltimore Convention Center"/>
+                        <apex:selectoption itemValue="Bellagio - The Resort"/>
+                        <apex:selectoption itemValue="Boston Convention & Exhibit Center"/>
+                        <apex:selectoption itemValue="Caesars Palace"/>
+                        <apex:selectoption itemValue="Calgary Exhibition & Stampede"/>
+                        <apex:selectoption itemValue="Centre de Foires de Quebec"/>
+                        <apex:selectoption itemValue="CenturyLink Field Event Center"/>
+                        <apex:selectoption itemValue="Charlotte Convention Center"/>
+                        <apex:selectoption itemValue="Colorado Convention Center"/>
+                        <apex:selectoption itemValue="Cosmopolitan of Las Vegas (The)"/>
+                        <apex:selectoption itemValue="Dallas Market Center"/>
+                        <apex:selectoption itemValue="Diplomat Resort & Spa Hollywood"/>
+                        <apex:selectoption itemValue="Direct Energy Centre"/>
+                        <apex:selectoption itemValue="Disneyland Hotel"/>
+                        <apex:selectoption itemValue="EDMONTON EXPO CENTRE"/>
+                        <apex:selectoption itemValue="Ernest N. Morial Convention Center"/>
+                        <apex:selectoption itemValue="Evraz Place"/>
+                        <apex:selectoption itemValue="Fairmont Banff Springs"/>
+                        <apex:selectoption itemValue="Fairmont The Queen Elizabeth"/>
+                        <apex:selectoption itemValue="Fort Worth Convention Center"/>
+                        <apex:selectoption itemValue="Gaylord National Resort & Convention Center"/>
+                        <apex:selectoption itemValue="Gaylord Opryland Resort & Convention Center"/>
+                        <apex:selectoption itemValue="Gaylord Palms Convention Center"/>
+                        <apex:selectoption itemValue="Gaylord Texan Resort & Convention Center"/>
+                        <apex:selectoption itemValue="Georgia World Congress Center"/>
+                        <apex:selectoption itemValue="Grand America Hotel And Towers"/>
+                        <apex:selectoption itemValue="Grand Hyatt San Diego / Manchester"/>
+                        <apex:selectoption itemValue="Grand Sierra Resort & Casino"/>
+                        <apex:selectoption itemValue="Hilton Bayfront Hotel San Diego"/>
+                        <apex:selectoption itemValue="Hilton Chicago"/>
+                        <apex:selectoption itemValue="Hilton Dallas Anatole"/>
+                        <apex:selectoption itemValue="Hilton Montreal Bonaventure"/>
+                        <apex:selectoption itemValue="Hilton New Orleans Riverside"/>
+                        <apex:selectoption itemValue="Hilton New York Midtown"/>
+                        <apex:selectoption itemValue="Hilton Orlando Bonnet Creek"/>
+                        <apex:selectoption itemValue="Hilton San Francisco - Union Square"/>
+                        <apex:selectoption itemValue="Hyatt Regency Chicago"/>
+                        <apex:selectoption itemValue="Hyatt Regency Dallas"/>
+                        <apex:selectoption itemValue="Hyatt Regency Minneapolis"/>
+                        <apex:selectoption itemValue="Hyatt Regency New Orleans"/>
+                        <apex:selectoption itemValue="Hyatt Regency Orlando"/>
+                        <apex:selectoption itemValue="Hyatt Regency San Francisco"/>
+                        <apex:selectoption itemValue="Hynes Convention Center"/>
+                        <apex:selectoption itemValue="Indiana Convention Center & Lucas Oil Stadium"/>
+                        <apex:selectoption itemValue="International Centre"/>
+                        <apex:selectoption itemValue="Jacob K. Javits Center"/>
+                        <apex:selectoption itemValue="John Ascuaga's Nugget"/>
+                        <apex:selectoption itemValue="JW Marriott Orlando Grande Lakes"/>
+                        <apex:selectoption itemValue="JW Marriott Resort - Phoenix / Desert Ridge"/>
+                        <apex:selectoption itemValue="Las Vegas Convention Center"/>
+                        <apex:selectoption itemValue="Long Beach Convention & Entertainment Ct"/>
+                        <apex:selectoption itemValue="Los Angeles Convention Center"/>
+                        <apex:selectoption itemValue="Mandalay Bay Convention Center"/>
+                        <apex:selectoption itemValue="Marriott Marquis Atlanta"/>
+                        <apex:selectoption itemValue="Marriott Marquis New York"/>
+                        <apex:selectoption itemValue="Marriott Marquis San Francisco"/>
+                        <apex:selectoption itemValue="Marriott New Orleans"/>
+                        <apex:selectoption itemValue="Marriott Resort Orlando World Center"/>
+                        <apex:selectoption itemValue="Marriott Wardman Park Washington DC"/>
+                        <apex:selectoption itemValue="McCormick Place Convention Center"/>
+                        <apex:selectoption itemValue="Metro Toronto Convention Centre"/>
+                        <apex:selectoption itemValue="Minneapolis Convention Center"/>
+                        <apex:selectoption itemValue="Mirage"/>
+                        <apex:selectoption itemValue="Moscone Center"/>
+                        <apex:selectoption itemValue="National International E&E"/>
+                        <apex:selectoption itemValue="Navy Pier"/>
+                        <apex:selectoption itemValue="New York City Passenger Ship Terminal"/>
+                        <apex:selectoption itemValue="No Facility Assigned"/>
+                        <apex:selectoption itemValue="Northlands AgriCom"/>
+                        <apex:selectoption itemValue="Omni Orlando Resort at ChampionsGate"/>
+                        <apex:selectoption itemValue="Orange County Convention Center - South Concourse"/>
+                        <apex:selectoption itemValue="Orange County Convention Center - West Concourse"/>
+                        <apex:selectoption itemValue="Palais des congres de Montreal"/>
+                        <apex:selectoption itemValue="Paradise Point San Diego Resort & Spa"/>
+                        <apex:selectoption itemValue="Paris Las Vegas"/>
+                        <apex:selectoption itemValue="Pasadena Convention Center - California"/>
+                        <apex:selectoption itemValue="Pennsylvania Convention Center"/>
+                        <apex:selectoption itemValue="Peppermill Resort"/>
+                        <apex:selectoption itemValue="Phoenix Convention Center"/>
+                        <apex:selectoption itemValue="Place Bonaventure Exhibition Hall"/>
+                        <apex:selectoption itemValue="Quebec City Convention Center"/>
+                        <apex:selectoption itemValue="Red Rock Casino Resort Spa"/>
+                        <apex:selectoption itemValue="Renaissance Resort - Orlando / at Seaworld"/>
+                        <apex:selectoption itemValue="Reno Convention Center"/>
+                        <apex:selectoption itemValue="Rio All-Suite Hotel & Casino"/>
+                        <apex:selectoption itemValue="Rosen Shingle Creek Hotel"/>
+                        <apex:selectoption itemValue="Sacramento Convention Center"/>
+                        <apex:selectoption itemValue="Saint Paul Rivercentre"/>
+                        <apex:selectoption itemValue="Salt Palace Convention Center"/>
+                        <apex:selectoption itemValue="San Diego Convention Center"/>
+                        <apex:selectoption itemValue="San Jose McEnery Convention Center"/>
+                        <apex:selectoption itemValue="Sands Expo Convention Center"/>
+                        <apex:selectoption itemValue="Santa Clara Convention Center"/>
+                        <apex:selectoption itemValue="Sheraton Chicago Hotel & Towers"/>
+                        <apex:selectoption itemValue="Sheraton New Orleans"/>
+                        <apex:selectoption itemValue="Sheraton San Diego Hotel & Marina"/>
+                        <apex:selectoption itemValue="South Towne Exposition Center"/>
+                        <apex:selectoption itemValue="The Venetian Las Vegas"/>
+                        <apex:selectoption itemValue="Toronto Congress Centre Ltd."/>
+                        <apex:selectoption itemValue="Town And Country Resort & Convention Ctr"/>
+                        <apex:selectoption itemValue="Vancouver Convention Centre"/>
+                        <apex:selectoption itemValue="Venue"/>
+                        <apex:selectoption itemValue="Walt Disney World Dolphin Hotel"/>
+                        <apex:selectoption itemValue="Walter E Washington Convention Center"/>
+                        <apex:selectoption itemValue="Washington State Convention Center"/>
+                        <apex:selectoption itemValue="Washington State Fair Events Center"/>
+                        <apex:selectoption itemValue="Westerner Park"/>
+                        <apex:selectoption itemValue="Westin Scottsdale Kierland Resort & Spa"/>
+                        <apex:selectoption itemValue="Wynn Las Vegas"/>
+                    </apex:selectlist>
+               </apex:pageBlockSectionItem>
+                <apex:pageBlockSectionItem >
+                    Probability:
+                    <apex:selectList value="{!probabilityFilter}" multiselect="false" size="1">
+                        <apex:selectoption itemValue="All"/>
+                        <apex:selectoption itemValue="0"/>
+                        <apex:selectoption itemValue="25"/>
+                        <apex:selectoption itemValue="50"/>
+                        <apex:selectoption itemValue="75"/>
+                        <apex:selectoption itemValue="100"/>                        
+                    </apex:selectList>
+                </apex:PageBlockSectionItem>       
+                <apex:messages />
+            </apex:pageBlockSection>
+        </apex:pageBlock>
+        
+        <apex:pageBlock title="Results" id="results">
+        Showing top 1500 Opportunities.
+            <apex:pageBlockSection columns="1">
+                <apex:pageBlockTable value="{!show}" var="s">
+                    <apex:column headerValue="Show Name" value="{!s.opp.Show_Name__c}"/>
+                    <apex:column headerValue="Opportunity Name">
+                        <a href="/{!s.opp.Id}">{!s.opp.Name}</a>
+                    </apex:column>
+                    <apex:column headerValue="Venue" value="{!s.opp.Facility__r.name}"/>
+                    <apex:column headerValue="Show Open" value="{!s.opp.Show_Open_Date__c}"/>
+                    <apex:column headerValue="Show Close" value="{!s.opp.Show_Close_Date__c}"/>
+                    <apex:column headerValue="Sales Manager" value="{!s.opp.Sales_Person__c}"/>
+                    <apex:column headerValue="StageName" value="{!s.opp.StageName}"/>
+                    <apex:column headerValue="Production Location" value="{!s.opp.Production_Location__c}"/>
+                    <apex:column headerValue="Probability" value="{!s.opp.Probability}"/>
+                    <apex:column headerValue="Amount" value="{!s.opp.Amount}"/>
+                    <apex:column headerValue="Type" value="{!s.opp.RecordType_Name__c}"/>
+                </apex:pageBlockTable>
+            </apex:pageBlockSection>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

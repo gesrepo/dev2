@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Sustainability__c</fullName>
+    <defaultValue>&#39;SUSTAINABILITY COMMITMENT GES are committed to Sustainability and we measure what we do and monitor our progress so that we can demonstrate to everyone how we are  helping to improve industry sustainability.  Re-use, recycle and replenish wherever possible and record the cycle of all materials and equipment on to the Show KPI document where applicable  via Operational Support. We are contributing to help build an events industry that is much more environmentally friendly, has the processes in place to continually improve  its sustainability and the tools to measure and demonstrate that progress.  Act Responsible, Think Sustainable Our legacy is to have helped change the culture of the events industry to act sustainably.&#39;</defaultValue>
+    <inlineHelpText>GES Sustainability Commitment</inlineHelpText>
+    <label>Sustainability</label>
+    <length>32768</length>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>LongTextArea</type>
+    <visibleLines>5</visibleLines>
+</CustomField>

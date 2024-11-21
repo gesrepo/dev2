@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Disqualify_Reason__c</fullName>
+    <label>Disqualify Reason</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>true</sorted>
+            <value>
+                <fullName>Bad Contact Information</fullName>
+                <default>false</default>
+                <label>Bad Contact Information</label>
+            </value>
+            <value>
+                <fullName>Competitor Engaged</fullName>
+                <default>false</default>
+                <label>Competitor Engaged</label>
+            </value>
+            <value>
+                <fullName>Customer Service</fullName>
+                <default>false</default>
+                <label>Customer Service</label>
+            </value>
+            <value>
+                <fullName>Customer Service Inquiry</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Customer Service Inquiry</label>
+            </value>
+            <value>
+                <fullName>Dead Opportunity</fullName>
+                <default>false</default>
+                <label>Dead Opportunity</label>
+            </value>
+            <value>
+                <fullName>Decline to Bid</fullName>
+                <default>false</default>
+                <label>Decline to Bid</label>
+            </value>
+            <value>
+                <fullName>Duplicate Opportunity</fullName>
+                <default>false</default>
+                <label>Duplicate Opportunity</label>
+            </value>
+            <value>
+                <fullName>Junk</fullName>
+                <default>false</default>
+                <label>Junk</label>
+            </value>
+            <value>
+                <fullName>Left Company</fullName>
+                <default>false</default>
+                <label>Left Company</label>
+            </value>
+            <value>
+                <fullName>Misaligned Need</fullName>
+                <default>false</default>
+                <label>Misaligned Need</label>
+            </value>
+            <value>
+                <fullName>No Authority</fullName>
+                <default>false</default>
+                <label>No Authority</label>
+            </value>
+            <value>
+                <fullName>No Budget</fullName>
+                <default>false</default>
+                <label>No Budget</label>
+            </value>
+            <value>
+                <fullName>No response back from client</fullName>
+                <default>false</default>
+                <label>No response back from client</label>
+            </value>
+            <value>
+                <fullName>Not interested at this time</fullName>
+                <default>false</default>
+                <label>Not interested at this time</label>
+            </value>
+            <value>
+                <fullName>Poor_Fit</fullName>
+                <default>false</default>
+                <label>Poor Fit</label>
+            </value>
+            <value>
+                <fullName>Unable to Contact</fullName>
+                <default>false</default>
+                <label>Unable to Contact</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>VIES_VAT_Validation_Status__c</fullName>
+    <description>Status of VAT number as determined by the GES VAT Validation service. If value is &#39;Vat service error&#39; there has been a problem authenticating with the GES service stack.</description>
+    <externalId>false</externalId>
+    <label>VIES VAT Validation Status</label>
+    <length>30</length>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

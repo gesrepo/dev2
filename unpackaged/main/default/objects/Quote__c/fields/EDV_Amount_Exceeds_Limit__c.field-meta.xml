@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>EDV_Amount_Exceeds_Limit__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>User needs to select checkbox, if EDV amount is &gt; 20,000</description>
+    <inlineHelpText>Check this box if EDV &gt; 20,000</inlineHelpText>
+    <label>Confirm EDV &gt; 20,000</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

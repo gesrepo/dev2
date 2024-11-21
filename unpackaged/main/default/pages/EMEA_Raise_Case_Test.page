@@ -1,0 +1,5 @@
+<apex:page standardController="Opportunity" extensions="RedirectFlowController" tabStyle="Opportunity" >
+    <flow:interview name="EMEA_Case_From_Exhibition_Opportunity" finishLocation="{!redirectCaseFromOpty}" interview="{!createFromOpty}" >
+        <apex:param name="Var_OpportunityExhibition_ID_Start" value="{!Opportunity.Id}"/>
+    </flow:interview>
+</apex:page>

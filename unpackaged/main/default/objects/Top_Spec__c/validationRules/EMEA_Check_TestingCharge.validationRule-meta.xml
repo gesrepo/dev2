@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>EMEA_Check_TestingCharge</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+$RecordType.Id &lt;&gt; &quot;01240000000QNTq&quot;,
+Contracted_Electrics__c == True &amp;&amp; ISPICKVAL(Testing_Charge__c,&quot;&quot;))</errorConditionFormula>
+    <errorMessage>If we are contracted for Electrics, we must  select who pays for the Testing charge.</errorMessage>
+</ValidationRule>

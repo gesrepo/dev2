@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Default_Stand_fitting_assignee__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>This contains the person who is responsible for stand fitting for the show</description>
+    <inlineHelpText>Please select the default person who will be assigned stand fitting tickets for this show</inlineHelpText>
+    <label>Default Stand fitting assignee</label>
+    <lookupFilter>
+        <active>false</active>
+        <filterItems>
+            <field>$User.IsActive</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </filterItems>
+        <infoMessage>Please select the Default Stand fitting Assignee. They must have an active Salesforce Account.</infoMessage>
+        <isOptional>true</isOptional>
+    </lookupFilter>
+    <referenceTo>User</referenceTo>
+    <relationshipName>UsertoOpportunitiesStandfitting</relationshipName>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Lookup</type>
+</CustomField>

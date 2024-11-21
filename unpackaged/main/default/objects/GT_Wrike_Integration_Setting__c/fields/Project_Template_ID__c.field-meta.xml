@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Project_Template_ID__c</fullName>
+    <defaultValue>&quot;IEAB4P3RI4L266YF&quot;</defaultValue>
+    <description>This field contains the ID of the project which is used as a template to create tasks.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>This field contains the ID of the project which is used as a template to create tasks.</inlineHelpText>
+    <label>Project Template ID</label>
+    <length>30</length>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

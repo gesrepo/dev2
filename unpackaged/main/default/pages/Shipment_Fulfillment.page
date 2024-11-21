@@ -1,0 +1,95 @@
+<apex:page standardController="Shipment__c" extensions="ShipmentFulfillment_Controller" sidebar="false" showHeader="false">
+    
+    
+    <apex:form id="myForm">
+        <apex:pageBlock id="PB1" Title="CHECKOUT PAGE">
+            <apex:pageBlockSection Title="Add Product" >
+                <!--<apex:actionFunction name="callController" action="{!SpecialCharacterCheck}" oncomplete="window.location.top.reload();" rerender="table2">
+<apex:param name="valFromVf" value=""/>
+</apex:actionFunction>-->
+
+                <apex:pageBlockSectionItem labelStyle="text-align:center" >
+                    <apex:inputText id="item_id" styleClass="inputtextbox" onkeyup="Test();" style="width:150px;" value="{!scannedId}"  title="Product Serial">
+                        <apex:actionFunction name="CallController" action="{!SpecialCharacterCheck}" reRender="PB2,showmsg"/>
+                        <script>
+                        function Test(){
+                            var txt=document.getElementsByClassName("inputtextbox")[0].value;
+                            var flag=txt.indexOf("?");
+                            if (flag != -1) {
+                                //alert("txt"+document.getElementsByClassName("inputtextbox")[0].value);
+                                CallController();
+                                document.getElementsByClassName("inputtextbox")[0].value='';
+                            }
+                            
+                        }
+                        </script>
+                    </apex:inputText>
+                    <apex:commandButton action="{!AddItem}" style="text-align:center;width:100px;" value="Checkout"/>
+                    
+                </apex:pageBlockSectionItem>                
+            </apex:pageBlockSection>
+            
+            <apex:pageMessages id="showmsg"></apex:pageMessages>
+            
+            <apex:pageBlockSection Title="Shipment Details">
+                <apex:outputField value="{!Shipment__c.ExhibitionOpportunity__c}" />
+                <apex:outputField value="{!Shipment__c.ShowName__c}" />
+                <apex:outputField value="{!Shipment__c.AccountID__c}" />
+                <apex:outputField value="{!Shipment__c.OrderID__c}" />
+                <apex:outputField value="{!Shipment__c.ShippingDate__c}" />
+                <apex:outputField value="{!Shipment__c.ReturnDate__c}" />
+            </apex:pageBlockSection>                
+            
+            <apex:pageBlockSection columns="2" title="Needed Products">
+                <apex:pageBlockTable value="{!OrdItems}" var="Item" id="table" >
+                    <apex:column headerValue="Quantity" value="{!Item.Quantity}"/>
+                    <apex:column headerValue="Product" value="{!Item.Product2Id}"/>
+                    <apex:column headerValue="Inventory" value="{!Item.Inventory__c}"/>
+                    <apex:column headerValue="Sendable" value="{!Item.Sendable__c}"/>
+                </apex:pageBlockTable>
+            </apex:pageBlockSection>
+            
+        </apex:pageBlock>
+        
+        <apex:pageBlock id="PB2">
+            
+            
+            <apex:pageBlockSection title="Shipment Status">
+                <apex:outputPanel id="IncompleteStatus" layout="block" style="color:white;background-color:red;font-size:20px;text-align:center;" rendered="{!NOT(ShipmentStatus)}">
+                    <div>
+                        SHIPMENT INCOMPLETE
+                    </div>                    
+                </apex:outputPanel>
+                
+                <apex:outputPanel id="CompleteStatus" layout="block" style="color:white;background-color:green;font-size:20px;text-align:center;" rendered="{!ShipmentStatus}">
+                    <div>
+                        SHIPMENT COMPLETE
+                    </div>
+                </apex:outputPanel>
+                
+                <apex:commandButton action="{!updateShipmentStatus}" style="font-weight:bold;text-align:center;width:150px;" value="Complete Shipment"/>
+                    
+            </apex:pageBlockSection>
+            <apex:pageBlockSection title="Checked Out Products">
+                <apex:pageBlockTable value="{!CheckedOut_Items}" var="Item" id="table2">
+                    <apex:column headerValue="Product Name" value="{!Item.Product2.Name}"/>
+                    <apex:column headerValue="Asset Name" value="{!Item.Name}"/>
+                    <apex:column headerValue="Serial" value="{!Item.SerialNumber}"/>
+                    <apex:column headerValue="Product Status" value="{!Item.Status}"/>
+                    <apex:column headerValue="Expected Return Date" value="{!Item.ExpectedReturn__c}"/>
+                </apex:pageBlockTable>
+            </apex:pageBlockSection>
+        </apex:pageBlock>
+        
+    </apex:form>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script>        
+        $(document).ready(function(){
+        //alert("I am in!!!");
+        $('.inputtextbox').focus();
+        }); 
+    </script>
+    
+    
+</apex:page>

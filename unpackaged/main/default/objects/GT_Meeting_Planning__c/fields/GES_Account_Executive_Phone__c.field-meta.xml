@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>GES_Account_Executive_Phone__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF((TEXT(GES_Account_Executive__c) == &quot;John Boy&quot;),&quot;412-208-2275&quot;, 
+IF((TEXT(GES_Account_Executive__c) == &quot;Jennifer Spencer&quot;),&quot;(508) 408-2159&quot;,
+IF((TEXT(GES_Account_Executive__c) == &quot;Debbie Boncek&quot;),&quot;412-208-2264&quot;,
+IF((TEXT(GES_Account_Executive__c) == &quot;Lori Chester&quot;),&quot;(919) 491-0737&quot;,
+IF((TEXT(GES_Account_Executive__c) == &quot;Steve Maurer&quot;),&quot;(859) 283-8738&quot;,
+IF((TEXT(GES_Account_Executive__c) == &quot;Heather Rosenow&quot;),&quot;(847) 420-4132&quot;,
+&quot;&quot;))))))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>GES AE Phone</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

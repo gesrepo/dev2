@@ -1,0 +1,15 @@
+<apex:page standardController="GC_GES_Order_Task__c" recordSetVar="tasks" extensions="LC_OrderTaskBulkapproveController">
+    <apex:includeLightning />
+    <div id="displayOrderTaskBulkapprove"></div>
+    <script>
+    $Lightning.use("c:LC_OrderTaskBulkapproveApp", function() {
+        $Lightning.createComponent("c:LC_OrderTaskBulkapprove",
+                                   { 
+                                       selectedRecords : '{!gots}'
+                                   },
+                                   "displayOrderTaskBulkapprove",
+                                   function(component) {
+                                   });
+    });
+    </script>
+</apex:page>

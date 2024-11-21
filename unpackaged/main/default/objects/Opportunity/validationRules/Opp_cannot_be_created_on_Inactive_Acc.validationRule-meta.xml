@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Opp_cannot_be_created_on_Inactive_Acc</fullName>
+    <active>true</active>
+    <description>Opportunity cannot be created on an Inactive Account.</description>
+    <errorConditionFormula>AND(
+NOT(ISBLANK(AccountId)),
+Account.Inactive__c
+)</errorConditionFormula>
+    <errorMessage>Opportunity cannot be created on an Inactive Account.</errorMessage>
+</ValidationRule>

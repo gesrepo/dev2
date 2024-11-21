@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Production_Location__c</fullName>
+    <description>As determined by Operations / Exhibitions account management. Any additions or edits also need to be made to the Locations object.</description>
+    <inlineHelpText>Operational location producing exhibition</inlineHelpText>
+    <label>Production Location</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>true</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>true</sorted>
+            <value>
+                <fullName>110- Las Vegas</fullName>
+                <default>false</default>
+                <label>110- Las Vegas</label>
+            </value>
+            <value>
+                <fullName>120-OnPeak</fullName>
+                <default>false</default>
+                <label>120- OnPeak</label>
+            </value>
+            <value>
+                <fullName>140- Salt Lake City</fullName>
+                <default>false</default>
+                <label>140- Salt Lake City</label>
+            </value>
+            <value>
+                <fullName>150- Reno</fullName>
+                <default>false</default>
+                <label>150- Reno</label>
+            </value>
+            <value>
+                <fullName>160- Denver</fullName>
+                <default>false</default>
+                <label>160- Denver</label>
+            </value>
+            <value>
+                <fullName>170- Phoenix</fullName>
+                <default>false</default>
+                <label>170- Phoenix</label>
+            </value>
+            <value>
+                <fullName>180 - Registration</fullName>
+                <default>false</default>
+                <label>180 - Registration</label>
+            </value>
+            <value>
+                <fullName>220- Los Angeles, CA</fullName>
+                <default>false</default>
+                <label>220- Los Angeles, CA</label>
+            </value>
+            <value>
+                <fullName>230-Intl Corp Events</fullName>
+                <default>false</default>
+                <label>230-Intl Corp Events</label>
+            </value>
+            <value>
+                <fullName>240- San Francisco, San Jose</fullName>
+                <default>false</default>
+                <label>240- San Francisco, San Jose</label>
+            </value>
+            <value>
+                <fullName>250- San Diego</fullName>
+                <default>false</default>
+                <label>250- San Diego</label>
+            </value>
+            <value>
+                <fullName>270- Corporate Events (Marketing Dept only)</fullName>
+                <default>false</default>
+                <label>270- Corporate Events (Marketing Dept only)</label>
+            </value>
+            <value>
+                <fullName>420- Austin, Dallas, Houston, San Antonio</fullName>
+                <default>false</default>
+                <label>420- Austin, Dallas, Houston, San Antonio</label>
+            </value>
+            <value>
+                <fullName>460 - Calgary, Canada</fullName>
+                <default>false</default>
+                <label>460 - Calgary, Canada</label>
+            </value>
+            <value>
+                <fullName>470 - Edmonton, Canada</fullName>
+                <default>false</default>
+                <label>470 - Edmonton, Canada</label>
+            </value>
+            <value>
+                <fullName>471 - Vancouver, Canada</fullName>
+                <default>false</default>
+                <label>471 - Vancouver, Canada</label>
+            </value>
+            <value>
+                <fullName>480- Montreal, Canada - ESS</fullName>
+                <default>false</default>
+                <label>480- Montreal, Canada - ESS</label>
+            </value>
+            <value>
+                <fullName>481 - Quebec City, Canada</fullName>
+                <default>false</default>
+                <label>481 - Quebec City, Canada</label>
+            </value>
+            <value>
+                <fullName>483 - Montreal, Canada - CCI</fullName>
+                <default>false</default>
+                <label>483 - Montreal, Canada - CCI</label>
+            </value>
+            <value>
+                <fullName>510- Atlanta</fullName>
+                <default>false</default>
+                <label>510- Atlanta</label>
+            </value>
+            <value>
+                <fullName>520- Florida</fullName>
+                <default>false</default>
+                <label>520- Florida</label>
+            </value>
+            <value>
+                <fullName>530- New Orleans</fullName>
+                <default>false</default>
+                <label>530- New Orleans</label>
+            </value>
+            <value>
+                <fullName>610- Portland, Seattle</fullName>
+                <default>false</default>
+                <label>610- Portland, Seattle</label>
+            </value>
+            <value>
+                <fullName>710- Chicago, Cleveland, Milwaukee, St. Louis</fullName>
+                <default>false</default>
+                <label>710- Chicago, Cleveland, Milwaukee, St. Louis</label>
+            </value>
+            <value>
+                <fullName>810- New York &amp; Boston</fullName>
+                <default>false</default>
+                <label>810- New York &amp; Boston</label>
+            </value>
+            <value>
+                <fullName>830-DC, Philadelphia</fullName>
+                <default>false</default>
+                <label>830-DC, Philadelphia</label>
+            </value>
+            <value>
+                <fullName>890- Toronto, Canada</fullName>
+                <default>false</default>
+                <label>890- Toronto, Canada</label>
+            </value>
+            <value>
+                <fullName>940 - Tradeshow Foreign</fullName>
+                <default>false</default>
+                <label>940 - Tradeshow Foreign</label>
+            </value>
+            <value>
+                <fullName>944 - E&amp;E Foreign</fullName>
+                <default>false</default>
+                <label>944 - E&amp;E Foreign</label>
+            </value>
+            <value>
+                <fullName>Abu Dhabi, UAE</fullName>
+                <default>false</default>
+                <label>Abu Dhabi, UAE</label>
+            </value>
+            <value>
+                <fullName>Brewery, London</fullName>
+                <default>false</default>
+                <label>Brewery, London</label>
+            </value>
+            <value>
+                <fullName>Coventry</fullName>
+                <default>false</default>
+                <label>Coventry</label>
+            </value>
+            <value>
+                <fullName>Dubai, UAE</fullName>
+                <default>false</default>
+                <label>Dubai, UAE</label>
+            </value>
+            <value>
+                <fullName>EXCEL London</fullName>
+                <default>false</default>
+                <label>EXCEL London</label>
+            </value>
+            <value>
+                <fullName>Farnborough</fullName>
+                <default>false</default>
+                <label>Farnborough</label>
+            </value>
+            <value>
+                <fullName>Germany</fullName>
+                <default>false</default>
+                <label>Germany</label>
+            </value>
+            <value>
+                <fullName>Glasgow</fullName>
+                <default>false</default>
+                <label>Glasgow</label>
+            </value>
+            <value>
+                <fullName>Holland</fullName>
+                <default>false</default>
+                <label>Holland</label>
+            </value>
+            <value>
+                <fullName>London</fullName>
+                <default>false</default>
+                <label>London</label>
+            </value>
+            <value>
+                <fullName>MANCHESTER Central</fullName>
+                <default>false</default>
+                <label>MANCHESTER Central</label>
+            </value>
+            <value>
+                <fullName>Middle East, UAE</fullName>
+                <default>false</default>
+                <label>Middle East, UAE</label>
+            </value>
+            <value>
+                <fullName>NEC Birmingham</fullName>
+                <default>false</default>
+                <label>NEC Birmingham</label>
+            </value>
+            <value>
+                <fullName>OLYMPIA London</fullName>
+                <default>false</default>
+                <label>OLYMPIA London</label>
+            </value>
+            <value>
+                <fullName>Romania</fullName>
+                <default>false</default>
+                <label>Romania</label>
+            </value>
+            <value>
+                <fullName>Sheffield</fullName>
+                <default>false</default>
+                <label>Sheffield</label>
+            </value>
+            <value>
+                <fullName>UAE</fullName>
+                <default>false</default>
+                <label>UAE</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

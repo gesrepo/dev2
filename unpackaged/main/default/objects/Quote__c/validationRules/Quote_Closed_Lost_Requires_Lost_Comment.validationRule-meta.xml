@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Quote_Closed_Lost_Requires_Lost_Comment</fullName>
+    <active>true</active>
+    <description>Quote in stage &quot;Closed Lost&quot; required a Lost Comment.</description>
+    <errorConditionFormula>AND(ISPICKVAL(Stage__c,&#39;Closed Lost&#39;),($Profile.Name &lt;&gt; &quot;GES Administrator Interface&quot;), 
+ISBLANK(Lost_Comment__c))</errorConditionFormula>
+    <errorDisplayField>Lost_Comment__c</errorDisplayField>
+    <errorMessage>Quote in stage &quot;Closed Lost&quot; required a Lost Comment.</errorMessage>
+</ValidationRule>

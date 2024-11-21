@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>GES_AM_Email_Auto__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF((TEXT(GES_Account_Manager__c) == &quot;Jessica Bodner&quot;),&quot;jbodner@ges.com&quot;, 
+IF((TEXT(GES_Account_Manager__c) == &quot;Stephanie Specht&quot;),&quot;sspecht@ges.com&quot;, 
+IF((TEXT(GES_Account_Manager__c) == &quot;Jamie Brosmore&quot;),&quot;jbrosmore@ges.com&quot;, 
+IF((TEXT(GES_Account_Manager__c) == &quot;Jill Johnson&quot;),&quot;jjohnson@ges.com&quot;, 
+IF((TEXT(GES_Account_Manager__c) == &quot;Kevin Jones&quot;),&quot;kjones@ges.com&quot;, 
+IF((TEXT(GES_Account_Manager__c) == &quot;Melinda Peterson&quot;),&quot;mpeterson@ges.com&quot;, 
+IF((TEXT(GES_Account_Manager__c) == &quot;Mary Jones&quot;),&quot;mjones@ges.com&quot;, 
+IF((TEXT(GES_Account_Manager__c) == &quot;Lisa Beyer&quot;),&quot;LBeyer@ges.com&quot;, 
+IF((TEXT(GES_Account_Manager__c) == &quot;Lauren Gallagher&quot;),&quot;lgallagher@ges.com&quot;, 
+IF((TEXT(GES_Account_Manager__c) == &quot;Lauren Poole&quot;),&quot;lpoole@ges.com&quot;, 
+IF((TEXT(GES_Account_Manager__c) == &quot;Kimrlee Shamey-Golonka&quot;),&quot;KShamey-Golonka@ges.com&quot;, 
+IF((TEXT(GES_Account_Manager__c) == &quot;Allyson Wagner&quot;),&quot;AWagner@ges.com&quot;, 
+IF((TEXT(GES_Account_Manager__c) == &quot;Angelina Palermo&quot;),&quot;Apalermo@GES.com&quot;, 
+IF((TEXT(GES_Account_Manager__c) == &quot;Megan Sien&quot;),&quot;msien@ges.com&quot;, 
+IF((TEXT(GES_Account_Manager__c) == &quot;Daphne Saavedra&quot;),&quot;dsaavedra@ges.com&quot;, 
+IF((TEXT(GES_Account_Manager__c) == &quot;Linda Holland&quot;),&quot;LHolland@ges.com&quot;, 
+IF((TEXT(GES_Account_Manager__c) == &quot;Jill Eppelman&quot;),&quot;jeppelman@ges.com&quot;, 
+IF((TEXT(GES_Account_Manager__c) == &quot;Alita Mathews&quot;),&quot;amathews@ges.com&quot;, 
+IF((TEXT(GES_Account_Manager__c) == &quot;Amanda Shulman&quot;),&quot;AShulman@ges.com&quot;, 
+IF((TEXT(GES_Account_Manager__c) == &quot;Kayla Rogers&quot;),&quot;krogers@ges.com&quot;,
+IF((TEXT(GES_Account_Manager__c) == &quot;Debbie Sullivan&quot;),&quot;DSullivan@ges.com&quot;,
+IF((TEXT(GES_Account_Manager__c) == &quot;GES Account Manager 1&quot;),&quot;gesaccountmanager1@domain.com&quot;,
+IF((TEXT(GES_Account_Manager__c) == &quot;GES Account Manager 2&quot;),&quot;gesaccountmanager2@domain.com&quot;,
+IF((TEXT(GES_Account_Manager__c) == &quot;GES Account Manager 3&quot;),&quot;gesaccountmanager3@domain.com&quot;, 
+IF((TEXT(GES_Account_Manager__c) == &quot;Dabra Watters&quot;),&quot;dwatters@ges.com&quot;,
+IF((TEXT(GES_Account_Manager__c) == &quot;Amy Ziccarelli&quot;),&quot; aziccarelli@thisisspiro.com&quot;,
+&quot; &quot;))))))))))))))))))))))))))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>GES AM Email</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

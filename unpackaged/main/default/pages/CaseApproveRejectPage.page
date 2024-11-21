@@ -1,0 +1,154 @@
+<apex:page standardController="Customer_Service_Inquiries_ICS__c" extensions="CaseApproveRejectPageController" id="pageId">
+    <script>
+        function setAttachment(obj){
+            var reader = new FileReader();
+            var file= obj.files[0];
+            var fileName;
+            var fileBody;
+            if(typeof file === "undefined"){
+                return;
+            }
+            reader.onload = function(event){
+                fileName = file.name;
+                fileBody = event.target.result;
+                document.getElementById("pageId:CaseApproveReject:pbId:fileName").value=fileName;
+                document.getElementById("pageId:CaseApproveReject:pbId:fileBody").value=fileBody;
+            }
+            reader.readAsDataURL(file);
+        }
+    </script>
+    <script>
+        function setAttachment1(obj){
+            var reader = new FileReader();
+            var file= obj.files[0];
+            var fileName;
+            var fileBody;
+            if(typeof file === "undefined"){
+                return;
+            }
+            reader.onload = function(event){
+                fileName = file.name;
+                fileBody = event.target.result;
+                document.getElementById("pageId:CaseApproveReject:pbId:fileName1").value=fileName;
+                document.getElementById("pageId:CaseApproveReject:pbId:fileBody1").value=fileBody;
+            }
+            reader.readAsDataURL(file);
+        }
+    </script>   
+    <script>
+        function setAttachment2(obj){
+            var reader = new FileReader();
+            var file= obj.files[0];
+            var fileName;
+            var fileBody;
+            if(typeof file === "undefined"){
+                return;
+            }
+            reader.onload = function(event){
+                fileName = file.name;
+                fileBody = event.target.result;
+                document.getElementById("pageId:CaseApproveReject:pbId:fileName2").value=fileName;
+                document.getElementById("pageId:CaseApproveReject:pbId:fileBody2").value=fileBody;
+            }
+            reader.readAsDataURL(file);
+        }
+    </script>   
+    <script>
+        function setAttachment3(obj){
+            var reader = new FileReader();
+            var file= obj.files[0];
+            var fileName;
+            var fileBody;
+            if(typeof file === "undefined"){
+                return;
+            }
+            reader.onload = function(event){
+                fileName = file.name;
+                fileBody = event.target.result;
+                document.getElementById("pageId:CaseApproveReject:pbId:fileName3").value=fileName;
+                document.getElementById("pageId:CaseApproveReject:pbId:fileBody3").value=fileBody;
+            }
+            reader.readAsDataURL(file);
+        }
+    </script>   
+    <script>
+        function setAttachment4(obj){
+            var reader = new FileReader();
+            var file= obj.files[0];
+            var fileName;
+            var fileBody;
+            if(typeof file === "undefined"){
+                return;
+            }
+            reader.onload = function(event){
+                fileName = file.name;
+                fileBody = event.target.result;
+                document.getElementById("pageId:CaseApproveReject:pbId:fileName4").value=fileName;
+                document.getElementById("pageId:CaseApproveReject:pbId:fileBody4").value=fileBody;
+            }
+            reader.readAsDataURL(file);
+        }
+    </script>   
+    
+    <apex:form id="CaseApproveReject">
+        <apex:pageMessages id="showMessage"></apex:pageMessages>
+        
+        <!-- added below code (PageBlock :Authenticate User ) to add authentication mechanism where user(approver) will enter credentials and it will invoke webservice in the 
+        controller class, then user will be directed to approval page.
+        //added for ICS Issue in June 2019
+        --->
+        <apex:pageBlock title="Authenticate User, Please enter your GES credentials" rendered="{!isAuthenticated == false}" >
+            <apex:pageBlockButtons >
+                <apex:commandButton action="{!AuthenticateUser}" rendered="{!NOT(ISBLANK(Customer_Service_Inquiries_ICS__c.Id))}" value="Authenticate" reRender="CaseApproveReject"/>
+            </apex:pageBlockButtons>            
+            Username &nbsp; <apex:inputText label="Username" value="{!userName}" required="true" />
+            <br/>
+            <br/>
+            Password &nbsp; <apex:inputSecret label="Password" value="{!passWord}" required="true"/>
+        </apex:pageBlock>
+        
+  <!---//added for ICS Issue in June 2019
+  <apex:pageBlock rendered="{!alreadyApproved == false }" id="pbId"> 
+  ---->
+        <apex:pageBlock rendered="{!renderApprovalPageBlock }" id="pbId">   
+            <apex:pageBlockButtons >
+                <apex:commandButton action="{!customerAction}" rendered="{!NOT(ISBLANK(Customer_Service_Inquiries_ICS__c.Id))}" value="Submit" reRender="showMessage"/>
+            </apex:pageBlockButtons>
+            <p><strong>
+                Please enter your comments below:
+            </strong></p>
+            <apex:inputTextarea id="newDesc" style=" height: 200px;width: 50%; border: 2px solid bule;border-radius: 8px;" value="{!Customer_Service_Inquiries_ICS__c.Review_Comments__c}"/><p/>
+            <input type="file" onchange="setAttachment(this);" />
+            <apex:inputHidden id="fileName" value="{!filename}" />
+            <apex:inputHidden id="fileBody" value="{!body}" />
+            
+            <input type="file" onchange="setAttachment1(this);" />
+            <apex:inputHidden id="fileName1" value="{!filename1}" />
+            <apex:inputHidden id="fileBody1" value="{!body1}" />         
+            <br/>
+            <br/>
+            <input type="file" onchange="setAttachment2(this);" />
+            <apex:inputHidden id="fileName2" value="{!filename2}" />
+            <apex:inputHidden id="fileBody2" value="{!body2}" />      
+            
+            <input type="file" onchange="setAttachment3(this);" />
+            <apex:inputHidden id="fileName3" value="{!filename3}" />
+            <apex:inputHidden id="fileBody3" value="{!body3}" />    
+
+            <br/>
+            <br/>
+            <input type="file" onchange="setAttachment4(this);" />
+            <apex:inputHidden id="fileName4" value="{!filename4}" />
+            <apex:inputHidden id="fileBody4" value="{!body4}" />            
+            <br/><br/>
+             <p><strong>
+                CC Request To (notification only):
+            </strong></p>
+             <apex:inputfield id="EmailCopyTo" value="{!Customer_Service_Inquiries_ICS__c.Email_Copy_To__c}" label="Employee"/>
+            <!--<apex:inputtext value="{!body}"/>--> 
+        </apex:pageBlock>
+        <apex:pageBlock rendered="{!alreadyApproved}">
+            This transaction is already approved or delegated.
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

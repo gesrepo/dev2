@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>IMTSorders_Case</fullName>
+    <columns>CASES.CASE_NUMBER</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>Customer_Name__c</columns>
+    <columns>Exhibitor_Name__c</columns>
+    <columns>NAME</columns>
+    <columns>Show_Name__c</columns>
+    <columns>Booth_Number__c</columns>
+    <columns>Booth_Dimensions__c</columns>
+    <columns>CASES.PRIORITY</columns>
+    <columns>CASES.ORIGIN</columns>
+    <columns>Severe__c</columns>
+    <columns>CASES.TYPE</columns>
+    <columns>Age__c</columns>
+    <columns>CASES.CREATED_DATE</columns>
+    <columns>Substatus__c</columns>
+    <filterScope>Queue</filterScope>
+    <filters>
+        <field>CASES.STATUS</field>
+        <operation>equals</operation>
+        <value>Open,In Process,Pending</value>
+    </filters>
+    <label>US IMTSorders</label>
+    <language>en_US</language>
+    <queue>US_IMTSorders</queue>
+</ListView>

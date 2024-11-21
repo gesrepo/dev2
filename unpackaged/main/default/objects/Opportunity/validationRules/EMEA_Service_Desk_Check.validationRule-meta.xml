@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>EMEA_Service_Desk_Check</fullName>
+    <active>true</active>
+    <description>You can only have one type of desk set</description>
+    <errorConditionFormula>IF(Basic_Service_Desk__c, 1, 0) + 
+IF(SHOW_Service_Requests__c, 1, 0) + 
+If(SHOW_Servi_Centre__c, 1, 0) &gt; 1</errorConditionFormula>
+    <errorMessage>You can only select one type of service desk. Please check the service desk options you have selected.</errorMessage>
+</ValidationRule>

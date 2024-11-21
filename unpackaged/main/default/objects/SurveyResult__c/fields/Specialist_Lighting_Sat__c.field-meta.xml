@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Specialist_Lighting_Sat__c</fullName>
+    <externalId>false</externalId>
+    <formula>CASE(  Sat_Specialist_Lighting__c  , 0, 0, 25, 0, 50, 100, 75, 100, 100, 100,  Sat_Specialist_Lighting__c )</formula>
+    <label>Specialist Lighting Sat</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

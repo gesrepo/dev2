@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Q30_Sat__c</fullName>
+    <externalId>false</externalId>
+    <formula>CASE(  sat_Q30__c  , 0, 0, 25, 0, 50, 100, 75, 100, 100, 100,  sat_Q30__c )</formula>
+    <label>Q30 Sat</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

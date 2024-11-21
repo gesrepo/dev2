@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>US_CR_CV_No_Edit_Exhibition_Close_Date</fullName>
+    <active>true</active>
+    <description>After US Exhibition Opp is placed in CR or CV stage, only Craig Dingwall can edit the Exhibition Close Date.__c field</description>
+    <errorConditionFormula>AND
+(ISCHANGED(Show_Close_Date__c),
+
+NOT(OR(
+$Profile.Name = &quot;GES Interface&quot;,
+$Profile.Name = &quot;GES Administrator Interface&quot;,
+$Profile.Name = &quot;Merge System Administrator&quot;,
+$Profile.Name = &quot;System Administrator&quot;,
+$User.Id = &quot;00540000000oEOk&quot; /* Craig Dingwall */
+)),
+
+(OR(
+(RecordTypeId = &quot;012400000005P1o&quot;), /* Field Security-CR */
+(RecordTypeId = &quot;012400000005P0q&quot;), /* Field Security-CV */
+(RecordTypeId = &quot;012400000005OKC&quot;), /* Sales Rep Show Occurrence */
+(RecordTypeId = &quot;012400000005OK7&quot;))), /* Master Show Occurrence */
+
+(OR(
+(TEXT(StageName) = &quot;SC&quot;),
+(TEXT(StageName) = &quot;CV&quot;),
+(TEXT(StageName) = &quot;CR&quot;))
+
+))</errorConditionFormula>
+    <errorMessage>Contact Craig Dingwall to change the Exhibition Close Date after Opportunity is in CV, CR or SC stage.</errorMessage>
+</ValidationRule>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Next_Step_Last_Changes_Made__c</fullName>
+    <defaultValue>TODAY()</defaultValue>
+    <description>This is a custom field that sets a date when the next step field is changed</description>
+    <inlineHelpText>This is a custom field that sets a date when the next step field is changed</inlineHelpText>
+    <label>Next Step Last Changes Made</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Date</type>
+</CustomField>

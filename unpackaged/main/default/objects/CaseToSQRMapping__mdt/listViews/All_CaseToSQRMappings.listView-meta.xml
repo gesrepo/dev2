@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>All_CaseToSQRMappings</fullName>
+    <columns>MasterLabel</columns>
+    <columns>DeveloperName</columns>
+    <columns>SF_Show_Type__c</columns>
+    <columns>CORE_SQR_Service_Category__c</columns>
+    <columns>CORE_SQR_Order_Type__c</columns>
+    <columns>CORE_SQR_LOB__c</columns>
+    <columns>CORE_SQR_Cause__c</columns>
+    <filterScope>Everything</filterScope>
+    <label>All CaseToSQRMappings</label>
+    <language>en_US</language>
+</ListView>

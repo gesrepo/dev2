@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Client_Revenue_ShareRebate__c</fullName>
+    <inlineHelpText>Type of revenue for housing (ie. Per Reservation Fee, Per Room Night Fee, Commission %)</inlineHelpText>
+    <label>Client Revenue Share/Rebate</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Rebate Per Reservation</fullName>
+                <default>false</default>
+                <label>Rebate Per Reservation</label>
+            </value>
+            <value>
+                <fullName>Rebate Per Room Night</fullName>
+                <default>false</default>
+                <label>Rebate Per Room Night</label>
+            </value>
+            <value>
+                <fullName>Revenue Share Percentage</fullName>
+                <default>false</default>
+                <label>Revenue Share Percentage</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

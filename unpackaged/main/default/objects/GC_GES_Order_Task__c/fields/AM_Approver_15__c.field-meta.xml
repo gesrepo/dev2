@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>AM_Approver_15__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>Hidden user lookup field used to submit orders for approval to multiple AMs</description>
+    <label>AM Approver 15</label>
+    <referenceTo>User</referenceTo>
+    <relationshipName>Approval_Order_Tasks15</relationshipName>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

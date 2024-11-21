@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CompactLayout xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>US_Facility</fullName>
+    <fields>Name</fields>
+    <fields>Agreement_Type__c</fields>
+    <fields>Account__c</fields>
+    <fields>OwnerId</fields>
+    <fields>Agreement_Status__c</fields>
+    <fields>Agreement_on_File__c</fields>
+    <fields>Contract_Expiration_Date__c</fields>
+    <label>US Facility</label>
+</CompactLayout>

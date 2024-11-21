@@ -1,0 +1,161 @@
+<apex:page showHeader="false" title="GES Online Chat" lightningstylesheets="true">
+    <!-- This script takes the endpoint URL parameter passed from the deployment page and makes it the action for the form -->
+    <script type="text/javascript">
+    (function() { function handlePageLoad() {
+        var endpointMatcher = new RegExp("[\\?\\&]endpoint=([^&#]*)");
+        document.getElementById('prechatForm').setAttribute('action',
+        decodeURIComponent(endpointMatcher.exec(document.location.search)[1]));
+        }
+        
+        if (window.addEventListener) {
+            window.addEventListener('load', handlePageLoad, false);
+        }
+        else { 
+            window.attachEvent('onload', handlePageLoad, false);
+        }
+    })();
+    </script>
+    
+    <script type='text/javascript' src='https://c.la2c1.salesforceliveagent.com/content/g/deployment.js'/>
+    
+    <script type='text/javascript'>
+        liveagent.addCustomDetail('Channel','Web').map('Case','Origin','true',false,true);
+    </script>
+    
+    <script type="text/javascript">
+        function OnSubmitValidate(chatForm)
+        {
+            for(var i=0; i<chatForm.length; i++)
+            {
+                var element = chatForm.elements[i];
+
+                if (element.id.indexOf("reqText") >= 0 || element.id.indexOf("reqList") >= 0)
+                {
+                    var elNum = element.id.substring(7,element.id.length);
+                    var lbl = document.getElementById("reqLabel"+elNum);
+                    
+                    if ((element.type == "text" && (element.value == null || element.value == "")) || (element.type == "select-one" && element.options[element.selectedIndex].value  == "Select One"))
+                    {
+                        lbl.style.color = "red";
+                        element.focus();
+                        return false;
+                    }
+                    else
+                    {
+                        lbl.style.color = "black";
+                    }
+                    
+                    lbl = null;
+                }
+            }
+            
+            /*
+                If all validations are successful, make the value in the hidden name
+                input text field (i.e. where name = "liveagent.prechat:Name" same as 
+                the value in name input text (i.e. where name = "liveagent.prechat.name").
+                The reason is the default name input text maps to the name displyed 
+                on the incoming chat request pop-up. The hidden field propagates the value
+                to the chat details window.
+            */
+            
+            var NameTextBox = document.getElementById("reqText1");
+            var NameHiddenTextBox = document.getElementById("hiddenNameInput");
+            
+            if (NameTextBox != null && NameHiddenTextBox != null)
+                NameHiddenTextBox.value = NameTextBox.value;      
+        }        
+    </script> 
+    
+    <p class="banner" id="bannerHeader">
+        Prior to starting a support desk chat, a case must be created to include case comments.
+    </p>
+    
+    <form method='post' id='prechatForm' onsubmit='return OnSubmitValidate(this);'>
+    <div>
+    
+        <p>
+            <span class="questionLabel" id="reqLabel1">Your Name:&nbsp;<span style="color: red">*</span></span><br/>
+            <input type='text' id="reqText1" name='liveagent.prechat.name' size='75' /> <!-- id='prechat_field' -->
+        </p>
+    
+        <p>
+            <span class="questionLabel" id="reqLabel2">Case Number:&nbsp;<span style="color: red">*</span></span><br/>
+            <input type='text' id="reqText2" name='liveagent.prechat:CaseNumber' size='75' /> <!-- id='prechat_companyname_field' -->
+        </p>
+        <!--Amarab 03262021 #134409-->
+        <p>
+            <span class="questionLabel" id="reqLabel3"> Show Name: Please copy the Show Name from your Case&nbsp;<span style="color: red">*</span></span><br/>
+            <input type='text' id="reqText3" name='liveagent.prechat:ShowName' size='75' /> <!-- id='prechat_companyname_field' -->
+        </p>
+        
+        <!--
+        <p>
+            <span class="questionLabel" id="reqLabel3">Permission Needed To Send To Resolutions Team?&nbsp;<span style="color: red">*</span></span><br/>
+            <select id="reqList3" name="liveagent.prechat:ResolutionPermission">
+                <option value="Select One">Select One</option>              
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+            </select>
+        </p>
+        
+        <p>
+            <span class="questionLabel" id="reqLabel4">Knowledge Base and Exhibitor Manual Checked:&nbsp;<span style="color: red">*</span></span><br/>  
+            <select id="reqList4" name="liveagent.prechat:KnowledgeChecked">
+                <option value="Select One">Select One</option>              
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+                <option value="N/A">N/A</option>
+            </select>
+        </p>
+        
+        <p>
+            <span class="questionLabel" id="reqLabel5">Core Freight Checked:&nbsp;<span style="color: red">*</span></span><br/>
+            <select id="reqList5" name="liveagent.prechat:CoreFreightChecked">
+                <option value="Select One">Select One</option>              
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+                <option value="N/A">N/A</option>
+            </select>
+        </p>
+        
+        <p>
+            <span class="questionLabel" id="reqLabel6">A/R Screens Checked:&nbsp;<span style="color: red">*</span></span><br/>
+            <select id="reqList6" name="liveagent.prechat:ArScreensChecked">
+                <option value="Select One">Select One</option>              
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+                <option value="N/A">N/A</option>
+            </select>
+        </p>
+        -->
+        
+        <p>
+            <!--Amarab 03262021 #134409-->
+            <!--<span class="questionLabel" id="reqLabel7">Please COPY from your Case Comments the question here:&nbsp;<span style="color: red">*</span></span><br/>-->
+            <span class="questionLabel" id="reqLabel7">Question: Please copy from your Case Comments&nbsp;<span style="color: red">*</span></span><br/>
+            <input type='text' id="reqText7" name='liveagent.prechat:Question' size='75' /> <!-- id='prechat_companyname_field' -->
+        </p>
+                
+        <br/>
+        
+        <input id="hiddenNameInput" type="hidden" name="liveagent.prechat:Name"/>
+        
+        <input type="hidden" name="liveagent.prechat.query:CaseNumber" value="Case,Case.CaseNumber"/>
+        
+        <input type="hidden" name="liveagent.prechat.save:Name" value="Prechat_Contact_Name__c" />
+        <input type="hidden" name="liveagent.prechat.save:CaseNumber" value="Prechat_Case_Number__c" />
+        <input type="hidden" name="liveagent.prechat.save:Question" value="Prechat_Question__c" /> 
+        <input type="hidden" name="liveagent.prechat.save:ShowName" value="Prechat_Show_Name__c" />          
+        
+        <input type='submit' value='Request Chat' id='prechat_submit'/>
+    </div>
+    
+    <style type="text/css">
+        div {margin-left: 10px }
+        p.banner {margin-left: 10px; font-weight: bolder; color: blue;}
+        span.questionLabel {font-weight: bold}
+    </style>
+    
+    </form>
+    
+</apex:page>

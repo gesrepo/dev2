@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>DocuSign_Templates</fullName>
+    <availability>online</availability>
+    <displayType>button</displayType>
+    <linkType>javascript</linkType>
+    <masterLabel>T&amp;C to Internal Approvers</masterLabel>
+    <openType>onClickJavaScript</openType>
+    <protected>false</protected>
+    <url>{!REQUIRESCRIPT(&quot;/apex/DocuSign_JavaScript&quot;)} 
+
+//********* Option Declarations (Do not modify )*********// 
+var RC = &#39;&#39;;var RSL=&#39;&#39;;var RSRO=&#39;&#39;;var RROS=&#39;&#39;;var CCRM=&#39;&#39;;var CCTM=&#39;&#39;;var CCNM=&#39;&#39;;var CRCL=&#39;&#39;; var CRL=&#39;&#39;;var OCO=&#39;&#39;;var DST=&#39;&#39;;var LA=&#39;&#39;;var CEM=&#39;&#39;;var CES=&#39;&#39;;var STB=&#39;&#39;;var SSB=&#39;&#39;;var SES=&#39;&#39;;var SEM=&#39;&#39;;var SRS=&#39;&#39;;var SCS =&#39;&#39;;var RES=&#39;&#39;; 
+//*************************************************// 
+
+if(({!Agreements__c.Total_Number_of_SOs__c} == &#39;1&#39;) &amp;&amp; ({!TEXT(Agreements__c.Show_Occurrence_Amount__c)} &lt; &#39;100000&#39;)) 
+{
+DST=&#39;43F13B3F-AB27-4A6D-9256-0AE2CF01BC76&#39;; //Template 1 
+
+
+}else if(({!Agreements__c.Total_Number_of_SOs__c} &gt; &#39;1&#39;) &amp;&amp; ({!TEXT(Agreements__c.Show_Occurrence_Amount__c)} &lt; &#39;100000&#39;))
+{
+DST=&#39;3D56B949-3CCE-4288-9FC0-99C398440AD9&#39;; //Template 2 
+
+
+}else if({!TEXT(Agreements__c.Show_Occurrence_Amount__c)} &gt; &#39;100000&#39;)
+{
+DST=&#39;9118E9D2-8ABC-4EC0-98FA-1E4E4D5B97FB&#39;; //Template 3 
+}else { 
+alert(&quot;Fill out fields&quot;); 
+} 
+
+CES=&quot;Please review these materials - Thank you!&quot;; //Custom Email Subject
+
+//CEM=&#39;I am testing this template&#39;; //Email Message 
+
+//CRL=&#39;Email~;LastName~;Role~Role1;RoutingOrder~1&#39;; //Custom Recipient List 
+
+CCRM=&#39;Role1~Signer 1&#39;; //Contact Role Map - Map SF role to specified DS role  
+
+LA=&#39;0&#39;; //Attachments
+
+//OCO = &#39;Send&#39;; //Once Click Option
+
+//********* Page Callout (Do not modify) *********// 
+window.location.href =&quot;/apex/dsfs__DocuSign_CreateEnvelope?DSEID=0&amp;SourceID={!Agreements__c.Id}&amp;RC=&quot;+RC+&quot;&amp;RSL=&quot;+RSL+&quot;&amp;RSRO=&quot;+RSRO+&quot;&amp;RROS=&quot;+RROS+&quot;&amp;CCRM=&quot;+CCRM+&quot;&amp;CCTM=&quot;+CCTM+&quot;&amp;CRCL=&quot;+CRCL+&quot;&amp;CRL=&quot;+CRL+&quot;&amp;OCO=&quot;+OCO+&quot;&amp;DST=&quot;+DST+&quot;&amp;CCNM=&quot;+CCNM+&quot;&amp;LA=&quot;+LA+&quot;&amp;CEM=&quot;+CEM+&quot;&amp;CES=&quot;+CES+&quot;&amp;SRS=&quot;+SRS+&quot;&amp;STB=&quot;+STB+&quot;&amp;SSB=&quot;+SSB+&quot;&amp;SES=&quot;+SES+&quot;&amp;SEM=&quot;+SEM+&quot;&amp;SRS=&quot;+SRS+&quot;&amp;SCS=&quot;+SCS+&quot;&amp;RES=&quot;+RES; 
+//*******************************************//</url>
+</WebLink>

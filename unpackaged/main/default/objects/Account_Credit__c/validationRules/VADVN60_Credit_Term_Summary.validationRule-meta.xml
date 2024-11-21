@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>VADVN60_Credit_Term_Summary</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND ( 
+ISPICKVAL( Credit_Summary__c , &#39;VADV/N60: variable advance payment as stipulated in credit decision/client contract and system, balance due in 60 days.&#39;), 
+NOT(LEN( Terms_Detail__c ) &gt;1))</errorConditionFormula>
+    <errorDisplayField>Terms_Detail__c</errorDisplayField>
+    <errorMessage>If Credit Summary is set to VADV/N60, you must enter the Terms Detail.</errorMessage>
+</ValidationRule>

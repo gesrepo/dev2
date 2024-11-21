@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Recycle_Reason__c</fullName>
+    <description>This is a dependent field.  When “Lead Status” field is changed to “Marketing Recycle”, SFDC user will receive dialog message to also select value from “Recycle Reason” picklist.</description>
+    <label>Recycle Reason</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>No Sales Activity</fullName>
+                <default>false</default>
+                <label>No Sales Activity</label>
+            </value>
+            <value>
+                <fullName>No Lead Engagement</fullName>
+                <default>false</default>
+                <label>No Lead Engagement</label>
+            </value>
+            <value>
+                <fullName>Too Early</fullName>
+                <default>false</default>
+                <label>Too Early</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

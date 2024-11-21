@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Exhibitor_Manual_Full_Key_Words__c</fullName>
+    <inlineHelpText>These key words are used to enhance search. Utilize terms that are NOT found in the text of this article.</inlineHelpText>
+    <label>Key Words</label>
+    <length>1000</length>
+    <trackHistory>false</trackHistory>
+    <type>LongTextArea</type>
+    <visibleLines>3</visibleLines>
+</CustomField>

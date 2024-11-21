@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Order_Header_ID__c</fullName>
+    <description>Order Header ID as returned from the external system.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Order Header ID as returned from the external system.</inlineHelpText>
+    <label>(Hidden)</label>
+    <length>255</length>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

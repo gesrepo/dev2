@@ -1,0 +1,134 @@
+<apex:page tabstyle="Show_Plan__c" controller="Add_Remove_Opportunities_Controller" action="{!init}">
+
+    <apex:sectionHeader title="Show Opportunity Records for the Show: {!CurrentShowPlan.Show_Name__r.Name}" />
+
+    <apex:form >
+  
+        <apex:pageMessages />
+        <apex:pageblock title="Available to Add to Plan">
+
+            <apex:pageBlockButtons >
+                <apex:commandButton value="Add To Plan" action="{!DoSelect}" >
+                    <apex:actionSupport event="onclick"/> 
+                </apex:commandButton>       
+                <apex:commandButton value="Back To Plan" action="{!BackToPlan}" >
+                    <apex:actionSupport event="onclick"/> 
+                </apex:commandButton>               
+            </apex:pageBlockButtons>
+           
+            <apex:outputPanel rendered="{!IF(opp.size != 0 ,false, true)}">
+                <br/>
+                No Related Show Opportunity Available.
+                <br/><br/>
+            </apex:outputPanel> 
+                
+            <apex:pageBlockTable value="{!opp}" var="o" rendered="{!IF(opp.size != 0 , true, false)}">   
+                
+                <apex:column >                
+                    <apex:inputCheckbox value="{!o.selected}" id="selectLine"/>             
+                </apex:column>
+      
+                <apex:column >
+                    <apex:facet name="header">
+                        Show Opportunity
+                    </apex:facet>
+                    <apex:outputLink value="/{!o.opp.Id}" >{!o.opp.Name}</apex:outputLink>
+                </apex:column>
+      
+                <apex:column >
+                    <apex:facet name="header">
+                        Show Name
+                    </apex:facet>
+                    <apex:outputField value="{!CurrentShowPlan.Show_Name__r.Name}" />
+                </apex:column>
+      
+                <apex:column >
+                    <apex:facet name="header">
+                        Stage
+                    </apex:facet>
+                    <apex:outputField value="{!o.opp.StageName}" />
+                </apex:column>
+                
+                <apex:column >
+                    <apex:facet name="header">
+                        Show Close Date
+                    </apex:facet>
+                    <apex:outputField value="{!o.opp.Show_Close_Date__c}" />
+                </apex:column>
+                
+                <apex:column >
+                    <apex:facet name="header">
+                        Amount
+                    </apex:facet>
+                    <apex:outputField value="{!o.opp.amount}" />
+                </apex:column>                                
+      
+            </apex:pageBlockTable>
+            
+            
+        </apex:pageBlock>
+
+        <apex:pageblock title="Added Show Plans">
+
+            <apex:pageBlockButtons >
+                <apex:commandButton value="Remove From Plan" action="{!DoRemove}" >
+                    <apex:actionSupport event="onclick"/> 
+                </apex:commandButton> 
+                <apex:commandButton value="Back To Plan" action="{!BackToPlan}" >
+                    <apex:actionSupport event="onclick"/> 
+                </apex:commandButton>                                    
+            </apex:pageBlockButtons>
+           
+            <apex:outputPanel rendered="{!IF(oppRemove.size != 0 ,false, true)}">
+                <br/>
+                No Related Show Opportunity Available.
+                <br/><br/>
+            </apex:outputPanel> 
+                
+            <apex:pageBlockTable value="{!oppRemove}" var="oR" rendered="{!IF(oppRemove.size != 0 , true, false)}">   
+                
+                <apex:column >                 
+                    <apex:inputCheckbox value="{!oR.selected}" id="selectLine1"/>             
+                </apex:column>
+      
+                <apex:column >
+                    <apex:facet name="header">
+                        Show Opportunity
+                    </apex:facet>
+                    <apex:outputLink value="/{!oR.opp.Id}" >{!oR.opp.Name}</apex:outputLink>
+                </apex:column>
+      
+                <apex:column >
+                    <apex:facet name="header">
+                        Show Name
+                    </apex:facet>
+                    <apex:outputField value="{!CurrentShowPlan.Show_Name__r.Name}" />
+                </apex:column>
+      
+                <apex:column >
+                    <apex:facet name="header">
+                        Stage
+                    </apex:facet>
+                    <apex:outputField value="{!oR.opp.StageName}" />
+                </apex:column>
+                
+                <apex:column >
+                    <apex:facet name="header">
+                        Show Close Date
+                    </apex:facet>
+                    <apex:outputField value="{!oR.opp.Show_Close_Date__c}" />
+                </apex:column>
+                
+                <apex:column >
+                    <apex:facet name="header">
+                        Amount
+                    </apex:facet>
+                    <apex:outputField value="{!oR.opp.amount}" />
+                </apex:column>                                
+      
+            </apex:pageBlockTable>
+        </apex:pageBlock>        
+  
+    </apex:form>
+
+</apex:page>

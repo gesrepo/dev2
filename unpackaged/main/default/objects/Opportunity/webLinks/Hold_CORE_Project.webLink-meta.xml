@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Hold_CORE_Project</fullName>
+    <availability>online</availability>
+    <description>Stops the project from trying to go to CORE until the data can be matched to the CORE workbench.</description>
+    <displayType>button</displayType>
+    <linkType>javascript</linkType>
+    <masterLabel>Hold CORE Project</masterLabel>
+    <openType>onClickJavaScript</openType>
+    <protected>false</protected>
+    <url>{!REQUIRESCRIPT(&quot;/soap/ajax/58.0/connection.js&quot;)} 
+var newdemo = new sforce.SObject(&quot;Opportunity&quot;); 
+newdemo.Id = &#39;{!Opportunity.Id}&#39;; 
+newdemo.PRF_Sent_to_CORE__c=0; 
+newdemo.Processed_in_CORE__c = 0; 
+newdemo.PRF_Submitted__c=0; 
+var result = sforce.connection.update([newdemo]); 
+
+if (result[0].success==&#39;false&#39;) 
+{ alert(result[0].errors.message); } 
+else { location.reload(true); }</url>
+</WebLink>

@@ -1,0 +1,80 @@
+<apex:page showHeader="true" sidebar="true" standardController="GC_Order__c" extensions="GC_OrderCreateEditController">
+  <apex:includescript value="{!URLFOR($Resource.CkEditor, 'ckeditor4.5.11/ckeditor.js')}" />
+  <apex:stylesheet value="{!URLFOR($Resource.GC_Assets, 'GC_Assets/css/GC_PageStyles.css')}" />
+  <script>
+  var originalOnLoad = window.onload;
+  window.onload = loadSession;
+
+  function loadSession() {
+    originalOnLoad();
+    SessionLoad_JS();
+  };
+
+  </script>
+  <apex:sectionHeader title="GES Order: {!currentOrder.Name}" subtitle="Order Details" />
+  <apex:form >
+    <apex:pageMessages id="messages"></apex:pageMessages>
+    <apex:actionFunction action="{!sessionLoad}" name="SessionLoad_JS" status="connectingStatusSpinner" reRender="statuses" oncomplete="ObtainBoothAreas_JS();" />
+    <apex:actionFunction action="{!coreApi.obtainBoothAreas}" name="ObtainBoothAreas_JS" status="obtainBoothAreasStatusSpinner" reRender="statuses, messages, pb" />
+    <apex:actionFunction action="{!coreApi.selectBoothArea}" name="ChangeBoothArea_JS" status="changingBoothAreaStatusSpinner" reRender="statuses, messages, pb" />
+    <apex:outputPanel id="statuses">
+      <apex:actionStatus id="connectingStatusSpinner">
+        <apex:facet name="start">
+          <c:GC_StatusSpinner statusMessage="Connecting to Web Service." />
+        </apex:facet>
+      </apex:actionStatus>
+      <apex:actionStatus id="obtainBoothAreasStatusSpinner">
+        <apex:facet name="start">
+          <c:GC_StatusSpinner statusMessage="Obtaining Booth Areas." />
+        </apex:facet>
+      </apex:actionStatus>
+      <apex:actionStatus id="changingBoothAreaStatusSpinner">
+        <apex:facet name="start">
+          <c:GC_StatusSpinner statusMessage="Changing Booth Area." />
+        </apex:facet>
+      </apex:actionStatus>
+    </apex:outputPanel>
+    <apex:pageBlock id="pb">
+      <apex:pageBlockButtons location="top">
+        <apex:commandButton value="Save Changes" action="{!saveAction}" reRender="statuses, messages" status="saveStatusSpinner" />
+        <apex:commandButton value="Cancel" action="{!cancelAction}" reRender="statuses, messages" status="cancelStatusSpinner" />
+      </apex:pageBlockButtons>
+      <apex:pageBlockSection showHeader="false" columns="1" collapsible="false">
+        <apex:pageBlockSectionItem rendered="{!coreApi.selectedBooth == null}">
+          <!--apex:outputText value="Booth Area is required to create GES Order Tasks. Please select a booth area prior to creating any GES Order Tasks for the order."></apex:outputText--> <!--commented by Sajid on 04/05/23 Ticket-1209 -->
+          <apex:outputText value="Booth Area is required to create GES Items. Please select a booth area prior to creating any GES Items for the order."></apex:outputText> <!-- added by Sajid on 04/05/23 Ticket-1209 -->
+        </apex:pageBlockSectionItem>
+      </apex:pageBlockSection>
+      <apex:pageBlockSection id="editBoothArea" showHeader="false">
+      </apex:pageBlockSection>
+      <apex:pageBlockSection title="Show" columns="2" collapsible="false">
+        <apex:inputField value="{!currentOrder.Connect2_Show__c}">
+          <apex:actionSupport event="onchange" reRender="statuses, messages, pb" action="{!showChanged}" status="statusSpinner2" oncomplete="SessionLoad_JS();" />
+        </apex:inputField>
+        <apex:outputField value="{!currentOrder.Connect2_Show__r.Show_Name__c}" rendered="{!!isNew}"></apex:outputField>
+        <apex:outputField value="{!currentOrder.Connect2_Show__r.Job_Number__c}" rendered="{!!isNew}"></apex:outputField>
+        <apex:outputField value="{!currentOrder.Status__c}" rendered="{!!isNew}"></apex:outputField>
+      </apex:pageBlockSection>
+      <apex:pageBlockSection title="Booth Area" columns="2" rendered="{!coreApi.boothOptions.size > 0}" collapsible="false">
+        <apex:pageBlockSectionItem rendered="{!currentOrder.Status__c != 'Active'}">
+          <apex:outputText value="Select Booth Area"></apex:outputText>
+          <apex:selectList id="boothSelect" value="{!coreApi.selectedBooth}" size="1">
+            <apex:selectOptions value="{!coreApi.boothOptions}"></apex:selectOptions>
+            <apex:actionSupport event="onchange" reRender="statuses, messages, pb" status="changingBoothAreaStatusSpinner" oncomplete="ChangeBoothArea_JS();" />
+          </apex:selectList>
+        </apex:pageBlockSectionItem>
+        <apex:pageBlockSectionItem rendered="{!currentOrder.Status__c == 'Active'}">
+          <apex:outputText value="Select Booth Area" />
+          <apex:outputField value="{!currentOrder.Booth_Area__c}" />
+        </apex:pageBlockSectionItem>
+        <apex:inputField value="{!currentOrder.Order_Area_Description__c}" style="width:100%"></apex:inputField>
+        <apex:outputField value="{!currentOrder.Delivery_Date_Time__c}"></apex:outputField>
+        <apex:outputField value="{!currentOrder.Completion_Date_Time__c}"></apex:outputField>
+        <apex:outputField value="{!currentOrder.Removal_Date_Time__c}"></apex:outputField>
+        <apex:pageBlockSectionItem />
+      </apex:pageBlockSection>
+    </apex:pageBlock>
+  </apex:form>
+  <apex:outputPanel >
+  </apex:outputPanel>
+</apex:page>

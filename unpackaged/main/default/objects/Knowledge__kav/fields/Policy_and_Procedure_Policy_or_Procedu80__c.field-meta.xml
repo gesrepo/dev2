@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Policy_and_Procedure_Policy_or_Procedu80__c</fullName>
+    <label>Policy or Procedure Applies To</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>To Be Determined</fullName>
+                <default>false</default>
+                <label>To Be Determined</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

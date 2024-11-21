@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Housing_Hotel_Fee</fullName>
+    <active>true</active>
+    <description>Hotel Fee field is required when Hotel Commission Type = Fee - Per Reservation OR Fee - Per Room Night</description>
+    <errorConditionFormula>AND( OR(ISPICKVAL(Hotel_Commission_Type__c ,&quot;Fee - Per Reservation&quot;),ISPICKVAL(Hotel_Commission_Type__c,&quot;Fee - Per Room Night&quot;)), ISBLANK(Hotel_Fee__c ),NOT($Profile.Name = &quot;GES Administrator Interface&quot;))</errorConditionFormula>
+    <errorDisplayField>Hotel_Fee__c</errorDisplayField>
+    <errorMessage>Please fill out the Hotel Fee field. If Hotel Commission Type = Fee - Per Reservation or Fee - Per Room Night, the Hotel Fee field must be completed.</errorMessage>
+</ValidationRule>

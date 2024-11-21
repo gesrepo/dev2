@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Missing_VAT_Country_code</fullName>
+    <active>true</active>
+    <errorConditionFormula>IF(
+	OR(
+	ISNEW() &amp;&amp; (ISNULL(TEXT(VAT_Number_Country_Code__c)) || ISBLANK(TEXT(VAT_Number_Country_Code__c))) &amp;&amp; !ISNULL(Vat_Number__c) &amp;&amp; !ISBLANK(Vat_Number__c),
+	(ISNULL(TEXT(VAT_Number_Country_Code__c)) || ISBLANK(TEXT(VAT_Number_Country_Code__c))) &amp;&amp; !ISNULL(Vat_Number__c) &amp;&amp; !ISBLANK(Vat_Number__c) &amp;&amp;  ISCHANGED(Vat_Number__c) ,
+	(ISNULL(TEXT(VAT_Number_Country_Code__c)) || ISBLANK(TEXT(VAT_Number_Country_Code__c))) &amp;&amp; !ISNULL(Vat_Number__c) &amp;&amp; !ISBLANK(Vat_Number__c) &amp;&amp;  ISCHANGED(VAT_Number_Country_Code__c)
+	) &amp;&amp;	CONTAINS(&#39;AE,AT,BE,BG,CH,CY,CZ,DE,DK,EE,EL,ES,FI,FR,GB,HR,HU,IE,IT,LT,LU,LV,MT,NL,PL,PT,RO,SE,SI,SK&#39;,MID(Vat_Number__c,1,2)),
+true,false
+)</errorConditionFormula>
+    <errorDisplayField>VAT_Number_Country_Code__c</errorDisplayField>
+    <errorMessage>Please select the VAT Country code mentioned in the VAT Number</errorMessage>
+</ValidationRule>

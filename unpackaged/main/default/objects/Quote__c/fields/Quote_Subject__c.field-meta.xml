@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Quote_Subject__c</fullName>
+    <description>Quote Subject or Description</description>
+    <label>Quote Subject</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Inbound</fullName>
+                <default>false</default>
+                <label>Inbound</label>
+            </value>
+            <value>
+                <fullName>Inbound Canadian</fullName>
+                <default>false</default>
+                <label>Inbound Canadian</label>
+            </value>
+            <value>
+                <fullName>Outbound</fullName>
+                <default>false</default>
+                <label>Outbound</label>
+            </value>
+            <value>
+                <fullName>Outbound Canadian</fullName>
+                <default>false</default>
+                <label>Outbound Canadian</label>
+            </value>
+            <value>
+                <fullName>Roundtrip</fullName>
+                <default>true</default>
+                <label>Roundtrip</label>
+            </value>
+            <value>
+                <fullName>Roundtrip Canadian</fullName>
+                <default>false</default>
+                <label>Roundtrip Canadian</label>
+            </value>
+            <value>
+                <fullName>Truckload</fullName>
+                <default>false</default>
+                <label>Truckload</label>
+            </value>
+            <value>
+                <fullName>Truckload Canadian</fullName>
+                <default>false</default>
+                <label>Truckload Canadian</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

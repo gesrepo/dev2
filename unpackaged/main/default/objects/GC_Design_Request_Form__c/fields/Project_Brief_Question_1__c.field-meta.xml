@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Project_Brief_Question_1__c</fullName>
+    <defaultValue>IF( $RecordType.Name == &#39;RFP (Exhibition or Event)&#39;, &#39;Can you provide the client’s corporate identity &amp; show theme style guide? If not, is the show theme development &amp; experience expected within the RFP?&#39;,
+
+IF( $RecordType.Name == &#39;Sold Event&#39;, &#39;Can you provide the client’s corporate identity &amp; show theme style guide? If not, is the show theme development and experience expected within your request?&#39;,
+
+IF( $RecordType.Name == &#39;Sold Exhibition&#39;, &#39;Can you provide an overview of the event experience, strategy, and an event theme style guide? If not, is the show theme development &amp; experience expected within your request?&#39;, &#39;Record type not found&#39;) ) )</defaultValue>
+    <externalId>false</externalId>
+    <inlineHelpText>Provide client’s corporate identity &amp; show theme style guide otherwise, analyze if an RFP relation exist?</inlineHelpText>
+    <label>Project Brief Question 1</label>
+    <length>255</length>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

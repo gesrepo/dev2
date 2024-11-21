@@ -1,0 +1,469 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Lost_To_Competitor__c</fullName>
+    <label>Lost To Competitor</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>1220 Exhibits, Inc.</fullName>
+                <default>false</default>
+                <label>1220 Exhibits, Inc.</label>
+            </value>
+            <value>
+                <fullName>3D Exhibits</fullName>
+                <default>false</default>
+                <label>3D Exhibits</label>
+            </value>
+            <value>
+                <fullName>Access TCA</fullName>
+                <default>false</default>
+                <label>Access TCA</label>
+            </value>
+            <value>
+                <fullName>AD-EX International</fullName>
+                <default>false</default>
+                <label>AD-EX International</label>
+            </value>
+            <value>
+                <fullName>ArtFX</fullName>
+                <default>false</default>
+                <label>ArtFX</label>
+            </value>
+            <value>
+                <fullName>Art Guild</fullName>
+                <default>false</default>
+                <label>Art Guild</label>
+            </value>
+            <value>
+                <fullName>Avalon Exhibits</fullName>
+                <default>false</default>
+                <label>Avalon Exhibits</label>
+            </value>
+            <value>
+                <fullName>Bella Group</fullName>
+                <default>false</default>
+                <label>Bella Group</label>
+            </value>
+            <value>
+                <fullName>Berm Studios</fullName>
+                <default>false</default>
+                <label>Berm Studios</label>
+            </value>
+            <value>
+                <fullName>Blair</fullName>
+                <default>false</default>
+                <label>Blair</label>
+            </value>
+            <value>
+                <fullName>Cal Ostlund</fullName>
+                <default>false</default>
+                <label>Cal Ostlund</label>
+            </value>
+            <value>
+                <fullName>CarriageWorks</fullName>
+                <default>false</default>
+                <label>CarriageWorks</label>
+            </value>
+            <value>
+                <fullName>Cart King</fullName>
+                <default>false</default>
+                <label>Cart King</label>
+            </value>
+            <value>
+                <fullName>Catalyst Exhibits Inc.</fullName>
+                <default>false</default>
+                <label>Catalyst Exhibits Inc.</label>
+            </value>
+            <value>
+                <fullName>CenterPoint</fullName>
+                <default>false</default>
+                <label>CenterPoint</label>
+            </value>
+            <value>
+                <fullName>CEP</fullName>
+                <default>false</default>
+                <label>CEP</label>
+            </value>
+            <value>
+                <fullName>Champion</fullName>
+                <default>false</default>
+                <label>Champion</label>
+            </value>
+            <value>
+                <fullName>Coast Designs</fullName>
+                <default>false</default>
+                <label>Coast Designs</label>
+            </value>
+            <value>
+                <fullName>Compass Collective</fullName>
+                <default>false</default>
+                <label>Compass Collective</label>
+            </value>
+            <value>
+                <fullName>Creatacor, Inc.</fullName>
+                <default>false</default>
+                <label>Creatacor, Inc.</label>
+            </value>
+            <value>
+                <fullName>Creations</fullName>
+                <default>false</default>
+                <label>Creations</label>
+            </value>
+            <value>
+                <fullName>Czarnowski Exhibit Service Specialists</fullName>
+                <default>false</default>
+                <label>Czarnowski Exhibit Service Specialists</label>
+            </value>
+            <value>
+                <fullName>David Torres Productions, Inc</fullName>
+                <default>false</default>
+                <label>David Torres Productions, Inc</label>
+            </value>
+            <value>
+                <fullName>Delphi Productions Inc.</fullName>
+                <default>false</default>
+                <label>Delphi Productions Inc.</label>
+            </value>
+            <value>
+                <fullName>Derse</fullName>
+                <default>false</default>
+                <label>Derse</label>
+            </value>
+            <value>
+                <fullName>Design Craftsmen</fullName>
+                <default>false</default>
+                <label>Design Craftsmen</label>
+            </value>
+            <value>
+                <fullName>Dimensional Communications Inc.</fullName>
+                <default>false</default>
+                <label>Dimensional Communications Inc.</label>
+            </value>
+            <value>
+                <fullName>DisplayCraft</fullName>
+                <default>false</default>
+                <label>DisplayCraft</label>
+            </value>
+            <value>
+                <fullName>Display Presentations</fullName>
+                <default>false</default>
+                <label>Display Presentations</label>
+            </value>
+            <value>
+                <fullName>Display Works</fullName>
+                <default>false</default>
+                <label>Display Works</label>
+            </value>
+            <value>
+                <fullName>Downing Displays</fullName>
+                <default>false</default>
+                <label>Downing Displays</label>
+            </value>
+            <value>
+                <fullName>Eastern Exhibits</fullName>
+                <default>false</default>
+                <label>Eastern Exhibits</label>
+            </value>
+            <value>
+                <fullName>EWI Worldwide</fullName>
+                <default>false</default>
+                <label>EWI Worldwide</label>
+            </value>
+            <value>
+                <fullName>Exhibit Concepts, Inc.</fullName>
+                <default>false</default>
+                <label>Exhibit Concepts, Inc.</label>
+            </value>
+            <value>
+                <fullName>Exhibits by Design, Inc.</fullName>
+                <default>false</default>
+                <label>Exhibits by Design, Inc.</label>
+            </value>
+            <value>
+                <fullName>ExpoTechnik</fullName>
+                <default>false</default>
+                <label>ExpoTechnik</label>
+            </value>
+            <value>
+                <fullName>Freeman</fullName>
+                <default>false</default>
+                <label>Freeman</label>
+            </value>
+            <value>
+                <fullName>Gallo Displays, Inc.</fullName>
+                <default>false</default>
+                <label>Gallo Displays, Inc.</label>
+            </value>
+            <value>
+                <fullName>George P. Johnson Company, The</fullName>
+                <default>false</default>
+                <label>George P. Johnson Company, The</label>
+            </value>
+            <value>
+                <fullName>GES Exposition Services</fullName>
+                <default>false</default>
+                <label>GES Exposition Services</label>
+            </value>
+            <value>
+                <fullName>Gilbert Displays</fullName>
+                <default>false</default>
+                <label>Gilbert Displays</label>
+            </value>
+            <value>
+                <fullName>Grapevine Exhibits</fullName>
+                <default>false</default>
+                <label>Grapevine Exhibits</label>
+            </value>
+            <value>
+                <fullName>Graphic Presentation Systems</fullName>
+                <default>false</default>
+                <label>Graphic Presentation Systems</label>
+            </value>
+            <value>
+                <fullName>H.B. Stubbs Company</fullName>
+                <default>false</default>
+                <label>H.B. Stubbs Company</label>
+            </value>
+            <value>
+                <fullName>Hadley Exhibits, Inc.</fullName>
+                <default>false</default>
+                <label>Hadley Exhibits, Inc.</label>
+            </value>
+            <value>
+                <fullName>Hamilton Exhibits</fullName>
+                <default>false</default>
+                <label>Hamilton Exhibits</label>
+            </value>
+            <value>
+                <fullName>Hargrove, Inc.</fullName>
+                <default>false</default>
+                <label>Hargrove, Inc.</label>
+            </value>
+            <value>
+                <fullName>Heritage Exhibits</fullName>
+                <default>false</default>
+                <label>Heritage Exhibits</label>
+            </value>
+            <value>
+                <fullName>Hill &amp; Partners, Inc.</fullName>
+                <default>false</default>
+                <label>Hill &amp; Partners, Inc.</label>
+            </value>
+            <value>
+                <fullName>Horizon</fullName>
+                <default>false</default>
+                <label>Horizon</label>
+            </value>
+            <value>
+                <fullName>ICON Exhibits</fullName>
+                <default>false</default>
+                <label>ICON Exhibits</label>
+            </value>
+            <value>
+                <fullName>IFS</fullName>
+                <default>false</default>
+                <label>IFS</label>
+            </value>
+            <value>
+                <fullName>Imagine</fullName>
+                <default>false</default>
+                <label>Imagine</label>
+            </value>
+            <value>
+                <fullName>Impact Unlimited</fullName>
+                <default>false</default>
+                <label>Impact Unlimited</label>
+            </value>
+            <value>
+                <fullName>Innovations</fullName>
+                <default>false</default>
+                <label>Innovations</label>
+            </value>
+            <value>
+                <fullName>InterEx, Inc.</fullName>
+                <default>false</default>
+                <label>InterEx, Inc.</label>
+            </value>
+            <value>
+                <fullName>Jack Morton Exhibits</fullName>
+                <default>false</default>
+                <label>Jack Morton Exhibits</label>
+            </value>
+            <value>
+                <fullName>Lewellen &amp; Best</fullName>
+                <default>false</default>
+                <label>Lewellen &amp; Best</label>
+            </value>
+            <value>
+                <fullName>Loran Associates Inc.</fullName>
+                <default>false</default>
+                <label>Loran Associates Inc.</label>
+            </value>
+            <value>
+                <fullName>Lynch Exhibits</fullName>
+                <default>false</default>
+                <label>Lynch Exhibits</label>
+            </value>
+            <value>
+                <fullName>Matrex Exhibits</fullName>
+                <default>false</default>
+                <label>Matrex Exhibits</label>
+            </value>
+            <value>
+                <fullName>MC2</fullName>
+                <default>false</default>
+                <label>MC2</label>
+            </value>
+            <value>
+                <fullName>MCKERNIN EXHIBITS, INC.</fullName>
+                <default>false</default>
+                <label>MCKERNIN EXHIBITS, INC.</label>
+            </value>
+            <value>
+                <fullName>MG Design Associates</fullName>
+                <default>false</default>
+                <label>MG Design Associates</label>
+            </value>
+            <value>
+                <fullName>Mostre Design, Inc.</fullName>
+                <default>false</default>
+                <label>Mostre Design, Inc.</label>
+            </value>
+            <value>
+                <fullName>nParallel</fullName>
+                <default>false</default>
+                <label>nParallel</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>Phoenix Formations</fullName>
+                <default>false</default>
+                <label>Phoenix Formations</label>
+            </value>
+            <value>
+                <fullName>Pinnacle Exhibits</fullName>
+                <default>false</default>
+                <label>Pinnacle Exhibits</label>
+            </value>
+            <value>
+                <fullName>Poretta &amp; Orr</fullName>
+                <default>false</default>
+                <label>Poretta &amp; Orr</label>
+            </value>
+            <value>
+                <fullName>Professional Exhibits &amp; Graphics</fullName>
+                <default>false</default>
+                <label>Professional Exhibits &amp; Graphics</label>
+            </value>
+            <value>
+                <fullName>Rapier Group</fullName>
+                <default>false</default>
+                <label>Rapier Group</label>
+            </value>
+            <value>
+                <fullName>RedLine Exhibits</fullName>
+                <default>false</default>
+                <label>RedLine Exhibits</label>
+            </value>
+            <value>
+                <fullName>Rogers Company, The</fullName>
+                <default>false</default>
+                <label>Rogers Company, The</label>
+            </value>
+            <value>
+                <fullName>Rosemont Exposition Services, Inc.</fullName>
+                <default>false</default>
+                <label>Rosemont Exposition Services, Inc.</label>
+            </value>
+            <value>
+                <fullName>Sand Mountain</fullName>
+                <default>false</default>
+                <label>Sand Mountain</label>
+            </value>
+            <value>
+                <fullName>Sparks Exhibits &amp; Environments</fullName>
+                <default>false</default>
+                <label>Sparks Exhibits &amp; Environments</label>
+            </value>
+            <value>
+                <fullName>Specialty Retail Fabricators</fullName>
+                <default>false</default>
+                <label>Specialty Retail Fabricators</label>
+            </value>
+            <value>
+                <fullName>Spoon Exhibits</fullName>
+                <default>false</default>
+                <label>Spoon Exhibits</label>
+            </value>
+            <value>
+                <fullName>STAK Design</fullName>
+                <default>false</default>
+                <label>STAK Design</label>
+            </value>
+            <value>
+                <fullName>Star Exhibits &amp; Environments, Inc.</fullName>
+                <default>false</default>
+                <label>Star Exhibits &amp; Environments, Inc.</label>
+            </value>
+            <value>
+                <fullName>Stevens Exhibits</fullName>
+                <default>false</default>
+                <label>Stevens Exhibits</label>
+            </value>
+            <value>
+                <fullName>Structural Display Co, Inc.</fullName>
+                <default>false</default>
+                <label>Structural Display Co, Inc.</label>
+            </value>
+            <value>
+                <fullName>studio III</fullName>
+                <default>false</default>
+                <label>studio III</label>
+            </value>
+            <value>
+                <fullName>Superior Exhibits &amp; Design, Inc.</fullName>
+                <default>false</default>
+                <label>Superior Exhibits &amp; Design, Inc.</label>
+            </value>
+            <value>
+                <fullName>The Design Agency</fullName>
+                <default>false</default>
+                <label>The Design Agency</label>
+            </value>
+            <value>
+                <fullName>The Exhibit House</fullName>
+                <default>false</default>
+                <label>The Exhibit House</label>
+            </value>
+            <value>
+                <fullName>The Mash Group</fullName>
+                <default>false</default>
+                <label>The Mash Group</label>
+            </value>
+            <value>
+                <fullName>The Taylor Group</fullName>
+                <default>false</default>
+                <label>The Taylor Group</label>
+            </value>
+            <value>
+                <fullName>ValueTech Exhibits</fullName>
+                <default>false</default>
+                <label>ValueTech Exhibits</label>
+            </value>
+            <value>
+                <fullName>Waggon-Cellars</fullName>
+                <default>false</default>
+                <label>Waggon-Cellars</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Product_Plan_Margin_per__c</fullName>
+    <description>Product Plan Margin %</description>
+    <formula>Product_Plan_Sales_Margin__c   /  Product_Plan_Sales_Price__c</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>= Product Plan Sales Margin /Product Plan Sales Price *100</inlineHelpText>
+    <label>Product Plan Margin %</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>1</scale>
+    <type>Percent</type>
+</CustomField>

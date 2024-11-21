@@ -1,0 +1,3109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StandardValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sorted>true</sorted>
+    <standardValue>
+        <fullName>Campaign</fullName>
+        <default>false</default>
+        <label>Campaign</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Chat</fullName>
+        <default>false</default>
+        <label>Chat</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email</fullName>
+        <default>false</default>
+        <label>Email</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email: money2020@ges.com</fullName>
+        <default>false</default>
+        <label>Email: money2020@ges.com</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - Bett Request Inbox</fullName>
+        <default>false</default>
+        <label>Email - Bett Request Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - BMGQCE-202308-ECL</fullName>
+        <default>false</default>
+        <label>Email - BMGQCE-202308-ECL</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - EducationStand Inbox</fullName>
+        <default>false</default>
+        <label>Email - EducationStand Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - EICPAV-202309-PJLIVE</fullName>
+        <default>false</default>
+        <label>Email - EICPAV-202309-PJLIVE</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - EMEA Accountex Inbox</fullName>
+        <default>false</default>
+        <label>Email - EMEA Accountex Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - EMEA Accountex North Inbox</fullName>
+        <default>false</default>
+        <label>Email - EMEA Accountex North Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - EMEA Aesthetic Medicine Inbox</fullName>
+        <default>false</default>
+        <label>Email - EMEA Aesthetic Medicine Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - EMEA Africa Oil Week Inbox</fullName>
+        <default>false</default>
+        <label>Email - EMEA Africa Oil Week Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - EMEA AGM, ACC and Future Surgeries Inbox</fullName>
+        <default>false</default>
+        <label>Email - EMEA AGM, ACC and Future Surgeries Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - EMEA Ahead by BETT Inbox</fullName>
+        <default>false</default>
+        <label>Email - EMEA Ahead by BETT Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - EMEA AMEE Inbox</fullName>
+        <default>false</default>
+        <label>Email - EMEA AMEE Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - EMEA Anticipate London Inbox</fullName>
+        <default>false</default>
+        <label>Email - EMEA Anticipate London Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - EMEA Aquaculture Inbox</fullName>
+        <default>false</default>
+        <label>Email - EMEA Aquaculture Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - EMEA ASME Turbo Expo Inbox</fullName>
+        <default>false</default>
+        <label>Email - EMEA ASME Turbo Expo Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - EMEA Asset Management Maintenance Inbox</fullName>
+        <default>false</default>
+        <label>Email - EMEA Asset Management Maintenance Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - EMEA Automechanika Inbox</fullName>
+        <default>false</default>
+        <label>Email - EMEA Automechanika Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - EMEA Autosport International Inbox</fullName>
+        <default>false</default>
+        <label>Email - EMEA Autosport International Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - EMEA Autumn Fair &amp; MODA Inbox</fullName>
+        <default>false</default>
+        <label>Email - EMEA Autumn Fair &amp; MODA Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - EMEA BAPO Conference Inbox</fullName>
+        <default>false</default>
+        <label>Email - EMEA BAPO Conference Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - EMEA BBC Good Food Winter Inbox</fullName>
+        <default>false</default>
+        <label>Email - EMEA BBC Good Food Winter Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - EMEA BBC Summer Good Food &amp; Gardeners Inbox</fullName>
+        <default>false</default>
+        <label>Email - EMEA BBC Summer Good Food &amp; Gardeners Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - EMEA Best Practice &amp; Respiratory Show Inbox</fullName>
+        <default>false</default>
+        <label>Email - EMEA Best Practice &amp; Respiratory Show Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - EMEA BETT Inbox</fullName>
+        <default>false</default>
+        <label>Email - EMEA BETT Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - EMEA Big Data LDN Inbox</fullName>
+        <default>false</default>
+        <label>Email - EMEA Big Data LDN Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - EMEA Black Business Show Inbox</fullName>
+        <default>false</default>
+        <label>Email - EMEA Black Business Show Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - EMEA Blackhat Inbox</fullName>
+        <default>false</default>
+        <label>Email - EMEA Blackhat Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - EMEA Bookkeepers Summit Inbox</fullName>
+        <default>false</default>
+        <label>Email - EMEA Bookkeepers Summit Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - EMEA Brand Licencing Inbox</fullName>
+        <default>false</default>
+        <label>Email - EMEA Brand Licencing Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - EMEA British Dentistry Show Inbox</fullName>
+        <default>false</default>
+        <label>Email - EMEA British Dentistry Show Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - EMEA British Farriers &amp; Blacksmiths Association Inbox</fullName>
+        <default>false</default>
+        <label>Email - EMEA British Farriers &amp; Blacksmiths Association Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - EMEA British Tourism &amp; Travel Show Inbox</fullName>
+        <default>false</default>
+        <label>Email - EMEA British Tourism &amp; Travel Show Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - EMEA Building Societies Annual Conference Inbox</fullName>
+        <default>false</default>
+        <label>Email - EMEA Building Societies Annual Conference Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - EMEA Bunkered Live NEC Inbox</fullName>
+        <default>false</default>
+        <label>Email - EMEA Bunkered Live NEC Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - EMEA Bunkered Live RHC Inbox</fullName>
+        <default>false</default>
+        <label>Email - EMEA Bunkered Live RHC Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - EMEA Bunkered Live SEC Inbox</fullName>
+        <default>false</default>
+        <label>Email - EMEA Bunkered Live SEC Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - EMEA BVA Live Inbox</fullName>
+        <default>false</default>
+        <label>Email - EMEA BVA Live Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - EMEA Call Backs Inbox</fullName>
+        <default>false</default>
+        <label>Email - EMEA Call Backs Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - EMEA Capacity Europe Inbox</fullName>
+        <default>false</default>
+        <label>Email - EMEA Capacity Europe Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - EMEA Caravan and Motorhome Show Inbox</fullName>
+        <default>false</default>
+        <label>Email - EMEA Caravan and Motorhome Show Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - EMEA Care Managers Show Inbox</fullName>
+        <default>false</default>
+        <label>Email - EMEA Care Managers Show Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - EMEA Care Show Inbox</fullName>
+        <default>false</default>
+        <label>Email - EMEA Care Show Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - EMEA Casual Dining Inbox</fullName>
+        <default>false</default>
+        <label>Email - EMEA Casual Dining Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - EMEA Chatbot Summit Inbox</fullName>
+        <default>false</default>
+        <label>Email - EMEA Chatbot Summit Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - EMEA CHEMUK Inbox</fullName>
+        <default>false</default>
+        <label>Email - EMEA CHEMUK Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - EMEA Classic Motor Show Inbox</fullName>
+        <default>false</default>
+        <label>Email - EMEA Classic Motor Show Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - EMEA  Cleaning Show Inbox</fullName>
+        <default>false</default>
+        <label>Email - EMEA  Cleaning Show Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - EMEA Clinical Pharmacy Congress Inbox</fullName>
+        <default>false</default>
+        <label>Email - EMEA Clinical Pharmacy Congress Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - EMEA Clinical Pharmacy Congress North</fullName>
+        <default>false</default>
+        <label>Email - EMEA Clinical Pharmacy Congress North</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - EMEA Clinical TMS Society Annual Meeting Inbox</fullName>
+        <default>false</default>
+        <label>Email - EMEA Clinical TMS Society Annual Meeting Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - EMEA Closed Loop Inbox</fullName>
+        <default>false</default>
+        <label>Email - EMEA Closed Loop Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - EMEA Coach &amp; Bus Inbox</fullName>
+        <default>false</default>
+        <label>Email - EMEA Coach &amp; Bus Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - EMEA Commercial Kitchen Inbox</fullName>
+        <default>false</default>
+        <label>Email - EMEA Commercial Kitchen Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - EMEA Commercial Vehicle Inbox</fullName>
+        <default>false</default>
+        <label>Email - EMEA Commercial Vehicle Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - EMEA Complaints/Feedback Inbox</fullName>
+        <default>false</default>
+        <label>Email - EMEA Complaints/Feedback Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - EMEA Congress inbox</fullName>
+        <default>false</default>
+        <label>Email - EMEA Congress inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - EMEA Conservative Party Conference Inbox</fullName>
+        <default>false</default>
+        <label>Email - EMEA Conservative Party Conference Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - EMEA Cromwell Live Inbox</fullName>
+        <default>false</default>
+        <label>Email - EMEA Cromwell Live Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - EMEA Croptec Inbox</fullName>
+        <default>false</default>
+        <label>Email - EMEA Croptec Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - EMEA Crufts Inbox</fullName>
+        <default>false</default>
+        <label>Email - EMEA Crufts Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - EMEA CSL &amp; DHSL Inbox</fullName>
+        <default>false</default>
+        <label>Email - EMEA CSL &amp; DHSL Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - EMEA CST Annual Conference Inbox</fullName>
+        <default>false</default>
+        <label>Email - EMEA CST Annual Conference Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - EMEA Customer Service inbox</fullName>
+        <default>false</default>
+        <label>Email - EMEA Customer Service inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - EMEA CWIEMEconcierge</fullName>
+        <default>false</default>
+        <label>Email - EMEA CWIEMEconcierge</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - EMEA CWIEME Inbox</fullName>
+        <default>false</default>
+        <label>Email - EMEA CWIEME Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - EMEA CyberUK Inbox</fullName>
+        <default>false</default>
+        <label>Email - EMEA CyberUK Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - EMEA Dairy Industries Expo Inbox</fullName>
+        <default>false</default>
+        <label>Email - EMEA Dairy Industries Expo Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - EMEA DCW North Inbox</fullName>
+        <default>false</default>
+        <label>Email - EMEA DCW North Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - EMEA Decorex Inbox</fullName>
+        <default>false</default>
+        <label>Email - EMEA Decorex Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - EMEA Destinations London Inbox</fullName>
+        <default>false</default>
+        <label>Email - EMEA Destinations London Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - EMEA Destinations Manchester Inbox</fullName>
+        <default>false</default>
+        <label>Email - EMEA Destinations Manchester Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - EMEA Develop Brighton Inbox</fullName>
+        <default>false</default>
+        <label>Email - EMEA Develop Brighton Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - EMEA Digital Construction Week Inbox</fullName>
+        <default>false</default>
+        <label>Email - EMEA Digital Construction Week Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - EMEA Discover Dogs Inbox</fullName>
+        <default>false</default>
+        <label>Email - EMEA Discover Dogs Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>EMAIL - EMEA Drive &amp; controls</fullName>
+        <default>false</default>
+        <label>EMAIL - EMEA Drive &amp; controls</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - EMEA DSEI Inbox</fullName>
+        <default>false</default>
+        <label>Email - EMEA DSEI Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - EMEA DTX Europe &amp; UCX Inbox</fullName>
+        <default>false</default>
+        <label>Email - EMEA DTX Europe &amp; UCX Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - EMEA DTX Inbox</fullName>
+        <default>false</default>
+        <label>Email - EMEA DTX Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - EMEA DTX Manchester Inbox</fullName>
+        <default>false</default>
+        <label>Email - EMEA DTX Manchester Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - EMEA EAGE Inbox</fullName>
+        <default>false</default>
+        <label>Email - EMEA EAGE Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - EMEA EA Masters Inbox</fullName>
+        <default>false</default>
+        <label>Email - EMEA EA Masters Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - EMEA EANO Inbox</fullName>
+        <default>false</default>
+        <label>Email - EMEA EANO Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - EMEA ECOC Inbox</fullName>
+        <default>false</default>
+        <label>Email - EMEA ECOC Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - EMEA eCommerce Expo Inbox</fullName>
+        <default>false</default>
+        <label>Email - EMEA eCommerce Expo Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - EMEA ECSS 2024 Inbox</fullName>
+        <default>false</default>
+        <label>Email - EMEA ECSS 2024 Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - EMEA Electrics Inbox</fullName>
+        <default>false</default>
+        <label>Email - EMEA Electrics Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - EMEA Electric south Inbox</fullName>
+        <default>false</default>
+        <label>Email - EMEA Electric south Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - EMEA Electrics South Refunds Inbox</fullName>
+        <default>false</default>
+        <label>Email - EMEA Electrics South Refunds Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - EMEA EMS Inbox</fullName>
+        <default>false</default>
+        <label>Email - EMEA EMS Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - EMEA ESC Congress</fullName>
+        <default>false</default>
+        <label>Email - EMEA ESC Congress</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - EMEA ESC Industry</fullName>
+        <default>false</default>
+        <label>Email - EMEA ESC Industry</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - EMEA Essential Install Live (EI Live) Inbox</fullName>
+        <default>false</default>
+        <label>Email - EMEA Essential Install Live (EI Live) Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - EMEA ESTRO 2024 Inbox</fullName>
+        <default>false</default>
+        <label>Email - EMEA ESTRO 2024 Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - EMEA ETL &amp; ESL 2023 Inbox</fullName>
+        <default>false</default>
+        <label>Email - EMEA ETL &amp; ESL 2023 Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - EMEA EuGMS Inbox</fullName>
+        <default>false</default>
+        <label>Email - EMEA EuGMS Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - EMEA EuroBus Inbox</fullName>
+        <default>false</default>
+        <label>Email - EMEA EuroBus Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - EMEA Euro Graphics Inbox</fullName>
+        <default>false</default>
+        <label>Email - EMEA Euro Graphics Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - EMEA Europe ServiCentre inbox</fullName>
+        <default>false</default>
+        <label>Email - EMEA Europe ServiCentre inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - EMEA Event Tech Live Inbox</fullName>
+        <default>false</default>
+        <label>Email - EMEA Event Tech Live Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - EMEA EWMA 2024 Inbox</fullName>
+        <default>false</default>
+        <label>Email - EMEA EWMA 2024 Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - EMEA Excel Webshop Inbox</fullName>
+        <default>false</default>
+        <label>Email - EMEA Excel Webshop Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - EMEA Exhibitor List</fullName>
+        <default>false</default>
+        <label>Email - EMEA Exhibitor List</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - EMEA Farm Business Show Inbox</fullName>
+        <default>false</default>
+        <label>Email - EMEA Farm Business Show Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - EMEA Federation of Infection Societies Inbox</fullName>
+        <default>false</default>
+        <label>Email - EMEA Federation of Infection Societies Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - EMEA Fit Show Inbox</fullName>
+        <default>false</default>
+        <label>Email - EMEA Fit Show Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - EMEA Food Entrepreneur Show Inbox</fullName>
+        <default>false</default>
+        <label>Email - EMEA Food Entrepreneur Show Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - EMEA Forensic Europe Inbox</fullName>
+        <default>false</default>
+        <label>Email - EMEA Forensic Europe Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - EMEA FORS Members Conference</fullName>
+        <default>false</default>
+        <label>Email - EMEA FORS Members Conference</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - EMEA France Pavilion Inbox</fullName>
+        <default>false</default>
+        <label>Email - EMEA France Pavilion Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - EMEA GEO Business Inbox</fullName>
+        <default>false</default>
+        <label>Email - EMEA GEO Business Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - EMEA Girls Day Out Inbox</fullName>
+        <default>false</default>
+        <label>Email - EMEA Girls Day Out Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - EMEA Glee Inbox</fullName>
+        <default>false</default>
+        <label>Email - EMEA Glee Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - EMEA Global Ageing Conference Inbox</fullName>
+        <default>false</default>
+        <label>Email - EMEA Global Ageing Conference Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - EMEA Global Offshore Wind Conf &amp; Expo Inbox</fullName>
+        <default>false</default>
+        <label>Email - EMEA Global Offshore Wind Conf &amp; Expo Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - EMEA Governance Inbox</fullName>
+        <default>false</default>
+        <label>Email - EMEA Governance Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - EMEA Graphics Repeat Inbox</fullName>
+        <default>false</default>
+        <label>Email - EMEA Graphics Repeat Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - EMEA GSOF Symposium Europe 2023 Inbox</fullName>
+        <default>false</default>
+        <label>Email - EMEA GSOF Symposium Europe 2023 Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - EMEA Guidelines Live Inbox</fullName>
+        <default>false</default>
+        <label>Email - EMEA Guidelines Live Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - EMEA Health &amp; Wellbeing at Work Inbox</fullName>
+        <default>false</default>
+        <label>Email - EMEA Health &amp; Wellbeing at Work Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - EMEA Health + Care and Digital Health Inbox</fullName>
+        <default>false</default>
+        <label>Email - EMEA Health + Care and Digital Health Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - EMEA Helitech &amp; Dronex Inbox</fullName>
+        <default>false</default>
+        <label>Email - EMEA Helitech &amp; Dronex Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - EMEA Hillhead Inbox</fullName>
+        <default>false</default>
+        <label>Email - EMEA Hillhead Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - EMEA Home &amp; Gift &amp; Furniture Collection Inbox</fullName>
+        <default>false</default>
+        <label>Email - EMEA Home &amp; Gift &amp; Furniture Collection Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - EMEA Home &amp; Gift Inbox</fullName>
+        <default>false</default>
+        <label>Email - EMEA Home &amp; Gift Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - EMEA Hotel &amp; Resort Innovation Expo Inbox</fullName>
+        <default>false</default>
+        <label>Email - EMEA Hotel &amp; Resort Innovation Expo Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - EMEA Housing Community Summit Inbox</fullName>
+        <default>false</default>
+        <label>Email - EMEA Housing Community Summit Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - EMEA Housing Finance Inbox</fullName>
+        <default>false</default>
+        <label>Email - EMEA Housing Finance Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - EMEA IATA World Cargo Symposium Inbox</fullName>
+        <default>false</default>
+        <label>Email - EMEA IATA World Cargo Symposium Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - EMEA ICE Charter Inbox</fullName>
+        <default>false</default>
+        <label>Email - EMEA ICE Charter Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - EMEA Ice London Inbox</fullName>
+        <default>false</default>
+        <label>Email - EMEA Ice London Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - EMEA IFE Inbox</fullName>
+        <default>false</default>
+        <label>Email - EMEA IFE Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - EMEA IFQSH Inbox</fullName>
+        <default>false</default>
+        <label>Email - EMEA IFQSH Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - EMEA IFSSH, IFSHT &amp; FESSH Combined Con Inbox</fullName>
+        <default>false</default>
+        <label>Email - EMEA IFSSH, IFSHT &amp; FESSH Combined Con Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - EMEA IGB Affiliate London Inbox</fullName>
+        <default>false</default>
+        <label>Email - EMEA IGB Affiliate London Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - EMEA IMHX Inbox</fullName>
+        <default>false</default>
+        <label>Email - EMEA IMHX Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - EMEA Inbound Resolutions</fullName>
+        <default>false</default>
+        <label>Email - EMEA Inbound Resolutions</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - EMEA Informa Inbox</fullName>
+        <default>false</default>
+        <label>Email - EMEA Informa Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - EMEA Infosecurity Inbox</fullName>
+        <default>false</default>
+        <label>Email - EMEA Infosecurity Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - EMEA INHSU Inbox</fullName>
+        <default>false</default>
+        <label>Email - EMEA INHSU Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - EMEA Installer Inbox</fullName>
+        <default>false</default>
+        <label>Email - EMEA Installer Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - EMEA Interactive Futures Inbox</fullName>
+        <default>false</default>
+        <label>Email - EMEA Interactive Futures Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - EMEA International Franchise Show Inbox</fullName>
+        <default>false</default>
+        <label>Email - EMEA International Franchise Show Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - EMEA International Golf Travel Market Inbox</fullName>
+        <default>false</default>
+        <label>Email - EMEA International Golf Travel Market Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - EMEA Internet Retailing &amp; eDelivery Expo Inbox</fullName>
+        <default>false</default>
+        <label>Email - EMEA Internet Retailing &amp; eDelivery Expo Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - EMEA Interplas Inbox</fullName>
+        <default>false</default>
+        <label>Email - EMEA Interplas Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - EMEA ISC Inbox</fullName>
+        <default>false</default>
+        <label>Email - EMEA ISC Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - EMEA ISTH Congress Inbox</fullName>
+        <default>false</default>
+        <label>Email - EMEA ISTH Congress Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - EMEA IT2EC 2024 Inbox</fullName>
+        <default>false</default>
+        <label>Email - EMEA IT2EC 2024 Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - EMEA ITEC Inbox</fullName>
+        <default>false</default>
+        <label>Email - EMEA ITEC Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - EMEA January Furniture Show Inbox</fullName>
+        <default>false</default>
+        <label>Email - EMEA January Furniture Show Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - EMEA Joint Annual Meeting ISMRM-ESMRMB &amp; SMRT Inbox</fullName>
+        <default>false</default>
+        <label>Email - EMEA Joint Annual Meeting ISMRM-ESMRMB &amp; SMRT Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - EMEA Kitchens, Bathrooms and Bedrooms Inbox</fullName>
+        <default>false</default>
+        <label>Email - EMEA Kitchens, Bathrooms and Bedrooms Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - EMEA Lamma Inbox</fullName>
+        <default>false</default>
+        <label>Email - EMEA Lamma Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - EMEA Landscape Show Inbox</fullName>
+        <default>false</default>
+        <label>Email - EMEA Landscape Show Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - EMEA LAPADA Art &amp; Antique Fair Inbox</fullName>
+        <default>false</default>
+        <label>Email - EMEA LAPADA Art &amp; Antique Fair Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - EMEA Layer123 World Congress Inbox</fullName>
+        <default>false</default>
+        <label>Email - EMEA Layer123 World Congress Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - EMEA LKA Dog Show Inbox</fullName>
+        <default>false</default>
+        <label>Email - EMEA LKA Dog Show Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - EMEA Logistics Online Orders Inbox</fullName>
+        <default>false</default>
+        <label>Email - EMEA Logistics Online Orders Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - EMEA London Career Forum Inbox</fullName>
+        <default>false</default>
+        <label>Email - EMEA London Career Forum Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - EMEA London Design Fair Inbox</fullName>
+        <default>false</default>
+        <label>Email - EMEA London Design Fair Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - EMEA London International Horse Show Inbox</fullName>
+        <default>false</default>
+        <label>Email - EMEA London International Horse Show Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - EMEA London Tech Event Inbox</fullName>
+        <default>false</default>
+        <label>Email - EMEA London Tech Event Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - EMEA London Vet Show Inbox</fullName>
+        <default>false</default>
+        <label>Email - EMEA London Vet Show Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - EMEA Lunch! Inbox</fullName>
+        <default>false</default>
+        <label>Email - EMEA Lunch! Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - EMEA Luxury Travel Fair Inbox</fullName>
+        <default>false</default>
+        <label>Email - EMEA Luxury Travel Fair Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - EMEA MACH Inbox</fullName>
+        <default>false</default>
+        <label>Email - EMEA MACH Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - EMEA Manchester Furniture Show Inbox</fullName>
+        <default>false</default>
+        <label>Email - EMEA Manchester Furniture Show Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - EMEA Manufacturing &amp; Engineering Expo Inbox</fullName>
+        <default>false</default>
+        <label>Email - EMEA Manufacturing &amp; Engineering Expo Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - EMEA Medteceurope Inbox</fullName>
+        <default>false</default>
+        <label>Email - EMEA Medteceurope Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - EMEA Microbiology Society Annual Conf Inbox</fullName>
+        <default>false</default>
+        <label>Email - EMEA Microbiology Society Annual Conf Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - EMEA MODA Inbox</fullName>
+        <default>false</default>
+        <label>Email - EMEA MODA Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - EMEA MoneyNext Inbox</fullName>
+        <default>false</default>
+        <label>Email - EMEA MoneyNext Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - EMEA Motorcycle Live Inbox</fullName>
+        <default>false</default>
+        <label>Email - EMEA Motorcycle Live Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - EMEA Multimodal Inbox</fullName>
+        <default>false</default>
+        <label>Email - EMEA Multimodal Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - EMEA Natural &amp; Organic Products Europe Inbox</fullName>
+        <default>false</default>
+        <label>Email - EMEA Natural &amp; Organic Products Europe Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - EMEA Natural Stone Show &amp; Hard Surfaces Inbox</fullName>
+        <default>false</default>
+        <label>Email - EMEA Natural Stone Show &amp; Hard Surfaces Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - EMEA NRB &amp; Lunch! North Inbox</fullName>
+        <default>false</default>
+        <label>Email - EMEA NRB &amp; Lunch! North Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email  - EMEA Nursery Managers Show Inbox</fullName>
+        <default>false</default>
+        <label>Email  - EMEA Nursery Managers Show Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - EMEA Occupational Therapy &amp; Therapy Expo Inbox</fullName>
+        <default>false</default>
+        <label>Email - EMEA Occupational Therapy &amp; Therapy Expo Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - EMEA OFHBM Inbox</fullName>
+        <default>false</default>
+        <label>Email - EMEA OFHBM Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - EMEA Online Orders2 Inbox</fullName>
+        <default>false</default>
+        <label>Email - EMEA Online Orders2 Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - EMEA Orders Inbox</fullName>
+        <default>false</default>
+        <label>Email - EMEA Orders Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - EMEA P&amp;M Inbox</fullName>
+        <default>false</default>
+        <label>Email - EMEA P&amp;M Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - EMEA Pakistan Property Show Inbox</fullName>
+        <default>false</default>
+        <label>Email - EMEA Pakistan Property Show Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - EMEA Patient Safety Congress Inbox</fullName>
+        <default>false</default>
+        <label>Email - EMEA Patient Safety Congress Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - EMEA PCR Valves Inbox</fullName>
+        <default>false</default>
+        <label>Email - EMEA PCR Valves Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - EMEA Pharmaconex Logistics</fullName>
+        <default>false</default>
+        <label>Email - EMEA Pharmaconex Logistics</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - EMEA Pharmapackeurope Inbox</fullName>
+        <default>false</default>
+        <label>Email - EMEA Pharmapackeurope Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - EMEA Pig &amp; Poultry Fair Inbox</fullName>
+        <default>false</default>
+        <label>Email - EMEA Pig &amp; Poultry Fair Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - EMEA Practical Classic Car &amp; Restoration Inbox</fullName>
+        <default>false</default>
+        <label>Email - EMEA Practical Classic Car &amp; Restoration Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - EMEA Primary Care &amp; Public Health Inbox</fullName>
+        <default>false</default>
+        <label>Email - EMEA Primary Care &amp; Public Health Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - EMEA Professional Beauty &amp; Hair Inbox</fullName>
+        <default>false</default>
+        <label>Email - EMEA Professional Beauty &amp; Hair Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - EMEA Property Investor Show Inbox</fullName>
+        <default>false</default>
+        <label>Email - EMEA Property Investor Show Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - EMEA Propertymark Inbox</fullName>
+        <default>false</default>
+        <label>Email - EMEA Propertymark Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - EMEA Pure Inbox</fullName>
+        <default>false</default>
+        <label>Email - EMEA Pure Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - EMEA Quality Homes Conference and Exhib Inbox</fullName>
+        <default>false</default>
+        <label>Email - EMEA Quality Homes Conference and Exhib Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - EMEA Race Retro Inbox</fullName>
+        <default>false</default>
+        <label>Email - EMEA Race Retro Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - EMEA Railtex / Infrarail Inbox</fullName>
+        <default>false</default>
+        <label>Email - EMEA Railtex / Infrarail Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - EMEA Railtex Inbox</fullName>
+        <default>false</default>
+        <label>Email - EMEA Railtex Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - EMEA RCR Annual Conference 2023 Inbox</fullName>
+        <default>false</default>
+        <label>Email - EMEA RCR Annual Conference 2023 Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - EMEA RCR Global AI Inbox</fullName>
+        <default>false</default>
+        <label>Email - EMEA RCR Global AI Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - EMEA Restaurant &amp; Bar Tech Live Inbox</fullName>
+        <default>false</default>
+        <label>Email - EMEA Restaurant &amp; Bar Tech Live Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - EMEA Retail Payments Conference Inbox</fullName>
+        <default>false</default>
+        <label>Email - EMEA Retail Payments Conference Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - EMEA Retail Supply Chain &amp; Logistics Expo</fullName>
+        <default>false</default>
+        <label>Email - EMEA Retail Supply Chain &amp; Logistics Expo</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - EMEA Retail Technology Inbox</fullName>
+        <default>false</default>
+        <label>Email - EMEA Retail Technology Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - EMEA Risk Inbox</fullName>
+        <default>false</default>
+        <label>Email - EMEA Risk Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - EMEA RWM &amp; Letsrecycle Live Inbox</fullName>
+        <default>false</default>
+        <label>Email - EMEA RWM &amp; Letsrecycle Live Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - EMEA Safety &amp; Security Series Inbox</fullName>
+        <default>false</default>
+        <label>Email - EMEA Safety &amp; Security Series Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - EMEA Salesforce Inbox</fullName>
+        <default>false</default>
+        <label>Email - EMEA Salesforce Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - EMEA Salesforce New Inbox</fullName>
+        <default>false</default>
+        <label>Email - EMEA Salesforce New Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - EMEA Scotland&#39;s Housing Festival Inbox</fullName>
+        <default>false</default>
+        <label>Email - EMEA Scotland&#39;s Housing Festival Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - EMEA Scotland&#39;s Spring Trade Fair Inbox</fullName>
+        <default>false</default>
+        <label>Email - EMEA Scotland&#39;s Spring Trade Fair Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - EMEA Scotland&#39;s Trade Fair Autumn Inbox</fullName>
+        <default>false</default>
+        <label>Email - EMEA Scotland&#39;s Trade Fair Autumn Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - EMEA Scottish Caravan and Motorhome Inbox</fullName>
+        <default>false</default>
+        <label>Email - EMEA Scottish Caravan and Motorhome Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - EMEA Scottish Dental Show Inbox</fullName>
+        <default>false</default>
+        <label>Email - EMEA Scottish Dental Show Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - EMEA Scottish Education Expo Inbox</fullName>
+        <default>false</default>
+        <label>Email - EMEA Scottish Education Expo Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - EMEA Scottish Wedding Show Inbox</fullName>
+        <default>false</default>
+        <label>Email - EMEA Scottish Wedding Show Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - EMEA Seatrade Cruise Med Inbox</fullName>
+        <default>false</default>
+        <label>Email - EMEA Seatrade Cruise Med Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - EMEA Service Desk &amp; IT Support  Inox</fullName>
+        <default>false</default>
+        <label>Email - EMEA Service Desk &amp; IT Support  Inox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - EMEA SF Request Inbox</fullName>
+        <default>false</default>
+        <label>Email - EMEA SF Request Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - EMEA ShowMove Inbox</fullName>
+        <default>false</default>
+        <label>Email - EMEA ShowMove Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - EMEA Sign &amp; Digital</fullName>
+        <default>false</default>
+        <label>Email - EMEA Sign &amp; Digital</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - EMEA Sleep &amp; Eat Inbox</fullName>
+        <default>false</default>
+        <label>Email - EMEA Sleep &amp; Eat Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - EMEA Smart Retail Tech Inbox</fullName>
+        <default>false</default>
+        <label>Email - EMEA Smart Retail Tech Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - EMEA SOC (Storage Exhibitors Only) Inbox</fullName>
+        <default>false</default>
+        <label>Email - EMEA SOC (Storage Exhibitors Only) Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - EMEA Society of Photographers Convention Inbox</fullName>
+        <default>false</default>
+        <label>Email - EMEA Society of Photographers Convention Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - EMEA Source Fashion @ Pure Inbox</fullName>
+        <default>false</default>
+        <label>Email - EMEA Source Fashion @ Pure Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - EMEA Source Garden Inbox</fullName>
+        <default>false</default>
+        <label>Email - EMEA Source Garden Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - EMEA Source Home &amp; Gift Inbox</fullName>
+        <default>false</default>
+        <label>Email - EMEA Source Home &amp; Gift Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - EMEA Southampton Boat Show Inbox</fullName>
+        <default>false</default>
+        <label>Email - EMEA Southampton Boat Show Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - EMEA Southern Care Show Inbox</fullName>
+        <default>false</default>
+        <label>Email - EMEA Southern Care Show Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - EMEA Spam Inbox</fullName>
+        <default>false</default>
+        <label>Email - EMEA Spam Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - EMEA Spirit of Christmas Inbox</fullName>
+        <default>false</default>
+        <label>Email - EMEA Spirit of Christmas Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - EMEA Spirit of Summer Inbox</fullName>
+        <default>false</default>
+        <label>Email - EMEA Spirit of Summer Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - EMEA SPOC Inbox</fullName>
+        <default>false</default>
+        <label>Email - EMEA SPOC Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - EMEA Spring Fair 2024 Inbox</fullName>
+        <default>false</default>
+        <label>Email - EMEA Spring Fair 2024 Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - EMEA Spring Fair Inbox</fullName>
+        <default>false</default>
+        <label>Email - EMEA Spring Fair Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - EMEA SR Enhancements Inbox</fullName>
+        <default>false</default>
+        <label>Email - EMEA SR Enhancements Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - EMEA Star Wars Celebration Inbox</fullName>
+        <default>false</default>
+        <label>Email - EMEA Star Wars Celebration Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - EMEA Stylist Live Inbox</fullName>
+        <default>false</default>
+        <label>Email - EMEA Stylist Live Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - EMEA Surface World Inbox</fullName>
+        <default>false</default>
+        <label>Email - EMEA Surface World Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - EMEA Surveys Inbox</fullName>
+        <default>false</default>
+        <label>Email - EMEA Surveys Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - EMEA Taste at Lomond Inbox</fullName>
+        <default>false</default>
+        <label>Email - EMEA Taste at Lomond Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - EMEA TCS London Marathon Running Show Inbox</fullName>
+        <default>false</default>
+        <label>Email - EMEA TCS London Marathon Running Show Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - EMEA The Art &amp; Antiques Fair Inbox</fullName>
+        <default>false</default>
+        <label>Email - EMEA The Art &amp; Antiques Fair Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - EMEA The Baby Show Excel Inbox</fullName>
+        <default>false</default>
+        <label>Email - EMEA The Baby Show Excel Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - EMEA The Baby Show Manchester Inbox</fullName>
+        <default>false</default>
+        <label>Email - EMEA The Baby Show Manchester Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - EMEA The Baby Show NEC Inbox</fullName>
+        <default>false</default>
+        <label>Email - EMEA The Baby Show NEC Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - EMEA The Baby Show Olympia Inbox</fullName>
+        <default>false</default>
+        <label>Email - EMEA The Baby Show Olympia Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - EMEA The Cycle Show Inbox</fullName>
+        <default>false</default>
+        <label>Email -  EMEA The Cycle Show Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - EMEA The Emergency Service Show Inbox</fullName>
+        <default>false</default>
+        <label>Email - EMEA The Emergency Service Show Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - EMEA The Food Shows Inbox</fullName>
+        <default>false</default>
+        <label>Email - EMEA The Food Shows Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - EMEA The Great British Fleet Event Inbox</fullName>
+        <default>false</default>
+        <label>Email - EMEA The Great British Fleet Event Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - EMEA The Pharmacy Show Inbox</fullName>
+        <default>false</default>
+        <label>Email - EMEA The Pharmacy Show Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - EMEA The Print Show Inbox</fullName>
+        <default>false</default>
+        <label>Email - EMEA The Print Show Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - EMEA The Running Show Inbox</fullName>
+        <default>false</default>
+        <label>Email - EMEA The Running Show Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - EMEA The Super Weekender Inbox</fullName>
+        <default>false</default>
+        <label>Email - EMEA The Super Weekender Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - EMEA Top Draw Autumn Inbox</fullName>
+        <default>false</default>
+        <label>Email - EMEA Top Draw Autumn Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - EMEA Top Draw Inbox</fullName>
+        <default>false</default>
+        <label>Email - EMEA Top Draw Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - EMEA Toy Fair Inbox</fullName>
+        <default>false</default>
+        <label>Email - EMEA Toy Fair Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - EMEA Transport Ticketing Global Inbox</fullName>
+        <default>false</default>
+        <label>Email - EMEA Transport Ticketing Global Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - EMEA Transport Ticketing Show Inbox</fullName>
+        <default>false</default>
+        <label>Email - EMEA Transport Ticketing Show Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - EMEA Trophex Inbox</fullName>
+        <default>false</default>
+        <label>Email - EMEA Trophex Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - EMEA TwitchCon Inbox</fullName>
+        <default>false</default>
+        <label>Email - EMEA TwitchCon Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - EMEA UAE Inbox</fullName>
+        <default>false</default>
+        <label>Email - EMEA UAE Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - EMEA UAE WUC</fullName>
+        <default>false</default>
+        <label>Email - EMEA UAE WUC</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - EMEA UCAS Birmingham Inbox</fullName>
+        <default>false</default>
+        <label>Email - EMEA UCAS Birmingham Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - EMEA UCAS Cardiff Inbox</fullName>
+        <default>false</default>
+        <label>Email - EMEA UCAS Cardiff Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - EMEA UCAS Create Your Future London Inbox</fullName>
+        <default>false</default>
+        <label>Email - EMEA UCAS Create Your Future London Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - EMEA UCAS Create Your Future Manchester Inbox</fullName>
+        <default>false</default>
+        <label>Email - EMEA UCAS Create Your Future Manchester Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - EMEA UCAS Discovery Brighton Inbox</fullName>
+        <default>false</default>
+        <label>Email - EMEA UCAS Discovery Brighton Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - EMEA UCAS Discovery Derby Inbox</fullName>
+        <default>false</default>
+        <label>Email - EMEA UCAS Discovery Derby Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - EMEA UCAS Discovery Glasgow Inbox</fullName>
+        <default>false</default>
+        <label>Email - EMEA UCAS Discovery Glasgow Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - EMEA UCAS Discovery Maidstone Inbox</fullName>
+        <default>false</default>
+        <label>Email - EMEA UCAS Discovery Maidstone Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - EMEA UCAS Discovery Newcastle Inbox</fullName>
+        <default>false</default>
+        <label>Email - EMEA UCAS Discovery Newcastle Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - EMEA UCAS Discovery Newport Inbox</fullName>
+        <default>false</default>
+        <label>Email - EMEA UCAS Discovery Newport Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - EMEA UCAS East Midlands Inbox</fullName>
+        <default>false</default>
+        <label>Email - EMEA UCAS East Midlands Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - EMEA UCAS Edinburgh Inbox</fullName>
+        <default>false</default>
+        <label>Email - EMEA UCAS Edinburgh Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - EMEA UCAS Exeter Inbox</fullName>
+        <default>false</default>
+        <label>Email - EMEA UCAS Exeter Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - EMEA UCAS Farnborough Inbox</fullName>
+        <default>false</default>
+        <label>Email - EMEA UCAS Farnborough Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - EMEA UCAS Kent Inbox</fullName>
+        <default>false</default>
+        <label>Email - EMEA UCAS Kent Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - EMEA UCAS Liverpool Inbox</fullName>
+        <default>false</default>
+        <label>Email - EMEA UCAS Liverpool Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - EMEA UCAS London Inbox</fullName>
+        <default>false</default>
+        <label>Email - EMEA UCAS London Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - EMEA UCAS Manchester Inbox</fullName>
+        <default>false</default>
+        <label>Email - EMEA UCAS Manchester Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - EMEA UCAS Northern Ireland Inbox</fullName>
+        <default>false</default>
+        <label>Email - EMEA UCAS Northern Ireland Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - EMEA UCAS Nottingham Inbox</fullName>
+        <default>false</default>
+        <label>Email - EMEA UCAS Nottingham Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - EMEA UCAS Sheffield Inbox</fullName>
+        <default>false</default>
+        <label>Email - EMEA UCAS Sheffield Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - EMEA UCAS Sussex Inbox</fullName>
+        <default>false</default>
+        <label>Email - EMEA UCAS Sussex Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - EMEA UCAS Tyneside Inbox</fullName>
+        <default>false</default>
+        <label>Email - EMEA UCAS Tyneside Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - EMEA UDT 2024 Inbox</fullName>
+        <default>false</default>
+        <label>Email - EMEA UDT 2024 Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - EMEA UK Contractors Inbox</fullName>
+        <default>false</default>
+        <label>Email - EMEA UK Contractors Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - EMEA UK Garage &amp; Bodyshop Event Inbox</fullName>
+        <default>false</default>
+        <label>Email - EMEA UK Garage &amp; Bodyshop Event Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - EMEA UK Graphics Holding Inbox</fullName>
+        <default>false</default>
+        <label>Email - EMEA UK Graphics Holding Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - EMEA UKREiiF Inbox</fullName>
+        <default>false</default>
+        <label>Email - EMEA UKREiiF Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - EMEA UK Spiro Inbox</fullName>
+        <default>false</default>
+        <label>Email - EMEA UK Spiro Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - EMEA UK Stroke Forum Inbox</fullName>
+        <default>false</default>
+        <label>Email - EMEA UK Stroke Forum Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - EMEA Utility Week Live Inbox</fullName>
+        <default>false</default>
+        <label>Email - EMEA Utility Week Live Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - EMEA Vaper Expo UK Inbox</fullName>
+        <default>false</default>
+        <label>Email - EMEA Vaper Expo UK Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - EMEA Visit Connect Inbox</fullName>
+        <default>false</default>
+        <label>Email - EMEA Visit Connect Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - EMEA Volunteer Expo Inbox</fullName>
+        <default>false</default>
+        <label>Email - EMEA Volunteer Expo Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - EMEA White Label World Expo Inbox</fullName>
+        <default>false</default>
+        <label>Email - EMEA White Label World Expo Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - EMEA Winter Arts &amp; Antiques Inbox</fullName>
+        <default>false</default>
+        <label>Email - EMEA Winter Arts &amp; Antiques Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - EMEA Women&#39;s Health Professional Care Inbox</fullName>
+        <default>false</default>
+        <label>Email - EMEA Women&#39;s Health Professional Care Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - EMEA Womex Inbox</fullName>
+        <default>false</default>
+        <label>Email - EMEA Womex Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - EMEA Wonca Europe Inbox</fullName>
+        <default>false</default>
+        <label>Email - EMEA Wonca Europe Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - EMEA World ADC London Inbox</fullName>
+        <default>false</default>
+        <label>Email - EMEA World ADC London Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - EMEA World Congress of Soil Science</fullName>
+        <default>false</default>
+        <label>Email - EMEA World Congress of Soil Science</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - EMEA World Congress on Railway Research Inbox</fullName>
+        <default>false</default>
+        <label>Email - EMEA World Congress on Railway Research Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - EMEA World Travel Market Inbox</fullName>
+        <default>false</default>
+        <label>Email - EMEA World Travel Market Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - EMEA WWEM &amp; AQE Inbox</fullName>
+        <default>false</default>
+        <label>Email - EMEA WWEM &amp; AQE Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - EMEA Zebu Live 2023 Inbox</fullName>
+        <default>false</default>
+        <label>Email - EMEA Zebu Live 2023 Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - ExhibitReadyUAE Inbox</fullName>
+        <default>false</default>
+        <label>Email - ExhibitReadyUAE Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - HOMEBG-202309-ACCL</fullName>
+        <default>false</default>
+        <label>Email - HOMEBG-202309-ACCL</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - KSA Agriculture Inbox</fullName>
+        <default>false</default>
+        <label>Email - KSA Agriculture Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - KSA ATD Inbox</fullName>
+        <default>false</default>
+        <label>Email - KSA ATD Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - KSA Automechanika</fullName>
+        <default>false</default>
+        <label>Email - KSA Automechanika</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - KSA Beauty World</fullName>
+        <default>false</default>
+        <label>Email - KSA Beauty World</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - KSA Big 5 Inbox</fullName>
+        <default>false</default>
+        <label>Email - KSA Big 5 Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - KSA Big 5 Week 2 Inbox</fullName>
+        <default>false</default>
+        <label>Email - KSA Big 5 Week 2 Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - KSA BlackHat Inbox</fullName>
+        <default>false</default>
+        <label>Email - KSA BlackHat Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - KSA Build Inbox</fullName>
+        <default>false</default>
+        <label>Email - KSA Build Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - KSA Coatings Inbox</fullName>
+        <default>false</default>
+        <label>Email - KSA Coatings Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - KSA Connected World Inbox</fullName>
+        <default>false</default>
+        <label>Email - KSA Connected World Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - KSA Customer Care Inbox</fullName>
+        <default>false</default>
+        <label>Email - KSA Customer Care Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - KSA Edutech Inbox</fullName>
+        <default>false</default>
+        <label>Email - KSA Edutech Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - KSA Event Show</fullName>
+        <default>false</default>
+        <label>Email - KSA Event Show</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - KSA EV LIVE</fullName>
+        <default>false</default>
+        <label>Email - KSA EV LIVE</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - KSA FABEX Inbox</fullName>
+        <default>false</default>
+        <label>Email - KSA FABEX Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - KSA Food and Beverage Show Inbox</fullName>
+        <default>false</default>
+        <label>Email - KSA Food and Beverage Show Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - KSA Food Mfg Show Inbox</fullName>
+        <default>false</default>
+        <label>Email - KSA Food Mfg Show Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - KSA Food Show Inbox</fullName>
+        <default>false</default>
+        <label>Email - KSA Food Show Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - KSA Future Power Expo Inbox</fullName>
+        <default>false</default>
+        <label>Email - KSA Future Power Expo Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - KSA Hotel Show Inbox</fullName>
+        <default>false</default>
+        <label>Email - KSA Hotel Show Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - KSA ICEE Inbox</fullName>
+        <default>false</default>
+        <label>Email - KSA ICEE Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - KSA IMC Show Inbox</fullName>
+        <default>false</default>
+        <label>Email - KSA IMC Show Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - KSA Index Inbox</fullName>
+        <default>false</default>
+        <label>Email - KSA Index Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - KSA Intersec</fullName>
+        <default>false</default>
+        <label>Email - KSA Intersec</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - KSA Jeddah Construct Inbox</fullName>
+        <default>false</default>
+        <label>Email - KSA Jeddah Construct Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - KSA Leap Inbox</fullName>
+        <default>false</default>
+        <label>Email - KSA Leap Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - KSA Najah Inbox</fullName>
+        <default>false</default>
+        <label>Email - KSA Najah Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - KSA Plastex &amp; Rubber Show Inbox</fullName>
+        <default>false</default>
+        <label>Email - KSA Plastex &amp; Rubber Show Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - KSA Plastic and Petrochem Show Inbox</fullName>
+        <default>false</default>
+        <label>Email - KSA Plastic and Petrochem Show Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - KSA PPPP Inbox</fullName>
+        <default>false</default>
+        <label>Email - KSA PPPP Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - KSA Print and Pack Show Inbox</fullName>
+        <default>false</default>
+        <label>Email - KSA Print and Pack Show Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - KSA Rail Inbox</fullName>
+        <default>false</default>
+        <label>Email - KSA Rail Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - KSA Seamless Inbox</fullName>
+        <default>false</default>
+        <label>Email - KSA Seamless Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - KSA Seamless Startup Pods</fullName>
+        <default>false</default>
+        <label>Email - KSA Seamless Startup Pods</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - KSA SIE Inbox</fullName>
+        <default>false</default>
+        <label>Email - KSA SIE Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - KSA Smart Mfg &amp; Logistics Inbox</fullName>
+        <default>false</default>
+        <label>Email - KSA Smart Mfg &amp; Logistics Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - KSA Sports Build Show Inbox</fullName>
+        <default>false</default>
+        <label>Email - KSA Sports Build Show Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - KSA SSLF Expo Inbox</fullName>
+        <default>false</default>
+        <label>Email - KSA SSLF Expo Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - KSA The Solar Show</fullName>
+        <default>false</default>
+        <label>Email - KSA The Solar Show</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - KSA World Art Saudi</fullName>
+        <default>false</default>
+        <label>Email - KSA World Art Saudi</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - MiddleEastEventShow Inbox</fullName>
+        <default>false</default>
+        <label>Email - MiddleEastEventShow Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - NL AAIC 2023</fullName>
+        <default>false</default>
+        <label>Email - NL AAIC 2023</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - NL AAIC Inbox</fullName>
+        <default>false</default>
+        <label>Email - NL AAIC Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - NL ACAMS Inbox</fullName>
+        <default>false</default>
+        <label>Email - NL ACAMS Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - NL ACTE Inbox</fullName>
+        <default>false</default>
+        <label>Email - NL ACTE Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - NL Africa Energy Forum Inbox</fullName>
+        <default>false</default>
+        <label>Email - NL Africa Energy Forum Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - NL AUSA Eurosatory Inbox</fullName>
+        <default>false</default>
+        <label>Email - NL AUSA Eurosatory Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - NL Biolive Inbox</fullName>
+        <default>false</default>
+        <label>Email - NL Biolive Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - NL Chemspec 2017 Inbox</fullName>
+        <default>false</default>
+        <label>Email - NL Chemspec 2017 Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - NL Computacenter Inbox</fullName>
+        <default>false</default>
+        <label>Email - NL Computacenter Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - NL Cphiconcierge Inbox</fullName>
+        <default>false</default>
+        <label>Email - NL Cphiconcierge Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - NL CPHI Inbox</fullName>
+        <default>false</default>
+        <label>Email - NL CPHI Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - NL Deliver Inbox</fullName>
+        <default>false</default>
+        <label>Email - NL Deliver Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - NL devopsworld@ges.com</fullName>
+        <default>false</default>
+        <label>Email - NL devopsworld@ges.com</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - NL Emart Inbox</fullName>
+        <default>false</default>
+        <label>Email - NL Emart Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - NL emc@ges.com</fullName>
+        <default>false</default>
+        <label>Email - NL emc@ges.com</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - NL Enlit</fullName>
+        <default>false</default>
+        <label>Email - NL Enlit</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - NL Enlitpremium</fullName>
+        <default>false</default>
+        <label>Email - NL Enlitpremium</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - NL European Utility Week Inbox</fullName>
+        <default>false</default>
+        <label>Email - NL European Utility Week Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - NL Europe Feedback Inbox</fullName>
+        <default>false</default>
+        <label>Email - NL Europe Feedback Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - NL FDF Inbox</fullName>
+        <default>false</default>
+        <label>Email - NL FDF Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - NL Fespa Inbox</fullName>
+        <default>false</default>
+        <label>Email - NL Fespa Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - NL FIE Inbox</fullName>
+        <default>false</default>
+        <label>Email - NL FIE Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - NL Game Developer Inbox</fullName>
+        <default>false</default>
+        <label>Email - NL Game Developer Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - NL Gas Tech Inbox</fullName>
+        <default>false</default>
+        <label>Email - NL Gas Tech Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - NL Health Ingredients Inbox</fullName>
+        <default>false</default>
+        <label>Email - NL Health Ingredients Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - NL HITEC Inbox</fullName>
+        <default>false</default>
+        <label>Email - NL HITEC Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - NL HLTH Europe Inbox</fullName>
+        <default>false</default>
+        <label>Email - NL HLTH Europe Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - NL HomeDelivery Inbox</fullName>
+        <default>false</default>
+        <label>Email - NL HomeDelivery Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - NL Hostingcon Inbox</fullName>
+        <default>false</default>
+        <label>Email - NL Hostingcon Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - NL HR Tech Europe Inbox</fullName>
+        <default>false</default>
+        <label>Email - NL HR Tech Europe Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - NL ICCG Inbox</fullName>
+        <default>false</default>
+        <label>Email - NL ICCG Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - NL ICE Barcelona Inbox</fullName>
+        <default>false</default>
+        <label>Email - NL ICE Barcelona Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - NL ICSCExhibition2019 Inbox</fullName>
+        <default>false</default>
+        <label>Email - NL ICSCExhibition2019 Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - NL ICSE Inbox</fullName>
+        <default>false</default>
+        <label>Email - NL ICSE Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - NL IFA Global Markets Inbox</fullName>
+        <default>false</default>
+        <label>Email - NL IFA Global Markets Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - NL IFA Izone/Smart Home Inbox</fullName>
+        <default>false</default>
+        <label>Email - NL IFA Izone/Smart Home Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - NL iGB Affiliate EU Inbox</fullName>
+        <default>false</default>
+        <label>Email - NL iGB Affiliate EU Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - NL iGB Live</fullName>
+        <default>false</default>
+        <label>Email - NL iGB Live</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - NL Incose Inbox</fullName>
+        <default>false</default>
+        <label>Email - NL Incose Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - NL Innopack Inbox</fullName>
+        <default>false</default>
+        <label>Email - NL Innopack Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - NL Intermodal Inbox</fullName>
+        <default>false</default>
+        <label>Email - NL Intermodal Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - NL ISUOG Inbox</fullName>
+        <default>false</default>
+        <label>Email - NL ISUOG Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - NL JEC World Inbox</fullName>
+        <default>false</default>
+        <label>Email - NL JEC World Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - NL LabelExpo Europe Inbox</fullName>
+        <default>false</default>
+        <label>Email - NL LabelExpo Europe Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - NL Logipharma Inbox</fullName>
+        <default>false</default>
+        <label>Email - NL Logipharma Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - NL MagicCon Inbox</fullName>
+        <default>false</default>
+        <label>Email - NL MagicCon Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email  - NL MCD Graphics Inbox</fullName>
+        <default>false</default>
+        <label>Email  - NL MCD Graphics Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - NL MCD WWC24</fullName>
+        <default>false</default>
+        <label>Email - NL MCD WWC24</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - NL OrganicFoodIberia Inbox</fullName>
+        <default>false</default>
+        <label>Email - NL OrganicFoodIberia Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - NL PCI Community Meeting Inbox</fullName>
+        <default>false</default>
+        <label>Email - NL PCI Community Meeting Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - NL Pharmapack Key Accounts Inbox</fullName>
+        <default>false</default>
+        <label>Email - NL Pharmapack Key Accounts Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - NL P-MEC Europe</fullName>
+        <default>false</default>
+        <label>Email - NL P-MEC Europe</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - NL Premium Stand Inbox</fullName>
+        <default>false</default>
+        <label>Email - NL Premium Stand Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - NL Rigging Inbox</fullName>
+        <default>false</default>
+        <label>Email - NL Rigging Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - NL RotaryInternational2019 Inbox</fullName>
+        <default>false</default>
+        <label>Email - NL RotaryInternational2019 Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - NL Routes Europe Inbox</fullName>
+        <default>false</default>
+        <label>Email - NL Routes Europe Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - NL Routes World</fullName>
+        <default>false</default>
+        <label>Email - NL Routes World</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - NL Seafood 2017 Inbox</fullName>
+        <default>false</default>
+        <label>Email - NL Seafood 2017 Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - NL Seamless Europe Inbox</fullName>
+        <default>false</default>
+        <label>Email - NL Seamless Europe Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - NL Shoptalk Europe Inbox</fullName>
+        <default>false</default>
+        <label>Email - NL Shoptalk Europe Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - NL Shoptalk Inbox</fullName>
+        <default>false</default>
+        <label>Email - NL Shoptalk Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - NL Show Ready Inbox</fullName>
+        <default>false</default>
+        <label>Email - NL Show Ready Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - NL SIFER Inbox</fullName>
+        <default>false</default>
+        <label>Email - NL SIFER Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - NL Small Engine Technology Conference Inbox</fullName>
+        <default>false</default>
+        <label>Email - NL Small Engine Technology Conference Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - NL Spiro Inbox</fullName>
+        <default>false</default>
+        <label>Email - NL Spiro Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - NL Tissue World Inbox</fullName>
+        <default>false</default>
+        <label>Email - NL Tissue World Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - NL TOC Inbox</fullName>
+        <default>false</default>
+        <label>Email - NL TOC Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - NL Unleash World Inbox</fullName>
+        <default>false</default>
+        <label>Email - NL Unleash World Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - NL Utility Week Live Inbox</fullName>
+        <default>false</default>
+        <label>Email - NL Utility Week Live Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - NL Vitafoods Europe Inbox</fullName>
+        <default>false</default>
+        <label>Email - NL Vitafoods Europe Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - NL WellnessEurope2019 Inbox</fullName>
+        <default>false</default>
+        <label>Email - NL WellnessEurope2019 Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - NL White Label Europe</fullName>
+        <default>false</default>
+        <label>Email - NL White Label Europe</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - NL WindEurope Inbox</fullName>
+        <default>false</default>
+        <label>Email - NL WindEurope Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - NL World Architectural Festival Inbox</fullName>
+        <default>false</default>
+        <label>Email - NL World Architectural Festival Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - NL World Cargo Symposium Inbox</fullName>
+        <default>false</default>
+        <label>Email - NL World Cargo Symposium Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - NL World Passenger Festival Inbox</fullName>
+        <default>false</default>
+        <label>Email - NL World Passenger Festival Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - NL World Routes 2017</fullName>
+        <default>false</default>
+        <label>Email - NL World Routes 2017</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - NL World Tobacco Inbox</fullName>
+        <default>false</default>
+        <label>Email - NL World Tobacco Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - OfficeSF365Test Inbox</fullName>
+        <default>false</default>
+        <label>Email - OfficeSF365Test Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - UAE 5Gmena Inbox</fullName>
+        <default>false</default>
+        <label>Email - UAE 5Gmena Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - UAE AA Expo 2017 Inbox</fullName>
+        <default>false</default>
+        <label>Email - UAE AA Expo 2017 Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - UAE ActGlobal Inbox</fullName>
+        <default>false</default>
+        <label>Email - UAE ActGlobal Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - UAE Active Show Inbox</fullName>
+        <default>false</default>
+        <label>Email - UAE Active Show Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - UAE ACTMiddleEast Inbox</fullName>
+        <default>false</default>
+        <label>Email - UAE ACTMiddleEast Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - UAE Adipec Inbox</fullName>
+        <default>false</default>
+        <label>Email - UAE Adipec Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - UAE AFM Logistics Inbox</fullName>
+        <default>false</default>
+        <label>Email - UAE AFM Logistics Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - UAE Agra ME Inbox</fullName>
+        <default>false</default>
+        <label>Email - UAE Agra ME Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - UAE AHRecruitment Inbox</fullName>
+        <default>false</default>
+        <label>Email - UAE AHRecruitment Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - UAE AIB Inbox</fullName>
+        <default>false</default>
+        <label>Email - UAE AIB Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - UAE AIME MRO Inbox</fullName>
+        <default>false</default>
+        <label>Email - UAE AIME MRO Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - UAE Aluminium 2017 Inbox</fullName>
+        <default>false</default>
+        <label>Email - UAE Aluminium 2017 Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - UAE APLF Inbox</fullName>
+        <default>false</default>
+        <label>Email - UAE APLF Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - UAE Arab Health Artworks Inbox</fullName>
+        <default>false</default>
+        <label>Email - UAE Arab Health Artworks Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - UAE Arab Health Inbox</fullName>
+        <default>false</default>
+        <label>Email - UAE Arab Health Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - UAE ATD</fullName>
+        <default>false</default>
+        <label>Email - UAE ATD</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - UAE AUH Global Healthcare Week Inbox</fullName>
+        <default>false</default>
+        <label>Email - UAE AUH Global Healthcare Week Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - UAE AUSA Inbox</fullName>
+        <default>false</default>
+        <label>Email - UAE AUSA Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - UAE Automechanika Inbox</fullName>
+        <default>false</default>
+        <label>Email - UAE Automechanika Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - UAE Autotech Inbox</fullName>
+        <default>false</default>
+        <label>Email - UAE Autotech Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - UAE Autumn Food Show Inbox</fullName>
+        <default>false</default>
+        <label>Email - UAE Autumn Food Show Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - UAE Baby Expo Inbox</fullName>
+        <default>false</default>
+        <label>Email - UAE Baby Expo Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - UAE Belgium Pavilion Inbox</fullName>
+        <default>false</default>
+        <label>Email - UAE Belgium Pavilion Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - UAE Benelux Big5 Inbox</fullName>
+        <default>false</default>
+        <label>Email - UAE Benelux Big5 Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - UAE BETT Logistics</fullName>
+        <default>false</default>
+        <label>Email - UAE BETT Logistics</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - UAE BETT MEA Inbox</fullName>
+        <default>false</default>
+        <label>Email - UAE BETT MEA Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - UAE BICSI Inbox</fullName>
+        <default>false</default>
+        <label>Email - UAE BICSI Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - UAE Big5 USA Pavilion Inbox</fullName>
+        <default>false</default>
+        <label>Email - UAE Big5 USA Pavilion Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - UAE Breakbulk Inbox</fullName>
+        <default>false</default>
+        <label>Email - UAE Breakbulk Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - UAE Bride Dubai Inbox</fullName>
+        <default>false</default>
+        <label>Email - UAE Bride Dubai Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - UAE Bride Show</fullName>
+        <default>false</default>
+        <label>Email - UAE Bride Show</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - UAE Cabsat Inbox</fullName>
+        <default>false</default>
+        <label>Email - UAE Cabsat Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - UAE Capacitymedia Inbox</fullName>
+        <default>false</default>
+        <label>Email - UAE Capacitymedia Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - UAE Careers Fair Inbox</fullName>
+        <default>false</default>
+        <label>Email - UAE Careers Fair Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - UAE Cargo &amp; Airport Solutions 2018 Inbox</fullName>
+        <default>false</default>
+        <label>Email - UAE Cargo &amp; Airport Solutions 2018 Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - UAE Cityscape</fullName>
+        <default>false</default>
+        <label>Email - UAE Cityscape</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - UAE Cityscape Egypt 2020</fullName>
+        <default>false</default>
+        <label>Email - UAE Cityscape Egypt 2020</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - UAE Cityscape Global Inbox</fullName>
+        <default>false</default>
+        <label>Email - UAE Cityscape Global Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - UAE Clean Middle East Inbox</fullName>
+        <default>false</default>
+        <label>Email - UAE Clean Middle East Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - UAE Climate Action Inbox</fullName>
+        <default>false</default>
+        <label>Email - UAE Climate Action Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - UAE ComiCon2019 Inbox</fullName>
+        <default>false</default>
+        <label>Email - UAE ComiCon2019 Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - UAE CPHI ME Inbox</fullName>
+        <default>false</default>
+        <label>Email - UAE CPHI ME Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - UAE CRITICAL COMMUNICATIONS MENA Inbox</fullName>
+        <default>false</default>
+        <label>Email - UAE CRITICAL COMMUNICATIONS MENA Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - UAE Customer Care Inbox</fullName>
+        <default>false</default>
+        <label>Email - UAE Customer Care Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - UAE DIBS Inbox</fullName>
+        <default>false</default>
+        <label>Email - UAE DIBS Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - UAE DIHF Inbox</fullName>
+        <default>false</default>
+        <label>Email - UAE DIHF Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - UAE Dubai Active Inbox</fullName>
+        <default>false</default>
+        <label>Email - UAE Dubai Active Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - UAE Dubai AIRSHOW Inbox</fullName>
+        <default>false</default>
+        <label>Email - UAE Dubai AIRSHOW Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - UAE EdEx MENA</fullName>
+        <default>false</default>
+        <label>Email - UAE EdEx MENA</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - UAE Egypt Energy Inbox</fullName>
+        <default>false</default>
+        <label>Email - UAE Egypt Energy Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - UAE Egypt Pavilion @ Arab Health Inbox</fullName>
+        <default>false</default>
+        <label>Email - UAE Egypt Pavilion @ Arab Health Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - UAE EIC Pavilion Inbox</fullName>
+        <default>false</default>
+        <label>Email - UAE EIC Pavilion Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - UAE Energy Dubai Inbox</fullName>
+        <default>false</default>
+        <label>Email - UAE Energy Dubai Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - UAE Event Show Inbox</fullName>
+        <default>false</default>
+        <label>Email - UAE Event Show Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - UAE FlemingGulf Inbox</fullName>
+        <default>false</default>
+        <label>Email - UAE FlemingGulf Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - UAE  FMExpo2019 Inbox</fullName>
+        <default>false</default>
+        <label>Email - UAE  FMExpo2019 Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - UAE FTW Inbox</fullName>
+        <default>false</default>
+        <label>Email - UAE FTW Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - UAE Gamecon Inbox</fullName>
+        <default>false</default>
+        <label>Email - UAE Gamecon Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - UAE Gartner Inbox</fullName>
+        <default>false</default>
+        <label>Email - UAE Gartner Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - UAE Gastech Inbox</fullName>
+        <default>false</default>
+        <label>Email - UAE Gastech Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - UAE GATM 2018 Inbox</fullName>
+        <default>false</default>
+        <label>Email - UAE GATM 2018 Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email- UAE Germany Pavilion Inbox</fullName>
+        <default>false</default>
+        <label>Email- UAE Germany Pavilion Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - UAE GESS Inbox</fullName>
+        <default>false</default>
+        <label>Email - UAE GESS Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - UAE GFS inbox</fullName>
+        <default>false</default>
+        <label>Email - UAE GFS inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - UAE Gifts &amp; Premiums Inbox</fullName>
+        <default>false</default>
+        <label>Email - UAE Gifts &amp; Premiums Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - UAE Gitex inbox</fullName>
+        <default>false</default>
+        <label>Email - UAE Gitex inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - UAE Global Aerospace Summit Inbox</fullName>
+        <default>false</default>
+        <label>Email - UAE Global Aerospace Summit Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - UAE Global Rail Inbox</fullName>
+        <default>false</default>
+        <label>Email - UAE Global Rail Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - UAE Global Smart Energy Summit Inbox</fullName>
+        <default>false</default>
+        <label>Email - UAE Global Smart Energy Summit Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - UAE GMIS Inbox</fullName>
+        <default>false</default>
+        <label>Email - UAE GMIS Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - UAE GPCA Inbox</fullName>
+        <default>false</default>
+        <label>Email - UAE GPCA Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - UAE Gpp Inbox</fullName>
+        <default>false</default>
+        <label>Email - UAE Gpp Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - UAE Graphics Inbox</fullName>
+        <default>false</default>
+        <label>Email - UAE Graphics Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - UAE GRLC Inbox</fullName>
+        <default>false</default>
+        <label>Email - UAE GRLC Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - UAE Gulf Food</fullName>
+        <default>false</default>
+        <label>Email - UAE Gulf Food</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - UAE GulfHost Inbox</fullName>
+        <default>false</default>
+        <label>Email - UAE GulfHost Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - UAE Gulfood Manufacturing Inbox</fullName>
+        <default>false</default>
+        <label>Email - UAE Gulfood Manufacturing Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - UAE Gulfood - Pakistan Pav Inbox</fullName>
+        <default>false</default>
+        <label>Email - UAE Gulfood - Pakistan Pav Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - UAE Gulf Traffic Inbox</fullName>
+        <default>false</default>
+        <label>Email - UAE Gulf Traffic Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - UAE Healthcare Recruitment Inbox</fullName>
+        <default>false</default>
+        <label>Email - UAE Healthcare Recruitment Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - UAE Holland Pavilion Inbox</fullName>
+        <default>false</default>
+        <label>Email - UAE Holland Pavilion Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - UAE Hotel and Leisure Inbox</fullName>
+        <default>false</default>
+        <label>Email - UAE Hotel and Leisure Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - UAE Hotelshow Inbox</fullName>
+        <default>false</default>
+        <label>Email - UAE Hotelshow Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - UAE HR Summit Inbox</fullName>
+        <default>false</default>
+        <label>Email - UAE HR Summit Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - UAE IATA Inbox</fullName>
+        <default>false</default>
+        <label>Email - UAE IATA Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - UAE IBC Inbox</fullName>
+        <default>false</default>
+        <label>Email - UAE IBC Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - UAE IBTM Inbox</fullName>
+        <default>false</default>
+        <label>Email - UAE IBTM Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - UAE IDA World Congress Inbox</fullName>
+        <default>false</default>
+        <label>Email - UAE IDA World Congress Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - UAE IDF Congress Inbox</fullName>
+        <default>false</default>
+        <label>Email - UAE IDF Congress Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - UAE IIA Inbox</fullName>
+        <default>false</default>
+        <label>Email - UAE IIA Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - UAE Intermobility Expo Inbox</fullName>
+        <default>false</default>
+        <label>Email - UAE Intermobility Expo Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - UAE ISNR Inbox</fullName>
+        <default>false</default>
+        <label>Email - UAE ISNR Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - UAE Italy Big 5 Inbox</fullName>
+        <default>false</default>
+        <label>Email - UAE Italy Big 5 Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - UAE ITW</fullName>
+        <default>false</default>
+        <label>Email - UAE ITW</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - UAE Jewellery Arabia</fullName>
+        <default>false</default>
+        <label>Email - UAE Jewellery Arabia</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - UAE Jewellery Inbox</fullName>
+        <default>false</default>
+        <label>Email - UAE Jewellery Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - UAE Knect365 Inbox</fullName>
+        <default>false</default>
+        <label>Email - UAE Knect365 Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - UAE Leisureshow Inbox</fullName>
+        <default>false</default>
+        <label>Email - UAE Leisureshow Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - UAE Logistics</fullName>
+        <default>false</default>
+        <label>Email - UAE Logistics</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - UAE Logistics Adihex Inbox</fullName>
+        <default>false</default>
+        <label>Email - UAE Logistics Adihex Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - UAE Luxlive Inbox</fullName>
+        <default>false</default>
+        <label>Email - UAE Luxlive Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - UAE MEBAA Inbox</fullName>
+        <default>false</default>
+        <label>Email - UAE MEBAA Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - UAE MEBAA Morocco Inbox</fullName>
+        <default>false</default>
+        <label>Email - UAE MEBAA Morocco Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - UAE MEBO Inbox</fullName>
+        <default>false</default>
+        <label>Email - UAE MEBO Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - UAE Medlab Inbox</fullName>
+        <default>false</default>
+        <label>Email - UAE Medlab Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - UAE ME Electricity Inbox</fullName>
+        <default>false</default>
+        <label>Email - UAE ME Electricity Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - UAE MEIS Inbox</fullName>
+        <default>false</default>
+        <label>Email - UAE MEIS Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>EMAIL - UAE MEOS</fullName>
+        <default>false</default>
+        <label>EMAIL - UAE MEOS</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - UAE ME Rail Inbox</fullName>
+        <default>false</default>
+        <label>Email - UAE ME Rail Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - UAE MES3 Inbox</fullName>
+        <default>false</default>
+        <label>Email - UAE MES3 Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - UAE Middle East Foam</fullName>
+        <default>false</default>
+        <label>Email - UAE Middle East Foam</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - UAE Mining Show Inbox</fullName>
+        <default>false</default>
+        <label>Email - UAE Mining Show Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - UAE Mobility Live Inbox</fullName>
+        <default>false</default>
+        <label>Email - UAE Mobility Live Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - UAE Motor Show Inbox</fullName>
+        <default>false</default>
+        <label>Email - UAE Motor Show Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - UAE Muscle Show Inbox</fullName>
+        <default>false</default>
+        <label>Email - UAE Muscle Show Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - UAE Najah Abu Dhabi Inbox</fullName>
+        <default>false</default>
+        <label>Email - UAE Najah Abu Dhabi Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - UAE Najah Al Ain Education</fullName>
+        <default>false</default>
+        <label>Email - UAE Najah Al Ain Education</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - UAE Najah Dubai Inbox</fullName>
+        <default>false</default>
+        <label>Email - UAE Najah Dubai Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - UAE Nextmove Inbox</fullName>
+        <default>false</default>
+        <label>Email - UAE Nextmove Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - UAE Photo World Inbox</fullName>
+        <default>false</default>
+        <label>Email - UAE Photo World Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - UAE Piscineme Inbox</fullName>
+        <default>false</default>
+        <label>Email - UAE Piscineme Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - UAE Plastics &amp; Recycling Show</fullName>
+        <default>false</default>
+        <label>Email - UAE Plastics &amp; Recycling Show</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - UAE Powergen Inbox</fullName>
+        <default>false</default>
+        <label>Email - UAE Powergen Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - UAE Private Label &amp; Licensing</fullName>
+        <default>false</default>
+        <label>Email - UAE Private Label &amp; Licensing</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - UAE Professional Beauty</fullName>
+        <default>false</default>
+        <label>Email - UAE Professional Beauty</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - UAE Quartz Inbox</fullName>
+        <default>false</default>
+        <label>Email - UAE Quartz Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - UAE Sahara Inbox</fullName>
+        <default>false</default>
+        <label>Email - UAE Sahara Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - UAE Seamless Inbox</fullName>
+        <default>false</default>
+        <label>Email - UAE Seamless Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - UAE Seamless ME 2020</fullName>
+        <default>false</default>
+        <label>Email - UAE Seamless ME 2020</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - UAE Seamless Startups Inbox</fullName>
+        <default>false</default>
+        <label>Email - UAE Seamless Startups Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - UAE SeaTradeMiddleEast Inbox</fullName>
+        <default>false</default>
+        <label>Email - UAE SeaTradeMiddleEast Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - UAE Shopper Autumn Inbox</fullName>
+        <default>false</default>
+        <label>Email - UAE Shopper Autumn Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - UAE Sleep Expo Inbox</fullName>
+        <default>false</default>
+        <label>Email - UAE Sleep Expo Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - UAE Slovenia Inbox</fullName>
+        <default>false</default>
+        <label>Email - UAE Slovenia Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - UAE Smart Stores Expo Inbox</fullName>
+        <default>false</default>
+        <label>Email - UAE Smart Stores Expo Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - UAE Sofex Inbox</fullName>
+        <default>false</default>
+        <label>Email - UAE Sofex Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - UAE Solar Inbox</fullName>
+        <default>false</default>
+        <label>Email - UAE Solar Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - UAE Stoc Expo Inbox</fullName>
+        <default>false</default>
+        <label>Email - UAE Stoc Expo Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - UAE SubOptic</fullName>
+        <default>false</default>
+        <label>Email - UAE SubOptic</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - UAE Taiwan Pavilion Inbox</fullName>
+        <default>false</default>
+        <label>Email - UAE Taiwan Pavilion Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - UAE Tank World Inbox</fullName>
+        <default>false</default>
+        <label>Email - UAE Tank World Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - UAE Tawdheef</fullName>
+        <default>false</default>
+        <label>Email - UAE Tawdheef</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - UAE Telecoms World Inbox</fullName>
+        <default>false</default>
+        <label>Email - UAE Telecoms World Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - UAE Terrapinn Inbox</fullName>
+        <default>false</default>
+        <label>Email - UAE Terrapinn Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - UAE TOC ME Inbox</fullName>
+        <default>false</default>
+        <label>Email - UAE TOC ME Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - UAE Tower Exchange  inbox</fullName>
+        <default>false</default>
+        <label>Email - UAE Tower Exchange  inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - UAE Tower Xchange Meetup Africa Inbox</fullName>
+        <default>false</default>
+        <label>Email - UAE Tower Xchange Meetup Africa Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - UAE Turnkey Inbox</fullName>
+        <default>false</default>
+        <label>Email - UAE Turnkey Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - UAE UAE GITEX SPRING SHOPPER</fullName>
+        <default>false</default>
+        <label>Email - UAE UAE GITEX SPRING SHOPPER</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - UAE Vision X Inbox</fullName>
+        <default>false</default>
+        <label>Email - UAE Vision X Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - UAE WAD Inbox</fullName>
+        <default>false</default>
+        <label>Email - UAE WAD Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - UAE WCN 2020 Inbox</fullName>
+        <default>false</default>
+        <label>Email - UAE WCN 2020 Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - UAE World Congress Of Endourology Inbox</fullName>
+        <default>false</default>
+        <label>Email - UAE World Congress Of Endourology Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - UAE World Congress of Neurology Inbox</fullName>
+        <default>false</default>
+        <label>Email - UAE World Congress of Neurology Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - UAE World Police Summit Inbox</fullName>
+        <default>false</default>
+        <label>Email - UAE World Police Summit Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - UAE World Utilities Congress Inbox</fullName>
+        <default>false</default>
+        <label>Email - UAE World Utilities Congress Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - UAE World Vape Show Inbox</fullName>
+        <default>false</default>
+        <label>Email - UAE World Vape Show Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - UAE WTME Inbox</fullName>
+        <default>false</default>
+        <label>Email - UAE WTME Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - UK Inbound Services Inbox</fullName>
+        <default>false</default>
+        <label>Email - UK Inbound Services Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - UK - PureFebruary2019 Inbox</fullName>
+        <default>false</default>
+        <label>Email - UK - PureFebruary2019 Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - US Exhibitor List</fullName>
+        <default>false</default>
+        <label>Email - US Exhibitor List</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - US_GSMA_Emails</fullName>
+        <default>false</default>
+        <label>Email - US GSMA Emails</label>
+    </standardValue>
+    <standardValue>
+        <fullName>EMEA Royal Osteoporosis Annual Conference</fullName>
+        <default>false</default>
+        <label>EMEA Royal Osteoporosis Annual Conference</label>
+    </standardValue>
+    <standardValue>
+        <fullName>EMEA - UAE Active Show Inbox</fullName>
+        <default>false</default>
+        <label>EMEA - UAE Active Show Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>EMEA-UAE-GPPSummit</fullName>
+        <default>false</default>
+        <label>EMEA-UAE-GPPSummit</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Expresso</fullName>
+        <default>false</default>
+        <label>Expresso</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Expresso NOI/COI</fullName>
+        <default>false</default>
+        <label>Expresso NOI/COI</label>
+    </standardValue>
+    <standardValue>
+        <fullName>External Phone Outbound</fullName>
+        <default>false</default>
+        <label>External Phone Outbound</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Fax</fullName>
+        <default>false</default>
+        <label>Fax</label>
+    </standardValue>
+    <standardValue>
+        <fullName>GES Prep</fullName>
+        <default>false</default>
+        <label>GES Prep</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Internal Email</fullName>
+        <default>false</default>
+        <label>Internal Email</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Internal Phone Inbound</fullName>
+        <default>false</default>
+        <label>Internal Phone Inbound</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Mail</fullName>
+        <default>false</default>
+        <label>Mail</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Online Survey</fullName>
+        <default>false</default>
+        <label>Online Survey</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Outbound</fullName>
+        <default>false</default>
+        <label>Outbound</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Phone</fullName>
+        <default>true</default>
+        <label>Phone</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Showsite</fullName>
+        <default>false</default>
+        <label>Showsite</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Social Media</fullName>
+        <default>false</default>
+        <label>Social Media</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Survey Follow Up</fullName>
+        <default>false</default>
+        <label>Survey Follow Up</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Text</fullName>
+        <default>false</default>
+        <label>Text</label>
+    </standardValue>
+    <standardValue>
+        <fullName>UAE EIC Connect Inbox</fullName>
+        <default>false</default>
+        <label>UAE EIC Connect Inbox</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Voicemail</fullName>
+        <default>false</default>
+        <label>Voicemail</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Web</fullName>
+        <default>false</default>
+        <label>Web</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Web - Adfield</fullName>
+        <default>false</default>
+        <label>Web - Adfield</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Web-Organiser</fullName>
+        <default>false</default>
+        <label>Web-Organiser</label>
+    </standardValue>
+</StandardValueSet>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>UAE_Baby_Expo_Case</fullName>
+    <filterScope>Queue</filterScope>
+    <label>UAE Baby Expo</label>
+    <queue>UAE_Baby_Expo</queue>
+    <sharedTo>
+        <allInternalUsers />
+    </sharedTo>
+</ListView>

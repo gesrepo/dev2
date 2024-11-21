@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Services__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(NOT(ISBLANK(Service_Type__c)), Service_Type__r.Name, &#39;&#39;) +
+IF(NOT(ISBLANK(Service_Type2__c)),&#39;, &#39; + Service_Type2__r.Name, &#39;&#39;) +
+IF(NOT(ISBLANK(Service_Type3__c)),&#39;, &#39; + Service_Type3__r.Name, &#39;&#39;) +
+IF(NOT(ISBLANK(Service_Type4__c)),&#39;, &#39; + Service_Type4__r.Name, &#39;&#39;) +
+IF(NOT(ISBLANK(Service_Type5__c)),&#39;, &#39; + Service_Type5__r.Name, &#39;&#39;)</formula>
+    <label>Services</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

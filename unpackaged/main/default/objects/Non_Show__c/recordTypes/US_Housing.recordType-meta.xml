@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>US_Housing</fullName>
+    <active>true</active>
+    <description>Non shows for US Housing line of business (onPeak)</description>
+    <label>US - Housing</label>
+    <picklistValues>
+        <picklist>Production_Location__c</picklist>
+        <values>
+            <fullName>110- Las Vegas</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>140- Salt Lake City</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>150- Reno</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>160- Denver</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>170- Phoenix</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>220- Los Angeles%2C CA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>240- San Francisco%2C San Jose</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>250- San Diego</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>270- Corporate Events</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>420- Austin%2C Dallas%2C Houston%2C San Antonio</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>480- Montreal%2C Canada</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>510- Atlanta</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>520- Florida</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>520- Miami%2C Tampa</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>530- New Orleans</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>610- Portland%2C Seattle</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>710- Chicago%2C Cleveland%2C Milwaukee%2C St%2E Louis</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>790- Minneapolis</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>810- New York %26 Boston</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>830-DC%2C Philadelphia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>890- Canada</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>940- Foreign</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Project_Type__c</picklist>
+        <values>
+            <fullName>Digital%2FContent Development</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Exhibit Program</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Exhibit Shipping%2FStorage%2FDisposal</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Holiday Program</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Measurement %26 Analytics</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Misc%2E Product Rental%2FPurchase</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>One Time Event</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pop Up</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Product Launch</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Virtual Event</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Sales_Location__c</picklist>
+        <values>
+            <fullName>110- Las Vegas</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>140- Salt Lake City</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>150- Reno</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>160- Denver</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>170- Phoenix%2C Tucson%2C Albquerque</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>220- Los Angeles</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>230- Corp Events</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>240- San Francisco%2C San Jose</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>250- San Diego</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>310 - Program</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>320 - Priority</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>420- Austin%2C Dallas%2C Houston%2C San Antonio</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>460- Calgary%2C Canada</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>470- Edmonton%2C Canada</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>510- Atlanta</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>520- Miami%2C Orlando%2C Tampa</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>530- New Orleans</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>610- Portland%2C Seattle</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>710- Chicago%2C Cleveland%2C Milwaukee</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>720- Portfolio Accounts</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>790- Minneapolis</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>810- New York</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>830- DC%2C Philadelphia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>890- Toronto%2C Canada</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>940- National Sales</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

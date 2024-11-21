@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Vendors__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(NOT(ISBLANK(Vendor__c)), Vendor__r.FirstName + &#39; &#39; + Vendor__r.LastName, &#39;&#39;) +
+IF(NOT(ISBLANK(Vendor2__c)),&#39;, &#39; + Vendor2__r.FirstName + &#39; &#39; + Vendor2__r.LastName, &#39;&#39;) +
+IF(NOT(ISBLANK(Vendor3__c)),&#39;, &#39; + Vendor3__r.FirstName + &#39; &#39; + Vendor3__r.LastName, &#39;&#39;) +
+IF(NOT(ISBLANK(Vendor4__c)),&#39;, &#39; + Vendor4__r.FirstName + &#39; &#39; + Vendor4__r.LastName, &#39;&#39;) +
+IF(NOT(ISBLANK(Vendor5__c)),&#39;, &#39; + Vendor5__r.FirstName + &#39; &#39; + Vendor5__r.LastName, &#39;&#39;)</formula>
+    <label>Vendors</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

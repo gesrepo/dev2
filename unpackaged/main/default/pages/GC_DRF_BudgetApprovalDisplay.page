@@ -1,0 +1,21 @@
+<apex:page standardController="GC_Design_Request_Form_Budget__c" extensions="GC_DRF_BudgetApprovalController" action="{!loadAction}">
+    <apex:form id="myForm">
+        <apex:pageMessages id="messages"/>
+        <apex:PageBlock id="pb" rendered="{!CanSubmitForApproval && canSubmit}" title="Choose Approver">
+            <apex:pageBlockButtons location="top">
+                <apex:commandButton value="Send to Next Approver" action="{!setApprover}" reRender="messages" />
+                <apex:commandButton value="Cancel" action="{!cancelSubmitForApproval}" />
+            </apex:pageBlockButtons>
+            <apex:pageBlockSection columns="2">
+                <apex:inputField required="true" id="GC_Show_Team_Member__c" value="{!drfB.Next_ApproverSTM__c}" label="Director of Account Management Approver">
+                    <apex:actionSupport event="onchange" reRender="messages, pb" action="{!approverChanged}"/>
+                </apex:inputField>
+                <apex:outputText label="Approver Name" value="{!approverName}"/>
+            </apex:pageBlockSection>
+        </apex:PageBlock>
+        <apex:PageBlock rendered="{!!CanSubmitForApproval}">
+            <h2>This user ({!UserName}) can not submit for Approval.</h2>
+        </apex:PageBlock>
+        <apex:commandLink title="Return to Design Request Form" value="Return to Design Request Form." action="{!cancelSubmitForApproval}" reRender="messages, calculator" />
+    </apex:form>
+</apex:page>

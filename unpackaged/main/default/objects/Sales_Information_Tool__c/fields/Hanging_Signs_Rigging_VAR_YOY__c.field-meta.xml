@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Hanging_Signs_Rigging_VAR_YOY__c</fullName>
+    <formula>IF(Hanging_Signs_Rigging_RY__c = 0,0, (
+(Hanging_Signs_Rigging__c - Hanging_Signs_Rigging_RY__c)/Hanging_Signs_Rigging_RY__c) )</formula>
+    <label>Hanging Signs/Rigging</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Percent</type>
+</CustomField>

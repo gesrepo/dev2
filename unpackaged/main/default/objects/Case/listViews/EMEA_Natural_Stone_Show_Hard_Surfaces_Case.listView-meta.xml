@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>EMEA_Natural_Stone_Show_Hard_Surfaces_Case</fullName>
+    <filterScope>Queue</filterScope>
+    <label>EMEA Natural Stone Show &amp; Hard Surfaces</label>
+    <queue>EMEA_Natural_Stone_Show_Hard_Surfaces</queue>
+    <sharedTo>
+        <allInternalUsers />
+    </sharedTo>
+</ListView>

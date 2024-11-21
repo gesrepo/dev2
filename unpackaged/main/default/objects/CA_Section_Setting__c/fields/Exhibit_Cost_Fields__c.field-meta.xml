@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Exhibit_Cost_Fields__c</fullName>
+    <description>Enter the field api names separated by a comma which should appear on the product edit/detail pages</description>
+    <inlineHelpText>Enter the field api names separated by a comma which should appear on the product edit/detail pages</inlineHelpText>
+    <label>Exhibit Cost Fields</label>
+    <length>750</length>
+    <trackTrending>false</trackTrending>
+    <type>LongTextArea</type>
+    <visibleLines>3</visibleLines>
+</CustomField>

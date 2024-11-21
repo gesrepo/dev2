@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Required_Booth_Show_Occurrence</fullName>
+    <active>true</active>
+    <description>Booth must be associated to a Show Occurrence. The error message should be displayed when Show Occurrence is not specified (i.e. Show_Occurrence__c field is blank).</description>
+    <errorConditionFormula>AND( ($Profile.Name != &quot;GES Administrator Interface&quot;), ISBLANK(Show_Occurrence__c))</errorConditionFormula>
+    <errorDisplayField>Show_Occurrence__c</errorDisplayField>
+    <errorMessage>Show Occurrence is required on Booth. Please provide a valid Opportunity Id in the Show_Occurrence__c field.</errorMessage>
+</ValidationRule>

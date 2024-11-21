@@ -1,0 +1,355 @@
+<apex:page showHeader="true" sidebar="false" standardController="GC_Connect2_Show__c" extensions="GC_Connect2ShowViewController">
+    <apex:styleSheet value="https://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css" />
+    <apex:stylesheet value="{!URLFOR($Resource.Lightning_Design_System, 'assets/styles/salesforce-lightning-design-system.min.css')}" />
+    <apex:includeScript value="{!$Resource.jQuery}" />
+    <apex:form id="viewDetailForm">
+        <apex:pagemessages id="messages" />
+        <apex:outputPanel id="detailView">
+            <apex:outputPanel id="viewOnly" rendered="{!!isOnShow && !isSysAdmin}">
+                <apex:panelGrid columns="3" cellpadding="5" cellspacing="5">
+                    <apex:outputLabel value="Role"></apex:outputLabel>
+                    <apex:selectList value="{!selectedRole}" size="1" label="Role">
+                        <apex:selectOptions value="{!showRoles}" />
+                    </apex:selectList>
+                    <apex:commandButton value="Add myself to the show." rerender="messages, detailView" action="{!addCurrentUserToShow}"></apex:commandButton>
+                </apex:panelGrid>
+                <apex:detail subject="{!GC_Connect2_Show__c.Id}" relatedList="false" inlineEdit="true" title="true" />
+            </apex:outputPanel>
+            <apex:outputPanel id="viewOnlyWithRelated" rendered="{!isOnShow || isSysAdmin}">
+                <apex:detail subject="{!GC_Connect2_Show__c.Id}" relatedList="{!showList}" inlineEdit="true" title="true" />
+                
+            </apex:outputPanel>
+        </apex:outputPanel>
+        
+    </apex:form>
+    <apex:relatedList list="Show_Team_Members__r" rendered="{!(showList=='false')}" />
+    <apex:form >
+        <apex:pagemessages id="messages2" />
+        <apex:outputPanel id="statuses">
+            <apex:actionStatus id="savingStatusSpinner">
+                <apex:facet name="start">
+                    <c:GC_StatusSpinner statusMessage="Saving Filters" />
+                </apex:facet>
+            </apex:actionStatus>
+        </apex:outputPanel>
+        <apex:outputPanel id="fieldmanager" rendered="{!(showList=='true')}">
+            <apex:pageBlock title="Manage Order Fields">
+                <apex:pageBlockButtons >
+                    <apex:commandButton action="{!saveDisplayOptions}" value="Save" status="savingStatusSpinner" reRender="fieldmanager" />
+                    <apex:commandButton value="Reset" action="{!resetDisplayOptions}"  status="cancelStatusSpinner" reRender="fieldmanager" />
+                </apex:pageBlockButtons>
+                <apex:outputPanel id="fieldmanagerTable">
+                    <div class="slds">
+                        <table class="slds-table slds-table--bordered slds-max-medium-table--stacked-horizontal" style="width:100%">
+                            <thead>
+                                <th>Field Name</th>
+                                <th>Hidden | Required</th>
+                                <th>Field Name</th>
+                                <th>Hidden</th>
+                                <th>Field Name</th>
+                                <th>Hidden</th>
+                                <th>Field Name</th>
+                                <th>Hidden | Required</th>
+                            </thead>
+                            <tbody >
+                                <tr class="slds-hint-parent" >
+                                    <td>
+                                        <span class="slds-truncate">User Item Description</span>
+                                    </td>
+                                    <td>
+                                        <span class="slds-truncate">
+                                            <apex:selectRadio value="{!taskField.User_Item_Description__c}">
+                                                <apex:selectOptions value="{!displayOptions}" />
+                                            </apex:selectRadio>
+                                        </span>
+                                        
+                                    </td>
+                                    <td>
+                                        <span class="slds-truncate">Price</span>
+                                    </td>
+                                    <td>
+                                        <span class="slds-truncate">
+                                            <apex:selectRadio value="{!taskField.Price__c}">
+                                                <apex:selectOptions value="{!hiddenOptions}"/>
+                                            </apex:selectRadio>
+                                        </span>
+                                    </td>
+                                    <td>
+                                        <span class="slds-truncate">Sign Title</span>
+                                    </td>
+                                    <td>
+                                        <span class="slds-truncate">
+                                            <apex:selectRadio value="{!taskField.Sign_Title__c}">
+                                                <apex:selectOptions value="{!hiddenOptions}"/>
+                                            </apex:selectRadio>
+                                        </span>
+                                    </td>
+                                    <td>
+                                        <span class="slds-truncate">Default Installation Delivery Date/Time</span>
+                                    </td>
+                                    <td>
+                                        <span class="slds-truncate">
+                                            <apex:selectRadio value="{!taskField.Default_Installation_Delivery_Date_Time__c}">
+                                                <apex:selectOptions value="{!hiddenOptions}"/>
+                                            </apex:selectRadio>
+                                        </span>
+                                    </td>
+                                </tr>
+                                <tr class="slds-hint-parent" >
+                                    <td>
+                                        <span class="slds-truncate">File Reference Link/Folder</span>
+                                    </td>
+                                    <td>
+                                        <span class="slds-truncate">
+                                            <apex:selectRadio value="{!taskField.File_Reference_Link_Folder__c}">
+                                                <apex:selectOptions value="{!displayOptions}"/>
+                                            </apex:selectRadio>
+                                        </span>
+                                    </td>
+                                    <td>
+                                        <span class="slds-truncate">Booth Area Discount</span>
+                                    </td>
+                                    <td>
+                                        <span class="slds-truncate">
+                                            <apex:selectRadio value="{!taskField.Booth_Area_Discount__c}">
+                                                <apex:selectOptions value="{!hiddenOptions}"/>
+                                            </apex:selectRadio>
+                                        </span>
+                                    </td>
+                                    <td>
+                                        <span class="slds-truncate">Single/Double Sided</span>
+                                    </td>
+                                    <td>
+                                        <span class="slds-truncate">
+                                            <apex:selectRadio value="{!taskField.Single_Double_Sided__c}">
+                                                <apex:selectOptions value="{!hiddenOptions}"/>
+                                            </apex:selectRadio>
+                                        </span>
+                                    </td>
+                                    <td>
+                                        <span class="slds-truncate">Default Completion Date/Time</span>
+                                    </td>
+                                    <td>
+                                        <span class="slds-truncate">
+                                            <apex:selectRadio value="{!taskField.Default_Completion_Date_Time__c}">
+                                                <apex:selectOptions value="{!hiddenOptions}"/>
+                                            </apex:selectRadio>
+                                        </span>
+                                    </td>
+                                </tr>
+                                <tr class="slds-hint-parent" >
+                                    <td>
+                                        <span class="slds-truncate">Special Instructions (Client Remarks)</span>
+                                    </td>
+                                    <td>
+                                        <span class="slds-truncate">
+                                            <apex:selectRadio value="{!taskField.Special_Instructions_Client_Remarks__c}">
+                                                <apex:selectOptions value="{!displayOptions}"/>
+                                            </apex:selectRadio>
+                                        </span>
+                                    </td>
+                                    <td>
+                                        <span class="slds-truncate">Sign Type</span>
+                                    </td>
+                                    <td>
+                                        <span class="slds-truncate">
+                                            <apex:selectRadio value="{!taskField.Sign_Type__c}">
+                                                <apex:selectOptions value="{!hiddenOptions}"/>
+                                            </apex:selectRadio>
+                                        </span>
+                                    </td>
+                                    <td>
+                                        <span class="slds-truncate">Installation Method</span>
+                                    </td>
+                                    <td>
+                                        <span class="slds-truncate">
+                                            <apex:selectRadio value="{!taskField.Installation_Method__c}">
+                                                <apex:selectOptions value="{!hiddenOptions}"/>
+                                            </apex:selectRadio>
+                                        </span>
+                                    </td>
+                                    <td>
+                                        <span class="slds-truncate">Default Removal Date/Time</span>
+                                    </td>
+                                    <td>
+                                        <span class="slds-truncate">
+                                            <apex:selectRadio value="{!taskField.Default_Removal_Date_Time__c}">
+                                                <apex:selectOptions value="{!hiddenOptions}"/>
+                                            </apex:selectRadio>
+                                        </span>
+                                    </td>
+                                </tr>
+                                <tr class="slds-hint-parent" >
+                                    
+                                    <td>
+                                        <span class="slds-truncate">Onsite Contact Person</span>
+                                    </td>
+                                    <td>
+                                        <span class="slds-truncate">
+                                            <apex:selectRadio value="{!taskField.Onsite_Contact_Person__c}">
+                                                <apex:selectOptions value="{!displayOptions}"/>
+                                            </apex:selectRadio>
+                                        </span>
+                                    </td>
+                                    
+                                    <td>
+                                        <span class="slds-truncate">Sign Type Other</span>
+                                    </td>
+                                    <td >
+                                        <span class="slds-truncate">
+                                            <apex:selectRadio value="{!taskField.Sign_Type_Other__c}">
+                                                <apex:selectOptions value="{!hiddenOptions}"/>
+                                            </apex:selectRadio>
+                                        </span>
+                                    </td>
+                                    <td>
+                                        <span class="slds-truncate">Background</span>
+                                    </td>
+                                    <td>
+                                        <span class="slds-truncate">
+                                            <apex:selectRadio value="{!taskField.Background__c}">
+                                                <apex:selectOptions value="{!hiddenOptions}"/>
+                                            </apex:selectRadio>
+                                        </span>
+                                    </td>
+                                    <td>
+                                        <span class="slds-truncate">Installation Delivery Date/Time</span>
+                                    </td>
+                                    <td>
+                                        <span class="slds-truncate">
+                                            <apex:selectRadio value="{!taskField.Installation_Delivery_Date_Time__c}">
+                                                <apex:selectOptions value="{!displayOptions}"/>
+                                            </apex:selectRadio>
+                                        </span>
+                                    </td>
+                                </tr>
+                                <tr class="slds-hint-parent" >
+                                    <td>
+                                        <span class="slds-truncate">Onsite Contact Person Number</span>
+                                    </td>
+                                    <td>
+                                        <span class="slds-truncate">
+                                            <apex:selectRadio value="{!taskField.Onsite_Contact_Person_Number__c}">
+                                                <apex:selectOptions value="{!displayOptions}"/>
+                                            </apex:selectRadio>
+                                        </span>
+                                    </td>
+                                    <td>
+                                        <span class="slds-truncate">Sign Copy</span>
+                                    </td>
+                                    <td>
+                                        <span class="slds-truncate">
+                                            <apex:selectRadio value="{!taskField.Sign_Copy__c}">
+                                                <apex:selectOptions value="{!hiddenOptions}"/>
+                                            </apex:selectRadio>
+                                        </span>
+                                    </td>
+                                    <td>
+                                        <span class="slds-truncate">Copy Placement</span>
+                                    </td>
+                                    <td>
+                                        <span class="slds-truncate">
+                                            <apex:selectRadio value="{!taskField.Copy_Placement__c}">
+                                                <apex:selectOptions value="{!hiddenOptions}"/>
+                                            </apex:selectRadio>
+                                        </span>
+                                    </td>
+                                    <td>
+                                        <span class="slds-truncate">Completion Date/Time</span>
+                                    </td>
+                                    <td>
+                                        <span class="slds-truncate">
+                                            <apex:selectRadio value="{!taskField.Completion_Date_Time__c}">
+                                                <apex:selectOptions value="{!displayOptions}"/>
+                                            </apex:selectRadio>
+                                        </span>
+                                    </td>
+                                </tr>
+                                <tr class="slds-hint-parent" >
+                                    <td>
+                                        <span class="slds-truncate">Budget Code</span>
+                                    </td>
+                                    <td>
+                                        <span class="slds-truncate">
+                                            <apex:selectRadio value="{!taskField.Budget_Code__c}">
+                                                    <apex:selectOptions value="{!displayOptions}"/>
+                                            </apex:selectRadio>
+                                        </span>
+                                    </td>
+                                    <td>
+                                        <span class="slds-truncate">Client Layout Notes</span>
+                                    </td>
+                                    <td>
+                                        <span class="slds-truncate">
+                                            <apex:selectRadio value="{!taskField.Client_Layout_Notes__c}">
+                                                <apex:selectOptions value="{!hiddenOptions}"/>
+                                            </apex:selectRadio>
+                                        </span>
+                                    </td>
+                                    <td>
+                                        <span class="slds-truncate">Outdoors?</span>
+                                    </td>
+                                    <td>
+                                        <span class="slds-truncate">
+                                            <apex:selectRadio value="{!taskField.Outdoors__c}">
+                                                <apex:selectOptions value="{!hiddenOptions}"/>
+                                            </apex:selectRadio>
+                                        </span>
+                                    </td>
+                                    <td>
+                                        <span class="slds-truncate">Removal Date/Time</span>
+                                    </td>
+                                    <td>
+                                        <span class="slds-truncate">
+                                            <apex:selectRadio value="{!taskField.Removal_Date_Time__c}">
+                                                <apex:selectOptions value="{!displayOptions}"/>
+                                            </apex:selectRadio>
+                                        </span>
+                                    </td>
+                                </tr>
+                                <tr class="slds-hint-parent" >
+                                    <td>
+                                        <span class="slds-truncate">Delivery Area</span>
+                                    </td>
+                                    <td>
+                                        <span class="slds-truncate">
+                                            <apex:selectRadio value="{!taskField.Delivery_Area__c}">
+                                                <apex:selectOptions value="{!displayOptions}"/>
+                                            </apex:selectRadio>
+                                        </span>
+                                    </td>
+                                    <td>
+                                        <apex:outputText ></apex:outputText>
+                                    </td>
+                                    <td>
+                                        <apex:outputText ></apex:outputText>
+                                    </td>
+                                    <td>
+                                        <span class="slds-truncate">Save Signs</span>
+                                    </td>
+                                    <td>
+                                        <span class="slds-truncate">
+                                            <apex:selectRadio value="{!taskField.Save_Signs__c}">
+                                                <apex:selectOptions value="{!hiddenOptions}"/>
+                                            </apex:selectRadio>
+                                        </span>
+                                    </td>
+                                    <td>
+                                        <span class="slds-truncate">Hide Order Level File Upload</span> 
+                                    </td>
+                                    <td style="padding-left:17px">
+                                        <span class="slds-truncate">
+                                            <apex:inputcheckbox value="{!taskField.Hide_Order_Level_File_Upload__c}">
+                                            </apex:inputcheckbox>
+                                        </span>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </apex:outputPanel> 
+                
+            </apex:pageBlock>
+        </apex:outputPanel>
+    </apex:form>
+</apex:page>

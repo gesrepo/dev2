@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SHOW_ORG_FLAG__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Show Org Customer on Show Occurrence</description>
+    <label>Show Organizer</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

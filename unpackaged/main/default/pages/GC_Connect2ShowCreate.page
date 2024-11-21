@@ -1,0 +1,69 @@
+<apex:page showHeader="true" sidebar="false" controller="GC_Connect2ShowCreateController" docType="html-5.0">
+    <apex:includeScript value="https://code.jquery.com/jquery-1.10.2.js" />
+    <apex:includeScript value="https://code.jquery.com/ui/1.11.4/jquery-ui.js" />
+    <apex:styleSheet value="https://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css" />
+    <apex:stylesheet value="{!URLFOR($Resource.Lightning_Design_System, 'assets/styles/salesforce-lightning-design-system.min.css')}" /> 
+    <apex:includeScript value="{!$Resource.jQuery}" />
+    <apex:form id="createForm">
+        <apex:pagemessages id="messages" />
+        <apex:outputPanel id="statuses">
+            <apex:actionStatus id="savingStatusSpinner">
+                <apex:facet name="start">
+                    <c:GC_StatusSpinner statusMessage="Creating Connect2 Show" />
+                </apex:facet>
+            </apex:actionStatus>
+        </apex:outputPanel>
+        <apex:outputPanel id="showCreateSection">
+            <apex:pageBlock title="Create Connect2 Show">
+                <apex:pageBlockButtons >
+                    <apex:commandButton action="{!saveAction}" value="Save" status="savingStatusSpinner" />
+                    <apex:commandButton action="{!cancelAction}" value="Cancel" immediate="true"  html-formnovalidate="formnovalidate"/>
+                </apex:pageBlockButtons>
+                
+                <apex:pageBlockSection title="Show Identification">
+                    <apex:inputField value="{!connect2Show.Opportunity_Name__c}" required="true" />
+                    <apex:inputField value="{!connect2Show.Show_Name__c}" required="true"/>
+                    
+                    <apex:selectList id="prodLocationList" value="{!connect2Show.Production_Location__c}" size="1" required="true">
+                        <apex:selectOptions value="{!productionLocations}"></apex:selectOptions>
+                    </apex:selectList>
+                    
+                    <apex:inputField value="{!connect2Show.Show_Type__c}" required="true"/>
+                    <apex:inputField value="{!connect2Show.Job_Number__c}" required="true"/>
+                    <apex:inputField value="{!connect2Show.Show_Start_Date__c}" required="true"/>
+                    <apex:inputField value="{!connect2Show.YRMO__c}" required="true"/>
+                    <apex:inputField value="{!connect2Show.Show_End_Date__c}" required="true"/>
+                    <apex:inputField value="{!connect2Show.Last_Worked_YRMO_JN__c}" />
+                    <apex:outputField value="{!connect2Show.StageName__c}"/>
+                    <apex:inputField value="{!connect2Show.Revenue__c}" required="true"/>
+                </apex:pageBlockSection>
+                
+                <apex:pageBlockSection title="Facility Information">
+                    <apex:inputField value="{!connect2Show.Facility__c}" required="true"/>
+                    <apex:inputField value="{!connect2Show.Facility_ID__c}" required="true"/>
+                    <apex:inputField value="{!connect2Show.Facility_Address__c}" required="true"/>
+                </apex:pageBlockSection>
+                
+                <apex:pageBlockSection title="Show Dates and Schedule">
+                    <apex:inputField value="{!connect2Show.GES_Move_In_Date_1__c}" />
+                    <apex:inputField value="{!connect2Show.GES_Move_In_Date_1_Hours__c}" />
+                    <apex:inputField value="{!connect2Show.GES_Move_In_Date_2__c}" />
+                    <apex:inputField value="{!connect2Show.GES_Move_In_Date_2_Hours__c}" />
+                    
+                    <apex:inputField value="{!connect2Show.GES_Move_Out_Date_1__c}" />
+                    <apex:inputField value="{!connect2Show.GES_Move_Out_Date_1_Hours__c}" />
+                    <apex:inputField value="{!connect2Show.GES_Move_Out_Date_2__c}" />
+                    <apex:inputField value="{!connect2Show.GES_Move_Out_Date_2_Hours__c}" />
+                    
+                    <apex:inputField value="{!connect2Show.Exhibitor_Move_In_Date2__c}" />
+                    <apex:inputField value="{!connect2Show.Exhibit_Hall_Hours_Day_1__c}" />
+                    <apex:inputField value="{!connect2Show.Exhibitor_Move_Out_Date2__c}" />
+                    <apex:inputField value="{!connect2Show.Exhibit_Hall_Hours_Day_2__c}" />
+                    <apex:inputField value="{!connect2Show.Exhibit_Hall_Hours_Day_3__c}" />
+                    <apex:inputField value="{!connect2Show.Exhibit_Hall_Hours_Day_4__c}" />
+                    <apex:inputField value="{!connect2Show.Exhibit_Hall_Hours_Day_5__c}" />
+                </apex:pageBlockSection>
+            </apex:pageBlock>
+        </apex:outputPanel>
+    </apex:form>
+</apex:page>

@@ -1,0 +1,350 @@
+<apex:page standardStylesheets="true"  showHeader="{!showHeaderVal}" sidebar="false" applyHtmlTag="{!showHeaderVal}" controller="ExhibitorOrderShowProgressController" readonly="true" >
+    <html xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <head>
+            <apex:includeScript value="{!$Resource.jQuery}" />
+            <apex:stylesheet value="{!URLFOR($Resource.Lightning_Design_System, 'assets/styles/salesforce-lightning-design-system.min.css')}" />
+            <apex:stylesheet value="{!URLFOR($Resource.GC_Assets, 'GC_Assets/css/GC_Styles.css')}" />
+            <apex:includeScript value="{!URLFOR($Resource.GC_Assets, 'GC_Assets/js/GC_init.js')}" />
+            <apex:includeScript value="{!$Resource.Alasql}"/>
+            <script>
+            var regIdList=[];
+            var allIds=[];
+            var formName='';
+            var FormType='';
+            var prefix='apex';
+            $( document ).ready(function() {
+                $("#divId1").hide();
+                checkAllBoxes();
+            });
+            
+            var projectNumber = GetURLParameter('projectNumber');
+            var chkListId = GetURLParameter('id');
+            if(projectNumber == undefined) {
+                projectNumber = null;
+            }
+            if(chkListId == undefined) {
+                chkListId = null;
+            }
+            console.log("projectNumber",projectNumber);
+            ExhibitorOrderShowProgressController.GetRegistrationCheckListTasks(
+                projectNumber,
+                chkListId,
+                function(results, event) {
+                    if(event.type === 'exception'){
+                        console.log("exception");
+                        console.log(event);
+                    }else if(event.status){
+                        var json = results.replace(/&(lt|gt|quot);/g, function (m, p) {
+                            return (p == "lt") ? "<" : ((p == "gt") ? ">" : '"');
+                        });
+                        results = JSON.parse(json);
+                        if(results.RegistrationChkList== null ){
+                            $("#spinnerDiv").hide();
+                            
+                            window.alert("Woops.. No report data available for this show. Please contact your GES Account Manager if you need assistance. Thank you!");
+                            $("#divId1").show();
+                        }
+                        var table1 = '';
+                        var regChkListTasks = results.RegistrationChkList[0].RegistrationChecklistTasks;
+                        formName=results.formName;
+                        console.log(formName.replace(/&amp;/g,"n"));
+                        FormType=results.RegistrationChkList[0].ShowInstanceChecklistItem.FormType;
+                        for(i=0; i<regChkListTasks.length; i++){
+                                allIds.push(Number(regChkListTasks[i].RegistrationChecklistTaskId));
+                                table1 += '<tr>';
+                                table1 += ' <td align="center">  <input type="checkbox" id="checkItem" name="case" onchange="addIdToList(' +regChkListTasks[i].RegistrationChecklistTaskId + ',this.checked)" value="'+regChkListTasks[i].isSelected+'"></input></td>';
+                                if(regChkListTasks[i].ExhibitorName== null){
+                                    table1 += ' <td>  '+ '<a onclick=navigateToCheckListTaskDetails(' +regChkListTasks[i].RegistrationChecklistTaskId + ')> Click Here </td>';
+                                }else{
+                                    table1 += ' <td>  '+ '<a onclick=navigateToCheckListTaskDetails(' +regChkListTasks[i].RegistrationChecklistTaskId + ')>' +regChkListTasks[i].ExhibitorName+ '</td>';
+                                }
+                                table1 += ' <td>  '+results.RegistrationChkList[0].ShowInstanceChecklistItem.ChecklistGroup+'</td>';
+                                table1 += ' <td>  '+results.RegistrationChkList[0].ShowInstanceChecklistItem.FormType+'</td>';
+                                table1 += ' <td>  '+results.RegistrationChkList[0].ShowInstanceChecklistItem.FormName+'</td>';
+                                table1 += ' <td>  ' +regChkListTasks[i].BoothNumber+ '</td>';
+                                table1 += ' <td>  ' +regChkListTasks[i].Zone+ '</td>';
+                                table1 += ' <td>  ' +regChkListTasks[i].BoothType+ '</td>';
+                                table1 += ' <td>  '+regChkListTasks[i].Status+'</td>';
+                                table1 += ' <td>  '+regChkListTasks[i].SubmittedOn+'</td>';
+                                table1 += ' <td>  '+regChkListTasks[i].UpdatedOn+'</td>';
+                                if(FormType=="Online Form"){
+                                    table1 += ' <td>  ' +regChkListTasks[i].readStatus+ '</td>';
+                                }
+                                
+                                table1 += '</tr>';                            
+                        }
+
+                        var url_string = window.location.href;
+                        if(url_string.includes("GESConnect")||url_string.includes("gesconnect")){
+                            prefix='GESConnect';
+                        }else{
+                            prefix='apex';
+                        }
+                        
+                        $("#idTable1 tbody").append(table1);
+                        if(FormType=="Online Form"){
+                            document.getElementById("readStatId").innerHTML ="Read/Unread Status" ;
+                        }
+                        
+                    }else{
+                        console.log(event.message);
+                    }
+                    $("#spinnerDiv").hide();
+                    $("#divId1").show();
+                }
+            );  
+            
+            function exportCSV() {
+                var data1 = alasql('SELECT * FROM HTML("#idTable1",{headers:true})');
+                alasql('SELECT * INTO XLS("RegistrationCheckListTasks.xls",{headers:true}) FROM ?', [data1]);
+            }
+            
+            function GetURLParameter(sParam) {
+                var sPageURL = window.location.search.substring(1);
+                var sURLVariables = sPageURL.split('&');
+                for (var i = 0; i < sURLVariables.length; i++)
+                {
+                    var sParameterName = sURLVariables[i].split('=');
+                    if (sParameterName[0] == sParam)
+                    {
+                        return sParameterName[1];
+                    }
+                }
+            }
+            
+            function addIdToList(singleId,checkBoxStatus){
+                if(checkBoxStatus){
+                    regIdList.push(singleId);
+                }else{
+                    var indextOfID= regIdList.indexOf(singleId);
+                    console.log(indextOfID);
+                    regIdList.splice(indextOfID,1);
+                }
+                //console.log(regIdList);
+            }
+            function printSelectedTasks(pageName){
+                var url_string1 = window.location.href;
+                var finalURL='';
+                if(regIdList.length>1){
+                    Visualforce.remoting.Manager.invokeAction(
+                        '{!$RemoteAction.ExhibitorOrderShowProgressController.PrintSlectedTasksApex}',
+                        projectNumber,regIdList, chkListId, 
+                        function(result, event){
+                            if (event.status) {
+                                // Get DOM IDs for HTML and Visualforce elements like this....
+                                console.log(result);
+                                
+                                if(formName==null){
+                                
+                                    finalURL = "/"+prefix+"/"+pageName+"?storedObjectId="+result+"&projectNumber="+projectNumber+"&chkListId="+chkListId;
+                                }else{
+                                    finalURL = "/"+prefix+"/"+pageName+"?storedObjectId="+result+"&projectNumber="+projectNumber+"&chkListId="+chkListId+"&formName="+formName;
+                                }
+                                if(url_string1.includes("isCommunity")||url_string1.includes("isLightning")){
+                                    finalURL="https://ges.force.com/GESConnect"+"/"+pageName+"?storedObjectId="+result+"&projectNumber="+projectNumber+"&chkListId="+chkListId;
+                                    if(formName==null){
+                                        finalURL=finalURL;
+                                    }else{
+                                        finalURL= finalURL+"&formName="+formName;
+                                    }
+                                }
+                                window.open(finalURL, "_blank");
+                                //window.location.href(finalURL);
+                                
+                            } else if (event.type === 'exception') {    
+                                console.log('exception');
+                                window.alert("You must select at least one item to print. Thank you!");
+                            } else {
+                                console.log('exception2');
+                                window.alert("Woops... There is some issue with the services. Please contact your GES Account Manager if you need assistance. Thank you!");
+                            }
+                        }, 
+                            {escape: true}
+                    );
+                }
+                else if(regIdList.length==1 && pageName==='GC_RegChkListTaskDetailsCSV'){
+                    if(formName==null){
+                        finalURL = "/"+prefix+"/"+pageName+"?id="+regIdList[0]+"&projectNumber="+projectNumber+"&chkListId="+chkListId;
+                    }else{
+                        finalURL = "/"+prefix+"/"+pageName+"?id="+regIdList[0]+"&projectNumber="+projectNumber+"&chkListId="+chkListId+"&formName="+formName;
+                    }
+                    if(url_string1.includes("isCommunity")||url_string1.includes("isLightning")){
+                        if(formName==null){
+                            finalURL="https://ges.force.com/GESConnect"+"/"+pageName+"?id="+regIdList[0]+"&projectNumber="+projectNumber+"&chkListId="+chkListId;
+                        }else{
+                            finalURL= finalURL+"&formName="+formName;
+                        }
+                    }
+                    window.open(finalURL, "_blank");
+                }else if(regIdList.length==1 && pageName==='GC_RegistrationCheckListTaskDetails'){
+                    navigateToCheckListTaskDetails(regIdList[0]);
+                }
+                else{
+                    window.alert("You must select at least one item to print. Thank you!");
+                }
+            }
+                /*}*/
+            
+            function navigateToCheckListTaskDetails(chkListTaskId){
+                var finalURL='';
+                var url_string1 = window.location.href;
+                if(formName==null){
+                    finalURL= "/"+prefix+"/GC_RegistrationCheckListTaskDetails?id="+chkListTaskId+"&projectNumber="+projectNumber+"&chkListId="+chkListId;
+                    
+                }else{
+                    finalURL = "/"+prefix+"/GC_RegistrationCheckListTaskDetails?id="+chkListTaskId+"&projectNumber="+projectNumber+"&formName="+formName+"&chkListId="+chkListId;
+                }
+                if(url_string1.includes("isCommunity")||url_string1.includes("isLightning")){
+                    finalURL="https://ges.force.com/GESConnect/GC_RegistrationCheckListTaskDetails?id="+chkListTaskId+"&projectNumber="+projectNumber+"&chkListId="+chkListId;
+                    if(formName==null){
+                        finalURL=finalURL;
+                    }else{
+                        finalURL= finalURL+"&formName="+formName;
+                    }
+                }
+                window.open(finalURL, "_blank");
+            }
+            function checkAllBoxes(){
+                $("#checkAll").click(function () {
+                    $('input:checkbox').not(this).prop('checked', this.checked);
+                    if($(this).prop("checked") == true){
+                        regIdList=allIds;
+                    }else{
+                        regIdList=[];
+                    }
+                });
+                
+                console.log(regIdList);
+            }
+            
+            </script>
+            <style>
+                table thead {
+                background-color: #00a0af;
+                font-weight:bold;
+                white-space: nowrap;
+                }
+                #tablebodyid tr{
+                background-color: white;}
+                
+                #idTable1 tr:nth-child(even){
+                background-color: #f2f2f2;}
+                
+                
+                #tablebodyid tr:hover {
+                background-color: #e6faff;
+                }
+                
+                #tablebodyid td input[type="checkbox"] {
+                    float: left;
+                    margin: 0 auto;
+                    width: 100%;
+                }
+                #tablebodyid th {
+                    text-align: center;
+                }
+
+            </style>
+        </head>
+        
+        <div class="slds">
+            <c:GC_Community_Header rendered="{!((!isClassic) && (!isLightningComm))}"/> 
+            <div id="divId1">
+                <div class="slds-page-header gc-navigation--subHeader" role="banner">
+                    <div class="slds-media">
+                        <div class="slds-media__body">
+                            <p class="slds-page-header__title slds-align-middle">
+                                <apex:form id="fm">
+                                    <apex:actionStatus id="serachStatusSpinner">
+                                        <apex:facet name="start">
+                                            <c:GC_Community_StatusSpinner statusMessage="Please Wait" /> 
+                                        </apex:facet>
+                                    </apex:actionStatus>
+                                    <apex:commandButton value="Back" onClick="javascript:history.go(-1)" style="right:10px;position:relative;" styleClass="slds-button slds-button--brand gc-teal-button"  rerender="none" status="serachStatusSpinner"/>
+                                    <apex:commandButton value="Export Report as CSV" style="right:10px;position:relative;" styleClass="slds-button slds-button--brand gc-teal-button" onclick="printSelectedTasks('GC_RegChkListTaskDetailsCSV');" rerender="none" status="serachStatusSpinner"/>
+                                    <apex:commandButton value="Export Report as PDF" style="right:10px;position:relative;" styleClass="slds-button slds-button--brand gc-teal-button" onclick="printSelectedTasks('GC_RegistrationCheckListTaskDetails');" rerender="none" status="serachStatusSpinner"/>
+                                </apex:form>
+                                <div id="tableDivId" > 
+                                    <table  id="idTable1" border="1"  align="center" >
+                                        <caption><b>Registration Check List Tasks</b></caption>
+                                        <thead>
+                                            <tr>
+                                                <th style="width:8%; text-align:center" ><input type="checkbox" id="checkAll" onchange="checkAllBoxes()" ></input>Check All</th>
+                                                <th style="width:8%" >Exhibitor Name</th>
+                                                <th style="width:8%" >Checklist Group</th>
+                                                <th style="width:8%" >Form Type</th>
+                                                <th style="width:8%" >Form Name</th>
+                                                
+                                                <script>
+                                                    if(projectNumber.includes("0000")){
+                                                        var tr = document.getElementById('idTable1').tHead.children[0],
+                                                            th = document.createElement('th');
+                                                            th.innerHTML = "Stand Number";
+                                                            tr=tr.appendChild(th);                                                  
+                                                    }else{
+                                                        var tr = document.getElementById('idTable1').tHead.children[0],
+                                                        th = document.createElement('th');
+                                                        th.innerHTML = "Booth Number";
+                                                        tr.appendChild(th);
+                                                    }
+                                                </script>
+                                                <script>
+                                                    if(projectNumber.includes("0000")){
+                                                        var tr = document.getElementById('idTable1').tHead.children[0],
+                                                            th = document.createElement('th');
+                                                            th.innerHTML = "Hall";
+                                                            tr=tr.appendChild(th);                                                  
+                                                    }else{
+                                                        var tr = document.getElementById('idTable1').tHead.children[0],
+                                                        th = document.createElement('th');
+                                                        th.innerHTML = "Zone";
+                                                        tr.appendChild(th);
+                                                    }
+                                                </script>
+                                                <script>
+                                                    if(projectNumber.includes("0000")){
+                                                        var tr = document.getElementById('idTable1').tHead.children[0],
+                                                            th = document.createElement('th');
+                                                            th.innerHTML = "Stand Type";
+                                                            tr=tr.appendChild(th);                                                  
+                                                    }else{
+                                                        var tr = document.getElementById('idTable1').tHead.children[0],
+                                                        th = document.createElement('th');
+                                                        th.innerHTML = "Booth Type";
+                                                        tr.appendChild(th);
+                                                    }
+                                                </script>
+                                                <th style="width:8%" >Status</th>
+                                                <th style="width:8%" >Submitted On</th>
+                                                <th style="width:8%" >Updated On</th>
+                                                <th id="readStatId" ></th>
+                                            </tr>
+                                        </thead>
+                                        <tbody id="tablebodyid">
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>  
+            <div id="spinnerDiv" >
+                <div class="slds-spinner_container">
+                    <div class="popupBackground" />
+                    <div class="popupPanel">
+                        <div class="slds-spinner--brand slds-spinner slds-spinner--large" aria-hidden="false" role="alert">
+                            <div class="slds-spinner__dot-a"></div>
+                            <div class="slds-spinner__dot-b"></div>
+                        </div>
+                        <table border="0" width="100%" height="100%" style="text-align: center;">
+                            <tr>
+                                <td align="center" style="text-align: center;color:  white;"><b>Fetching Report... Please wait<br/></b></td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+</html>                                
+</apex:page>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>EMEA_Show_Ready</fullName>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>OPPORTUNITY.NAME</columns>
+    <columns>Show_Name__c</columns>
+    <columns>OPPORTUNITY.STAGE_NAME</columns>
+    <columns>Exhibition_Type__c</columns>
+    <columns>Sales_Person__c</columns>
+    <columns>Event_Type__c</columns>
+    <columns>Show_Occurrence__c</columns>
+    <columns>Start_Date__c</columns>
+    <columns>End_Date__c</columns>
+    <columns>Occurrence_Close_Date__c</columns>
+    <columns>Sales_Location__c</columns>
+    <columns>Show_Close_Date__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>OPPORTUNITY.RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Opportunity.EMEA_Show_Ready</value>
+    </filters>
+    <label>EMEA Show Ready</label>
+    <language>en_US</language>
+    <sharedTo>
+        <role>SystemAdministrator</role>
+        <role>System_Support_Admin</role>
+    </sharedTo>
+</ListView>

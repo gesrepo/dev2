@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Outcome__c</fullName>
+    <inlineHelpText>Outcome of the activity</inlineHelpText>
+    <label>Outcome</label>
+    <required>false</required>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Disqualified: Invalid Number</fullName>
+                <default>false</default>
+                <label>Disqualified: Invalid Number</label>
+            </value>
+            <value>
+                <fullName>Disqualified: Not Attending Show</fullName>
+                <default>false</default>
+                <label>Disqualified: Not Attending Show</label>
+            </value>
+            <value>
+                <fullName>Success: Email capabilities</fullName>
+                <default>false</default>
+                <label>Success: Email capabilities</label>
+            </value>
+            <value>
+                <fullName>Success: Dealing with Design and Build</fullName>
+                <default>false</default>
+                <label>Success: Dealing with Design and Build</label>
+            </value>
+            <value>
+                <fullName>Success: Dealing with Service Centre</fullName>
+                <default>false</default>
+                <label>Success: Dealing with Service Centre</label>
+            </value>
+            <value>
+                <fullName>Success: Dealing with Show Ready</fullName>
+                <default>false</default>
+                <label>Success: Dealing with Show Ready</label>
+            </value>
+            <value>
+                <fullName>Success: Onsite meeting scheduled</fullName>
+                <default>false</default>
+                <label>Success: Onsite meeting scheduled</label>
+            </value>
+            <value>
+                <fullName>Success: Opportunity created</fullName>
+                <default>false</default>
+                <label>Success: Opportunity created</label>
+            </value>
+            <value>
+                <fullName>Success: Presentation scheduled</fullName>
+                <default>false</default>
+                <label>Success: Presentation scheduled</label>
+            </value>
+            <value>
+                <fullName>Success – Spoke, Additional follow up set</fullName>
+                <default>false</default>
+                <label>Success – Spoke, Additional follow up set</label>
+            </value>
+            <value>
+                <fullName>Success: Spoke, registered for webinar</fullName>
+                <default>false</default>
+                <label>Success: Spoke, registered for webinar</label>
+            </value>
+            <value>
+                <fullName>Success: Spoke, but not interested</fullName>
+                <default>false</default>
+                <label>Success: Spoke, but not interested</label>
+            </value>
+            <value>
+                <fullName>Unsuccessful: Email Undeliverable</fullName>
+                <default>false</default>
+                <label>Unsuccessful: Email Undeliverable</label>
+            </value>
+            <value>
+                <fullName>Unsuccessful: Unable to reach – did not leave voicemail</fullName>
+                <default>false</default>
+                <label>Unsuccessful: Unable to reach – did not leave voicemail</label>
+            </value>
+            <value>
+                <fullName>Unsuccessful: Unable to reach – left voicemail</fullName>
+                <default>false</default>
+                <label>Unsuccessful: Unable to reach – left voicemail</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

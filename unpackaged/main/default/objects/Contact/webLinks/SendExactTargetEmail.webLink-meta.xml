@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SendExactTargetEmail</fullName>
+    <availability>online</availability>
+    <displayType>link</displayType>
+    <encodingKey>UTF-8</encodingKey>
+    <height>600</height>
+    <linkType>url</linkType>
+    <masterLabel>Send ExactTarget Email</masterLabel>
+    <openType>sidebar</openType>
+    <protected>false</protected>
+    <url>https://members.exacttarget.com/Integration/SalesforceUI/EmailSend.aspx?sendtype=Contact&amp;sfid={!Contact.Id}&amp;sessid={!API.Session_ID}&amp;sessurl={!API.Partner_Server_URL_60}</url>
+</WebLink>

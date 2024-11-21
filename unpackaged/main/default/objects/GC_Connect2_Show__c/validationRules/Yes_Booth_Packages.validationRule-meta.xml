@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Yes_Booth_Packages</fullName>
+    <active>true</active>
+    <description>Error on Yes Booth packages and choices on information</description>
+    <errorConditionFormula>AND( ISPICKVAL(  Will_there_be_Booth_Statuses__c  , &#39;Yes&#39;) , ISBLANK(  Method_of_Entry_of_Booth_Statuses__c  ) )</errorConditionFormula>
+    <errorDisplayField>Method_of_Entry_of_Booth_Statuses__c</errorDisplayField>
+    <errorMessage>Please indicate the method of Entry for Booth Packages</errorMessage>
+</ValidationRule>

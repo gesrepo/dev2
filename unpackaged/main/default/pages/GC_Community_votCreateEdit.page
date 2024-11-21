@@ -1,0 +1,345 @@
+<apex:page standardStylesheets="true" showHeader="false" sidebar="false" applyHtmlTag="false" applyBodyTag="false" docType="html-5.0" controller="GC_Community_votCreateEditController">
+  <html xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+
+  <head>
+    <apex:includeScript value="{!$Resource.jQuery}" />
+    <apex:stylesheet value="{!URLFOR($Resource.Lightning_Design_System, 'assets/styles/salesforce-lightning-design-system.min.css')}" />
+    <apex:stylesheet value="{!URLFOR($Resource.GC_Assets, 'GC_Assets/css/GC_Styles.css')}" />
+    <apex:includeScript value="{!URLFOR($Resource.GC_Assets, 'GC_Assets/js/GC_init.js')}" />
+  </head>
+
+  <body>
+    <div class="slds">
+      <c:GC_Community_Header />
+      <apex:outputPanel rendered="{!vot != null}">
+        <div class="slds-page-header" role="banner">
+          <div class="slds-media">
+            <div class="slds-media__figure">
+              <apex:image url="{!URLFOR($Resource.GC_Assets, 'GC_Assets/img/custom13_60_teal.png')}" />
+            </div>
+            <div class="slds-media__body">
+              <apex:outputPanel rendered="{!vot.Id != null}">
+                <p class="slds-page-header__title slds-truncate slds-align-middle">Vendor Order Task Edit Page for Task: {!vot.Name}</p>
+                <p class="slds-text-body--small slds-page-header__info">{!vot.Owner.Name} • &nbsp;
+                  <apex:outputField value="{!vot.CreatedDate}" /> </p>
+              </apex:outputPanel>
+              <apex:outputPanel rendered="{!vot.Id == null}">
+                <p class="slds-page-header__title slds-truncate slds-align-middle">Vendor Order Task Create Page</p>
+                <p class="slds-text-body--small slds-page-header__info">New Task</p>
+              </apex:outputPanel>
+            </div>
+          </div>
+        </div>
+      </apex:outputPanel>
+      <apex:form style="width: 100%">
+        <apex:pageMessages id="messages" />
+        <div class="slds-grid slds-wrap">
+          <!-- PAGE HEADER -->
+          <div class="slds-page-header slds-col slds-size--1-of-1" role="banner">
+            <div class="slds-grid">
+              <div class="slds-col slds-has-flexi-truncate">
+                <div class="slds-media">
+                  <div class="slds-media__body">
+                    <h1 class="slds-text-heading--medium slds-m-right--small slds-truncate slds-align-middle">Vendor Order Task</h1>
+                  </div>
+                </div>
+              </div>
+              <div class="slds-col slds-no-flex">
+                <div class="slds-grid">
+                  <div class="slds-button">
+                    <apex:commandButton action="{!saveRecord}" value="Save" id="saveRecord" styleClass="slds-button slds-button--brand gc-teal-button" />
+                    <apex:commandButton action="{!cancel}" value="Cancel" style="left:0px;position:relative;" styleClass="slds-button slds-button--brand gc-teal-button" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <apex:actionStatus id="loadVendorsSpinner">
+            <apex:facet name="start">
+              <c:GC_Community_StatusSpinner statusMessage="Loading Vendors." />  
+            </apex:facet>
+          </apex:actionStatus>
+
+          <apex:actionStatus id="loadOTSpinner">
+            <apex:facet name="start">
+              <c:GC_Community_StatusSpinner statusMessage="Selecting." />  
+            </apex:facet>
+          </apex:actionStatus>
+          <!-- /PAGE HEADER -->
+          <!-- FORM -->
+          <section class="slds-col--padded slds-size--1-of-1 gc-section-margin-bottom">
+            <!-- GENERAL INFORMATION -->
+            <fieldset class="slds-form--compound gc-section-margin-top">
+              <legend class="slds-form-element__label slds-text-title--caps gc-section-margin-top">General Information</legend>
+              <div class="form-element__group">
+                <div class="slds-form-element__row">
+                  <div class="slds-form-element slds-size--1-of-2 slds-p-horizontal--small">
+                    <apex:outputLabel value="Order" styleClass="slds-form-element__label" />
+                    <div class="slds-form-element__control">
+                      <div class="gc-relative">
+                        <apex:inputField required="true" value="{!vot.Order__c}" styleClass="gc-lookup" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </fieldset>
+            <!-- /GENERAL INFORMATION -->
+            <!-- VENDOR -->
+            <fieldset class="slds-form--compound">
+              <div class="form-element__group">
+                <div class="slds-form-element__row">
+                  <div class="slds-form-element slds-size--1-of-2 slds-p-horizontal--small">
+                    <apex:outputLabel value="Service Type" styleClass="slds-form-element__label" />
+                    <div class="slds-form-element__control">
+                      <div class="gc-relative">
+                        <apex:selectList value="{!vot.Service_Type__c}" size="1" styleClass="slds-select">
+                          <apex:selectOptions value="{!serviceTypes}"></apex:selectOptions>
+                          <apex:actionSupport event="onchange" action="{!filterVendors}" rerender="vendor1" status="loadVendorsSpinner">
+                            <apex:param name="vendor1Select" value="Vendor1" assignTo="{!vendorSelect}"/>
+                          </apex:actionSupport>
+                        </apex:selectList>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="slds-form-element slds-size--1-of-2 slds-p-horizontal--small">
+                    <apex:outputLabel value="Vendor" styleClass="slds-form-element__label" />
+                    <div class="slds-form-element__control">
+                      <div class="gc-relative">
+                        <!-- <apex:inputField value="{!vot.Vendor__c}" styleClass="gc-lookup" id="vendor" /> -->
+                        <apex:selectList value="{!vot.Vendor__c}" id="vendor1" size="1" styleClass="slds-select">
+                          <apex:selectOptions value="{!userslist}"></apex:selectOptions> 
+                        </apex:selectList>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="slds-form-element__row">
+                  <div class="slds-form-element slds-size--1-of-2 slds-p-horizontal--small">
+                    <apex:outputLabel value="Service Type 2" styleClass="slds-form-element__label" />
+                    <div class="slds-form-element__control">
+                      <div class="gc-relative">
+                        <apex:selectList value="{!vot.Service_Type2__c}" size="1" styleClass="slds-select">
+                          <apex:selectOptions value="{!serviceTypes}"></apex:selectOptions>
+                          <apex:actionSupport event="onchange" action="{!filterVendors}" rerender="vendor2" status="loadVendorsSpinner">
+                            <apex:param name="vendor2Select" value="Vendor2" assignTo="{!vendorSelect}"/>
+                          </apex:actionSupport>
+                        </apex:selectList>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="slds-form-element slds-size--1-of-2 slds-p-horizontal--small">
+                    <apex:outputLabel value="Vendor 2" styleClass="slds-form-element__label" />
+                    <div class="slds-form-element__control">
+                      <div class="gc-relative">
+                        <!-- <apex:inputField value="{!vot.Vendor2__c}" styleClass="gc-lookup" /> -->
+                        <apex:selectList value="{!vot.Vendor2__c}" id="vendor2" size="1" styleClass="slds-select">
+                          <apex:selectOptions value="{!userslist1}"></apex:selectOptions> 
+                        </apex:selectList>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+
+                <div class="slds-form-element__row">
+                  <div class="slds-form-element slds-size--1-of-2 slds-p-horizontal--small">
+                    <apex:outputLabel value="Service Type 3" styleClass="slds-form-element__label" />
+                    <div class="slds-form-element__control">
+                      <div class="gc-relative">
+                        <apex:selectList value="{!vot.Service_Type3__c}" size="1" styleClass="slds-select">
+                          <apex:selectOptions value="{!serviceTypes}"></apex:selectOptions>
+                          <apex:actionSupport event="onchange" action="{!filterVendors}" rerender="vendor3" status="loadVendorsSpinner">
+                            <apex:param name="vendor3Select" value="Vendor3" assignTo="{!vendorSelect}"/>
+                          </apex:actionSupport>
+                        </apex:selectList>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="slds-form-element slds-size--1-of-2 slds-p-horizontal--small">
+                    <apex:outputLabel value="Vendor 3" styleClass="slds-form-element__label" />
+                    <div class="slds-form-element__control">
+                      <div class="gc-relative">
+                        <!-- <apex:inputField value="{!vot.Vendor3__c}" styleClass="gc-lookup" /> -->
+                        <apex:selectList value="{!vot.Vendor3__c}" id="vendor3" size="1" styleClass="slds-select">
+                          <apex:selectOptions value="{!userslist2}"></apex:selectOptions> 
+                        </apex:selectList>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="slds-form-element__row">
+                  <div class="slds-form-element slds-size--1-of-2 slds-p-horizontal--small">
+                    <apex:outputLabel value="Service Type 4" styleClass="slds-form-element__label" />
+                    <div class="slds-form-element__control">
+                      <div class="gc-relative">
+                        <apex:selectList value="{!vot.Service_Type4__c}" size="1" styleClass="slds-select">
+                          <apex:selectOptions value="{!serviceTypes}"></apex:selectOptions>
+                          <apex:actionSupport event="onchange" action="{!filterVendors}" rerender="vendor4" status="loadVendorsSpinner">
+                            <apex:param name="vendor4Select" value="Vendor4" assignTo="{!vendorSelect}"/>
+                          </apex:actionSupport>
+                        </apex:selectList>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="slds-form-element slds-size--1-of-2 slds-p-horizontal--small">
+                    <apex:outputLabel value="Vendor 4" styleClass="slds-form-element__label" />
+                    <div class="slds-form-element__control">
+                      <div class="gc-relative">
+                        <!-- <apex:inputField value="{!vot.Vendor4__c}" styleClass="gc-lookup" /> -->
+                        <apex:selectList value="{!vot.Vendor4__c}" id="vendor4" size="1" styleClass="slds-select">
+                          <apex:selectOptions value="{!userslist3}"></apex:selectOptions> 
+                        </apex:selectList>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="slds-form-element__row">
+                  <div class="slds-form-element slds-size--1-of-2 slds-p-horizontal--small">
+                    <apex:outputLabel value="Service Type 5" styleClass="slds-form-element__label" />
+                    <div class="slds-form-element__control">
+                      <div class="gc-relative">
+                        <apex:selectList value="{!vot.Service_Type5__c}" size="1" styleClass="slds-select">
+                          <apex:selectOptions value="{!serviceTypes}"></apex:selectOptions>
+                          <apex:actionSupport event="onchange" action="{!filterVendors}" rerender="vendor5" status="loadVendorsSpinner">
+                            <apex:param name="vendor5Select" value="Vendor5" assignTo="{!vendorSelect}"/>
+                          </apex:actionSupport>
+                        </apex:selectList>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="slds-form-element slds-size--1-of-2 slds-p-horizontal--small">
+                    <apex:outputLabel value="Vendor 5" styleClass="slds-form-element__label" />
+                    <div class="slds-form-element__control">
+                      <div class="gc-relative">
+                        <!-- <apex:inputField value="{!vot.Vendor5__c}" styleClass="gc-lookup" /> -->
+                        <apex:selectList value="{!vot.Vendor5__c}" id="vendor5" size="1" styleClass="slds-select">
+                          <apex:selectOptions value="{!userslist4}"></apex:selectOptions> 
+                        </apex:selectList>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <c:GC_CustomRTF targetclass="vendorInstructions" rendered="true" toolbar="full" uniqueid="vendorInstructions" />
+                <div class="slds-form-element__row">
+                  <div class="slds-form-element slds-size--1-of-2 slds-p-horizontal--small">
+                    <apex:outputLabel value="Vendor Instructions" styleClass="slds-form-element__label" />
+                    <div class="slds-form-element__control">
+                      <div class="gc-relative">
+                        <apex:inputTextarea styleClass="vendorInstructions ckeditor" richText="false" value="{!vot.Vendor_Instructions__c}" style="width:100%" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                 <div class="slds-form-element__row">
+                  <div class="slds-form-element slds-size--1-of-2 slds-p-horizontal--small">
+                    <apex:outputLabel value="Select All GES Order Tasks" styleClass="slds-form-element__label" />
+                    <apex:inputCheckbox value="{!vot.SelectAllOrderTasks__c}">
+                      <apex:actionSupport event="onchange" action="{!otDropDownReadOnly}" rerender="gesot111" status="loadOTSpinner"/>
+                    </apex:inputCheckbox>
+                  </div>
+                </div>
+
+                <apex:outputPanel id="gesot111">
+                <div class="slds-form-element__row">
+                  <div class="slds-form-element slds-size--1-of-2 slds-p-horizontal--small">
+                    <apex:outputLabel value="GES Order Task 1" styleClass="slds-form-element__label" />
+                    <div class="slds-form-element__control">
+                      <div class="gc-relative">
+                        <apex:selectList value="{!vot.GESOrderTask1__c}" size="1" styleClass="slds-select" disabled="false" rendered="{!disableGESOT==false}">
+                          <apex:selectOptions value="{!gesOrderTasksForVendors}"></apex:selectOptions>
+                        </apex:selectList>
+
+                        <apex:selectList value="{!vot.GESOrderTask1__c}" size="1" styleClass="slds-select" disabled="true" rendered="{!disableGESOT==true}">
+                          <apex:selectOptions value="{!gesOrderTasksForVendors}"></apex:selectOptions>
+                        </apex:selectList>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="slds-form-element__row">
+                  <div class="slds-form-element slds-size--1-of-2 slds-p-horizontal--small">
+                    <apex:outputLabel value="GES Order Task 2" styleClass="slds-form-element__label" />
+                    <div class="slds-form-element__control">
+                      <div class="gc-relative">
+                        <apex:selectList value="{!vot.GESOrderTask2__c}" size="1" styleClass="slds-select" disabled="false" rendered="{!disableGESOT==false}">
+                          <apex:selectOptions value="{!gesOrderTasksForVendors}"></apex:selectOptions>
+                        </apex:selectList>
+
+                        <apex:selectList value="{!vot.GESOrderTask2__c}" size="1" styleClass="slds-select" disabled="true" rendered="{!disableGESOT==true}">
+                          <apex:selectOptions value="{!gesOrderTasksForVendors}"></apex:selectOptions>
+                        </apex:selectList>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="slds-form-element__row">
+                  <div class="slds-form-element slds-size--1-of-2 slds-p-horizontal--small">
+                    <apex:outputLabel value="GES Order Task 3" styleClass="slds-form-element__label" />
+                    <div class="slds-form-element__control">
+                      <div class="gc-relative">
+                        <apex:selectList value="{!vot.GESOrderTask3__c}" size="1" styleClass="slds-select" disabled="false" rendered="{!disableGESOT==false}">
+                          <apex:selectOptions value="{!gesOrderTasksForVendors}"></apex:selectOptions>
+                        </apex:selectList>
+
+                        <apex:selectList value="{!vot.GESOrderTask3__c}" size="1" styleClass="slds-select" disabled="true" rendered="{!disableGESOT==true}">
+                          <apex:selectOptions value="{!gesOrderTasksForVendors}"></apex:selectOptions>
+                        </apex:selectList>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="slds-form-element__row">
+                  <div class="slds-form-element slds-size--1-of-2 slds-p-horizontal--small">
+                    <apex:outputLabel value="GES Order Task 4" styleClass="slds-form-element__label" />
+                    <div class="slds-form-element__control">
+                      <div class="gc-relative">
+                        <apex:selectList value="{!vot.GESOrderTask4__c}" size="1" styleClass="slds-select" disabled="false" rendered="{!disableGESOT==false}">
+                          <apex:selectOptions value="{!gesOrderTasksForVendors}"></apex:selectOptions>
+                        </apex:selectList>
+
+                        <apex:selectList value="{!vot.GESOrderTask4__c}" size="1" styleClass="slds-select" disabled="true" rendered="{!disableGESOT==true}">
+                          <apex:selectOptions value="{!gesOrderTasksForVendors}"></apex:selectOptions>
+                        </apex:selectList>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="slds-form-element__row">
+                  <div class="slds-form-element slds-size--1-of-2 slds-p-horizontal--small">
+                    <apex:outputLabel value="GES Order Task 5" styleClass="slds-form-element__label" />
+                    <div class="slds-form-element__control">
+                      <div class="gc-relative">
+                        <apex:selectList value="{!vot.GESOrderTask5__c}" size="1" styleClass="slds-select" disabled="false" rendered="{!disableGESOT==false}">
+                          <apex:selectOptions value="{!gesOrderTasksForVendors}"></apex:selectOptions>
+                        </apex:selectList>
+
+                        <apex:selectList value="{!vot.GESOrderTask5__c}" size="1" styleClass="slds-select" disabled="true" rendered="{!disableGESOT==true}">
+                          <apex:selectOptions value="{!gesOrderTasksForVendors}"></apex:selectOptions>
+                        </apex:selectList>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                </apex:outputPanel>
+              </div>
+            </fieldset>
+            <!-- /VENDOR -->
+            <div class="gc-button-section gc-page-bottom-margin gc-section-margin-top">
+              <apex:commandButton action="{!saveRecord}" value="Save" styleClass="slds-button slds-button--brand gc-teal-button" />
+              <apex:commandButton action="{!cancel}" value="Cancel" styleClass="slds-button slds-button--brand gc-teal-button" />
+            </div>
+          </section>
+          <!-- /FORM -->
+        </div>
+      </apex:form>
+    </div>
+  </body>
+
+  </html>
+</apex:page>

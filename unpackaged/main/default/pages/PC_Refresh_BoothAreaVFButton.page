@@ -1,0 +1,16 @@
+<apex:page standardController="Booth_Area__c" recordSetVar="boothArea" extensions="PC_BoothAreaController">
+    <apex:includeLightning />
+    <div id="containerDiv"></div>
+    <script>
+    $Lightning.use("c:PC_RefreshBoothAreaContainerApp", function() {
+        $Lightning.createComponent("c:PC_Refresh_BoothArea",
+                                   { 
+                                       parentShowId: '{!referredToShowId}',
+                                       refererUrl: '{!returnToUrl}'
+                                   },
+                                   "containerDiv",
+                                   function(component) {
+                                   });
+    });
+    </script>
+</apex:page>

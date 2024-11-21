@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Deliverable__c</fullName>
+    <description>Deliverable type</description>
+    <inlineHelpText>Deliverable(product) type</inlineHelpText>
+    <label>Deliverable</label>
+    <required>false</required>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Task_Type__c</controllingField>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Rendering</fullName>
+                <default>false</default>
+                <label>Color Rendering</label>
+            </value>
+            <value>
+                <fullName>White Model</fullName>
+                <default>false</default>
+                <label>White Model</label>
+            </value>
+            <value>
+                <fullName>Line Drawing</fullName>
+                <default>false</default>
+                <label>Line Drawing</label>
+            </value>
+            <value>
+                <fullName>Graphic</fullName>
+                <default>true</default>
+                <label>Graphic</label>
+            </value>
+            <value>
+                <fullName>Detailed Drawing</fullName>
+                <default>false</default>
+                <label>Detailed Drawing</label>
+            </value>
+            <value>
+                <fullName>Floor Plan</fullName>
+                <default>false</default>
+                <label>Floor Plan</label>
+            </value>
+            <value>
+                <fullName>CNC</fullName>
+                <default>false</default>
+                <label>CNC</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Design</controllingFieldValue>
+            <valueName>Rendering</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Design</controllingFieldValue>
+            <valueName>White Model</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Design</controllingFieldValue>
+            <valueName>Line Drawing</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Design</controllingFieldValue>
+            <valueName>Graphic</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Design</controllingFieldValue>
+            <valueName>Floor Plan</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Detailing</controllingFieldValue>
+            <valueName>Detailed Drawing</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Detailing</controllingFieldValue>
+            <valueName>CNC</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

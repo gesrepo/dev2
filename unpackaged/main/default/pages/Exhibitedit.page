@@ -1,0 +1,186 @@
+<apex:page standardStylesheets="true" standardController="Exhibit__c" extensions="ExhibitEdit" showHeader="false" sidebar="false" applyHtmlTag="false" tabStyle="Account">
+ <html xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <head>
+            <apex:includeScript value="{!$Resource.jQuery}" />
+            <apex:stylesheet value="{!URLFOR($Resource.Lightning_Design_System, 'assets/styles/salesforce-lightning-design-system.min.css')}" />
+            <apex:stylesheet value="{!URLFOR($Resource.GC_Assets, 'GC_Assets/css/GC_Styles.css')}" />
+            <apex:includeScript value="{!URLFOR($Resource.GC_Assets, 'GC_Assets/js/GC_init.js')}" />
+        </head>
+
+         <div class="slds">
+             <c:GC_Community_Header />
+                <div class="slds-page-header gc-navigation--subHeader" role="banner">
+                    <div class="slds-media">
+                        <div class="slds-media__figure">
+                            <apex:image url="{!URLFOR($Resource.GC_Assets, 'GC_Assets/img/custom13_60_teal.png')}" />
+                        </div>
+                        <div class="slds-media__body">
+                            <p class="slds-page-header__title slds-align-middle">
+                                <span>Exhibit Details</span>
+                                <span class="slds-truncate">{!congName}</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            
+    <apex:form >
+        <apex:actionFunction action="{!cancelOperation}" name="CancelAction"  reRender="pb"  />
+        <apex:pageBlock id="pb">
+            <apex:pageBlockButtons >
+                <apex:commandButton value="Save" action="{!ExhibitSave}" styleClass="slds-button slds-button--brand gc-teal-button"/>
+                <apex:commandButton value="Cancel" action="{!ExhibitCancel}" styleClass="slds-button slds-button--brand gc-teal-button" immediate="true"/>
+            </apex:pageBlockButtons>
+            <apex:pageBlockSection title="Exhibit Detail">
+                <apex:inputField value="{!e.Exhibit_Name__c}" required="true"/>
+                <apex:outputtext label="Congress ID" value="{!congName}" rendered="{!(toClone !='true')}" />   
+                <apex:pageBlockSectionItem rendered="{!(toClone =='true')}">
+                    <apex:outputLabel value="Congress ID"/>
+                    <apex:inputField value="{!e.Activity_Type_Exhibit_Instance_c__c}" />
+                </apex:pageBlockSectionItem>
+  
+                <apex:inputField value="{!e.Booth_Number__c}"/> 
+                <apex:inputField value="{!e.GES_Project_Number__c}"/>
+                <apex:inputField value="{!e.Booth_Width__c}" required="true"/>
+                <!--<apex:inputField value="{!e.Activity_Level__c}" required="true"/> Amarab 03/25/2021 SCA-878 Remove required setting -->
+                <apex:inputField value="{!e.Activity_Level__c}"/>
+                <apex:inputField value="{!e.Booth_Length__c}" required="true"/>
+                <apex:inputField value="{!e.Exhibit_Type__c}" required="true"/>                
+                <apex:inputField value="{!e.Booth_Size_Units__c}"/>  
+                <apex:inputField value="{!e.Exhibit_Bundled_with_Sponsorsip__c}"/>              
+                <apex:inputField value="{!e.Exhibit_Space_Type__c}"/>
+                <apex:inputField value="{!e.DoD_Properties__c}"/>
+                <apex:inputField value="{!e.Activity_Not_Confirmed__c }"/>
+                <apex:inputField value="{!e.CSI_Form_Notes__c }"/>
+                
+                <!--<apex:outputText ></apex:outputText>-->
+                <apex:pageBlockSectionItem > 
+                  <div style="border-bottom:2px solid #1797c0;"/>
+                </apex:pageBlockSectionItem>
+                <apex:pageBlockSectionItem > 
+                  <div style="border-bottom:2px solid #1797c0;"/>
+                </apex:pageBlockSectionItem>
+            </apex:pageBlockSection>  
+            
+             <!--<apex:pageBlockSection id="renu" columns="1"> --> 
+            <apex:pageBlockSection id="renu">  
+                
+                <apex:pageBlockSectionItem dataStyle="width:auto;float: left;" >
+                    <apex:outputLabel value="Data Collection Methods" />
+                        <apex:actionRegion >
+                            <!--<apex:inputField value="{!e.Reality_Engineering_Utilized__c }" required="true" styleClass="myMultiClass" > Amarab 03/25/2021 SCA-878 Remove required setting -->
+                            <apex:inputField value="{!e.Reality_Engineering_Utilized__c }" styleClass="myMultiClass" />
+                            <!--</apex:inputField>-->
+                        </apex:actionRegion>
+                </apex:pageBlockSectionItem>  
+                <!--Amarab 03252021 SCA-874 Adding new fields -->
+                <apex:pageBlockSectionItem >
+                     <apex:outputLabel value="Virtual Engagement Type" />  
+                     <apex:inputField value="{!e.Virtual_Engagement_Type__c}"/>
+                </apex:pageBlockSectionItem>             
+                
+               <!--
+                <apex:pageBlockSectionItem >                  
+                    <apex:outputLabel value="Reason RE not used" rendered="{!e.Reality_Engineering_Utilized__c=='No'}" />
+                    <apex:actionRegion >
+                        <apex:inputField value="{!e.Reason_RE_not_used__c }" rendered="{!e.Reality_Engineering_Utilized__c=='No'}" >
+                            <apex:actionSupport event="onchange"  reRender="renu"/>
+                        </apex:inputField>
+                    </apex:actionRegion>
+                </apex:pageBlockSectionItem>
+                <apex:pageBlockSectionItem >  
+                    <apex:outputText rendered="{!e.Reason_RE_not_used__c!='Not appropriate audience'}" ></apex:outputText>
+                </apex:pageBlockSectionItem>
+                <apex:inputField id="inpf1" value="{!e.If_not_appropriate_audience_Explanation__c}" rendered="{!(e.Reason_RE_not_used__c=='Not appropriate audience' && e.Reality_Engineering_Utilized__c=='No')}"  />  
+                -->
+            </apex:pageBlockSection> 
+            
+            <apex:pageBlockSection id="ss34">
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="Medical Information" />
+                    <apex:inputField value="{!e.Medical_Information__c}"/>
+                </apex:pageBlockSectionItem>
+                <!--Amarab 03252021 SCA-874 Adding new fields -->
+                <apex:pageBlockSectionItem >
+                     <apex:outputLabel value="Exhibit Registrants" />  
+                     <apex:inputField value="{!e.Exhibit_Registrants__c}"/>
+                </apex:pageBlockSectionItem> 
+                <!--<apex:pageBlockSectionItem >  
+                    <apex:outputText ></apex:outputText>
+                </apex:pageBlockSectionItem>-->
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="HCP Tracking" />
+                    <apex:inputField value="{!e.HCP_tracking__c}"/>
+                </apex:pageBlockSectionItem>
+                <apex:pageBlockSectionItem >  
+                    <apex:outputLabel value=" " />
+                    <apex:inputField value="{!e.E_Permissions__c}" style="display:none"/>
+                </apex:pageBlockSectionItem>
+                <!--<apex:inputField value="{!e.E_Permissions__c}"/>  commented for sca-726 by rsinha--> 
+            </apex:pageBlockSection>  
+                
+            <apex:pageBlockSection id="ss">   
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="Staffing Strategy" />
+                        <apex:actionRegion >
+                            <apex:inputField value="{!e.Staffing_Strategy__c  }">
+                                <apex:actionSupport event="onchange"  reRender="ss"/>
+                            </apex:inputField>
+                        </apex:actionRegion>
+                </apex:pageBlockSectionItem>   
+                <apex:inputField value="{!e.Disease_State_booth__c}"/>    
+                <apex:pageBlockSectionItem >                  
+                    <apex:outputLabel value="Quantity of Staffers" rendered="{!e.Staffing_Strategy__c!= ''}" />
+                    <apex:actionRegion >
+                        <apex:inputField value="{!e.Quantity_of_Staffers__c }" rendered="{!e.Staffing_Strategy__c!= ''}" >
+                            <apex:actionSupport event="onchange"  reRender="renu"/>
+                        </apex:inputField>
+                    </apex:actionRegion>
+                </apex:pageBlockSectionItem>
+                <apex:inputField value="{!e.Clinical_Trials_Recruiting__c}"/>
+            </apex:pageBlockSection>
+            <apex:pageBlockSection id="smu">  
+                <apex:inputField value="{!e.In_booth_promotion__c}"/>
+                <apex:inputField value="{!e.In_booth_hospitality__c}"/>
+                <apex:inputField value="{!e.In_booth_promotion_detail__c}"/>
+                <apex:inputField value="{!e.In_booth_hospitality_detail__c}"/>
+                <apex:inputField value="{!e.Exhibit_Notes__c}"/>
+                <apex:outputText ></apex:outputText>  
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="Canceled" />
+                    <apex:actionRegion >
+                        <apex:inputField value="{!e.Canceled__c}">
+                            <apex:actionSupport event="onchange" action="{!cancelOperation}" reRender="pb"/>
+                        </apex:inputField>
+                    </apex:actionRegion>
+                </apex:pageBlockSectionItem>          
+                <apex:outputField value="{!e.CanceledDate__c}" />
+                <apex:inputField value="{!e.CancelReason__c}" required="{!cancelReason}"/>                    
+            </apex:pageBlockSection>
+        
+            <apex:pageBlockSection title="Exhibit Contacts">
+                <apex:inputField value="{!e.GES_Congress_Manager__c}"/> <apex:inputField value="{!e.Agency_Name__c}"/> 
+                <apex:inputField value="{!e.GES_Account_Executive__c}"/> <apex:inputField value="{!e.Agency_Contact_Name__c}"/> 
+                <apex:inputField value="{!e.Congress_Lead__c}"/> <apex:inputField value="{!e.Agency_Contact_Phone__c}"/> 
+                <apex:inputField value="{!e.GES_Account_Manager__c}"/> <apex:inputField value="{!e.Agency_Contact_E_mail__c}"/> 
+                <apex:inputField value="{!e.GES_Project_Manager__c}"/> 
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="I&D Supervisor" />
+                        <apex:actionRegion >
+                            <apex:inputField value="{!e.I_D_Supervisor__c}">
+                                <apex:actionSupport event="onchange"  reRender="pbSection2"/>
+                            </apex:inputField>
+                        </apex:actionRegion>
+                </apex:pageBlockSectionItem>                    
+            </apex:pageBlockSection>
+            
+            <apex:pageBlockSection id="pbSection2">                
+                <apex:pageBlockSectionItem ></apex:pageBlockSectionItem>
+                <apex:inputField value="{!e.I_D_Name_Other__c}" rendered="{!e.I_D_Supervisor__c=='Other'}" ></apex:inputField>
+            </apex:pageBlockSection>
+      
+        </apex:pageBlock>
+    </apex:form>
+
+    </div>
+    </html>    
+</apex:page>

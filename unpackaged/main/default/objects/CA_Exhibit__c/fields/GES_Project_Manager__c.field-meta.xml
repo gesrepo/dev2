@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>GES_Project_Manager__c</fullName>
+    <label>GES Project Manager</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>true</sorted>
+            <value>
+                <fullName>Da silva, Camille</fullName>
+                <default>false</default>
+                <label>Da silva, Camille</label>
+            </value>
+            <value>
+                <fullName>Ferraro, Antonio</fullName>
+                <default>false</default>
+                <label>Ferraro, Antonio</label>
+            </value>
+            <value>
+                <fullName>Kelly, Alexa</fullName>
+                <default>false</default>
+                <label>Kelly, Alexa</label>
+            </value>
+            <value>
+                <fullName>Medus, Heather</fullName>
+                <default>false</default>
+                <label>Medus, Heather</label>
+            </value>
+            <value>
+                <fullName>Montagne, Sarah</fullName>
+                <default>false</default>
+                <label>Montagne, Sarah</label>
+            </value>
+            <value>
+                <fullName>Mulvey, Mike</fullName>
+                <default>false</default>
+                <label>Mulvey, Mike</label>
+            </value>
+            <value>
+                <fullName>Pesch, Patty</fullName>
+                <default>false</default>
+                <label>Pesch, Patty</label>
+            </value>
+            <value>
+                <fullName>Porter, Mike</fullName>
+                <default>false</default>
+                <label>Porter, Mike</label>
+            </value>
+            <value>
+                <fullName>Wainman, Ana</fullName>
+                <default>false</default>
+                <label>Wainman, Ana</label>
+            </value>
+            <value>
+                <fullName>Ward, Nick</fullName>
+                <default>false</default>
+                <label>Ward, Nick</label>
+            </value>
+            <value>
+                <fullName>Wright, Chris</fullName>
+                <default>false</default>
+                <label>Wright, Chris</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

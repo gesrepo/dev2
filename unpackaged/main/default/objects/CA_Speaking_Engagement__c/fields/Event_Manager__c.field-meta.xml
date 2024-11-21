@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Event_Manager__c</fullName>
+    <label>Event Manager</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>true</sorted>
+            <value>
+                <fullName>Aisling Meehan</fullName>
+                <default>false</default>
+                <label>Aisling Meehan</label>
+            </value>
+            <value>
+                <fullName>Caitlin Ferdyn</fullName>
+                <default>false</default>
+                <label>Caitlin Ferdyn</label>
+            </value>
+            <value>
+                <fullName>Casarotto, Ilenia</fullName>
+                <default>false</default>
+                <label>Casarotto, Ilenia</label>
+            </value>
+            <value>
+                <fullName>Curtin, Nadine</fullName>
+                <default>false</default>
+                <label>Curtin, Nadine</label>
+            </value>
+            <value>
+                <fullName>Horvath, Judy</fullName>
+                <default>false</default>
+                <label>Horvath, Judy</label>
+            </value>
+            <value>
+                <fullName>Kepes, Erica</fullName>
+                <default>false</default>
+                <label>Kepes, Erica</label>
+            </value>
+            <value>
+                <fullName>Lisa Mahan</fullName>
+                <default>false</default>
+                <label>Lisa Mahan</label>
+            </value>
+            <value>
+                <fullName>Lopez, Ralph</fullName>
+                <default>false</default>
+                <label>Lopez, Ralph</label>
+            </value>
+            <value>
+                <fullName>Michael Clearey</fullName>
+                <default>false</default>
+                <label>Michael Clearey</label>
+            </value>
+            <value>
+                <fullName>Nicole Brown</fullName>
+                <default>false</default>
+                <label>Nicole Brown</label>
+            </value>
+            <value>
+                <fullName>Rocha, Paula</fullName>
+                <default>false</default>
+                <label>Rocha, Paula</label>
+            </value>
+            <value>
+                <fullName>Rosete, Aleida</fullName>
+                <default>false</default>
+                <label>Rosete, Aleida</label>
+            </value>
+            <value>
+                <fullName>Schuler, Dan</fullName>
+                <default>false</default>
+                <label>Schuler, Dan</label>
+            </value>
+            <value>
+                <fullName>Shamey-Golonka, Kimrlee</fullName>
+                <default>false</default>
+                <label>Shamey-Golonka, Kimrlee</label>
+            </value>
+            <value>
+                <fullName>Shawn McDonald</fullName>
+                <default>false</default>
+                <label>Shawn McDonald</label>
+            </value>
+            <value>
+                <fullName>Syntcha, Dawn</fullName>
+                <default>false</default>
+                <label>Syntcha, Dawn</label>
+            </value>
+            <value>
+                <fullName>Throckmorton, Andrea</fullName>
+                <default>false</default>
+                <label>Throckmorton, Andrea</label>
+            </value>
+            <value>
+                <fullName>Werber, Michelle</fullName>
+                <default>false</default>
+                <label>Werber, Michelle</label>
+            </value>
+            <value>
+                <fullName>Zarrillo, Rose Marie</fullName>
+                <default>false</default>
+                <label>Zarrillo, Rose Marie</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

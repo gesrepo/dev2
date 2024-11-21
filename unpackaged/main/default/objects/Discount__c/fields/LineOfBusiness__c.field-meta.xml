@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>LineOfBusiness__c</fullName>
+    <label>Line Of Business</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>true</sorted>
+            <value>
+                <fullName>ALL SERVICES</fullName>
+                <default>false</default>
+                <label>ALL SERVICES</label>
+            </value>
+            <value>
+                <fullName>AUDIO VISUAL</fullName>
+                <default>false</default>
+                <label>AUDIO VISUAL</label>
+            </value>
+            <value>
+                <fullName>ELECTRICAL OUTLETS</fullName>
+                <default>false</default>
+                <label>ELECTRICAL OUTLETS</label>
+            </value>
+            <value>
+                <fullName>GRAPHICS</fullName>
+                <default>false</default>
+                <label>GRAPHICS</label>
+            </value>
+            <value>
+                <fullName>HANGING SIGN</fullName>
+                <default>false</default>
+                <label>HANGING SIGN</label>
+            </value>
+            <value>
+                <fullName>HANGING SIGN.Hanging Sign</fullName>
+                <default>false</default>
+                <label>HANGING SIGN.Hanging Sign</label>
+            </value>
+            <value>
+                <fullName>JANITORIAL.Janitorial</fullName>
+                <default>false</default>
+                <label>JANITORIAL.Janitorial</label>
+            </value>
+            <value>
+                <fullName>LABOR</fullName>
+                <default>false</default>
+                <label>LABOR</label>
+            </value>
+            <value>
+                <fullName>LABOR.Elec Hang Sign</fullName>
+                <default>false</default>
+                <label>LABOR.Elec Hang Sign</label>
+            </value>
+            <value>
+                <fullName>LABOR.Electrical</fullName>
+                <default>false</default>
+                <label>LABOR.Electrical</label>
+            </value>
+            <value>
+                <fullName>LABOR.I&amp;D</fullName>
+                <default>false</default>
+                <label>LABOR.I&amp;D</label>
+            </value>
+            <value>
+                <fullName>LABOR.Material Handling</fullName>
+                <default>false</default>
+                <label>LABOR.Material Handling</label>
+            </value>
+            <value>
+                <fullName>LOGISTICS</fullName>
+                <default>false</default>
+                <label>LOGISTICS</label>
+            </value>
+            <value>
+                <fullName>MATERIAL</fullName>
+                <default>false</default>
+                <label>MATERIAL</label>
+            </value>
+            <value>
+                <fullName>MATERIAL.Electrical</fullName>
+                <default>false</default>
+                <label>MATERIAL.Electrical</label>
+            </value>
+            <value>
+                <fullName>PLUMBING</fullName>
+                <default>false</default>
+                <label>PLUMBING</label>
+            </value>
+            <value>
+                <fullName>PLUSH CARPET</fullName>
+                <default>false</default>
+                <label>PLUSH CARPET</label>
+            </value>
+            <value>
+                <fullName>PRODUCTION</fullName>
+                <default>false</default>
+                <label>PRODUCTION</label>
+            </value>
+            <value>
+                <fullName>SPECIALTY FURNITURE</fullName>
+                <default>false</default>
+                <label>SPECIALTY FURNITURE</label>
+            </value>
+            <value>
+                <fullName>STANDARD CARPET</fullName>
+                <default>false</default>
+                <label>STANDARD CARPET</label>
+            </value>
+            <value>
+                <fullName>STANDARD FURNITURE</fullName>
+                <default>false</default>
+                <label>STANDARD FURNITURE</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

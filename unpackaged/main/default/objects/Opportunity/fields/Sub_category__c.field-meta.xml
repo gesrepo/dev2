@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Sub_category__c</fullName>
+    <label>Sub-category</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>true</sorted>
+            <value>
+                <fullName>Agency/Production</fullName>
+                <default>false</default>
+                <label>Agency/Production</label>
+            </value>
+            <value>
+                <fullName>Corporate/End User</fullName>
+                <default>false</default>
+                <label>Corporate/End User</label>
+            </value>
+            <value>
+                <fullName>Design &amp; Build (SDD)</fullName>
+                <default>false</default>
+                <label>Design &amp; Build (SDD)</label>
+            </value>
+            <value>
+                <fullName>Exhibitor</fullName>
+                <default>false</default>
+                <label>Exhibitor</label>
+            </value>
+            <value>
+                <fullName>Graphics/Event Tech</fullName>
+                <default>false</default>
+                <label>Graphics/Event Tech</label>
+            </value>
+            <value>
+                <fullName>New</fullName>
+                <default>false</default>
+                <label>New</label>
+            </value>
+            <value>
+                <fullName>Organiser</fullName>
+                <default>false</default>
+                <label>Organiser</label>
+            </value>
+            <value>
+                <fullName>Registration Kit Hire</fullName>
+                <default>false</default>
+                <label>Registration Kit Hire</label>
+            </value>
+            <value>
+                <fullName>Theatre</fullName>
+                <default>false</default>
+                <label>Theatre</label>
+            </value>
+            <value>
+                <fullName>Venue</fullName>
+                <default>false</default>
+                <label>Venue</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Re_subscribe_in_ExactTarget</fullName>
+    <availability>online</availability>
+    <displayType>link</displayType>
+    <encodingKey>UTF-8</encodingKey>
+    <height>600</height>
+    <linkType>url</linkType>
+    <masterLabel>Re-subscribe in ExactTarget</masterLabel>
+    <openType>sidebar</openType>
+    <protected>false</protected>
+    <url>https://members.exacttarget.com/Integration/SalesforceUI/SFResubscribe.aspx?subtype=Lead&amp;sfid={!Lead.Id}&amp;sessid={!API.Session_ID}&amp;sessurl={!API.Partner_Server_URL_60}</url>
+</WebLink>

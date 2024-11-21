@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>GES_Project_Manager_Email_Formula__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF((TEXT(GES_Project_Manager__c) == &quot;Porter, Mike&quot;),&quot;MPorter@ges.com&quot;,
+IF((TEXT(GES_Project_Manager__c) == &quot;Montagne, Sarah&quot;),&quot;smontagne@ges.com&quot;,
+IF((TEXT(GES_Project_Manager__c) == &quot;Ward, Nick&quot;),&quot;NWard@ges.com&quot;,
+IF((TEXT(GES_Project_Manager__c) == &quot;Wright, Chris&quot;),&quot;cwright@ges.com&quot;,
+IF((TEXT(GES_Project_Manager__c) == &quot;Da silva, Camille&quot;),&quot;cdasilva@ges.com&quot;,
+IF((TEXT(GES_Project_Manager__c) == &quot;Ferraro, Antonio&quot;),&quot;aferraro@ges.com&quot;,
+IF((TEXT(GES_Project_Manager__c) == &quot;Kelly, Alexa&quot;),&quot;alexak@ges.com&quot;,
+IF((TEXT(GES_Project_Manager__c) == &quot;Medus, Heather&quot;),&quot;hmedus@ges.com&quot;,
+IF((TEXT(GES_Project_Manager__c) == &quot;Wainman, Ana&quot;),&quot;awainman@ges.com&quot;, 
+&quot;&quot;)))))))))</formula>
+    <label>GES Project Manager Email Formula</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

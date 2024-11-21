@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Computer_Rental__c</fullName>
+    <inlineHelpText>Company providing Computer Rental services for this exhibition opportunity</inlineHelpText>
+    <label>Computer Rental Company</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>AVMG</fullName>
+                <default>false</default>
+                <label>AVMG</label>
+            </value>
+            <value>
+                <fullName>CEAVCO</fullName>
+                <default>false</default>
+                <label>CEAVCO</label>
+            </value>
+            <value>
+                <fullName>Datasis</fullName>
+                <default>false</default>
+                <label>Datasis</label>
+            </value>
+            <value>
+                <fullName>Davis Audio Visual</fullName>
+                <default>false</default>
+                <label>Davis Audio Visual</label>
+            </value>
+            <value>
+                <fullName>ETS (Event Technology Services)</fullName>
+                <default>false</default>
+                <label>ETS (Event Technology Services)</label>
+            </value>
+            <value>
+                <fullName>FDC AV</fullName>
+                <default>false</default>
+                <label>FDC AV</label>
+            </value>
+            <value>
+                <fullName>Global Experience Specialists AV</fullName>
+                <default>false</default>
+                <label>Global Experience Specialists AV</label>
+            </value>
+            <value>
+                <fullName>Ovation</fullName>
+                <default>false</default>
+                <label>Ovation</label>
+            </value>
+            <value>
+                <fullName>PRG</fullName>
+                <default>false</default>
+                <label>PRG</label>
+            </value>
+            <value>
+                <fullName>Projection</fullName>
+                <default>false</default>
+                <label>Projection</label>
+            </value>
+            <value>
+                <fullName>PSAV</fullName>
+                <default>false</default>
+                <label>PSAV</label>
+            </value>
+            <value>
+                <fullName>Rick Bloom Audio Visual</fullName>
+                <default>false</default>
+                <label>Rick Bloom Audio Visual</label>
+            </value>
+            <value>
+                <fullName>Self (Client in-house)</fullName>
+                <default>false</default>
+                <label>Self (Client in-house)</label>
+            </value>
+            <value>
+                <fullName>Smart Source</fullName>
+                <default>false</default>
+                <label>Smart Source</label>
+            </value>
+            <value>
+                <fullName>Synergy</fullName>
+                <default>false</default>
+                <label>Synergy</label>
+            </value>
+            <value>
+                <fullName>VAE</fullName>
+                <default>false</default>
+                <label>VAE</label>
+            </value>
+            <value>
+                <fullName>Williams/Gerard Productions</fullName>
+                <default>false</default>
+                <label>Williams/Gerard Productions</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

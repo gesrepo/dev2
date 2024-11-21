@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Sub_budget_OLD__c</fullName>
+    <label>Sub-budget OLD</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Accounting</fullName>
+                <default>false</default>
+                <label>Accounting</label>
+            </value>
+            <value>
+                <fullName>Account Mgmt</fullName>
+                <default>false</default>
+                <label>Account Mgmt</label>
+            </value>
+            <value>
+                <fullName>Blitz</fullName>
+                <default>false</default>
+                <label>Blitz</label>
+            </value>
+            <value>
+                <fullName>Canada - Montreal</fullName>
+                <default>false</default>
+                <label>Canada - Montreal</label>
+            </value>
+            <value>
+                <fullName>Canada - Toronto</fullName>
+                <default>false</default>
+                <label>Canada - Toronto</label>
+            </value>
+            <value>
+                <fullName>Canada - West</fullName>
+                <default>false</default>
+                <label>Canada - West</label>
+            </value>
+            <value>
+                <fullName>Connect</fullName>
+                <default>false</default>
+                <label>Connect</label>
+            </value>
+            <value>
+                <fullName>Corporate Accounts</fullName>
+                <default>false</default>
+                <label>Corporate Accounts</label>
+            </value>
+            <value>
+                <fullName>Design &amp; Build</fullName>
+                <default>false</default>
+                <label>Design &amp; Build</label>
+            </value>
+            <value>
+                <fullName>Digital Products</fullName>
+                <default>false</default>
+                <label>Digital Products</label>
+            </value>
+            <value>
+                <fullName>Electrics</fullName>
+                <default>false</default>
+                <label>Electrics</label>
+            </value>
+            <value>
+                <fullName>EMEA</fullName>
+                <default>false</default>
+                <label>EMEA</label>
+            </value>
+            <value>
+                <fullName>EMEA - IT</fullName>
+                <default>false</default>
+                <label>EMEA - IT</label>
+            </value>
+            <value>
+                <fullName>EMEA Logistics</fullName>
+                <default>false</default>
+                <label>EMEA Logistics</label>
+            </value>
+            <value>
+                <fullName>EMEA Servi Centre</fullName>
+                <default>false</default>
+                <label>EMEA Servi Centre</label>
+            </value>
+            <value>
+                <fullName>Events</fullName>
+                <default>false</default>
+                <label>Events</label>
+            </value>
+            <value>
+                <fullName>Exhibition</fullName>
+                <default>false</default>
+                <label>Exhibition</label>
+            </value>
+            <value>
+                <fullName>Exhibitor Graphics</fullName>
+                <default>false</default>
+                <label>Exhibitor Graphics</label>
+            </value>
+            <value>
+                <fullName>Exhibitor Sales</fullName>
+                <default>false</default>
+                <label>Exhibitor Sales</label>
+            </value>
+            <value>
+                <fullName>Exhibitor Services</fullName>
+                <default>false</default>
+                <label>Exhibitor Services</label>
+            </value>
+            <value>
+                <fullName>Finance</fullName>
+                <default>false</default>
+                <label>Finance</label>
+            </value>
+            <value>
+                <fullName>Finance - Light</fullName>
+                <default>false</default>
+                <label>Finance - Light</label>
+            </value>
+            <value>
+                <fullName>GES Europe</fullName>
+                <default>false</default>
+                <label>GES Europe</label>
+            </value>
+            <value>
+                <fullName>GES Germany</fullName>
+                <default>false</default>
+                <label>GES Germany</label>
+            </value>
+            <value>
+                <fullName>GES UK</fullName>
+                <default>false</default>
+                <label>GES UK</label>
+            </value>
+            <value>
+                <fullName>Graphics</fullName>
+                <default>false</default>
+                <label>Graphics</label>
+            </value>
+            <value>
+                <fullName>Marianne</fullName>
+                <default>false</default>
+                <label>Marianne</label>
+            </value>
+            <value>
+                <fullName>Marketing</fullName>
+                <default>false</default>
+                <label>Marketing</label>
+            </value>
+            <value>
+                <fullName>Marketing – Lead Gen</fullName>
+                <default>false</default>
+                <label>Marketing – Lead Gen</label>
+            </value>
+            <value>
+                <fullName>n/a</fullName>
+                <default>false</default>
+                <label>n/a</label>
+            </value>
+            <value>
+                <fullName>n/a GUEST</fullName>
+                <default>false</default>
+                <label>n/a GUEST</label>
+            </value>
+            <value>
+                <fullName>NSC</fullName>
+                <default>false</default>
+                <label>NSC</label>
+            </value>
+            <value>
+                <fullName>Lead Gen</fullName>
+                <default>false</default>
+                <label>Lead Gen</label>
+            </value>
+            <value>
+                <fullName>NSC - Logistics</fullName>
+                <default>false</default>
+                <label>NSC - Logistics</label>
+            </value>
+            <value>
+                <fullName>OnPeak</fullName>
+                <default>false</default>
+                <label>OnPeak</label>
+            </value>
+            <value>
+                <fullName>OnServices</fullName>
+                <default>false</default>
+                <label>OnServices</label>
+            </value>
+            <value>
+                <fullName>Operations</fullName>
+                <default>false</default>
+                <label>Operations</label>
+            </value>
+            <value>
+                <fullName>SDD</fullName>
+                <default>false</default>
+                <label>SDD</label>
+            </value>
+            <value>
+                <fullName>SFDC Admin</fullName>
+                <default>false</default>
+                <label>SFDC Admin</label>
+            </value>
+            <value>
+                <fullName>Show Ready</fullName>
+                <default>false</default>
+                <label>Show Ready</label>
+            </value>
+            <value>
+                <fullName>MarketWorks</fullName>
+                <default>false</default>
+                <label>MarketWorks</label>
+            </value>
+            <value>
+                <fullName>Logistics</fullName>
+                <default>false</default>
+                <label>Logistics</label>
+            </value>
+            <value>
+                <fullName>TSE</fullName>
+                <default>false</default>
+                <label>TSE</label>
+            </value>
+            <value>
+                <fullName>UAE</fullName>
+                <default>false</default>
+                <label>UAE</label>
+            </value>
+            <value>
+                <fullName>US - IT</fullName>
+                <default>false</default>
+                <label>US - IT</label>
+            </value>
+            <value>
+                <fullName>Viad</fullName>
+                <default>false</default>
+                <label>Viad</label>
+            </value>
+            <value>
+                <fullName>Viad - IT</fullName>
+                <default>false</default>
+                <label>Viad - IT</label>
+            </value>
+            <value>
+                <fullName>Viad - Legal</fullName>
+                <default>false</default>
+                <label>Viad - Legal</label>
+            </value>
+            <value>
+                <fullName>Visit</fullName>
+                <default>false</default>
+                <label>Visit</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

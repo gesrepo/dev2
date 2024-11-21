@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Staff_Member__c</fullName>
+    <inlineHelpText>Which staff member is working this shift?</inlineHelpText>
+    <label>Staff Member</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Alanna Wall</fullName>
+                <default>false</default>
+                <label>Alanna Wall</label>
+            </value>
+            <value>
+                <fullName>Angie Gay</fullName>
+                <default>false</default>
+                <label>Angie Gay</label>
+            </value>
+            <value>
+                <fullName>Carolyn Akkad</fullName>
+                <default>false</default>
+                <label>Carolyn Akkad</label>
+            </value>
+            <value>
+                <fullName>Colin Allen</fullName>
+                <default>false</default>
+                <label>Colin Allen</label>
+            </value>
+            <value>
+                <fullName>Courtney O&#39;Regan</fullName>
+                <default>false</default>
+                <label>Courtney O&#39;Regan</label>
+            </value>
+            <value>
+                <fullName>Debbie Cox</fullName>
+                <default>false</default>
+                <label>Debbie Cox</label>
+            </value>
+            <value>
+                <fullName>George Marling</fullName>
+                <default>false</default>
+                <label>George Marling</label>
+            </value>
+            <value>
+                <fullName>George Palmer</fullName>
+                <default>false</default>
+                <label>George Palmer</label>
+            </value>
+            <value>
+                <fullName>Helen Misghinna</fullName>
+                <default>false</default>
+                <label>Helen Misghinna</label>
+            </value>
+            <value>
+                <fullName>Helen Wilkes</fullName>
+                <default>false</default>
+                <label>Helen Wilkes</label>
+            </value>
+            <value>
+                <fullName>Jacqueline Martin</fullName>
+                <default>false</default>
+                <label>Jacqueline Martin</label>
+            </value>
+            <value>
+                <fullName>Jacqui Robinson</fullName>
+                <default>false</default>
+                <label>Jacqui Robinson</label>
+            </value>
+            <value>
+                <fullName>Janice Mceachran</fullName>
+                <default>false</default>
+                <label>Janice Mceachran</label>
+            </value>
+            <value>
+                <fullName>Jason Fry</fullName>
+                <default>false</default>
+                <label>Jason Fry</label>
+            </value>
+            <value>
+                <fullName>Josie Berns</fullName>
+                <default>false</default>
+                <label>Josie Berns</label>
+            </value>
+            <value>
+                <fullName>Lauren Broad</fullName>
+                <default>false</default>
+                <label>Lauren Broad</label>
+            </value>
+            <value>
+                <fullName>Lisa Brain</fullName>
+                <default>false</default>
+                <label>Lisa Brain</label>
+            </value>
+            <value>
+                <fullName>Lisa	Shelley</fullName>
+                <default>false</default>
+                <label>Lisa	Shelley</label>
+            </value>
+            <value>
+                <fullName>Liz Cox</fullName>
+                <default>false</default>
+                <label>Liz Cox</label>
+            </value>
+            <value>
+                <fullName>Liz Devey</fullName>
+                <default>false</default>
+                <label>Liz Devey</label>
+            </value>
+            <value>
+                <fullName>Louise Muir</fullName>
+                <default>false</default>
+                <label>Louise Muir</label>
+            </value>
+            <value>
+                <fullName>Margaret Manuel</fullName>
+                <default>false</default>
+                <label>Margaret Manuel</label>
+            </value>
+            <value>
+                <fullName>Nina	Marling</fullName>
+                <default>false</default>
+                <label>Nina	Marling</label>
+            </value>
+            <value>
+                <fullName>Pamela Whitehead</fullName>
+                <default>false</default>
+                <label>Pamela Whitehead</label>
+            </value>
+            <value>
+                <fullName>Sabrina Paiva</fullName>
+                <default>false</default>
+                <label>Sabrina Paiva</label>
+            </value>
+            <value>
+                <fullName>Sarah Jones</fullName>
+                <default>false</default>
+                <label>Sarah Jones</label>
+            </value>
+            <value>
+                <fullName>Sue Hodges</fullName>
+                <default>false</default>
+                <label>Sue Hodges</label>
+            </value>
+            <value>
+                <fullName>Sue Welsh</fullName>
+                <default>false</default>
+                <label>Sue Welsh</label>
+            </value>
+            <value>
+                <fullName>Susan Mayer</fullName>
+                <default>false</default>
+                <label>Susan Mayer</label>
+            </value>
+            <value>
+                <fullName>Tracy Dunn</fullName>
+                <default>false</default>
+                <label>Tracy Dunn</label>
+            </value>
+            <value>
+                <fullName>Angela Wall</fullName>
+                <default>false</default>
+                <label>Angela Wall</label>
+            </value>
+            <value>
+                <fullName>Maria Sullivan</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Maria Sullivan</label>
+            </value>
+            <value>
+                <fullName>Ronnie O&#39;Dea</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Ronnie O&#39;Dea</label>
+            </value>
+            <value>
+                <fullName>Sheena Leach</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Sheena Leach</label>
+            </value>
+            <value>
+                <fullName>Sue Bone</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Sue Bone</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

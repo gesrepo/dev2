@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>GES_Move_In_PY__c</fullName>
+    <description>GES Move-In date based on Show Opportunity Occurrence selected.</description>
+    <formula>Occurrence_for_Plan__r.GES_Move_In__c</formula>
+    <label>GES Move-In</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Date</type>
+</CustomField>

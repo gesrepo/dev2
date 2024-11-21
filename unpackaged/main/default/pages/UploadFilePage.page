@@ -1,0 +1,7 @@
+<apex:page standardController="Booth_Upload__c" extensions="UploadFileController">
+    <apex:form >
+        <apex:outputPanel id="mainBody">
+
+        </apex:outputPanel>
+    </apex:form>
+</apex:page>

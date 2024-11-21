@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>TS_CR_CV_Require_Prime_Contractor</fullName>
+    <active>true</active>
+    <description>If requesting the stage to be set to  TS, you must select a Prime Contractor. Only applies to US Exhibition record types.</description>
+    <errorConditionFormula>AND (
+(OR (ISPICKVAL(Requested_Stage__c, &#39;TS&#39;), 
+ISPICKVAL(StageName, &#39;TS&#39;), 
+ISPICKVAL(Requested_Stage__c, &#39;CR&#39;),
+ISPICKVAL(StageName, &#39;CR&#39;),
+ISPICKVAL(Requested_Stage__c, &#39;CV&#39;),
+ISPICKVAL(StageName, &#39;CV&#39;))),
+
+NOT(LEN( Prime_Contractor__c ) &gt;1),
+
+
+AND(OR(
+CONTAINS(RecordTypeId,&quot;012400000005P1o&quot;),
+CONTAINS(RecordTypeId,&quot;012400000005P0q&quot;),
+CONTAINS(RecordTypeId,&quot;012400000005OK7&quot;),
+CONTAINS(RecordTypeId,&quot;012400000005OKC&quot;),
+CONTAINS(RecordTypeId,&quot;012400000005P6j&quot;),
+CONTAINS(RecordTypeId,&quot;0124000000016VM&quot;),
+CONTAINS(RecordTypeId,&quot;012400000005P1t&quot;),
+CONTAINS(RecordTypeId,&quot;012400000005P5q&quot;),
+CONTAINS(RecordTypeId,&quot;0124000000014HI&quot;),
+CONTAINS(RecordTypeId,&quot;012400000005P5v&quot;),
+CONTAINS(RecordTypeId,&quot;0124000000016VN&quot;),
+CONTAINS(RecordTypeId,&quot;012400000005P0W&quot;),
+CONTAINS(RecordTypeId,&quot;012400000005P6k&quot;))),
+NOT($Profile.Name = &quot;GES Administrator Interface&quot;))</errorConditionFormula>
+    <errorMessage>If requesting the stage to be set to CR, CV or TS, you must select a Prime Contractor.</errorMessage>
+</ValidationRule>

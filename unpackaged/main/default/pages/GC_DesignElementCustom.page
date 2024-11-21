@@ -1,0 +1,17 @@
+<apex:page standardController="GC_Design_Element__c" tabStyle="GC_Design_Element__c" extensions="GC_DESaveController">
+    <apex:form id="myForm">
+        <apex:pagemessages id="messages" />
+        <apex:detail subject="{!GC_Design_Element__c.Id}" relatedList="true" inlineEdit="true" title="true"  rerender="messages"/>
+        
+    </apex:form>
+    <script language="JavaScript" type="text/javascript">
+    var allTdTags = document.getElementsByTagName('td');
+    for (var i = 0; i < allTdTags.length; i++) {
+
+        if (allTdTags[i].className == 'pbButton') {
+            document.getElementsByName('piSubmit')[0].style.display = "none";
+        }
+    }
+    //document.querySelectorAll('[title=GC_Design_LOC_Codes]')[0].style.height = "32px";
+    </script>
+</apex:page>

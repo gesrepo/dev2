@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Profile_Name__c</fullName>
+    <label>Profile Name</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>GC Crown Castle</fullName>
+                <default>false</default>
+                <label>GC Crown Castle</label>
+            </value>
+            <value>
+                <fullName>GC Merck</fullName>
+                <default>false</default>
+                <label>GC Merck</label>
+            </value>
+            <value>
+                <fullName>GC Novo Nordisk</fullName>
+                <default>false</default>
+                <label>GC Novo Nordisk</label>
+            </value>
+            <value>
+                <fullName>GC Sig Sauer</fullName>
+                <default>false</default>
+                <label>GC Sig Sauer</label>
+            </value>
+            <value>
+                <fullName>GT Event Client</fullName>
+                <default>false</default>
+                <label>GT Event Client</label>
+            </value>
+            <value>
+                <fullName>GC BMS Profile</fullName>
+                <default>false</default>
+                <label>GC BMS Profile</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Non_signatory_Contact__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>Key influencer from non-signatory party</description>
+    <inlineHelpText>Name of the contact of the non-signatory firm.</inlineHelpText>
+    <label>Non-signatory Contact</label>
+    <referenceTo>Contact</referenceTo>
+    <relationshipLabel>Shows (Non-signatory Contact)</relationshipLabel>
+    <relationshipName>Shows1</relationshipName>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

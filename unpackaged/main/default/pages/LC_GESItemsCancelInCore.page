@@ -1,0 +1,15 @@
+<apex:page standardController="GC_GES_Order_Task__c" recordSetVar="tasks" extensions="LC_GESItemsSubmitToCoreCtrl">
+    <apex:includeLightning />
+    <div id="displayGESItemsCancelInCore"></div>
+    <script>
+    $Lightning.use("c:LC_GESItemsCancelInCoreApp", function() {
+        $Lightning.createComponent("c:LC_GESItemsCancelInCore",
+                                   { 
+                                       selectedRecords : '{!gots}'
+                                   },
+                                   "displayGESItemsCancelInCore",
+                                   function(component) {
+                                   });
+    });
+    </script>
+</apex:page>

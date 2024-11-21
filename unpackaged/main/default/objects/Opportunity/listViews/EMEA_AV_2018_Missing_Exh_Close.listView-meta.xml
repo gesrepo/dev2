@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>EMEA_AV_2018_Missing_Exh_Close</fullName>
+    <columns>OPPORTUNITY.NAME</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>CORE.USERS.ALIAS</columns>
+    <columns>Start_Date__c</columns>
+    <columns>End_Date__c</columns>
+    <columns>Show_Occurrence__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>OPPORTUNITY.RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Opportunity.EMEA_AV</value>
+    </filters>
+    <filters>
+        <field>Show_Close_Date__c</field>
+        <operation>greaterOrEqual</operation>
+        <value>1/1/2020</value>
+    </filters>
+    <filters>
+        <field>Show_Occurrence__c</field>
+        <operation>equals</operation>
+    </filters>
+    <label>EMEA AV Missing Ex Opportunity</label>
+    <sharedTo>
+        <role>SystemAdministrator</role>
+        <role>System_Support_Admin</role>
+    </sharedTo>
+</ListView>

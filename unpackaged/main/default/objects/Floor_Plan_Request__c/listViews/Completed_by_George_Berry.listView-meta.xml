@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Completed_by_George_Berry</fullName>
+    <columns>NAME</columns>
+    <columns>LAST_UPDATE</columns>
+    <columns>Claimed_By__c</columns>
+    <columns>Production_Location__c</columns>
+    <columns>FPR_Show_Job_Number__c</columns>
+    <columns>FPR_Show_ID__c</columns>
+    <columns>FPR_Facility_ID__c</columns>
+    <columns>FPR_Show_Name__c</columns>
+    <columns>Drafter_Hours_1__c</columns>
+    <columns>FPR_Show_Start_Date__c</columns>
+    <columns>Work_Log_Date_Time_1__c</columns>
+    <columns>Work_Log_Date_Time_2__c</columns>
+    <columns>Drafter_Hours_2__c</columns>
+    <columns>Fast_Track__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Claimed_By__c</field>
+        <operation>equals</operation>
+        <value>George Berry</value>
+    </filters>
+    <filters>
+        <field>Status__c</field>
+        <operation>equals</operation>
+        <value>Complete,Plan Review</value>
+    </filters>
+    <label>Completed by George Berry</label>
+</ListView>

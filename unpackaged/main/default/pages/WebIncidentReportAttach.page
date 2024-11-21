@@ -1,0 +1,33 @@
+<apex:page controller="WebIncidentReportController_Custom" showHeader="false" sidebar="false" standardStylesheets="true">
+
+    <head>
+        <apex:stylesheet value="{!URLFOR($Resource.IncidentReportsForm, 'css/IncidentWebAttachmentForm.css')}"/>
+    </head>
+
+    <body >
+        <div id="content" class="shadow">
+        <div id="header">
+            <apex:image value="{!URLFOR($Resource.IncidentReportsForm, 'images/GESLogo.jpeg')}" />
+            <h1>{!$Label.Attach_Supporting_Documents}</h1>
+        </div>
+            <apex:form >
+                <apex:pageBlock mode="maindetail">
+                <apex:pageMessages />
+                    <apex:pageBlockSection title="Current Attachments" columns="1">
+                        <apex:repeat value="{!attachments}" var="att">
+                            <apex:outputText value="{!att}" />
+                        </apex:repeat>
+                    </apex:pageBlockSection>
+                    <apex:pageBlockSection title="{!$Label.Attach_File}" columns="1">
+                        <apex:inputFile value="{!attach.body}" filename="{!attach.name}"/>
+                        <apex:commandButton action="{!SaveAttachment}" value="{!$Label.Attach_File}" />
+                    </apex:pageBlockSection>
+                    <apex:pageBlockButtons location="bottom">
+                        <apex:commandButton action="{!SubmitReport}" value="{!$Label.Submit_Report}" />
+                        <apex:commandButton action="{!saveWithouSubmitReport}" value="{!$Label.SaveWithoutSubmit}" />
+                    </apex:pageBlockButtons>
+                </apex:pageBlock>
+            </apex:form>
+        </div> 
+    </body>
+</apex:page>

@@ -1,0 +1,22 @@
+<apex:page standardController="Case" extensions="CCShowOpportunityAlertListController" tabStyle="Idea" title="Alerts">
+    <apex:sectionHeader title="Alerts" />
+    
+    <apex:pageBlock rendered="{!AlertsAvailable == true}" tabStyle="Case">
+        <apex:facet name="header" />
+        <!--  <apex:facet name="header"><p style="font-weight: bold;font-size: 16px;">Show Alerts</p></apex:facet> -->
+        
+        <apex:dataTable value="{!ShowOpportunityAlerts}" var="a" cellpadding="4" border="0">
+            <apex:column value="{!a.Message__c}">
+                <apex:facet name="header">Message</apex:facet>
+            </apex:column> <!-- style="color: red;"  -->
+            <apex:column value="{!a.LastModifiedDate}">
+                <apex:facet name="header">Last Edited</apex:facet>
+            </apex:column> <!-- style="color: red;"  -->            
+        </apex:dataTable>
+    </apex:pageBlock>
+    
+    <apex:pageBlock rendered="{!AlertsAvailable == false}">
+        <apex:OutputText value="No alert." />
+    </apex:pageBlock>
+    
+</apex:page>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>EMEA_London_International_Horse_Show_Case</fullName>
+    <filterScope>Queue</filterScope>
+    <label>EMEA London International Horse Show</label>
+    <queue>EMEA_London_International_Horse_Show</queue>
+    <sharedTo>
+        <allInternalUsers />
+    </sharedTo>
+</ListView>

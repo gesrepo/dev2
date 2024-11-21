@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>GES_Account_Manager2__c</fullName>
+    <label>GES Account Manager2</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>true</sorted>
+            <value>
+                <fullName>Aldridge, Hannah</fullName>
+                <default>false</default>
+                <label>Aldridge, Hannah</label>
+            </value>
+            <value>
+                <fullName>Callaway, Carsen</fullName>
+                <default>false</default>
+                <label>Callaway, Carsen</label>
+            </value>
+            <value>
+                <fullName>Carey-Smalls, Fanchon</fullName>
+                <default>false</default>
+                <label>Carey-Smalls, Fanchon</label>
+            </value>
+            <value>
+                <fullName>Dewey, Kaila</fullName>
+                <default>false</default>
+                <label>Dewey, Kaila</label>
+            </value>
+            <value>
+                <fullName>Fletcher, Samantha</fullName>
+                <default>false</default>
+                <label>Fletcher, Samantha</label>
+            </value>
+            <value>
+                <fullName>Kearney, Jaclynn</fullName>
+                <default>false</default>
+                <label>Kearney, Jaclynn</label>
+            </value>
+            <value>
+                <fullName>Medus, Heather</fullName>
+                <default>false</default>
+                <label>Medus, Heather</label>
+            </value>
+            <value>
+                <fullName>O’Connell, Mary</fullName>
+                <default>false</default>
+                <label>O’Connell, Mary</label>
+            </value>
+            <value>
+                <fullName>Platt, Becky</fullName>
+                <default>false</default>
+                <label>Platt, Becky</label>
+            </value>
+            <value>
+                <fullName>Smith, Lindsey</fullName>
+                <default>false</default>
+                <label>Smith, Lindsey</label>
+            </value>
+            <value>
+                <fullName>Versleys, Beth</fullName>
+                <default>false</default>
+                <label>Versleys, Beth</label>
+            </value>
+            <value>
+                <fullName>Villwock, Kelly</fullName>
+                <default>false</default>
+                <label>Villwock, Kelly</label>
+            </value>
+            <value>
+                <fullName>Wagoner, Brian</fullName>
+                <default>false</default>
+                <label>Wagoner, Brian</label>
+            </value>
+            <value>
+                <fullName>Wainman, Ana</fullName>
+                <default>false</default>
+                <label>Wainman, Ana</label>
+            </value>
+            <value>
+                <fullName>Ward, Nick</fullName>
+                <default>false</default>
+                <label>Ward, Nick</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

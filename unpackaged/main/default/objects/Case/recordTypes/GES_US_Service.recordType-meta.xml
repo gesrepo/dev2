@@ -1,0 +1,2353 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>GES_US_Service</fullName>
+    <active>true</active>
+    <businessProcess>GES US Service</businessProcess>
+    <compactLayoutAssignment>US_Case_layout</compactLayoutAssignment>
+    <description>Default record type for all GES US Cases created by National Servicenter or others in GES US</description>
+    <label>GES US Service</label>
+    <picklistValues>
+        <picklist>ACCC_Status__c</picklist>
+        <values>
+            <fullName>Mail has been sent for requesting CC</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Open</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>received and Validated CC</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Contact_Status__c</picklist>
+        <values>
+            <fullName>1st Attempt Made</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2nd Attempt Made</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>3rd Attempt Made</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Exh Contacted</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Final Attempt Made</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Not Applicable</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Credit_Memo_Code__c</picklist>
+        <values>
+            <fullName>01-Wrong Price%2FRate%2FQuote</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>02-Wrong Qty%2Fweight%2Fhours</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>03-Didn%E2%80%99t order</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>04-Billed wrong cust%2FRebill</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>05-Surchrg%2FOffTarget%2FLte Whse</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>06-Dupe Billing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>07-Insufficient Documentation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>08-Wrong Item Billed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>09-Supervision charge error</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>10-Good Faith</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>11-Bill to Association</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>12-Cancelled%2FDidn%E2%80%99t attend</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>13-Not Used</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>14-Service Failure%2FDidn%E2%80%99t rcv</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>15-Logistics Good Faith</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>16-Legal Settlement</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>17-Trans%2FDisc Not Applied</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>18-OB %2FIB Quote not matched</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>19-Operation Error</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>20-Order Error</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>21-Tax Exempt</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Customer_Type__c</picklist>
+        <values>
+            <fullName>Carrier</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EAC</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Exhibitor</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>GES</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Non-Tradeshow</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SMS Message</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SMS Message - Open</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Show Management</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Third Party</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Delete_This_Case__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Escalated_To__c</picklist>
+        <values>
+            <fullName>1 - Senior Management</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2 - Director</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>3 - Supervisor</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>4 - Escalation Rep</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>5 - Resolutions</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>6 - City</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>7 - Order Entry</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>8 - None</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>9 - Support Desk</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>GES_Type__c</picklist>
+        <values>
+            <fullName>Audio Visual</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Billing Error%2FDispute</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Callback</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cancellation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Carpet%2FFlooring Inquiry</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Complaint</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Complaint - Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Complaint - Rude Staff</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Compliment</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Dispute</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Documentation Request</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Electrical</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Exhibitor List</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Furnishings</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ghost Call</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Graphics</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Insurance Requests %28New Type to Create%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Invoice Request</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Invoice%2FOrder Confirmation Explanation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Labor</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lead Generation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Logistics Lead</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Logistics%2FFreight</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mobile App</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Non-Rev Form%28s%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Non-Tradeshow</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>On-Line Order</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Online Issue</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Order Confirmation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Order%28s%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Price</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Problem Order - COI%2FEAC%2FNOI</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Problem Order - CSM Review</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Problem Order - Incomplete Payment</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Problem Order - KIT %2F IT Issues</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Problem Order%28s%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>R3 Form Received</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Show Info</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Show Info%2FBooth Info</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Survey Follow Up</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Track</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Twilio Automatic Case Closure</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Twilio Automatic Case Creation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Visit</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Origin</picklist>
+        <values>
+            <fullName>Campaign</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Chat</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Email</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Email - US_GSMA_Emails</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Fax</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mail</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Outbound</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Phone</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Showsite</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Social Media</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Survey Follow Up</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Text</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Voicemail</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Web</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Priority</picklist>
+        <values>
+            <fullName>--None--</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>First Call Resolution</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>High Priority</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Low Priority</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Medium Priority</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Urgent</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Product_Service_Offerings__c</picklist>
+        <values>
+            <fullName>N%2FA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Offered-Accepted</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Offered-Declined</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Reason</picklist>
+        <values>
+            <fullName>Define</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Reason__c</picklist>
+        <values>
+            <fullName>24 Hour Power</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>3rd  Party - Account Creation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>3rd Party</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>3rd Party - Billing Services Missing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>3rd Party Assistance</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>AV</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Adv Receiving</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Agreements and Rules and Regulations %283rd Party %2F EAC to Sign%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Alerts</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Alternate Options</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>App Availability</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Assisted with what item to order</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Availability</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bad Debt %2F Write Off</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Badge Information</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Balance Payment - CC</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bill of Lading</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Booth Dimensions</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Booth Dimensions %2F Number Verification</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Booth Layout Assistance</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Booth Layout%2FFloor Plan</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Booth Number Request</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Booth Package</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Booth Package Request  - Processed in Core</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Booth Status - Verification</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Booth Status Update</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Can%E2%80%99t Place Order - Exhibitor</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Can%E2%80%99t Place Order -3rd Party</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cancellation of Order%28s%29 %2F Item%28s%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cancelled from Show</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Carpet</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Carpet Pricing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Complaint - Ease of Use</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Complaint - Exhibitor Info Incorrect</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Complaint - Performance</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Confirm Received</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Confirmed Files Received</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Courtesy Email - Double Padding and%2For Plastic Covering %28Visqueen%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Courtesy Email - Electrical%2FPlumbing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Courtesy Email - Flooring Verification</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Courtesy Email - Furniture Items</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Credit Card - Declined or Invalid</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Credit Card Charge</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Credit Card Refund</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Custom Booth Interest</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Custom Booth Quote requested</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Custom Carpet Quote requested</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Custom Flooring Interest</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Custom Graphics Request</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Damaged Freight</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Dimension Request</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Dimensions</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Discount Deadline</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Duplicate Order%28s%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EAC Assistance</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EAC Form</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Electrical</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Electrical Requirements</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Employment</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Error Message</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Exhibitor Appointed Contractor Request %28Exhibitor to Sign%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Exhibitor Not in Show</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Explained forms needed to complete order</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Fax</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Final Invoice</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Floor Plan Request</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Flooring - Dye Lots and Seams Verification</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Forced Freight</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Fork Lift</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Formatting Inquiry</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Forms Requested by PDF</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Freight - Reroute</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Freight - Upgrade</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Freight Storage Request - Processed in Core</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Freight-Misload</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Frozen%2FRefrigerated Storage</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Furnishing Pricing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Furnishings</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Furniture %2F Wallpaper %2F Panel Issues</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>GES</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>GES Logistics</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>GES Logistics - Domestic</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>GES Logistics - International</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>General Contractor Quote Requested</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Graphics</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hanging Sign</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hanging Sign - Pending Approval</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IT Issue - Configurator Options Incorrect %2F Missing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IT Issue - Core Error</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Incorrect Pricing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Incorrect Show Info</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Installation %26 Dismantle</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Invoice %2FOrder Confirmation Breakdown</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Janitorial</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>KIT Issue - Core Pricing vs%2E Expresso Pricing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>KIT Issue - Item Code Not on Pricing List</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>KYS - Instructions Pending</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Labor</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Labor - Staff</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Labor Pricing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Logistics Rates</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Manual Requested</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Manual Requested - Not Created</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Marshalling Yard</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Material</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Material Handling</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Material Handling Rates</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Missed Pickup</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Missing Freight</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Missing Freight - Entire Shipment</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Missing Freight - Specific Pieces</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Money Move %2F Refund Request</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Money Move Requested</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Moved to Callback Queue</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Multiple Areas</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NSC Staff</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Name%2FAddress Change</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Navigation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Caller on the Line</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Response</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Non GES Vendor Information</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>OE Cannot Enter - Booth Dimensions Don%27t Match Order</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>OE Cannot Enter - Carpet Removal - Dimensions Not Indicated</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>OE Cannot Enter - Electrical Issues</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>OE Cannot Enter - Furniture%2FWallpaper%2FPanel Issues</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>OE Cannot Enter - No Booth Dimensions</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>OE Cannot Enter - Not in Core</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Off Target</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Order - Adjustment Requested</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Order - Cancellation Requested</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Order - Confirmation Request</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Order Confirmation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Order Status</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Orders Moved - Incorrect Customer %2F Booth %23</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Orders Moved - Tax Exempt</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Package - Quantity Verification</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pending - CSM Review Pending</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pending - Contacts %2F Emails Missing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pending - Unclear List</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pending - Zone Files Missing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Photo Request</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Photos</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Placed Order</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Plumbing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Possible 3rd Party</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pre-Printed Outbound Labels %28BOL%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pricing - Item not in manual</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pricing - Item not on Expresso</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pricing Inquiry</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pricing Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Priority%2B</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Proof of Insurance Form</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>R3 Form Entered into Core Freight</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Receivers</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Referred to Vertikal %28COI Request%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Refund %2F Money Move %28w%2Fo new order%28s%29 created%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rejection Email Sent</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Requested submission information</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Required%3F</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Return to Warehouse</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Reviewed Full Manual%2F 1st Time Exhibitor</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Robo Call</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rude Staff - NSC</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rude Staff - Show Site</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SR Request</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Show Not Available</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Show Organizer Order - Pending Entry</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Show Site Experience</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Show Site Issue</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Show Site Staff</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Show Specific Order Forms</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Show Workbench - Discount Dates</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Show Workbench - Inactive</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Showsite Del%2FP-U</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Site Down</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sizing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Stage Hand</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Storage Inquiry</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Survey Follow Up</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Target Date</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tax Exempt - Exhibitor Form Update Pending</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tax Exempt - Tax Dept%2E Approval Pending</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tax ID</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tracked Forced Freight</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tracked GES - Domestic</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tracked GES - International</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tracked Non GES Carrier</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Travel Restriction</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>UBL - Booth Layout</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>UBL - Electrical %2F Plumbing Layout</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>UBL - Equipment Questionnaire</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>UBL - Flooring Opt Out Request</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>UBL - Freight Package Requests %28Freight %2B%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>UBL - Freight Service Questionnaire</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>UBL - Furniture Opt Out Request</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>UBL - Graphics Details %2F Layout</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>UBL - Hanging Sign Layout</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>UBL - Key Information</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>UBL - Target Variance Request</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>UBL - Vehicle %26 Oversized Equipment Request</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>US - Assistance Placing Order</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>US - Assistance With Shell Scheme %2F Package</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>US - Booth Info</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>US - Change or Cancel Order</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>US - Confirm Order</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>US - General Service Info</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>US - Log In or Reset Password</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>US - Submit Forms or Credit Card</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>US - Technical Issue</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Unable to Submit Order</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Upload Information - FTP Site</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Upload Request</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Urgent Order - Specialty Items %2F Custom Cut Carpet Pending Approval</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>User Error Log In Error</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Vehicle Placement</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Vendor</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Visit Assistance</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Work Orders</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Refund_Adj_Reason_Code__c</picklist>
+        <values>
+            <fullName>Audio Visual</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cancelled order</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Check%2FWire received after Credit Card was Charged</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Customer Cancelled from Show</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Discount given</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Freight</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Furnishings%2FDeco</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Graphics</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Honor discount deadline rates</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Install and Dismantle</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Labor</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Logistics</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Order entry error</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Overpayment on account</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TSE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Wrong Account Billed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Wrong Credit Card Charged</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Wrong amount billed to CC</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Resolution__c</picklist>
+        <values>
+            <fullName>Account Details Amended</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Adjusted Company Name%2FAddress</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Adjusted Contact Info</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Amended Order</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Assisted With Order Forms</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Assisted with Expresso navigation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Assisted with Online Issue</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Assisted with selection</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Assisted with what item to order</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CAS - EL Rejected %2F Not Uploaded</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CAS - Exhibitor List Booth %23%27s %2F Dims Updated</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CAS - Initial EL Uploaded</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CAS - Revised EL Uploaded</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CM Processed %E2%80%93 City Approved</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CM Processed %E2%80%93 NSC Approved</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Callback Already Resolved</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Compliment Received</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Compliment documented</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Confirmed Delivery Address</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Confirmed Freight Received</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Confirmed Order</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Confirmed Order Entered in CORE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Confirmed Order Received</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Confirmed Order Received %28Expresso%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Confirmed Order Received %28Fax%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Confirmed Package Infomation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Confirmed Stand Type</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Confirmed Tax Exemption</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Courtesy Credit</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Created Opportunity</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Credit Memo Processed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Duplicate - NFAR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Exhibitor Bringing Their Own</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Exhibitor List Complete</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Exhibitor Manual Provided</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Explained 3rd Party</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Explained Charges - Exhibitor Satisfied</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Explained Charges - Exhibitor Unsatisfied but understands</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Explained EAC</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Explained Forms</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Explained Pricing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Explained Process</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Explained Service%28s%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Explained Storage Options</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Explained forms needed to complete order</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Further Information Requested from Exhibitor</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Honored Discount Pricing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Kit - Provided Expresso Technical Support</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Kit - Provided Expresso Technical Support - Required Development</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>LG - Created Opportunity</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>LG - Standard item available</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Longer Attending Show</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Response</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Response from Exh</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No response from Exhibitor</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>OE - 3rd Party Billing Confirmed %2F Orders Booked</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>OE - 3rd party Account Created %2F Orders Booked</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>OE - CSM to Enter Order %28Show Org Request%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>OE - Confirmed Booth Status</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>OE - Confirmed Booth dimensions %2F Number</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>OE - Courtesy Email %2F No Response Required</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>OE - IT Issue Resolved - Order%28s%29 Booked</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>OE - Item Quantities Updated</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>OE - KIT Issue Resolved - Order%28s%29 Booked</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>OE - Money Move Complete %2F Refund Complete</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>OE - NOI%2FEAC form Processed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>OE - Non Rev Form%28s%29 - UBL %26 Booth Status Update</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>OE - Non Rev Form%28s%29 - UBL Only</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>OE - Order Cancellation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>OE - Order Revisions Not Needed %28Duplicate%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>OE - Order%28s%29 Booked</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>OE - Order%28s%29 Paid in Full</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>OE - Referred to Service Desk</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>OE - Referred to Vertikal %28COI Request%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>OE - Rejection Email Sent %2F Response Not Required</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>OE - Tax Request Approved %2F Orders Re-entered</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Order - Changed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Order - Corrected</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Order - Entered</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Order - Entered through Impersonation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Order - Printed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Order Amended</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Order Not Entered - Duplicate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Orders - Cancelled</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Payment Processed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Payment Transferred %28Money Move%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Payment requested</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Placed Order</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Processed Non-Rev Form %28OE%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Provided Address</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Provided Booth Dimensions</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Provided Brochure</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Provided Contact Details</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Provided Dates%2FTimes</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Provided Dimensions</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Provided Documents</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Provided Email Address</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Provided Exhibitor Manual %28PDF%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Provided Fax %23</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Provided Floor Plan%2FBooth Layout</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Provided Form%28s%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Provided Invoice</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Provided Kit Link</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Provided Link to Expresso Site</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Provided Non GES Vendor Contact Information</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Provided Non GES Vendor Information</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Provided Order Confirmation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Provided Photos</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Provided Quote</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Provided Shipment Information</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Provided Target Dates</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Provided Track %26 Tracing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Provided User ID</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Provided Vendor Information</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Provided Visit Info</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Provided Warehouse Hours</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Provided requested forms</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Provided requested info</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Quote%2Fassistance provided</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>RES - Dispatch Load Sheet %28DLS%29 Processed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>RES - Reroute Completed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>RES - Upgrade Completed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Re-Billed to 3rd Party</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Re-Billed to Exhibitor</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Referred to Carrier</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Referred to City</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Referred to Claims</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Referred to Credit Control</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Referred to Customs Broker</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Referred to E%26E</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Referred to Europe</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Referred to Exhibitor</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Referred to Exhibitor Sales</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Referred to Expresso</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Referred to GES Canada%2FInternational</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Referred to GES Electrical</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Referred to GES Intl Logistics</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Referred to GES Logistics</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Referred to Graphics</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Referred to Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Referred to Service Desk at Showsite</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Referred to Show Management</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Referred to Supplier</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Referred to Venue</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Referred to Warehouse</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Refund Applied</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Refund Applied %E2%80%93 City Approved</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Refund Applied %E2%80%93 NSC Approved</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Refund Denied</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Refund Denied %E2%80%93 City Denied</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Refund Denied %E2%80%93 NSC Denied</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Reroute Completed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Resolved Through Expresso Impersonation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Responded to Survey</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SR Cancelled</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SR Duplicate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SR Released</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sent Exhibitor Manual</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Shipment Booked</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Show Closed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Spam%2F Promototional - NFAR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Standard item available</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Survey Follow Up</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Unable to provide form%2Fdetails %E2%80%93 Unauthorized</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Upgrade Completed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Urgent Status - No Response</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Send_CORE_SQR_Status__c</picklist>
+        <values>
+            <fullName>Closed</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>In Process</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Show_Status__c</picklist>
+        <values>
+            <fullName>1-Pre</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2-Showsite</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>3-Post</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>4-Non Tradeshow-N%2FA</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Substatus__c</picklist>
+        <values>
+            <fullName>Audit Complete</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Audit in Process</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Call Back - No Contact Made</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Exhibitor List Pending Upload%2FUpdate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>File Request From Archivist</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Graphics</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ICS Complete</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Known Error</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Needs Pre-Show Assistance</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>None Required</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Order Entered</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pending Expresso Issue</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pending Kit Finalization</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Printed by City Office</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TSE Only Show - Waiting for Entry</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Waiting GES Electric Response</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Waiting GES Operation Response</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Waiting Show Site Follow Up</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Waiting for CR%2FRF Decision</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Waiting for City Response</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Waiting for Customer - Information</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Waiting for Customer - Response</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Waiting for Delivery</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Waiting for Entry</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Waiting for Printing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Waiting for Quote</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Waiting for Reroute%2FUpgrade</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Waiting on A%2FR Process</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Waiting on Credit Card Info</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Waiting on Files</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Waiting on IT Help Desk</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Waiting on Invoice Breakdown</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Waiting on NSC Support Desk</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Waiting on Order Forms</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Waiting on Response from Intl</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Waiting on Verification of City</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Type</picklist>
+        <values>
+            <fullName>Feature Request</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Problem</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Question</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Web_Type__c</picklist>
+        <values>
+            <fullName>Charge Inquiry</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Invoice Inquiry</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Work_Type__c</picklist>
+        <values>
+            <fullName>Issue</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Project</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Request</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

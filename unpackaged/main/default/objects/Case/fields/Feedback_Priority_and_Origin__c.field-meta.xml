@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Feedback_Priority_and_Origin__c</fullName>
+    <description>Displays images representing priority and origin. A heart will be displayed is this is associated with a  &quot;VIP&quot; Account. And warning symbol will appear is this case is &quot;Severe&quot;</description>
+    <externalId>false</externalId>
+    <formula>IF( Account.VIP_Client__c , IMAGE(&quot;https://na2.salesforce.com/servlet/servlet.ImageServer?oid=00DOx000008V1mQ&amp;id=01540000001EACA&quot;, &quot;*&quot;, 16, 16), &quot;&quot;) 
+
++
+
+
+IF(  Severe__c  , IMAGE(&quot;https://na2.salesforce.com/servlet/servlet.ImageServer?oid=00DOx000008V1mQ&amp;id=01540000001EA9F&quot;, &quot;*&quot;, 16, 16), &quot;&quot;) 
+
++
+(IF(  TEXT(   Priority ) = &quot;High Priority&quot;,
+ IMAGE(&quot;https://na2.salesforce.com/servlet/servlet.ImageServer?oid=00DOx000008V1mQ&amp;id=01540000001EABK&quot;, &quot;*&quot;, 16, 16) , 
+
+(IF(  TEXT( Priority ) = &quot;Medium Priority&quot;,
+  IMAGE(&quot;https://na2.salesforce.com/servlet/servlet.ImageServer?oid=00DOx000008V1mQ&amp;id=01540000001EABE&quot;, &quot;*&quot;, 16, 16) ,
+
+(IF(  TEXT( Priority ) = &quot;Low Priority&quot;,
+ IMAGE(&quot;https://na2.salesforce.com/servlet/servlet.ImageServer?oid=00DOx000008V1mQ&amp;id=01540000001EABC&quot;, &quot;*&quot;, 16, 16) ,
+
+ &quot;&quot;))))))
+
++
+
+
+
+
+(IF( TEXT( Origin) = &quot;Chat&quot;, 
+IMAGE(&quot;https://na2.salesforce.com/servlet/servlet.ImageServer?oid=00DOx000008V1mQ&amp;id=01540000001EAKW&quot;, &quot;*&quot;, 16, 16) , 
+
+(IF( TEXT( Origin) = &quot;Email&quot;, 
+IMAGE(&quot;https://na2.salesforce.com/servlet/servlet.ImageServer?oid=00DOx000008V1mQ&amp;id=01540000001EAA0&quot;, &quot;*&quot;, 16, 16) , 
+
+(IF( TEXT( Origin) = &quot;Fax&quot;, 
+IMAGE(&quot;https://na2.salesforce.com/servlet/servlet.ImageServer?oid=00DOx000008V1mQ&amp;id=01540000001EAGf&quot;, &quot;*&quot;, 16, 16) , 
+
+(IF( TEXT( Origin) = &quot;Phone&quot;, 
+IMAGE(&quot;https://na2.salesforce.com/servlet/servlet.ImageServer?oid=00DOx000008V1mQ&amp;id=01540000001EAG4&quot;, &quot;*&quot;, 16, 16) , 
+
+(IF( TEXT( Origin) = &quot;Showsite&quot;, 
+IMAGE(&quot;https://na2.salesforce.com/servlet/servlet.ImageServer?oid=00DOx000008V1mQ&amp;id=01540000001EAIo&quot;, &quot;*&quot;, 16, 16) , 
+
+(IF( TEXT( Origin) = &quot;Social Media&quot;, 
+IMAGE(&quot;https://na2.salesforce.com/servlet/servlet.ImageServer?oid=00DOx000008V1mQ&amp;id=01540000001EAG3&quot;, &quot;*&quot;, 16, 16) , 
+
+(IF( TEXT( Origin) = &quot;Voicemail&quot;, 
+IMAGE(&quot;https://na2.salesforce.com/servlet/servlet.ImageServer?oid=00DOx000008V1mQ&amp;id=01540000001EAG6&quot;, &quot;*&quot;, 16, 16) , 
+
+(IF( TEXT( Origin) = &quot;Web&quot;, 
+IMAGE(&quot;https://na2.salesforce.com/servlet/servlet.ImageServer?oid=00DOx000008V1mQ&amp;id=01540000001EA8x&quot;, &quot;*&quot;, 16, 16) , 
+
+(IF( TEXT( Origin) = &quot;Outbound&quot;, 
+IMAGE(&quot;https://na2.salesforce.com/servlet/servlet.ImageServer?oid=00DOx000008V1mQ&amp;id=01540000001EA7M&quot;, &quot;*&quot;, 16, 16) , 
+
+(IF( TEXT( Origin) = &quot;Verbal (pre-show)&quot;, 
+IMAGE(&quot;https://na2.salesforce.com/servlet/servlet.ImageServer?oid=00DOx000008V1mQ&amp;id=01540000001EACf&quot;, &quot;*&quot;, 16, 16) , &quot;&quot;))))))))))))))))))))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Feedback - Priority and Origin</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

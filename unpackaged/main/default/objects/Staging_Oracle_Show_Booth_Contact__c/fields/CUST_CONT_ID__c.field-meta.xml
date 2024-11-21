@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CUST_CONT_ID__c</fullName>
+    <description>Stores values from Oracle Show Occurrence Booth Contact XGES_SW_CUST_CONT.CUST_CONT_ID column.</description>
+    <externalId>false</externalId>
+    <label>Customer Booth Contact ID</label>
+    <length>15</length>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

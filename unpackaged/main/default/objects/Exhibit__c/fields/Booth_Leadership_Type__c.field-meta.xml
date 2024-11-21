@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Booth_Leadership_Type__c</fullName>
+    <label>Booth Leadership Type</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Secondi</fullName>
+                <default>false</default>
+                <label>Secondi</label>
+            </value>
+            <value>
+                <fullName>Agency</fullName>
+                <default>false</default>
+                <label>Agency</label>
+            </value>
+            <value>
+                <fullName>New Brand</fullName>
+                <default>false</default>
+                <label>New Brand</label>
+            </value>
+            <value>
+                <fullName>Repeat Brand</fullName>
+                <default>false</default>
+                <label>Repeat Brand</label>
+            </value>
+            <value>
+                <fullName>Rotation Brand</fullName>
+                <default>false</default>
+                <label>Rotation Brand</label>
+            </value>
+            <value>
+                <fullName>Medical Director</fullName>
+                <default>false</default>
+                <label>Medical Director</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

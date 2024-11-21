@@ -1,0 +1,538 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Facility_AV_Provider_Type__c</fullName>
+    <label>AV Provider Type</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Facility_AV_Provider__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Preferred</fullName>
+                <default>false</default>
+                <label>Preferred</label>
+            </value>
+            <value>
+                <fullName>Exclusive</fullName>
+                <default>false</default>
+                <label>Exclusive</label>
+            </value>
+            <value>
+                <fullName>Open</fullName>
+                <default>false</default>
+                <label>Open</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Leading Authorities</controllingFieldValue>
+            <controllingFieldValue>LMG</controllingFieldValue>
+            <controllingFieldValue>OSA International</controllingFieldValue>
+            <controllingFieldValue>Ovation</controllingFieldValue>
+            <controllingFieldValue>Palazzo Lighting</controllingFieldValue>
+            <controllingFieldValue>Pixel</controllingFieldValue>
+            <controllingFieldValue>Planitomaha</controllingFieldValue>
+            <controllingFieldValue>Prestige Audio Visual</controllingFieldValue>
+            <controllingFieldValue>PRG</controllingFieldValue>
+            <controllingFieldValue>Markey’s Stage Production</controllingFieldValue>
+            <controllingFieldValue>Production Association</controllingFieldValue>
+            <controllingFieldValue>Marks Productions</controllingFieldValue>
+            <controllingFieldValue>Production World</controllingFieldValue>
+            <controllingFieldValue>Mass AV</controllingFieldValue>
+            <controllingFieldValue>Projection</controllingFieldValue>
+            <controllingFieldValue>McCune</controllingFieldValue>
+            <controllingFieldValue>Meeting Services International (MSI)</controllingFieldValue>
+            <controllingFieldValue>Merkel</controllingFieldValue>
+            <controllingFieldValue>Metro MultiMedia</controllingFieldValue>
+            <controllingFieldValue>MIG</controllingFieldValue>
+            <controllingFieldValue>American AV</controllingFieldValue>
+            <controllingFieldValue>Mike Mallinson</controllingFieldValue>
+            <controllingFieldValue>ASP Group</controllingFieldValue>
+            <controllingFieldValue>MIS Audio Visual Services</controllingFieldValue>
+            <controllingFieldValue>Atlanta AV</controllingFieldValue>
+            <controllingFieldValue>Audio Visual One</controllingFieldValue>
+            <controllingFieldValue>Audio Visual One, Ltd.</controllingFieldValue>
+            <controllingFieldValue>Audio Visual Technology Services (AVTS)</controllingFieldValue>
+            <controllingFieldValue>AV-Canada</controllingFieldValue>
+            <controllingFieldValue>AV Concepts</controllingFieldValue>
+            <controllingFieldValue>AV Connections</controllingFieldValue>
+            <controllingFieldValue>AV Experience</controllingFieldValue>
+            <controllingFieldValue>PSAV</controllingFieldValue>
+            <controllingFieldValue>Pulse Staging</controllingFieldValue>
+            <controllingFieldValue>Absolute Productions</controllingFieldValue>
+            <controllingFieldValue>Random International</controllingFieldValue>
+            <controllingFieldValue>Access Audio Visual</controllingFieldValue>
+            <controllingFieldValue>Razor Exhibits</controllingFieldValue>
+            <controllingFieldValue>ADM</controllingFieldValue>
+            <controllingFieldValue>Reaction AV</controllingFieldValue>
+            <controllingFieldValue>AEE Productions</controllingFieldValue>
+            <controllingFieldValue>Rick Bloom Audio Visual</controllingFieldValue>
+            <controllingFieldValue>Aesthetic Visual Solutions</controllingFieldValue>
+            <controllingFieldValue>Riverview Systems</controllingFieldValue>
+            <controllingFieldValue>AG Light and Sound</controllingFieldValue>
+            <controllingFieldValue>Rosemont in house</controllingFieldValue>
+            <controllingFieldValue>Alford Media</controllingFieldValue>
+            <controllingFieldValue>Royal Productions</controllingFieldValue>
+            <controllingFieldValue>Alliance AV</controllingFieldValue>
+            <controllingFieldValue>RRG</controllingFieldValue>
+            <controllingFieldValue>Alliant</controllingFieldValue>
+            <controllingFieldValue>AVI SPL</controllingFieldValue>
+            <controllingFieldValue>AV Matters</controllingFieldValue>
+            <controllingFieldValue>AV Network</controllingFieldValue>
+            <controllingFieldValue>AV Outsource</controllingFieldValue>
+            <controllingFieldValue>AV Partners</controllingFieldValue>
+            <controllingFieldValue>AVPG</controllingFieldValue>
+            <controllingFieldValue>AV PRO</controllingFieldValue>
+            <controllingFieldValue>AVPS - Audio Visual Production Services</controllingFieldValue>
+            <controllingFieldValue>avts group</controllingFieldValue>
+            <controllingFieldValue>Backstage Logic</controllingFieldValue>
+            <controllingFieldValue>Sands AV</controllingFieldValue>
+            <controllingFieldValue>Sardis Media</controllingFieldValue>
+            <controllingFieldValue>Seamless Event Solutions</controllingFieldValue>
+            <controllingFieldValue>Self Provided</controllingFieldValue>
+            <controllingFieldValue>SES</controllingFieldValue>
+            <controllingFieldValue>Show Gear Productions</controllingFieldValue>
+            <controllingFieldValue>ShowTec</controllingFieldValue>
+            <controllingFieldValue>Smart City</controllingFieldValue>
+            <controllingFieldValue>Smart Source</controllingFieldValue>
+            <controllingFieldValue>Solin AV</controllingFieldValue>
+            <controllingFieldValue>Bartha</controllingFieldValue>
+            <controllingFieldValue>Bartha Audio Visual</controllingFieldValue>
+            <controllingFieldValue>BAV Services</controllingFieldValue>
+            <controllingFieldValue>Bear AV</controllingFieldValue>
+            <controllingFieldValue>Bishop McCann</controllingFieldValue>
+            <controllingFieldValue>Broadstreet</controllingFieldValue>
+            <controllingFieldValue>CCR Events</controllingFieldValue>
+            <controllingFieldValue>CEAVCO</controllingFieldValue>
+            <controllingFieldValue>Cenero</controllingFieldValue>
+            <controllingFieldValue>Center Stage AV</controllingFieldValue>
+            <controllingFieldValue>Southwest AV</controllingFieldValue>
+            <controllingFieldValue>Specialized Event Services</controllingFieldValue>
+            <controllingFieldValue>Spectrum Audio Visual</controllingFieldValue>
+            <controllingFieldValue>Stage-it Inc.</controllingFieldValue>
+            <controllingFieldValue>Stagevision Inc.</controllingFieldValue>
+            <controllingFieldValue>Synergy - Mobiletape</controllingFieldValue>
+            <controllingFieldValue>T3</controllingFieldValue>
+            <controllingFieldValue>Tallen Technology Rentals</controllingFieldValue>
+            <controllingFieldValue>TECHNOLOGY RESOURCE CORPORATION</controllingFieldValue>
+            <controllingFieldValue>Temporary Technology</controllingFieldValue>
+            <controllingFieldValue>Century Audio Visual</controllingFieldValue>
+            <controllingFieldValue>Clark’s Audio Visual Services, Ltd.</controllingFieldValue>
+            <controllingFieldValue>CMI Communications</controllingFieldValue>
+            <controllingFieldValue>Concept X</controllingFieldValue>
+            <controllingFieldValue>Cornerstone AV</controllingFieldValue>
+            <controllingFieldValue>Cornerstone Technologies</controllingFieldValue>
+            <controllingFieldValue>Creative Technology</controllingFieldValue>
+            <controllingFieldValue>CRS Rental</controllingFieldValue>
+            <controllingFieldValue>Datasis Corp</controllingFieldValue>
+            <controllingFieldValue>David Michael Productions</controllingFieldValue>
+            <controllingFieldValue>Touch</controllingFieldValue>
+            <controllingFieldValue>TPI Productions</controllingFieldValue>
+            <controllingFieldValue>Trade Show Technical</controllingFieldValue>
+            <controllingFieldValue>Unbridled Solutions</controllingFieldValue>
+            <controllingFieldValue>Unknown</controllingFieldValue>
+            <controllingFieldValue>VAE</controllingFieldValue>
+            <controllingFieldValue>VCI Event Technology</controllingFieldValue>
+            <controllingFieldValue>VEP</controllingFieldValue>
+            <controllingFieldValue>Video West, Inc.</controllingFieldValue>
+            <controllingFieldValue>Visual Technologies</controllingFieldValue>
+            <controllingFieldValue>Directions AV</controllingFieldValue>
+            <controllingFieldValue>DMP Productions</controllingFieldValue>
+            <controllingFieldValue>Dodd Technologies</controllingFieldValue>
+            <controllingFieldValue>Encore AV</controllingFieldValue>
+            <controllingFieldValue>EPRAV Productions</controllingFieldValue>
+            <controllingFieldValue>etech</controllingFieldValue>
+            <controllingFieldValue>ETS (Event Technology Services)</controllingFieldValue>
+            <controllingFieldValue>EventEQ</controllingFieldValue>
+            <controllingFieldValue>Evolution</controllingFieldValue>
+            <controllingFieldValue>Fastforward Marketing Communications</controllingFieldValue>
+            <controllingFieldValue>Viva</controllingFieldValue>
+            <controllingFieldValue>Volume Eventz</controllingFieldValue>
+            <controllingFieldValue>VSC AV</controllingFieldValue>
+            <controllingFieldValue>VX3</controllingFieldValue>
+            <controllingFieldValue>Webb Audio Visual</controllingFieldValue>
+            <controllingFieldValue>Williams/Gerard Productions</controllingFieldValue>
+            <controllingFieldValue>World Stage</controllingFieldValue>
+            <controllingFieldValue>Fern Exposition &amp; Events</controllingFieldValue>
+            <controllingFieldValue>Four Moon Productions</controllingFieldValue>
+            <controllingFieldValue>Freeman AV</controllingFieldValue>
+            <controllingFieldValue>Freestyle Productions</controllingFieldValue>
+            <controllingFieldValue>Frischkorn MEDIACO</controllingFieldValue>
+            <controllingFieldValue>Front Runner Productions</controllingFieldValue>
+            <controllingFieldValue>Gary Musick Productions</controllingFieldValue>
+            <controllingFieldValue>Glickman Productions</controllingFieldValue>
+            <controllingFieldValue>Group Incorporated</controllingFieldValue>
+            <controllingFieldValue>Hargrove</controllingFieldValue>
+            <controllingFieldValue>Harvest Productions, Inc.</controllingFieldValue>
+            <controllingFieldValue>Heroic Productions</controllingFieldValue>
+            <controllingFieldValue>Honeysweet Productions</controllingFieldValue>
+            <controllingFieldValue>Hotel Direct</controllingFieldValue>
+            <controllingFieldValue>Image Technologies</controllingFieldValue>
+            <controllingFieldValue>Impact Lighting &amp; Production</controllingFieldValue>
+            <controllingFieldValue>IMS</controllingFieldValue>
+            <controllingFieldValue>Inland AV</controllingFieldValue>
+            <controllingFieldValue>invert720 productions inc</controllingFieldValue>
+            <controllingFieldValue>InVision</controllingFieldValue>
+            <controllingFieldValue>MP Productions</controllingFieldValue>
+            <controllingFieldValue>MSI</controllingFieldValue>
+            <controllingFieldValue>M Squared Onstage</controllingFieldValue>
+            <controllingFieldValue>NMR</controllingFieldValue>
+            <controllingFieldValue>No Provider</controllingFieldValue>
+            <controllingFieldValue>Not Yet Contracted</controllingFieldValue>
+            <controllingFieldValue>Occam Events</controllingFieldValue>
+            <controllingFieldValue>inVNT AV</controllingFieldValue>
+            <controllingFieldValue>On Event Services</controllingFieldValue>
+            <controllingFieldValue>J &amp; H</controllingFieldValue>
+            <controllingFieldValue>ON Services</controllingFieldValue>
+            <controllingFieldValue>J&amp;S AV</controllingFieldValue>
+            <controllingFieldValue>Onsite AV</controllingFieldValue>
+            <controllingFieldValue>JM Stamp Company</controllingFieldValue>
+            <controllingFieldValue>Kelly Companies</controllingFieldValue>
+            <controllingFieldValue>Kuala Lumpur Convention Center</controllingFieldValue>
+            <controllingFieldValue>KVL</controllingFieldValue>
+            <controllingFieldValue>Lakeshore AV</controllingFieldValue>
+            <valueName>Preferred</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Leading Authorities</controllingFieldValue>
+            <controllingFieldValue>LMG</controllingFieldValue>
+            <controllingFieldValue>OSA International</controllingFieldValue>
+            <controllingFieldValue>Ovation</controllingFieldValue>
+            <controllingFieldValue>Palazzo Lighting</controllingFieldValue>
+            <controllingFieldValue>Pixel</controllingFieldValue>
+            <controllingFieldValue>Planitomaha</controllingFieldValue>
+            <controllingFieldValue>Prestige Audio Visual</controllingFieldValue>
+            <controllingFieldValue>PRG</controllingFieldValue>
+            <controllingFieldValue>Markey’s Stage Production</controllingFieldValue>
+            <controllingFieldValue>Production Association</controllingFieldValue>
+            <controllingFieldValue>Marks Productions</controllingFieldValue>
+            <controllingFieldValue>Production World</controllingFieldValue>
+            <controllingFieldValue>Mass AV</controllingFieldValue>
+            <controllingFieldValue>Projection</controllingFieldValue>
+            <controllingFieldValue>McCune</controllingFieldValue>
+            <controllingFieldValue>Meeting Services International (MSI)</controllingFieldValue>
+            <controllingFieldValue>Merkel</controllingFieldValue>
+            <controllingFieldValue>Metro MultiMedia</controllingFieldValue>
+            <controllingFieldValue>MIG</controllingFieldValue>
+            <controllingFieldValue>American AV</controllingFieldValue>
+            <controllingFieldValue>Mike Mallinson</controllingFieldValue>
+            <controllingFieldValue>ASP Group</controllingFieldValue>
+            <controllingFieldValue>MIS Audio Visual Services</controllingFieldValue>
+            <controllingFieldValue>Atlanta AV</controllingFieldValue>
+            <controllingFieldValue>Audio Visual One</controllingFieldValue>
+            <controllingFieldValue>Audio Visual One, Ltd.</controllingFieldValue>
+            <controllingFieldValue>Audio Visual Technology Services (AVTS)</controllingFieldValue>
+            <controllingFieldValue>AV-Canada</controllingFieldValue>
+            <controllingFieldValue>AV Concepts</controllingFieldValue>
+            <controllingFieldValue>AV Connections</controllingFieldValue>
+            <controllingFieldValue>AV Experience</controllingFieldValue>
+            <controllingFieldValue>PSAV</controllingFieldValue>
+            <controllingFieldValue>Pulse Staging</controllingFieldValue>
+            <controllingFieldValue>Absolute Productions</controllingFieldValue>
+            <controllingFieldValue>Random International</controllingFieldValue>
+            <controllingFieldValue>Access Audio Visual</controllingFieldValue>
+            <controllingFieldValue>Razor Exhibits</controllingFieldValue>
+            <controllingFieldValue>ADM</controllingFieldValue>
+            <controllingFieldValue>Reaction AV</controllingFieldValue>
+            <controllingFieldValue>AEE Productions</controllingFieldValue>
+            <controllingFieldValue>Rick Bloom Audio Visual</controllingFieldValue>
+            <controllingFieldValue>Aesthetic Visual Solutions</controllingFieldValue>
+            <controllingFieldValue>Riverview Systems</controllingFieldValue>
+            <controllingFieldValue>AG Light and Sound</controllingFieldValue>
+            <controllingFieldValue>Rosemont in house</controllingFieldValue>
+            <controllingFieldValue>Alford Media</controllingFieldValue>
+            <controllingFieldValue>Royal Productions</controllingFieldValue>
+            <controllingFieldValue>Alliance AV</controllingFieldValue>
+            <controllingFieldValue>RRG</controllingFieldValue>
+            <controllingFieldValue>Alliant</controllingFieldValue>
+            <controllingFieldValue>AVI SPL</controllingFieldValue>
+            <controllingFieldValue>AV Matters</controllingFieldValue>
+            <controllingFieldValue>AV Network</controllingFieldValue>
+            <controllingFieldValue>AV Outsource</controllingFieldValue>
+            <controllingFieldValue>AV Partners</controllingFieldValue>
+            <controllingFieldValue>AVPG</controllingFieldValue>
+            <controllingFieldValue>AV PRO</controllingFieldValue>
+            <controllingFieldValue>AVPS - Audio Visual Production Services</controllingFieldValue>
+            <controllingFieldValue>avts group</controllingFieldValue>
+            <controllingFieldValue>Backstage Logic</controllingFieldValue>
+            <controllingFieldValue>Sands AV</controllingFieldValue>
+            <controllingFieldValue>Sardis Media</controllingFieldValue>
+            <controllingFieldValue>Seamless Event Solutions</controllingFieldValue>
+            <controllingFieldValue>Self Provided</controllingFieldValue>
+            <controllingFieldValue>SES</controllingFieldValue>
+            <controllingFieldValue>Show Gear Productions</controllingFieldValue>
+            <controllingFieldValue>ShowTec</controllingFieldValue>
+            <controllingFieldValue>Smart City</controllingFieldValue>
+            <controllingFieldValue>Smart Source</controllingFieldValue>
+            <controllingFieldValue>Solin AV</controllingFieldValue>
+            <controllingFieldValue>Bartha</controllingFieldValue>
+            <controllingFieldValue>Bartha Audio Visual</controllingFieldValue>
+            <controllingFieldValue>BAV Services</controllingFieldValue>
+            <controllingFieldValue>Bear AV</controllingFieldValue>
+            <controllingFieldValue>Bishop McCann</controllingFieldValue>
+            <controllingFieldValue>Broadstreet</controllingFieldValue>
+            <controllingFieldValue>CCR Events</controllingFieldValue>
+            <controllingFieldValue>CEAVCO</controllingFieldValue>
+            <controllingFieldValue>Cenero</controllingFieldValue>
+            <controllingFieldValue>Center Stage AV</controllingFieldValue>
+            <controllingFieldValue>Southwest AV</controllingFieldValue>
+            <controllingFieldValue>Specialized Event Services</controllingFieldValue>
+            <controllingFieldValue>Spectrum Audio Visual</controllingFieldValue>
+            <controllingFieldValue>Stage-it Inc.</controllingFieldValue>
+            <controllingFieldValue>Stagevision Inc.</controllingFieldValue>
+            <controllingFieldValue>Synergy - Mobiletape</controllingFieldValue>
+            <controllingFieldValue>T3</controllingFieldValue>
+            <controllingFieldValue>Tallen Technology Rentals</controllingFieldValue>
+            <controllingFieldValue>TECHNOLOGY RESOURCE CORPORATION</controllingFieldValue>
+            <controllingFieldValue>Temporary Technology</controllingFieldValue>
+            <controllingFieldValue>Century Audio Visual</controllingFieldValue>
+            <controllingFieldValue>Clark’s Audio Visual Services, Ltd.</controllingFieldValue>
+            <controllingFieldValue>CMI Communications</controllingFieldValue>
+            <controllingFieldValue>Concept X</controllingFieldValue>
+            <controllingFieldValue>Cornerstone AV</controllingFieldValue>
+            <controllingFieldValue>Cornerstone Technologies</controllingFieldValue>
+            <controllingFieldValue>Creative Technology</controllingFieldValue>
+            <controllingFieldValue>CRS Rental</controllingFieldValue>
+            <controllingFieldValue>Datasis Corp</controllingFieldValue>
+            <controllingFieldValue>David Michael Productions</controllingFieldValue>
+            <controllingFieldValue>Touch</controllingFieldValue>
+            <controllingFieldValue>TPI Productions</controllingFieldValue>
+            <controllingFieldValue>Trade Show Technical</controllingFieldValue>
+            <controllingFieldValue>Unbridled Solutions</controllingFieldValue>
+            <controllingFieldValue>Unknown</controllingFieldValue>
+            <controllingFieldValue>VAE</controllingFieldValue>
+            <controllingFieldValue>VCI Event Technology</controllingFieldValue>
+            <controllingFieldValue>VEP</controllingFieldValue>
+            <controllingFieldValue>Video West, Inc.</controllingFieldValue>
+            <controllingFieldValue>Visual Technologies</controllingFieldValue>
+            <controllingFieldValue>Directions AV</controllingFieldValue>
+            <controllingFieldValue>DMP Productions</controllingFieldValue>
+            <controllingFieldValue>Dodd Technologies</controllingFieldValue>
+            <controllingFieldValue>Encore AV</controllingFieldValue>
+            <controllingFieldValue>EPRAV Productions</controllingFieldValue>
+            <controllingFieldValue>etech</controllingFieldValue>
+            <controllingFieldValue>ETS (Event Technology Services)</controllingFieldValue>
+            <controllingFieldValue>EventEQ</controllingFieldValue>
+            <controllingFieldValue>Evolution</controllingFieldValue>
+            <controllingFieldValue>Fastforward Marketing Communications</controllingFieldValue>
+            <controllingFieldValue>Viva</controllingFieldValue>
+            <controllingFieldValue>Volume Eventz</controllingFieldValue>
+            <controllingFieldValue>VSC AV</controllingFieldValue>
+            <controllingFieldValue>VX3</controllingFieldValue>
+            <controllingFieldValue>Webb Audio Visual</controllingFieldValue>
+            <controllingFieldValue>Williams/Gerard Productions</controllingFieldValue>
+            <controllingFieldValue>World Stage</controllingFieldValue>
+            <controllingFieldValue>Fern Exposition &amp; Events</controllingFieldValue>
+            <controllingFieldValue>Four Moon Productions</controllingFieldValue>
+            <controllingFieldValue>Freeman AV</controllingFieldValue>
+            <controllingFieldValue>Freestyle Productions</controllingFieldValue>
+            <controllingFieldValue>Frischkorn MEDIACO</controllingFieldValue>
+            <controllingFieldValue>Front Runner Productions</controllingFieldValue>
+            <controllingFieldValue>Gary Musick Productions</controllingFieldValue>
+            <controllingFieldValue>Glickman Productions</controllingFieldValue>
+            <controllingFieldValue>Group Incorporated</controllingFieldValue>
+            <controllingFieldValue>Hargrove</controllingFieldValue>
+            <controllingFieldValue>Harvest Productions, Inc.</controllingFieldValue>
+            <controllingFieldValue>Heroic Productions</controllingFieldValue>
+            <controllingFieldValue>Honeysweet Productions</controllingFieldValue>
+            <controllingFieldValue>Hotel Direct</controllingFieldValue>
+            <controllingFieldValue>Image Technologies</controllingFieldValue>
+            <controllingFieldValue>Impact Lighting &amp; Production</controllingFieldValue>
+            <controllingFieldValue>IMS</controllingFieldValue>
+            <controllingFieldValue>Inland AV</controllingFieldValue>
+            <controllingFieldValue>invert720 productions inc</controllingFieldValue>
+            <controllingFieldValue>InVision</controllingFieldValue>
+            <controllingFieldValue>MP Productions</controllingFieldValue>
+            <controllingFieldValue>MSI</controllingFieldValue>
+            <controllingFieldValue>M Squared Onstage</controllingFieldValue>
+            <controllingFieldValue>NMR</controllingFieldValue>
+            <controllingFieldValue>No Provider</controllingFieldValue>
+            <controllingFieldValue>Not Yet Contracted</controllingFieldValue>
+            <controllingFieldValue>Occam Events</controllingFieldValue>
+            <controllingFieldValue>inVNT AV</controllingFieldValue>
+            <controllingFieldValue>On Event Services</controllingFieldValue>
+            <controllingFieldValue>J &amp; H</controllingFieldValue>
+            <controllingFieldValue>ON Services</controllingFieldValue>
+            <controllingFieldValue>J&amp;S AV</controllingFieldValue>
+            <controllingFieldValue>Onsite AV</controllingFieldValue>
+            <controllingFieldValue>JM Stamp Company</controllingFieldValue>
+            <controllingFieldValue>Kelly Companies</controllingFieldValue>
+            <controllingFieldValue>Kuala Lumpur Convention Center</controllingFieldValue>
+            <controllingFieldValue>KVL</controllingFieldValue>
+            <controllingFieldValue>Lakeshore AV</controllingFieldValue>
+            <valueName>Exclusive</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Leading Authorities</controllingFieldValue>
+            <controllingFieldValue>LMG</controllingFieldValue>
+            <controllingFieldValue>OSA International</controllingFieldValue>
+            <controllingFieldValue>Ovation</controllingFieldValue>
+            <controllingFieldValue>Palazzo Lighting</controllingFieldValue>
+            <controllingFieldValue>Pixel</controllingFieldValue>
+            <controllingFieldValue>Planitomaha</controllingFieldValue>
+            <controllingFieldValue>Prestige Audio Visual</controllingFieldValue>
+            <controllingFieldValue>PRG</controllingFieldValue>
+            <controllingFieldValue>Markey’s Stage Production</controllingFieldValue>
+            <controllingFieldValue>Production Association</controllingFieldValue>
+            <controllingFieldValue>Marks Productions</controllingFieldValue>
+            <controllingFieldValue>Production World</controllingFieldValue>
+            <controllingFieldValue>Mass AV</controllingFieldValue>
+            <controllingFieldValue>Projection</controllingFieldValue>
+            <controllingFieldValue>McCune</controllingFieldValue>
+            <controllingFieldValue>Meeting Services International (MSI)</controllingFieldValue>
+            <controllingFieldValue>Merkel</controllingFieldValue>
+            <controllingFieldValue>Metro MultiMedia</controllingFieldValue>
+            <controllingFieldValue>MIG</controllingFieldValue>
+            <controllingFieldValue>American AV</controllingFieldValue>
+            <controllingFieldValue>Mike Mallinson</controllingFieldValue>
+            <controllingFieldValue>ASP Group</controllingFieldValue>
+            <controllingFieldValue>MIS Audio Visual Services</controllingFieldValue>
+            <controllingFieldValue>Atlanta AV</controllingFieldValue>
+            <controllingFieldValue>Audio Visual One</controllingFieldValue>
+            <controllingFieldValue>Audio Visual One, Ltd.</controllingFieldValue>
+            <controllingFieldValue>Audio Visual Technology Services (AVTS)</controllingFieldValue>
+            <controllingFieldValue>AV-Canada</controllingFieldValue>
+            <controllingFieldValue>AV Concepts</controllingFieldValue>
+            <controllingFieldValue>AV Connections</controllingFieldValue>
+            <controllingFieldValue>AV Experience</controllingFieldValue>
+            <controllingFieldValue>PSAV</controllingFieldValue>
+            <controllingFieldValue>Pulse Staging</controllingFieldValue>
+            <controllingFieldValue>Absolute Productions</controllingFieldValue>
+            <controllingFieldValue>Random International</controllingFieldValue>
+            <controllingFieldValue>Access Audio Visual</controllingFieldValue>
+            <controllingFieldValue>Razor Exhibits</controllingFieldValue>
+            <controllingFieldValue>ADM</controllingFieldValue>
+            <controllingFieldValue>Reaction AV</controllingFieldValue>
+            <controllingFieldValue>AEE Productions</controllingFieldValue>
+            <controllingFieldValue>Rick Bloom Audio Visual</controllingFieldValue>
+            <controllingFieldValue>Aesthetic Visual Solutions</controllingFieldValue>
+            <controllingFieldValue>Riverview Systems</controllingFieldValue>
+            <controllingFieldValue>AG Light and Sound</controllingFieldValue>
+            <controllingFieldValue>Rosemont in house</controllingFieldValue>
+            <controllingFieldValue>Alford Media</controllingFieldValue>
+            <controllingFieldValue>Royal Productions</controllingFieldValue>
+            <controllingFieldValue>Alliance AV</controllingFieldValue>
+            <controllingFieldValue>RRG</controllingFieldValue>
+            <controllingFieldValue>Alliant</controllingFieldValue>
+            <controllingFieldValue>AVI SPL</controllingFieldValue>
+            <controllingFieldValue>AV Matters</controllingFieldValue>
+            <controllingFieldValue>AV Network</controllingFieldValue>
+            <controllingFieldValue>AV Outsource</controllingFieldValue>
+            <controllingFieldValue>AV Partners</controllingFieldValue>
+            <controllingFieldValue>AVPG</controllingFieldValue>
+            <controllingFieldValue>AV PRO</controllingFieldValue>
+            <controllingFieldValue>AVPS - Audio Visual Production Services</controllingFieldValue>
+            <controllingFieldValue>avts group</controllingFieldValue>
+            <controllingFieldValue>Backstage Logic</controllingFieldValue>
+            <controllingFieldValue>Sands AV</controllingFieldValue>
+            <controllingFieldValue>Sardis Media</controllingFieldValue>
+            <controllingFieldValue>Seamless Event Solutions</controllingFieldValue>
+            <controllingFieldValue>Self Provided</controllingFieldValue>
+            <controllingFieldValue>SES</controllingFieldValue>
+            <controllingFieldValue>Show Gear Productions</controllingFieldValue>
+            <controllingFieldValue>ShowTec</controllingFieldValue>
+            <controllingFieldValue>Smart City</controllingFieldValue>
+            <controllingFieldValue>Smart Source</controllingFieldValue>
+            <controllingFieldValue>Solin AV</controllingFieldValue>
+            <controllingFieldValue>Bartha</controllingFieldValue>
+            <controllingFieldValue>Bartha Audio Visual</controllingFieldValue>
+            <controllingFieldValue>BAV Services</controllingFieldValue>
+            <controllingFieldValue>Bear AV</controllingFieldValue>
+            <controllingFieldValue>Bishop McCann</controllingFieldValue>
+            <controllingFieldValue>Broadstreet</controllingFieldValue>
+            <controllingFieldValue>CCR Events</controllingFieldValue>
+            <controllingFieldValue>CEAVCO</controllingFieldValue>
+            <controllingFieldValue>Cenero</controllingFieldValue>
+            <controllingFieldValue>Center Stage AV</controllingFieldValue>
+            <controllingFieldValue>Southwest AV</controllingFieldValue>
+            <controllingFieldValue>Specialized Event Services</controllingFieldValue>
+            <controllingFieldValue>Spectrum Audio Visual</controllingFieldValue>
+            <controllingFieldValue>Stage-it Inc.</controllingFieldValue>
+            <controllingFieldValue>Stagevision Inc.</controllingFieldValue>
+            <controllingFieldValue>Synergy - Mobiletape</controllingFieldValue>
+            <controllingFieldValue>T3</controllingFieldValue>
+            <controllingFieldValue>Tallen Technology Rentals</controllingFieldValue>
+            <controllingFieldValue>TECHNOLOGY RESOURCE CORPORATION</controllingFieldValue>
+            <controllingFieldValue>Temporary Technology</controllingFieldValue>
+            <controllingFieldValue>Century Audio Visual</controllingFieldValue>
+            <controllingFieldValue>Clark’s Audio Visual Services, Ltd.</controllingFieldValue>
+            <controllingFieldValue>CMI Communications</controllingFieldValue>
+            <controllingFieldValue>Concept X</controllingFieldValue>
+            <controllingFieldValue>Cornerstone AV</controllingFieldValue>
+            <controllingFieldValue>Cornerstone Technologies</controllingFieldValue>
+            <controllingFieldValue>Creative Technology</controllingFieldValue>
+            <controllingFieldValue>CRS Rental</controllingFieldValue>
+            <controllingFieldValue>Datasis Corp</controllingFieldValue>
+            <controllingFieldValue>David Michael Productions</controllingFieldValue>
+            <controllingFieldValue>Touch</controllingFieldValue>
+            <controllingFieldValue>TPI Productions</controllingFieldValue>
+            <controllingFieldValue>Trade Show Technical</controllingFieldValue>
+            <controllingFieldValue>Unbridled Solutions</controllingFieldValue>
+            <controllingFieldValue>Unknown</controllingFieldValue>
+            <controllingFieldValue>VAE</controllingFieldValue>
+            <controllingFieldValue>VCI Event Technology</controllingFieldValue>
+            <controllingFieldValue>VEP</controllingFieldValue>
+            <controllingFieldValue>Video West, Inc.</controllingFieldValue>
+            <controllingFieldValue>Visual Technologies</controllingFieldValue>
+            <controllingFieldValue>Directions AV</controllingFieldValue>
+            <controllingFieldValue>DMP Productions</controllingFieldValue>
+            <controllingFieldValue>Dodd Technologies</controllingFieldValue>
+            <controllingFieldValue>Encore AV</controllingFieldValue>
+            <controllingFieldValue>EPRAV Productions</controllingFieldValue>
+            <controllingFieldValue>etech</controllingFieldValue>
+            <controllingFieldValue>ETS (Event Technology Services)</controllingFieldValue>
+            <controllingFieldValue>EventEQ</controllingFieldValue>
+            <controllingFieldValue>Evolution</controllingFieldValue>
+            <controllingFieldValue>Fastforward Marketing Communications</controllingFieldValue>
+            <controllingFieldValue>Viva</controllingFieldValue>
+            <controllingFieldValue>Volume Eventz</controllingFieldValue>
+            <controllingFieldValue>VSC AV</controllingFieldValue>
+            <controllingFieldValue>VX3</controllingFieldValue>
+            <controllingFieldValue>Webb Audio Visual</controllingFieldValue>
+            <controllingFieldValue>Williams/Gerard Productions</controllingFieldValue>
+            <controllingFieldValue>World Stage</controllingFieldValue>
+            <controllingFieldValue>Fern Exposition &amp; Events</controllingFieldValue>
+            <controllingFieldValue>Four Moon Productions</controllingFieldValue>
+            <controllingFieldValue>Freeman AV</controllingFieldValue>
+            <controllingFieldValue>Freestyle Productions</controllingFieldValue>
+            <controllingFieldValue>Frischkorn MEDIACO</controllingFieldValue>
+            <controllingFieldValue>Front Runner Productions</controllingFieldValue>
+            <controllingFieldValue>Gary Musick Productions</controllingFieldValue>
+            <controllingFieldValue>Glickman Productions</controllingFieldValue>
+            <controllingFieldValue>Group Incorporated</controllingFieldValue>
+            <controllingFieldValue>Hargrove</controllingFieldValue>
+            <controllingFieldValue>Harvest Productions, Inc.</controllingFieldValue>
+            <controllingFieldValue>Heroic Productions</controllingFieldValue>
+            <controllingFieldValue>Honeysweet Productions</controllingFieldValue>
+            <controllingFieldValue>Hotel Direct</controllingFieldValue>
+            <controllingFieldValue>Image Technologies</controllingFieldValue>
+            <controllingFieldValue>Impact Lighting &amp; Production</controllingFieldValue>
+            <controllingFieldValue>IMS</controllingFieldValue>
+            <controllingFieldValue>Inland AV</controllingFieldValue>
+            <controllingFieldValue>invert720 productions inc</controllingFieldValue>
+            <controllingFieldValue>InVision</controllingFieldValue>
+            <controllingFieldValue>MP Productions</controllingFieldValue>
+            <controllingFieldValue>MSI</controllingFieldValue>
+            <controllingFieldValue>M Squared Onstage</controllingFieldValue>
+            <controllingFieldValue>NMR</controllingFieldValue>
+            <controllingFieldValue>No Provider</controllingFieldValue>
+            <controllingFieldValue>Not Yet Contracted</controllingFieldValue>
+            <controllingFieldValue>Occam Events</controllingFieldValue>
+            <controllingFieldValue>inVNT AV</controllingFieldValue>
+            <controllingFieldValue>On Event Services</controllingFieldValue>
+            <controllingFieldValue>J &amp; H</controllingFieldValue>
+            <controllingFieldValue>ON Services</controllingFieldValue>
+            <controllingFieldValue>J&amp;S AV</controllingFieldValue>
+            <controllingFieldValue>Onsite AV</controllingFieldValue>
+            <controllingFieldValue>JM Stamp Company</controllingFieldValue>
+            <controllingFieldValue>Kelly Companies</controllingFieldValue>
+            <controllingFieldValue>Kuala Lumpur Convention Center</controllingFieldValue>
+            <controllingFieldValue>KVL</controllingFieldValue>
+            <controllingFieldValue>Lakeshore AV</controllingFieldValue>
+            <valueName>Open</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

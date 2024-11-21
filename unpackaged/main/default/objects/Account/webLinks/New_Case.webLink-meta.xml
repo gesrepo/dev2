@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>New_Case</fullName>
+    <availability>online</availability>
+    <description>Changed 14/7 to exclude the exhibitor rule for EMEA accounts</description>
+    <displayType>button</displayType>
+    <linkType>javascript</linkType>
+    <masterLabel>New Case</masterLabel>
+    <openType>onClickJavaScript</openType>
+    <protected>false</protected>
+    <url>{!REQUIRESCRIPT(&quot;/xdomain/xdomain.js&quot;)} 
+{!REQUIRESCRIPT(&quot;/support/console/26.0/integration.js&quot;)} 
+
+
+if (&#39;Exhibitor&#39; == &#39;{!Account.RecordType}&#39; || &#39;{!Account.EMEA__c}&#39; ==&#39;1&#39; ){
+
+if (sforce.console.isInConsole()) 
+{ 
+//sforce.console.openPrimaryTab(null, &#39;/apex/PageRedirect?Object=Account&amp;Id={!Account.Id}&amp;IsConsole=Yes&amp;RetUrl={!$Site.OriginalUrl}&#39;, true, &#39;New Case&#39;);
+sforce.console.openPrimaryTab(null,&#39;/500/e?cas4_lkid={!Account.Id}&amp;00N40000002SoBd=Exhibitor&amp;retUrl={!$Site.OriginalUrl}&#39;, true, &#39;New Case&#39;); 
+} 
+else 
+{ 
+window.parent.location.href=&#39;/apex/PageRedirect?Object=Account&amp;Id={!Account.Id}&amp;IsConsole=No&amp;RetUrl=&#39;+ window.parent.location.href; 
+} 
+} 
+else { 
+alert(&quot;Case cannot be created for this account. Please select an account of record type &#39;Exhibitor&#39;.&quot;); 
+}</url>
+</WebLink>

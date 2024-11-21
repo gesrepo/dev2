@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Stage_Level__c</fullName>
+    <description>Requested by Mark Eddy, 10/Mar/2015</description>
+    <inlineHelpText>Please select the Stage Level</inlineHelpText>
+    <label>RFP Stage Level</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Design</fullName>
+                <default>false</default>
+                <label>Design</label>
+            </value>
+            <value>
+                <fullName>Estimate</fullName>
+                <default>false</default>
+                <label>Estimate</label>
+            </value>
+            <value>
+                <fullName>With Client</fullName>
+                <default>false</default>
+                <label>With Client</label>
+            </value>
+            <value>
+                <fullName>RFP - Awarded</fullName>
+                <default>false</default>
+                <label>RFP - Awarded</label>
+            </value>
+            <value>
+                <fullName>RFP - Shortlisted</fullName>
+                <default>false</default>
+                <label>RFP - Shortlisted</label>
+            </value>
+            <value>
+                <fullName>RFP - Decline to Bid</fullName>
+                <default>false</default>
+                <label>RFP - Decline to Bid</label>
+            </value>
+            <value>
+                <fullName>RFP - Lost</fullName>
+                <default>false</default>
+                <label>RFP - Lost</label>
+            </value>
+            <value>
+                <fullName>RFP - Pending</fullName>
+                <default>false</default>
+                <label>RFP - Pending</label>
+            </value>
+            <value>
+                <fullName>RFP - Cancelled</fullName>
+                <default>false</default>
+                <label>RFP - Cancelled</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

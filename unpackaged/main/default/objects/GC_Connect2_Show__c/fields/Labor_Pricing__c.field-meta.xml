@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Labor_Pricing__c</fullName>
+    <inlineHelpText>Used to select the Standard Price list level for exhibitor orders. For Labor there is only one price list level.</inlineHelpText>
+    <label>Labor Pricing Level</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Medium</fullName>
+                <default>true</default>
+                <label>Medium</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

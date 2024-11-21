@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Event_Experiential_Show_Selection_GBMS</fullName>
+    <active>true</active>
+    <errorConditionFormula>ISPICKVAL(GBMS_CORE__c, &quot;GBMS&quot;)
+&amp;&amp;$RecordType.DeveloperName = &quot;EventAndExperiential&quot;
+&amp;&amp; Non_Show__c=&quot;&quot;
+&amp;&amp; ($Profile.Name != &quot;GES Administrator Interface&quot;)</errorConditionFormula>
+    <errorMessage>Non-Show is required when the Target System is GBMS</errorMessage>
+</ValidationRule>

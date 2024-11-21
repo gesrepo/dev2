@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Case_On_Site_Required_Show_Opportunity</fullName>
+    <active>true</active>
+    <description>For cases that require on-site, an associated EMEA Exhibition Occurrence Opportunity must be selected. Opportunity is used to direct ownership to the correct user.</description>
+    <errorConditionFormula>AND( Case_Opportunity_ID__c = &quot;&quot;,
+AND( RecordType.DeveloperName = &quot;GES_EMEA_Service&quot;,Show_Opportunity__r.RecordType.DeveloperName   &lt;&gt; &quot;EMEA_Exhibition&quot;,(AND(EMEA_Onsite_Service_Request__c  = TRUE,
+ISBLANK(Show_Opportunity__c ))))
+)</errorConditionFormula>
+    <errorMessage>Please include a lookup  a show opportunity occurrence that is an &quot;EMEA - Exhibition&quot; record type.</errorMessage>
+</ValidationRule>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Initial_Specifically_using__c</fullName>
+    <label>Initial.Specifically using</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Exhibitor Manual</fullName>
+                <default>false</default>
+                <label>Exhibitor Manual</label>
+            </value>
+            <value>
+                <fullName>Expresso Online Ordering</fullName>
+                <default>false</default>
+                <label>Expresso Online Ordering</label>
+            </value>
+            <value>
+                <fullName>Live Chat</fullName>
+                <default>false</default>
+                <label>Live Chat</label>
+            </value>
+            <value>
+                <fullName>Social Media</fullName>
+                <default>false</default>
+                <label>Social Media</label>
+            </value>
+            <value>
+                <fullName>Website Contact Form</fullName>
+                <default>false</default>
+                <label>Website Contact Form</label>
+            </value>
+            <value>
+                <fullName>Other ordering portal</fullName>
+                <default>false</default>
+                <label>Other ordering portal</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

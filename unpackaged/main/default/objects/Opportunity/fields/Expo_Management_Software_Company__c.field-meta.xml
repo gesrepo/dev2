@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Expo_Management_Software_Company__c</fullName>
+    <inlineHelpText>Company providing ERP services to exhibition organizer</inlineHelpText>
+    <label>Expo Management Software Company</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>true</sorted>
+            <value>
+                <fullName>A2Z</fullName>
+                <default>false</default>
+                <label>A2Z</label>
+            </value>
+            <value>
+                <fullName>Cadmium</fullName>
+                <default>false</default>
+                <label>Cadmium</label>
+            </value>
+            <value>
+                <fullName>eShow</fullName>
+                <default>false</default>
+                <label>eShow</label>
+            </value>
+            <value>
+                <fullName>ExpoCad</fullName>
+                <default>false</default>
+                <label>ExpoCad</label>
+            </value>
+            <value>
+                <fullName>GoExpo</fullName>
+                <default>false</default>
+                <label>GoExpo</label>
+            </value>
+            <value>
+                <fullName>Map Your Show</fullName>
+                <default>false</default>
+                <label>Map Your Show</label>
+            </value>
+            <value>
+                <fullName>Ungerboeck</fullName>
+                <default>false</default>
+                <label>Ungerboeck</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

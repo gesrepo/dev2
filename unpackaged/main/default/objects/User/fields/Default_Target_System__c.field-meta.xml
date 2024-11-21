@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Default_Target_System__c</fullName>
+    <description>Used in the opportunity validation rules to identify those projects able to go to GBMS vs CORE</description>
+    <label>Default Target System</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>CORE</fullName>
+                <default>false</default>
+                <label>CORE</label>
+            </value>
+            <value>
+                <fullName>GBMS</fullName>
+                <default>false</default>
+                <label>GBMS</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

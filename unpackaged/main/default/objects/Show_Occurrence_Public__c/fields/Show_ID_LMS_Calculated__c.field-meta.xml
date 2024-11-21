@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Show_ID_LMS_Calculated__c</fullName>
+    <description>Determines the Show ID (LMS) even on E&amp;E Opportunities by going through the linked Show Occurrence. Updated for Housing opportunities to pull Show ID of related Tradeshow Show Occurrence. Housing opportunities also have some Stage Name&#39;s that are less than 4 characters in length, so that logic is being revised to use record type name instead for Housing only.</description>
+    <externalId>false</externalId>
+    <label>Show ID (LMS) - Calculated</label>
+    <length>100</length>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

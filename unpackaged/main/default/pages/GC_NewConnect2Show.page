@@ -1,0 +1,17 @@
+<apex:page showHeader="true" sidebar="true" standardController="GC_Connect2_Show__c">
+    <header>
+        <H1>
+            <b> Connect2 Shows are automatically created with the opportunity. Please do not create a show if there is an opportunity record.</b>
+        </H1>
+        <br/>
+        <br/>
+        <H1>
+            <b> This feature may only be used for shows that do not have an opportunity. </b>
+        </H1>
+    </header>
+    <apex:form >
+        <br/>
+        <br/>
+        <apex:commandButton value="Create a Connect2 Show" action="{!URLFOR($Page.GC_Connect2ShowCreate, null)}" onclick="if(!confirm('Are you sure you still want to create a Connect2 Show?')){return false};"/>
+    </apex:form>
+</apex:page>

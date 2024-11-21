@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>EMEA_Visit_Poken_Sendable</fullName>
+    <active>true</active>
+    <description>If Sendable__c is checked, then Weight_Kg__c and Weight_Lb__c are required.</description>
+    <errorConditionFormula>Sendable__c = TRUE  &amp;&amp;  
+(ISNULL(Weight_Kg__c)   &amp;&amp;   ISNULL(Weight_Lb__c))</errorConditionFormula>
+    <errorMessage>If Product is marked as Sendable, then Weight(Kg) or Weight(Lb) is required.</errorMessage>
+</ValidationRule>

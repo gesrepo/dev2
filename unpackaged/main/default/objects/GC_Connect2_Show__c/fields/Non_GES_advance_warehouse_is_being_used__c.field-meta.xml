@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Non_GES_advance_warehouse_is_being_used__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>If a Non-GES advance warehouse is being used, provide contact info for tracking shipments.</inlineHelpText>
+    <label>Non-GES advance warehouse is being used</label>
+    <length>50</length>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

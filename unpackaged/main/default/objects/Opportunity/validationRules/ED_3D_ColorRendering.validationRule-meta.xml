@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ED_3D_ColorRendering</fullName>
+    <active>true</active>
+    <description>Amount of 15k or greater required for 3D Color Rendering Output</description>
+    <errorConditionFormula>PRF_Submitted__c =true &amp;&amp; 
+$RecordType.DeveloperName = &quot;E_D_Projects&quot; 
+&amp;&amp;( GBMSProjectStatus__c =&quot;Forecast&quot; || ISBLANK(GBMSProjectStatus__c )) 
+&amp;&amp;  INCLUDES(PRFOutput_Requirements__c , &quot;3D Color Rendering&quot;)
+&amp;&amp;  Amount &lt; 15000
+&amp;&amp; ($Profile.Name != &quot;GES Administrator Interface&quot;)</errorConditionFormula>
+    <errorMessage>Total amount of $15,000 or greater is required for 3D Color Rendering selection on Output Requirements.</errorMessage>
+</ValidationRule>

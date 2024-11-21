@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Reason_for_Rejection__c</fullName>
+    <label>Reason for Rejection</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Incorrect record type selected.</fullName>
+                <default>false</default>
+                <label>Incorrect record type selected.</label>
+            </value>
+            <value>
+                <fullName>Update the DCS field to the correct DCS in the production location.</fullName>
+                <default>false</default>
+                <label>Update the DCS field to the correct DCS in the production location.</label>
+            </value>
+            <value>
+                <fullName>Complete the remaining applicable fields in the AR Adjustment in Contract.</fullName>
+                <default>false</default>
+                <label>Complete the remaining applicable fields in the AR Adjustment in Contract.</label>
+            </value>
+            <value>
+                <fullName>Upload the preliminary invoice signed &amp; dated by CSM.</fullName>
+                <default>false</default>
+                <label>Upload the preliminary invoice signed &amp; dated by CSM.</label>
+            </value>
+            <value>
+                <fullName>Subtotals from the Summary of Services &amp; the Details of Services do not match.</fullName>
+                <default>false</default>
+                <label>Subtotals from the Summary of Services &amp; the Details of Services do not match.</label>
+            </value>
+            <value>
+                <fullName>All items and services must have a price, no zeros allowed.</fullName>
+                <default>false</default>
+                <label>All items and services must have a price, no zeros allowed.</label>
+            </value>
+            <value>
+                <fullName>Upload the fully executed contract.</fullName>
+                <default>false</default>
+                <label>Upload the fully executed contract.</label>
+            </value>
+            <value>
+                <fullName>Order Status Report is not clear of all exceptions.</fullName>
+                <default>false</default>
+                <label>Order Status Report is not clear of all exceptions.</label>
+            </value>
+            <value>
+                <fullName>The preliminary invoice compared to what is booked in Core, does not match.</fullName>
+                <default>false</default>
+                <label>The preliminary invoice compared to what is booked in Core, does not match.</label>
+            </value>
+            <value>
+                <fullName>Backup documentation is needed.</fullName>
+                <default>false</default>
+                <label>Backup documentation is needed.</label>
+            </value>
+            <value>
+                <fullName>Missing the client&#39;s approval signature.</fullName>
+                <default>false</default>
+                <label>Missing the client&#39;s approval signature.</label>
+            </value>
+            <value>
+                <fullName>Email approval must state the preliminary invoice total within the email body or in the subject line.</fullName>
+                <default>false</default>
+                <label>Email approval must state the preliminary invoice total within the email body or in the subject line.</label>
+            </value>
+            <value>
+                <fullName>Pricing Error</fullName>
+                <default>false</default>
+                <label>Pricing Error</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

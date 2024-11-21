@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Membership__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <label>Membership</label>
+    <referenceTo>CA_Membership__c</referenceTo>
+    <relationshipLabel>CA Products</relationshipLabel>
+    <relationshipName>CA_Products</relationshipName>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

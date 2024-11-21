@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Not_Submitted</fullName>
+    <columns>NAME</columns>
+    <columns>SA_Opportunity__c</columns>
+    <columns>Show_End_Date__c</columns>
+    <columns>SA_Show_Name__c</columns>
+    <columns>CREATED_DATE</columns>
+    <columns>RECORDTYPE</columns>
+    <columns>UPDATEDBY_USER</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Status__c</field>
+        <operation>equals</operation>
+        <value>New</value>
+    </filters>
+    <label>Not Submitted</label>
+</ListView>

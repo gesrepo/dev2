@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Amount_Value</fullName>
+    <active>true</active>
+    <description>Amount must be greater than 0. Does not apply to E&amp;D , EMEA Exhibition, EMEA Specialsist record types and EMEA - AV</description>
+    <errorConditionFormula>AND( 
+NOT(BypassValidation__c),  /* added to bypass validation on 6 may.*/
+Is_Converted__c = False, 
+NOT ( $User.Id = &quot;005400000010HAt&quot;), /*Blue Wolf*/ 
+NOT ( $User.Id = &quot;00540000003EhZ9&quot;), /*R2 Integration Inter*/ 
+NOT (RecordTypeId = &quot;0121W000000IiFV&quot;),/*Marketing Strategy*/ 
+
+(OR( 
+$RecordType.DeveloperName = &quot;AV_CC&quot;, /*AV Record Types*/ 
+$RecordType.DeveloperName = &quot;AV_CR&quot;, 
+$RecordType.DeveloperName = &quot;AV_CV&quot;, 
+$RecordType.DeveloperName = &quot;AV_DB&quot;, 
+$RecordType.DeveloperName = &quot;AV_IA&quot;, 
+$RecordType.DeveloperName = &quot;AV_LO&quot;, 
+$RecordType.DeveloperName = &quot;AV&quot;, 
+$RecordType.DeveloperName = &quot;AV_PS&quot;, 
+$RecordType.DeveloperName = &quot;AV_TS&quot;, 
+$RecordType.DeveloperName = &quot;AV_Exhibitor_CR&quot;, 
+$RecordType.DeveloperName = &quot;AV_Exhibitor_CV&quot;, 
+$RecordType.DeveloperName = &quot;AV_Exhibitor_LO&quot;, 
+$RecordType.DeveloperName = &quot;AV_Exhibitor_CC&quot;, 
+$RecordType.DeveloperName = &quot;AV_Exhibitor_IA&quot;, 
+$RecordType.DeveloperName = &quot;AV_Exhibitor_DB&quot;, 
+$RecordType.DeveloperName = &quot;AV_Exhibitor_Master&quot;, 
+$RecordType.DeveloperName = &quot;AV_Exhibitor_PS&quot;, 
+$RecordType.DeveloperName = &quot;AV_Exhibitor_TS&quot;)), 
+
+
+NOT ($Profile.Name = &quot;System Administrator&quot;), 
+NOT ($Profile.Name = &quot;EMEA System Administrator&quot;), 
+NOT ($Profile.Id = &quot;00e40000000wdgt&quot;),/*SF Support User*/ 
+NOT ($Profile.Name = &quot;Marketing User&quot;), 
+NOT ($Profile.Name = &quot;GES Interface&quot;), 
+NOT ($Profile.Name = &quot;EDExacttarget&quot;), 
+NOT ($Profile.Name = &quot;GES Administrator Interface&quot;), 
+NOT ($Profile.Name = &quot;Marketing Super Users&quot;),
+NOT(ISCHANGED(Name)), 
+(OR ( 
+NULLVALUE( Amount ,0 )=0, 
+Amount &lt; 1)))</errorConditionFormula>
+    <errorDisplayField>Amount</errorDisplayField>
+    <errorMessage>Contract Value must be greater than 0.</errorMessage>
+</ValidationRule>

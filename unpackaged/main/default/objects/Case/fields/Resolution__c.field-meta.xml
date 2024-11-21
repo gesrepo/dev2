@@ -1,0 +1,2382 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Resolution__c</fullName>
+    <label>Resolution</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Show_Status__c</controllingField>
+        <valueSetDefinition>
+            <sorted>true</sorted>
+            <value>
+                <fullName>Account Details Amended</fullName>
+                <default>false</default>
+                <label>Account Details Amended</label>
+            </value>
+            <value>
+                <fullName>Adjusted Company Name/Address</fullName>
+                <default>false</default>
+                <label>Adjusted Company Name/Address</label>
+            </value>
+            <value>
+                <fullName>Adjusted Contact Info</fullName>
+                <default>false</default>
+                <label>Adjusted Contact Info</label>
+            </value>
+            <value>
+                <fullName>Amended Order</fullName>
+                <default>false</default>
+                <label>Amended Order</label>
+            </value>
+            <value>
+                <fullName>Assisted with Expresso navigation</fullName>
+                <default>false</default>
+                <label>Assisted with Expresso navigation</label>
+            </value>
+            <value>
+                <fullName>Assisted with Online Issue</fullName>
+                <default>false</default>
+                <label>Assisted with Online Issue</label>
+            </value>
+            <value>
+                <fullName>Assisted With Order Forms</fullName>
+                <default>false</default>
+                <label>Assisted With Order Forms</label>
+            </value>
+            <value>
+                <fullName>Assisted with selection</fullName>
+                <default>false</default>
+                <label>Assisted with selection</label>
+            </value>
+            <value>
+                <fullName>Assisted with what item to order</fullName>
+                <default>false</default>
+                <label>Assisted with what item to order</label>
+            </value>
+            <value>
+                <fullName>Callback Already Resolved</fullName>
+                <default>false</default>
+                <label>Callback Already Resolved</label>
+            </value>
+            <value>
+                <fullName>Cancelled Order</fullName>
+                <default>false</default>
+                <label>Cancelled Order</label>
+            </value>
+            <value>
+                <fullName>CAS - EL Rejected / Not Uploaded</fullName>
+                <default>false</default>
+                <label>CAS - EL Rejected / Not Uploaded</label>
+            </value>
+            <value>
+                <fullName>CAS - Exhibitor List Booth #&#39;s / Dims Updated</fullName>
+                <default>false</default>
+                <label>CAS - Exhibitor List Booth #&#39;s / Dims Updated</label>
+            </value>
+            <value>
+                <fullName>CAS - Initial EL Uploaded</fullName>
+                <default>false</default>
+                <label>CAS - Initial EL Uploaded</label>
+            </value>
+            <value>
+                <fullName>CAS - Revised EL Uploaded</fullName>
+                <default>false</default>
+                <label>CAS - Revised EL Uploaded</label>
+            </value>
+            <value>
+                <fullName>CH not received paperwork</fullName>
+                <default>false</default>
+                <label>CH not received paperwork</label>
+            </value>
+            <value>
+                <fullName>Closed Loop</fullName>
+                <default>false</default>
+                <label>Closed Loop</label>
+            </value>
+            <value>
+                <fullName>CM Processed – City Approved</fullName>
+                <default>false</default>
+                <label>CM Processed – City Approved</label>
+            </value>
+            <value>
+                <fullName>CM Processed – NSC Approved</fullName>
+                <default>false</default>
+                <label>CM Processed – NSC Approved</label>
+            </value>
+            <value>
+                <fullName>Complaint LOB</fullName>
+                <default>false</default>
+                <label>Complaint LOB</label>
+            </value>
+            <value>
+                <fullName>Complaint Onsite</fullName>
+                <default>false</default>
+                <label>Complaint Onsite</label>
+            </value>
+            <value>
+                <fullName>Complaint SC</fullName>
+                <default>false</default>
+                <label>Complaint SC</label>
+            </value>
+            <value>
+                <fullName>Compliment</fullName>
+                <default>false</default>
+                <label>Compliment</label>
+            </value>
+            <value>
+                <fullName>Compliment documented</fullName>
+                <default>false</default>
+                <label>Compliment documented</label>
+            </value>
+            <value>
+                <fullName>Compliment Received</fullName>
+                <default>false</default>
+                <label>Compliment Received</label>
+            </value>
+            <value>
+                <fullName>Confirmed Delivery Address</fullName>
+                <default>false</default>
+                <label>Confirmed Delivery Address</label>
+            </value>
+            <value>
+                <fullName>Confirmed Freight Received</fullName>
+                <default>false</default>
+                <label>Confirmed Freight Received</label>
+            </value>
+            <value>
+                <fullName>Confirmed Order</fullName>
+                <default>false</default>
+                <label>Confirmed Order</label>
+            </value>
+            <value>
+                <fullName>Confirmed Order Entered in CORE</fullName>
+                <default>false</default>
+                <label>Confirmed Order Entered in CORE</label>
+            </value>
+            <value>
+                <fullName>Confirmed Order Received</fullName>
+                <default>false</default>
+                <label>Confirmed Order Received</label>
+            </value>
+            <value>
+                <fullName>Confirmed Order Received (Expresso)</fullName>
+                <default>false</default>
+                <label>Confirmed Order Received (Expresso)</label>
+            </value>
+            <value>
+                <fullName>Confirmed Order Received (Fax)</fullName>
+                <default>false</default>
+                <label>Confirmed Order Received (Fax)</label>
+            </value>
+            <value>
+                <fullName>Confirmed Package Infomation</fullName>
+                <default>false</default>
+                <label>Confirmed Package Infomation</label>
+            </value>
+            <value>
+                <fullName>Confirmed Stand Type</fullName>
+                <default>false</default>
+                <label>Confirmed Stand Type</label>
+            </value>
+            <value>
+                <fullName>Confirmed Tax Exemption</fullName>
+                <default>false</default>
+                <label>Confirmed Tax Exemption</label>
+            </value>
+            <value>
+                <fullName>Courtesy Credit</fullName>
+                <default>false</default>
+                <label>Courtesy Credit</label>
+            </value>
+            <value>
+                <fullName>Created Opportunity</fullName>
+                <default>false</default>
+                <label>Created Opportunity</label>
+            </value>
+            <value>
+                <fullName>Credit Memo Processed</fullName>
+                <default>false</default>
+                <label>Credit Memo Processed</label>
+            </value>
+            <value>
+                <fullName>Damaged/dirty</fullName>
+                <default>false</default>
+                <label>Damaged/dirty</label>
+            </value>
+            <value>
+                <fullName>Damaged client’s property – Invoice needs paying</fullName>
+                <default>false</default>
+                <label>Damaged client’s property – Invoice needs paying</label>
+            </value>
+            <value>
+                <fullName>Duplicate - NFAR</fullName>
+                <default>false</default>
+                <label>Duplicate - NFAR</label>
+            </value>
+            <value>
+                <fullName>Exhibitor Bringing Their Own</fullName>
+                <default>false</default>
+                <label>Exhibitor Bringing Their Own</label>
+            </value>
+            <value>
+                <fullName>Exhibitor List Complete</fullName>
+                <default>false</default>
+                <label>Exhibitor List Complete</label>
+            </value>
+            <value>
+                <fullName>Exhibitor Manual Provided</fullName>
+                <default>false</default>
+                <label>Exhibitor Manual Provided</label>
+            </value>
+            <value>
+                <fullName>Explained 3rd Party</fullName>
+                <default>false</default>
+                <label>Explained 3rd Party</label>
+            </value>
+            <value>
+                <fullName>Explained Charges - Exhibitor Satisfied</fullName>
+                <default>false</default>
+                <label>Explained Charges - Exhibitor Satisfied</label>
+            </value>
+            <value>
+                <fullName>Explained Charges - Exhibitor Unsatisfied but understands</fullName>
+                <default>false</default>
+                <label>Explained Charges - Exhibitor Unsatisfied but understands</label>
+            </value>
+            <value>
+                <fullName>Explained EAC</fullName>
+                <default>false</default>
+                <label>Explained EAC</label>
+            </value>
+            <value>
+                <fullName>Explained Forms</fullName>
+                <default>false</default>
+                <label>Explained Forms</label>
+            </value>
+            <value>
+                <fullName>Explained forms needed to complete order</fullName>
+                <default>false</default>
+                <label>Explained forms needed to complete order</label>
+            </value>
+            <value>
+                <fullName>Explained Pricing</fullName>
+                <default>false</default>
+                <label>Explained Pricing</label>
+            </value>
+            <value>
+                <fullName>Explained Process</fullName>
+                <default>false</default>
+                <label>Explained Process</label>
+            </value>
+            <value>
+                <fullName>Explained Service(s)</fullName>
+                <default>false</default>
+                <label>Explained Service(s)</label>
+            </value>
+            <value>
+                <fullName>Explained Storage Options</fullName>
+                <default>false</default>
+                <label>Explained Storage Options</label>
+            </value>
+            <value>
+                <fullName>Fault Refund</fullName>
+                <default>false</default>
+                <label>Fault Refund</label>
+            </value>
+            <value>
+                <fullName>Further Information Requested from Exhibitor</fullName>
+                <default>false</default>
+                <label>Further Information Requested from Exhibitor</label>
+            </value>
+            <value>
+                <fullName>Honored Discount Pricing</fullName>
+                <default>false</default>
+                <label>Honored Discount Pricing</label>
+            </value>
+            <value>
+                <fullName>Incorrect LOB</fullName>
+                <default>false</default>
+                <label>Incorrect LOB</label>
+            </value>
+            <value>
+                <fullName>Incorrect SC</fullName>
+                <default>false</default>
+                <label>Incorrect SC</label>
+            </value>
+            <value>
+                <fullName>Kit - Provided Expresso Technical Support</fullName>
+                <default>false</default>
+                <label>Kit - Provided Expresso Technical Support</label>
+            </value>
+            <value>
+                <fullName>Kit - Provided Expresso Technical Support - Required Development</fullName>
+                <default>false</default>
+                <label>Kit - Provided Expresso Technical Support - Required Development</label>
+            </value>
+            <value>
+                <fullName>LG - Created Opportunity</fullName>
+                <default>false</default>
+                <label>LG - Created Opportunity</label>
+            </value>
+            <value>
+                <fullName>LG - Standard item available</fullName>
+                <default>false</default>
+                <label>LG - Standard item available</label>
+            </value>
+            <value>
+                <fullName>Missing Item</fullName>
+                <default>false</default>
+                <label>Missing Item</label>
+            </value>
+            <value>
+                <fullName>No Longer Attending Show</fullName>
+                <default>false</default>
+                <label>No Longer Attending Show</label>
+            </value>
+            <value>
+                <fullName>Non-Rev Form(s) Forwarded to City/AM</fullName>
+                <default>false</default>
+                <label>Non-Rev Form(s) Forwarded to City/AM</label>
+            </value>
+            <value>
+                <fullName>Non-Rev Form(s) Insurance Form Processed</fullName>
+                <default>false</default>
+                <label>Non-Rev Form(s) Insurance Form Processed</label>
+            </value>
+            <value>
+                <fullName>Non-Rev Form(s) Processed (Generic)</fullName>
+                <default>false</default>
+                <label>Non-Rev Form(s) Processed (Generic)</label>
+            </value>
+            <value>
+                <fullName>Non-Rev Form(s) Uploaded on Booth Level</fullName>
+                <default>false</default>
+                <label>Non-Rev Form(s) Uploaded on Booth Level</label>
+            </value>
+            <value>
+                <fullName>No Response</fullName>
+                <default>false</default>
+                <label>No Response</label>
+            </value>
+            <value>
+                <fullName>No Response from Exh</fullName>
+                <default>false</default>
+                <label>No Response from Exh</label>
+            </value>
+            <value>
+                <fullName>No response from Exhibitor</fullName>
+                <default>false</default>
+                <label>No response from Exhibitor</label>
+            </value>
+            <value>
+                <fullName>Not delivered</fullName>
+                <default>false</default>
+                <label>Not delivered</label>
+            </value>
+            <value>
+                <fullName>Not Installed</fullName>
+                <default>false</default>
+                <label>Not Installed</label>
+            </value>
+            <value>
+                <fullName>OE - 3rd party Account Created / Orders Booked</fullName>
+                <default>false</default>
+                <label>OE - 3rd party Account Created / Orders Booked</label>
+            </value>
+            <value>
+                <fullName>OE - 3rd Party Billing Confirmed / Orders Booked</fullName>
+                <default>false</default>
+                <label>OE - 3rd Party Billing Confirmed / Orders Booked</label>
+            </value>
+            <value>
+                <fullName>OE - Confirmed Booth dimensions / Number</fullName>
+                <default>false</default>
+                <label>OE - Confirmed Booth dimensions / Number</label>
+            </value>
+            <value>
+                <fullName>OE - Confirmed Booth Status</fullName>
+                <default>false</default>
+                <label>OE - Confirmed Booth Status</label>
+            </value>
+            <value>
+                <fullName>OE - Courtesy Email / No Response Required</fullName>
+                <default>false</default>
+                <label>OE - Courtesy Email / No Response Required</label>
+            </value>
+            <value>
+                <fullName>OE - CSM to Enter Order (Show Org Request)</fullName>
+                <default>false</default>
+                <label>OE - CSM to Enter Order (Show Org Request)</label>
+            </value>
+            <value>
+                <fullName>OE - Item Quantities Updated</fullName>
+                <default>false</default>
+                <label>OE - Item Quantities Updated</label>
+            </value>
+            <value>
+                <fullName>OE - IT Issue Resolved - Order(s) Booked</fullName>
+                <default>false</default>
+                <label>OE - IT Issue Resolved - Order(s) Booked</label>
+            </value>
+            <value>
+                <fullName>OE - KIT Issue Resolved - Order(s) Booked</fullName>
+                <default>false</default>
+                <label>OE - KIT Issue Resolved - Order(s) Booked</label>
+            </value>
+            <value>
+                <fullName>OE - Money Move Complete / Refund Complete</fullName>
+                <default>false</default>
+                <label>OE - Money Move Complete / Refund Complete</label>
+            </value>
+            <value>
+                <fullName>OE - NOI/EAC form Processed</fullName>
+                <default>false</default>
+                <label>OE - NOI/EAC form Processed</label>
+            </value>
+            <value>
+                <fullName>OE - Non Rev Form(s) - UBL &amp; Booth Status Update</fullName>
+                <default>false</default>
+                <label>OE - Non Rev Form(s) - UBL &amp; Booth Status Update</label>
+            </value>
+            <value>
+                <fullName>OE - Non Rev Form(s) - UBL Only</fullName>
+                <default>false</default>
+                <label>OE - Non Rev Form(s) - UBL Only</label>
+            </value>
+            <value>
+                <fullName>OE - Order(s) Booked</fullName>
+                <default>false</default>
+                <label>OE - Order(s) Booked</label>
+            </value>
+            <value>
+                <fullName>OE - Order(s) Paid in Full</fullName>
+                <default>false</default>
+                <label>OE - Order(s) Paid in Full</label>
+            </value>
+            <value>
+                <fullName>OE - Order Cancellation</fullName>
+                <default>false</default>
+                <label>OE - Order Cancellation</label>
+            </value>
+            <value>
+                <fullName>OE - Order Revisions Not Needed (Duplicate)</fullName>
+                <default>false</default>
+                <label>OE - Order Revisions Not Needed (Duplicate)</label>
+            </value>
+            <value>
+                <fullName>OE - Referred to Service Desk</fullName>
+                <default>false</default>
+                <label>OE - Referred to Service Desk</label>
+            </value>
+            <value>
+                <fullName>OE - Referred to Vertikal (COI Request)</fullName>
+                <default>false</default>
+                <label>OE - Referred to Vertikal (COI Request)</label>
+            </value>
+            <value>
+                <fullName>OE - Rejection Email Sent / Response Not Required</fullName>
+                <default>false</default>
+                <label>OE - Rejection Email Sent / Response Not Required</label>
+            </value>
+            <value>
+                <fullName>OE - Tax Request Approved / Orders Re-entered</fullName>
+                <default>false</default>
+                <label>OE - Tax Request Approved / Orders Re-entered</label>
+            </value>
+            <value>
+                <fullName>Online Surveys</fullName>
+                <default>false</default>
+                <label>Online Surveys</label>
+            </value>
+            <value>
+                <fullName>ON-SITE - FITTED/DELIVERED NEW ORDER ON STAND</fullName>
+                <default>false</default>
+                <label>ON-SITE - FITTED/DELIVERED NEW ORDER ON STAND</label>
+            </value>
+            <value>
+                <fullName>ON-SITE - ISSUE NOT FOR GES - REFERRED EXHIBITOR</fullName>
+                <default>false</default>
+                <label>ON-SITE - ISSUE NOT FOR GES - REFERRED EXHIBITOR</label>
+            </value>
+            <value>
+                <fullName>ON-SITE - RESOLVED ISSUE AT STAND</fullName>
+                <default>false</default>
+                <label>ON-SITE - RESOLVED ISSUE AT STAND</label>
+            </value>
+            <value>
+                <fullName>Order Amended</fullName>
+                <default>false</default>
+                <label>Order Amended</label>
+            </value>
+            <value>
+                <fullName>Order - Changed</fullName>
+                <default>false</default>
+                <label>Order - Changed</label>
+            </value>
+            <value>
+                <fullName>Order - Corrected</fullName>
+                <default>false</default>
+                <label>Order - Corrected</label>
+            </value>
+            <value>
+                <fullName>Order - Entered</fullName>
+                <default>false</default>
+                <label>Order - Entered</label>
+            </value>
+            <value>
+                <fullName>Order - Entered through Impersonation</fullName>
+                <default>false</default>
+                <label>Order - Entered through Impersonation</label>
+            </value>
+            <value>
+                <fullName>Order no longer Required</fullName>
+                <default>false</default>
+                <label>Order no longer Required</label>
+            </value>
+            <value>
+                <fullName>Order Not Entered - Duplicate</fullName>
+                <default>false</default>
+                <label>Order Not Entered - Duplicate</label>
+            </value>
+            <value>
+                <fullName>Order - Printed</fullName>
+                <default>false</default>
+                <label>Order - Printed</label>
+            </value>
+            <value>
+                <fullName>Orders - Cancelled</fullName>
+                <default>false</default>
+                <label>Orders - Cancelled</label>
+            </value>
+            <value>
+                <fullName>Payment Processed</fullName>
+                <default>false</default>
+                <label>Payment Processed</label>
+            </value>
+            <value>
+                <fullName>Payment requested</fullName>
+                <default>false</default>
+                <label>Payment requested</label>
+            </value>
+            <value>
+                <fullName>Payment Transferred (Money Move)</fullName>
+                <default>false</default>
+                <label>Payment Transferred (Money Move)</label>
+            </value>
+            <value>
+                <fullName>Placed Order</fullName>
+                <default>false</default>
+                <label>Placed Order</label>
+            </value>
+            <value>
+                <fullName>Post Show Feedback</fullName>
+                <default>false</default>
+                <label>Post Show Feedback</label>
+            </value>
+            <value>
+                <fullName>Processed Non-Rev Form (OE)</fullName>
+                <default>false</default>
+                <label>Processed Non-Rev Form (OE)</label>
+            </value>
+            <value>
+                <fullName>Processed Order without Payment</fullName>
+                <default>false</default>
+                <label>Processed Order without Payment</label>
+            </value>
+            <value>
+                <fullName>Processed Order with Payment</fullName>
+                <default>false</default>
+                <label>Processed Order with Payment</label>
+            </value>
+            <value>
+                <fullName>Provided Address</fullName>
+                <default>false</default>
+                <label>Provided Address</label>
+            </value>
+            <value>
+                <fullName>Provided Booth Dimensions</fullName>
+                <default>false</default>
+                <label>Provided Booth Dimensions</label>
+            </value>
+            <value>
+                <fullName>Provided Brochure</fullName>
+                <default>false</default>
+                <label>Provided Brochure</label>
+            </value>
+            <value>
+                <fullName>Provided Contact Details</fullName>
+                <default>false</default>
+                <label>Provided Contact Details</label>
+            </value>
+            <value>
+                <fullName>Provided Dates/Times</fullName>
+                <default>false</default>
+                <label>Provided Dates/Times</label>
+            </value>
+            <value>
+                <fullName>Provided Dimensions</fullName>
+                <default>false</default>
+                <label>Provided Dimensions</label>
+            </value>
+            <value>
+                <fullName>Provided Documents</fullName>
+                <default>false</default>
+                <label>Provided Documents</label>
+            </value>
+            <value>
+                <fullName>Provided Email Address</fullName>
+                <default>false</default>
+                <label>Provided Email Address</label>
+            </value>
+            <value>
+                <fullName>Provided Exhibitor Manual (PDF)</fullName>
+                <default>false</default>
+                <label>Provided Exhibitor Manual (PDF)</label>
+            </value>
+            <value>
+                <fullName>Provided Fax #</fullName>
+                <default>false</default>
+                <label>Provided Fax #</label>
+            </value>
+            <value>
+                <fullName>Provided Floor Plan/Booth Layout</fullName>
+                <default>false</default>
+                <label>Provided Floor Plan/Booth Layout</label>
+            </value>
+            <value>
+                <fullName>Provided Form(s)</fullName>
+                <default>false</default>
+                <label>Provided Form(s)</label>
+            </value>
+            <value>
+                <fullName>Provided Invoice</fullName>
+                <default>false</default>
+                <label>Provided Invoice</label>
+            </value>
+            <value>
+                <fullName>Provided Kit Link</fullName>
+                <default>false</default>
+                <label>Provided Kit Link</label>
+            </value>
+            <value>
+                <fullName>Provided Link to Expresso Site</fullName>
+                <default>false</default>
+                <label>Provided Link to Expresso Site</label>
+            </value>
+            <value>
+                <fullName>Provided Non GES Vendor Contact Information</fullName>
+                <default>false</default>
+                <label>Provided Non GES Vendor Contact Information</label>
+            </value>
+            <value>
+                <fullName>Provided Non GES Vendor Information</fullName>
+                <default>false</default>
+                <label>Provided Non GES Vendor Information</label>
+            </value>
+            <value>
+                <fullName>Provided Photos</fullName>
+                <default>false</default>
+                <label>Provided Photos</label>
+            </value>
+            <value>
+                <fullName>Provided Order Confirmation</fullName>
+                <default>false</default>
+                <label>Provided Preliminary Invoice</label>
+            </value>
+            <value>
+                <fullName>Provided Quote</fullName>
+                <default>false</default>
+                <label>Provided Quote</label>
+            </value>
+            <value>
+                <fullName>Provided requested forms</fullName>
+                <default>false</default>
+                <label>Provided requested forms</label>
+            </value>
+            <value>
+                <fullName>Provided requested info</fullName>
+                <default>false</default>
+                <label>Provided requested info</label>
+            </value>
+            <value>
+                <fullName>Provided Shipment Information</fullName>
+                <default>false</default>
+                <label>Provided Shipment Information</label>
+            </value>
+            <value>
+                <fullName>Provided Target Dates</fullName>
+                <default>false</default>
+                <label>Provided Target Dates</label>
+            </value>
+            <value>
+                <fullName>Provided Track &amp; Tracing</fullName>
+                <default>false</default>
+                <label>Provided Track &amp; Tracing</label>
+            </value>
+            <value>
+                <fullName>Provided User ID</fullName>
+                <default>false</default>
+                <label>Provided User ID</label>
+            </value>
+            <value>
+                <fullName>Provided Vendor Information</fullName>
+                <default>false</default>
+                <label>Provided Vendor Information</label>
+            </value>
+            <value>
+                <fullName>Provided Visit Info</fullName>
+                <default>false</default>
+                <label>Provided Visit Info</label>
+            </value>
+            <value>
+                <fullName>Provided Warehouse Hours</fullName>
+                <default>false</default>
+                <label>Provided Warehouse Hours</label>
+            </value>
+            <value>
+                <fullName>Quote/assistance provided</fullName>
+                <default>false</default>
+                <label>Quote/assistance provided</label>
+            </value>
+            <value>
+                <fullName>Re-Billed to 3rd Party</fullName>
+                <default>false</default>
+                <label>Re-Billed to 3rd Party</label>
+            </value>
+            <value>
+                <fullName>Re-Billed to Exhibitor</fullName>
+                <default>false</default>
+                <label>Re-Billed to Exhibitor</label>
+            </value>
+            <value>
+                <fullName>Referred to Blitz</fullName>
+                <default>false</default>
+                <label>Referred to Blitz</label>
+            </value>
+            <value>
+                <fullName>Referred to Carrier</fullName>
+                <default>false</default>
+                <label>Referred to Carrier</label>
+            </value>
+            <value>
+                <fullName>Referred to City</fullName>
+                <default>false</default>
+                <label>Referred to City</label>
+            </value>
+            <value>
+                <fullName>Referred to Claims</fullName>
+                <default>false</default>
+                <label>Referred to Claims</label>
+            </value>
+            <value>
+                <fullName>Referred to Credit Control</fullName>
+                <default>false</default>
+                <label>Referred to Credit Control</label>
+            </value>
+            <value>
+                <fullName>Referred to Customs Broker</fullName>
+                <default>false</default>
+                <label>Referred to Customs Broker</label>
+            </value>
+            <value>
+                <fullName>Referred to E&amp;E</fullName>
+                <default>false</default>
+                <label>Referred to E&amp;E</label>
+            </value>
+            <value>
+                <fullName>Referred to Europe</fullName>
+                <default>false</default>
+                <label>Referred to Europe</label>
+            </value>
+            <value>
+                <fullName>Referred to Exhibitor</fullName>
+                <default>false</default>
+                <label>Referred to Exhibitor</label>
+            </value>
+            <value>
+                <fullName>Referred to Exhibitor Sales</fullName>
+                <default>false</default>
+                <label>Referred to Exhibitor Sales</label>
+            </value>
+            <value>
+                <fullName>Referred to Expresso</fullName>
+                <default>false</default>
+                <label>Referred to Expresso</label>
+            </value>
+            <value>
+                <fullName>Referred to GES Canada/International</fullName>
+                <default>false</default>
+                <label>Referred to GES Canada/International</label>
+            </value>
+            <value>
+                <fullName>Referred to GES Electrical</fullName>
+                <default>false</default>
+                <label>Referred to GES Electrical</label>
+            </value>
+            <value>
+                <fullName>Referred to GES Intl Logistics</fullName>
+                <default>false</default>
+                <label>Referred to GES Intl Logistics</label>
+            </value>
+            <value>
+                <fullName>Referred to GES Logistics</fullName>
+                <default>false</default>
+                <label>Referred to GES Logistics</label>
+            </value>
+            <value>
+                <fullName>Referred to Graphics</fullName>
+                <default>false</default>
+                <label>Referred to Graphics</label>
+            </value>
+            <value>
+                <fullName>Referred to H&amp;S</fullName>
+                <default>false</default>
+                <label>Referred to H&amp;S</label>
+            </value>
+            <value>
+                <fullName>Referred to Onsite Desk</fullName>
+                <default>false</default>
+                <label>Referred to Onsite Desk</label>
+            </value>
+            <value>
+                <fullName>Referred to Organiser</fullName>
+                <default>false</default>
+                <label>Referred to Organiser</label>
+            </value>
+            <value>
+                <fullName>Referred to Other</fullName>
+                <default>false</default>
+                <label>Referred to Other</label>
+            </value>
+            <value>
+                <fullName>Referred to Service Desk at Showsite</fullName>
+                <default>false</default>
+                <label>Referred to Service Desk at Showsite</label>
+            </value>
+            <value>
+                <fullName>Referred to Show Management</fullName>
+                <default>false</default>
+                <label>Referred to Show Management</label>
+            </value>
+            <value>
+                <fullName>Referred to Supplier</fullName>
+                <default>false</default>
+                <label>Referred to Supplier</label>
+            </value>
+            <value>
+                <fullName>Referred to Venue</fullName>
+                <default>false</default>
+                <label>Referred to Venue</label>
+            </value>
+            <value>
+                <fullName>Referred to Visit Connect</fullName>
+                <default>false</default>
+                <label>Referred to Visit Connect</label>
+            </value>
+            <value>
+                <fullName>Referred to Warehouse</fullName>
+                <default>false</default>
+                <label>Referred to Warehouse</label>
+            </value>
+            <value>
+                <fullName>Refund/Part Credit agreed</fullName>
+                <default>false</default>
+                <label>Refund/Part Credit agreed</label>
+            </value>
+            <value>
+                <fullName>Refund Applied</fullName>
+                <default>false</default>
+                <label>Refund Applied</label>
+            </value>
+            <value>
+                <fullName>Refund Applied – City Approved</fullName>
+                <default>false</default>
+                <label>Refund Applied – City Approved</label>
+            </value>
+            <value>
+                <fullName>Refund Applied – NSC Approved</fullName>
+                <default>false</default>
+                <label>Refund Applied – NSC Approved</label>
+            </value>
+            <value>
+                <fullName>Refund Denied</fullName>
+                <default>false</default>
+                <label>Refund Denied</label>
+            </value>
+            <value>
+                <fullName>Refund Denied – City Denied</fullName>
+                <default>false</default>
+                <label>Refund Denied – City Denied</label>
+            </value>
+            <value>
+                <fullName>Refund Denied – NSC Denied</fullName>
+                <default>false</default>
+                <label>Refund Denied – NSC Denied</label>
+            </value>
+            <value>
+                <fullName>Reroute Completed</fullName>
+                <default>false</default>
+                <label>Reroute Completed</label>
+            </value>
+            <value>
+                <fullName>RES - Dispatch Load Sheet (DLS) Processed</fullName>
+                <default>false</default>
+                <label>RES - Dispatch Load Sheet (DLS) Processed</label>
+            </value>
+            <value>
+                <fullName>Resolved Through Expresso Impersonation</fullName>
+                <default>false</default>
+                <label>Resolved Through Expresso Impersonation</label>
+            </value>
+            <value>
+                <fullName>Responded to Survey</fullName>
+                <default>false</default>
+                <label>Responded to Survey</label>
+            </value>
+            <value>
+                <fullName>RES - Reroute Completed</fullName>
+                <default>false</default>
+                <label>RES - Reroute Completed</label>
+            </value>
+            <value>
+                <fullName>RES - Upgrade Completed</fullName>
+                <default>false</default>
+                <label>RES - Upgrade Completed</label>
+            </value>
+            <value>
+                <fullName>RGF</fullName>
+                <default>false</default>
+                <label>RGF</label>
+            </value>
+            <value>
+                <fullName>SD Issue</fullName>
+                <default>false</default>
+                <label>SD Issue</label>
+            </value>
+            <value>
+                <fullName>Sent Exhibitor Manual</fullName>
+                <default>false</default>
+                <label>Sent Exhibitor Manual</label>
+            </value>
+            <value>
+                <fullName>Service Request cancelled</fullName>
+                <default>false</default>
+                <label>Service Request cancelled</label>
+            </value>
+            <value>
+                <fullName>Service Request duplicated</fullName>
+                <default>false</default>
+                <label>Service Request duplicated</label>
+            </value>
+            <value>
+                <fullName>Shipment Booked</fullName>
+                <default>false</default>
+                <label>Shipment Booked</label>
+            </value>
+            <value>
+                <fullName>Show Closed</fullName>
+                <default>false</default>
+                <label>Show Closed</label>
+            </value>
+            <value>
+                <fullName>Spam/ Promototional - NFAR</fullName>
+                <default>false</default>
+                <label>Spam/ Promototional - NFAR</label>
+            </value>
+            <value>
+                <fullName>SR Cancelled</fullName>
+                <default>false</default>
+                <label>SR Cancelled</label>
+            </value>
+            <value>
+                <fullName>SR Duplicate</fullName>
+                <default>false</default>
+                <label>SR Duplicate</label>
+            </value>
+            <value>
+                <fullName>SR Released</fullName>
+                <default>false</default>
+                <label>SR Released</label>
+            </value>
+            <value>
+                <fullName>Standard item available</fullName>
+                <default>false</default>
+                <label>Standard item available</label>
+            </value>
+            <value>
+                <fullName>Survey Follow Up</fullName>
+                <default>false</default>
+                <label>Survey Follow Up</label>
+            </value>
+            <value>
+                <fullName>Thanked</fullName>
+                <default>false</default>
+                <label>Thanked</label>
+            </value>
+            <value>
+                <fullName>Unable to provide form/details – Unauthorized</fullName>
+                <default>false</default>
+                <label>Unable to provide form/details – Unauthorized</label>
+            </value>
+            <value>
+                <fullName>Upgrade Completed</fullName>
+                <default>false</default>
+                <label>Upgrade Completed</label>
+            </value>
+            <value>
+                <fullName>Urgent Status - No Response</fullName>
+                <default>false</default>
+                <label>Urgent Status - No Response</label>
+            </value>
+            <value>
+                <fullName>Waiting for client to confirm</fullName>
+                <default>false</default>
+                <label>Waiting for client to confirm</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>1-Pre</controllingFieldValue>
+            <controllingFieldValue>2-Showsite</controllingFieldValue>
+            <controllingFieldValue>3-Post</controllingFieldValue>
+            <controllingFieldValue>Pre-show</controllingFieldValue>
+            <controllingFieldValue>Showsite (Build)</controllingFieldValue>
+            <controllingFieldValue>Show Open</controllingFieldValue>
+            <controllingFieldValue>Showsite (Breakdown)</controllingFieldValue>
+            <controllingFieldValue>Post-show</controllingFieldValue>
+            <valueName>Account Details Amended</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>1-Pre</controllingFieldValue>
+            <controllingFieldValue>2-Showsite</controllingFieldValue>
+            <controllingFieldValue>3-Post</controllingFieldValue>
+            <valueName>Adjusted Company Name/Address</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>1-Pre</controllingFieldValue>
+            <controllingFieldValue>2-Showsite</controllingFieldValue>
+            <controllingFieldValue>3-Post</controllingFieldValue>
+            <valueName>Adjusted Contact Info</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>1-Pre</controllingFieldValue>
+            <controllingFieldValue>2-Showsite</controllingFieldValue>
+            <controllingFieldValue>3-Post</controllingFieldValue>
+            <valueName>Amended Order</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>1-Pre</controllingFieldValue>
+            <controllingFieldValue>2-Showsite</controllingFieldValue>
+            <controllingFieldValue>3-Post</controllingFieldValue>
+            <controllingFieldValue>Pre-show</controllingFieldValue>
+            <controllingFieldValue>Showsite (Build)</controllingFieldValue>
+            <controllingFieldValue>Show Open</controllingFieldValue>
+            <controllingFieldValue>Showsite (Breakdown)</controllingFieldValue>
+            <controllingFieldValue>Post-show</controllingFieldValue>
+            <valueName>Assisted with Expresso navigation</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>1-Pre</controllingFieldValue>
+            <controllingFieldValue>2-Showsite</controllingFieldValue>
+            <controllingFieldValue>3-Post</controllingFieldValue>
+            <controllingFieldValue>Pre-show</controllingFieldValue>
+            <controllingFieldValue>Showsite (Build)</controllingFieldValue>
+            <controllingFieldValue>Show Open</controllingFieldValue>
+            <controllingFieldValue>Showsite (Breakdown)</controllingFieldValue>
+            <controllingFieldValue>Post-show</controllingFieldValue>
+            <valueName>Assisted with Online Issue</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>1-Pre</controllingFieldValue>
+            <controllingFieldValue>2-Showsite</controllingFieldValue>
+            <controllingFieldValue>3-Post</controllingFieldValue>
+            <controllingFieldValue>Pre-show</controllingFieldValue>
+            <valueName>Assisted With Order Forms</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>1-Pre</controllingFieldValue>
+            <controllingFieldValue>2-Showsite</controllingFieldValue>
+            <controllingFieldValue>3-Post</controllingFieldValue>
+            <controllingFieldValue>Showsite (Build)</controllingFieldValue>
+            <controllingFieldValue>Show Open</controllingFieldValue>
+            <controllingFieldValue>Showsite (Breakdown)</controllingFieldValue>
+            <controllingFieldValue>Post-show</controllingFieldValue>
+            <valueName>Assisted with selection</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>1-Pre</controllingFieldValue>
+            <controllingFieldValue>2-Showsite</controllingFieldValue>
+            <controllingFieldValue>3-Post</controllingFieldValue>
+            <controllingFieldValue>Pre-show</controllingFieldValue>
+            <controllingFieldValue>Showsite (Build)</controllingFieldValue>
+            <controllingFieldValue>Show Open</controllingFieldValue>
+            <controllingFieldValue>Showsite (Breakdown)</controllingFieldValue>
+            <controllingFieldValue>Post-show</controllingFieldValue>
+            <valueName>Assisted with what item to order</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>1-Pre</controllingFieldValue>
+            <controllingFieldValue>2-Showsite</controllingFieldValue>
+            <controllingFieldValue>4-Non Tradeshow-N/A</controllingFieldValue>
+            <controllingFieldValue>3-Post</controllingFieldValue>
+            <controllingFieldValue>Pre-show</controllingFieldValue>
+            <controllingFieldValue>Showsite (Build)</controllingFieldValue>
+            <controllingFieldValue>Show Open</controllingFieldValue>
+            <controllingFieldValue>Showsite (Breakdown)</controllingFieldValue>
+            <controllingFieldValue>Post-show</controllingFieldValue>
+            <valueName>Callback Already Resolved</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>1-Pre</controllingFieldValue>
+            <valueName>CAS - EL Rejected / Not Uploaded</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>1-Pre</controllingFieldValue>
+            <valueName>CAS - Exhibitor List Booth #&#39;s / Dims Updated</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>1-Pre</controllingFieldValue>
+            <valueName>CAS - Initial EL Uploaded</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>1-Pre</controllingFieldValue>
+            <valueName>CAS - Revised EL Uploaded</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>1-Pre</controllingFieldValue>
+            <controllingFieldValue>2-Showsite</controllingFieldValue>
+            <controllingFieldValue>3-Post</controllingFieldValue>
+            <controllingFieldValue>Pre-show</controllingFieldValue>
+            <valueName>CM Processed – City Approved</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>1-Pre</controllingFieldValue>
+            <controllingFieldValue>2-Showsite</controllingFieldValue>
+            <controllingFieldValue>3-Post</controllingFieldValue>
+            <controllingFieldValue>Pre-show</controllingFieldValue>
+            <valueName>CM Processed – NSC Approved</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>1-Pre</controllingFieldValue>
+            <controllingFieldValue>2-Showsite</controllingFieldValue>
+            <controllingFieldValue>3-Post</controllingFieldValue>
+            <valueName>Compliment documented</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>1-Pre</controllingFieldValue>
+            <controllingFieldValue>2-Showsite</controllingFieldValue>
+            <controllingFieldValue>3-Post</controllingFieldValue>
+            <controllingFieldValue>Pre-show</controllingFieldValue>
+            <controllingFieldValue>Showsite (Build)</controllingFieldValue>
+            <controllingFieldValue>Show Open</controllingFieldValue>
+            <controllingFieldValue>Showsite (Breakdown)</controllingFieldValue>
+            <controllingFieldValue>Post-show</controllingFieldValue>
+            <valueName>Compliment Received</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>1-Pre</controllingFieldValue>
+            <controllingFieldValue>2-Showsite</controllingFieldValue>
+            <controllingFieldValue>3-Post</controllingFieldValue>
+            <valueName>Confirmed Delivery Address</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>1-Pre</controllingFieldValue>
+            <controllingFieldValue>2-Showsite</controllingFieldValue>
+            <controllingFieldValue>3-Post</controllingFieldValue>
+            <valueName>Confirmed Freight Received</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>1-Pre</controllingFieldValue>
+            <controllingFieldValue>2-Showsite</controllingFieldValue>
+            <controllingFieldValue>3-Post</controllingFieldValue>
+            <valueName>Confirmed Order Entered in CORE</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>1-Pre</controllingFieldValue>
+            <controllingFieldValue>2-Showsite</controllingFieldValue>
+            <controllingFieldValue>3-Post</controllingFieldValue>
+            <controllingFieldValue>Pre-show</controllingFieldValue>
+            <controllingFieldValue>Showsite (Build)</controllingFieldValue>
+            <controllingFieldValue>Show Open</controllingFieldValue>
+            <controllingFieldValue>Showsite (Breakdown)</controllingFieldValue>
+            <controllingFieldValue>Post-show</controllingFieldValue>
+            <valueName>Confirmed Order Received</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>1-Pre</controllingFieldValue>
+            <controllingFieldValue>2-Showsite</controllingFieldValue>
+            <controllingFieldValue>3-Post</controllingFieldValue>
+            <valueName>Confirmed Order Received (Expresso)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>1-Pre</controllingFieldValue>
+            <controllingFieldValue>2-Showsite</controllingFieldValue>
+            <controllingFieldValue>3-Post</controllingFieldValue>
+            <valueName>Confirmed Order Received (Fax)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>1-Pre</controllingFieldValue>
+            <controllingFieldValue>2-Showsite</controllingFieldValue>
+            <controllingFieldValue>3-Post</controllingFieldValue>
+            <controllingFieldValue>Pre-show</controllingFieldValue>
+            <controllingFieldValue>Showsite (Build)</controllingFieldValue>
+            <controllingFieldValue>Show Open</controllingFieldValue>
+            <controllingFieldValue>Showsite (Breakdown)</controllingFieldValue>
+            <controllingFieldValue>Post-show</controllingFieldValue>
+            <valueName>Confirmed Package Infomation</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>1-Pre</controllingFieldValue>
+            <controllingFieldValue>2-Showsite</controllingFieldValue>
+            <controllingFieldValue>3-Post</controllingFieldValue>
+            <controllingFieldValue>Pre-show</controllingFieldValue>
+            <controllingFieldValue>Showsite (Build)</controllingFieldValue>
+            <controllingFieldValue>Show Open</controllingFieldValue>
+            <controllingFieldValue>Showsite (Breakdown)</controllingFieldValue>
+            <controllingFieldValue>Post-show</controllingFieldValue>
+            <valueName>Confirmed Stand Type</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>1-Pre</controllingFieldValue>
+            <controllingFieldValue>2-Showsite</controllingFieldValue>
+            <controllingFieldValue>3-Post</controllingFieldValue>
+            <valueName>Courtesy Credit</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>1-Pre</controllingFieldValue>
+            <controllingFieldValue>2-Showsite</controllingFieldValue>
+            <controllingFieldValue>3-Post</controllingFieldValue>
+            <valueName>Created Opportunity</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>1-Pre</controllingFieldValue>
+            <controllingFieldValue>2-Showsite</controllingFieldValue>
+            <controllingFieldValue>3-Post</controllingFieldValue>
+            <controllingFieldValue>Pre-show</controllingFieldValue>
+            <controllingFieldValue>Showsite (Build)</controllingFieldValue>
+            <controllingFieldValue>Show Open</controllingFieldValue>
+            <controllingFieldValue>Showsite (Breakdown)</controllingFieldValue>
+            <controllingFieldValue>Post-show</controllingFieldValue>
+            <valueName>Duplicate - NFAR</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>1-Pre</controllingFieldValue>
+            <valueName>Exhibitor Bringing Their Own</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>1-Pre</controllingFieldValue>
+            <controllingFieldValue>3-Post</controllingFieldValue>
+            <valueName>Exhibitor List Complete</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>1-Pre</controllingFieldValue>
+            <controllingFieldValue>2-Showsite</controllingFieldValue>
+            <controllingFieldValue>3-Post</controllingFieldValue>
+            <valueName>Explained 3rd Party</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>1-Pre</controllingFieldValue>
+            <controllingFieldValue>2-Showsite</controllingFieldValue>
+            <controllingFieldValue>3-Post</controllingFieldValue>
+            <valueName>Explained Charges - Exhibitor Satisfied</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>1-Pre</controllingFieldValue>
+            <controllingFieldValue>2-Showsite</controllingFieldValue>
+            <controllingFieldValue>3-Post</controllingFieldValue>
+            <valueName>Explained Charges - Exhibitor Unsatisfied but understands</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>1-Pre</controllingFieldValue>
+            <controllingFieldValue>2-Showsite</controllingFieldValue>
+            <controllingFieldValue>3-Post</controllingFieldValue>
+            <valueName>Explained EAC</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>1-Pre</controllingFieldValue>
+            <controllingFieldValue>2-Showsite</controllingFieldValue>
+            <controllingFieldValue>3-Post</controllingFieldValue>
+            <valueName>Explained Forms</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>1-Pre</controllingFieldValue>
+            <controllingFieldValue>2-Showsite</controllingFieldValue>
+            <controllingFieldValue>3-Post</controllingFieldValue>
+            <valueName>Explained forms needed to complete order</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>1-Pre</controllingFieldValue>
+            <controllingFieldValue>2-Showsite</controllingFieldValue>
+            <controllingFieldValue>3-Post</controllingFieldValue>
+            <controllingFieldValue>Pre-show</controllingFieldValue>
+            <controllingFieldValue>Showsite (Build)</controllingFieldValue>
+            <controllingFieldValue>Show Open</controllingFieldValue>
+            <controllingFieldValue>Showsite (Breakdown)</controllingFieldValue>
+            <controllingFieldValue>Post-show</controllingFieldValue>
+            <valueName>Explained Pricing</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>1-Pre</controllingFieldValue>
+            <controllingFieldValue>2-Showsite</controllingFieldValue>
+            <controllingFieldValue>3-Post</controllingFieldValue>
+            <controllingFieldValue>Pre-show</controllingFieldValue>
+            <controllingFieldValue>Showsite (Build)</controllingFieldValue>
+            <controllingFieldValue>Show Open</controllingFieldValue>
+            <controllingFieldValue>Showsite (Breakdown)</controllingFieldValue>
+            <controllingFieldValue>Post-show</controllingFieldValue>
+            <valueName>Explained Process</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>1-Pre</controllingFieldValue>
+            <controllingFieldValue>2-Showsite</controllingFieldValue>
+            <controllingFieldValue>3-Post</controllingFieldValue>
+            <controllingFieldValue>Pre-show</controllingFieldValue>
+            <controllingFieldValue>Showsite (Build)</controllingFieldValue>
+            <controllingFieldValue>Show Open</controllingFieldValue>
+            <controllingFieldValue>Showsite (Breakdown)</controllingFieldValue>
+            <controllingFieldValue>Post-show</controllingFieldValue>
+            <valueName>Explained Service(s)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>1-Pre</controllingFieldValue>
+            <controllingFieldValue>2-Showsite</controllingFieldValue>
+            <controllingFieldValue>3-Post</controllingFieldValue>
+            <valueName>Explained Storage Options</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>1-Pre</controllingFieldValue>
+            <controllingFieldValue>2-Showsite</controllingFieldValue>
+            <controllingFieldValue>3-Post</controllingFieldValue>
+            <controllingFieldValue>Pre-show</controllingFieldValue>
+            <controllingFieldValue>Showsite (Build)</controllingFieldValue>
+            <controllingFieldValue>Show Open</controllingFieldValue>
+            <controllingFieldValue>Showsite (Breakdown)</controllingFieldValue>
+            <controllingFieldValue>Post-show</controllingFieldValue>
+            <valueName>Further Information Requested from Exhibitor</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>1-Pre</controllingFieldValue>
+            <controllingFieldValue>2-Showsite</controllingFieldValue>
+            <controllingFieldValue>3-Post</controllingFieldValue>
+            <valueName>Honored Discount Pricing</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>1-Pre</controllingFieldValue>
+            <controllingFieldValue>2-Showsite</controllingFieldValue>
+            <controllingFieldValue>3-Post</controllingFieldValue>
+            <valueName>Kit - Provided Expresso Technical Support</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>1-Pre</controllingFieldValue>
+            <controllingFieldValue>2-Showsite</controllingFieldValue>
+            <controllingFieldValue>3-Post</controllingFieldValue>
+            <valueName>Kit - Provided Expresso Technical Support - Required Development</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>1-Pre</controllingFieldValue>
+            <controllingFieldValue>2-Showsite</controllingFieldValue>
+            <controllingFieldValue>3-Post</controllingFieldValue>
+            <valueName>LG - Created Opportunity</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>1-Pre</controllingFieldValue>
+            <controllingFieldValue>2-Showsite</controllingFieldValue>
+            <controllingFieldValue>3-Post</controllingFieldValue>
+            <valueName>LG - Standard item available</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>1-Pre</controllingFieldValue>
+            <controllingFieldValue>2-Showsite</controllingFieldValue>
+            <controllingFieldValue>3-Post</controllingFieldValue>
+            <valueName>No Longer Attending Show</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>1-Pre</controllingFieldValue>
+            <valueName>Non-Rev Form(s) Forwarded to City/AM</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>1-Pre</controllingFieldValue>
+            <valueName>Non-Rev Form(s) Insurance Form Processed</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>1-Pre</controllingFieldValue>
+            <valueName>Non-Rev Form(s) Processed (Generic)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>1-Pre</controllingFieldValue>
+            <valueName>Non-Rev Form(s) Uploaded on Booth Level</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>1-Pre</controllingFieldValue>
+            <controllingFieldValue>2-Showsite</controllingFieldValue>
+            <controllingFieldValue>3-Post</controllingFieldValue>
+            <controllingFieldValue>Pre-show</controllingFieldValue>
+            <controllingFieldValue>Showsite (Build)</controllingFieldValue>
+            <controllingFieldValue>Show Open</controllingFieldValue>
+            <controllingFieldValue>Showsite (Breakdown)</controllingFieldValue>
+            <controllingFieldValue>Post-show</controllingFieldValue>
+            <valueName>No response from Exhibitor</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>1-Pre</controllingFieldValue>
+            <valueName>OE - 3rd party Account Created / Orders Booked</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>1-Pre</controllingFieldValue>
+            <valueName>OE - 3rd Party Billing Confirmed / Orders Booked</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>1-Pre</controllingFieldValue>
+            <valueName>OE - Confirmed Booth dimensions / Number</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>1-Pre</controllingFieldValue>
+            <valueName>OE - Confirmed Booth Status</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>1-Pre</controllingFieldValue>
+            <valueName>OE - Courtesy Email / No Response Required</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>1-Pre</controllingFieldValue>
+            <valueName>OE - CSM to Enter Order (Show Org Request)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>1-Pre</controllingFieldValue>
+            <valueName>OE - Item Quantities Updated</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>1-Pre</controllingFieldValue>
+            <valueName>OE - IT Issue Resolved - Order(s) Booked</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>1-Pre</controllingFieldValue>
+            <valueName>OE - KIT Issue Resolved - Order(s) Booked</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>1-Pre</controllingFieldValue>
+            <valueName>OE - Money Move Complete / Refund Complete</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>1-Pre</controllingFieldValue>
+            <valueName>OE - NOI/EAC form Processed</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>1-Pre</controllingFieldValue>
+            <valueName>OE - Non Rev Form(s) - UBL &amp; Booth Status Update</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>1-Pre</controllingFieldValue>
+            <valueName>OE - Non Rev Form(s) - UBL Only</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>1-Pre</controllingFieldValue>
+            <valueName>OE - Order(s) Booked</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>1-Pre</controllingFieldValue>
+            <valueName>OE - Order(s) Paid in Full</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>1-Pre</controllingFieldValue>
+            <valueName>OE - Order Cancellation</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>1-Pre</controllingFieldValue>
+            <valueName>OE - Order Revisions Not Needed (Duplicate)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>1-Pre</controllingFieldValue>
+            <valueName>OE - Referred to Service Desk</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>1-Pre</controllingFieldValue>
+            <valueName>OE - Referred to Vertikal (COI Request)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>1-Pre</controllingFieldValue>
+            <valueName>OE - Rejection Email Sent / Response Not Required</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>1-Pre</controllingFieldValue>
+            <valueName>OE - Tax Request Approved / Orders Re-entered</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>1-Pre</controllingFieldValue>
+            <controllingFieldValue>2-Showsite</controllingFieldValue>
+            <controllingFieldValue>3-Post</controllingFieldValue>
+            <controllingFieldValue>Pre-show</controllingFieldValue>
+            <controllingFieldValue>Showsite (Build)</controllingFieldValue>
+            <controllingFieldValue>Show Open</controllingFieldValue>
+            <controllingFieldValue>Showsite (Breakdown)</controllingFieldValue>
+            <controllingFieldValue>Post-show</controllingFieldValue>
+            <valueName>Order Amended</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>1-Pre</controllingFieldValue>
+            <controllingFieldValue>2-Showsite</controllingFieldValue>
+            <controllingFieldValue>3-Post</controllingFieldValue>
+            <valueName>Order - Changed</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>1-Pre</controllingFieldValue>
+            <controllingFieldValue>2-Showsite</controllingFieldValue>
+            <controllingFieldValue>3-Post</controllingFieldValue>
+            <valueName>Order - Corrected</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>1-Pre</controllingFieldValue>
+            <controllingFieldValue>2-Showsite</controllingFieldValue>
+            <controllingFieldValue>3-Post</controllingFieldValue>
+            <valueName>Order - Entered</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>1-Pre</controllingFieldValue>
+            <controllingFieldValue>2-Showsite</controllingFieldValue>
+            <controllingFieldValue>3-Post</controllingFieldValue>
+            <valueName>Order - Entered through Impersonation</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>1-Pre</controllingFieldValue>
+            <controllingFieldValue>2-Showsite</controllingFieldValue>
+            <controllingFieldValue>3-Post</controllingFieldValue>
+            <valueName>Order Not Entered - Duplicate</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>1-Pre</controllingFieldValue>
+            <controllingFieldValue>2-Showsite</controllingFieldValue>
+            <controllingFieldValue>3-Post</controllingFieldValue>
+            <valueName>Order - Printed</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>1-Pre</controllingFieldValue>
+            <controllingFieldValue>2-Showsite</controllingFieldValue>
+            <controllingFieldValue>3-Post</controllingFieldValue>
+            <controllingFieldValue>Pre-show</controllingFieldValue>
+            <controllingFieldValue>Showsite (Build)</controllingFieldValue>
+            <controllingFieldValue>Show Open</controllingFieldValue>
+            <controllingFieldValue>Showsite (Breakdown)</controllingFieldValue>
+            <controllingFieldValue>Post-show</controllingFieldValue>
+            <valueName>Orders - Cancelled</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>1-Pre</controllingFieldValue>
+            <controllingFieldValue>2-Showsite</controllingFieldValue>
+            <controllingFieldValue>3-Post</controllingFieldValue>
+            <controllingFieldValue>Pre-show</controllingFieldValue>
+            <controllingFieldValue>Showsite (Build)</controllingFieldValue>
+            <controllingFieldValue>Show Open</controllingFieldValue>
+            <controllingFieldValue>Showsite (Breakdown)</controllingFieldValue>
+            <controllingFieldValue>Post-show</controllingFieldValue>
+            <valueName>Payment Processed</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>1-Pre</controllingFieldValue>
+            <controllingFieldValue>2-Showsite</controllingFieldValue>
+            <controllingFieldValue>3-Post</controllingFieldValue>
+            <controllingFieldValue>Pre-show</controllingFieldValue>
+            <controllingFieldValue>Showsite (Build)</controllingFieldValue>
+            <controllingFieldValue>Show Open</controllingFieldValue>
+            <controllingFieldValue>Showsite (Breakdown)</controllingFieldValue>
+            <controllingFieldValue>Post-show</controllingFieldValue>
+            <valueName>Payment requested</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>1-Pre</controllingFieldValue>
+            <controllingFieldValue>2-Showsite</controllingFieldValue>
+            <controllingFieldValue>3-Post</controllingFieldValue>
+            <valueName>Payment Transferred (Money Move)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>1-Pre</controllingFieldValue>
+            <controllingFieldValue>2-Showsite</controllingFieldValue>
+            <controllingFieldValue>3-Post</controllingFieldValue>
+            <controllingFieldValue>Pre-show</controllingFieldValue>
+            <controllingFieldValue>Showsite (Build)</controllingFieldValue>
+            <controllingFieldValue>Show Open</controllingFieldValue>
+            <controllingFieldValue>Showsite (Breakdown)</controllingFieldValue>
+            <controllingFieldValue>Post-show</controllingFieldValue>
+            <valueName>Placed Order</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>1-Pre</controllingFieldValue>
+            <valueName>Processed Non-Rev Form (OE)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>1-Pre</controllingFieldValue>
+            <controllingFieldValue>2-Showsite</controllingFieldValue>
+            <controllingFieldValue>3-Post</controllingFieldValue>
+            <valueName>Provided Address</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>1-Pre</controllingFieldValue>
+            <controllingFieldValue>2-Showsite</controllingFieldValue>
+            <controllingFieldValue>3-Post</controllingFieldValue>
+            <valueName>Provided Booth Dimensions</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>1-Pre</controllingFieldValue>
+            <controllingFieldValue>2-Showsite</controllingFieldValue>
+            <controllingFieldValue>3-Post</controllingFieldValue>
+            <controllingFieldValue>Pre-show</controllingFieldValue>
+            <controllingFieldValue>Showsite (Build)</controllingFieldValue>
+            <controllingFieldValue>Show Open</controllingFieldValue>
+            <controllingFieldValue>Showsite (Breakdown)</controllingFieldValue>
+            <controllingFieldValue>Post-show</controllingFieldValue>
+            <valueName>Provided Brochure</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>1-Pre</controllingFieldValue>
+            <controllingFieldValue>2-Showsite</controllingFieldValue>
+            <controllingFieldValue>3-Post</controllingFieldValue>
+            <controllingFieldValue>Pre-show</controllingFieldValue>
+            <controllingFieldValue>Showsite (Build)</controllingFieldValue>
+            <controllingFieldValue>Show Open</controllingFieldValue>
+            <controllingFieldValue>Showsite (Breakdown)</controllingFieldValue>
+            <controllingFieldValue>Post-show</controllingFieldValue>
+            <valueName>Provided Contact Details</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>1-Pre</controllingFieldValue>
+            <controllingFieldValue>2-Showsite</controllingFieldValue>
+            <controllingFieldValue>3-Post</controllingFieldValue>
+            <valueName>Provided Dates/Times</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>1-Pre</controllingFieldValue>
+            <controllingFieldValue>2-Showsite</controllingFieldValue>
+            <controllingFieldValue>3-Post</controllingFieldValue>
+            <controllingFieldValue>Pre-show</controllingFieldValue>
+            <controllingFieldValue>Showsite (Build)</controllingFieldValue>
+            <controllingFieldValue>Show Open</controllingFieldValue>
+            <controllingFieldValue>Showsite (Breakdown)</controllingFieldValue>
+            <controllingFieldValue>Post-show</controllingFieldValue>
+            <valueName>Provided Dimensions</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>1-Pre</controllingFieldValue>
+            <controllingFieldValue>2-Showsite</controllingFieldValue>
+            <controllingFieldValue>3-Post</controllingFieldValue>
+            <valueName>Provided Documents</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>1-Pre</controllingFieldValue>
+            <controllingFieldValue>2-Showsite</controllingFieldValue>
+            <controllingFieldValue>3-Post</controllingFieldValue>
+            <valueName>Provided Email Address</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>1-Pre</controllingFieldValue>
+            <controllingFieldValue>2-Showsite</controllingFieldValue>
+            <controllingFieldValue>3-Post</controllingFieldValue>
+            <valueName>Provided Exhibitor Manual (PDF)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>1-Pre</controllingFieldValue>
+            <controllingFieldValue>2-Showsite</controllingFieldValue>
+            <controllingFieldValue>3-Post</controllingFieldValue>
+            <valueName>Provided Fax #</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>1-Pre</controllingFieldValue>
+            <controllingFieldValue>2-Showsite</controllingFieldValue>
+            <controllingFieldValue>3-Post</controllingFieldValue>
+            <valueName>Provided Floor Plan/Booth Layout</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>1-Pre</controllingFieldValue>
+            <controllingFieldValue>2-Showsite</controllingFieldValue>
+            <controllingFieldValue>3-Post</controllingFieldValue>
+            <controllingFieldValue>Pre-show</controllingFieldValue>
+            <controllingFieldValue>Showsite (Build)</controllingFieldValue>
+            <controllingFieldValue>Show Open</controllingFieldValue>
+            <controllingFieldValue>Showsite (Breakdown)</controllingFieldValue>
+            <controllingFieldValue>Post-show</controllingFieldValue>
+            <valueName>Provided Form(s)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>1-Pre</controllingFieldValue>
+            <controllingFieldValue>2-Showsite</controllingFieldValue>
+            <controllingFieldValue>3-Post</controllingFieldValue>
+            <controllingFieldValue>Pre-show</controllingFieldValue>
+            <controllingFieldValue>Showsite (Build)</controllingFieldValue>
+            <controllingFieldValue>Show Open</controllingFieldValue>
+            <controllingFieldValue>Showsite (Breakdown)</controllingFieldValue>
+            <controllingFieldValue>Post-show</controllingFieldValue>
+            <valueName>Provided Invoice</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>1-Pre</controllingFieldValue>
+            <controllingFieldValue>2-Showsite</controllingFieldValue>
+            <controllingFieldValue>3-Post</controllingFieldValue>
+            <valueName>Provided Kit Link</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>1-Pre</controllingFieldValue>
+            <controllingFieldValue>2-Showsite</controllingFieldValue>
+            <controllingFieldValue>3-Post</controllingFieldValue>
+            <valueName>Provided Link to Expresso Site</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>1-Pre</controllingFieldValue>
+            <controllingFieldValue>2-Showsite</controllingFieldValue>
+            <controllingFieldValue>3-Post</controllingFieldValue>
+            <valueName>Provided Non GES Vendor Contact Information</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>1-Pre</controllingFieldValue>
+            <controllingFieldValue>2-Showsite</controllingFieldValue>
+            <controllingFieldValue>3-Post</controllingFieldValue>
+            <valueName>Provided Non GES Vendor Information</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>1-Pre</controllingFieldValue>
+            <controllingFieldValue>2-Showsite</controllingFieldValue>
+            <controllingFieldValue>3-Post</controllingFieldValue>
+            <controllingFieldValue>Pre-show</controllingFieldValue>
+            <controllingFieldValue>Showsite (Build)</controllingFieldValue>
+            <controllingFieldValue>Show Open</controllingFieldValue>
+            <controllingFieldValue>Showsite (Breakdown)</controllingFieldValue>
+            <controllingFieldValue>Post-show</controllingFieldValue>
+            <valueName>Provided Photos</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>1-Pre</controllingFieldValue>
+            <controllingFieldValue>2-Showsite</controllingFieldValue>
+            <controllingFieldValue>3-Post</controllingFieldValue>
+            <controllingFieldValue>Pre-show</controllingFieldValue>
+            <controllingFieldValue>Showsite (Build)</controllingFieldValue>
+            <controllingFieldValue>Show Open</controllingFieldValue>
+            <controllingFieldValue>Showsite (Breakdown)</controllingFieldValue>
+            <controllingFieldValue>Post-show</controllingFieldValue>
+            <valueName>Provided Order Confirmation</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>1-Pre</controllingFieldValue>
+            <controllingFieldValue>2-Showsite</controllingFieldValue>
+            <controllingFieldValue>3-Post</controllingFieldValue>
+            <controllingFieldValue>Pre-show</controllingFieldValue>
+            <controllingFieldValue>Showsite (Build)</controllingFieldValue>
+            <controllingFieldValue>Show Open</controllingFieldValue>
+            <controllingFieldValue>Showsite (Breakdown)</controllingFieldValue>
+            <controllingFieldValue>Post-show</controllingFieldValue>
+            <valueName>Provided Quote</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>1-Pre</controllingFieldValue>
+            <controllingFieldValue>2-Showsite</controllingFieldValue>
+            <controllingFieldValue>3-Post</controllingFieldValue>
+            <controllingFieldValue>Pre-show</controllingFieldValue>
+            <controllingFieldValue>Showsite (Build)</controllingFieldValue>
+            <controllingFieldValue>Show Open</controllingFieldValue>
+            <controllingFieldValue>Showsite (Breakdown)</controllingFieldValue>
+            <controllingFieldValue>Post-show</controllingFieldValue>
+            <valueName>Provided requested forms</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>1-Pre</controllingFieldValue>
+            <controllingFieldValue>2-Showsite</controllingFieldValue>
+            <controllingFieldValue>3-Post</controllingFieldValue>
+            <controllingFieldValue>Pre-show</controllingFieldValue>
+            <controllingFieldValue>Showsite (Build)</controllingFieldValue>
+            <controllingFieldValue>Show Open</controllingFieldValue>
+            <controllingFieldValue>Showsite (Breakdown)</controllingFieldValue>
+            <controllingFieldValue>Post-show</controllingFieldValue>
+            <valueName>Provided requested info</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>1-Pre</controllingFieldValue>
+            <controllingFieldValue>2-Showsite</controllingFieldValue>
+            <controllingFieldValue>3-Post</controllingFieldValue>
+            <valueName>Provided Shipment Information</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>1-Pre</controllingFieldValue>
+            <controllingFieldValue>2-Showsite</controllingFieldValue>
+            <controllingFieldValue>3-Post</controllingFieldValue>
+            <valueName>Provided Target Dates</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>1-Pre</controllingFieldValue>
+            <controllingFieldValue>2-Showsite</controllingFieldValue>
+            <controllingFieldValue>3-Post</controllingFieldValue>
+            <valueName>Provided Track &amp; Tracing</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>1-Pre</controllingFieldValue>
+            <controllingFieldValue>2-Showsite</controllingFieldValue>
+            <controllingFieldValue>3-Post</controllingFieldValue>
+            <valueName>Provided Vendor Information</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>1-Pre</controllingFieldValue>
+            <valueName>Provided Visit Info</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>1-Pre</controllingFieldValue>
+            <controllingFieldValue>2-Showsite</controllingFieldValue>
+            <controllingFieldValue>3-Post</controllingFieldValue>
+            <valueName>Provided Warehouse Hours</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>1-Pre</controllingFieldValue>
+            <controllingFieldValue>2-Showsite</controllingFieldValue>
+            <controllingFieldValue>3-Post</controllingFieldValue>
+            <valueName>Quote/assistance provided</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>1-Pre</controllingFieldValue>
+            <controllingFieldValue>2-Showsite</controllingFieldValue>
+            <controllingFieldValue>3-Post</controllingFieldValue>
+            <valueName>Re-Billed to 3rd Party</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>1-Pre</controllingFieldValue>
+            <controllingFieldValue>2-Showsite</controllingFieldValue>
+            <controllingFieldValue>3-Post</controllingFieldValue>
+            <valueName>Re-Billed to Exhibitor</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>1-Pre</controllingFieldValue>
+            <controllingFieldValue>2-Showsite</controllingFieldValue>
+            <controllingFieldValue>3-Post</controllingFieldValue>
+            <controllingFieldValue>Pre-show</controllingFieldValue>
+            <controllingFieldValue>Showsite (Build)</controllingFieldValue>
+            <controllingFieldValue>Show Open</controllingFieldValue>
+            <controllingFieldValue>Showsite (Breakdown)</controllingFieldValue>
+            <controllingFieldValue>Post-show</controllingFieldValue>
+            <valueName>Referred to Blitz</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>1-Pre</controllingFieldValue>
+            <controllingFieldValue>2-Showsite</controllingFieldValue>
+            <controllingFieldValue>3-Post</controllingFieldValue>
+            <valueName>Referred to Carrier</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>1-Pre</controllingFieldValue>
+            <controllingFieldValue>2-Showsite</controllingFieldValue>
+            <controllingFieldValue>3-Post</controllingFieldValue>
+            <valueName>Referred to City</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>1-Pre</controllingFieldValue>
+            <controllingFieldValue>2-Showsite</controllingFieldValue>
+            <controllingFieldValue>3-Post</controllingFieldValue>
+            <valueName>Referred to Claims</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>1-Pre</controllingFieldValue>
+            <controllingFieldValue>2-Showsite</controllingFieldValue>
+            <controllingFieldValue>3-Post</controllingFieldValue>
+            <controllingFieldValue>Pre-show</controllingFieldValue>
+            <controllingFieldValue>Showsite (Build)</controllingFieldValue>
+            <controllingFieldValue>Show Open</controllingFieldValue>
+            <controllingFieldValue>Showsite (Breakdown)</controllingFieldValue>
+            <controllingFieldValue>Post-show</controllingFieldValue>
+            <valueName>Referred to Credit Control</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>1-Pre</controllingFieldValue>
+            <controllingFieldValue>2-Showsite</controllingFieldValue>
+            <controllingFieldValue>3-Post</controllingFieldValue>
+            <valueName>Referred to Customs Broker</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>1-Pre</controllingFieldValue>
+            <controllingFieldValue>2-Showsite</controllingFieldValue>
+            <controllingFieldValue>3-Post</controllingFieldValue>
+            <valueName>Referred to E&amp;E</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>1-Pre</controllingFieldValue>
+            <controllingFieldValue>2-Showsite</controllingFieldValue>
+            <controllingFieldValue>3-Post</controllingFieldValue>
+            <valueName>Referred to Exhibitor</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>1-Pre</controllingFieldValue>
+            <controllingFieldValue>2-Showsite</controllingFieldValue>
+            <controllingFieldValue>3-Post</controllingFieldValue>
+            <controllingFieldValue>Pre-show</controllingFieldValue>
+            <controllingFieldValue>Showsite (Build)</controllingFieldValue>
+            <controllingFieldValue>Show Open</controllingFieldValue>
+            <controllingFieldValue>Showsite (Breakdown)</controllingFieldValue>
+            <controllingFieldValue>Post-show</controllingFieldValue>
+            <valueName>Referred to Exhibitor Sales</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>1-Pre</controllingFieldValue>
+            <controllingFieldValue>2-Showsite</controllingFieldValue>
+            <controllingFieldValue>3-Post</controllingFieldValue>
+            <valueName>Referred to Expresso</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>1-Pre</controllingFieldValue>
+            <controllingFieldValue>2-Showsite</controllingFieldValue>
+            <controllingFieldValue>3-Post</controllingFieldValue>
+            <controllingFieldValue>Pre-show</controllingFieldValue>
+            <controllingFieldValue>Showsite (Build)</controllingFieldValue>
+            <controllingFieldValue>Show Open</controllingFieldValue>
+            <controllingFieldValue>Showsite (Breakdown)</controllingFieldValue>
+            <controllingFieldValue>Post-show</controllingFieldValue>
+            <valueName>Referred to GES Canada/International</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>1-Pre</controllingFieldValue>
+            <controllingFieldValue>2-Showsite</controllingFieldValue>
+            <controllingFieldValue>3-Post</controllingFieldValue>
+            <controllingFieldValue>Pre-show</controllingFieldValue>
+            <controllingFieldValue>Showsite (Build)</controllingFieldValue>
+            <controllingFieldValue>Show Open</controllingFieldValue>
+            <controllingFieldValue>Showsite (Breakdown)</controllingFieldValue>
+            <controllingFieldValue>Post-show</controllingFieldValue>
+            <valueName>Referred to GES Electrical</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>1-Pre</controllingFieldValue>
+            <controllingFieldValue>2-Showsite</controllingFieldValue>
+            <controllingFieldValue>3-Post</controllingFieldValue>
+            <valueName>Referred to GES Intl Logistics</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>1-Pre</controllingFieldValue>
+            <controllingFieldValue>2-Showsite</controllingFieldValue>
+            <controllingFieldValue>3-Post</controllingFieldValue>
+            <controllingFieldValue>Pre-show</controllingFieldValue>
+            <controllingFieldValue>Showsite (Build)</controllingFieldValue>
+            <controllingFieldValue>Show Open</controllingFieldValue>
+            <controllingFieldValue>Showsite (Breakdown)</controllingFieldValue>
+            <controllingFieldValue>Post-show</controllingFieldValue>
+            <valueName>Referred to GES Logistics</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>1-Pre</controllingFieldValue>
+            <controllingFieldValue>2-Showsite</controllingFieldValue>
+            <controllingFieldValue>3-Post</controllingFieldValue>
+            <controllingFieldValue>Pre-show</controllingFieldValue>
+            <controllingFieldValue>Showsite (Build)</controllingFieldValue>
+            <controllingFieldValue>Show Open</controllingFieldValue>
+            <controllingFieldValue>Showsite (Breakdown)</controllingFieldValue>
+            <controllingFieldValue>Post-show</controllingFieldValue>
+            <valueName>Referred to Graphics</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>1-Pre</controllingFieldValue>
+            <controllingFieldValue>2-Showsite</controllingFieldValue>
+            <controllingFieldValue>3-Post</controllingFieldValue>
+            <controllingFieldValue>Pre-show</controllingFieldValue>
+            <controllingFieldValue>Showsite (Build)</controllingFieldValue>
+            <controllingFieldValue>Show Open</controllingFieldValue>
+            <controllingFieldValue>Showsite (Breakdown)</controllingFieldValue>
+            <controllingFieldValue>Post-show</controllingFieldValue>
+            <valueName>Referred to Onsite Desk</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>1-Pre</controllingFieldValue>
+            <controllingFieldValue>2-Showsite</controllingFieldValue>
+            <controllingFieldValue>3-Post</controllingFieldValue>
+            <controllingFieldValue>Pre-show</controllingFieldValue>
+            <controllingFieldValue>Showsite (Build)</controllingFieldValue>
+            <controllingFieldValue>Show Open</controllingFieldValue>
+            <controllingFieldValue>Showsite (Breakdown)</controllingFieldValue>
+            <controllingFieldValue>Post-show</controllingFieldValue>
+            <valueName>Referred to Organiser</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>1-Pre</controllingFieldValue>
+            <controllingFieldValue>2-Showsite</controllingFieldValue>
+            <controllingFieldValue>4-Non Tradeshow-N/A</controllingFieldValue>
+            <controllingFieldValue>3-Post</controllingFieldValue>
+            <controllingFieldValue>Pre-show</controllingFieldValue>
+            <controllingFieldValue>Showsite (Build)</controllingFieldValue>
+            <controllingFieldValue>Show Open</controllingFieldValue>
+            <controllingFieldValue>Showsite (Breakdown)</controllingFieldValue>
+            <controllingFieldValue>Post-show</controllingFieldValue>
+            <valueName>Referred to Other</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>1-Pre</controllingFieldValue>
+            <controllingFieldValue>2-Showsite</controllingFieldValue>
+            <controllingFieldValue>3-Post</controllingFieldValue>
+            <valueName>Referred to Service Desk at Showsite</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>1-Pre</controllingFieldValue>
+            <controllingFieldValue>2-Showsite</controllingFieldValue>
+            <controllingFieldValue>3-Post</controllingFieldValue>
+            <controllingFieldValue>Pre-show</controllingFieldValue>
+            <controllingFieldValue>Showsite (Build)</controllingFieldValue>
+            <controllingFieldValue>Show Open</controllingFieldValue>
+            <controllingFieldValue>Showsite (Breakdown)</controllingFieldValue>
+            <controllingFieldValue>Post-show</controllingFieldValue>
+            <valueName>Referred to Show Management</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>1-Pre</controllingFieldValue>
+            <controllingFieldValue>2-Showsite</controllingFieldValue>
+            <controllingFieldValue>3-Post</controllingFieldValue>
+            <controllingFieldValue>Pre-show</controllingFieldValue>
+            <controllingFieldValue>Showsite (Build)</controllingFieldValue>
+            <controllingFieldValue>Show Open</controllingFieldValue>
+            <controllingFieldValue>Showsite (Breakdown)</controllingFieldValue>
+            <controllingFieldValue>Post-show</controllingFieldValue>
+            <valueName>Referred to Supplier</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>1-Pre</controllingFieldValue>
+            <controllingFieldValue>2-Showsite</controllingFieldValue>
+            <controllingFieldValue>3-Post</controllingFieldValue>
+            <controllingFieldValue>Pre-show</controllingFieldValue>
+            <controllingFieldValue>Showsite (Build)</controllingFieldValue>
+            <controllingFieldValue>Show Open</controllingFieldValue>
+            <controllingFieldValue>Showsite (Breakdown)</controllingFieldValue>
+            <controllingFieldValue>Post-show</controllingFieldValue>
+            <valueName>Referred to Venue</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>1-Pre</controllingFieldValue>
+            <controllingFieldValue>2-Showsite</controllingFieldValue>
+            <controllingFieldValue>3-Post</controllingFieldValue>
+            <controllingFieldValue>Pre-show</controllingFieldValue>
+            <controllingFieldValue>Showsite (Build)</controllingFieldValue>
+            <controllingFieldValue>Show Open</controllingFieldValue>
+            <controllingFieldValue>Showsite (Breakdown)</controllingFieldValue>
+            <controllingFieldValue>Post-show</controllingFieldValue>
+            <valueName>Referred to Warehouse</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>1-Pre</controllingFieldValue>
+            <controllingFieldValue>2-Showsite</controllingFieldValue>
+            <controllingFieldValue>3-Post</controllingFieldValue>
+            <controllingFieldValue>Pre-show</controllingFieldValue>
+            <controllingFieldValue>Showsite (Build)</controllingFieldValue>
+            <controllingFieldValue>Show Open</controllingFieldValue>
+            <controllingFieldValue>Showsite (Breakdown)</controllingFieldValue>
+            <controllingFieldValue>Post-show</controllingFieldValue>
+            <valueName>Refund Applied</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>1-Pre</controllingFieldValue>
+            <controllingFieldValue>2-Showsite</controllingFieldValue>
+            <controllingFieldValue>3-Post</controllingFieldValue>
+            <controllingFieldValue>Pre-show</controllingFieldValue>
+            <controllingFieldValue>Showsite (Build)</controllingFieldValue>
+            <controllingFieldValue>Show Open</controllingFieldValue>
+            <controllingFieldValue>Showsite (Breakdown)</controllingFieldValue>
+            <controllingFieldValue>Post-show</controllingFieldValue>
+            <valueName>Refund Denied</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>1-Pre</controllingFieldValue>
+            <controllingFieldValue>2-Showsite</controllingFieldValue>
+            <controllingFieldValue>3-Post</controllingFieldValue>
+            <valueName>Refund Denied – City Denied</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>1-Pre</controllingFieldValue>
+            <controllingFieldValue>2-Showsite</controllingFieldValue>
+            <controllingFieldValue>3-Post</controllingFieldValue>
+            <valueName>Refund Denied – NSC Denied</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>1-Pre</controllingFieldValue>
+            <controllingFieldValue>2-Showsite</controllingFieldValue>
+            <controllingFieldValue>3-Post</controllingFieldValue>
+            <valueName>Reroute Completed</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>1-Pre</controllingFieldValue>
+            <controllingFieldValue>2-Showsite</controllingFieldValue>
+            <controllingFieldValue>3-Post</controllingFieldValue>
+            <valueName>RES - Dispatch Load Sheet (DLS) Processed</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>1-Pre</controllingFieldValue>
+            <controllingFieldValue>2-Showsite</controllingFieldValue>
+            <controllingFieldValue>3-Post</controllingFieldValue>
+            <valueName>Resolved Through Expresso Impersonation</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>1-Pre</controllingFieldValue>
+            <controllingFieldValue>2-Showsite</controllingFieldValue>
+            <controllingFieldValue>3-Post</controllingFieldValue>
+            <valueName>Responded to Survey</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>1-Pre</controllingFieldValue>
+            <controllingFieldValue>2-Showsite</controllingFieldValue>
+            <controllingFieldValue>3-Post</controllingFieldValue>
+            <valueName>RES - Reroute Completed</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>1-Pre</controllingFieldValue>
+            <controllingFieldValue>2-Showsite</controllingFieldValue>
+            <controllingFieldValue>3-Post</controllingFieldValue>
+            <valueName>RES - Upgrade Completed</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>1-Pre</controllingFieldValue>
+            <controllingFieldValue>2-Showsite</controllingFieldValue>
+            <controllingFieldValue>3-Post</controllingFieldValue>
+            <valueName>Shipment Booked</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>1-Pre</controllingFieldValue>
+            <valueName>Show Closed</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>1-Pre</controllingFieldValue>
+            <controllingFieldValue>2-Showsite</controllingFieldValue>
+            <controllingFieldValue>3-Post</controllingFieldValue>
+            <controllingFieldValue>Pre-show</controllingFieldValue>
+            <controllingFieldValue>Showsite (Build)</controllingFieldValue>
+            <controllingFieldValue>Show Open</controllingFieldValue>
+            <controllingFieldValue>Showsite (Breakdown)</controllingFieldValue>
+            <controllingFieldValue>Post-show</controllingFieldValue>
+            <valueName>Spam/ Promototional - NFAR</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>1-Pre</controllingFieldValue>
+            <controllingFieldValue>2-Showsite</controllingFieldValue>
+            <controllingFieldValue>3-Post</controllingFieldValue>
+            <valueName>SR Cancelled</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>1-Pre</controllingFieldValue>
+            <controllingFieldValue>2-Showsite</controllingFieldValue>
+            <controllingFieldValue>3-Post</controllingFieldValue>
+            <valueName>SR Duplicate</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>1-Pre</controllingFieldValue>
+            <controllingFieldValue>2-Showsite</controllingFieldValue>
+            <controllingFieldValue>3-Post</controllingFieldValue>
+            <valueName>SR Released</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>1-Pre</controllingFieldValue>
+            <controllingFieldValue>2-Showsite</controllingFieldValue>
+            <controllingFieldValue>3-Post</controllingFieldValue>
+            <controllingFieldValue>Showsite (Build)</controllingFieldValue>
+            <controllingFieldValue>Show Open</controllingFieldValue>
+            <controllingFieldValue>Showsite (Breakdown)</controllingFieldValue>
+            <controllingFieldValue>Post-show</controllingFieldValue>
+            <valueName>Standard item available</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>1-Pre</controllingFieldValue>
+            <controllingFieldValue>2-Showsite</controllingFieldValue>
+            <controllingFieldValue>4-Non Tradeshow-N/A</controllingFieldValue>
+            <controllingFieldValue>3-Post</controllingFieldValue>
+            <controllingFieldValue>Pre-show</controllingFieldValue>
+            <controllingFieldValue>Showsite (Build)</controllingFieldValue>
+            <controllingFieldValue>Show Open</controllingFieldValue>
+            <controllingFieldValue>Showsite (Breakdown)</controllingFieldValue>
+            <controllingFieldValue>Post-show</controllingFieldValue>
+            <valueName>Survey Follow Up</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>1-Pre</controllingFieldValue>
+            <controllingFieldValue>2-Showsite</controllingFieldValue>
+            <controllingFieldValue>3-Post</controllingFieldValue>
+            <valueName>Unable to provide form/details – Unauthorized</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>1-Pre</controllingFieldValue>
+            <controllingFieldValue>2-Showsite</controllingFieldValue>
+            <controllingFieldValue>3-Post</controllingFieldValue>
+            <valueName>Urgent Status - No Response</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>4-Non Tradeshow-N/A</controllingFieldValue>
+            <valueName>No Response</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Pre-show</controllingFieldValue>
+            <controllingFieldValue>Showsite (Build)</controllingFieldValue>
+            <controllingFieldValue>Show Open</controllingFieldValue>
+            <controllingFieldValue>Showsite (Breakdown)</controllingFieldValue>
+            <controllingFieldValue>Post-show</controllingFieldValue>
+            <valueName>CH not received paperwork</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Pre-show</controllingFieldValue>
+            <controllingFieldValue>Showsite (Build)</controllingFieldValue>
+            <controllingFieldValue>Show Open</controllingFieldValue>
+            <controllingFieldValue>Showsite (Breakdown)</controllingFieldValue>
+            <controllingFieldValue>Post-show</controllingFieldValue>
+            <valueName>Complaint LOB</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Pre-show</controllingFieldValue>
+            <controllingFieldValue>Showsite (Build)</controllingFieldValue>
+            <controllingFieldValue>Show Open</controllingFieldValue>
+            <controllingFieldValue>Showsite (Breakdown)</controllingFieldValue>
+            <controllingFieldValue>Post-show</controllingFieldValue>
+            <valueName>Complaint Onsite</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Pre-show</controllingFieldValue>
+            <controllingFieldValue>Showsite (Build)</controllingFieldValue>
+            <controllingFieldValue>Show Open</controllingFieldValue>
+            <controllingFieldValue>Showsite (Breakdown)</controllingFieldValue>
+            <controllingFieldValue>Post-show</controllingFieldValue>
+            <valueName>Complaint SC</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Pre-show</controllingFieldValue>
+            <controllingFieldValue>Showsite (Build)</controllingFieldValue>
+            <controllingFieldValue>Show Open</controllingFieldValue>
+            <controllingFieldValue>Showsite (Breakdown)</controllingFieldValue>
+            <controllingFieldValue>Post-show</controllingFieldValue>
+            <valueName>Damaged/dirty</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Pre-show</controllingFieldValue>
+            <controllingFieldValue>Post-show</controllingFieldValue>
+            <valueName>Damaged client’s property – Invoice needs paying</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Pre-show</controllingFieldValue>
+            <controllingFieldValue>Showsite (Build)</controllingFieldValue>
+            <controllingFieldValue>Show Open</controllingFieldValue>
+            <controllingFieldValue>Showsite (Breakdown)</controllingFieldValue>
+            <controllingFieldValue>Post-show</controllingFieldValue>
+            <valueName>Incorrect LOB</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Pre-show</controllingFieldValue>
+            <controllingFieldValue>Showsite (Build)</controllingFieldValue>
+            <controllingFieldValue>Show Open</controllingFieldValue>
+            <controllingFieldValue>Showsite (Breakdown)</controllingFieldValue>
+            <controllingFieldValue>Post-show</controllingFieldValue>
+            <valueName>Incorrect SC</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Pre-show</controllingFieldValue>
+            <controllingFieldValue>Showsite (Build)</controllingFieldValue>
+            <controllingFieldValue>Show Open</controllingFieldValue>
+            <controllingFieldValue>Showsite (Breakdown)</controllingFieldValue>
+            <controllingFieldValue>Post-show</controllingFieldValue>
+            <valueName>Missing Item</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Pre-show</controllingFieldValue>
+            <controllingFieldValue>Showsite (Build)</controllingFieldValue>
+            <controllingFieldValue>Show Open</controllingFieldValue>
+            <controllingFieldValue>Showsite (Breakdown)</controllingFieldValue>
+            <controllingFieldValue>Post-show</controllingFieldValue>
+            <valueName>Not delivered</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Pre-show</controllingFieldValue>
+            <controllingFieldValue>Showsite (Build)</controllingFieldValue>
+            <controllingFieldValue>Show Open</controllingFieldValue>
+            <controllingFieldValue>Showsite (Breakdown)</controllingFieldValue>
+            <controllingFieldValue>Post-show</controllingFieldValue>
+            <valueName>Not Installed</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Pre-show</controllingFieldValue>
+            <controllingFieldValue>Showsite (Build)</controllingFieldValue>
+            <controllingFieldValue>Show Open</controllingFieldValue>
+            <controllingFieldValue>Showsite (Breakdown)</controllingFieldValue>
+            <controllingFieldValue>Post-show</controllingFieldValue>
+            <valueName>ON-SITE - FITTED/DELIVERED NEW ORDER ON STAND</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Pre-show</controllingFieldValue>
+            <controllingFieldValue>Showsite (Build)</controllingFieldValue>
+            <controllingFieldValue>Show Open</controllingFieldValue>
+            <controllingFieldValue>Showsite (Breakdown)</controllingFieldValue>
+            <controllingFieldValue>Post-show</controllingFieldValue>
+            <valueName>ON-SITE - ISSUE NOT FOR GES - REFERRED EXHIBITOR</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Pre-show</controllingFieldValue>
+            <controllingFieldValue>Showsite (Build)</controllingFieldValue>
+            <controllingFieldValue>Show Open</controllingFieldValue>
+            <controllingFieldValue>Showsite (Breakdown)</controllingFieldValue>
+            <controllingFieldValue>Post-show</controllingFieldValue>
+            <valueName>ON-SITE - RESOLVED ISSUE AT STAND</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Pre-show</controllingFieldValue>
+            <controllingFieldValue>Showsite (Build)</controllingFieldValue>
+            <controllingFieldValue>Show Open</controllingFieldValue>
+            <controllingFieldValue>Showsite (Breakdown)</controllingFieldValue>
+            <controllingFieldValue>Post-show</controllingFieldValue>
+            <valueName>Order no longer Required</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Pre-show</controllingFieldValue>
+            <controllingFieldValue>Showsite (Build)</controllingFieldValue>
+            <controllingFieldValue>Show Open</controllingFieldValue>
+            <controllingFieldValue>Showsite (Breakdown)</controllingFieldValue>
+            <controllingFieldValue>Post-show</controllingFieldValue>
+            <valueName>Processed Order without Payment</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Pre-show</controllingFieldValue>
+            <controllingFieldValue>Showsite (Build)</controllingFieldValue>
+            <controllingFieldValue>Show Open</controllingFieldValue>
+            <controllingFieldValue>Showsite (Breakdown)</controllingFieldValue>
+            <controllingFieldValue>Post-show</controllingFieldValue>
+            <valueName>Processed Order with Payment</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Pre-show</controllingFieldValue>
+            <controllingFieldValue>Showsite (Build)</controllingFieldValue>
+            <controllingFieldValue>Show Open</controllingFieldValue>
+            <controllingFieldValue>Showsite (Breakdown)</controllingFieldValue>
+            <controllingFieldValue>Post-show</controllingFieldValue>
+            <valueName>Referred to Europe</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Pre-show</controllingFieldValue>
+            <controllingFieldValue>Showsite (Build)</controllingFieldValue>
+            <controllingFieldValue>Show Open</controllingFieldValue>
+            <controllingFieldValue>Showsite (Breakdown)</controllingFieldValue>
+            <controllingFieldValue>Post-show</controllingFieldValue>
+            <valueName>RGF</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Pre-show</controllingFieldValue>
+            <controllingFieldValue>Showsite (Build)</controllingFieldValue>
+            <controllingFieldValue>Show Open</controllingFieldValue>
+            <controllingFieldValue>Showsite (Breakdown)</controllingFieldValue>
+            <controllingFieldValue>Post-show</controllingFieldValue>
+            <valueName>SD Issue</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Pre-show</controllingFieldValue>
+            <controllingFieldValue>Showsite (Build)</controllingFieldValue>
+            <controllingFieldValue>Show Open</controllingFieldValue>
+            <controllingFieldValue>Showsite (Breakdown)</controllingFieldValue>
+            <controllingFieldValue>Post-show</controllingFieldValue>
+            <valueName>Waiting for client to confirm</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Showsite (Build)</controllingFieldValue>
+            <controllingFieldValue>Show Open</controllingFieldValue>
+            <controllingFieldValue>Showsite (Breakdown)</controllingFieldValue>
+            <controllingFieldValue>Post-show</controllingFieldValue>
+            <valueName>Refund/Part Credit agreed</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Showsite (Breakdown)</controllingFieldValue>
+            <valueName>Closed Loop</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Post-show</controllingFieldValue>
+            <valueName>Online Surveys</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Post-show</controllingFieldValue>
+            <valueName>Post Show Feedback</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

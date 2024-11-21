@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Cosmoprof_Emails_Case</fullName>
+    <columns>CASES.CASE_NUMBER</columns>
+    <columns>NAME</columns>
+    <columns>CASES.SUBJECT</columns>
+    <columns>CASES.STATUS</columns>
+    <columns>CASES.PRIORITY</columns>
+    <columns>GES_Type__c</columns>
+    <columns>Reason__c</columns>
+    <columns>Substatus__c</columns>
+    <columns>Resolution__c</columns>
+    <columns>CASES.CREATED_DATE</columns>
+    <columns>CORE.USERS.ALIAS</columns>
+    <columns>Booth_Number__c</columns>
+    <columns>Booth_Dimensions__c</columns>
+    <filterScope>Queue</filterScope>
+    <filters>
+        <field>CASES.STATUS</field>
+        <operation>equals</operation>
+        <value>Open,In Process,Pending</value>
+    </filters>
+    <label>US-Cosmoprof Emails</label>
+    <queue>US_Cosmoprof_Emails</queue>
+    <sharedTo>
+        <allInternalUsers />
+        <group>GES_NSC_Exhibitor_Services_Central_Rep</group>
+        <role>GESNSCExhibitorSalesSupervisor</role>
+        <role>GES_ES_Admin</role>
+        <role>GES_Exhibitor_Services_Central_Leader</role>
+        <role>GES_Exhibitor_Services_Central_Rep</role>
+        <role>GES_Exhibitor_Services_Las_Vegas_PIM_West_Leader</role>
+        <role>GES_Exhibitor_Services_Las_Vegas_and_PIM_Rep</role>
+        <role>GES_Exhibitor_Services_North_Atlantic_Leader</role>
+        <role>GES_Exhibitor_Services_North_Atlantic_Rep</role>
+        <role>GES_Exhibitor_Services_South_Atlantic_Leader</role>
+        <role>GES_Exhibitor_Services_South_Atlantic_Rep</role>
+        <role>GES_Exhibitor_Services_West_Rep</role>
+        <role>GES_NSC_Admin</role>
+        <role>GES_NSC_CAS_Rep</role>
+        <role>GES_NSC_Director</role>
+        <role>GES_NSC_File_Archivist</role>
+        <role>GES_NSC_Inbound_Rep</role>
+        <role>GES_NSC_Inbound_Supervisor</role>
+        <role>GES_NSC_Kit_Admin_Rep</role>
+        <role>GES_NSC_Kit_Admin_Supervisor</role>
+        <role>GES_NSC_LeadGen_Rep</role>
+        <role>GES_NSC_Logistics_Rep</role>
+        <role>GES_NSC_Order_Entry_Director</role>
+        <role>GES_NSC_Order_Entry_Rep</role>
+        <role>GES_NSC_Order_Entry_Supervisor</role>
+        <role>GES_NSC_Outbound_Rep</role>
+        <role>GES_NSC_Resolutions_Rep</role>
+        <role>GES_NSC_Resolutions_Supervisor</role>
+        <role>GES_NSC_Support_Desk_Rep</role>
+        <role>GES_National_Servicenter</role>
+    </sharedTo>
+</ListView>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>US_Housing_Requires_Event</fullName>
+    <active>true</active>
+    <description>A US - Housing record type opportunity requires either an exhibition opportunity or a non show.</description>
+    <errorConditionFormula>/* We only want this to run against Housing */ 
+$RecordType.DeveloperName == &#39;US_Housing&#39; &amp;&amp; AND(ISBLANK(Show_Occurrence__c), ISBLANK(Non_Show__c)) &amp;&amp; NOT(OR($Profile.Name = &#39;GES Interface&#39;,$Profile.Name = &#39;System Administrator1&#39;,$Profile.Name = &#39;GES Administrator Interface&#39;))</errorConditionFormula>
+    <errorMessage>Please select an Exhibition opportunity or a US Housing type Non-Show</errorMessage>
+</ValidationRule>

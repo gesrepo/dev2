@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PRFDesign_Config__c</fullName>
+    <label>Design Config</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Custom</fullName>
+                <default>false</default>
+                <label>Custom</label>
+            </value>
+            <value>
+                <fullName>Event</fullName>
+                <default>false</default>
+                <label>Event</label>
+            </value>
+            <value>
+                <fullName>Mobile Exhibit</fullName>
+                <default>false</default>
+                <label>Mobile Exhibit</label>
+            </value>
+            <value>
+                <fullName>Permanent Install</fullName>
+                <default>false</default>
+                <label>Permanent Install</label>
+            </value>
+            <value>
+                <fullName>Purchase</fullName>
+                <default>false</default>
+                <label>Purchase</label>
+            </value>
+            <value>
+                <fullName>Other (Enter below)</fullName>
+                <default>false</default>
+                <label>Other (Enter below)</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>New_Concept_Design_Style_Guide_hr_u__c</fullName>
+    <defaultValue>32</defaultValue>
+    <description>Estimate of how many hours per unit pertaining to the new concept/design style guide.</description>
+    <externalId>false</externalId>
+    <label>New Concept/Design Style Guide - hr/u</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

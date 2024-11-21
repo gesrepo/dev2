@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>MainsCurrentTaxCode__c</fullName>
+    <description>Input field lookup:
+A	**DONT USE-Austria 20.00% 
+B	**Graphics-Belgium 21.00% 
+C	**Graphics-France 20.00% 
+D	**DONT USE-Denmark 25.00% 
+E	**DONT USE-OLD Ire 21.00% 
+F	**DONT USE-OLD Fr 19.60% 
+G	**DONT USE-Germany 19.00% 
+H	**DONT USE-Spain 
+I	**DONT USE-Italy 20.00% 
+L	**DONT USE-UK 15% 15.00% 
+N	**DONT USE-NL 21% 
+O	**DONT USE-NL 0% 
+P	**Graphics-Ireland 23.00% 
+S	**DONT USE-OLD Switz 7.60% 
+T	**Graphics-Switz 8% 
+V	**DONT USE-UK 17.5% 
+W	UK @ 20.00% 
+Z	UK Zero Rate @ 0.00%</description>
+    <label>Tax Code</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>A</fullName>
+                <default>false</default>
+                <label>A</label>
+            </value>
+            <value>
+                <fullName>B</fullName>
+                <default>false</default>
+                <label>B</label>
+            </value>
+            <value>
+                <fullName>C</fullName>
+                <default>false</default>
+                <label>C</label>
+            </value>
+            <value>
+                <fullName>D</fullName>
+                <default>false</default>
+                <label>D</label>
+            </value>
+            <value>
+                <fullName>E</fullName>
+                <default>false</default>
+                <label>E</label>
+            </value>
+            <value>
+                <fullName>F</fullName>
+                <default>false</default>
+                <label>F</label>
+            </value>
+            <value>
+                <fullName>G</fullName>
+                <default>false</default>
+                <label>G</label>
+            </value>
+            <value>
+                <fullName>H</fullName>
+                <default>false</default>
+                <label>H</label>
+            </value>
+            <value>
+                <fullName>I</fullName>
+                <default>false</default>
+                <label>I</label>
+            </value>
+            <value>
+                <fullName>L</fullName>
+                <default>false</default>
+                <label>L</label>
+            </value>
+            <value>
+                <fullName>N</fullName>
+                <default>false</default>
+                <label>N</label>
+            </value>
+            <value>
+                <fullName>O</fullName>
+                <default>false</default>
+                <label>O</label>
+            </value>
+            <value>
+                <fullName>P</fullName>
+                <default>false</default>
+                <label>P</label>
+            </value>
+            <value>
+                <fullName>S</fullName>
+                <default>false</default>
+                <label>S</label>
+            </value>
+            <value>
+                <fullName>T</fullName>
+                <default>false</default>
+                <label>T</label>
+            </value>
+            <value>
+                <fullName>V</fullName>
+                <default>false</default>
+                <label>V</label>
+            </value>
+            <value>
+                <fullName>W</fullName>
+                <default>false</default>
+                <label>W</label>
+            </value>
+            <value>
+                <fullName>Z</fullName>
+                <default>false</default>
+                <label>Z</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

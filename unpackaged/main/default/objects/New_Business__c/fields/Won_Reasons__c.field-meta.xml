@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Won_Reasons__c</fullName>
+    <inlineHelpText>Please select Reasons</inlineHelpText>
+    <label>Won Reasons</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Added Value</fullName>
+                <default>false</default>
+                <label>Added Value</label>
+            </value>
+            <value>
+                <fullName>Client Referral</fullName>
+                <default>false</default>
+                <label>Client Referral</label>
+            </value>
+            <value>
+                <fullName>Creativity</fullName>
+                <default>false</default>
+                <label>Creativity</label>
+            </value>
+            <value>
+                <fullName>Electrics</fullName>
+                <default>false</default>
+                <label>Electrics</label>
+            </value>
+            <value>
+                <fullName>Existing Relationship</fullName>
+                <default>false</default>
+                <label>Existing Relationship</label>
+            </value>
+            <value>
+                <fullName>Features</fullName>
+                <default>false</default>
+                <label>Features</label>
+            </value>
+            <value>
+                <fullName>Floorcovering</fullName>
+                <default>false</default>
+                <label>Floorcovering</label>
+            </value>
+            <value>
+                <fullName>Full Service Provider</fullName>
+                <default>false</default>
+                <label>Full Service Provider</label>
+            </value>
+            <value>
+                <fullName>Furniture</fullName>
+                <default>false</default>
+                <label>Furniture</label>
+            </value>
+            <value>
+                <fullName>Global Reach</fullName>
+                <default>false</default>
+                <label>Global Reach</label>
+            </value>
+            <value>
+                <fullName>Health and Safety</fullName>
+                <default>false</default>
+                <label>Health and Safety</label>
+            </value>
+            <value>
+                <fullName>Location</fullName>
+                <default>false</default>
+                <label>Location</label>
+            </value>
+            <value>
+                <fullName>Part of Programme</fullName>
+                <default>false</default>
+                <label>Part of Programme</label>
+            </value>
+            <value>
+                <fullName>Price</fullName>
+                <default>false</default>
+                <label>Price</label>
+            </value>
+            <value>
+                <fullName>Service Level</fullName>
+                <default>false</default>
+                <label>Service Level</label>
+            </value>
+            <value>
+                <fullName>Standfitting</fullName>
+                <default>false</default>
+                <label>Standfitting</label>
+            </value>
+            <value>
+                <fullName>Sustainability</fullName>
+                <default>false</default>
+                <label>Sustainability</label>
+            </value>
+            <value>
+                <fullName>Venue Relationship</fullName>
+                <default>false</default>
+                <label>Venue Relationship</label>
+            </value>
+            <value>
+                <fullName>Won Other</fullName>
+                <default>false</default>
+                <label>Won Other</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>EMEA_Quality_Homes_Conference_and_Exhib_Case</fullName>
+    <filterScope>Queue</filterScope>
+    <label>EMEA Quality Homes Conference and Exhib</label>
+    <queue>EMEA_Quality_Homes_Conference_and_Exhib</queue>
+    <sharedTo>
+        <allInternalUsers />
+    </sharedTo>
+</ListView>

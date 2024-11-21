@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Contracted_Shell_Scheme_Extras__c</fullName>
+    <defaultValue>false</defaultValue>
+    <inlineHelpText>Are we contracted for Shell Scheme Extras?</inlineHelpText>
+    <label>Shell Scheme Extras</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

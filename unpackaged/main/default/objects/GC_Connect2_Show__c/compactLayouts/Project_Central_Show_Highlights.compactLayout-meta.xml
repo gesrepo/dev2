@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CompactLayout xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Project_Central_Show_Highlights</fullName>
+    <fields>Opportunity_Name__c</fields>
+    <fields>Name</fields>
+    <fields>Show_Name__c</fields>
+    <fields>Job_Number__c</fields>
+    <fields>Client_Services_Manager__c</fields>
+    <fields>Show_Start_Date__c</fields>
+    <fields>Show_End_Date__c</fields>
+    <label>Project Central Show Highlights</label>
+</CompactLayout>

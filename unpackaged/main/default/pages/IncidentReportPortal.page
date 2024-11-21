@@ -1,0 +1,150 @@
+<apex:page controller="IncidentReportPortalController" showHeader="false" sidebar="false" standardStylesheets="true" docType="html-5.0">
+
+    <head>
+        <apex:stylesheet value="{!URLFOR($Resource.IncidentReportsForm, 'css/IncidentWebForm.css')}"/>
+        <apex:stylesheet value="{!URLFOR($Resource.IncidentReportsForm, 'css/IncidentStyle.css')}"/> 
+        <apex:stylesheet value="{!URLFOR($Resource.IncidentReportsForm, 'css/IncidentThanksPage.css')}"/>
+    </head>
+
+    <body>  
+        <apex:form id="pbForm" >
+            <div id="content" class="shadow">
+                <div id="header">
+                    <p>
+                        <apex:image value="{!URLFOR($Resource.IncidentReportsForm, 'images/GESLogo.jpeg')}" /> 
+                    </p>
+                    <apex:outputPanel layout="none" rendered="{!portalType == $Label.Supervisor_Portal_Path}" >
+                        <h2>{!$Label.Supervisor_Report_Portal}</h2>
+                        <p><h3>{!$Label.SP_Subtitle}</h3></p>
+                    </apex:outputPanel>
+                    <apex:outputPanel layout="none" rendered="{!portalType == $Label.Incident_Portal_Path}" >
+                        <h2>{!$Label.IncidentReportPortal}</h2>
+                        <apex:outputPanel layout="none" rendered="{!recordTypeName == $Label.Bodily_Injury}" >
+                            <p><apex:outputLabel escape="false" value="{!$Label.Bodily_Injury_Incident_Report}" /></p>
+                        </apex:outputPanel>                            
+                    </apex:outputPanel>
+                </div>
+                <apex:pageBlock mode="maindetail"> 
+                    <apex:actionRegion >
+                        <apex:pageMessages id="pageMessages"/>
+                        <!-- Section to select required action - common to both portals -->
+                        <apex:pageBlockSection title="{!$Label.Action_Type}" columns="2" rendered="{!currentStage == actionStage}">
+                            <apex:outputLabel for="actionType">
+                                {!$Label.Select_Action_Type}
+                            </apex:outputLabel>
+                            <apex:selectList id="actionType" size="1" value="{!selectedAction}">
+                                <apex:selectOption itemValue="--None--" itemLabel="--None--"/>
+                                <!-- <apex:selectOption itemValue="search" itemLabel="Search for Incident Report"/> -->
+                                <apex:selectOption itemValue="{!searchStage}" itemLabel="Search for Incident Report"/>
+                                <!-- <apex:selectOption itemValue="new" itemLabel="New Incident Report"/> -->
+                                <apex:selectOption itemValue="{!createStage}" itemLabel="New Incident Report"/>
+                                <!-- DG cannot rerender component with rich text (i.e. workers compensation <apex:actionSupport event="onchange" rerender="pbForm" status="status" /> -->
+                                <apex:actionSupport event="onchange" action="{!actionSelected}" status="status" />
+                            </apex:selectList> 
+                        </apex:pageBlockSection>
+
+                        <!-- Search section - common to both portals -->
+                        <apex:pageBlockSection title="{!$Label.Search_Incidents}" columns="5" rendered="{!currentStage == searchStage}">
+                                <apex:outputLabel value="{!$Label.Enter_Report_ID}"/>                                                                    
+                                <apex:inputText size="8" value="{!searchStringId}" maxlength="8"/>
+                                <apex:outputLabel value="{!$Label.Enter_Last_Name}"/>                                                                                              
+                                <apex:inputText size="20" value="{!searchStringName}" maxlength="255"/>
+                                <apex:commandButton value="{!$Label.Search_by_ID}" action="{!searchIncidents}"/>
+                                <apex:commandLink value="{!$Label.Back}" action="{!backToAction}"/>
+                        </apex:pageBlockSection>
+
+                        <!-- Display error message if no Incidents found in search -->
+                        <apex:pageMessage severity="WARNING" strength="2" summary="{!$Label.No_Incidents_Found}" rendered="{!noReportsFound && currentStage == searchStage}"/>
+                    
+                        <!-- Section displayed for Incident Report portal to select type of incident to be created -->
+                        <apex:pageBlockSection title="{!$Label.Incident_Type}" columns="2" rendered="{!currentStage == createStage && portalType == $Label.Incident_Portal_Path}">
+                            <apex:outputLabel for="rtList">
+                                {!$Label.Select_Type_of_Report}
+                            </apex:outputLabel>
+                            <apex:selectList id="rtList" size="1" value="{!selectedType}">
+                                <apex:selectOptions value="{!incidentTypes}" />
+                                <apex:actionSupport event="onchange" action="{!setRecordTypeName}" rerender="claimInfo" status="status"/>
+                            </apex:selectList>
+                                
+                            <apex:commandLink value="{!$Label.Back}" action="{!backToAction}" immediate="true"/>
+                        </apex:pageBlockSection>
+
+                    </apex:actionRegion>
+                </apex:pageBlock>
+                <br />
+
+                <apex:outputPanel id="claimInfo" layout="block" rendered="{!currentStage == createStage || currentStage == detailStage || currentStage == reportListStage}">            
+                    <c:IncidentReportSelection availableReports="{!availableReports}" IncidentReportController="{!Controller}" PortalType="{!portalType}" rendered="{!currentStage == reportListStage}"/>
+
+                    <c:WorkersCompensation IncidentReport="{!report}" Controller="{!controller}" Route="portal" ButtonLabel="{!$Label.Save_And_Submit_Report}" rendered="{!recordTypeName == $Label.Workers_Compensation_RT}"/>
+
+                    <c:BodilyInjury IncidentReport="{!report}" Controller="{!controller}" Route="portal" ButtonLabel="{!$Label.Save_And_Submit_Report}" rendered="{!recordTypeName == $Label.Bodily_Injury}"/>                    
+ 
+                    <c:MotorVehicle IncidentReport="{!report}" Controller="{!controller}" ButtonLabel="{!$Label.Save_And_Submit_Report}" rendered="{!recordTypeName == $Label.Motor_Vehicle}"/>
+
+                    <c:FacilityDamage IncidentReport="{!report}" Controller="{!controller}" ButtonLabel="{!$Label.Save_And_Submit_Report}" rendered="{!recordTypeName == $Label.Facility_Damage}"/>
+
+                    <c:PropertyDamage IncidentReport="{!report}" Controller="{!controller}" ButtonLabel="{!$Label.Save_And_Submit_Report}" rendered="{!recordTypeName == $Label.Property_Damage_RT}"/>
+
+                    <c:Theft IncidentReport="{!report}" Controller="{!controller}" ButtonLabel="{!$Label.Save_And_Submit_Report}" rendered="{!recordTypeName == $Label.Theft}"/>
+
+                    <c:Missing IncidentReport="{!report}" Controller="{!controller}" ButtonLabel="{!$Label.Save_And_Submit_Report}" rendered="{!recordTypeName == $Label.Missing}"/>
+
+                </apex:outputPanel>
+
+                <apex:outputPanel id="attachFiles" layout="block" rendered="{!currentStage == attachStage}">
+                    <div id="header">
+                        <h2 Style="font-size:30px;">{!$Label.Attach_Supporting_Documents}</h2>
+                    </div>
+                    <apex:pageBlock mode="maindetail">
+                        <apex:pageMessages />
+                            <apex:pageBlockSection title="Current Attachments" columns="1">
+                                <apex:repeat value="{!attachments}" var="att">
+                                    <apex:outputText value="{!att}" />
+                                </apex:repeat>
+                            </apex:pageBlockSection>
+                            <apex:pageBlockSection title="{!$Label.Attach_File}" columns="1">
+                                <apex:inputFile value="{!attach.body}" filename="{!attach.name}"/>
+                                <apex:commandButton action="{!SaveAttachment}" value="{!$Label.Attach_File}" />
+                            </apex:pageBlockSection>                    
+                            <apex:pageBlockButtons location="bottom">
+                                <apex:commandButton action="{!SubmitReport}" value="{!$Label.Submit_Report}"/>
+                                <apex:commandButton action="{!saveWithoutSubmitReport}" value="{!$Label.SaveWithoutSubmit}" rendered="{!report.In_Progress_Report__c}"/>
+                            </apex:pageBlockButtons>
+                        </apex:pageBlock>
+                </apex:outputPanel>
+
+                <apex:outputPanel id="thanks" layout="block" rendered="{!currentStage == thanksStage}">
+                    <div id="content" class="shadow">
+                        <div>
+                            <h1>&nbsp; {!$Label.Thank_You}</h1>
+                        </div>
+                        <p class="messageBox">
+                            {!$Label.Thank_You_Message}
+                            <apex:commandLink value="{!$Label.Here}" action="{!backToAction}"/>
+                            {!$Label.To_Submit_Another}
+                        </p>
+                        <apex:outputPanel layout="none" rendered="{!report.In_Progress_Report__c}">
+                            <p class="messageBox">
+                                <b>{!$Label.Please_Note}</b> 
+                                {!$Label.Not_Submitted_Message}&nbsp;
+                                <apex:commandLink value="{!$Label.Here}" action="{!backToAction}"/>
+                                {!$Label.Not_Submitted_Message2}
+                            </p>
+                            <br/>
+                        </apex:outputPanel>
+                    </div>
+                </apex:outputPanel>
+            </div>
+            <apex:actionStatus id="status">
+                <apex:facet name="start">
+                <div class="awaitingModel">&nbsp;</div>
+                <div class="awaitingImg">
+                    <img src="/img/loading32.gif" width="25" height="25" />
+                </div>
+                </apex:facet>
+            </apex:actionStatus>
+        </apex:form>
+    </body>
+
+</apex:page>

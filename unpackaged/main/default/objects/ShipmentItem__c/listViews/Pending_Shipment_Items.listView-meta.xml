@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Pending_Shipment_Items</fullName>
+    <columns>Exhibition__c</columns>
+    <columns>OrderID__c</columns>
+    <columns>NAME</columns>
+    <columns>Shipment__c</columns>
+    <columns>ProductID__c</columns>
+    <columns>AssetID__c</columns>
+    <columns>Check_Out_Date__c</columns>
+    <columns>OrderProductID__c</columns>
+    <filterScope>Everything</filterScope>
+    <label>Pending Shipment Items</label>
+    <language>en_US</language>
+</ListView>

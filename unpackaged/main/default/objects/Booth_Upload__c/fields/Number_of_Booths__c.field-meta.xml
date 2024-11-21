@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Number_of_Booths__c</fullName>
+    <inlineHelpText>Count of completed related Booth Staging records</inlineHelpText>
+    <label>Number of Completed Booths</label>
+    <summaryFilterItems>
+        <field>Booth_Staging__c.Status__c</field>
+        <operation>equals</operation>
+        <value>Confirmed</value>
+    </summaryFilterItems>
+    <summaryForeignKey>Booth_Staging__c.Booth_Upload__c</summaryForeignKey>
+    <summaryOperation>count</summaryOperation>
+    <trackTrending>false</trackTrending>
+    <type>Summary</type>
+</CustomField>

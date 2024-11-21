@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ED_AV_Require_Show_Selection2</fullName>
+    <active>true</active>
+    <errorConditionFormula>($RecordType.DeveloperName = &quot;E_D_Projects&quot; || 
+$RecordType.DeveloperName = &quot;AV&quot;) 
+&amp;&amp; (Show_Occurrence__c &lt;&gt; &quot;&quot; 
+&amp;&amp; Non_Show__c &lt;&gt; &quot;&quot;)
+&amp;&amp; ($Profile.Name != &quot;GES Administrator Interface&quot;)
+&amp;&amp; NOT ( Is_Converted__c )</errorConditionFormula>
+    <errorMessage>Select either a Show Occurrence or a Non-Show, not both</errorMessage>
+</ValidationRule>

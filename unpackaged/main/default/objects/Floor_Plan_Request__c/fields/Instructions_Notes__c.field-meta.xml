@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Instructions_Notes__c</fullName>
+    <defaultValue>&quot;If needed, download and attach any 2D files from the Design Center. Provide location of items either on marked up pdf or in the instructions field on this form.&quot;</defaultValue>
+    <label>Note:</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>TextArea</type>
+</CustomField>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Upcoming_Order_Deadlines</fullName>
+    <booleanFilter>1 OR 2 OR 3</booleanFilter>
+    <columns>NAME</columns>
+    <columns>CR_Show_ID__c</columns>
+    <columns>CR_Project_Number__c</columns>
+    <columns>CR_Facility_ID__c</columns>
+    <columns>First_Move_In_Date__c</columns>
+    <columns>X12_week_approval_due_date__c</columns>
+    <columns>X6_week_approval_due_date__c</columns>
+    <columns>X3_week_approval_due_date__c</columns>
+    <columns>CR_Submitted_Date__c</columns>
+    <columns>Status__c</columns>
+    <columns>CREATEDBY_USER</columns>
+    <columns>CPR_Claimed_By__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Start_of_12_Week_Plan_order__c</field>
+        <operation>equals</operation>
+        <value>THIS_WEEK</value>
+    </filters>
+    <filters>
+        <field>Start_of_3_Week_Plan_order__c</field>
+        <operation>equals</operation>
+        <value>THIS_WEEK</value>
+    </filters>
+    <filters>
+        <field>Start_of_6_Week_Plan_order__c</field>
+        <operation>equals</operation>
+        <value>THIS_WEEK</value>
+    </filters>
+    <label>04 Upcoming Order Deadlines</label>
+</ListView>

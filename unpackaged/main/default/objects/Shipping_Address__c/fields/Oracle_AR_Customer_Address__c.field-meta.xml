@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Oracle_AR_Customer_Address__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <label>Oracle AR Customer Address</label>
+    <referenceTo>Oracle_AR_Customer_Address__c</referenceTo>
+    <relationshipLabel>Shipping Addresss</relationshipLabel>
+    <relationshipName>Shipping_Addresss</relationshipName>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

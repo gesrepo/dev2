@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Foreign_Production_Location__c</fullName>
+    <label>Foreign Production Location</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>true</sorted>
+            <value>
+                <fullName>GES - ASIA</fullName>
+                <default>false</default>
+                <label>GES - ASIA</label>
+            </value>
+            <value>
+                <fullName>GES - Blitz</fullName>
+                <default>false</default>
+                <label>GES - Blitz</label>
+            </value>
+            <value>
+                <fullName>GES - Coventry</fullName>
+                <default>false</default>
+                <label>GES - Coventry</label>
+            </value>
+            <value>
+                <fullName>GES - Dubai</fullName>
+                <default>false</default>
+                <label>GES - Dubai</label>
+            </value>
+            <value>
+                <fullName>GES - EUROPE</fullName>
+                <default>false</default>
+                <label>GES - EUROPE</label>
+            </value>
+            <value>
+                <fullName>GES – Poland</fullName>
+                <default>false</default>
+                <label>GES – Poland</label>
+            </value>
+            <value>
+                <fullName>GES - USA</fullName>
+                <default>false</default>
+                <label>GES - USA</label>
+            </value>
+            <value>
+                <fullName>GES - Velbert</fullName>
+                <default>false</default>
+                <label>GES - Velbert</label>
+            </value>
+            <value>
+                <fullName>Not Applicable</fullName>
+                <default>false</default>
+                <label>Not Applicable</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>SUB - ASIA + ROW</fullName>
+                <default>false</default>
+                <label>SUB - ASIA + ROW</label>
+            </value>
+            <value>
+                <fullName>SUB - Europe</fullName>
+                <default>false</default>
+                <label>SUB - Europe</label>
+            </value>
+            <value>
+                <fullName>SUB - UAE</fullName>
+                <default>false</default>
+                <label>SUB - UAE</label>
+            </value>
+            <value>
+                <fullName>SUB - UK</fullName>
+                <default>false</default>
+                <label>SUB - UK</label>
+            </value>
+            <value>
+                <fullName>SUB - USA</fullName>
+                <default>false</default>
+                <label>SUB - USA</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

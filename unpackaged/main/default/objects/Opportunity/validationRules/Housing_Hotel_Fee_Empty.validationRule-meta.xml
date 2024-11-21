@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Housing_Hotel_Fee_Empty</fullName>
+    <active>true</active>
+    <description>Hotel Fee cannot be entered when Hotel Commission Type = Percentage</description>
+    <errorConditionFormula>AND( ISPICKVAL(Hotel_Commission_Type__c ,&quot;Percentage&quot;), NOT(ISBLANK(Hotel_Fee__c )),NOT($Profile.Name = &quot;GES Administrator Interface&quot;))</errorConditionFormula>
+    <errorDisplayField>Hotel_Fee__c</errorDisplayField>
+    <errorMessage>Hotel Commission Type is equal to Percentage - you must fill out the Hotel Commission % and the Hotel Fee must be empty.</errorMessage>
+</ValidationRule>

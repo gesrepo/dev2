@@ -1,0 +1,21 @@
+<apex:page standardController="Discount__c" extensions="PC_BoothAreaDiscountController" action="{!getCoreSessionID}" >
+    <apex:includeLightning />
+    <div id="containerDiv"></div>
+    <script>
+    var pageurl=window.location.href;
+    //alert(pageurl);
+    var url = new URL(pageurl);
+    var discRecId = url.searchParams.get("id");
+    //alert(DiscountRecordID);
+    $Lightning.use("c:PC_DEleteDiscountApp", function() {
+        $Lightning.createComponent("c:LC_DeleteDiscountComponent",
+                                   {  
+                                    discountRecordId:discRecId,
+                                    returnURLAdd:'{!returnToUrl}'
+                                   },
+                                   "containerDiv",
+                                   function(component) {
+                                   });
+    });
+    </script>
+</apex:page>

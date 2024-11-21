@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>xBlitz_Updated_9_2015__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Temporary System Field to identify which accounts were updated from a manual  data load. Delete this field after validation. 9-4-15</description>
+    <label>xBlitz Updated 9_2015</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

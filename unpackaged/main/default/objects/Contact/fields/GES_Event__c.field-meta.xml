@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>GES_Event__c</fullName>
+    <label>GES Event</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>2020 Global Virtual Campaign</fullName>
+                <default>false</default>
+                <label>2020 Global Virtual Campaign</label>
+            </value>
+            <value>
+                <fullName>2016 Springtime Reception</fullName>
+                <default>false</default>
+                <label>2016 Springtime Reception</label>
+            </value>
+            <value>
+                <fullName>Activ8 DC</fullName>
+                <default>false</default>
+                <label>Activ8 DC</label>
+            </value>
+            <value>
+                <fullName>Activ8 NY</fullName>
+                <default>false</default>
+                <label>Activ8 NY</label>
+            </value>
+            <value>
+                <fullName>Gold Cup</fullName>
+                <default>false</default>
+                <label>Gold Cup</label>
+            </value>
+            <value>
+                <fullName>IAEE</fullName>
+                <default>false</default>
+                <label>IAEE</label>
+            </value>
+            <value>
+                <fullName>PCMA</fullName>
+                <default>false</default>
+                <label>PCMA</label>
+            </value>
+            <value>
+                <fullName>St. Patrick&#39;s - Chicago</fullName>
+                <default>false</default>
+                <label>St. Patrick&#39;s - Chicago</label>
+            </value>
+            <value>
+                <fullName>Spring California - Pebble Beach</fullName>
+                <default>false</default>
+                <label>Spring California - Pebble Beach</label>
+            </value>
+            <value>
+                <fullName>Fishing Trip - California</fullName>
+                <default>false</default>
+                <label>Fishing Trip - California</label>
+            </value>
+            <value>
+                <fullName>Partner&#39;s Picnic - San Diego</fullName>
+                <default>false</default>
+                <label>Partner&#39;s Picnic - San Diego</label>
+            </value>
+            <value>
+                <fullName>Springtime Reception DC</fullName>
+                <default>false</default>
+                <label>Springtime Reception DC</label>
+            </value>
+            <value>
+                <fullName>PCMA Bowl-a-Thon Chicago</fullName>
+                <default>false</default>
+                <label>PCMA Bowl-a-Thon Chicago</label>
+            </value>
+            <value>
+                <fullName>Los Angeles - Valentine&#39;s Day Gift</fullName>
+                <default>false</default>
+                <label>Los Angeles - Valentine&#39;s Day Gift</label>
+            </value>
+            <value>
+                <fullName>Sacramento Spa Day</fullName>
+                <default>false</default>
+                <label>Sacramento Spa Day</label>
+            </value>
+            <value>
+                <fullName>Sacramento Client BBQ</fullName>
+                <default>false</default>
+                <label>Sacramento Client BBQ</label>
+            </value>
+            <value>
+                <fullName>Sacramento Fly Fishing Trip</fullName>
+                <default>false</default>
+                <label>Sacramento Fly Fishing Trip</label>
+            </value>
+            <value>
+                <fullName>Los Angeles Newsletter</fullName>
+                <default>false</default>
+                <label>Los Angeles Newsletter</label>
+            </value>
+            <value>
+                <fullName>Spring10RSVP</fullName>
+                <default>false</default>
+                <label>Spring10RSVP</label>
+            </value>
+            <value>
+                <fullName>Springtime-2009</fullName>
+                <default>false</default>
+                <label>Springtime-2009</label>
+            </value>
+            <value>
+                <fullName>Springtime-2010</fullName>
+                <default>false</default>
+                <label>Springtime-2010</label>
+            </value>
+            <value>
+                <fullName>EXSW-VIP</fullName>
+                <default>false</default>
+                <label>EXSW-VIP</label>
+            </value>
+            <value>
+                <fullName>Drive Attendance webinar - Attendee</fullName>
+                <default>false</default>
+                <label>Drive Attendance webinar - Attendee</label>
+            </value>
+            <value>
+                <fullName>Drive Attendance webinar - Registered</fullName>
+                <default>false</default>
+                <label>Drive Attendance webinar - Registered</label>
+            </value>
+            <value>
+                <fullName>IMEX 2024</fullName>
+                <default>false</default>
+                <label>IMEX 2024</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>3</visibleLines>
+</CustomField>

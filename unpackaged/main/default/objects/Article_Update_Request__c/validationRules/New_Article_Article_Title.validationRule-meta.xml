@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>New_Article_Article_Title</fullName>
+    <active>true</active>
+    <description>Requires the Article Title be populated on a &quot;New Article&quot; Article Update Request</description>
+    <errorConditionFormula>IF (ISPICKVAL (Request_Type__c, &quot;New Article&quot;) &amp;&amp; ISBLANK (Article_Title__c), TRUE, FALSE)</errorConditionFormula>
+    <errorDisplayField>Article_Title__c</errorDisplayField>
+    <errorMessage>You must populate the Article Title on a New Article</errorMessage>
+</ValidationRule>

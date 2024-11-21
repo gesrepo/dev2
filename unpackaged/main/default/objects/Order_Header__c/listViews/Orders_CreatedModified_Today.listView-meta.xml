@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Orders_CreatedModified_Today</fullName>
+    <booleanFilter>1 OR 2</booleanFilter>
+    <columns>NAME</columns>
+    <columns>OrderID__c</columns>
+    <columns>Instance__c</columns>
+    <columns>SFOrderForAccountID__c</columns>
+    <columns>Exhibition_Opportunity__c</columns>
+    <columns>TotalValue__c</columns>
+    <columns>BillingContactName__c</columns>
+    <columns>CREATED_DATE</columns>
+    <columns>UPDATEDBY_USER</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>CREATED_DATE</field>
+        <operation>equals</operation>
+        <value>TODAY</value>
+    </filters>
+    <filters>
+        <field>LAST_UPDATE</field>
+        <operation>equals</operation>
+        <value>TODAY</value>
+    </filters>
+    <label>Orders Created/Modified Today</label>
+    <language>en_US</language>
+</ListView>

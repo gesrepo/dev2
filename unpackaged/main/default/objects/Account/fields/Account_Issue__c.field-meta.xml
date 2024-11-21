@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Account_Issue__c</fullName>
+    <defaultValue>false</defaultValue>
+    <inlineHelpText>Please contact Credit Control if this is checked and you are looking raise an order. There may be credit / account issues you should be aware of.</inlineHelpText>
+    <label>Account Issue</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

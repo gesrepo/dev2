@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Priority__c</fullName>
+    <label>Priority</label>
+    <required>false</required>
+    <trackFeedHistory>true</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Critical (1 Business Hour)</fullName>
+                <default>false</default>
+                <label>Critical (1 Business Hour)</label>
+            </value>
+            <value>
+                <fullName>Urgent (2-4 Business Hours)</fullName>
+                <default>false</default>
+                <label>Urgent (2-4 Business Hours)</label>
+            </value>
+            <value>
+                <fullName>Normal (1 Business Day)</fullName>
+                <default>true</default>
+                <label>Normal (1 Business Day)</label>
+            </value>
+            <value>
+                <fullName>Low (2-3 Business Days)</fullName>
+                <default>false</default>
+                <label>Low (2-3 Business Days)</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

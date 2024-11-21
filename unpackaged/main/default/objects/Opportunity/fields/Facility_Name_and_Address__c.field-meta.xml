@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Facility_Name_and_Address__c</fullName>
+    <description>Used on the international side to capture facility information to be used in the creation (manual) of their Show or Non Show.</description>
+    <inlineHelpText>This is the name of the facility where the Show or Event is occurring and its address.</inlineHelpText>
+    <label>Facility Name and Address</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>TextArea</type>
+</CustomField>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>EMEA_CORE_Lock_LeadSource</fullName>
+    <active>true</active>
+    <description>If the record type is EMEA Core and someone is trying to change the lead source and they are not admin, lock this value</description>
+    <errorConditionFormula>$RecordType.DeveloperName = &#39;EMEA_CORE&#39; &amp;&amp;
+ISChanged(LeadSource) 
+&amp;&amp; NOT($Profile.Name = &quot;EMEA System Administrator&quot;)
+&amp;&amp; NOT($Profile.Name = &quot;System Administrator&quot;)</errorConditionFormula>
+    <errorMessage>You cannot change the Lead Source value on an EMEA CORE opportunity unless you are a Salesforce administrator</errorMessage>
+</ValidationRule>

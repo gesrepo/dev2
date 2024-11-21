@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Exhibition_Postponed_w_out_dates__c</fullName>
+    <formula>Show_Occurrence__r.Postponed_without_confirmed_dates__c</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>If this box is checked, the Exhibition Opportunity has been postponed without confirmed dates due to Coronavirus.</inlineHelpText>
+    <label>Exhibition Postponed w/out dates</label>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Date_Inactive__c</fullName>
+    <description>Date the persons record was made inactive</description>
+    <inlineHelpText>Automatically set value for when the record was made inactive</inlineHelpText>
+    <label>Date Inactive</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Date</type>
+</CustomField>

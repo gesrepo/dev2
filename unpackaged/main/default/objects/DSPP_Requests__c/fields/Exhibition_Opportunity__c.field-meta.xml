@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Exhibition_Opportunity__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>Lists the Related Exhibition Opportunity for the Request</description>
+    <label>Exhibition Opportunity</label>
+    <lookupFilter>
+        <active>true</active>
+        <booleanFilter>1 OR 2</booleanFilter>
+        <filterItems>
+            <field>Opportunity.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Master Show Occurrence, Sales Rep Show Occurrence, Field Security-PS, Field Security-CV, Field Security-CR, Field Security-LO, Field Security-LPE, Field Security-LR, Field Security-DB, Field Security-TS, Field Security-LPM</value>
+        </filterItems>
+        <filterItems>
+            <field>Opportunity.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Field Security-IA, Field Security-NE</value>
+        </filterItems>
+        <isOptional>false</isOptional>
+    </lookupFilter>
+    <referenceTo>Opportunity</referenceTo>
+    <relationshipLabel>DSPP Requests</relationshipLabel>
+    <relationshipName>DSPP_Requests</relationshipName>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

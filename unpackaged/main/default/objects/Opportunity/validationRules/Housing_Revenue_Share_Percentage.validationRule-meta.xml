@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Housing_Revenue_Share_Percentage</fullName>
+    <active>true</active>
+    <description>Revenue Share % field is required when Client Revenue Share/Rebate = &quot;Revenue Share %&quot;</description>
+    <errorConditionFormula>AND( ISPICKVAL( Client_Revenue_ShareRebate__c,&quot;Revenue Share Percentage&quot;), ISBLANK(   Revenue_Share__c  ),NOT($Profile.Name = &quot;GES Administrator Interface&quot;))</errorConditionFormula>
+    <errorDisplayField>Revenue_Share__c</errorDisplayField>
+    <errorMessage>Please fill out the Revenue Share % field. If Client Revenue Share/Rebate is equal to &quot;Revenue Share Percentage&quot;, the Revenue Share % field is required.</errorMessage>
+</ValidationRule>

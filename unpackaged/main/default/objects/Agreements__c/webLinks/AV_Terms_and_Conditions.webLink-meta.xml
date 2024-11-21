@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>AV_Terms_and_Conditions</fullName>
+    <availability>online</availability>
+    <displayType>button</displayType>
+    <linkType>javascript</linkType>
+    <masterLabel>AV Terms and Conditions</masterLabel>
+    <openType>onClickJavaScript</openType>
+    <protected>false</protected>
+    <url>{!REQUIRESCRIPT(&quot;/apex/DocuSign_JavaScript&quot;)} 
+
+//********* Option Declarations (Do not modify )*********// 
+var RC = &#39;&#39;;var RSL=&#39;&#39;;var RSRO=&#39;&#39;;var RROS=&#39;&#39;;var CCRM=&#39;&#39;;var CCTM=&#39;&#39;;var CCNM=&#39;&#39;;var CRCL=&#39;&#39;; var CRL=&#39;&#39;;var OCO=&#39;&#39;;var DST=&#39;&#39;;var LA=&#39;&#39;;var CEM=&#39;&#39;;var CES=&#39;&#39;;var STB=&#39;&#39;;var SSB=&#39;&#39;;var SES=&#39;&#39;;var SEM=&#39;&#39;;var SRS=&#39;&#39;;var SCS =&#39;&#39;;var RES=&#39;&#39;; 
+//*************************************************// 
+
+DST=&quot;16D9440D-CEB3-4E5E-9809-62C92844A2AC&quot;; //DS Template
+
+CES=&quot;AV Terms and Conditions&quot;; //Custom Email Subject
+
+//CRL=&#39;Email~;LastName~;Role~Role1;RoutingOrder~1&#39;; //Custom Recipient List
+
+CCRM=&#39;Role1~Signer 1&#39;; //Contact Role Map - Map SF role to specified DS role
+
+LA=&#39;0&#39;; //Attachments
+
+//OCO = &#39;Send&#39;; //Once Click Option
+
+//********* Page Callout (Do not modify) *********// 
+window.location.href =&quot;/apex/dsfs__DocuSign_CreateEnvelope?DSEID=0&amp;SourceID={!Agreements__c.Id}&amp;RC=&quot;+RC+&quot;&amp;RSL=&quot;+RSL+&quot;&amp;RSRO=&quot;+RSRO+&quot;&amp;RROS=&quot;+RROS+&quot;&amp;CCRM=&quot;+CCRM+&quot;&amp;CCTM=&quot;+CCTM+&quot;&amp;CRCL=&quot;+CRCL+&quot;&amp;CRL=&quot;+CRL+&quot;&amp;OCO=&quot;+OCO+&quot;&amp;DST=&quot;+DST+&quot;&amp;CCNM=&quot;+CCNM+&quot;&amp;LA=&quot;+LA+&quot;&amp;CEM=&quot;+CEM+&quot;&amp;CES=&quot;+CES+&quot;&amp;SRS=&quot;+SRS+&quot;&amp;STB=&quot;+STB+&quot;&amp;SSB=&quot;+SSB+&quot;&amp;SES=&quot;+SES+&quot;&amp;SEM=&quot;+SEM+&quot;&amp;SRS=&quot;+SRS+&quot;&amp;SCS=&quot;+SCS+&quot;&amp;RES=&quot;+RES; 
+//*******************************************//</url>
+</WebLink>

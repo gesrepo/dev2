@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Line_Price_Total__c</fullName>
+    <description>(Quantity) * (Unit Price) + (Service Charge Amount) + (SOP Tax Code Percentage)</description>
+    <formula>( 
+(Quantity__c * UnitPrice__c) 
+
++ 
+
+(Quantity__c * MainsCurrentPrice__c ) 
+) 
+
+* 
+
+(1+( SOP_Tax_Code_Percentage__c ))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>(Quantity) * (Unit Price) + (Service Charge Amount) + (SOP Tax Code Percentage)</inlineHelpText>
+    <label>Line Price Total</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Currency</type>
+</CustomField>

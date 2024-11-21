@@ -1,0 +1,26 @@
+<apex:page controller="VIADAdminDataFixesController" tabStyle="User" >
+    <apex:sectionHeader title="Administration - Data Fixes"/>
+    
+    <br /><br />
+    
+    <apex:form >
+        <apex:pageBlock >
+        
+            <apex:pageBlockButtons >
+                <apex:commandButton value="Execute" action="{!save}"/>
+            </apex:pageBlockButtons>
+                    
+            <apex:pageblocksection title="Pleaes select a Data Fix type, then click 'Execute' button." columns="1">
+            
+            <br />
+            
+            <apex:pagemessages ></apex:pagemessages>
+            
+            <apex:selectList value="{!fixtype}" size="1">
+                <apex:selectOptions value="{!fixtypeoptions}"/>
+            </apex:selectList>
+
+            </apex:pageblocksection>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

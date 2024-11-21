@@ -1,0 +1,37 @@
+<apex:component controller="IncidentReportSelectionController">
+    <apex:attribute name="availableReports" description="List of available reports" type="Claims__Incident_Report__c[]" required="true" assignTo="{!reports}"/>
+    <apex:attribute name="IncidentReportController" description="Controller to return selected report back to." type="IncidentReportPortalController" required="true"/>
+    <apex:attribute name="PortalType" description="Supervisor or Incident portal" type="String" required="true"/>
+    <apex:outputPanel layout="block" id="incidentSelector" rendered="{!availableReports != null && availableReports.size > 1}">                                    
+        <apex:pageBlock >
+            <apex:pageBlockTable value="{!reportsCon}" var="report">
+                <apex:column headerValue="Report Id">
+                    <apex:commandLink value="{!report.Name}" action="{!IncidentReportController.incidentSelected}">
+                        <apex:param name="reportId" value="{!report.Id}" assignTo="{!IncidentReportController.selectedReportId}"/>
+                    </apex:commandLink> 
+                </apex:column>
+                <apex:column value="{!report.Claims__Last_Name__c}"/>
+                <apex:column value="{!report.Claims__First_Name__c}"/>
+                <apex:column value="{!report.Claims__Date_Reported__c}"/>
+                <apex:column value="{!report.Injured_Employee_Last_Name__c}" rendered="{!PortalType=$Label.Supervisor_Portal_Path}"/>            
+                <apex:column value="{!report.Injured_Employee_First_Name__c}" rendered="{!PortalType=$Label.Supervisor_Portal_Path}"/>            
+               <apex:column value="{!report.Facility__c}"/>
+                <apex:column value="{!report.Booth__c}"/>
+                <apex:column value="{!report.Customer_Company_Name__c}"/> 
+                <apex:column value="{!report.Show_Code__c}" rendered="{!PortalType=$Label.Incident_Portal_Path}"/>  
+            </apex:pageBlockTable>
+            <apex:panelGrid columns="6">
+                Page: <apex:outputText value=" {!setCon.PageNumber} of {! CEILING(setCon.ResultSize / setCon.PageSize) }"/>
+                <apex:commandLink action="{!setCon.first}" rendered="{!setCon.hasPrevious}">First</apex:commandlink>
+                <apex:outputText style="color: #ccc;" value="First" rendered="{! !setCon.HasPrevious }"/>
+                <apex:commandLink action="{!setCon.previous}" rendered="{!setCon.hasPrevious}" >Previous</apex:commandlink>
+                <apex:outputText style="color: #ccc;" value="Previous" rendered="{! !setCon.HasPrevious }"/>
+                <apex:commandLink action="{!setCon.next}" rendered="{!setCon.hasNext}">Next</apex:commandlink>
+                <apex:outputText style="color: #ccc;" value="Next" rendered="{! !setCon.HasNext }"/>
+                <apex:commandLink action="{!setCon.last}" rendered="{!setCon.hasNext}">Last</apex:commandlink>
+                <apex:outputText style="color: #ccc;" value="Last" rendered="{! !setCon.HasNext }"/>
+            </apex:panelGrid>
+        </apex:pageBlock>
+    </apex:outputPanel>
+
+</apex:component>

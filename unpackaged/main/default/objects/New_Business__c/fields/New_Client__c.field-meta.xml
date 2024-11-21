@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>New_Client__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>If this is a new client user to check the box</description>
+    <inlineHelpText>Please check this box, only if this is a new client.</inlineHelpText>
+    <label>New Client</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

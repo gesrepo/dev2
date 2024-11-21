@@ -1,0 +1,333 @@
+<apex:page showHeader="true"  sidebar="false" standardController="GC_GES_Order_Task__c" extensions="GC_GOTCreationController"   >
+    <apex:includeScript value="https://code.jquery.com/jquery-1.10.2.js" />
+    <apex:includeScript value="https://code.jquery.com/ui/1.11.4/jquery-ui.js" />
+    <apex:styleSheet value="https://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css" />
+    <apex:stylesheet value="{!URLFOR($Resource.Lightning_Design_System, 'assets/styles/salesforce-lightning-design-system.min.css')}" /> 
+    <style>
+        .picklistWidth{
+        width:200px;
+        }
+    </style>
+    <script type="text/javascript">
+    var $j = jQuery.noConflict();
+    /*var screenWidth = $j(document).width();
+        var dataTableMargin = 65;
+        var runOnce1='{!runOnce}';
+        var inProgress = false;
+
+        function startProgress() {
+            inProgress = true;
+        }
+
+        function stopProgress() {
+            inProgress = false;
+        }
+
+        var performingSubmit = false;
+        var performingCancel = false;
+
+
+        var obtainedProducts = false;
+        var loadOnce= true;*/
+    
+    
+    function searchItems()
+    {
+        console.log('Inside SearchItem');
+        var content;
+        var searchText = $j('[id$=searchInput]').val().toLowerCase();
+        console.log(searchText);
+        $j('[id$=serachItemHidden]').val('searchItemHidden');
+        var listOfItems = [];
+        console.log($j('[id$=itemSelect]').val());
+        $j('[id$=itemSelect] option').filter(function(){
+            if($j(this).val().toLowerCase().indexOf(searchText) > -1)
+            {
+                listOfItems.push($j(this).val());
+                //return true;
+            }
+            
+            /* Modified the search for SAL 519 */
+            
+        });
+        if(listOfItems.length == 0) {
+            $j('#noSearchText').show();
+            emptyProductList();
+        } else
+            if(listOfItems.length == 1) {
+                $j('[id$=itemSelect]').val(listOfItems[0]).change();
+            } else
+            {
+                content = '';
+                for(i=0; i<listOfItems.length; i++){
+                    content +=  '<tr>';
+                    content +=  '       <td role="gridcell" class="slds-cell-shrink" scope="col">';
+                    content +=  '               <input name="itemName" type="radio" style="margin-right: 2" value="' + listOfItems[i]  + '"/>';
+                    content +=  '       </td>';
+                    content +=  '       <td> &nbsp;&nbsp;'+ listOfItems[i]  + '</td>';
+                    content +=  '   </tr>';
+                }
+                $j("#itemTable tbody").append(content);
+                $j('#itemSelectionDialog').show();
+            }
+        return true;
+    }
+    
+    function selectItemFromList() {
+        var radioValue = $j("input[name='itemName']:checked").val();
+        listOfItems=[];
+        content = null;
+        searchText=null;
+        $j('#itemSelectionDialog').hide();
+        $j('[id$=itemSelect]').val(radioValue).change();
+        $j('#itemTable tbody').empty();
+        return false;
+    }
+    
+    function closeItemPopup() {
+        $j('#itemTable tbody').empty();
+        $j('#itemSelectionDialog').hide();
+    }
+    
+    
+    //Rahul: Added this function for SAL 512 
+    $j(document).ready(function(){
+        SessionLoad_JS();
+        
+        $j(document).on("keypress", "input", function() {
+            if(event.keyCode == 13){
+                
+                if(event.target.id == 'searchInput' ) {
+                    //searchItems();
+                    populateProductList();
+                } 
+                return false;
+            }
+        });
+    });
+    
+    </script>
+    <apex:form >
+        <apex:pagemessages id="messages" />
+        <apex:actionFunction action="{!sessionLoad}" name="SessionLoad_JS" status="connectingStatusSpinner" reRender="statuses, messages" oncomplete="ObtainProducts_JS();" />
+        <apex:actionFunction action="{!coreApi.obtainProducts}" name="ObtainProducts_JS" status="searchingStatusSpinner" reRender="statuses, messages, pbRelatedTasks, selectedItemPB" oncomplete="obtainedProducts = true;FieldRequirements_JS();" />
+        <apex:actionFunction action="{!validateFields}" name="FieldRequirements_JS" status="searchingStatusSpinner" reRender="statuses, messages, pbRelatedTasks, selectedItemPB"  />
+        <apex:actionFunction name="populateProductList" action="{!coreApi.populateProductList}" status="populatingStatusSpinner" oncomplete="searchItems();" reRender="itemSelect"/>
+        <apex:actionFunction name="emptyProductList" action="{!coreApi.emptyProductList}" status="populatingStatusSpinner" reRender="itemSelect"/>
+        <apex:outputPanel id="statuses">
+            <apex:actionStatus id="connectingStatusSpinner">
+                <apex:facet name="start">
+                    <c:GC_StatusSpinner statusMessage="Connecting to Web Service." />
+                </apex:facet>
+            </apex:actionStatus>
+            <apex:actionStatus id="searchingStatusSpinner">
+                <apex:facet name="start">
+                    <c:GC_StatusSpinner statusMessage="Obtaining Items." />
+                </apex:facet>
+            </apex:actionStatus>
+            <apex:actionStatus id="selectCategoryStatus">
+                <apex:facet name="start">
+                    <c:GC_StatusSpinner statusMessage="Changing Parent Category" />
+                </apex:facet>
+            </apex:actionStatus>
+            <apex:actionStatus id="selectChildCategoryStatus">
+                <apex:facet name="start">
+                    <c:GC_StatusSpinner statusMessage="Changing Child Category" />
+                </apex:facet>
+            </apex:actionStatus>
+            <apex:actionStatus id="selectItemStatus">
+                <apex:facet name="start">
+                    <c:GC_StatusSpinner statusMessage="Selecting Item." />
+                </apex:facet>
+            </apex:actionStatus>
+            <apex:actionStatus id="saveTaskStatus">
+                <apex:facet name="start">
+                    <!--c:GC_StatusSpinner statusMessage="Saving Task." /--> <!--commented by Sajid on 04/05/23 Ticket-1209 -->
+                    <c:GC_StatusSpinner statusMessage="Saving Item." /> <!-- added by Sajid on 04/05/23 Ticket-1209 -->
+                </apex:facet>
+            </apex:actionStatus>
+            <apex:actionStatus id="populatingStatusSpinner">
+                <apex:facet name="start">
+                    <c:GC_StatusSpinner statusMessage="Populating Item List." />
+                </apex:facet>
+            </apex:actionStatus>
+        </apex:outputPanel>
+        <apex:outputPanel id="selectedItemPB" >
+            <apex:pageBlock id="pb1" rendered="{!selectedGesTask != null}">
+                <apex:pageBlockButtons >
+                    <!--apex:commandButton value="Save Task" action="{!validateSave}" reRender="statuses, messages, pbRelatedTasks, selectedItemPB,pbPanel, VendorInformation, VendorLayout, GesTable"  status="saveTaskStatus"--> <!--commented by Sajid on 04/05/23 Ticket-1209 -->
+                    <apex:commandButton value="Save Item" action="{!validateSave}" reRender="statuses, messages, pbRelatedTasks, selectedItemPB,pbPanel, VendorInformation, VendorLayout, GesTable"  status="saveTaskStatus"> <!-- added by Sajid on 04/05/23 Ticket-1209 -->
+                    </apex:commandButton>
+                    <apex:commandButton value="Cancel Edit" action="{!cancelEditTask}" reRender="statuses, messages, pbRelatedTasks, selectedItemPB, VendorInformation, VendorLayout, GesTable" status="cancelTaskStatus">
+                    </apex:commandButton>
+                    
+                </apex:pageBlockButtons>
+                <apex:pageBlockSection showHeader="false" columns="1" collapsible="false">
+                    <apex:pageBlockSection rendered="{!coreApi.selectedBooth != null && !selectedGesTask.isRevision}" title="Item Selection" columns="3">
+                        <apex:pageBlockSectionItem helpText="Use Search Item button to search for products having the search text associated with them ">
+                            <apex:outputLabel value="Enter Search Text" />
+                            <input  value="" id="searchInput" style="width:298px" />  
+                            <span class="slds-size--1-of-3 slds-p-horizontal--small">
+                            <div id="noSearchText" style="display: none;">
+                                <label style="color: #ff0000;font-size: small;">Item Not Found</label>
+                            </div>
+                        </span>
+                        </apex:pageBlockSectionItem>    
+                        
+                        
+                        <apex:commandButton value="Search Item" onclick="populateProductList();return false;" status="saveTaskStatus" id="serachItem" ></apex:commandButton>            
+                        <apex:inputHidden value="{!coreApi.searchItemClick}" id="serachItemHidden"/>
+                        
+                        <apex:pageBlockSectionItem helpText="Select ParentItem Category from this list.">
+                            <apex:outputLabel value="Category" />
+                            <apex:selectList id="categorySelect" value="{!coreApi.selectedParentCategory}" size="1">
+                                <apex:selectOptions value="{!coreApi.productCategories}" rendered="{!coreApi.selectedBooth != null}"></apex:selectOptions>
+                                <apex:actionSupport action="{!coreApi.selectCategories}" event="onchange" reRender="statuses, messages, selectedItemPB" status="selectCategoryStatus" />
+                            </apex:selectList>
+                        </apex:pageBlockSectionItem>
+                        
+                        <apex:pageBlockSectionItem helpText="Select the Child item category from this list.">
+                            <apex:outputLabel value="Sub-Category"/>
+                            <apex:selectList id="childCategorySelect" value="{!coreApi.selectedChildCategory}" size="1">
+                                <apex:selectOptions value="{!coreApi.childCategories}" rendered="{!coreApi.selectedBooth != null}"></apex:selectOptions>
+                                <apex:actionSupport action="{!coreApi.selectChildCategories}" event="onchange" reRender="statuses, messages, selectedItemPB" status="selectChildCategoryStatus" />
+                            </apex:selectList>
+                        </apex:pageBlockSectionItem> 
+                        
+                        <apex:pageBlockSectionItem helpText="Select the item to order from this list.">
+                            <apex:outputLabel value="Select Item" />
+                            <apex:selectList id="itemSelect" value="{!coreApi.selectedItemNumberAndDescription}" size="1">
+                                <apex:selectOptions value="{!coreApi.ProductList.0}" rendered="{!coreApi.selectedBooth != null}"></apex:selectOptions>
+                                <apex:selectOptions value="{!coreApi.ProductList.1}" rendered="{!coreApi.selectedBooth != null}"></apex:selectOptions>
+                                <apex:actionSupport action="{!coreApi.selectItem}" event="onchange" reRender="statuses, messages, selectedItemPB" status="selectItemStatus" />
+                            </apex:selectList>
+                        </apex:pageBlockSectionItem>
+                        <apex:image url="{!coreApi.selectedImagePath}" />
+                    </apex:pageBlockSection>
+                    <apex:pageBlockSection title="Item Details" id="renu">
+                        <apex:outputPanel rendered="{!selectedGesTask.isRevision}">
+                            * The item can not be edited for this task since this is a revision of a previous task.
+                        </apex:outputPanel>
+                        <apex:pageBlockSectionItem rendered="{!selectedGesTask.isRevision}" />
+                        <apex:outputField value="{!selectedGesTask.task.Description__c}" />
+                        <apex:outputField value="{!selectedGesTask.task.Price__c}" 
+                                          rendered="{!(taskFieldManager.Price__c!= $Label.GC_Label_TFM_Hide)}"/>
+                        <apex:outputText rendered="{!(taskFieldManager.Price__c== $Label.GC_Label_TFM_Hide)}"></apex:outputText>
+                        
+                        <!-- SAL-501 -->
+                        <apex:inputField value="{!selectedGesTask.task.User_Item_Description__c}" style="width:100%" rendered="{!(taskFieldManager.User_Item_Description__c!= $Label.GC_Label_TFM_Hide)}"/>
+                        <apex:outputText rendered="{!(taskFieldManager.User_Item_Description__c== $Label.GC_Label_TFM_Hide)}"></apex:outputText>
+                        <apex:inputField value="{!selectedGesTask.task.New_Price__c}" />                
+                        <apex:outputField value="{!selectedGesTask.task.UOM__c}" />
+                        <apex:outputField value="{!selectedGesTask.task.Booth_Area_Discount__c}" rendered="{!(taskFieldManager.Booth_Area_Discount__c!= $Label.GC_Label_TFM_Hide)}"/>
+                        <apex:outputText rendered="{!(taskFieldManager.Booth_Area_Discount__c== $Label.GC_Label_TFM_Hide)}"></apex:outputText>
+                        <apex:outputField value="{!selectedGesTask.task.Item_Number__c}" />
+                        
+                        <apex:pageBlockSectionItem >
+                            <apex:outputLabel value="Booth Area Discount Override" />
+                            <apex:actionRegion >
+                                <apex:inputField value="{!selectedGesTask.task.Booth_Area_Discount_Override__c}" >
+                                    <apex:actionSupport event="onchange" action="{!clearDiscountValues}"  reRender="pb1"/>
+                                </apex:inputField>
+                            </apex:actionRegion>
+                        </apex:pageBlockSectionItem> 
+                        
+                        <apex:pageBlockSectionItem >                         
+                            <apex:outputLabel value="Discount Reason Code" rendered="{!selectedGesTask.task.Booth_Area_Discount_Override__c != null}"/>
+                            <apex:actionRegion >
+                                <apex:inputField value="{!selectedGesTask.task.Discount_Reason_Code__c}" rendered="{!selectedGesTask.task.Booth_Area_Discount_Override__c != null}" required="true"/>
+                            </apex:actionRegion>
+                        </apex:pageBlockSectionItem>
+                        
+                        <apex:pageBlockSectionItem >                         
+                            <apex:outputLabel value="Discount Reason Text" rendered="{!selectedGesTask.task.Booth_Area_Discount_Override__c != null}"/>
+                            <apex:actionRegion >
+                                <apex:inputField value="{!selectedGesTask.task.Discount_Reason_Text__c}" rendered="{!selectedGesTask.task.Booth_Area_Discount_Override__c != null}" required="true"/>
+                            </apex:actionRegion>
+                        </apex:pageBlockSectionItem>
+                        
+                        <apex:outputField value="{!selectedGesTask.task.Item_Template__c}" />
+                        <apex:inputField value="{!selectedGesTask.task.File_Reference_Link__c}" style="width:100%" rendered="{!(taskFieldManager.File_Reference_Link_Folder__c!= $Label.GC_Label_TFM_Hide)}"/>
+                        <apex:outputText rendered="{!(taskFieldManager.File_Reference_Link_Folder__c== $Label.GC_Label_TFM_Hide)}"></apex:outputText>
+                        
+                        <apex:image url="{!coreApi.selectedImagePath}" rendered="{!selectedGesTask.isRevision}" />
+                    </apex:pageBlockSection>
+                    <c:GC_ItemOptions gotAttribute="{!selectedGesTask.task}" coreApiAttribute="{!coreApi}" designElementTaskOptions="{!designElementTasks}" materialOptions="{!materialOptions}" activeGemStructureTaskOptions="{!activeGemStructureTasks}" taskFieldMan="{!taskFieldManager}">
+                    </c:GC_ItemOptions>
+                    <c:GC_CustomRTF targetclass="showManagement" rendered="true" toolbar="full" uniqueid="showManagement" />
+                    
+                    <apex:pageBlockSection columns="1">
+                        <c:GC_CustomRTF targetclass="showManagement" rendered="true" toolbar="full" uniqueid="showManagement" />
+                        <apex:inputTextarea styleClass="showManagement ckeditor" richText="false" value="{!selectedGesTask.task.Show_Management_Field__c}" style="width:100%" rendered="{!(taskFieldManager.Special_Instructions_Client_Remarks__c!= $Label.GC_Label_TFM_Hide)}" />
+                    </apex:pageBlockSection>
+                    <apex:pageBlockSection title="Department">
+                        <apex:selectList id="departmentSelect" value="{!selectedGesTask.task.Department__c}" size="1" >
+                            <apex:selectOptions value="{!departmentAttributes}"></apex:selectOptions>
+                        </apex:selectList>
+                        <apex:inputField value="{!selectedGesTask.task.Budget_Code__c}" rendered="{!(taskFieldManager.Budget_Code__c!= $Label.GC_Label_TFM_Hide)}"/>
+                        <apex:outputText rendered="{!(taskFieldManager.Budget_Code__c== $Label.GC_Label_TFM_Hide)}"></apex:outputText>
+                        
+                    </apex:pageBlockSection>
+                    <c:GC_ItemOptionsArea gotAttribute="{!selectedGesTask.task}" venueOptions="{!venueLocations}" defaultDeliveryTimeInput="{!currentOrder.Delivery_Date_Time__c}" defaultCompletionTimeInput="{!currentOrder.Completion_Date_Time__c}" defaultRemovalTimeInput="{!currentOrder.Removal_Date_Time__c}" taskFieldMan="{!taskFieldManager}">
+                    </c:GC_ItemOptionsArea>
+                    <apex:pageBlockSection title="Remarks">
+                        <apex:inputField value="{!selectedGesTask.task.Invoice_Remarks__c}" style="width:100%" />
+                        <apex:inputField value="{!selectedGesTask.task.Details_To_Invoice_Remarks__c}" />
+                        <apex:inputField value="{!selectedGesTask.task.Show_Site_Remarks__c}" style="width:100%" />
+                        <apex:inputField value="{!selectedGesTask.task.Details_To_Show_Site_Remarks__c}" />
+                        <apex:inputField value="{!selectedGesTask.task.Production_Remarks__c}" style="width:100%" />
+                        <!--SAL-501 -->
+                        <apex:inputCheckbox value="{!selectedGesTask.task.Add_Client_Special_Info_Order_Remarks__c}" selected="True"/>
+                        <apex:inputField value="{!selectedGesTask.task.Item_Type_Remarks__c}" style="width:100%" />
+                        <apex:inputField value="{!selectedGesTask.task.Details_To_Production_Remarks__c}" />
+                    </apex:pageBlockSection>
+                    <!--  </apex:outputPanel> -->
+                </apex:pageBlockSection>
+            </apex:pageBlock>
+        </apex:outputPanel>
+        
+        <div class="slds">
+            <div id="itemSelectionDialog"  align = "center" style="display:none;">
+                <div role="alertdialog" class="slds-modal slds-fade-in-open slds-modal--prompt prompt">
+                    <div class="slds-modal__container" style="width:600px;height: 500px;">
+                        <div class="slds-modal__header">
+                            <button class="slds-button slds-modal__close slds-button--icon-inverse prompt_close" title="Close" style="color: #b41955!important;" onclick="closeItemPopup();return false;">
+                                <svg aria-hidden="true" class="slds-button__icon slds-button__icon--large">
+                                    <use href="{!URLFOR($Resource.Lightning_Design_System, '/assets/icons/action-sprite/svg/symbols.svg#close')}"></use>
+                                </svg>
+                                <span class="slds-assistive-text">Close</span>
+                            </button>
+                            <h2 class="slds-text-heading--medium" id="prompt-heading-id">Select An Item</h2>
+                        </div>
+                        <div class="slds-modal__content slds-p-around--medium">
+                            <h3 class="slds-section-title--divider" style="display: inherit;"><b>Items</b></h3>
+                            
+                            <table class="slds-table slds-table--bordered slds-max-medium-table--stacked-horizontal" id="itemTable" style="margin-top: 12px;">
+                                <thead>
+                                    <tr class="slds-text-heading--label">
+                                        <td role="gridcell" class="slds-cell-shrink" scope="col">
+                                            <label class="slds-checkbox">
+                                                
+                                            </label>
+                                        </td>
+                                        <th scope="col">
+                                            <span class="slds-truncate">Item Name</span>
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    
+                                </tbody>
+                            </table>
+                            <br/>
+                        </div>  
+                        <div class="slds-modal__footer slds-theme--default">  
+                            <button class="slds-button slds-button--brand gc-teal-button prompt_close" id="selectItemButton" onclick="selectItemFromList(); return false;" >Select</button> 
+                        </div>
+                    </div>
+                </div>
+                <div class="slds-backdrop slds-backdrop--open prompt"></div>
+            </div>
+        </div>  
+    </apex:form>
+</apex:page>

@@ -1,0 +1,34 @@
+<apex:page standardController="Claims__Claim__c" extensions="CreateClaimController" tabStyle="Claims__Claim__c" showHeader="true" sidebar="true">
+    <apex:sectionHeader title="" subtitle="{!$Label.Create_Claim}" />
+
+    <apex:form id="pbForm" >
+        <apex:pageMessages />
+        <apex:pageBlock title="{!$Label.Create_Claim}" id="pbBlock" >
+
+            <!-- Page Block Buttons -->
+            <apex:pageBlockButtons >
+                <apex:commandButton value="{!$Label.Save_And_Next_Label}" status="processingStatus" action="{!save}" rendered="{!pageCounter == 1}" rerender="pbForm" />
+                <apex:commandButton value="{!$Label.Cancel_Label}" action="{!cancel}" status="processingStatus" />
+                <apex:actionStatus id="processingStatus" stopText="" >
+                    <apex:facet name="start">
+                        <img src="/img/loading.gif" />
+                    </apex:facet>
+                </apex:actionStatus>
+            </apex:pageBlockButtons>
+
+
+            <!-- First Page : Basic claim information fields -->
+            <apex:pageBlockSection title="{!$Label.Claim_Information}" columns="1" collapsible="false" rendered="{!pageCounter == 1}" >
+                <apex:repeat value="{!fieldsList}" var="field" >
+                    <apex:inputField value="{!claim[field.fieldName]}" rendered="{!NOT(field.isReadOnly) && NOT(field.hasAction)}" />
+                    <apex:inputField value="{!claim[field.fieldName]}" rendered="{!NOT(field.isReadOnly) && field.hasAction}" >
+                        <apex:actionSupport event="onchange" action="{!updateClaim}" status="processingStatus" rerender="pbForm" >
+                            <apex:param name="selectedField" value="{!field.fieldName}" />
+                        </apex:actionSupport>
+                    </apex:inputField>
+                    <apex:outputField value="{!claim[field.fieldName]}" rendered="{!field.isReadOnly}" />
+                </apex:repeat>
+            </apex:pageBlockSection>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

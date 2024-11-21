@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Requested_Due_Date__c</fullName>
+    <defaultValue>CASE(
+            MOD(today() - DATE(1900, 1, 7), 7),
+            0, today() +12,
+            1, today() +14,
+            2, today() +14,
+            3, today() +14,
+            4, today() +14,
+            5, today() +14,
+            6, today() +13,
+            today())</defaultValue>
+    <description>Date field associated with requested due date.</description>
+    <inlineHelpText>Date associated with requested due date.</inlineHelpText>
+    <label>Requested Due Date</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Date</type>
+</CustomField>

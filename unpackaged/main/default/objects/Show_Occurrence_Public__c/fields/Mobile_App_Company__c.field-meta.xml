@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Mobile_App_Company__c</fullName>
+    <inlineHelpText>Company providing mobile app service to exhibition organizer</inlineHelpText>
+    <label>Mobile App Company</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>A2Z</fullName>
+                <default>false</default>
+                <label>A2Z</label>
+            </value>
+            <value>
+                <fullName>Ascend Integrated Media</fullName>
+                <default>false</default>
+                <label>Ascend Integrated Media</label>
+            </value>
+            <value>
+                <fullName>CadmiumCD</fullName>
+                <default>false</default>
+                <label>CadmiumCD</label>
+            </value>
+            <value>
+                <fullName>CoreApps</fullName>
+                <default>false</default>
+                <label>CoreApps</label>
+            </value>
+            <value>
+                <fullName>CrowdCompass</fullName>
+                <default>false</default>
+                <label>CrowdCompass</label>
+            </value>
+            <value>
+                <fullName>DoubleDutch</fullName>
+                <default>false</default>
+                <label>DoubleDutch</label>
+            </value>
+            <value>
+                <fullName>eTech Events</fullName>
+                <default>false</default>
+                <label>eTech Events</label>
+            </value>
+            <value>
+                <fullName>Mapyourshow</fullName>
+                <default>false</default>
+                <label>Mapyourshow</label>
+            </value>
+            <value>
+                <fullName>Sherpa Solutions</fullName>
+                <default>false</default>
+                <label>Sherpa Solutions</label>
+            </value>
+            <value>
+                <fullName>Pathable</fullName>
+                <default>false</default>
+                <label>Pathable</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

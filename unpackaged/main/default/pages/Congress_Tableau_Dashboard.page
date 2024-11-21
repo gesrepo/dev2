@@ -1,0 +1,22 @@
+<apex:page standardStylesheets="true" showHeader="false" sidebar="false" applyHtmlTag="false" applyBodyTag="false" docType="html-5.0" StandardController="Account">
+    <html xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        
+        <head>
+            <apex:includeScript value="{!$Resource.jQuery}" />
+            <apex:stylesheet value="{!URLFOR($Resource.Lightning_Design_System, 'assets/styles/salesforce-lightning-design-system.min.css')}" />
+            <apex:stylesheet value="{!URLFOR($Resource.GC_Assets, 'GC_Assets/css/GC_Styles.css')}" />
+            <apex:includeScript value="{!URLFOR($Resource.GC_Assets, 'GC_Assets/js/GC_init.js')}" />
+        </head>
+        
+        <body>
+            <div class="slds">
+                <c:GC_Community_Header />
+                <br />
+                <div class="slds-grid slds-grid--align-center">
+                    <iframe id="a" src="https://public.tableau.com/views/GESConnectDashboard/GlobalCongressExecutiveSummary?publish=yes?:showVizHome=no&:toolbar=no"       
+                                 height="1110px" width="1200px" scrolling="true"/>
+                </div>
+            </div>
+        </body>
+    </html>  
+</apex:page>

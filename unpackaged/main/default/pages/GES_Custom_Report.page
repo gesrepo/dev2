@@ -1,0 +1,682 @@
+<apex:page showHeader="true" sidebar="false" applyBodyTag="false" docType="html-5.0" controller="GESCustomReportController" id="thePage">    
+    <html xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">  
+        <head>
+            <link rel="stylesheet" type="text/css" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"/>
+            <link rel="stylesheet" type="text/css" href="//cdn.datatables.net/1.10.10/css/dataTables.bootstrap.min.css"/>
+            <script type="text/javascript" language="javascript" src="//code.jquery.com/jquery-1.11.3.min.js"/>
+            <script type="text/javascript" language="javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/js/bootstrap.min.js"/>
+            <script src="//cdn.datatables.net/1.10.10/js/jquery.dataTables.min.js"/>
+            <script type="text/javascript" language="javascript" src="https://cdn.datatables.net/1.10.10/js/dataTables.bootstrap.min.js"/>
+            <style>
+               .overlay {
+                    z-index: 1051;
+                    display: none;
+                    width: 100%;
+                    height: 100%;
+                    position: fixed;
+                    top: 0px;
+                    left: 0px;
+                    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+                    filter: alpha(opacity=50);
+                    opacity: 0.5;
+                    background-color: white;
+                }
+                .popup {
+                    display: none;
+                    z-index: 1052;
+                    margin: auto;
+                    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+                    filter: alpha(opacity=100);
+                    opacity: 1.0;
+                    background-color: white;
+                    border: 1px solid #acacac;
+                    box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+                    padding: 15px;
+                    position: fixed;
+                    top: 0;
+                    left: 0;
+                    bottom: 0;
+                    right: 0;
+                }
+                #loadingPopup {
+                    width: 300px;
+                    height: 150px;
+                    overflow: hidden;
+                    vertical-align: middle;
+                    text-align: center;
+                }
+                #loadingPopup2 {
+                    width: 300px;
+                    height: 200px;
+                    overflow: hidden;
+                    vertical-align: middle;
+                    text-align: center;
+                }
+                .inline-edit-btn {
+                    margin-left:5px;
+                    font-size:12px;
+                    padding: 6px 17px;
+                    background-color: #337ab7;
+                    color: #fff;
+                    border: 0;
+                }
+                .filter-div {
+                    border: solid 1px lightgray; 
+                    padding-top: 10px; 
+                    padding-bottom: 15px;
+                    margin-top:5px;
+                    margin-bottom:5px;
+                }
+                .filter-div label {
+                    font-weight: normal;
+                    padding-left: 5px;
+                }
+                .filter-div input[type="text"] {
+                    margin: 5px;
+                }
+                .filter-div hr {
+                    margin-top: 10px;
+                    margin-bottom: 10px;
+                }
+                #bodyTable {
+                    table-layout: fixed;
+                    width: 100%;
+                }
+                #resultsDiv {
+                    border: solid 1px lightgray; 
+                    padding: 10px;
+                    margin-top:5px;
+                    margin-bottom:5px;
+                    display:none;
+                }
+                #oppsTable_paginate .pagination li {
+                    margin-left: 0;
+                }
+            </style>
+        </head>
+        <body>
+            <apex:form id="theForm">
+            <div>
+                <div class="col-md-12 filter-div">
+                    <div class="col-md-3"> 
+                        <b>Line(s) of Business</b> <br /><br />
+                        <apex:selectCheckboxes layout="pageDirection" id="lobSelections">
+                            <apex:selectOptions value="{!MyCheckboxLOBs}"></apex:selectOptions>
+                        </apex:selectCheckboxes>
+                    </div>
+                    <div class="col-md-3"> 
+                        <b>Stage</b> <br /><br />
+                        <div style="overflow-y:scroll; height:200px;">
+                            <apex:selectCheckboxes layout="pageDirection" id="stageSelections">
+                                <apex:selectOptions value="{!MyCheckboxStages}"></apex:selectOptions>
+                            </apex:selectCheckboxes>
+                        </div>
+                    </div>
+                    <div class="col-md-1">
+                    </div>
+                    <div class="col-md-5">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <b>Exhibition Close Date</b>
+                            </div>
+                            <div class="col-md-6">
+                                <div style="width:45px; display:inline-block;"><b>From</b></div> <apex:inputfield value="{!dummy.Birthdate}" style="margin-left: 5px;" id="fromDate"/>
+                                <br />
+                                <div style="width:45px; display:inline-block;"><b>To</b></div> <apex:inputfield value="{!dummy2.Birthdate}" style="margin-left: 5px; margin-top:5px;" id="toDate"/>
+                            </div>
+                        </div>
+                        <hr />
+                        <div class="row">
+                            <div class="col-md-6">
+                                <b>Exhibition provider</b>
+                            </div>
+                            <div class="col-md-6">
+                                <apex:inputText id="provider"/>
+                            </div>
+                        </div>
+                        <hr />
+                        <div class="row">
+                            <div class="col-md-6">
+                                <b>Revenue</b>
+                            </div>
+                            <div class="col-md-6">
+                                <div style="width:45px; display:inline-block;"><b>From</b></div> <apex:inputText id="fromCurr"/>
+                                <br />
+                                <div style="width:45px; display:inline-block;"><b>To</b></div> <apex:inputText id="toCurr"/>
+                            </div>
+                        </div>
+                        <hr />
+                        <div class="row">
+                            <div class="col-md-6">
+                                <b>Location</b>
+                            </div>
+                            <div class="col-md-6">
+                                <apex:selectList id="location" size="1">
+                                    <apex:selectOption itemValue="All" itemLabel="All" />
+                                    <apex:selectOption itemValue="EMEA" itemLabel="EMEA" />
+                                    <apex:selectOption itemValue="US" itemLabel="US" />
+                                </apex:selectList>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12 filter-div" id="additionalFilter1" style="display:none;">
+                    <div class="col-md-3"> 
+                        <b>Line(s) of Business</b> <br /><br />
+                        <apex:selectCheckboxes layout="pageDirection" id="lobSelections1">
+                            <apex:selectOptions value="{!MyCheckboxLOBs}"></apex:selectOptions>
+                        </apex:selectCheckboxes>
+                    </div>
+                    <div class="col-md-3"> 
+                        <b>Stage</b> <br /><br />
+                        <div style="overflow-y:scroll; height:180px;">
+                            <apex:selectCheckboxes layout="pageDirection" id="stageSelections1">
+                                <apex:selectOptions value="{!MyCheckboxStages}"></apex:selectOptions>
+                            </apex:selectCheckboxes>
+                        </div>
+                    </div>
+                    <div class="col-md-1">
+                    </div>
+                    <div class="col-md-5">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <b>Exhibition Close Date</b>
+                            </div>
+                            <div class="col-md-6">
+                                <div style="width:45px; display:inline-block;"><b>From</b></div> <apex:inputfield value="{!dummy.Birthdate}" style="margin-left: 5px;" id="fromDate1"/>
+                                <br />
+                                <div style="width:45px; display:inline-block;"><b>To</b></div> <apex:inputfield value="{!dummy2.Birthdate}" style="margin-left: 5px; margin-top:5px;" id="toDate1"/>
+                            </div>
+                        </div>
+                        <hr />
+                        <div class="row">
+                            <div class="col-md-6">
+                                <b>Exhibition provider</b>
+                            </div>
+                            <div class="col-md-6">
+                                <apex:inputText id="provider1"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12 filter-div" id="additionalFilter2" style="display:none;">
+                    <div class="col-md-3"> 
+                        <b>Line(s) of Business</b> <br /><br />
+                        <apex:selectCheckboxes layout="pageDirection" id="lobSelections2">
+                            <apex:selectOptions value="{!MyCheckboxLOBs}"></apex:selectOptions>
+                        </apex:selectCheckboxes>
+                    </div>
+                    <div class="col-md-3"> 
+                        <b>Stage</b> <br /><br />
+                        <div style="overflow-y:scroll; height:180px;">
+                            <apex:selectCheckboxes layout="pageDirection" id="stageSelections2">
+                                <apex:selectOptions value="{!MyCheckboxStages}"></apex:selectOptions>
+                            </apex:selectCheckboxes>
+                        </div>
+                    </div>
+                    <div class="col-md-1">
+                    </div>
+                    <div class="col-md-5">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <b>Exhibition Close Date</b>
+                            </div>
+                            <div class="col-md-6">
+                                <div style="width:45px; display:inline-block;"><b>From</b></div> <apex:inputfield value="{!dummy.Birthdate}" style="margin-left: 5px;" id="fromDate2"/>
+                                <br />
+                                <div style="width:45px; display:inline-block;"><b>To</b></div> <apex:inputfield value="{!dummy2.Birthdate}" style="margin-left: 5px; margin-top:5px;" id="toDate2"/>
+                            </div>
+                        </div>
+                        <hr />
+                        <div class="row">
+                            <div class="col-md-6">
+                                <b>Exhibition provider</b>
+                            </div>
+                            <div class="col-md-6">
+                                <apex:inputText id="provider2"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12 filter-div" id="additionalFilter3" style="display:none;">
+                    <div class="col-md-3"> 
+                        <b>Line(s) of Business</b> <br /><br />
+                        <apex:selectCheckboxes layout="pageDirection" id="lobSelections3">
+                            <apex:selectOptions value="{!MyCheckboxLOBs}"></apex:selectOptions>
+                        </apex:selectCheckboxes>
+                    </div>
+                    <div class="col-md-3"> 
+                        <b>Stage</b> <br /><br />
+                        <div style="overflow-y:scroll; height:180px;">
+                            <apex:selectCheckboxes layout="pageDirection" id="stageSelections3">
+                                <apex:selectOptions value="{!MyCheckboxStages}"></apex:selectOptions>
+                            </apex:selectCheckboxes>
+                        </div>
+                    </div>
+                    <div class="col-md-1">
+                    </div>
+                    <div class="col-md-5">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <b>Exhibition Close Date</b>
+                            </div>
+                            <div class="col-md-6">
+                                <div style="width:45px; display:inline-block;"><b>From</b></div> <apex:inputfield value="{!dummy.Birthdate}" style="margin-left: 5px;" id="fromDate3"/>
+                                <br />
+                                <div style="width:45px; display:inline-block;"><b>To</b></div> <apex:inputfield value="{!dummy2.Birthdate}" style="margin-left: 5px; margin-top:5px;" id="toDate3"/>
+                            </div>
+                        </div>
+                        <hr />
+                        <div class="row">
+                            <div class="col-md-6">
+                                <b>Exhibition provider</b>
+                            </div>
+                            <div class="col-md-6">
+                                <apex:inputText id="provider3"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+                            
+            <div style="text-align:center;">
+                <button type="button" id="removeFilterButton" onclick="removeFilter(); return false;" style="display:none;">Remove Last Filter</button>
+                <button type="button" id="addFilterButton" onclick="addFilter(); return false;">Additional Filter</button>
+                <button type="button" onclick="initTable(); return false;">Apply</button>
+            </div>
+            
+            <script>
+                var filterCount = 0;
+                function addFilter() {
+                    filterCount++;
+                    $('#additionalFilter' + filterCount).show();
+                    if (filterCount == 3) {
+                        $('#addFilterButton').hide();
+                    }
+                    $('#removeFilterButton').show();
+                }
+                function removeFilter() {
+                    $('#additionalFilter' + filterCount).hide();
+                    filterCount--;
+                    if (filterCount == 0) {
+                        $('#removeFilterButton').hide();
+                    }
+                    $('#addFilterButton').show();
+                }
+            </script>
+            
+            <div id="blurredOverlay" class="overlay"></div>
+            <div id="loadingPopup" class="popup" aria-hidden="true" role="alert">
+                 <br/><br/>
+                 <img src="/img/loading.gif" alt="Loading" style="vertical-align: middle;"/>
+                 <br />Please wait...
+            </div>
+            <div id="loadingPopup2" class="popup" aria-hidden="true" role="alert">
+                <b>Show/Hide Columns:</b> <br /><br />
+                <div style="width:200px;text-align:left;">
+                    <input type="checkbox" class="toggle-vis" data-column="6" href="#">&nbsp;Exhb Owner</input> <br />
+                    <input type="checkbox" class="toggle-vis" data-column="11" href="#">&nbsp;AV Owner</input> <br />
+                    <input type="checkbox" class="toggle-vis" data-column="16" href="#">&nbsp;Housing Owner</input> <br />
+                    <input type="checkbox" class="toggle-vis" data-column="21" href="#">&nbsp;Reg Owner</input> <br />
+                </div>
+                <br />
+                <button type="button" onclick="hideColumnsSelector(); return false;">Done</button>
+            </div>
+            
+            <div id="resultsDiv">
+                <div style="text-align:center;">
+                    <button type="button" onclick="Export(); return false;">Export</button>
+                    <button type="button" onclick="showColumnsSelector(); return false;">Show / Hide Columns</button>
+                </div>
+                <hr />
+                <table id='oppsTable' class="table slds-table slds-table--bordered slds-table--striped slds-max-medium-table--stacked-horizontal">
+                    <thead>
+                        <tr class="slds-text-heading--label">
+                            <th class="slds-is-sortable" scope="col">
+                                <span class="slds-truncate">Account</span>
+                            </th>
+                            <th class="slds-is-sortable" scope="col">
+                                <span class="slds-truncate">Show</span>
+                            </th>
+                            <th class="slds-is-sortable" scope="col">
+                                <span class="slds-truncate">Exhb Opp</span>
+                            </th>
+                            <th class="slds-is-sortable" scope="col">
+                                <span class="slds-truncate">Exhb Stage</span>
+                            </th>
+                            <th class="slds-is-sortable" scope="col">
+                                <span class="slds-truncate">Exhb Provider</span>
+                            </th>
+                            <th class="slds-is-sortable" scope="col">
+                                <span class="slds-truncate">Exhb Revenue</span>
+                            </th>
+                            <th class="slds-is-sortable" scope="col">
+                                <span class="slds-truncate">Exhb Owner</span>
+                            </th>
+                            <th class="slds-is-sortable" scope="col">
+                                <span class="slds-truncate">AV Opp</span>
+                            </th>
+                            <th class="slds-is-sortable" scope="col">
+                                <span class="slds-truncate">AV Stage</span>
+                            </th>
+                            <th class="slds-is-sortable" scope="col">
+                                <span class="slds-truncate">AV Provider</span>
+                            </th>
+                            <th class="slds-is-sortable" scope="col">
+                                <span class="slds-truncate">AV Revenue</span>
+                            </th>
+                            <th class="slds-is-sortable" scope="col">
+                                <span class="slds-truncate">AV Owner</span>
+                            </th>
+                            <th class="slds-is-sortable" scope="col">
+                                <span class="slds-truncate">Housing Opp</span>
+                            </th>
+                            <th class="slds-is-sortable" scope="col">
+                                <span class="slds-truncate">Housing Stage</span>
+                            </th>
+                            <th class="slds-is-sortable" scope="col">
+                                <span class="slds-truncate">Housing Provider</span>
+                            </th>
+                            <th class="slds-is-sortable" scope="col">
+                                <span class="slds-truncate">Housing Revenue</span>
+                            </th>
+                            <th class="slds-is-sortable" scope="col">
+                                <span class="slds-truncate">Housing Owner</span>
+                            </th>
+                            <th class="slds-is-sortable" scope="col">
+                                <span class="slds-truncate">Reg Opp</span>
+                            </th>
+                            <th class="slds-is-sortable" scope="col">
+                                <span class="slds-truncate">Reg Stage</span>
+                            </th>
+                            <th class="slds-is-sortable" scope="col">
+                                <span class="slds-truncate">Reg Provider</span>
+                            </th>
+                            <th class="slds-is-sortable" scope="col">
+                                <span class="slds-truncate">Reg Revenue</span>
+                            </th>
+                            <th class="slds-is-sortable" scope="col">
+                                <span class="slds-truncate">Reg Owner</span>
+                            </th>
+                            <th class="slds-is-sortable" scope="col">
+                                <span class="slds-truncate">Total Amount</span>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody id="tableBody"></tbody>
+                </table>
+            </div>
+            </apex:form>
+        </body>
+    </html>
+    
+    <script type="text/javascript">
+	Visualforce.remoting.timeout = 120000;
+    var pendingRemoteCalls = 0;
+    
+    function jq(myid) {
+        return "#" + myid.replace( /(:|\.|\[|\]|,)/g, "\\\\$1" );
+    }
+                
+    function showPleaseWait() {
+        pendingRemoteCalls += 1;
+        $('#blurredOverlay').css('display', pendingRemoteCalls > 0 ? 'block' : 'none');
+        $('#loadingPopup').css('display', pendingRemoteCalls > 0 ? 'block' : 'none');
+    }
+                
+    function hidePleaseWait() {
+        pendingRemoteCalls -= 1;
+        $('#blurredOverlay').css('display', pendingRemoteCalls > 0 ? 'block' : 'none');
+        $('#loadingPopup').css('display', pendingRemoteCalls > 0 ? 'block' : 'none');
+    }
+
+    function showColumnsSelector() {
+        $('#blurredOverlay').css('display', 'block');
+        $('#loadingPopup2').css('display', 'block');
+    }
+
+    function hideColumnsSelector() {
+        $('#blurredOverlay').css('display', 'none');
+        $('#loadingPopup2').css('display', 'none');
+    }
+    
+    $(document).ready(function() {
+        
+        $('#myTabs a[href="#ConsultantsTable"]').click(function (e) {
+          e.preventDefault();
+          $(this).tab('show');
+          $('#consultantsTable').DataTable().draw();
+          
+        })
+        
+        $('input.toggle-vis').on( 'click', function (e) {
+            //e.preventDefault();
+            
+            // Get the column API object
+            var column = oppsTable.column( $(this).attr('data-column') );
+     
+            // Toggle the visibility
+            column.visible( $(this).is(':checked') );
+        } );
+        
+        
+    
+        $('#oppsTable').on('preXhr.dt', function ( e, settings, data ) {
+                               showPleaseWait();
+                               console.log('pre');
+                            } )
+                            .on('xhr.dt', function ( e, settings, json, xhr ) {
+                                $('#resultsDiv').show();
+                                hidePleaseWait();
+                                
+                                  console.log('post');
+                            });
+        
+    });
+            
+    var oppsTable;
+
+    function renderColumn(data, type, row, meta) {
+        if (data && meta.col == 5)
+            return data.formatMoney(2);
+        return data || '';
+        
+    }
+
+    function renderMoneyList(data) {
+        var ret = '';
+        data.forEach(function(d) {
+            if (ret != '')
+                ret += '<hr style="margin-top: 5px;margin-bottom: 5px;" /> ';
+            if (d.Amount)
+                ret += d.Amount.formatMoney(2);
+            else
+                ret += '&nbsp;';
+        });
+        return ret;
+    }
+
+    function initTable() {
+       var filters = GetFilters();
+       if (filters == 'Error') {
+           alert('Please enter criteria in the blank filter or remove the filter');
+           return;
+       }
+       
+       if (oppsTable) {
+           oppsTable.destroy();
+       }
+       oppsTable = $('#oppsTable').DataTable(
+        {
+            "autoWidth": true,
+            "escape": false,
+            "ajax": function (data, callback, settings) {
+             Visualforce.remoting.Manager.invokeAction(
+
+            '{!$RemoteAction.GESCustomReportController.getOpportunities}',
+                 filters,
+                 
+                 function(results, event) {
+                
+                    console.log(event);
+                    console.log(results);
+                     
+                    if (event.status) {
+                    	callback(results);
+                    } else {
+                        alert('The request coult not be completed, most likely due to the quantity of data. \nPlease narrow your search. \n\nReturned error: ' + event.message);
+                        hidePleaseWait();
+                    }
+                });
+            
+           
+            },    
+                       
+              
+            "columns": [
+                
+                { "data": "exhOpportunity.Account.Name", "render" : renderColumn },
+                { "data": "exhOpportunity.Show_Name__r.Name", "render" : renderColumn },
+                { "data": "exhOpportunity.Name", "render" : renderColumn },
+                { "data": "exhOpportunity.StageName", "render" : renderColumn },
+                { "data": "exhOpportunity.Prime_Contractor__r.Name", "render" : renderColumn },
+                { "data": "exhOpportunity.Amount", "render" : renderColumn },
+                { "data": "exhOpportunity.Owner.Name", "render" : renderColumn },
+                { "data": "avOpps", "className": "nowrap-td", "render": "[<hr style='margin-top: 5px;margin-bottom: 5px;' /> ].Name" },
+                { "data": "avOpps", "className": "nowrap-td", "render": "[<hr style='margin-top: 5px;margin-bottom: 5px;' /> ].StageName" },
+                { "data": "avOpps", "className": "nowrap-td", "render": "[<hr style='margin-top: 5px;margin-bottom: 5px;' /> ].Audio_Visual_Provider__c" },
+                { "data": "avOpps", "className": "nowrap-td", "render": renderMoneyList },
+                { "data": "avOpps", "className": "nowrap-td", "render": "[<hr style='margin-top: 5px;margin-bottom: 5px;' /> ].Owner.Name" },
+                { "data": "hsOpps", "className": "nowrap-td", "render": "[<hr style='margin-top: 5px;margin-bottom: 5px;' /> ].Name" },
+                { "data": "hsOpps", "className": "nowrap-td", "render": "[<hr style='margin-top: 5px;margin-bottom: 5px;' /> ].StageName" },
+                { "data": "hsOpps", "className": "nowrap-td", "render": "[<hr style='margin-top: 5px;margin-bottom: 5px;' /> ].Housing_Provider__c" },
+                { "data": "hsOpps", "className": "nowrap-td", "render": renderMoneyList },
+                { "data": "hsOpps", "className": "nowrap-td", "render": "[<hr style='margin-top: 5px;margin-bottom: 5px;' /> ].Owner.Name" },
+                { "data": "regOpps", "className": "nowrap-td", "render": "[<hr style='margin-top: 5px;margin-bottom: 5px;' /> ].Name" },
+                { "data": "regOpps", "className": "nowrap-td", "render": "[<hr style='margin-top: 5px;margin-bottom: 5px;' /> ].StageName" },
+                { "data": "regOpps", "className": "nowrap-td", "render": "[<hr style='margin-top: 5px;margin-bottom: 5px;' /> ].Registration_Provider__c" },
+                { "data": "regOpps", "className": "nowrap-td", "render": renderMoneyList },
+                { "data": "regOpps", "className": "nowrap-td", "render": "[<hr style='margin-top: 5px;margin-bottom: 5px;' /> ].Owner.Name" },
+                { "data": "totalAmount" }
+                
+              ],
+            
+             
+          
+               scrollY: 500,
+               scrollX: "100%",
+                fixedHeader: false,
+               scrollCollapse: true,
+               "paging": true,
+               "searching": true,
+               "ordering": true,
+               "info": true
+              
+           });  
+       
+       oppsTable.column( 6 ).visible( false );
+       oppsTable.column( 11 ).visible( false );
+       oppsTable.column( 16 ).visible( false );
+       oppsTable.column( 21 ).visible( false );
+    
+    }
+                
+    function Export() {
+        var filters = GetFilters();
+        if (filters == 'Error') {
+           alert('Please enter criteria in the blank filter or remove the filter');
+           return;
+        }
+        showPleaseWait();
+        Visualforce.remoting.Manager.invokeAction(
+            '{!$RemoteAction.GESCustomReportController.getOpportunitiesExport}',
+            filters,
+            function(results, event) {
+                     
+                if (event.status) {
+                	var element = document.createElement('a');
+                    element.setAttribute('href', 'data:text/csv;charset=utf-8,' + encodeURIComponent(results));
+                    element.setAttribute('download', 'export.csv');
+                    element.style.display = 'none';
+                    document.body.appendChild(element);
+    
+                    element.click();
+    
+                    document.body.removeChild(element);
+                	hidePleaseWait();
+                } else {
+                	alert('The request coult not be completed, most likely due to the quantity of data. \nPlease narrow your search. \n\nReturned error: ' + event.message);
+                	hidePleaseWait();
+                }
+                
+            },
+            {
+                escape: false
+            }
+        );
+    }
+                
+    function GetFilters() {
+        var fs = [];
+       var lob = [];
+       var stage = [];
+       $('#thePage\\:theForm\\:lobSelections input[type="checkbox"]:checked').each(function(i,e){lob.push(e.value);});
+       $('#thePage\\:theForm\\:stageSelections input[type="checkbox"]:checked').each(function(i,e){stage.push(e.value);});
+       var fromDate = document.getElementById("thePage:theForm:fromDate").value;
+       var toDate = document.getElementById("thePage:theForm:toDate").value;
+       var provider = document.getElementById("thePage:theForm:provider").value;
+       var fromCurr = +document.getElementById("thePage:theForm:fromCurr").value;
+       var toCurr = +document.getElementById("thePage:theForm:toCurr").value;
+       var location = document.getElementById("thePage:theForm:location").value;
+       var f = {
+           "lob": lob,
+           "stage" : stage,
+           "fromDate" : fromDate,
+           "toDate" : toDate,
+           "provider" : provider,
+           "fromCurrency" : fromCurr,
+           "toCurrency" : toCurr,
+           "location" : location
+       };
+       fs.push(f);
+       for (i = 1; i <= filterCount; i++) {
+           var lob = [];
+           var stage = [];
+           $('#thePage\\:theForm\\:lobSelections' + i + ' input[type="checkbox"]:checked').each(function(i,e){lob.push(e.value);});
+           $('#thePage\\:theForm\\:stageSelections' + i + ' input[type="checkbox"]:checked').each(function(i,e){stage.push(e.value);});
+           var fromDate = document.getElementById("thePage:theForm:fromDate" + i).value;
+           var toDate = document.getElementById("thePage:theForm:toDate" + i).value;
+           var provider = document.getElementById("thePage:theForm:provider" + i).value;
+           var f = {
+               "lob": lob,
+               "stage" : stage,
+               "fromDate" : fromDate,
+               "toDate" : toDate,
+               "provider" : provider
+           };
+           if (lob.length == 0 && stage.length == 0 && (fromDate == null || fromDate == '') && (toDate == null || toDate == '') && (provider == null || provider == '')) {
+               return 'Error';
+           }
+           fs.push(f);
+       }
+       return fs;
+    }
+
+    Number.prototype.formatMoney = function(c, d, t){
+    var n = this, 
+        c = isNaN(c = Math.abs(c)) ? 2 : c, 
+        d = d == undefined ? "." : d, 
+        t = t == undefined ? "," : t, 
+        s = n < 0 ? "-" : "", 
+        i = parseInt(n = Math.abs(+n || 0).toFixed(c)) + "", 
+        j = (j = i.length) > 3 ? j % 3 : 0;
+       return '$' + s + (j ? i.substr(0, j) + t : "") + i.substr(j).replace(/(\d{3})(?=\d)/g, "$1" + t) + (c ? d + Math.abs(n - i).toFixed(c).slice(2) : "");
+     };
+    </script>
+    <style>
+        td.nowrap-td {
+            white-space:nowrap;
+        }
+    </style>
+    
+</apex:page>

@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Stage__c</fullName>
+    <description>Indicates what stage a Sales Rep is in for a specific call</description>
+    <label>Follow Up Status</label>
+    <required>false</required>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>First Call</fullName>
+                <default>false</default>
+                <label>1st Call</label>
+            </value>
+            <value>
+                <fullName>Second Call</fullName>
+                <default>false</default>
+                <label>2nd Call</label>
+            </value>
+            <value>
+                <fullName>3rd Call</fullName>
+                <default>false</default>
+                <label>3rd Call</label>
+            </value>
+            <value>
+                <fullName>Contacted - Follow up needed</fullName>
+                <default>false</default>
+                <label>Contacted - Follow up needed</label>
+            </value>
+            <value>
+                <fullName>Disqualified</fullName>
+                <default>false</default>
+                <label>Disqualified</label>
+            </value>
+            <value>
+                <fullName>Emailed</fullName>
+                <default>false</default>
+                <label>Emailed</label>
+            </value>
+            <value>
+                <fullName>LinkedIn Message</fullName>
+                <default>false</default>
+                <label>LinkedIn Message</label>
+            </value>
+            <value>
+                <fullName>Not Yet Contacted</fullName>
+                <default>false</default>
+                <label>Not Yet Contacted</label>
+            </value>
+            <value>
+                <fullName>Qualified</fullName>
+                <default>false</default>
+                <label>Qualified</label>
+            </value>
+            <value>
+                <fullName>Qualified - Special</fullName>
+                <default>false</default>
+                <label>Qualified - Special</label>
+            </value>
+            <value>
+                <fullName>Referred to Logistics</fullName>
+                <default>false</default>
+                <label>Referred to Logistics</label>
+            </value>
+            <value>
+                <fullName>Referred to Pre Show Coordinator</fullName>
+                <default>false</default>
+                <label>Referred to Pre Show Coordinator</label>
+            </value>
+            <value>
+                <fullName>Referred to Trade Show Lead Gen</fullName>
+                <default>false</default>
+                <label>Referred to Trade Show Lead Gen</label>
+            </value>
+            <value>
+                <fullName>Sold Exhibit System</fullName>
+                <default>false</default>
+                <label>Sold Exhibit System</label>
+            </value>
+            <value>
+                <fullName>Sold Kit Items</fullName>
+                <default>false</default>
+                <label>Sold Kit Items</label>
+            </value>
+            <value>
+                <fullName>2nd Email</fullName>
+                <default>false</default>
+                <label>2nd Email</label>
+            </value>
+            <value>
+                <fullName>3rd Email</fullName>
+                <default>false</default>
+                <label>3rd Email</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

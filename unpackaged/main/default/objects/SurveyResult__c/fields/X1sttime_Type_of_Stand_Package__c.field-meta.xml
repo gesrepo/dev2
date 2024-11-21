@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>X1sttime_Type_of_Stand_Package__c</fullName>
+    <label>1sttime.Type of Stand/Package</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Space Only</fullName>
+                <default>false</default>
+                <label>Space Only</label>
+            </value>
+            <value>
+                <fullName>Basic Shell Scheme</fullName>
+                <default>false</default>
+                <label>Basic Shell Scheme</label>
+            </value>
+            <value>
+                <fullName>Shell Package</fullName>
+                <default>false</default>
+                <label>Shell Package</label>
+            </value>
+            <value>
+                <fullName>Shell Package (includes more than just walling and floor covering, such as furniture items and/or lights and a socket, for example)</fullName>
+                <default>false</default>
+                <label>Shell Package (includes more than just walling and floor covering, such as furniture items and/or lights and a socket, for example)</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

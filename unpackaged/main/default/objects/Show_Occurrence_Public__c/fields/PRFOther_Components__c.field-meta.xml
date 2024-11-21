@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PRFOther_Components__c</fullName>
+    <label>Other Components</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Display case</fullName>
+                <default>false</default>
+                <label>Display case</label>
+            </value>
+            <value>
+                <fullName>Wire wall</fullName>
+                <default>false</default>
+                <label>Wire wall</label>
+            </value>
+            <value>
+                <fullName>Slat wall</fullName>
+                <default>false</default>
+                <label>Slat wall</label>
+            </value>
+            <value>
+                <fullName>Peg board</fullName>
+                <default>false</default>
+                <label>Peg board</label>
+            </value>
+            <value>
+                <fullName>Literature rack</fullName>
+                <default>false</default>
+                <label>Literature rack</label>
+            </value>
+            <value>
+                <fullName>Grid wall</fullName>
+                <default>false</default>
+                <label>Grid wall</label>
+            </value>
+            <value>
+                <fullName>Flat shelf</fullName>
+                <default>false</default>
+                <label>Flat shelf</label>
+            </value>
+            <value>
+                <fullName>Slant shelf</fullName>
+                <default>false</default>
+                <label>Slant shelf</label>
+            </value>
+            <value>
+                <fullName>Podium</fullName>
+                <default>false</default>
+                <label>Podium</label>
+            </value>
+            <value>
+                <fullName>Kiosk</fullName>
+                <default>false</default>
+                <label>Kiosk</label>
+            </value>
+            <value>
+                <fullName>Planter</fullName>
+                <default>false</default>
+                <label>Planter</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>3</visibleLines>
+</CustomField>

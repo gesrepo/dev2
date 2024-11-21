@@ -1,0 +1,19 @@
+<apex:page standardStylesheets="true" controller="ExhibitScheduleBasicReport" showHeader="false" sidebar="false" applyHtmlTag="false" tabStyle="Account" contentType="application/vnd.ms-excel#ExhibitScheduleBasic.xls" cache="true">
+     <apex:form > 
+        <apex:pageBlock id="pbst">
+            <apex:pageBlockTable value="{!exlst}" var="ext">
+                <apex:column value="{!ext.Activity_Type_Exhibit_Instance_c__r.Name_of_Congress__c}"/>
+                <apex:column value="{!ext.Activity_Type_Exhibit_Instance_c__r.Acronym_of_Congress__c}"/>
+                <apex:column value="{!ext.Activity_Level__c}"/>
+                <apex:column value="{!ext.Activity_Type_Exhibit_Instance_c__r.Exhibit_Open_Date__c}"/>
+                <apex:column value="{!ext.Activity_Type_Exhibit_Instance_c__r.Exhibit_Close_Date__c}"/>
+                <apex:column headerValue="Location"><apex:outputText value=" {!ext.Activity_Type_Exhibit_Instance_c__r.Shipping_City__c  + ',' + ext.Activity_Type_Exhibit_Instance_c__r.Shipping_State_Province__c}" /> </apex:column>
+                <apex:column value="{!ext.Activity_Type_Exhibit_Instance_c__r.Facility_Name__c}"/>
+                <!--<apex:column value="{!ext.Activity_Type_Exhibit_Instance_c__r.Advanced_Warehouse_Location_Name__c}"/>-->
+                <apex:column value="{!ext.Booth_Length__c}"/>                
+                <apex:column value="{!ext.Booth_Width__c }"/>
+                <apex:column value="{!ext.Booth_Number__c}"/>
+            </apex:pageBlockTable>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

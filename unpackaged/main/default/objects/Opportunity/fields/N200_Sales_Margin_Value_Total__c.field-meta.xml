@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>N200_Sales_Margin_Value_Total__c</fullName>
+    <description>The N200 total sales margin value total</description>
+    <formula>N200_Visit_Sales_Margin_Value__c + N200_Event_Box_Sales_Margin_Value__c +  N200_Service_Support_Sales_Margin_Value__c +  N200_Connect_Sales_Margin_value__c +  POKEN_Sales_Margin_Value__c</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>The N200 total sales margin value total</inlineHelpText>
+    <label>Sales Margin Value Total</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackHistory>false</trackHistory>
+    <type>Currency</type>
+</CustomField>

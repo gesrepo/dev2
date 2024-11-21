@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CV_CR_Probability</fullName>
+    <active>true</active>
+    <description>Restricts the manual override of the Probability to 100 for stages CV and CR.</description>
+    <errorConditionFormula>AND (
+OR (ISPICKVAL( StageName , &#39;CV&#39;),  ISPICKVAL( StageName , &#39;CR&#39;)),
+IF (CASE (  Probability, 1.00, &#39;False&#39;, &#39;True&#39;)= &#39;True&#39;, TRUE,FALSE), 
+NOT (OR($Profile.Name = &quot;GES Administrator Interface&quot;,
+$Profile.Name = &quot;System Administrator&quot;, $Profile.Name =&quot;EMEA Salesforce Support User&quot;)))</errorConditionFormula>
+    <errorDisplayField>Probability</errorDisplayField>
+    <errorMessage>For stages CV, CR the Probabilty must be set to 100.</errorMessage>
+</ValidationRule>

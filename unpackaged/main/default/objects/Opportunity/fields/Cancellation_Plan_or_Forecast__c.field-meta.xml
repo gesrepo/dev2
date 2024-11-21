@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Cancellation_Plan_or_Forecast__c</fullName>
+    <inlineHelpText>Select forecast if this opportunity was already in Salesforce. Select Plan if this opportunity was just added to track a cancellation.</inlineHelpText>
+    <label>Cancellation: Plan or Forecast?</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>true</sorted>
+            <value>
+                <fullName>Forecast</fullName>
+                <default>false</default>
+                <label>Forecast</label>
+            </value>
+            <value>
+                <fullName>Plan</fullName>
+                <default>false</default>
+                <label>Plan</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

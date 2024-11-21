@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ExSchRep_All_Columns__c</fullName>
+    <defaultValue>&quot;Name Of Congress,Congress Acronym,Congress Start Date,Congress End Date,Facility,Location,Country,Business Unit,Therapeutic Area,Product,Congress Level,Congress Manager,GES Account Executive Name,GES Account Manager Name,Activity Type,Congress Type,Exhibit Hours,Professional Attendance,WebSite,Booth Length,Booth Width,Booth Number&quot;</defaultValue>
+    <inlineHelpText>The column headers here would be used to download the report.</inlineHelpText>
+    <label>ExSchRep All Columns</label>
+    <length>1000</length>
+    <trackTrending>false</trackTrending>
+    <type>LongTextArea</type>
+    <visibleLines>3</visibleLines>
+</CustomField>

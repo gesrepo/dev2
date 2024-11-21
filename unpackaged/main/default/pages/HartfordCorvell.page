@@ -1,0 +1,65 @@
+<apex:page standardController="Claims__Claim__c" extensions="HartfordCorvellController">
+   <apex:pageMessages />
+   <!-- hidden field -->
+   <apex:outputField value="{!Claims__Claim__c.Name}" rendered="false"/>
+   <!-- Actual fields on page -->
+   <apex:repeat value="{!Carriers}" var="Carrier">
+      <apex:pageBlock title="Hartford Data">
+         <apex:pageBlockSection columns="2" title="{!$Label.Claim_Details}">
+               <apex:outputField value="{!Carrier.Claimant_Name__c}"/>
+               <apex:outputField value="{!Carrier.Claim_Number__c}"/>
+               <apex:outputField value="{!Carrier.Claim_Status__c}"/>
+               <apex:outputField value="{!Carrier.Accident_Date__c}"/>
+               <apex:outputField value="{!Carrier.Location__c}"/>
+         </apex:pageBlockSection>
+         <apex:pageBlockSection columns="2" title="{!$Label.Claim_Demographics}">
+               <apex:outputField value="{!Carrier.Accident_Description__c}"/>
+               <apex:outputField value="{!Carrier.Accident_State__c}"/>
+               <apex:outputField value="{!Carrier.Closed_Date__c}"/>
+               <apex:outputField value="{!Carrier.WC_Claim_Type__c}"/>
+               <apex:outputField value="{!Carrier.Legal_Action__c}"/>
+               <apex:outputField value="{!Carrier.Line_of_Business__c}"/>
+               <apex:outputField value="{!Carrier.Policy_Number__c}"/>
+               <apex:outputField value="{!Carrier.Policy_Period__c}"/>
+               <apex:outputField value="{!Carrier.Adjuster_Name__c}"/>         
+         </apex:pageBlockSection>
+         <apex:pageBlockSection columns="1" title="{!$Label.Financial_Summary_Transactions}">
+         <!-- Net Paid Table -->
+         <apex:pageBlockSection columns="1" title="{!$Label.Net_Paid_Amount}">
+            <apex:pageBlockTable value="{!Carrier}" var="item" title="{!$Label.Net_Paid_Amount}">
+               <apex:column value="{!item.Net_Paid_Amount_Indemnity__c}"/>
+               <apex:column value="{!item.Net_Paid_Amount_Medical__c}"/>
+               <apex:column value="{!item.Net_Paid_Amount_Expense__c}"/>
+               <apex:column value="{!item.Net_Paid_Amount_Total__c}"/>
+            </apex:pageBlockTable>
+         </apex:pageBlockSection>
+            <!-- Outstanding Amount Table -->
+         <apex:pageBlockSection columns="1" title="{!$Label.Outstanding_Amount}">
+            <apex:pageBlockTable value="{!Carrier}" var="item" title="{!$Label.Outstanding_Amount}">
+               <apex:column value="{!item.Outstanding_Amount_Indemnity__c}"/>
+               <apex:column value="{!item.Outstanding_Amount_Medical__c}"/>
+               <apex:column value="{!item.Outstanding_Amount_Expense__c}"/>
+               <apex:column value="{!item.Outstanding_Amount_Total__c}"/>
+            </apex:pageBlockTable>
+         </apex:pageBlockSection>
+            <!-- Incurred Amount -->
+         <apex:pageBlockSection columns="1" title="{!$Label.Incurred_Amount}">
+            <apex:pageBlockTable value="{!Carrier}" var="item" title="{!$Label.Incurred_Amount}">
+               <apex:column value="{!item.Incurred_Amount_Indemnity__c}"/>
+               <apex:column value="{!item.Incurred_Amount_Medical__c}"/>
+               <apex:column value="{!item.Incurred_Amount_Expense__c}"/>
+               <apex:column value="{!item.Incurred_Amount_Total__c}"/>
+            </apex:pageBlockTable>
+         </apex:pageBlockSection>
+         </apex:pageBlockSection>
+         <apex:pageBlockSection columns="1" title="{!$Label.Claim_Notes}">
+            <apex:pageBlockTable value="{!Carrier}" var="item">
+               <apex:column value="{!item.H_N_Date__c}"/>
+               <apex:column value="{!item.H_N_Note_Author__c}"/>
+               <apex:column value="{!item.H_N_Note_Type__c}"/>
+               <apex:column value="{!item.H_N_Note_Text__c}"/>
+            </apex:pageBlockTable>
+         </apex:pageBlockSection>
+      </apex:pageBlock>
+   </apex:repeat>
+</apex:page>

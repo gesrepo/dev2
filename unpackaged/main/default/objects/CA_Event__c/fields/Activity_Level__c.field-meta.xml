@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Activity_Level__c</fullName>
+    <label>Activity Level</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Tier 1</fullName>
+                <default>false</default>
+                <label>Tier 1</label>
+            </value>
+            <value>
+                <fullName>Tier 2</fullName>
+                <default>false</default>
+                <label>Tier 2</label>
+            </value>
+            <value>
+                <fullName>Tier 3</fullName>
+                <default>false</default>
+                <label>Tier 3</label>
+            </value>
+            <value>
+                <fullName>Tier 4</fullName>
+                <default>false</default>
+                <label>Tier 4</label>
+            </value>
+            <value>
+                <fullName>Tier 5</fullName>
+                <default>false</default>
+                <label>Tier 5</label>
+            </value>
+            <value>
+                <fullName>Priority 1</fullName>
+                <default>false</default>
+                <label>Priority 1</label>
+            </value>
+            <value>
+                <fullName>Priority 2</fullName>
+                <default>false</default>
+                <label>Priority 2</label>
+            </value>
+            <value>
+                <fullName>Priority 3</fullName>
+                <default>false</default>
+                <label>Priority 3</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

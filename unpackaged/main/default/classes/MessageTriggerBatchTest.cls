@@ -1,0 +1,183 @@
+@isTest
+public class MessageTriggerBatchTest {
+
+    static testMethod void testMethod1() {
+        
+        Account Facility = new Account();
+        Facility.Sales_Person__c = UserInfo.getUserId();
+        Facility.Name = 'MyTestFacilityName';
+        Facility.Type = 'Hotel';
+        Facility.GES_Status__c = 'Preferred';
+        Facility.LMS_Facility_ID__c = 'ABCFAC';
+        Facility.BillingStreet = '950 Grier Dr';
+        Facility.BillingCity = 'Las Vegas';
+        Facility.BillingPostalCode = '89119-0000';
+        Facility.BillingState = 'NV';
+        Facility.BillingCountry = 'US';
+        //Facility.RecordTypeId = FacilityRecordType.Id;
+        Facility.RecordTypeId = SObjectType.Account.getRecordTypeInfosByName().get('Facility').getRecordTypeId();
+        insert Facility;
+        
+        //Create Firm Account
+        Account Firm = new Account();
+        Firm.Sales_Person__c = UserInfo.getUserId();
+        Firm.Name = 'SONY ENTERTAINMENT INC';
+        Firm.Phone = '7022631500';
+        Firm.BillingStreet = '950 Grier Dr';
+        Firm.BillingCity = 'Las Vegas';
+        Firm.BillingPostalCode = '89119-0000';
+        Firm.BillingState = 'NV';
+        Firm.BillingCountry = 'US';
+        //Firm.RecordTypeId = FirmRecordType.Id;
+        Firm.RecordTypeId = SObjectType.Account.getRecordTypeInfosByName().get('Firm').getRecordTypeId();
+        insert Firm;
+        
+        Show__c show = TestDataUtil.CreateTestShow(firm.id);
+        
+        Opportunity Opp = new Opportunity();
+        Opp.Job_Number__c = '20121231';
+        Opp.Sales_Location__c = '110- Las Vegas';
+        Opp.Name = 'MyTestShow 2';
+        Opp.Prime_Contractor__c = null;
+        Opp.Production_Location__c = '110- Las Vegas';
+        Opp.Facility__c = facility.Id;
+        Opp.StageName = 'SL1';
+        Opp.Amount = 1000;
+        Opp.Probability = 25;
+        Opp.Type = 'ITYFTY';
+        Opp.New_Repeat__c = 'New';
+        Opp.Frequency__c = 'B1';
+        Opp.AccountId = firm.Id;
+        Opp.Show_Name__c = show.Id;
+        Opp.RecordTypeId = TestDataUtil.OpportunitySalesRepRecordTypeId;        
+        Opp.Show_Open_Date__c = Date.today();
+        Opp.Show_Close_Date__c = Date.today() + 20;
+        Opp.CloseDate = Date.today() + 20;
+        insert Opp;
+        
+        List<Contact> listCont = new List<Contact>();
+        Contact cont1 = new Contact();
+        cont1.LastName = 'Test Contact';
+        cont1.MobilePhone = '+19650102050';
+        cont1.Phone = '+19650102050';
+        cont1.Email = 'test@ges.com';
+        cont1.AccountId = Facility.Id;
+        insert cont1;
+        //listCont.add(cont1);
+        
+        Contact cont2 = new Contact();
+        cont2.LastName = 'Test Contact';
+        cont2.MobilePhone = '+19650102051';
+        cont2.Phone = '+19650102051';
+        cont2.Email = 'test@ges.com';
+        cont2.AccountId = Facility.Id;
+        insert cont2;
+        //listCont.add(cont2);
+        //insert listCont;
+        
+        Case c1 = new Case();
+        c1.Subject = 'sub';
+        c1.CORE_SQR_ID__c = '1';
+        c1.GES_Type__c = 'Audio Visual';
+        c1.reason__c = 'test';
+        c1.Send_CORE_SQR_Status__c = 'In Process';
+        c1.Show_Opportunity__c = Opp.Id;
+        insert c1;
+        
+        LiveChatVisitor visitor = new LiveChatVisitor();
+        insert visitor;
+        
+        LiveChatTranscript chat = new LiveChatTranscript();
+        chat.ContactId = cont1.Id;
+        chat.LiveChatVisitorId = visitor.Id;
+        chat.CaseId = c1.Id;
+        insert chat;
+        
+        LiveChatTranscript chat2 = new LiveChatTranscript();
+        chat2.ContactId = cont2.Id;
+        chat2.LiveChatVisitorId = visitor.Id;
+        chat2.CaseId = c1.Id;
+        insert chat2;
+        
+        
+        List<TwilioSF__Message__c> listMsg = new List<TwilioSF__Message__c>();
+        TwilioSF__Message__c tMsg = new TwilioSF__Message__c();
+        tMsg.TwilioSF__Body__c='Body ';
+        tMsg.TwilioSF__From_Number__c = '+17025703049';
+        tMsg.TwilioSF__To_Number__c = '+19650102050';
+        tMsg.TwilioSF__Direction__c = 'outbound';
+        tMsg.TwilioSF__Date_Created__c = System.now()-1;
+        tMsg.TwilioSF__Contact__c = Cont1.Id;
+        listMsg.add(tMsg);
+        
+        TwilioSF__Message__c tMsg2 = new TwilioSF__Message__c();
+        tMsg2.TwilioSF__Body__c='Body ';
+        tMsg2.TwilioSF__From_Number__c = '+19650102050';
+        tMsg2.TwilioSF__To_Number__c = '+17025703049';
+        tMsg2.TwilioSF__Direction__c = 'outbound';
+        tMsg2.TwilioSF__Date_Created__c = System.now()-2;
+        tMsg2.TwilioSF__Contact__c = Cont1.Id;
+        listMsg.add(tMsg2);
+        
+        TwilioSF__Message__c tMsg3 = new TwilioSF__Message__c();
+        tMsg3.TwilioSF__Body__c='Body ';
+        tMsg3.TwilioSF__From_Number__c = '+13213958957';
+        tMsg3.TwilioSF__To_Number__c = '+19650102051';
+        tMsg3.TwilioSF__Direction__c = 'outbound';
+        tMsg3.TwilioSF__Date_Created__c = System.now()-3;
+        tMsg3.TwilioSF__Contact__c = Cont2.Id;
+        listMsg.add(tMsg3);
+        
+        TwilioSF__Message__c tMsg4 = new TwilioSF__Message__c();
+        tMsg4.TwilioSF__Body__c='Body ';
+        tMsg4.TwilioSF__From_Number__c = '+19650102051';
+        tMsg4.TwilioSF__To_Number__c = '+13213958957';
+        tMsg4.TwilioSF__Direction__c = 'outbound';
+        tMsg4.TwilioSF__Date_Created__c = System.now()-4;
+        tMsg4.TwilioSF__Contact__c = Cont2.Id;
+        listMsg.add(tMsg4);
+        
+        TwilioSF__Message__c tMsg5 = new TwilioSF__Message__c();
+        tMsg5.TwilioSF__Body__c='Body ';
+        tMsg5.TwilioSF__From_Number__c = '+17707586160';
+        tMsg5.TwilioSF__To_Number__c = '+19650102050';
+        tMsg5.TwilioSF__Direction__c = 'outbound';
+        tMsg5.TwilioSF__Date_Created__c = System.now()-1;
+        tMsg5.TwilioSF__Contact__c = Cont1.Id;
+        listMsg.add(tMsg5);
+        
+        TwilioSF__Message__c tMsg6 = new TwilioSF__Message__c();
+        tMsg6.TwilioSF__Body__c='Body ';
+        tMsg6.TwilioSF__From_Number__c = '+19650102050';
+        tMsg6.TwilioSF__To_Number__c = '+17707586160';
+        tMsg6.TwilioSF__Direction__c = 'outbound';
+        tMsg6.TwilioSF__Date_Created__c = System.now()-2;
+        tMsg6.TwilioSF__Contact__c = Cont1.Id;
+        listMsg.add(tMsg6);
+        
+        TwilioSF__Message__c tMsg7 = new TwilioSF__Message__c();
+        tMsg7.TwilioSF__Body__c='Body ';
+        tMsg7.TwilioSF__From_Number__c = '+13215290545';
+        tMsg7.TwilioSF__To_Number__c = '+19650102051';
+        tMsg7.TwilioSF__Direction__c = 'outbound';
+        tMsg7.TwilioSF__Date_Created__c = System.now()-3;
+        tMsg7.TwilioSF__Contact__c = Cont2.Id;
+        listMsg.add(tMsg7);
+        
+        TwilioSF__Message__c tMsg8 = new TwilioSF__Message__c();
+        tMsg8.TwilioSF__Body__c='Body ';
+        tMsg8.TwilioSF__From_Number__c = '+19650102051';
+        tMsg8.TwilioSF__To_Number__c = '+13215290545';
+        tMsg8.TwilioSF__Direction__c = 'outbound';
+        tMsg8.TwilioSF__Date_Created__c = System.now()-4;
+        tMsg8.TwilioSF__Contact__c = Cont2.Id;
+        listMsg.add(tMsg8);
+        insert listMsg;
+        
+        Test.startTest();
+        MessageTriggerBatch bc = new MessageTriggerBatch();
+        Database.executeBatch(bc,100);
+        Test.stopTest();
+    }
+    
+}

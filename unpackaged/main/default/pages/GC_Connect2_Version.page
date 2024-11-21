@@ -1,0 +1,6 @@
+<apex:page showHeader="false" sidebar="false">
+    <apex:pageBlock id="pb" title="GES Connect2 Release Version Info">
+        <apex:outputLabel style="font-weight: bold" for="version" value="Version: " />
+        <apex:outputText id="version" value="1.0.2.3" />
+    </apex:pageBlock>
+</apex:page>

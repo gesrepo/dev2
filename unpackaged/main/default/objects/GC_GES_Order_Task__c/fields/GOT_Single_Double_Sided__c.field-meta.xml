@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>GOT_Single_Double_Sided__c</fullName>
+    <description>Single/Double Sided option to be used for the graphics order.</description>
+    <inlineHelpText>Single/Double Sided option to be used for the graphics order.</inlineHelpText>
+    <label>Single/Double Sided</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Single Sided</fullName>
+                <default>false</default>
+                <label>Single Sided</label>
+            </value>
+            <value>
+                <fullName>Double Sided - Same copy on both sides</fullName>
+                <default>false</default>
+                <label>Double Sided - Same copy on both sides</label>
+            </value>
+            <value>
+                <fullName>A/B Double Sided - Different copy on each side</fullName>
+                <default>false</default>
+                <label>A/B Double Sided - Different copy on each side</label>
+            </value>
+            <value>
+                <fullName>Custom/Other</fullName>
+                <default>false</default>
+                <label>Custom/Other</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>N200_Service_Support_Actual_Margin_Value__c</fullName>
+    <description>The N200 Actual Margin Value</description>
+    <formula>0</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>The N200 Actual Margin Value</inlineHelpText>
+    <label>Service &amp; Support Actual Margin Value</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackHistory>false</trackHistory>
+    <type>Currency</type>
+</CustomField>

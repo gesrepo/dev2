@@ -1,0 +1,356 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ONS_Opportunity</fullName>
+    <active>true</active>
+    <description>Select this option if you need an Opportunity created</description>
+    <label>ONS Opportunity</label>
+    <picklistValues>
+        <picklist>Account_Currency__c</picklist>
+        <values>
+            <fullName>CAD - Canadian Dollar</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EUR - Euro</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>USD - U%2ES%2E Dollar</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Already_in_Lightning__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Execution_Office__c</picklist>
+        <values>
+            <fullName>Atlanta</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Dallas</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Greensboro</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Houston</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Memphis</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Nashville</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Orlando</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Phoenix</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Exhibition_Opportunity_Related__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Exhibitor_Account_Type__c</picklist>
+        <values>
+            <fullName>Agency</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Competitor</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Corporation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Customer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Graphics</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Independent Organizer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Partner</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Prospect</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Supplier</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Theatre</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Venue</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Facility_Account_Type__c</picklist>
+        <values>
+            <fullName>Convention Center</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hotel</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other Facility Type</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>For_Lightning_Only_Venue__c</picklist>
+        <values>
+            <fullName>New Venue</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Venue Update</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>For_Lightning_Only__c</picklist>
+        <values>
+            <fullName>Client Update</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>New Client</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Frequency__c</picklist>
+        <values>
+            <fullName>Annual</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Biannual %28twice a year%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Biennial %28every two years%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>More than twice a year</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>One Time Event</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Job_Classification__c</picklist>
+        <values>
+            <fullName>Congress</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Consumer Event</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Corporate Event</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Exhibition</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>NA_Form_Account_Type__c</picklist>
+        <values>
+            <fullName>Agency</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Association</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Contractor Competitor</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Corporation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Event Management</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Independent Organizer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Industry Associate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Portfolio</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Show Management</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Vendor</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Opportunity_Type__c</picklist>
+        <values>
+            <fullName>Exhibitor</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Firm</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Not Sure</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Show_Type__c</picklist>
+        <values>
+            <fullName>Building%2C Construction%2C Home %26 Repair</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Business Services</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Communications %26 Information Technology</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Consumer Goods and Retail Trade</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Discretionary Consumer Goods %26 Services</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Education</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Financial%2C Legal and Real Estate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Food Sector</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Government%2C Public %26 Non-Profit Services</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Industrial %2F Heavy Machinery %2F Finished Business Outputs</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Medical %26 Healthcare</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Raw Materials %26 Science</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sporting Goods%2C Travel and Amusement</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Transportation</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Show_or_Non_Show__c</picklist>
+        <values>
+            <fullName>Non-Show</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Not Sure</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Show</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Stage__c</picklist>
+        <values>
+            <fullName>PO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SL1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SL3</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TS</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

@@ -1,0 +1,56 @@
+<apex:page docType="html-5.0" standardController="Account" extensions="accountHierarchyExtn" >
+  <!-- Begin Default Content REMOVE THIS -->
+  <h1> <b> Hello {!$User.FirstName} !</b></h1>
+  <apex:form id="apForm">
+      <apex:pageBlock title="Retrieve Merged Accounts" >
+           <apex:pageBlockSection title="Merged Accounts" >
+                    <apex:inputText label="Account Name like" value="{!accList}" /> 
+                   <apex:commandLink action="{!getAccountMergeList}" value="Submit" id="theCommandLink" rerender="accountDetails"/>
+                   
+           </apex:pageBlockSection>
+      </apex:pageBlock> 
+      
+       <style> 
+        #col table {border:0; border-collapse:collapse; cellpadding:0px; cellspacing:0;}
+        #col table td {border:1px #ccc solid; padding:5px;}
+        
+       </style> 
+      
+       <div id="col">  
+       <apex:pageBlock title="Accounts">
+           <apex:pageBlockSection title="Accounts after Merge" id="accountDetails">
+            <apex:dataTable value="{!accountMergeList}" var="acc" columns="7" align="center" styleClass="outBorder">
+            <apex:column headerValue="Account ID" styleclass="inBorder">
+            <apex:outputText value="{!acc.ID}" />
+            </apex:column>
+            <apex:column headerValue="Account Name" styleclass="inBorder">
+            <apex:outputText value="{!acc.Name}" />
+            </apex:column>
+            <apex:column headerValue="DUNS Number" styleclass="inBorder">
+            <apex:outputText value="{!acc.dunsnumber}" />
+            </apex:column>
+            <apex:column headerValue="Parent ID" styleclass="inBorder">
+            <apex:outputText value="{!acc.parentId}" />
+            </apex:column>
+            <apex:column headerValue="Parent DUNS Number" styleclass="inBorder">
+            <apex:outputText value="{!acc.Parent_Duns_Number__c}" />
+            </apex:column>
+             <apex:column headerValue="Global DUNS Number" styleclass="inBorder">
+            <apex:outputText value="{!acc.Global_Ultimate_Duns_Number__c}" />
+            </apex:column>
+            <apex:column headerValue="Account Owner" styleclass="inBorder">
+            <apex:outputText value="{!acc.owner.Name}" />
+            </apex:column>            
+       </apex:dataTable>
+       </apex:pageBlockSection>
+       </apex:pageBlock>  
+   </div>
+        
+        <apex:pageBlock title="Build Hierarchy" >
+           <apex:pageBlockSection title="Account Hierarchy" >
+                    <apex:commandLink action="{!buildHierarchy}" value="Build Hierarachy" id="theHierarchyLink" />
+           </apex:pageBlockSection>
+      </apex:pageBlock> 
+        
+       </apex:form>
+</apex:page>

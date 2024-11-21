@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>All_Corporate_Accounts</fullName>
+    <columns>NAME</columns>
+    <columns>Name_of_Congress__c</columns>
+    <columns>Acronym_of_Congress__c</columns>
+    <columns>Congress_Type__c</columns>
+    <columns>Exhibit_Open_Date__c</columns>
+    <columns>Exhibit_Close_Date__c</columns>
+    <filterScope>Everything</filterScope>
+    <label>All Corporate Accounts</label>
+    <language>en_US</language>
+</ListView>

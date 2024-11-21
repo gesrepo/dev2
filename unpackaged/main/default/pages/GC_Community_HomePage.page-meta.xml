@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ApexPage xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>60.0</apiVersion>
+    <availableInTouch>false</availableInTouch>
+    <confirmationTokenRequired>false</confirmationTokenRequired>
+    <description>Show view page. Displays a list view of all associated orders on a show. Allows filter criteria for getting a subset of orders matching filter content. List view for orders will navigate to the Community Order View page. New Order navigates to Order Create/Edit page.</description>
+    <label>GC_Community_HomePage</label>
+</ApexPage>

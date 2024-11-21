@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>EMEA_Exhibitors</fullName>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>EMEA_GBMS_ID__c</columns>
+    <columns>ACCOUNT.PHONE1</columns>
+    <columns>CORE.USERS.ALIAS</columns>
+    <columns>ACCOUNT.CREATED_DATE</columns>
+    <columns>CREATEDBY_USER.ALIAS</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>EMEA__c</field>
+        <operation>equals</operation>
+        <value>1</value>
+    </filters>
+    <filters>
+        <field>ACCOUNT.RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Account.Exhibitor</value>
+    </filters>
+    <filters>
+        <field>Spiro_Account__c</field>
+        <operation>equals</operation>
+        <value>1</value>
+    </filters>
+    <label>EMEA Exhibitors</label>
+</ListView>

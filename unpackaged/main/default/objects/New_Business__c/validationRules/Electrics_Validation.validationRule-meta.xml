@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Electrics_Validation</fullName>
+    <active>true</active>
+    <errorConditionFormula>ISPICKVAL(Electrics__c, &quot;Yes&quot;)  &amp;&amp; (Electrics_Tariff__c = 0 || ISBLANK(Electrics_Tariff__c))</errorConditionFormula>
+    <errorMessage>If you have selected Yes for Electrics, you must enter a value greater than 0 for Electrics Tariff</errorMessage>
+</ValidationRule>

@@ -1,0 +1,203 @@
+<apex:page standardController="Case" renderAs="pdf">
+    <div align="center">
+        <apex:image value="{!$Resource.GESLogo}" /><br/>
+        <apex:outputText value="GES Service Quality Tracking Work Case" />
+        <br/><br/>
+    </div>
+    <table style="width: 100%;" >
+        <tr>
+            <td align="left"><apex:outputText value="Owner: {!Case.Owner.Alias}" /></td>
+            <td align="right"><apex:outputText value="User: {!$User.Alias}" /></td>
+        </tr>
+        <tr>
+            <td align="left">
+                             <apex:outputText value="Created Date: {0,date,dd/MM/yyyy  HH:mm a,'GMT' }">
+                              <apex:param value="{!NOW()}"/>
+                              </apex:outputText>
+             </td>
+         </tr>
+    </table>
+    <br/>
+    <br/>
+    <apex:pageBlock >
+        <table border="1" style="width: 100%; border-width: 1px; border-color: black">
+            <tr>
+                <td>
+                    <apex:outputText value="Show Name:" style="font-weight:800;"/>
+                </td>
+                <td>
+                    <apex:outputText value="{!Case.Show_Name__r.Name}" />
+                </td>
+                <td>
+                    <apex:outputText value="Status:" style="font-weight:800;"/>
+                </td>
+                <td>
+                    <apex:outputText value="{!Case.Status}" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <apex:outputText value="Show Occurence:" style="font-weight:800;"/>
+                </td>
+                <td>
+                    <apex:outputText value="{!Case.Show_Opportunity__r.Name}" />
+                </td>
+                <td>
+                    <apex:outputText value="Priority:" style="font-weight:800;"/>
+                </td>
+                <td>
+                    <apex:outputText value="{!Case.Priority}" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <apex:outputText value="Category:" style="font-weight:800;"/>
+                </td>
+                <td>
+                    <apex:outputText value="{!Case.GES_Type__c}" />
+                </td>
+                <td>
+                    <apex:outputText value="Reason:" style="font-weight:800;"/>
+                </td>
+                <td>
+                    <apex:outputText value="{!Case.Reason__c}" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <apex:outputText value="SOP #:" style="font-weight:800;"/>
+                </td>
+                <td>
+                    <apex:outputText value="{0,number,integer}" >
+                        <apex:param value="{!Case.Show_Opportunity__r.SOP_Event_ID__c}" />
+                    </apex:outputText>
+                </td>
+                <td>
+                    <apex:outputText value="Case #:" style="font-weight:800;"/>
+                </td>
+                <td>
+                    <apex:outputText value="{!Case.CaseNumber}" style="font-weight:800;" />
+                </td>
+            </tr>  
+            <tr>
+                <td>
+                    <apex:outputText value="Customer Name:" style="font-weight:800;"/>
+                </td>
+                <td>
+                    <apex:outputText value="{!Case.Account.Name}" />
+                </td>
+                <td>
+                    <apex:outputText value="Show Open Date" style="font-weight:800;"/>
+                </td>
+                <td>
+                    <apex:outputText value="{0,date, MMMM d,  yyyy}">
+                        <apex:param value="{!Case.Show_Opportunity__r.Show_Open_Date__c}" />
+                    </apex:outputText>
+                </td>
+            </tr>
+        </table>
+    </apex:pageBlock>
+    <br/><br/>
+    <apex:pageBlock >
+        <table border="1" style="width: 100%; border-width: 1px; border-color: black">
+            <tr>
+                <td>
+                    <apex:outputText value="Ops Zone #:" style="font-weight:800;"/>
+                </td>
+                <td>
+                    <apex:outputText value="{!Case.Booth__r.Zone__c}" />
+                </td>
+                <td>
+                    <apex:outputText value="Contact Name:" style="font-weight:800;"/>
+                </td>
+                <td>
+                    <apex:outputText value="{!Case.Contact.FirstName} {!Case.Contact.LastName}" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <apex:outputText value="Service Zone #:" style="font-weight:800;"/>
+                </td>
+                <td>
+                    <apex:outputText value="{!Case.Booth__r.Service_Zone__c}" />
+                </td>
+                <td>
+                    <apex:outputText value="Contact Phone:" style="font-weight:800;"/>
+                </td>
+                <td>
+                    <apex:outputText value="{!Case.Contact.Phone}" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <apex:outputText value="Booth #:" style="font-weight:800;"/>
+                </td>
+                <td>
+                    <apex:outputText value="{!Case.Booth__r.BOOTH_NUMBER__c}" />
+                </td>
+                <td>
+                    <!-- FILLER  -->
+                </td>
+                <td>
+                    <!-- FILLER  -->
+                </td>
+            </tr>
+        </table>
+    </apex:pageBlock>
+    <br/><br/>
+    <apex:pageBlock >
+        <apex:outputText value="UPDATES & RESOLUTIONS:" style="font-weight:800;"/>
+        <br/><br/>
+        <table border="1" cellpadding="5" cellspacing="0" style="width: 100%;">
+            <tr>
+                <th>Time</th>
+                <th>User</th>
+                <th>Comments</th>
+            </tr>
+            <apex:repeat value="{!Case.CaseComments}" var="cc">
+                <tr>
+                    <td>
+                        <apex:outputText value="{0,date, MMMM d,  yyyy}">
+                            <apex:param value="{!cc.CreatedDate}" />
+                        </apex:outputText>
+                    </td>
+                    <td>
+                        <apex:outputText value="{!cc.CreatedBy.Alias}" />
+                    </td>
+                    <td>
+                        <apex:outputText value="{!cc.CommentBody}" />
+                    </td>
+                </tr>
+            </apex:repeat>
+        </table>
+    </apex:pageBlock>
+    <br/><br/><br/>
+    <apex:pageBlock >
+        <table style="width:95%;">
+            <tr align="right">
+                <td>
+                    <apex:outputText value="Job Start Time:_________________________" style="font-weight:800;" />
+                </td>
+                <td>
+                    <apex:outputText value="Job Start Date:_________________________" style="font-weight:800;" />
+                </td>
+            </tr>
+            <tr align="right">
+                <td>
+                    <apex:outputText value="Completion Date:_________________________" style="font-weight:800;" />
+                </td>
+                <td>
+                    <apex:outputText value="Completed By:_________________________" style="font-weight:800;" />
+                </td>
+            </tr>
+            <tr align="right">
+                <td>
+                    <apex:outputText value="Root Cause:_________________________" style="font-weight:800;" />
+                </td>
+                <td>
+                    <apex:outputText value="ES Verified:_________________________" style="font-weight:800;" />
+                </td>
+            </tr>
+        </table>
+    </apex:pageBlock>
+</apex:page>

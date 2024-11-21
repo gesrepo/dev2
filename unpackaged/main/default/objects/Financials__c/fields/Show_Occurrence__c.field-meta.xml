@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Show_Occurrence__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <inlineHelpText>Link to Show Occurrence object.</inlineHelpText>
+    <label>Show Occurrence</label>
+    <referenceTo>Opportunity</referenceTo>
+    <relationshipLabel>Financials</relationshipLabel>
+    <relationshipName>Financials</relationshipName>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

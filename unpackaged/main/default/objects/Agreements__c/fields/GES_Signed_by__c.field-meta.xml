@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>GES_Signed_by__c</fullName>
+    <label>GES Signed by</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>true</sorted>
+            <value>
+                <fullName>Donna Hyland</fullName>
+                <default>false</default>
+                <label>Donna Hyland</label>
+            </value>
+            <value>
+                <fullName>Kris Cooper</fullName>
+                <default>false</default>
+                <label>Kris Cooper</label>
+            </value>
+            <value>
+                <fullName>Michael Stewart</fullName>
+                <default>false</default>
+                <label>Michael Stewart</label>
+            </value>
+            <value>
+                <fullName>Nick Marshall</fullName>
+                <default>false</default>
+                <label>Nick Marshall</label>
+            </value>
+            <value>
+                <fullName>Paul McKenna</fullName>
+                <default>false</default>
+                <label>Paul McKenna</label>
+            </value>
+            <value>
+                <fullName>Sue Long</fullName>
+                <default>false</default>
+                <label>Sue Long</label>
+            </value>
+            <value>
+                <fullName>Yasser al Maaytah</fullName>
+                <default>false</default>
+                <label>Yasser al Maaytah</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

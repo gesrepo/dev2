@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Booth_Type__c</fullName>
+    <label>Booth Type</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Corner</fullName>
+                <default>false</default>
+                <label>Corner</label>
+            </value>
+            <value>
+                <fullName>Inline</fullName>
+                <default>false</default>
+                <label>Inline</label>
+            </value>
+            <value>
+                <fullName>Island</fullName>
+                <default>false</default>
+                <label>Island</label>
+            </value>
+            <value>
+                <fullName>Not Applicable</fullName>
+                <default>false</default>
+                <label>Not Applicable</label>
+            </value>
+            <value>
+                <fullName>Pavilion</fullName>
+                <default>false</default>
+                <label>Pavilion</label>
+            </value>
+            <value>
+                <fullName>Peninsula</fullName>
+                <default>false</default>
+                <label>Peninsula</label>
+            </value>
+            <value>
+                <fullName>Perimeter</fullName>
+                <default>false</default>
+                <label>Perimeter</label>
+            </value>
+            <value>
+                <fullName>Permanent Install</fullName>
+                <default>false</default>
+                <label>Permanent Install</label>
+            </value>
+            <value>
+                <fullName>AV / Interactives</fullName>
+                <default>false</default>
+                <label>AV / Interactives</label>
+            </value>
+            <value>
+                <fullName>Chalet</fullName>
+                <default>false</default>
+                <label>Chalet</label>
+            </value>
+            <value>
+                <fullName>Outdoor exhibit/stand</fullName>
+                <default>false</default>
+                <label>Outdoor exhibit/stand</label>
+            </value>
+            <value>
+                <fullName>Pop-Up</fullName>
+                <default>false</default>
+                <label>Pop-Up</label>
+            </value>
+            <value>
+                <fullName>Stand</fullName>
+                <default>false</default>
+                <label>Stand</label>
+            </value>
+            <value>
+                <fullName>Stand by</fullName>
+                <default>false</default>
+                <label>Stand by</label>
+            </value>
+            <value>
+                <fullName>Storage</fullName>
+                <default>false</default>
+                <label>Storage</label>
+            </value>
+            <value>
+                <fullName>Miscellaneous</fullName>
+                <default>false</default>
+                <label>Miscellaneous</label>
+            </value>
+            <value>
+                <fullName>Hospitality Suite</fullName>
+                <default>false</default>
+                <label>Hospitality Suite</label>
+            </value>
+            <value>
+                <fullName>Catering</fullName>
+                <default>false</default>
+                <label>Catering</label>
+            </value>
+            <value>
+                <fullName>Congress Management</fullName>
+                <default>false</default>
+                <label>Congress Management</label>
+            </value>
+            <value>
+                <fullName>Event</fullName>
+                <default>false</default>
+                <label>Event</label>
+            </value>
+            <value>
+                <fullName>Design Only</fullName>
+                <default>false</default>
+                <label>Design Only</label>
+            </value>
+            <value>
+                <fullName>Microsite</fullName>
+                <default>false</default>
+                <label>Microsite</label>
+            </value>
+            <value>
+                <fullName>Overhead</fullName>
+                <default>false</default>
+                <label>Overhead</label>
+            </value>
+            <value>
+                <fullName>Promotional Items</fullName>
+                <default>false</default>
+                <label>Promotional Items</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

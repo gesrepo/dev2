@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>EMEA_Check_Registration_is_marketed</fullName>
+    <active>false</active>
+    <errorConditionFormula>Contracted_Registration__c  == True &amp;&amp; (
+ Marketing_Registration__c  == False
+&amp;&amp;  LEN(  Marketing_If_no_to_Registration_why__c   ) = 0)</errorConditionFormula>
+    <errorMessage>If Registration is contracted and is not being marketed you must enter a reason why</errorMessage>
+</ValidationRule>

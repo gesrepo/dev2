@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Send_with_DocuSign_UAE</fullName>
+    <availability>online</availability>
+    <description>UAE Send with DocuSign button</description>
+    <displayType>button</displayType>
+    <linkType>javascript</linkType>
+    <masterLabel>Send with DocuSign</masterLabel>
+    <openType>onClickJavaScript</openType>
+    <protected>false</protected>
+    <url>{!REQUIRESCRIPT(&quot;/apex/dsfs__DocuSign_JavaScript&quot;)} 
+{!REQUIRESCRIPT(&quot;/soap/ajax/37.0/connection.js&quot;)} 
+{!requireScript(&quot;/soap/ajax/37.0/apex.js&quot;)} 
+
+//DocuSign_CreateEnvelope(); 
+
+
+//********* Option Declarations (Do not modify )*********// 
+var RC = &#39;&#39;;var RSL=&#39;&#39;;var RSRO=&#39;&#39;;var RROS=&#39;&#39;;var CCRM=&#39;&#39;;var CCTM=&#39;&#39;;var CCNM=&#39;&#39;;var CRCL=&#39;&#39;; var CRL=&#39;&#39;;var OCO=&#39;&#39;;var DST=&#39;&#39;;var LA=&#39;&#39;;var CEM=&#39;&#39;;var CES=&#39;&#39;;var STB=&#39;&#39;;var SSB=&#39;&#39;;var SES=&#39;&#39;;var SEM=&#39;&#39;;var SRS=&#39;&#39;;var SCS =&#39;&#39;;var RES=&#39;&#39;; 
+
+//*************************************************// 
+// Modify individual options here: 
+
+// Related Content (default no related content) 
+RC = &#39;&#39;; //Ex: GetRelContentIDs(&quot;{!Opportunity.Id}&quot;); 
+
+// Recipient Signer Limit (default no limit) 
+RSL = &#39;&#39;; //Ex: &#39;3&#39; 
+
+// Recipient Starting Routing Order (default 1) 
+RSRO = &#39;&#39;; // Ex: &#39;1&#39; 
+
+// Recipient Routing Order Sequential (default not sequential) 
+RROS = &#39;&#39;; //Ex: &#39;1&#39; 
+
+// Custom Contact Role Map (default config role) 
+CCRM = &#39;&#39;; //Ex: &#39;Decision Maker~Signer1; Economic Buyer~Carbon Copy&#39; 
+
+// Custom Contact Type Map (default Signer) 
+CCTM = &#39;&#39;; //Ex: &#39;Decision Maker~Signer; Economic Buyer~Carbon Copy&#39; 
+
+// Custom Contact Note Map (default no note) 
+CCNM = &#39;&#39;; //Ex: &#39;Decision Maker~Note for DM; Economic Buyer~Note For EB; DEFAULT_NOTE~Default Note&#39; 
+
+// Custom Related Contact List (default object contact) 
+CRCL = &#39;&#39;; 
+//Ex: &#39;MyContacts__r,Email~Email__c; FirstName~First_Name__c;LastName~Last_Name__c;Role~Role__c,LoadDefaultContacts~0&#39; 
+
+//Get contact 
+var SignatureContact = sforce.connection.query(&quot;SELECT Id, Contact.LastName, Contact.FirstName, Contact.Email FROM Contact WHERE Id = &#39;{!Agreements__c.ContactId__c}&#39;&quot;); 
+
+if (SignatureContact.size == 0) 
+{ 
+alert(&quot;Please select a Contact to send the Contract to and try again.&quot;); 
+} 
+else 
+{ 
+
+var creditLimit = &#39;{!Agreements__c.Credit_Limit__c}&#39;; 
+creditLimit = creditLimit.replace(/,/g, &#39;&#39;) + &#39;. &#39;; 
+
+var paymentTerms = &#39;{!Agreements__c.Contract_Credit_Payment_Terms__c}&#39;; 
+paymentTerms = &#39; Payment terms: &#39; + paymentTerms.replace(/,/g, &#39;.&#39;).replace(/%/g, &#39;%25&#39;).replace(/\r\n/g, &#39; &#39;).replace(/(\n*)\n/g, &#39; &#39;) + &#39;. &#39;; 
+
+var creditCheck; 
+
+if (&#39;{!Agreements__c.Credit_Check_Required__c}&#39; == &#39;Yes&#39;) 
+creditCheck = &quot;A credit check is required. &quot;; 
+else 
+{ 
+var reason = &#39;{!Agreements__c.If_no_credit_check_what_is_the_reason__c}&#39;; 
+reason = &#39; - &#39; + reason.replace(/,/g, &#39; &#39;).replace(/%/g, &#39;%25&#39;).replace(/\r\n/g, &#39;&#39;) + &#39;. &#39;; 
+creditCheck = &quot;A credit check is not required&quot; + reason; 
+} 
+
+var note = &#39; Credit limit is &#39; + creditLimit + creditCheck + paymentTerms; 
+
+if ({!Agreements__c.Is_Repeat_Contract__c} == true) 
+{ 
+note = note + &#39;\r\n Shell scheme price is {!Agreements__c.Current_Shell_Scheme_Price_Per_SQM__c} per SQM ({!Agreements__c.Previous_Shell_Scheme_Price_Per_SQM__c} last year) a change of {!Agreements__c.Shell_Scheme_Price_Change__c}%25.\r\n Carpet price is {!Agreements__c.Current_Carpet_Price_Per_SQM__c} per SQM ({!Agreements__c.Previous_Carpet_Price_Per_SQM__c} last year) a change of {!Agreements__c.Carpet_Price_Change__c}%25.&#39; 
+} 
+else 
+{ 
+note = note + &#39;\r\n This is a new contract.&#39; 
+} 
+
+note = note + &#39; Total contract value: {!Agreements__c.Total_Contract_Value__c}.&#39;;
+note = note.replace(/,/g , &#39;&#39;);
+//note = note.replace(/%/g, &#39;%25&#39;); 
+
+// Custom Recipient List (Individual) 
+CRL = &#39;Email~JMassimino@viad.com;FirstName~Jon;LastName~Massimino;Role~Signer 1;RoutingOrder~1;RecipientNote~&#39; + note + &#39;,Email~JMacdonald@ges.com;FirstName~Jamie;LastName~Macdonald;Role~Signer 2;RoutingOrder~2;RecipientNote~&#39; + note + &#39;,Email~&#39; + SignatureContact.records.Email + &#39;;FirstName~&#39; + SignatureContact.records.FirstName + &#39;;LastName~&#39; + SignatureContact.records.LastName + &#39;;Role~Signer 3;RoutingOrder~3,;LoadDefaultContacts~0&#39;; 
+
+
+//Ex: &#39;Email~;FirstName~; LastName~; Role~SignInPersonName~; RoutingOrder~; AccessCode~; RecipientNote~; SignNow~, LoadDefaultContacts~1&#39;; 
+
+
+// Custom Recipient List (Signing Groups) 
+//Ex: &#39;SigningGroup~; Role~; AccessCode~; RecipientNote~; RoutingOrder~, LoadDefaultContacts~1&#39; 
+OCO = &#39;&#39;; //Required with signing groups 
+
+// One Click Option (default edit envelope screen) 
+OCO = &#39;&#39;; //Ex: Tag (or Send) 
+
+// DocuSign Template ID (default no template) 
+DST = &#39;&#39;; //&#39;ab8f6d3a-2d28-4674-a0e1-84012e59d63f&#39;; 
+
+// Load Attachments (default on) 
+LA = &#39;1&#39;; //Ex: &#39;0&#39; 
+
+// Custom Email Message (default in config) 
+CEM = &#39;&#39;; //Ex: &#39;Envelope sent by [FirstName] [LastName] ([Email])!&#39; 
+
+// Custom Email Subject (default in config) 
+CES = &#39;&#39;; //Ex: &#39;Re: Opportunity Name: {!Opportunity.Name}&#39; 
+
+// Show Tag Button (default in config) 
+STB = &#39;&#39;; //Ex: &#39;1&#39; 
+
+// Show Send Button (default in config) 
+SSB = &#39;&#39;; //Ex: &#39;1&#39; 
+
+// Show Email Subject (default in config) 
+SES = &#39;&#39;; //Ex: &#39;1&#39; 
+
+// Show Email Message (default in config) 
+SEM = &#39;&#39;; //Ex: &#39;1&#39; 
+
+// Show Reminder/Expire (default in config) 
+SRS = &#39;&#39;; //Ex: &#39;1&#39; 
+
+// Show Chatter (default in config) 
+SCS = &#39;&#39;; //Ex: &#39;1&#39; 
+
+// Reminder and Expiration Settings 
+RES = &#39;&#39;; //Ex: &#39;0,1,2,0,120,3&#39; 
+
+//********* Page Callout (Do not modify) *********// 
+
+window.location.href = &quot;/apex/dsfs__DocuSign_CreateEnvelope?DSEID=0&amp;SourceID={!Agreements__c.Id}&amp;RC=&quot;+RC+&quot;&amp;RSL=&quot;+RSL+&quot;&amp;RSRO=&quot;+RSRO+&quot;&amp;RROS=&quot;+RROS+&quot;&amp;CCRM=&quot;+CCRM+&quot;&amp;CCTM=&quot;+CCTM+&quot;&amp;CRCL=&quot;+CRCL+&quot;&amp;CRL=&quot;+CRL+&quot;&amp;OCO=&quot;+OCO+&quot;&amp;DST=&quot;+DST+&quot;&amp;CCNM=&quot;+CCNM+&quot;&amp;LA=&quot;+LA+&quot;&amp;CEM=&quot;+CEM+&quot;&amp;CES=&quot;+CES+&quot;&amp;SRS=&quot;+SRS+&quot;&amp;STB=&quot;+STB+&quot;&amp;SSB=&quot;+SSB+&quot;&amp;SES=&quot;+SES+&quot;&amp;SEM=&quot;+SEM+&quot;&amp;SRS=&quot;+SRS+&quot;&amp;SCS=&quot;+SCS+&quot;&amp;RES=&quot;+RES;
+
+//*******************************************// 
+
+}</url>
+</WebLink>

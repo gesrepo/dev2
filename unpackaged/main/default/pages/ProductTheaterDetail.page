@@ -1,0 +1,122 @@
+<apex:page standardStylesheets="true" controller="ProductTheaterDetail" showHeader="false" sidebar="false" docType="html-5.0" applyHtmlTag="false" tabStyle="Account">
+    <html xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        
+        <head>
+            <apex:includeScript value="{!$Resource.jQuery}" />
+            <apex:stylesheet value="{!URLFOR($Resource.Lightning_Design_System, 'assets/styles/salesforce-lightning-design-system.min.css')}" />
+            <apex:stylesheet value="{!URLFOR($Resource.GC_Assets, 'GC_Assets/css/GC_Styles.css')}" />
+            <apex:includeScript value="{!URLFOR($Resource.GC_Assets, 'GC_Assets/js/GC_init.js')}" />
+        </head>
+        
+        <body>
+            <div class="slds">
+                <c:GC_Community_Header />   
+                <div class="slds-page-header gc-navigation--subHeader" role="banner">
+                    <div class="slds-media">
+                        <div class="slds-media__figure">
+                            <apex:image url="{!URLFOR($Resource.GC_Assets, 'GC_Assets/img/custom13_60_teal.png')}" />
+                        </div>
+                        <div class="slds-media__body">
+                            <p class="slds-page-header__title slds-align-middle">
+                                <span> Product Theater Detail Page</span>
+                                <span class="slds-truncate">{!pt.Name}</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <apex:form >
+                    <apex:pageBlock title="Product Theater Detail">
+                        <apex:pageBlockButtons location="top">
+                            <apex:commandButton value="Edit" action="{!prodtthrSave}" styleClass="slds-button slds-button--brand gc-teal-button"/>
+                            <apex:commandButton value="Back" action="{!prodtthrcancel}" styleClass="slds-button slds-button--brand gc-teal-button"/>
+                            <apex:commandButton value="Clone" action="{!prodtthrClone}" styleClass="slds-button slds-button--brand gc-teal-button" style="float:right" />
+                        </apex:pageBlockButtons>
+                        <apex:pageBlockSection title="Product Theater Detail">                    
+                            <apex:outputText label="Congress ID">
+                                <apex:outputLink value="{!$Page.Congressdetails}">
+                                    {!congName}
+                                    <apex:param name="id" value="{!congid}"/>                       
+                                </apex:outputLink>
+                            </apex:outputText>
+                            <!--  <apex:outputField value="{!pt.Name}" />-->
+                            <apex:outputField value="{!pt.Product_Theater_Name__c}" />                          
+                            <apex:outputText value="{!Requested_Product_Theater_Date_and_Time}" label="Requested Product Theater Date & Time"/> 
+                            <apex:outputField value="{!pt.Product_Theater_Location__c}"/>
+                            <apex:outputText value="{!Product_Theater_Time}" label="Product Theater Start Date & Time"/> 
+                            <apex:outputField value="{!pt.Activity_Level__c}"/>
+                            <apex:outputText value="{!Product_Theater_End_Date_and_Time}" label="Product Theater End Date & Time"/>   
+                            <apex:outputField value="{!pt.PT_Type__c}"/> 
+                            <apex:outputField value="{!pt.Activity_Not_Confirmed__c}"/>                        
+                            <apex:outputField value="{!pt.Meal_included_with_Product_Theater__c}"/>
+                            <apex:outputField value="{!pt.Reality_Engineering_Utilized__c}" /> 
+                            <apex:outputField value="{!pt.Product_Theater_Notes__c}"/>
+                            <apex:outputField value="{!pt.Reason_RE_not_used__c}" rendered="{!pt.Reality_Engineering_Utilized__c=='No'}" /> 
+                            
+                            <apex:outputText rendered="{!pt.Reality_Engineering_Utilized__c!='No'}"></apex:outputText>
+                            <apex:outputText rendered="{!(pt.Reason_RE_not_used__c=='Not appropriate audience' && pt.Reality_Engineering_Utilized__c=='No')}" > </apex:outputText>
+                            <apex:outputField value="{!pt.If_not_appropriate_audience_Explanation__c}" rendered="{!(pt.Reason_RE_not_used__c=='Not appropriate audience' && pt.Reality_Engineering_Utilized__c=='No')}" />     
+                            <apex:outputText ></apex:outputText>
+                            <apex:outputField value="{!pt.Product_Theater_Lead__c}"/>
+                            <!--Amarab 03252021 SCA-874 Adding new fields -->
+                            <apex:outputField value="{!pt.Product_Theater_Registrants__c}"/>                        
+                            <apex:outputField value="{!pt.Chair_Person__c}"/> 
+                            <!--<apex:outputField value="{!pt.CurrencyIsoCode}"/>-->                            
+                            <apex:outputText ></apex:outputText>                                                                                                                 
+                            <apex:outputField value="{!pt.Speaker_1__c}"/> 
+                            <apex:outputText ></apex:outputText>
+                            <apex:outputField value="{!pt.Speaker_2__c}"/>
+                            <apex:outputField value="{!pt.Canceled__c}"/>
+                            <apex:outputField value="{!pt.Speaker_3__c}"/>
+                            <apex:outputField value="{!pt.Cancel_Reason__c}"/>
+                            <apex:outputField value="{!pt.Speaker_4__c}"/>
+                            <apex:outputField value="{!pt.Canceled_Date__c}"/>                 
+                            
+                        </apex:pageBlockSection>
+                        <apex:pageBlockSection title="Product Theater Contacts"> 
+                            <apex:outputField value="{!pt.GES_Congress_Manager__c}"/> <apex:outputField value="{!pt.Agency_Name__c}"/> 
+                            <apex:outputField value="{!pt.Congress_Lead__c}"/> <apex:outputField value="{!pt.Agency_Contact_Name__c}"/> 
+                            <apex:outputField value="{!pt.GES_Account_Executive__c}"/> <apex:outputField value="{!pt.Agency_Contact_Phone__c}"/>
+                            <apex:outputField value="{!pt.GES_Account_Manager__c}"/> <apex:outputField value="{!pt.Agency_Contact_E_mail__c}"/> 
+                            
+                        </apex:pageBlockSection>
+                    </apex:pageBlock>
+                    
+                    <!--  <apex:inlineEditSupport event="ondblClick" /> -->
+                </apex:form>
+                <apex:form >
+                    <apex:pageBlock title="Brand">
+                        <apex:pageBlockButtons location="top">
+                            <apex:commandButton value="New Brand" action="{!ProductTheaterNewBrand}" styleClass="slds-button slds-button--brand gc-teal-button"/>
+                        </apex:pageBlockButtons>            
+                        <apex:pageBlockTable value="{!brdlist}" var="b">
+                            <apex:column headerValue="Action" style="width:100px" >
+                                <apex:outputLink value="{!$Page.ProductTheaterBrandEdit}"> Edit  
+                                    <apex:param name="congid" value="{!congid}"/>                 
+                                    <apex:param name="brandid" value="{!b.Id}"/>
+                                    <apex:param name="producttherName" value="{!pt.Name}"/>
+                                    <apex:param name="ProductTheaterid" value="{!ProductTheaterid}"/>
+                                    <apex:param name="congName" value="{!congName}"/>
+                                    <!--<apex:param name="id" value="{!a.Id}" assignTo="{!aId}" />-->
+                                </apex:outputLink>
+                            </apex:column>
+                            <apex:column headerValue="Brand">
+                                <apex:outputLink value="{!$Page.ProductTheaterbrandDetail}"> {!b.Name}
+                                    <apex:param name="congid" value="{!congid}"/>                 
+                                    <apex:param name="ptrbrandid" value="{!b.Id}"/>
+                                    <apex:param name="prtName" value="{!pt.Name}"/>
+                                    <apex:param name="ProductTheaterid" value="{!ProductTheaterid}"/>
+                                    <apex:param name="congName" value="{!congName}"/>
+                                    <!--<apex:param name="id" value="{!a.Id}" assignTo="{!aId}" />-->
+                                </apex:outputLink>
+                            </apex:column>                
+                            <apex:column headerValue="Brand Name" value="{!b.Brand_Name__c}"/>
+                            <apex:column headerValue="Brand Category" value="{!b.Brand_Category__c}"/>
+                            <apex:column headerValue="Business Unit" value="{!b.Business_Unit__c}"/>
+                            <apex:column headerValue="Canceled" value="{!b.Canceled__c}"/>
+                        </apex:pageBlockTable>
+                    </apex:pageBlock>
+                </apex:form> 
+            </div> 
+        </body>
+    </html>    
+</apex:page>

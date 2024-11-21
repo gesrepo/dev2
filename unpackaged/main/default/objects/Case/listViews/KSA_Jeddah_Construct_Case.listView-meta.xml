@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>KSA_Jeddah_Construct_Case</fullName>
+    <filterScope>Queue</filterScope>
+    <label>KSA Jeddah Construct</label>
+    <queue>KSA_Jeddah_Construct</queue>
+    <sharedTo>
+        <allInternalUsers />
+    </sharedTo>
+</ListView>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>US_Special_Orders_Case</fullName>
+    <filterScope>Queue</filterScope>
+    <label>US Special Orders</label>
+    <queue>US_Special_Orders</queue>
+    <sharedTo>
+        <allInternalUsers />
+    </sharedTo>
+</ListView>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customSettingsType>Hierarchy</customSettingsType>
+    <description>Ascential Consumer key and Client Secret</description>
+    <enableFeeds>false</enableFeeds>
+    <label>Ascential_Exhibitor_API</label>
+    <visibility>Public</visibility>
+</CustomObject>

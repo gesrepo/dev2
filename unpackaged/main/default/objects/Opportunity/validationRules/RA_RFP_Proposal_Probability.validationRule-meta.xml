@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>RA_RFP_Proposal_Probability</fullName>
+    <active>false</active>
+    <description>Restricts the manual override of the Probability to only these values: 10, 25, 50 for stages Resource Allocation, Present Proposal / RFP Response and Proposal / Price</description>
+    <errorConditionFormula>AND (OR (ISPICKVAL( StageName , &#39;Resource Allocation&#39;), ISPICKVAL( StageName , &#39;Present Proposal/RFP Response&#39;), ISPICKVAL( StageName , &#39;Proposal/Price&#39;)),IF (CASE ( Probability, 0.10, &#39;False&#39;, 0.25, &#39;False&#39;,0.50,&#39;False&#39;, &#39;True&#39;)= &#39;True&#39;, TRUE,FALSE),NOT(OR($Profile.Name = &#39;GES Interface&#39;,$Profile.Name = &#39;System Administrator&#39;)))</errorConditionFormula>
+    <errorDisplayField>Probability</errorDisplayField>
+    <errorMessage>For stages Resource Allocation, Present Proposal / RFP Response and Proposal / Price, you must select one of these values for Probability: 10, 25, or 50.</errorMessage>
+</ValidationRule>

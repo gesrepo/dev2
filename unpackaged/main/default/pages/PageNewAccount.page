@@ -1,0 +1,190 @@
+<apex:page standardController="Account" extensions="CCXNewCustomerController" sidebar="true" tabStyle="Account">
+<!--
+<table> 
+<tr> 
+<td style="padding: 20px;">
+    <apex:outputLink value="{!$CurrentPage.Parameters.retUrl}" style="font-family: 'Verdana'; font-size: 14px; color: blue; text-decoration: none;  "><font color="Black" valign="top">&lt;&lt; </font>Back to List: Booths</apex:outputLink>   
+</td>
+</tr>   
+</table>
+-->
+
+<!-- In Service Cloud Console, the tab title cannot be set via the title attribute in the apex:page tag -->
+<!-- The script below does that. Function checks to determine if page is being displayed in the console mode. -->
+<apex:includeScript value="/support/console/20.0/integration.js"/>
+<script type="text/javascript">      
+   
+   function setTabTitle() {        
+       
+       sforce.console.setTabTitle('Search Create Account ');
+   }       
+  
+   var previousOnload = window.onload;        
+   window.onload = function() {
+            if (previousOnload) { 
+                previousOnload();
+            }                
+            setTimeout('setTabTitle()', '200');
+   }
+</script>
+
+<apex:pageMessages id="errors" />
+
+<apex:form >
+
+    <apex:pageBlock mode="edit" Title="Enter Account Details" id="newAccountDetails">
+            
+        <apex:pageBlockSection columns="2" >
+        
+            <apex:facet name="header">
+                <apex:outputLabel value="Details" style="color: black;" />
+            </apex:facet>
+        
+            <apex:pageBlockSectionItem >
+                <apex:outputLabel value="Account Name:" for="accountNameField"  />
+                <apex:inputField id="accountNameField" value="{!Account.Name}" required="true" />
+                <!--
+                <apex:actionRegion >
+                    <apex:inputField id="accountNameField" value="{!Account.Name}" required="true">
+                        <apex:actionSupport reRender="newAccountDetails" event="onchange"/>
+                    </apex:inputField>
+                </apex:actionRegion>                
+                -->
+            </apex:pageBlockSectionItem>
+            
+            <!--
+            <apex:pageBlockSectionItem >
+                <apex:outputLabel value="Sales Person:" for="salesPersonField" />
+                <apex:inputField id="salesPersonField" value="{!Account.Sales_Person__c}" required="true" />
+            </apex:pageBlockSectionItem>
+            -->
+            
+            <apex:pageBlockSectionItem >
+                <apex:outputLabel value="Billing Street:" for="billingStreetField" />
+                <apex:inputField id="billingStreetField" value="{!Account.BillingStreet}" />
+            </apex:pageBlockSectionItem>            
+            
+            <apex:pageBlockSectionItem >
+                <apex:outputLabel value="Phone:" for="phoneField" />
+                <apex:inputField id="phoneField" value="{!Account.Phone}"  />
+            </apex:pageBlockSectionItem>
+            
+            <apex:pageBlockSectionItem >
+                <apex:outputLabel value="Billing City:" for="billingCityField" />
+                <apex:inputField id="billingCityField" value="{!Account.BillingCity}" />
+            </apex:pageBlockSectionItem>            
+            
+            <apex:pageBlockSectionItem >
+                <apex:outputLabel value="Fax:" for="faxField" />
+                <apex:inputField id="faxField" value="{!Account.Fax}" />
+            </apex:pageBlockSectionItem>
+            
+            <apex:pageBlockSectionItem >
+                <apex:outputLabel value="Billing State:" for="billingStateField" />
+                <apex:inputField id="billingStateField" value="{!Account.BillingState}"  />
+            </apex:pageBlockSectionItem>
+            
+            <apex:pageBlockSectionItem >
+                <apex:outputLabel value="Website:" for="websiteField" />
+                <apex:inputField id="websiteField" value="{!Account.Website}" />
+            </apex:pageBlockSectionItem>
+            
+            <apex:pageBlockSectionItem >
+                <apex:outputLabel value="Billing Postal Code:" for="billingPostalCodeField" />
+                <apex:inputField id="billingPostalCodeField" value="{!Account.BillingPostalCode}" />
+            </apex:pageBlockSectionItem>
+            
+            <apex:pageBlockSectionItem >
+                <apex:outputLabel value="Create New:" for="createNewField" />
+                <apex:actionRegion >
+                    <apex:inputField id="createNewField" value="{!Account.Create_New__c}">
+                        <apex:actionSupport reRender="newAccountDetails" event="onchange"/>
+                    </apex:inputField>
+                </apex:actionRegion>        
+            </apex:pageBlockSectionItem>
+            
+            <apex:pageBlockSectionItem >
+                <apex:outputLabel value="Billing Country:" for="billingCountryField" />
+                <apex:inputField id="billingCountryField" value="{!Account.BillingCountry}" />
+            </apex:pageBlockSectionItem>    
+                                    
+        </apex:pageBlockSection>
+        
+        <apex:pageBlockButtons location="bottom">
+            <!--  <apex:commandButton action="{!accountExists}" value="Search" rendered="{!(Account.Name != null && Account.Name != '')}"/> -->
+            <apex:commandButton action="{!accountExists}" value="Search" />
+            <apex:commandButton action="{!saveAccount}" value="Save" rendered="{!Account.Create_New__c}"/>               
+        </apex:pageBlockButtons>
+       
+        
+    </apex:pageBlock>
+</apex:form>
+
+<apex:pageBlock mode="edit" Title="Search Results" id="searchResults">
+
+    <apex:pageBlockSection columns="1">
+    
+        <apex:actionStatus id="boothSearchStatus" >
+            <apex:facet name="start">
+                <apex:outputLabel value="Searching..." style="color: red;" />
+            </apex:facet>
+        </apex:actionStatus> 
+        
+        <apex:pageBlockTable value="{!results}" var="result" rendered="{!(results.size > 0)}" >
+            <apex:column >
+                    <apex:facet name="header">
+                    <apex:outputLabel value="Account Name" />
+                    </apex:facet>
+                    <apex:outputLink value="{!URLFOR($Action.Account.View, result.Id)}">{!result.Name}
+                    </apex:outputLink>                      
+                </apex:column>
+                
+            <apex:column >
+                    <apex:facet name="header">
+                    <apex:outputLabel value="Billing Street" />
+                    </apex:facet>
+                    <apex:outputField value="{!result.BillingStreet}"/>
+               </apex:column>
+                
+            <apex:column >
+                    <apex:facet name="header">
+                    <apex:outputLabel value="Billing City" />
+                    </apex:facet>
+                    <apex:outputField value="{!result.BillingCity}"/>
+               </apex:column>
+                
+            <apex:column >
+                    <apex:facet name="header">
+                    <apex:outputLabel value="Billing State" />
+                    </apex:facet>
+                    <apex:outputField value="{!result.BillingState}"/>
+               </apex:column>
+                
+               <apex:column >
+                    <apex:facet name="header">
+                    <apex:outputLabel value="Billing Postal Code" />
+                    </apex:facet>
+                    <apex:outputField value="{!result.BillingPostalCode}"/>
+               </apex:column>
+                
+               <apex:column >
+                    <apex:facet name="header">
+                    <apex:outputLabel value="Billing Country" />
+                    </apex:facet>
+                    <apex:outputField value="{!result.BillingCountry}"/>
+               </apex:column>
+               
+               <apex:column >
+                    <apex:facet name="header">
+                    <apex:outputLabel value="Phone" />
+                    </apex:facet>
+                    <apex:outputField value="{!result.Phone}"/>
+               </apex:column>               
+                
+           </apex:pageBlockTable>
+    
+    </apex:pageBlockSection>
+
+</apex:pageBlock>
+
+</apex:page>

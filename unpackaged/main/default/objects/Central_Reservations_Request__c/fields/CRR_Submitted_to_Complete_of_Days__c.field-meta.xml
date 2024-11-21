@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CRR_Submitted_to_Complete_of_Days__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(
+    ISBLANK(CRR_Submitted_Date__c) || ISBLANK(CRR_Complete_Date__c),
+    null,
+    CRR_Complete_Date__c - CRR_Submitted_Date__c
+)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Submitted to Complete #of Days</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

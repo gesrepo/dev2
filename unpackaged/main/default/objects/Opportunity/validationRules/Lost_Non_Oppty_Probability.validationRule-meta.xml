@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Lost_Non_Oppty_Probability</fullName>
+    <active>true</active>
+    <description>Restricts the manual override of the Probability to 0 for Lost and Non Opportunity stages: LO, LPE, LPM, LR, DB, IA, NE, SC, SM, TS, CC.</description>
+    <errorConditionFormula>AND (
+OR (ISPICKVAL( StageName , &#39;LO&#39;),  ISPICKVAL( StageName , &#39;LPE&#39;), ISPICKVAL( StageName , &#39;LPM&#39;), ISPICKVAL( StageName , &#39;LR&#39;),  ISPICKVAL( StageName , &#39;DB&#39;), ISPICKVAL( StageName , &#39;IA&#39;),  ISPICKVAL( StageName , &#39;NE&#39;), ISPICKVAL( StageName , &#39;SC&#39;),  ISPICKVAL( StageName , &#39;SM&#39;), ISPICKVAL( StageName , &#39;TS&#39;),  ISPICKVAL( StageName , &#39;CC&#39;),  ISPICKVAL( StageName , &#39;Lost&#39;),  ISPICKVAL( StageName , &#39;Decline to Bid&#39;),  ISPICKVAL( StageName , &#39;Tracking Show&#39;),  ISPICKVAL( StageName , &#39;Cancelled&#39;)),
+IF (CASE (  Probability, 0, &#39;False&#39;, &#39;True&#39;)= &#39;True&#39;, TRUE,FALSE), NOT($Profile.Name = &quot;GES Administrator Interface&quot;))</errorConditionFormula>
+    <errorDisplayField>Probability</errorDisplayField>
+    <errorMessage>For stages LO, LPE, LPM, LR, DB, IA, NE, SC, SM, TS, CC, Lost, Cancelled, Tracking Show, Decline to Bid the Probability must be set to 0.</errorMessage>
+</ValidationRule>

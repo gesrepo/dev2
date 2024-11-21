@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PRFCornerType__c</fullName>
+    <label>Corner Type</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Left Open</fullName>
+                <default>false</default>
+                <label>Left Open</label>
+            </value>
+            <value>
+                <fullName>Right Open</fullName>
+                <default>false</default>
+                <label>Right Open</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

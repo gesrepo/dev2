@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Rule_to_Chk_STA_associated_wth_proper_Sh</fullName>
+    <active>true</active>
+    <description>STA is being assigned to correct show</description>
+    <errorConditionFormula>AND( (RecordType.Name = &#39;Design Element Assignment&#39;),
+(Design_Element__r.Connect2_Show__c &lt;&gt;  Show_Team_Member__r.Connect2_Show__c )
+)</errorConditionFormula>
+    <errorMessage>The Selected Team Member being Assigned is not on the Show.</errorMessage>
+</ValidationRule>

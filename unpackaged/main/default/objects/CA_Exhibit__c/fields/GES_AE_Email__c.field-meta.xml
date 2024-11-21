@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>GES_AE_Email__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF((TEXT(GES_Account_Executive__c) == &quot;Boy, John&quot;),&quot;jboy@ges.com&quot;,
+IF((TEXT(GES_Account_Executive__c) == &quot;Spencer, Jennifer&quot;),&quot;Jspencer@ges.com&quot;,
+IF((TEXT(GES_Account_Executive__c) == &quot;Boncek, Debbie&quot;),&quot;DBoncek@ges.com&quot;,
+IF((TEXT(GES_Account_Executive__c) == &quot;Chester, Lori&quot;),&quot;lchester@ges.com&quot;,
+IF((TEXT(GES_Account_Executive__c) == &quot;Maurer, Steve&quot;),&quot;smaurer@ges.com&quot;,
+IF((TEXT(GES_Account_Executive__c) == &quot;Rosenow, Heather&quot;),&quot;HRosenow@ges.com&quot;,
+IF((TEXT(GES_Account_Executive__c) == &quot;Shamey-Golonka, Kimrlee&quot;),&quot;KShamey-Golonka@ges.com&quot;,
+IF((TEXT(GES_Account_Executive__c) == &quot;Joy, Jess&quot;),&quot;jjoy@thisisspiro.com&quot;,
+IF((TEXT(GES_Account_Executive__c) == &quot;Signoriello, Caroline&quot;),&quot;csignoriello@thisisspiro.com&quot;,
+IF((TEXT(GES_Account_Executive__c) == &quot;Jones, Kevin&quot;),&quot;kjones@thisisspiro.com&quot;,
+&quot;&quot;))))))))))</formula>
+    <label>GES AE Email</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

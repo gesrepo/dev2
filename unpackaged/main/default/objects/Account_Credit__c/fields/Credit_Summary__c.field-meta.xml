@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Credit_Summary__c</fullName>
+    <label>Credit Summary</label>
+    <required>false</required>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>IMMED: 100% upfront w/credit card on file for any overruns</fullName>
+                <default>false</default>
+                <label>IMMED: 100% upfront w/credit card on file for any overruns</label>
+            </value>
+            <value>
+                <fullName>VADV/N30: Variable advance payments as stipulated in credit decision/client contract and system, balance due in 30 days</fullName>
+                <default>false</default>
+                <label>VADV/N30: Variable advance payments as stipulated in credit decision/client contract and system, balance due in 30 days</label>
+            </value>
+            <value>
+                <fullName>VADV/N45: Variable advance payments as stipulated in credit decision/client contract and system, balance due in 45 days.</fullName>
+                <default>false</default>
+                <label>VADV/N45: Variable advance payments as stipulated in credit decision/client contract and system, balance due in 45 days.</label>
+            </value>
+            <value>
+                <fullName>VADV/N60: variable advance payment as stipulated in credit decision/client contract and system, balance due in 60 days.</fullName>
+                <default>false</default>
+                <label>VADV/N60: variable advance payment as stipulated in credit decision/client contract and system, balance due in 60 days.</label>
+            </value>
+            <value>
+                <fullName>VADV/N90: Variable advance payments as stipulated in credit decision/client contract and system, balance due in 90 days</fullName>
+                <default>false</default>
+                <label>VADV/N90: Variable advance payments as stipulated in credit decision/client contract and system, balance due in 90 days</label>
+            </value>
+            <value>
+                <fullName>30 NET: Net due in 30 days</fullName>
+                <default>false</default>
+                <label>30 NET: Net due in 30 days</label>
+            </value>
+            <value>
+                <fullName>45 NET: Net due in 45 days</fullName>
+                <default>false</default>
+                <label>45 NET: Net due in 45 days</label>
+            </value>
+            <value>
+                <fullName>90 NET  - Net due in 90 days</fullName>
+                <default>false</default>
+                <label>90 NET  - Net due in 90 days</label>
+            </value>
+            <value>
+                <fullName>120 NET – Net due in 120 days</fullName>
+                <default>false</default>
+                <label>120 NET – Net due in 120 days</label>
+            </value>
+            <value>
+                <fullName>ADV/N30: 50% advance payment required, balance due within 30 days</fullName>
+                <default>false</default>
+                <label>ADV/N30: 50% advance payment required, balance due within 30 days</label>
+            </value>
+            <value>
+                <fullName>ADV/NET 45 – 50% deposit due 30 days prior to show open. Remaining balance due NET 45.</fullName>
+                <default>false</default>
+                <label>ADV/NET 45 – 50% deposit due 30 days prior to show open. Remaining balance due NET 45.</label>
+            </value>
+            <value>
+                <fullName>ADV/NET60: 50% advance payment required, balance due within 60 days</fullName>
+                <default>false</default>
+                <label>ADV/NET60: 50% advance payment required, balance due within 60 days</label>
+            </value>
+            <value>
+                <fullName>ADV/NET90: 50% advance deposit required, balance due within 90 days</fullName>
+                <default>false</default>
+                <label>ADV/NET90: 50% advance deposit required, balance due within 90 days</label>
+            </value>
+            <value>
+                <fullName>60 NET: Net due in 60 days</fullName>
+                <default>false</default>
+                <label>60 NET: Net due in 60 days</label>
+            </value>
+            <value>
+                <fullName>C9: 100% Pre Pay 30 Days Prior</fullName>
+                <default>false</default>
+                <label>C9: 100% Pre Pay 30 Days Prior</label>
+            </value>
+            <value>
+                <fullName>Sub: Subcontract</fullName>
+                <default>false</default>
+                <label>Sub: Subcontract</label>
+            </value>
+            <value>
+                <fullName>AR: Account Reconciliation</fullName>
+                <default>false</default>
+                <label>AR: Account Reconciliation</label>
+            </value>
+            <value>
+                <fullName>B4</fullName>
+                <default>false</default>
+                <label>B4</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

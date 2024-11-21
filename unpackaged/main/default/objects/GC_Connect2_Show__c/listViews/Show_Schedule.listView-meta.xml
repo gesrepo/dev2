@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Show_Schedule</fullName>
+    <columns>Show_Start_Date__c</columns>
+    <columns>Show_End_Date__c</columns>
+    <columns>Client_Services_Manager__c</columns>
+    <columns>Opportunity_Name__c</columns>
+    <columns>Probability__c</columns>
+    <columns>StageName__c</columns>
+    <columns>NAME</columns>
+    <columns>Show_Name__c</columns>
+    <columns>Facility_lk__c</columns>
+    <columns>Production_Location__c</columns>
+    <columns>Opportunity_Owner__c</columns>
+    <columns>Job_Number__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Show_End_Date__c</field>
+        <operation>greaterOrEqual</operation>
+        <value>TODAY</value>
+    </filters>
+    <filters>
+        <field>StageName__c</field>
+        <operation>equals</operation>
+        <value>CR,CV,PS,PO</value>
+    </filters>
+    <filters>
+        <field>Production_Location__c</field>
+        <operation>contains</operation>
+        <value>110,150,230,240,250,510,520,710,530,810,830,420,790,220,170,160,610,836</value>
+    </filters>
+    <label>Show Schedule</label>
+</ListView>

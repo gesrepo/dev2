@@ -1,0 +1,210 @@
+<apex:page standardcontroller="Oracle_Show_Booth_Contact__c"  extensions="CCXBoothContactDetailsController" sidebar="true" tabStyle="Oracle_Show_Booth__c" >
+
+<!-- This output link will navigate user back to the Booths Tab -->
+<!--  <apex:outputLink value="{!$CurrentPage.Parameters.RetUrl}"><< Back to List: Booths</apex:outputLink> -->
+
+<!-- NOTE: To use this page outside the Service Cloud Console, uncomment the code block below to display the bread crumb -->
+<!--  
+<table> 
+<tr>
+<td style="padding: 20px;">
+    <apex:outputLink value="/apex/PageBoothDetails?id={!Oracle_Show_Booth_Contact__c.Oracle_Show_Booth__c}&retUrl=/apex/PageBooth" style="font-family: 'Verdana'; font-size: 14px; color: blue; text-decoration: none;  "><font color="Black" valign="top">&lt;&lt; </font>Back to: Booth Details
+    </apex:outputLink>
+</td>
+</tr>
+</table>
+-->
+
+<!-- In Service Cloud Console, the tab title cannot be set via the title attribute in the apex:page tag -->
+<!-- The script below does that. If the page is used in the regular app, it needs to be commented out. -->
+<apex:includeScript value="/support/console/20.0/integration.js"/>
+<script type="text/javascript">      
+   
+   function setTabTitle() {
+       sforce.console.setTabTitle('Booth Contact');
+   }       
+  
+   var previousOnload = window.onload;        
+   window.onload = function() { 
+        if (previousOnload) { 
+            previousOnload();
+        }                
+        setTimeout('setTabTitle()', '200'); 
+   }
+</script>
+
+<apex:pageMessages ></apex:pageMessages>
+
+<apex:form >
+
+    <apex:pageBlock mode="detail" Title="Create Booth Contact" id="boothContactManualDetail">
+    
+        <apex:pageBlockButtons location="top">
+            <apex:commandButton action="{!createNew}" value="Save" rendered="{!ISNULL(Oracle_Show_Booth_Contact__c.CUST_CONT_ID__c)}"/>
+            <!--  <apex:commandButton action="{!edit}" value="Edit" /> -->
+            <!--  NOTE: To use this page outside the Service Cloud Console, uncomment the statement below to display back button.  -->
+            <!--  <apex:commandButton action="{!backToCustomPage}" value="Back" /> -->   
+            <apex:commandButton action="{!cancel}" value="Cancel" />         
+        </apex:pageBlockButtons>
+        
+        <apex:outputText style="font-size: 16px; font-weight: bold; display: block; height: 30px;" value="Option 1: Select an existing Contact"></apex:outputText>
+        
+        <apex:pageBlockSection columns="2" rendered="{!ISNULL(Oracle_Show_Booth_Contact__c.CUST_CONT_ID__c)}">
+            <apex:facet name="header">
+                <apex:outputLabel value="Select Contact" style="color: black;" />
+            </apex:facet>
+        
+            <apex:pageBlockSectionItem >
+                <apex:outputLabel value="Contact:" for="contactField"  />
+                <apex:outputPanel styleClass="requiredInput" layout="block" > 
+                    <apex:outputPanel styleClass="requiredBlock" layout="block"/>                   
+                    <apex:inputField id="contactField" value="{!Oracle_Show_Booth_Contact__c.Contact__c}" >
+                        <!-- 
+                        <apex:actionSupport event="onchange" action="{!populateContactFields}" rerender="boothContactManualDetail">
+                            <apex:param name="contactId" value="{!Oracle_Show_Booth_Contact__c.Contact__c}" />
+                        </apex:actionSupport>
+                        -->
+                    </apex:inputField>
+                </apex:outputPanel>                
+
+            </apex:pageBlockSectionItem> 
+                    
+            <apex:pageBlockSectionItem >
+                <apex:outputLabel value="Booth:" for="boothField"  />
+                <apex:outputField id="boothField" value="{!Oracle_Show_Booth_Contact__c.Oracle_Show_Booth__c}" />
+            </apex:pageBlockSectionItem>
+           
+       
+        </apex:pageBlockSection>
+                
+        <apex:outputText style="font-size: 16px; font-weight: bold; display: block; height: 25px;" value="Option 2: Enter Contact Details"></apex:outputText>
+        
+        <apex:pageBlockSection columns="2">
+        
+            <apex:facet name="header">
+                <apex:outputLabel value="Details" style="color: black;" />
+            </apex:facet>
+        
+            <apex:pageBlockSectionItem >
+                <apex:outputLabel value="First Name:" for="contactInputFirstNameField"  />
+                <apex:outputPanel styleClass="requiredInput" layout="block" > 
+                    <apex:outputPanel styleClass="requiredBlock" layout="block"/>               
+                    <apex:inputField id="contactInputFirstNameField" value="{!Oracle_Show_Booth_Contact__c.FIRST_NAME__c}" />
+                </apex:outputPanel>
+            </apex:pageBlockSectionItem>
+            
+            <apex:pageBlockSectionItem >
+                <apex:outputLabel value="Last Name:" for="contactLastNameField"  />
+                <apex:outputPanel styleClass="requiredInput" layout="block" > 
+                    <apex:outputPanel styleClass="requiredBlock" layout="block"/>               
+                    <apex:inputField id="contactLastNameField" value="{!Oracle_Show_Booth_Contact__c.LAST_NAME__c}" />
+                </apex:outputPanel>                 
+            </apex:pageBlockSectionItem>
+            
+            <apex:pageBlockSectionItem >
+                <apex:outputLabel value="Email:" for="contactEmailField"  />
+                <apex:inputField id="contactEmailField" value="{!Oracle_Show_Booth_Contact__c.EMAIL__c}" />
+                <!--
+                <apex:outputPanel styleClass="requiredInput" layout="block" > 
+                    <apex:outputPanel styleClass="requiredBlock" layout="block"/>                   
+                    <apex:inputField id="contactEmailField" value="{!Oracle_Show_Booth_Contact__c.EMAIL__c}" />
+                </apex:outputPanel>
+                -->
+            </apex:pageBlockSectionItem>
+            <!--
+            <apex:pageBlockSectionItem >
+                <apex:outputLabel value="Type:" for="contactTypeField"  />
+                <apex:inputField id="contactTypeField" value="{!Oracle_Show_Booth_Contact__c.CONTACT_TYPE__c}" />
+            </apex:pageBlockSectionItem>
+            -->
+            <!-- 
+            <apex:pageBlockSectionItem >
+                <apex:outputLabel value="Country Code:" for="contactField"  />
+                <apex:inputField id="contactCountryCodeField" value="{!Oracle_Show_Booth_Contact__c.COUNTRY_CODE__c}" />
+            </apex:pageBlockSectionItem>
+            -->
+            <!-- 
+            <apex:pageBlockSectionItem >
+                <apex:outputLabel value="Role:" for="contactRoleField"  />
+                <apex:inputField id="contactRoleField" value="{!Oracle_Show_Booth_Contact__c.CONTACT_ROLE__c}" />
+            </apex:pageBlockSectionItem>            
+            -->
+            
+            <!--
+            <apex:pageBlockSectionItem >
+                <apex:outputLabel value="Area Code:" for="contactAreaCodeField"  />
+                <apex:inputField id="contactAreaCodeField" value="{!Oracle_Show_Booth_Contact__c.AREA_CODE__c}" />
+            </apex:pageBlockSectionItem>
+            -->
+            
+            <apex:pageBlockSectionItem >
+                <apex:outputLabel value="Phone:" for="contactPhoneField"  />
+                <apex:outputPanel styleClass="requiredInput" layout="block" > 
+                    <!--<apex:outputPanel styleClass="requiredBlock" layout="block"/>  -->                 
+                    <apex:inputField id="contactPhoneField" value="{!Oracle_Show_Booth_Contact__c.PHONE__c}" />
+                </apex:outputPanel>
+            </apex:pageBlockSectionItem>
+            
+            <apex:pageBlockSectionItem >
+                <apex:outputLabel value="Primary Flag:" for="contactPrimaryFlagField"  />
+                <apex:inputField id="contactPrimaryFlagField" value="{!Oracle_Show_Booth_Contact__c.PRIMARY_FLAG__c}" />
+            </apex:pageBlockSectionItem>
+            
+            <apex:pageBlockSectionItem >
+                <apex:outputLabel value="Mobile:" for="contactMobileField"  />
+                <apex:inputField id="contactMobileField" value="{!Oracle_Show_Booth_Contact__c.Mobile__c}" />
+            </apex:pageBlockSectionItem>
+            
+            <apex:pageBlockSectionItem >
+                <apex:outputLabel value="Fax:" for="contactFaxField"  />
+                <apex:inputField id="contactFaxField" value="{!Oracle_Show_Booth_Contact__c.FAX__c}" />
+            </apex:pageBlockSectionItem>
+            
+            <apex:pageBlockSectionItem >
+                <apex:outputLabel value="Extension:" for="contactExtensionField"  />
+                <apex:inputField id="contactExtensionField" value="{!Oracle_Show_Booth_Contact__c.EXTENSION__c}" />
+            </apex:pageBlockSectionItem>
+            
+        </apex:pageBlockSection>
+        
+        <!--  10/09/2012 JV: Making address fields not required as National Servicenter does -->
+        <!--  not capture this information. Logistics Sales is going to have a manual SOP -->
+        <!--  to require reps to capture these fields -->
+                
+        <apex:pageBlockSection columns="2">
+            <apex:facet name="header">
+                <apex:outputLabel value="Mailing Address" style="color: black;" />
+            </apex:facet>
+                        
+            <apex:pageBlockSectionItem >
+                <apex:outputLabel value="Mailing Street" for="contactMailingStreetField"  />
+                <apex:inputField id="contactMailingStreetField" value="{!Oracle_Show_Booth_Contact__c.Mailing_Street__c}" />
+            </apex:pageBlockSectionItem>    
+            
+            <apex:pageBlockSectionItem >
+                <apex:outputLabel value="Mailing City" for="contactMailingCityField"  />
+                <apex:inputField id="contactMailingCityField" value="{!Oracle_Show_Booth_Contact__c.Mailing_City__c}" />
+            </apex:pageBlockSectionItem>
+            
+            <apex:pageBlockSectionItem >
+                <apex:outputLabel value="Mailing State" for="contactMailingStateField"  />
+                <apex:inputField id="contactMailingStateField" value="{!Oracle_Show_Booth_Contact__c.Mailing_State__c}" />
+            </apex:pageBlockSectionItem>
+            
+            <apex:pageBlockSectionItem >
+                <apex:outputLabel value="Mailing Country" for="contactMailingCountryField"  />
+                <apex:inputField id="contactMailingCountryField" value="{!Oracle_Show_Booth_Contact__c.Mailing_Country__c}" />
+            </apex:pageBlockSectionItem>
+            
+            <apex:pageBlockSectionItem >
+                <apex:outputLabel value="Mailing Postal Code" for="contactMailingPostalCodeField"  />
+                <apex:inputField id="contactMailingPostalCodeField" value="{!Oracle_Show_Booth_Contact__c.Mailing_Postal_Code__c}" />                    
+            </apex:pageBlockSectionItem>
+                                    
+        </apex:pageBlockSection>
+        
+    </apex:pageBlock>
+    
+</apex:form>
+    
+</apex:page>

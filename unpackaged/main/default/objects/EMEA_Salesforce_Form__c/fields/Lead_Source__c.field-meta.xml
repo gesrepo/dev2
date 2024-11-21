@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Lead_Source__c</fullName>
+    <label>Lead Source</label>
+    <required>true</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>true</sorted>
+            <value>
+                <fullName>Blitz|GES Connection</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Blitz|GES Connection</label>
+            </value>
+            <value>
+                <fullName>Client Referral</fullName>
+                <default>false</default>
+                <label>Client Referral</label>
+            </value>
+            <value>
+                <fullName>Colleague Referral</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Colleague Referral</label>
+            </value>
+            <value>
+                <fullName>Commissionable Venue Recommendation</fullName>
+                <default>false</default>
+                <label>Commissionable Venue Recommendation</label>
+            </value>
+            <value>
+                <fullName>Contractors</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Contractors</label>
+            </value>
+            <value>
+                <fullName>Customer Service</fullName>
+                <default>false</default>
+                <label>Customer Service</label>
+            </value>
+            <value>
+                <fullName>Digital CTA</fullName>
+                <default>false</default>
+                <label>Digital CTA</label>
+            </value>
+            <value>
+                <fullName>Event/Tradeshow</fullName>
+                <default>false</default>
+                <label>Event/Tradeshow</label>
+            </value>
+            <value>
+                <fullName>Eventit</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Eventit</label>
+            </value>
+            <value>
+                <fullName>Exhibitor List</fullName>
+                <default>false</default>
+                <label>Exhibitor List</label>
+            </value>
+            <value>
+                <fullName>Expresso</fullName>
+                <default>false</default>
+                <label>Expresso</label>
+            </value>
+            <value>
+                <fullName>IMEX</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>IMEX</label>
+            </value>
+            <value>
+                <fullName>Inbound - Call Center</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Inbound - Call Center</label>
+            </value>
+            <value>
+                <fullName>Inbound ServiCentre</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Inbound ServiCentre</label>
+            </value>
+            <value>
+                <fullName>Incoming Call</fullName>
+                <default>false</default>
+                <label>Incoming Call</label>
+            </value>
+            <value>
+                <fullName>Industry Event</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Industry Event</label>
+            </value>
+            <value>
+                <fullName>Lead Generation Team</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Lead Generation Team</label>
+            </value>
+            <value>
+                <fullName>LinkedIn Sales Navigato</fullName>
+                <default>false</default>
+                <label>LinkedIn Sales Navigato</label>
+            </value>
+            <value>
+                <fullName>Marketing Sponsorship</fullName>
+                <default>false</default>
+                <label>Marketing Sponsorship</label>
+            </value>
+            <value>
+                <fullName>Mobile App</fullName>
+                <default>false</default>
+                <label>Mobile App</label>
+            </value>
+            <value>
+                <fullName>N200 Web site enquiry</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>N200 Web site enquiry</label>
+            </value>
+            <value>
+                <fullName>New Business Lead Gen</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>New Business Lead Gen</label>
+            </value>
+            <value>
+                <fullName>Organiser Referral</fullName>
+                <default>false</default>
+                <label>Organiser Referral</label>
+            </value>
+            <value>
+                <fullName>Outbound Marketing</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Outbound Marketing</label>
+            </value>
+            <value>
+                <fullName>Outbound Marketing (Sales</fullName>
+                <default>false</default>
+                <label>Outbound Marketing (Sales</label>
+            </value>
+            <value>
+                <fullName>Poken web site enquiry</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Poken web site enquiry</label>
+            </value>
+            <value>
+                <fullName>Purchased List</fullName>
+                <default>false</default>
+                <label>Purchased List</label>
+            </value>
+            <value>
+                <fullName>Self-Generated</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Self-Generated</label>
+            </value>
+            <value>
+                <fullName>Self-Generation (Sales)</fullName>
+                <default>false</default>
+                <label>Self-Generation (Sales)</label>
+            </value>
+            <value>
+                <fullName>Show Walk</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Show Walk</label>
+            </value>
+            <value>
+                <fullName>Show Walk (Sales)</fullName>
+                <default>false</default>
+                <label>Show Walk (Sales)</label>
+            </value>
+            <value>
+                <fullName>Social</fullName>
+                <default>false</default>
+                <label>Social</label>
+            </value>
+            <value>
+                <fullName>UK - Lead Gen Team</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>UK - Lead Gen Team</label>
+            </value>
+            <value>
+                <fullName>Venue Recommendation</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Venue Recommendation</label>
+            </value>
+            <value>
+                <fullName>Website</fullName>
+                <default>false</default>
+                <label>Website</label>
+            </value>
+            <value>
+                <fullName>Website Enquiry</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Website Enquiry</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

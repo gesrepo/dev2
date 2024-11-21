@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ApexPage xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>35.0</apiVersion>
+    <availableInTouch>false</availableInTouch>
+    <confirmationTokenRequired>false</confirmationTokenRequired>
+    <description>Displays a list of Shows on the home page layout for quickly viewing shows that each logged in user has access to.</description>
+    <label>GC_HomePageInfoComponent</label>
+</ApexPage>

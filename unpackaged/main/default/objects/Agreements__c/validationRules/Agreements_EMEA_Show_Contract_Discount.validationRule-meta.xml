@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Agreements_EMEA_Show_Contract_Discount</fullName>
+    <active>false</active>
+    <description>If Discounts = Yes, Discount Amount field cannot be blank</description>
+    <errorConditionFormula>AND(ISPICKVAL( Discounts__c ,&quot;Yes&quot;), ISBLANK( Discount_Amount__c ))</errorConditionFormula>
+    <errorDisplayField>Discount_Amount__c</errorDisplayField>
+    <errorMessage>Discount Amount is required when Discount is equal to Yes. Please fill out the Discount Amount.</errorMessage>
+</ValidationRule>

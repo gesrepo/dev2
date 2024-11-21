@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Levi_Sitler_Open2</fullName>
+    <columns>NAME</columns>
+    <columns>Request_Plan_Type__c</columns>
+    <columns>Status__c</columns>
+    <columns>UserEntered_Requested_Due_Date__c</columns>
+    <columns>Requested_Due_Date__c</columns>
+    <columns>Claimed_By__c</columns>
+    <columns>Opportunity_Name__c</columns>
+    <columns>Assigned_Remote_Drafter__c</columns>
+    <columns>Production_Location__c</columns>
+    <columns>Requester__c</columns>
+    <columns>CREATED_DATE</columns>
+    <columns>FPR_Show_Job_Number__c</columns>
+    <columns>Regional_Overhead_Picklist__c</columns>
+    <columns>LAST_UPDATE</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Claimed_By__c</field>
+        <operation>equals</operation>
+        <value>Levi Sitler</value>
+    </filters>
+    <filters>
+        <field>Status__c</field>
+        <operation>notEqual</operation>
+        <value>Complete,Plan Review</value>
+    </filters>
+    <label>Levi Sitler Open</label>
+</ListView>

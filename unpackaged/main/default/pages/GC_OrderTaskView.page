@@ -1,0 +1,288 @@
+<apex:page standardController="GC_GES_Order_Task__c" extensions="GC_GESOrderTaskViewController" showHeader="true" sidebar="true" action="{!loadAction}">
+    <apex:stylesheet value="{!URLFOR($Resource.GC_Assets, 'GC_Assets/css/GC_PageStyles.css')}" />
+    <script>
+        var performingCancel = false;
+
+        function confirmCancelTask() {
+            /*if (confirm('Canceling the task can not be undone.  Are you sure you want to cancel?')) {*/ //commented by Sajid on 04/05/23 Ticket-1209
+            if (confirm('Canceling the item can not be undone.  Are you sure you want to cancel?')) {  //added by Sajid on 04/05/23 Ticket-1209
+                if ('{!got.Status__c}' == 'Active') {
+                    performingCancel = true;
+                    CancelInCore();
+                    return true;
+                } else{
+                    performingCancel = true;
+                    CancelInSF();
+                    return true;
+                }
+                return false;
+            } else {
+                return false;
+            }
+        }
+    </script>
+    <apex:form >    
+        <!-- Submit To core start  -->
+        <apex:actionFunction name="getSession" action="{!connectToCore}" status="connectingStatusSpinner" reRender="statuses, messages" oncomplete="validateSession();" />
+        <apex:actionFunction name="validateSession" action="{!validateSessionID}" status="loggingInStatusSpinner" reRender="statuses, messages" oncomplete="submitToCoreAF();" />
+        <apex:actionFunction name="submitToCoreAF" action="{!submitToCore}" status="submittingOrderStatusSpinner" reRender="statuses, messages" oncomplete="insertLogsAction();" />
+        <apex:actionFunction name="insertLogsAction" action="{!insertLogs}" status="insertingLogsStatusSpinner" reRender="statuses, messages" />
+        
+        <!-- Submit To core end  -->
+        
+        <apex:actionFunction name="CancelInSF" action="{!cancelAction}" status="cancelStatus" reRender="statuses, messages, pb" />
+        <apex:actionFunction name="CancelInCore" action="{!cancelActionForCore}" status="cancelStatus" reRender="statuses, messages" oncomplete="CancelOrderStep1();" />
+        <apex:actionFunction name="CancelOrderStep1" action="{!connectToCore}" status="connectingStatusSpinner" reRender="statuses, messages" oncomplete="CancelOrderStep2();" />
+        <apex:actionFunction name="CancelOrderStep2" action="{!loginToCore}" status="loggingInStatusSpinner" reRender="statuses, messages" oncomplete="CancelOrderStep3();" />
+        <apex:actionFunction name="CancelOrderStep3" action="{!submitCancelTask}" status="cancelOrderStatusSpinner" reRender="statuses, messages" oncomplete="CancelOrderStep4();" />
+        <apex:actionFunction name="CancelOrderStep4" action="{!processCancelTask}" status="processingOrderStatusSpinner" reRender="statuses, messages, pb" oncomplete="performingCancel = false;" />
+        <!--apex:sectionHeader title="GES Order Task" subtitle="{!got.Name}"></apex:sectionHeader--> <!--commented by Sajid on 04/05/23 Ticket-1209 -->
+        <apex:sectionHeader title="GES Item" subtitle="{!got.Name}"></apex:sectionHeader> <!-- added Sajid on 04/05/23 Ticket-1209 -->
+        <apex:pageMessages id="messages" />
+        <apex:pageBlock id="pb">
+            <apex:pageBlockButtons >
+                <apex:commandButton value="Back to Order" title="Gets you back to the Order" action="{!URLFOR($Page.GC_OrderView, null, [id=got.Order__c])}" ></apex:commandButton>
+                <apex:commandButton value="Edit" title="{!EditTitle}" action="{!editAction}" rendered="{!taskPermissions.CanEdit}" reRender="statuses, messages" status="editStatus"></apex:commandButton>
+                <apex:commandButton value="Revise" title="{!ReviseTitle}" action="{!reviseAction}" rendered="{!taskPermissions.CanRevise}" reRender="statuses, messages" status="reviseStatus"></apex:commandButton>
+                <apex:commandButton value="Clone" title="{!CloneTitle}" action="{!cloneAction}" rendered="{!taskPermissions.CanClone}" reRender="statuses, messages" status="cloneStatus"></apex:commandButton>
+                <!--apex:commandButton value="Cancel Task" title="{!CancelTitle}" rendered="{!taskPermissions.CanCancel}" reRender="statuses, messages, pb" status="cancelStatus" onclick="if (performingCancel) { return false; } else { confirmCancelTask(); return true}"></apex:commandButton--> <!--commented by Sajid on 04/05/23 Ticket-1209 -->
+                <apex:commandButton value="Cancel Item" title="{!CancelTitle}" rendered="{!taskPermissions.CanCancel}" reRender="statuses, messages, pb" status="cancelStatus" onclick="if (performingCancel) { return false; } else { confirmCancelTask(); return true}"></apex:commandButton> <!-- added by Sajid on 04/05/23 Ticket-1209 -->
+                <apex:commandButton value="Approve For Submit" title="{!ApproveTitle}" action="{!approveForSubmitAction}" rendered="{!taskPermissions.CanApprove}" reRender="statuses, messages, pb" status="approveForSubmitStatus"></apex:commandButton>
+                <apex:commandButton value="Rework" title="Resets the status to new so that the item can be edited." action="{!resetToNew}" rendered="{!taskPermissions.CanReset}" reRender="statuses, messages, pb" status="resetToNewStatus"></apex:commandButton>
+                <apex:commandButton value="Place on Hold" title="{!OnHoldTitle}" action="{!placeOnHoldAction}" rendered="{!taskPermissions.CanPlaceOnHold}" reRender="statuses, messages, pb" status="placeOnHoldStatus"></apex:commandButton>
+                <apex:commandButton value="Release from Hold" title="{!ReleaseHoldTitle}" action="{!releaseFromHoldAction}" rendered="{!taskPermissions.CanReleaseFromHold}" reRender="statuses, messages, pb" status="releaseFromHoldStatus"></apex:commandButton>
+        
+                <!--    <apex:commandButton value="Print" title="Gives a pdf version of this page" onclick="window.open('{!URLFOR($Page.OrderTaskAsPDF, null, [id=got.Id])}');" ></apex:commandButton>    -->
+                <!--apex:commandButton value="Submit to Core" title="Submits all Tasks in the Approved Status to the External System." reRender="messages, pb, relatedItems" onclick="getSession();" rendered="{!taskPermissions.CanSubmittoCore}" status="connectingStatusSpinner"--> <!--commented by Sajid on 04/05/23 Ticket-1209 -->
+                <apex:commandButton value="Submit to Core" title="Submits all Items in the Approved Status to the External System." reRender="messages, pb, relatedItems" onclick="getSession();" rendered="{!taskPermissions.CanSubmittoCore}" status="connectingStatusSpinner"> <!-- added by Sajid on 04/05/23 Ticket-1209 -->
+                    <!-- <apex:actionStatus id="submitStatus">
+                        <apex:facet name="stop">
+                            <apex:outputPanel rendered="{!hasItemstoSubmit && !hasValidationErrors}">
+                                <script>
+                                    if (!performingSubmit) {
+                                      performingSubmit = true;
+                                      SubmitOrderStep1();
+                                    }
+                                </script>
+                            </apex:outputPanel>
+                        </apex:facet>
+                    </apex:actionStatus>    -->
+                </apex:commandButton>
+            
+                <!--apex:commandButton value="Next Order Task" title="Takes you to the next Order Task" action="{!nextOrderTask}" ></apex:commandButton--> <!--commented by Sajid on 04/05/23 Ticket-1209 -->
+                <apex:commandButton value="Next Item" title="Takes you to the next Item" action="{!nextOrderTask}" ></apex:commandButton> <!-- added by Sajid on 04/05/23 Ticket-1209 -->
+            
+                <!-- <apex:commandButton value="Send to Graphics" title="Sends an Email Notification summary of the Order task to the Graphics team" action="{!submitGraphicsAction}" rendered="{!taskPermissions.CanSubmitGraphics}" reRender="pb, statuses, messages" status="submitGraphicsStatusSpinner"></apex:commandButton> -->
+            </apex:pageBlockButtons>
+            <apex:outputPanel id="statuses">
+                <apex:actionStatus id="editStatus">
+                    <apex:facet name="start">
+                        <!--c:GC_StatusSpinner statusMessage="Cloning Task." /--> <!--commented by Sajid on 04/05/23 Ticket-1209 -->
+                        <c:GC_StatusSpinner statusMessage="Editing Item." /> <!-- added by Sajid on 04/05/23 Ticket-1209 -->
+                    </apex:facet>
+                </apex:actionStatus>
+                <apex:actionStatus id="reviseStatus">
+                    <apex:facet name="start">
+                        <!--c:GC_StatusSpinner statusMessage="Cloning Task." /--> <!--commented by Sajid on 04/05/23 Ticket-1209 -->
+                        <c:GC_StatusSpinner statusMessage="Revising Active Item." /> <!-- added by Sajid on 04/05/23 Ticket-1209 -->
+                    </apex:facet>
+                </apex:actionStatus>
+                <apex:actionStatus id="cloneStatus">
+                    <apex:facet name="start">
+                        <!--c:GC_StatusSpinner statusMessage="Cloning Task." /--> <!--commented by Sajid on 04/05/23 Ticket-1209 -->
+                        <c:GC_StatusSpinner statusMessage="Cloning Item." /> <!-- added by Sajid on 04/05/23 Ticket-1209 -->
+                    </apex:facet>
+                </apex:actionStatus>
+                <apex:actionStatus id="cancelStatus">
+                    <apex:facet name="start">
+                        <!--c:GC_StatusSpinner statusMessage="Canceling Task." /--> <!--commented by Sajid on 04/05/23 Ticket-1209 -->
+                        <c:GC_StatusSpinner statusMessage="Canceling Item." /> <!-- added by Sajid on 04/05/23 Ticket-1209 -->
+                    </apex:facet>
+                </apex:actionStatus>
+                <apex:actionStatus id="approveForSubmitStatus">
+                    <apex:facet name="start">
+                        <c:GC_StatusSpinner statusMessage="Approving For Submittal." />
+                    </apex:facet>
+                </apex:actionStatus>
+                <apex:actionStatus id="resetToNewStatus">
+                    <apex:facet name="start">
+                        <c:GC_StatusSpinner statusMessage="Resetting to new for Update." />
+                    </apex:facet>
+                </apex:actionStatus>
+                <apex:actionStatus id="placeOnHoldStatus">
+                    <apex:facet name="start">
+                        <c:GC_StatusSpinner statusMessage="Placing On Hold." />
+                    </apex:facet>
+                </apex:actionStatus>
+                <apex:actionStatus id="releaseFromHoldStatus">
+                    <apex:facet name="start">
+                        <c:GC_StatusSpinner statusMessage="Releasing From Hold." />
+                    </apex:facet>
+                </apex:actionStatus>
+                <apex:actionStatus id="connectingStatusSpinner">
+                    <apex:facet name="start">
+                        <c:GC_StatusSpinner statusMessage="Connecting to Web Service." />
+                    </apex:facet>
+                </apex:actionStatus>
+                <apex:actionStatus id="loggingInStatusSpinner">
+                    <apex:facet name="start">
+                        <c:GC_StatusSpinner statusMessage="Logging In." />
+                    </apex:facet>
+                </apex:actionStatus>
+                <apex:actionStatus id="submittingOrderStatusSpinner">
+                    <apex:facet name="start">
+                        <c:GC_StatusSpinner statusMessage="Submitting Order." />
+                    </apex:facet>
+                </apex:actionStatus>
+                <apex:actionStatus id="processingOrderStatusSpinner">
+                    <apex:facet name="start">
+                        <c:GC_StatusSpinner statusMessage="Processing Order." />
+                    </apex:facet>
+                </apex:actionStatus>
+                <apex:actionStatus id="cancelOrderStatusSpinner">
+                    <apex:facet name="start">
+                        <c:GC_StatusSpinner statusMessage="Cancelling Order." />
+                    </apex:facet>
+                </apex:actionStatus>
+                <apex:actionStatus id="submitGraphicsStatusSpinner">
+                    <apex:facet name="start">
+                        <c:GC_StatusSpinner statusMessage="Submitting to Graphics Team." />
+                    </apex:facet>
+                </apex:actionStatus>
+                <apex:actionStatus id="insertingLogsStatusSpinner">
+                    <apex:facet name="start">
+                        <c:GC_StatusSpinner statusMessage="Inserting Web Service Logs." />
+                    </apex:facet>
+                </apex:actionStatus>
+            </apex:outputPanel>
+            <apex:pageBlockSection title="Information">
+                <apex:outputField value="{!got.Connect2_Show_Number__c}"/>  
+                <apex:outputField value="{!got.Order__c}" />
+                <apex:outputField value="{!got.Job_Number__c}"/>
+                <apex:outputField value="{!got.OwnerId}" />
+                <apex:outputField value="{!got.Name}" />
+                <apex:outputField value="{!got.Status__c}" />
+                <apex:outputField value="{!got.Submitted_Date__c}" />
+                <apex:outputField value="{!got.Revision__c}" />
+                <apex:outputField value="{!got.Order_Number__c}" label="CORE#"/>
+                 <apex:outputField value="{!got.Previous_Revision__c}" />
+                <apex:outputField value="{!got.Line_Item_Number__c}"  label="Line#"/>
+                <apex:outputField value="{!got.Last_Revision__c}" /> 
+                <!--<apex:outputText ></apex:outputText> -->
+                <!--<apex:outputField value="{!got.Show_Management_Field__c}" /> -->
+                <apex:outputField value="{!got.Show_Name__c}" /> 
+                <apex:outputField value="{!got.Order__r.Connect2_Show__r.Opportunity_Name__c}" />
+            </apex:pageBlockSection>         
+            <apex:pageBlockSection title="Item Ordering">
+                <apex:outputField value="{!got.Description__c}" />
+                <apex:outputField value="{!got.Price__c}" rendered="{!(taskFieldManager.Price__c!= $Label.GC_Label_TFM_Hide)}"/>
+                <apex:outputText rendered="{!(taskFieldManager.Price__c== $Label.GC_Label_TFM_Hide)}"></apex:outputText>
+                <apex:outputField value="{!got.UOM__c}" />
+                <apex:outputField value="{!got.Booth_Area_Discount__c}" rendered="{!(taskFieldManager.Booth_Area_Discount__c!= $Label.GC_Label_TFM_Hide)}" />
+                <apex:outputText rendered="{!(taskFieldManager.Booth_Area_Discount__c== $Label.GC_Label_TFM_Hide)}"></apex:outputText>          
+                <apex:outputField value="{!got.Item_Number__c}" />
+                <apex:outputField value="{!got.Booth_Area_Discount_Override__c}" />
+                <apex:outputField value="{!got.Discount_Reason_Code__c}" rendered="{!got.Booth_Area_Discount_Override__c!=null}" />
+                <apex:outputField value="{!got.Discount_Reason_Text__c}" rendered="{!got.Booth_Area_Discount_Override__c!=null}" />
+                <apex:outputField value="{!got.Item_Template__c}" />
+                <apex:outputField value="{!got.File_Reference_Link__c}" rendered="{!(taskFieldManager.File_Reference_Link_Folder__c!= $Label.GC_Label_TFM_Hide)}" />
+                <apex:outputText rendered="{!(taskFieldManager.File_Reference_Link_Folder__c== $Label.GC_Label_TFM_Hide)}"></apex:outputText>    
+                <apex:outputField value="{!got.User_Item_Description__c}" rendered="{!(taskFieldManager.User_Item_Description__c!= $Label.GC_Label_TFM_Hide)}"/>
+                <apex:outputText rendered="{!(taskFieldManager.User_Item_Description__c== $Label.GC_Label_TFM_Hide)}"></apex:outputText> 
+                <apex:outputField value="{!got.New_Price__c}" rendered="{!got.Price__c ==null}"/>
+            </apex:pageBlockSection>
+            <c:GC_ItemOptions gotAttribute="{!got}" coreApiAttribute="{!coreApi}" editMode="false" taskFieldMan="{!taskFieldManager}">
+            </c:GC_ItemOptions>       
+            <!-- Sal-501 -->
+            <apex:pageBlockSection title="Special Instructions" rendered="{!(taskFieldManager.Special_Instructions_Client_Remarks__c!= $Label.GC_Label_TFM_Hide)}">
+             <apex:outputField value="{!got.Show_Management_Field__c}" />
+            </apex:pageBlockSection>          
+            <!-- Moved below for SAL-501  --> 
+            <apex:pageBlockSection title="Department">
+                <apex:outputField value="{!got.Department__c}" />
+                <apex:outputField value="{!got.Budget_Code__c}" rendered="{!(taskFieldManager.Budget_Code__c!= $Label.GC_Label_TFM_Hide)}" />
+                <apex:outputText rendered="{!(taskFieldManager.Budget_Code__c== $Label.GC_Label_TFM_Hide)}"></apex:outputText>  
+            </apex:pageBlockSection>
+           <!-- Moved below for SAL-501  --> 
+            <apex:pageBlockSection title="Area Information">
+                <apex:outputField value="{!got.Formula_Booth_Area__c}" />
+                <apex:outputField value="{!got.Formula_Booth_Area_ID__c}" />
+                <apex:outputField value="{!got.SA_Venue_Location__c}" />
+                <apex:outputField value="{!got.Delivery_Location__c}" rendered="{!(taskFieldManager.Delivery_Area__c!= $Label.GC_Label_TFM_Hide)}"/>
+                <apex:outputText rendered="{!(taskFieldManager.Delivery_Area__c== $Label.GC_Label_TFM_Hide)}"></apex:outputText>        
+                <apex:outputField value="{!got.Onsite_Contact_Person_FML__c}" rendered="{!(taskFieldManager.Onsite_Contact_Person__c!= $Label.GC_Label_TFM_Hide)}"/>
+                <apex:outputText rendered="{!(taskFieldManager.Onsite_Contact_Person__c== $Label.GC_Label_TFM_Hide)}"></apex:outputText>        
+                <apex:outputField value="{!got.Onsite_Contact_Person_Number_FML__c}" rendered="{!(taskFieldManager.Onsite_Contact_Person_Number__c!= $Label.GC_Label_TFM_Hide)}"/>
+                <apex:outputText rendered="{!(taskFieldManager.Onsite_Contact_Person_Number__c== $Label.GC_Label_TFM_Hide)}"></apex:outputText>
+                
+                <apex:outputField value="{!got.Formula_Delivery_Date_Time__c}" rendered="{!(taskFieldManager.Default_Installation_Delivery_Date_Time__c!= $Label.GC_Label_TFM_Hide)}" />
+                <apex:outputText rendered="{!(taskFieldManager.Default_Installation_Delivery_Date_Time__c== $Label.GC_Label_TFM_Hide)}"></apex:outputText>      
+                <apex:outputField value="{!got.Delivery_Date_Time__c}" rendered="{!(taskFieldManager.Installation_Delivery_Date_Time__c!= $Label.GC_Label_TFM_Hide)}" />
+                <apex:outputText rendered="{!(taskFieldManager.Installation_Delivery_Date_Time__c== $Label.GC_Label_TFM_Hide)}"></apex:outputText>              
+                <apex:outputField value="{!got.Formula_Completion_Date_Time__c}" rendered="{!(taskFieldManager.Default_Completion_Date_Time__c!= $Label.GC_Label_TFM_Hide)}" />
+                <apex:outputText rendered="{!(taskFieldManager.Default_Completion_Date_Time__c== $Label.GC_Label_TFM_Hide)}"></apex:outputText>  
+                <apex:outputField value="{!got.Completion_Date_Time__c}" rendered="{!(taskFieldManager.Completion_Date_Time__c!= $Label.GC_Label_TFM_Hide)}" />
+                <apex:outputText rendered="{!(taskFieldManager.Completion_Date_Time__c== $Label.GC_Label_TFM_Hide)}"></apex:outputText>  
+                <apex:outputField value="{!got.Formula_Removal_Date_Time__c}" rendered="{!(taskFieldManager.Default_Removal_Date_Time__c!= $Label.GC_Label_TFM_Hide)}" />
+                <apex:outputText rendered="{!(taskFieldManager.Default_Removal_Date_Time__c== $Label.GC_Label_TFM_Hide)}"></apex:outputText>        
+                <apex:outputField value="{!got.Removal_Date_Time__c}" rendered="{!(taskFieldManager.Removal_Date_Time__c!= $Label.GC_Label_TFM_Hide)}"/>
+                <apex:outputText rendered="{!(taskFieldManager.Removal_Date_Time__c== $Label.GC_Label_TFM_Hide)}"></apex:outputText>            
+            </apex:pageBlockSection>        
+            <apex:pageBlockSection title="Remarks">
+                <apex:outputField value="{!got.Invoice_Remarks__c}" />
+                <apex:outputField value="{!got.Details_To_Invoice_Remarks__c}" />
+                <apex:outputField value="{!got.Show_Site_Remarks__c}" />
+                <apex:outputField value="{!got.Details_To_Show_Site_Remarks__c}" />
+                <apex:outputField value="{!got.Production_Remarks__c}" />
+                <!--SAL-501 -->
+                <apex:outputField value="{!got.Add_Client_Special_Info_Order_Remarks__c}" />   
+                <apex:outputField value="{!got.Item_Type_Remarks__c}" />
+                <apex:outputField value="{!got.Details_To_Production_Remarks__c}" />
+            </apex:pageBlockSection>
+            <apex:pageBlockSection title="Oracle EBS">
+                <apex:outputField value="{!got.Order_Number__c}" />
+                <apex:outputField value="{!got.Line_Item_Number__c}" />
+                <apex:outputField value="{!got.Line_Item_Status__c}" />
+            </apex:pageBlockSection>
+            <apex:pageBlockSection title="System Information">
+                <apex:outputField value="{!got.CreatedById}" />
+                <apex:outputField value="{!got.CreatedDate}" />
+                <apex:outputField value="{!got.LastModifiedById}" />
+                <apex:outputField value="{!got.LastModifiedDate}" />
+            </apex:pageBlockSection>
+        </apex:pageBlock>
+    </apex:form>
+    <apex:relatedList subject="{!got}" list="AttachedContentDocuments" />
+    <apex:relatedList subject="{!got}" list="AttachedContentNotes" />
+    <apex:relatedList subject="{!got}" list="CombinedAttachments" />
+    <apex:relatedList subject="{!got}" list="ProcessSteps" />
+    <apex:relatedList subject="{!got}" list="GC_Core_Interface_Logs__r" title="Web Service Logs" />
+    <apex:pageBlock title="Revision History" rendered="{!revisions.size > 0}">
+        <apex:pageBlockTable value="{!revisions}" var="revision">
+            <apex:column headervalue="Name">
+                <apex:outputLink value="{!URLFOR($Action.GC_GES_Order_Task__c.View, revision.id)}" target="_top">{!revision.Name}</apex:outputLink>
+            </apex:column>
+            <apex:column headervalue="Status">
+                <apex:outputText value="{!revision.Status__c}" />
+            </apex:column>
+            <apex:column headervalue="Revision">
+                <apex:outputText value="{!revision.Revision__c}" />
+            </apex:column>
+            <apex:column headervalue="Previous Revision">
+                <apex:outputText value="{!revision.Previous_Revision__r.Name}" />
+            </apex:column>
+            <apex:column headervalue="Last Revision Date">
+                <apex:outputField value="{!revision.Last_Revision__c}" />
+            </apex:column>
+        </apex:pageBlockTable>
+    </apex:pageBlock>
+    <c:GC_TaskHistoryComponent recordLimits="50" mysObject="{!got}" />
+    <script language="JavaScript" type="text/javascript">
+        var allTdTags = document.getElementsByTagName('td');
+        for (var i = 0; i < allTdTags.length; i++) {
+            if (allTdTags[i].className == 'pbButton') {
+            document.getElementsByName('piSubmit')[0].style.display = "none";
+            }
+        }
+    </script>
+</apex:page>

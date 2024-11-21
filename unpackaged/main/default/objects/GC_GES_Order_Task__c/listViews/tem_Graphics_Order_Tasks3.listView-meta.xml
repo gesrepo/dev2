@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>tem_Graphics_Order_Tasks3</fullName>
+    <columns>NAME</columns>
+    <columns>Status__c</columns>
+    <columns>CREATED_DATE</columns>
+    <columns>LAST_UPDATE</columns>
+    <columns>CREATEDBY_USER</columns>
+    <columns>User_Item_Description__c</columns>
+    <columns>Item_Number__c</columns>
+    <columns>Description__c</columns>
+    <columns>Price__c</columns>
+    <columns>Formula_Booth_Area__c</columns>
+    <columns>Order__c</columns>
+    <columns>Production_Remarks__c</columns>
+    <columns>Proof_Link__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Job_Number__c</field>
+        <operation>equals</operation>
+        <value>ENTER JOB NUMBER</value>
+    </filters>
+    <filters>
+        <field>Status__c</field>
+        <operation>equals</operation>
+        <value>Submitted</value>
+    </filters>
+    <filters>
+        <field>Item_Template__c</field>
+        <operation>equals</operation>
+        <value>Graphics</value>
+    </filters>
+    <label>TEMPLATE: Graphics Order Tasks</label>
+</ListView>

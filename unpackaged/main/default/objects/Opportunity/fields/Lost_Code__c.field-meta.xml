@@ -1,0 +1,445 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Lost_Code__c</fullName>
+    <label>Lost/Disqualified Reason</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>StageName</controllingField>
+        <valueSetDefinition>
+            <sorted>true</sorted>
+            <value>
+                <fullName>Agency lost pitch to client</fullName>
+                <default>false</default>
+                <label>Agency lost pitch to client</label>
+            </value>
+            <value>
+                <fullName>Canceled - Client Canceled</fullName>
+                <default>false</default>
+                <label>Canceled - Client Canceled</label>
+            </value>
+            <value>
+                <fullName>Canceled - Duplicate Project</fullName>
+                <default>false</default>
+                <label>Canceled - Duplicate Project</label>
+            </value>
+            <value>
+                <fullName>Cancelled attendance</fullName>
+                <default>false</default>
+                <label>Cancelled attendance</label>
+            </value>
+            <value>
+                <fullName>Costing | Client took cheaper offer</fullName>
+                <default>false</default>
+                <label>Costing | Client took cheaper offer</label>
+            </value>
+            <value>
+                <fullName>Creativity</fullName>
+                <default>false</default>
+                <label>Creativity</label>
+            </value>
+            <value>
+                <fullName>Declined - Insufficient budget</fullName>
+                <default>false</default>
+                <label>Declined - Insufficient budget</label>
+            </value>
+            <value>
+                <fullName>Declined - Other</fullName>
+                <default>false</default>
+                <label>Declined - Other</label>
+            </value>
+            <value>
+                <fullName>Declined - Timescale too tight</fullName>
+                <default>false</default>
+                <label>Declined - Timescale too tight</label>
+            </value>
+            <value>
+                <fullName>Design did not hit brief</fullName>
+                <default>false</default>
+                <label>Design did not hit brief</label>
+            </value>
+            <value>
+                <fullName>Disqualified - Client</fullName>
+                <default>false</default>
+                <label>Disqualified - Client</label>
+            </value>
+            <value>
+                <fullName>Disqualified - GES declined to bid</fullName>
+                <default>false</default>
+                <label>Disqualified - GES declined to bid</label>
+            </value>
+            <value>
+                <fullName>Disqualified - Other</fullName>
+                <default>false</default>
+                <label>Disqualified - Other</label>
+            </value>
+            <value>
+                <fullName>Lost: Cancelled Attendance</fullName>
+                <default>false</default>
+                <label>Lost: Cancelled Attendance</label>
+            </value>
+            <value>
+                <fullName>Lost - Capabilities</fullName>
+                <default>false</default>
+                <label>Lost - Capabilities</label>
+            </value>
+            <value>
+                <fullName>Lost - Cost preferred</fullName>
+                <default>false</default>
+                <label>Lost - Cost preferred</label>
+            </value>
+            <value>
+                <fullName>Lost - Creativity</fullName>
+                <default>false</default>
+                <label>Lost - Creativity</label>
+            </value>
+            <value>
+                <fullName>Lost - Design</fullName>
+                <default>false</default>
+                <label>Lost - Design</label>
+            </value>
+            <value>
+                <fullName>Lost - Expresso</fullName>
+                <default>false</default>
+                <label>Lost - Expresso</label>
+            </value>
+            <value>
+                <fullName>Lost - Internal Department</fullName>
+                <default>false</default>
+                <label>Lost - Internal Department</label>
+            </value>
+            <value>
+                <fullName>Lost - Non-Responsive Client</fullName>
+                <default>false</default>
+                <label>Lost - Non-Responsive Client</label>
+            </value>
+            <value>
+                <fullName>Lost - On Budget, Client took cheaper offer</fullName>
+                <default>false</default>
+                <label>Lost - On Budget, Client took cheaper offer</label>
+            </value>
+            <value>
+                <fullName>Lost - Other</fullName>
+                <default>false</default>
+                <label>Lost - Other</label>
+            </value>
+            <value>
+                <fullName>Lost - Over Budget</fullName>
+                <default>false</default>
+                <label>Lost - Over Budget</label>
+            </value>
+            <value>
+                <fullName>Lost - Previous Bad GES Experience</fullName>
+                <default>false</default>
+                <label>Lost - Previous Bad GES Experience</label>
+            </value>
+            <value>
+                <fullName>Lost - Price</fullName>
+                <default>false</default>
+                <label>Lost - Price</label>
+            </value>
+            <value>
+                <fullName>Lost - Product/Service Offering. Specify below.</fullName>
+                <default>false</default>
+                <label>Lost - Product/Service Offering. Specify below.</label>
+            </value>
+            <value>
+                <fullName>Lost - Relationship</fullName>
+                <default>false</default>
+                <label>Lost - Relationship</label>
+            </value>
+            <value>
+                <fullName>Lost - Returned to Lead Gen</fullName>
+                <default>false</default>
+                <label>Lost - Returned to Lead Gen</label>
+            </value>
+            <value>
+                <fullName>Lost - Stayed w/ Incumbent</fullName>
+                <default>false</default>
+                <label>Lost - Stayed w/ Incumbent</label>
+            </value>
+            <value>
+                <fullName>Lost - Stayed with Shell Scheme</fullName>
+                <default>false</default>
+                <label>Lost - Stayed with Shell Scheme</label>
+            </value>
+            <value>
+                <fullName>Lost - System preferred</fullName>
+                <default>false</default>
+                <label>Lost - System preferred</label>
+            </value>
+            <value>
+                <fullName>Lost to Competitor</fullName>
+                <default>false</default>
+                <label>Lost to Competitor</label>
+            </value>
+            <value>
+                <fullName>Lost - to incumbent</fullName>
+                <default>false</default>
+                <label>Lost - to incumbent</label>
+            </value>
+            <value>
+                <fullName>On Budget | Client took cheaper offer</fullName>
+                <default>false</default>
+                <label>On Budget | Client took cheaper offer</label>
+            </value>
+            <value>
+                <fullName>Over Budget</fullName>
+                <default>false</default>
+                <label>Over Budget</label>
+            </value>
+            <value>
+                <fullName>Poor Creativity</fullName>
+                <default>false</default>
+                <label>Poor Creativity</label>
+            </value>
+            <value>
+                <fullName>Poor Design</fullName>
+                <default>false</default>
+                <label>Poor Design</label>
+            </value>
+            <value>
+                <fullName>Previous Bad Experience</fullName>
+                <default>false</default>
+                <label>Previous Bad Experience</label>
+            </value>
+            <value>
+                <fullName>Products/Services Offering (Specify below)</fullName>
+                <default>false</default>
+                <label>Products/Services Offering (Specify below)</label>
+            </value>
+            <value>
+                <fullName>Slow Response</fullName>
+                <default>false</default>
+                <label>Slow Response</label>
+            </value>
+            <value>
+                <fullName>Went back to Shell Scheme</fullName>
+                <default>false</default>
+                <label>Went back to Shell Scheme</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>LO</controllingFieldValue>
+            <controllingFieldValue>Closed Lost</controllingFieldValue>
+            <controllingFieldValue>Lost</controllingFieldValue>
+            <valueName>Agency lost pitch to client</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>LO</controllingFieldValue>
+            <controllingFieldValue>Closed Lost</controllingFieldValue>
+            <controllingFieldValue>Lost</controllingFieldValue>
+            <valueName>Canceled - Client Canceled</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>LO</controllingFieldValue>
+            <controllingFieldValue>Closed Lost</controllingFieldValue>
+            <controllingFieldValue>Lost</controllingFieldValue>
+            <valueName>Canceled - Duplicate Project</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>LO</controllingFieldValue>
+            <controllingFieldValue>Closed Lost</controllingFieldValue>
+            <controllingFieldValue>Lost</controllingFieldValue>
+            <valueName>Cancelled attendance</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>LO</controllingFieldValue>
+            <controllingFieldValue>Lost</controllingFieldValue>
+            <valueName>Costing | Client took cheaper offer</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>LO</controllingFieldValue>
+            <controllingFieldValue>Closed Lost</controllingFieldValue>
+            <controllingFieldValue>Lost</controllingFieldValue>
+            <valueName>Creativity</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>LO</controllingFieldValue>
+            <controllingFieldValue>Lost</controllingFieldValue>
+            <valueName>Declined - Insufficient budget</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>LO</controllingFieldValue>
+            <controllingFieldValue>Lost</controllingFieldValue>
+            <valueName>Declined - Other</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>LO</controllingFieldValue>
+            <controllingFieldValue>Lost</controllingFieldValue>
+            <valueName>Declined - Timescale too tight</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>LO</controllingFieldValue>
+            <controllingFieldValue>Closed Lost</controllingFieldValue>
+            <controllingFieldValue>Lost</controllingFieldValue>
+            <valueName>Design did not hit brief</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>LO</controllingFieldValue>
+            <controllingFieldValue>Closed Lost</controllingFieldValue>
+            <controllingFieldValue>Lost</controllingFieldValue>
+            <valueName>Disqualified - Client</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>LO</controllingFieldValue>
+            <controllingFieldValue>Closed Lost</controllingFieldValue>
+            <controllingFieldValue>Lost</controllingFieldValue>
+            <valueName>Disqualified - GES declined to bid</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>LO</controllingFieldValue>
+            <controllingFieldValue>Closed Lost</controllingFieldValue>
+            <controllingFieldValue>Lost</controllingFieldValue>
+            <valueName>Disqualified - Other</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>LO</controllingFieldValue>
+            <controllingFieldValue>Lost</controllingFieldValue>
+            <valueName>Lost: Cancelled Attendance</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>LO</controllingFieldValue>
+            <controllingFieldValue>Closed Lost</controllingFieldValue>
+            <controllingFieldValue>Lost</controllingFieldValue>
+            <valueName>Lost - Capabilities</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>LO</controllingFieldValue>
+            <controllingFieldValue>Closed Lost</controllingFieldValue>
+            <controllingFieldValue>Lost</controllingFieldValue>
+            <valueName>Lost - Cost preferred</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>LO</controllingFieldValue>
+            <controllingFieldValue>Lost</controllingFieldValue>
+            <valueName>Lost - Creativity</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>LO</controllingFieldValue>
+            <controllingFieldValue>Closed Lost</controllingFieldValue>
+            <controllingFieldValue>Lost</controllingFieldValue>
+            <valueName>Lost - Design</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>LO</controllingFieldValue>
+            <controllingFieldValue>Lost</controllingFieldValue>
+            <valueName>Lost - Expresso</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>LO</controllingFieldValue>
+            <controllingFieldValue>Lost</controllingFieldValue>
+            <valueName>Lost - Non-Responsive Client</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>LO</controllingFieldValue>
+            <controllingFieldValue>Lost</controllingFieldValue>
+            <valueName>Lost - On Budget, Client took cheaper offer</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>LO</controllingFieldValue>
+            <controllingFieldValue>Closed Lost</controllingFieldValue>
+            <controllingFieldValue>Lost</controllingFieldValue>
+            <valueName>Lost - Other</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>LO</controllingFieldValue>
+            <controllingFieldValue>Lost</controllingFieldValue>
+            <valueName>Lost - Over Budget</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>LO</controllingFieldValue>
+            <controllingFieldValue>Lost</controllingFieldValue>
+            <valueName>Lost - Previous Bad GES Experience</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>LO</controllingFieldValue>
+            <controllingFieldValue>Closed Lost</controllingFieldValue>
+            <controllingFieldValue>Lost</controllingFieldValue>
+            <valueName>Lost - Price</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>LO</controllingFieldValue>
+            <controllingFieldValue>Lost</controllingFieldValue>
+            <valueName>Lost - Product/Service Offering. Specify below.</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>LO</controllingFieldValue>
+            <controllingFieldValue>Closed Lost</controllingFieldValue>
+            <controllingFieldValue>Lost</controllingFieldValue>
+            <valueName>Lost - Relationship</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>LO</controllingFieldValue>
+            <controllingFieldValue>Closed Lost</controllingFieldValue>
+            <controllingFieldValue>Lost</controllingFieldValue>
+            <valueName>Lost - Returned to Lead Gen</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>LO</controllingFieldValue>
+            <controllingFieldValue>Closed Lost</controllingFieldValue>
+            <controllingFieldValue>Lost</controllingFieldValue>
+            <valueName>Lost - Stayed w/ Incumbent</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>LO</controllingFieldValue>
+            <controllingFieldValue>Lost</controllingFieldValue>
+            <valueName>Lost - Stayed with Shell Scheme</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>LO</controllingFieldValue>
+            <controllingFieldValue>Closed Lost</controllingFieldValue>
+            <controllingFieldValue>Lost</controllingFieldValue>
+            <valueName>Lost - System preferred</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>LO</controllingFieldValue>
+            <controllingFieldValue>Lost</controllingFieldValue>
+            <valueName>Lost to Competitor</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>LO</controllingFieldValue>
+            <controllingFieldValue>Lost</controllingFieldValue>
+            <valueName>Lost - to incumbent</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>LO</controllingFieldValue>
+            <controllingFieldValue>Closed Lost</controllingFieldValue>
+            <controllingFieldValue>Lost</controllingFieldValue>
+            <valueName>On Budget | Client took cheaper offer</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>LO</controllingFieldValue>
+            <controllingFieldValue>Closed Lost</controllingFieldValue>
+            <controllingFieldValue>Lost</controllingFieldValue>
+            <valueName>Over Budget</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>LO</controllingFieldValue>
+            <controllingFieldValue>Lost</controllingFieldValue>
+            <valueName>Poor Creativity</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>LO</controllingFieldValue>
+            <controllingFieldValue>Lost</controllingFieldValue>
+            <valueName>Poor Design</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>LO</controllingFieldValue>
+            <controllingFieldValue>Closed Lost</controllingFieldValue>
+            <controllingFieldValue>Lost</controllingFieldValue>
+            <valueName>Previous Bad Experience</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>LO</controllingFieldValue>
+            <controllingFieldValue>Lost</controllingFieldValue>
+            <valueName>Products/Services Offering (Specify below)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Closed Lost</controllingFieldValue>
+            <valueName>Went back to Shell Scheme</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

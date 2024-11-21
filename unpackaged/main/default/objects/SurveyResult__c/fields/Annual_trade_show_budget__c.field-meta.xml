@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Annual_trade_show_budget__c</fullName>
+    <label>Annual trade show budget</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>No more than £25k</fullName>
+                <default>false</default>
+                <label>No more than £25k</label>
+            </value>
+            <value>
+                <fullName>From £25k to £50k</fullName>
+                <default>false</default>
+                <label>From £25k to £50k</label>
+            </value>
+            <value>
+                <fullName>From £50k to £175k</fullName>
+                <default>false</default>
+                <label>From £50k to £175k</label>
+            </value>
+            <value>
+                <fullName>From £175k to £700k</fullName>
+                <default>false</default>
+                <label>From £175k to £700k</label>
+            </value>
+            <value>
+                <fullName>Over £700k</fullName>
+                <default>false</default>
+                <label>Over £700k</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

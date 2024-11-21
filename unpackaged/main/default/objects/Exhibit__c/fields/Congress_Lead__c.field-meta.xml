@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Congress_Lead__c</fullName>
+    <label>Congress Lead</label>
+    <required>true</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Don Schmid</fullName>
+                <default>false</default>
+                <label>Don Schmid</label>
+            </value>
+            <value>
+                <fullName>Laine Mann</fullName>
+                <default>false</default>
+                <label>Laine Mann</label>
+            </value>
+            <value>
+                <fullName>Lee Kim</fullName>
+                <default>false</default>
+                <label>Lee Kim</label>
+            </value>
+            <value>
+                <fullName>Sandra Kusek</fullName>
+                <default>false</default>
+                <label>Sandra Kusek</label>
+            </value>
+            <value>
+                <fullName>Suthee Suvansri</fullName>
+                <default>false</default>
+                <label>Suthee Suvansri</label>
+            </value>
+            <value>
+                <fullName>Virginia Hayward</fullName>
+                <default>false</default>
+                <label>Virginia Hayward</label>
+            </value>
+            <value>
+                <fullName>n/a</fullName>
+                <default>false</default>
+                <label>n/a</label>
+            </value>
+            <value>
+                <fullName>Carson, Jeffery</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Carson, Jeffery</label>
+            </value>
+            <value>
+                <fullName>Cristine Watrous</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Cristine Watrous</label>
+            </value>
+            <value>
+                <fullName>Hayward, Virginia</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Hayward, Virginia</label>
+            </value>
+            <value>
+                <fullName>Jeffery Carson</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Jeffery Carson</label>
+            </value>
+            <value>
+                <fullName>Kim, Lee</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Kim, Lee</label>
+            </value>
+            <value>
+                <fullName>Kusek, Sandra</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Kusek, Sandra</label>
+            </value>
+            <value>
+                <fullName>Mann, Laine</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Mann, Laine</label>
+            </value>
+            <value>
+                <fullName>Schmid, Don</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Schmid, Don</label>
+            </value>
+            <value>
+                <fullName>Suvansri, Suthee</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Suvansri, Suthee</label>
+            </value>
+            <value>
+                <fullName>Watrous, Cristine</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Watrous, Cristine</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

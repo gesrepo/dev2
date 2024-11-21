@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>GDPR_Addendum_Pending__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Used to track where the check is being processed</description>
+    <label>GDPR Addendum Pending</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

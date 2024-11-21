@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>AV_TS_LO_CR_CVRequest_Require_AV_Company</fullName>
+    <active>true</active>
+    <description>On AV record types, if the requested stage is CV, CR, TS or LO, require an entry in the Audio Visual Company field.</description>
+    <errorConditionFormula>AND(
+ISBLANK(TEXT(Audio_Visual_Provider__c)), 
+NOT(ISBLANK(Project_Start_Date__c)),
+
+OR(
+$RecordType.DeveloperName = &quot;AV_CC&quot;, 
+$RecordType.DeveloperName = &quot;AV_CR&quot;, 
+$RecordType.DeveloperName = &quot;AV_CV&quot;, 
+$RecordType.DeveloperName = &quot;AV_DB&quot;, 
+$RecordType.DeveloperName = &quot;AV_IA&quot;, 
+$RecordType.DeveloperName = &quot;AV_LO&quot;, 
+$RecordType.DeveloperName = &quot;AV&quot;, 
+$RecordType.DeveloperName = &quot;AV_PS&quot;,
+$RecordType.DeveloperName = &quot;AV_TS&quot;,
+$RecordType.DeveloperName = &quot;AV_Exhibitor_CR&quot;, 
+$RecordType.DeveloperName = &quot;AV_Exhibitor_CV&quot;, 
+$RecordType.DeveloperName = &quot;AV_Exhibitor_LO&quot;, 
+$RecordType.DeveloperName = &quot;AV_Exhibitor_CC&quot;, 
+$RecordType.DeveloperName = &quot;AV_Exhibitor_IA&quot;, 
+$RecordType.DeveloperName = &quot;AV_Exhibitor_DB&quot;, 
+$RecordType.DeveloperName = &quot;AV_Exhibitor_Master&quot;, 
+$RecordType.DeveloperName = &quot;AV_Exhibitor_PS&quot;, 
+$RecordType.DeveloperName = &quot;AV_Exhibitor_TS&quot;), 
+
+NOT(OR(
+$Profile.Name = &quot;GES Interface&quot;,
+$Profile.Name = &quot;GES Administrator Interface&quot;, 
+$Profile.Name = &quot;ONS Integration Interface&quot;, 
+$Profile.Name = &quot;System Administrator&quot;)), 
+
+OR(
+ISPICKVAL(Requested_Stage__c,&quot;LO&quot;),
+ISPICKVAL(Requested_Stage__c,&quot;CV&quot;),
+ISPICKVAL(Requested_Stage__c,&quot;CR&quot;),
+ISPICKVAL(StageName,&quot;TS&quot;),
+ISPICKVAL(Requested_Stage__c,&quot;Lost&quot;),
+ISPICKVAL(Requested_Stage__c,&quot;Verbal Win&quot;),
+ISPICKVAL(Requested_Stage__c,&quot;Contract Win&quot;),
+ISPICKVAL(StageName,&quot;Tracking Show&quot;))
+)</errorConditionFormula>
+    <errorDisplayField>Audio_Visual_Provider__c</errorDisplayField>
+    <errorMessage>Please choose an Audio Visual Company.</errorMessage>
+</ValidationRule>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Case_Required_Customer_Name_Generic</fullName>
+    <active>true</active>
+    <description>When generic customer is selected in Account field, Customer Name field is required.</description>
+    <errorConditionFormula>AND(OR(Account.Name = &#39;EXHIBITOR&#39;,Account.Name = &#39;NON-EXHIBITOR&#39;), NOT($Profile.Name = &#39;GES Interface&#39;), ISBLANK(Customer_Name__c))</errorConditionFormula>
+    <errorMessage>Customer name must be manually entered when generic customer is selected in Account Name field.</errorMessage>
+</ValidationRule>

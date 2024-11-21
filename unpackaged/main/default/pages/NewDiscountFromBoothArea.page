@@ -1,0 +1,26 @@
+<apex:page standardController="Booth_Area__c" extensions="DiscountController">
+    <apex:stylesheet value="{!URLFOR($Resource.GC_Assets, 'GC_Assets/css/GC_PageStyles.css')}" />
+    <apex:form >
+        <apex:pageBlock >
+            <apex:pageMessages />
+            <apex:pageBlockSection title="Create Discount">
+              <apex:outputField value="{!varDiscount.Booth_Area__c}"/> 
+              <apex:inputField value="{!varDiscount.LineOfBusiness__c }" />
+              <apex:inputField value="{!varDiscount.Discount__c}" />
+                               
+               
+                
+                <apex:inputCheckbox value="{!varDiscount.Apply_To_All__c}"/>
+                    
+                 
+            </apex:pageBlockSection>
+                
+            <apex:pageBlockButtons location="bottom">
+            <apex:commandButton value=" Submit" action="{!discountSubmission}" rendered="{!IF(AND(boothId!= NULL, discountId == NULL), TRUE, FALSE)}" id="Submit" />
+            <apex:commandbutton value="Update" action="{!discountUpdate}" rendered="{!IF(AND(boothId!= NULL, discountId != NULL), TRUE, FALSE)}" id="Update" />
+            <apex:commandbutton value="Delete" action="{!discountDelete}" rendered="{!IF(AND(boothId!= NULL, discountId != NULL), TRUE, FALSE)}" id="Delete" />
+            </apex:pageBlockButtons>
+            
+        </apex:pageBlock>   
+    </apex:form>
+ </apex:page>

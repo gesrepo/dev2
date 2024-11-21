@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Booth_Upload_API__c</fullName>
+    <label>Booth Upload API</label>
+    <referenceTo>Booth_API_Upload__c</referenceTo>
+    <relationshipLabel>EMEA Booth API Staging items</relationshipLabel>
+    <relationshipName>EMEA_Booth_API_Staging_items</relationshipName>
+    <relationshipOrder>0</relationshipOrder>
+    <reparentableMasterDetail>false</reparentableMasterDetail>
+    <trackTrending>false</trackTrending>
+    <type>MasterDetail</type>
+    <writeRequiresMasterRead>false</writeRequiresMasterRead>
+</CustomField>

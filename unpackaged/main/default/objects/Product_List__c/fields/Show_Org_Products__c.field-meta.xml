@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Show_Org_Products__c</fullName>
+    <description>It will keep a copy of values returned from GetShowOrgProducts method and can be refreshed anytime by using the refresh button on GOT Create Page</description>
+    <label>Show Org Products</label>
+    <length>131072</length>
+    <trackTrending>false</trackTrending>
+    <type>LongTextArea</type>
+    <visibleLines>3</visibleLines>
+</CustomField>

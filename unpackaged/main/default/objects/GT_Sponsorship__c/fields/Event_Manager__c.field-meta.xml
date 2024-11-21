@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Event_Manager__c</fullName>
+    <label>Event Manager</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Juanita Timney</fullName>
+                <default>false</default>
+                <label>Juanita Timney</label>
+            </value>
+            <value>
+                <fullName>Stephanie Naida</fullName>
+                <default>false</default>
+                <label>Stephanie Naida</label>
+            </value>
+            <value>
+                <fullName>Cassandra Zwick</fullName>
+                <default>false</default>
+                <label>Cassandra Zwick</label>
+            </value>
+            <value>
+                <fullName>Joanne Hynes</fullName>
+                <default>false</default>
+                <label>Joanne Hynes</label>
+            </value>
+            <value>
+                <fullName>Kayleigh Fortuna</fullName>
+                <default>false</default>
+                <label>Kayleigh Fortuna</label>
+            </value>
+            <value>
+                <fullName>Lisandra Fernandez</fullName>
+                <default>false</default>
+                <label>Lisandra Fernandez</label>
+            </value>
+            <value>
+                <fullName>Katie Lillie</fullName>
+                <default>false</default>
+                <label>Katie Lillie</label>
+            </value>
+            <value>
+                <fullName>Caitlin Ferdyn</fullName>
+                <default>false</default>
+                <label>Caitlin Ferdyn</label>
+            </value>
+            <value>
+                <fullName>Don Schmid</fullName>
+                <default>false</default>
+                <label>Don Schmid</label>
+            </value>
+            <value>
+                <fullName>Laine Mann</fullName>
+                <default>false</default>
+                <label>Laine Mann</label>
+            </value>
+            <value>
+                <fullName>Lee Kim</fullName>
+                <default>false</default>
+                <label>Lee Kim</label>
+            </value>
+            <value>
+                <fullName>Sandra Kusek</fullName>
+                <default>false</default>
+                <label>Sandra Kusek</label>
+            </value>
+            <value>
+                <fullName>Suthee Suvansri</fullName>
+                <default>false</default>
+                <label>Suthee Suvansri</label>
+            </value>
+            <value>
+                <fullName>Virginia Hayward</fullName>
+                <default>false</default>
+                <label>Virginia Hayward</label>
+            </value>
+            <value>
+                <fullName>N/A</fullName>
+                <default>false</default>
+                <label>N/A</label>
+            </value>
+            <value>
+                <fullName>Shawn McDonald</fullName>
+                <default>false</default>
+                <label>Shawn McDonald</label>
+            </value>
+            <value>
+                <fullName>Aisling Meehan</fullName>
+                <default>false</default>
+                <label>Aisling Meehan</label>
+            </value>
+            <value>
+                <fullName>Nicole Brown</fullName>
+                <default>false</default>
+                <label>Nicole Brown</label>
+            </value>
+            <value>
+                <fullName>Lisa Mahan</fullName>
+                <default>false</default>
+                <label>Lisa Mahan</label>
+            </value>
+            <value>
+                <fullName>Michael Clearey</fullName>
+                <default>false</default>
+                <label>Michael Clearey</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

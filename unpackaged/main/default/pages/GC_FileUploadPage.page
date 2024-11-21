@@ -1,0 +1,82 @@
+<apex:page standardStylesheets="true" showHeader="false" sidebar="false" applyHtmlTag="false" applyBodyTag="false" docType="html-5.0" Controller="GC_FileUploadPageController">
+    <!-- Begin Default Content REMOVE THIS -->
+    <html xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        
+        <head> 
+            <apex:includeScript value="{!$Resource.jQuery}" /> 
+            <apex:includeScript value="{!URLFOR($Resource.GC_Assets, 'GC_Assets/js/GC_init.js')}" />
+            <apex:stylesheet value="{!URLFOR($Resource.Lightning_Design_System, 'assets/styles/salesforce-lightning-design-system.min.css')}" />
+            <apex:stylesheet value="{!URLFOR($Resource.GC_Assets, 'GC_Assets/css/GC_Styles.css')}" />
+        </head>
+        <apex:sectionHeader title="Attach file for" subtitle="{!recordName}"/>
+        
+        <script>
+        
+        $( document ).ready(function() {    
+            $('#publisherAttachContentPost').trigger('click');
+            $('#chatterUploadFileAction').trigger('click');          
+            $('.contentPublisherSlideDown.customPanel.alignTop').css('border', '0');
+            $('.clearContentPanelButtonContainer').hide();
+            $('.publisherFeedItemTypeChoices').hide();      
+            $('.cxfeedinnerwrapper').hide();  
+            $('.publisherBottomBarPlaceholder').hide();
+            $('.publisherTextAreaPlaceholder.alignCenter').hide();
+        })
+        
+        function uploadJSAction(){
+            if($('.file')[1].files.length > 0){
+                $('#publishersharebutton').trigger('click');
+                alert('Please close the page once the upload is finished. Thank you. Press Ok to continue.');
+                
+            }else{
+                alert('Please select a file');
+            }
+        }
+        
+        </script>
+        <apex:pageBlock >
+            <div class="genericPageBlockTable">
+                <table>
+                    <tr>
+                        <td><strong>1. Select the File</strong></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <chatter:feed entityId="{!recordId}"/>
+                        </td>
+                    </tr>
+                    <tr><td><strong>2. Click the "Attach File" button.</strong></td></tr>
+                    <tr>
+                        <td style="margin-top: 10px; ">
+                            <div class="slds-card__header slds-grid" role="banner">
+                                <div>
+                                    <div class="slds-grid--align-center">
+                                        <div>   
+                                            <button onclick="uploadJSAction()">Attach File</button>   
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><strong>3. Click the "Done" button to close this tab.</strong></td>
+                    </tr>
+                    <tr>
+                        <td style="margin-top: 10px; ">
+                            <div class="slds-card__header slds-grid" role="banner">
+                                <div>
+                                    <div class="slds-grid--align-center">
+                                        <div>   
+                                            <button onclick="window.close();">Done</button>   
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </apex:pageBlock>
+    </html>   
+</apex:page>

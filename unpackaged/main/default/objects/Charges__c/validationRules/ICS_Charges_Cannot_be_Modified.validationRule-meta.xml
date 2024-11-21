@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ICS_Charges_Cannot_be_Modified</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND (OR
+(
+ISPICKVAL( CSI_ICS__r.Case_Approval_Status__c , &#39;Case Approved&#39;),
+ISPICKVAL( CSI_ICS__r.Case_Approval_Status__c , &#39;Requestor Submitted&#39; ), 
+ISPICKVAL( CSI_ICS__r.Case_Approval_Status__c , &#39;LOB Submitted&#39; ), 
+ISPICKVAL( CSI_ICS__r.Case_Approval_Status__c , &#39;F&amp;R Submitted&#39; ), 
+ISPICKVAL( CSI_ICS__r.Case_Approval_Status__c , &#39;AR1 Submitted&#39; ), 
+ISPICKVAL( CSI_ICS__r.Case_Approval_Status__c , &#39;AR2 Submitted&#39; ) 
+),
+OR(ISCHANGED( Total_Amount__c ), 
+ISCHANGED( Pymt_Type__c ), 
+ISCHANGED( Sales_Receipt__c ), 
+ISCHANGED( Sales_Order__c ), 
+ISCHANGED( Justification_for_Charges_Request__c), 
+ISCHANGED( Sales_Order__c ), 
+ISCHANGED( Last_4_of_CC__c ), 
+ISCHANGED( Last_4_of_Token__c )))</errorConditionFormula>
+    <errorMessage>Case is Already Submitted for Approval. 
+You don&#39;t have access to Modify.</errorMessage>
+</ValidationRule>

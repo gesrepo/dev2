@@ -1,0 +1,8 @@
+<apex:page showHeader="true" sidebar="true" standardController="Discount__c">
+    <header>
+    <H1><b> Discount should only be Created / Edited via the Booth Area. </b></H1>
+    <br/>
+    <br/>
+        <H1><b> Please use the Booth Area to update/Create Discounts. </b></H1>
+    </header>
+</apex:page>

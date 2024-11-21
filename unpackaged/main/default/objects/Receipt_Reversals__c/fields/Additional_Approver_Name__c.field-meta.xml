@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Additional_Approver_Name__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <label>Additional Approver Name</label>
+    <referenceTo>Employees__c</referenceTo>
+    <relationshipLabel>Receipt Reversals (Additional Approver Name)</relationshipLabel>
+    <relationshipName>Receipt_Reversals1</relationshipName>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

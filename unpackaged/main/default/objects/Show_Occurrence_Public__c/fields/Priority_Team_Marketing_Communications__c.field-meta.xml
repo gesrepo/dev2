@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Priority_Team_Marketing_Communications__c</fullName>
+    <label>E&amp;E Marketing Communications</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Intro Email</fullName>
+                <default>false</default>
+                <label>Intro Email</label>
+            </value>
+            <value>
+                <fullName>Phone Call #1</fullName>
+                <default>false</default>
+                <label>Phone Call #1</label>
+            </value>
+            <value>
+                <fullName>Portables</fullName>
+                <default>false</default>
+                <label>Portables</label>
+            </value>
+            <value>
+                <fullName>Cost Analysis</fullName>
+                <default>false</default>
+                <label>Cost Analysis</label>
+            </value>
+            <value>
+                <fullName>Design Offer</fullName>
+                <default>false</default>
+                <label>Design Offer</label>
+            </value>
+            <value>
+                <fullName>Mktg Solutions Offer</fullName>
+                <default>false</default>
+                <label>Mktg Solutions Offer</label>
+            </value>
+            <value>
+                <fullName>Phone Call #2</fullName>
+                <default>false</default>
+                <label>Phone Call #2</label>
+            </value>
+            <value>
+                <fullName>Closing Email</fullName>
+                <default>false</default>
+                <label>Closing Email</label>
+            </value>
+            <value>
+                <fullName>Web Lead</fullName>
+                <default>false</default>
+                <label>Web Lead</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

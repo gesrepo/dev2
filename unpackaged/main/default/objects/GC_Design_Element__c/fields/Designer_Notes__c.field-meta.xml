@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Designer_Notes__c</fullName>
+    <description>Used for the Designer/Detailer to place links for the Design Deliverables.</description>
+    <inlineHelpText>Used for the Designer/Detailer to place links for the Design Deliverables.</inlineHelpText>
+    <label>Link(s) to Design Deliverables</label>
+    <length>131072</length>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>LongTextArea</type>
+    <visibleLines>3</visibleLines>
+</CustomField>

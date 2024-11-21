@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Job_Number_EMEA_Office_Use_Only__c</fullName>
+    <description>Manual field to capture Job Numbers for the EMEA office while they are not connected to an automated feed either on their side or the US side</description>
+    <externalId>false</externalId>
+    <label>Job Number (EMEA Office Use Only)</label>
+    <length>20</length>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

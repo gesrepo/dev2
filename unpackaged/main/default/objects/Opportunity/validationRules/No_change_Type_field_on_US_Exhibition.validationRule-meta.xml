@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>No_change_Type_field_on_US_Exhibition</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND 
+(ISCHANGED(Type), 
+NOT(OR(
+$Profile.Name = &quot;GES Interface&quot;,
+$Profile.Name = &quot;Merge System Administrator&quot;,
+$Profile.Name = &quot;System Administrator&quot;,
+$User.Id = &quot;00540000001dTIh&quot;, 
+/*Birdie  To add projects to CORE, needs to modify exhibition opp record Type field to Competitor CORE Show, then uses Send Competitor Show to CORE button which generates a non-GES type job number. After she reverts the record back to its original type. */ 
+
+$User.Id = &quot;00540000001BHD3&quot;,  /*Brenda Todd for Canada ok per Craig D 12/10/18 */ 
+$User.Id = &quot;00540000000oQTe&quot;  /*Jean - Birdie&#39;s backup*/ 
+)),
+
+(OR(
+ RecordTypeId = &quot;012400000005OK7&quot;,
+ RecordTypeId = &quot;012400000005OKC&quot;,          
+ RecordTypeId = &quot;012400000005P1o&quot;,
+ RecordTypeId = &quot;012400000005P0q&quot;,
+ RecordTypeId = &quot;012400000005P6j&quot;,
+ RecordTypeId = &quot;0124000000016VM&quot;,
+ RecordTypeId = &quot;012400000005P1t&quot;,
+ RecordTypeId = &quot;012400000005P5q&quot;,
+ RecordTypeId = &quot;0124000000014HI&quot;,
+ RecordTypeId = &quot;012400000005P5v&quot;,
+ RecordTypeId = &quot;0124000000016VN&quot;,
+ RecordTypeId = &quot;012400000005P0W&quot;,
+ RecordTypeId = &quot;012400000005P6k&quot;
+)))</errorConditionFormula>
+    <errorDisplayField>Type</errorDisplayField>
+    <errorMessage>Please contact Craig Dingwall to make changes to the Type field.</errorMessage>
+</ValidationRule>

@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Currency_of_Event__c</fullName>
+    <label>Currency of Event</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>US Dollar</fullName>
+                <default>false</default>
+                <label>US Dollar</label>
+            </value>
+            <value>
+                <fullName>British Pound</fullName>
+                <default>false</default>
+                <label>British Pound</label>
+            </value>
+            <value>
+                <fullName>Euro</fullName>
+                <default>false</default>
+                <label>Euro</label>
+            </value>
+            <value>
+                <fullName>Canadian Dollar</fullName>
+                <default>false</default>
+                <label>Canadian Dollar</label>
+            </value>
+            <value>
+                <fullName>Hong Kong Dollar</fullName>
+                <default>false</default>
+                <label>Hong Kong Dollar</label>
+            </value>
+            <value>
+                <fullName>UAE Dirham</fullName>
+                <default>false</default>
+                <label>UAE Dirham</label>
+            </value>
+            <value>
+                <fullName>Singapore Dollar</fullName>
+                <default>false</default>
+                <label>Singapore Dollar</label>
+            </value>
+            <value>
+                <fullName>Swiss Franc</fullName>
+                <default>false</default>
+                <label>Swiss Franc</label>
+            </value>
+            <value>
+                <fullName>Japanese Yen</fullName>
+                <default>false</default>
+                <label>Japanese Yen</label>
+            </value>
+            <value>
+                <fullName>Danish Krone</fullName>
+                <default>false</default>
+                <label>Danish Krone</label>
+            </value>
+            <value>
+                <fullName>GBP</fullName>
+                <default>false</default>
+                <label>GBP</label>
+            </value>
+            <value>
+                <fullName>CAD</fullName>
+                <default>false</default>
+                <label>CAD</label>
+            </value>
+            <value>
+                <fullName>DKK</fullName>
+                <default>false</default>
+                <label>DKK</label>
+            </value>
+            <value>
+                <fullName>HKD</fullName>
+                <default>false</default>
+                <label>HKD</label>
+            </value>
+            <value>
+                <fullName>JPY</fullName>
+                <default>false</default>
+                <label>JPY</label>
+            </value>
+            <value>
+                <fullName>SGD</fullName>
+                <default>false</default>
+                <label>SGD</label>
+            </value>
+            <value>
+                <fullName>CHF</fullName>
+                <default>false</default>
+                <label>CHF</label>
+            </value>
+            <value>
+                <fullName>USD</fullName>
+                <default>false</default>
+                <label>USD</label>
+            </value>
+            <value>
+                <fullName>AED</fullName>
+                <default>false</default>
+                <label>AED</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Europe</fullName>
+    <active>true</active>
+    <label>Europe</label>
+    <picklistValues>
+        <picklist>Know_Your_Show_Used_By__c</picklist>
+        <values>
+            <fullName>Be</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Determined</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>To</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Values</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Leadership_Team_Policy_Procedure_Polic30__c</picklist>
+        <values>
+            <fullName>Be</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Determined</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>To</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Values</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Leadership_Team_Policy_Procedure_Polic92__c</picklist>
+        <values>
+            <fullName>Be</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Determined</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>To</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Values</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Policy_and_Procedure_Policy_or_Procedu56__c</picklist>
+        <values>
+            <fullName>All Departments</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Archivist</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CAS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Inbound NSC %E2%80%93 Chat</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Inbound NSC - Phones</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Kit Admin</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lead Generation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Logistics</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Order Entry</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Outbound NSC</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Resolutions</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Support Desk</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Policy_and_Procedure_Policy_or_Procedu80__c</picklist>
+        <values>
+            <fullName>To Be Determined</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Show_Process_Update_Used_By__c</picklist>
+        <values>
+            <fullName>All Departments</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Archivist</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CAS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Inbound NSC %E2%80%93 Chat</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Inbound NSC - Phones</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Kit Admin</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lead Generation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Logistics</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Order Entry</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Outbound NSC</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Resolutions</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Support Desk</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

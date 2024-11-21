@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>GES_Congress_Manager__c</fullName>
+    <label>GES Congress Manager</label>
+    <required>true</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Andrea Speckin</fullName>
+                <default>false</default>
+                <label>Andrea Speckin</label>
+            </value>
+            <value>
+                <fullName>Ashley Simmons</fullName>
+                <default>false</default>
+                <label>Ashley Simmons</label>
+            </value>
+            <value>
+                <fullName>Eva Keogh</fullName>
+                <default>false</default>
+                <label>Eva Keogh</label>
+            </value>
+            <value>
+                <fullName>Francesca Molisso</fullName>
+                <default>false</default>
+                <label>Francesca Molisso</label>
+            </value>
+            <value>
+                <fullName>Gail Griffith</fullName>
+                <default>false</default>
+                <label>Gail Griffith</label>
+            </value>
+            <value>
+                <fullName>Jessica Bodner</fullName>
+                <default>false</default>
+                <label>Jessica Bodner</label>
+            </value>
+            <value>
+                <fullName>Kathy Deneen</fullName>
+                <default>false</default>
+                <label>Kathy Deneen</label>
+            </value>
+            <value>
+                <fullName>Linnell Navarro</fullName>
+                <default>false</default>
+                <label>Linnell Navarro</label>
+            </value>
+            <value>
+                <fullName>Melinda Powers</fullName>
+                <default>false</default>
+                <label>Melinda Powers</label>
+            </value>
+            <value>
+                <fullName>Tara Nigro</fullName>
+                <default>false</default>
+                <label>Tara Nigro</label>
+            </value>
+            <value>
+                <fullName>Wendy Irvine</fullName>
+                <default>false</default>
+                <label>Wendy Irvine</label>
+            </value>
+            <value>
+                <fullName>n/a</fullName>
+                <default>false</default>
+                <label>n/a</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

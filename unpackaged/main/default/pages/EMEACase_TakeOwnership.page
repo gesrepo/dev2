@@ -1,0 +1,5 @@
+<apex:page standardController="Case" tabStyle="Case" >
+    <flow:interview name="EMEA_Case_Take_Ownership">
+        <apex:param name="Var_CaseID_Start_Input" value="{!Case.Id}"/>
+    </flow:interview>
+</apex:page>

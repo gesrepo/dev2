@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StandardValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sorted>false</sorted>
+    <standardValue>
+        <fullName>Convention Center</fullName>
+        <default>false</default>
+        <label>Convention Center</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Contractor Competitor</fullName>
+        <default>false</default>
+        <label>Contractor Competitor</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Hotel</fullName>
+        <default>false</default>
+        <label>Hotel</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Other Facility Types</fullName>
+        <default>false</default>
+        <label>Other Facility Types</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Association</fullName>
+        <default>true</default>
+        <label>Association</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Portfolio</fullName>
+        <default>false</default>
+        <label>Portfolio</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Corporation</fullName>
+        <default>false</default>
+        <label>Corporation</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Independent Organizer</fullName>
+        <default>false</default>
+        <label>Independent Organizer</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Show Management</fullName>
+        <default>false</default>
+        <label>Show Management</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Industry Associate</fullName>
+        <default>false</default>
+        <label>Industry Associate</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Analyst</fullName>
+        <default>false</default>
+        <label>Analyst</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Customer</fullName>
+        <default>false</default>
+        <label>Customer</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Competitor</fullName>
+        <default>false</default>
+        <label>Competitor</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Investor</fullName>
+        <default>false</default>
+        <label>Investor</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Partner</fullName>
+        <default>false</default>
+        <label>Partner</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Prospect</fullName>
+        <default>false</default>
+        <label>Prospect</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Reseller</fullName>
+        <default>false</default>
+        <label>Reseller</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Agency</fullName>
+        <default>false</default>
+        <label>Agency</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Vendor</fullName>
+        <default>false</default>
+        <label>Vendor</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Event Management</fullName>
+        <default>false</default>
+        <label>Event Management</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Theatre</fullName>
+        <default>false</default>
+        <label>Theatre</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Supplier</fullName>
+        <default>false</default>
+        <label>Supplier</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Venue</fullName>
+        <default>false</default>
+        <label>Venue</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Graphics</fullName>
+        <default>false</default>
+        <label>Graphics</label>
+    </standardValue>
+</StandardValueSet>

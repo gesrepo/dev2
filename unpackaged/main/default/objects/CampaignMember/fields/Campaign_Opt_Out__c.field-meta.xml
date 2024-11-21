@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Campaign_Opt_Out__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Opts campaign member out of current associated campaign only</description>
+    <label>Campaign Opt Out</label>
+    <type>Checkbox</type>
+</CustomField>

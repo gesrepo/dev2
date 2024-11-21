@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Billing_State_Valid</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(OR (BillingCountry = &#39;US&#39; &amp;&amp; 
+NOT( 
+CONTAINS( 
+&quot;AL:AK:AZ:AR:CA:CO:CT:DE:DC:FL:GA:HI:ID:&quot; &amp; 
+&quot;IL:IN:IA:KS:KY:LA:ME:MD:MA:MI:MN:MS:MO:MT:&quot; &amp; 
+&quot;NE:NV:NH:NJ:NM:NY:NC:ND:OH:OK:OR:PA:RI:SC:&quot; &amp; 
+&quot;SD:TN:TX:UT:VT:VA:WV:WA:WI:WY:AS:GU:MP:PR:&quot; &amp; 
+&quot;VI:FM:MH:PW:AA:AE:AP:CZ:PI:TT:CM:&quot;,
+BillingState))), $RecordType.DeveloperName = &quot;Exhibitor&quot;,NOT(OR($Profile.Name = &#39;GES Interface&#39;,$Profile.Name = &#39;System Administrator&#39;,$Profile.Name = &#39;EDAdmin_Interface&#39;, $Profile.Name = &#39;EDAdmin_Interface&#39;,$Profile.Name = &#39;EMEA Salesforce Support User&#39;,$Profile.Name = &#39;SOP Interface&#39;,
+$Profile.Name = &quot;GES Administrator Interface&quot;,$Profile.Name = &#39;EMEA System Administrator&#39;,$Profile.Name = &#39;EMEA Spiro Interface&#39;)))</errorConditionFormula>
+    <errorDisplayField>BillingState</errorDisplayField>
+    <errorMessage>Please enter a valid State</errorMessage>
+</ValidationRule>

@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Refund_Adj_Reason_Code__c</fullName>
+    <label>Refund/Adj Reason Code</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Audio Visual</fullName>
+                <default>false</default>
+                <label>Audio Visual</label>
+            </value>
+            <value>
+                <fullName>Cancelled order</fullName>
+                <default>false</default>
+                <label>Cancelled order</label>
+            </value>
+            <value>
+                <fullName>Check/Wire received after Credit Card was Charged</fullName>
+                <default>false</default>
+                <label>Check/Wire received after Credit Card was Charged</label>
+            </value>
+            <value>
+                <fullName>Customer Cancelled from Show</fullName>
+                <default>false</default>
+                <label>Customer Cancelled from Show</label>
+            </value>
+            <value>
+                <fullName>Discount given</fullName>
+                <default>false</default>
+                <label>Discount given</label>
+            </value>
+            <value>
+                <fullName>Freight</fullName>
+                <default>false</default>
+                <label>Freight</label>
+            </value>
+            <value>
+                <fullName>Furnishings/Deco</fullName>
+                <default>false</default>
+                <label>Furnishings/Deco</label>
+            </value>
+            <value>
+                <fullName>Graphics</fullName>
+                <default>false</default>
+                <label>Graphics</label>
+            </value>
+            <value>
+                <fullName>Honor discount deadline rates</fullName>
+                <default>false</default>
+                <label>Honor discount deadline rates</label>
+            </value>
+            <value>
+                <fullName>Install and Dismantle</fullName>
+                <default>false</default>
+                <label>Install and Dismantle</label>
+            </value>
+            <value>
+                <fullName>Labor</fullName>
+                <default>false</default>
+                <label>Labor</label>
+            </value>
+            <value>
+                <fullName>Logistics</fullName>
+                <default>false</default>
+                <label>Logistics</label>
+            </value>
+            <value>
+                <fullName>Order entry error</fullName>
+                <default>false</default>
+                <label>Order entry error</label>
+            </value>
+            <value>
+                <fullName>Overpayment on account</fullName>
+                <default>false</default>
+                <label>Overpayment on account</label>
+            </value>
+            <value>
+                <fullName>TSE</fullName>
+                <default>false</default>
+                <label>TSE</label>
+            </value>
+            <value>
+                <fullName>Wrong Account Billed</fullName>
+                <default>false</default>
+                <label>Wrong Account Billed</label>
+            </value>
+            <value>
+                <fullName>Wrong amount billed to CC</fullName>
+                <default>false</default>
+                <label>Wrong amount billed to CC</label>
+            </value>
+            <value>
+                <fullName>Wrong Credit Card Charged</fullName>
+                <default>false</default>
+                <label>Wrong Credit Card Charged</label>
+            </value>
+            <value>
+                <fullName>Missing Item</fullName>
+                <default>false</default>
+                <label>Missing Item</label>
+            </value>
+            <value>
+                <fullName>Not delivered</fullName>
+                <default>false</default>
+                <label>Not delivered</label>
+            </value>
+            <value>
+                <fullName>Not Installed</fullName>
+                <default>false</default>
+                <label>Not Installed</label>
+            </value>
+            <value>
+                <fullName>CH not received paperwork</fullName>
+                <default>false</default>
+                <label>CH not received paperwork</label>
+            </value>
+            <value>
+                <fullName>SD issue</fullName>
+                <default>false</default>
+                <label>SD issue</label>
+            </value>
+            <value>
+                <fullName>Order not received</fullName>
+                <default>false</default>
+                <label>Order not received</label>
+            </value>
+            <value>
+                <fullName>Incorrect LOB</fullName>
+                <default>false</default>
+                <label>Incorrect LOB</label>
+            </value>
+            <value>
+                <fullName>Incorrect SC</fullName>
+                <default>false</default>
+                <label>Incorrect SC</label>
+            </value>
+            <value>
+                <fullName>Damaged/dirty</fullName>
+                <default>false</default>
+                <label>Damaged/dirty</label>
+            </value>
+            <value>
+                <fullName>RGF</fullName>
+                <default>false</default>
+                <label>RGF</label>
+            </value>
+            <value>
+                <fullName>Complaint LOB</fullName>
+                <default>false</default>
+                <label>Complaint LOB</label>
+            </value>
+            <value>
+                <fullName>Complaint SC</fullName>
+                <default>false</default>
+                <label>Complaint SC</label>
+            </value>
+            <value>
+                <fullName>Complaint Onsite</fullName>
+                <default>false</default>
+                <label>Complaint Onsite</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

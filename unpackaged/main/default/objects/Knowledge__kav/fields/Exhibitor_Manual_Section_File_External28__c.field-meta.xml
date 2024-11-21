@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Exhibitor_Manual_Section_File_External28__c</fullName>
+    <description>Url to kit</description>
+    <label>Link to Manual Section</label>
+    <length>2000</length>
+    <trackHistory>false</trackHistory>
+    <type>Html</type>
+    <visibleLines>10</visibleLines>
+</CustomField>

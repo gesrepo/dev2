@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PSP_PI</fullName>
+    <active>true</active>
+    <description>If PSP is set to PI, then you must enter a value, greater than 0, in Price Increase Percent.</description>
+    <errorConditionFormula>AND ( ISPICKVAL(PSP__c , &#39;PI:Price Increase in lieu&#39;),
+NULLVALUE(Price_Increase_Percent__c,0 )=0)&amp;&amp; ($Profile.Name != &quot;GES Administrator Interface&quot;)</errorConditionFormula>
+    <errorDisplayField>Price_Increase_Percent__c</errorDisplayField>
+    <errorMessage>If PSP is set to PI, then you must enter a value, greater than 0, in Price Increase Percent.</errorMessage>
+</ValidationRule>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>AV_Execution_Office_Required</fullName>
+    <active>true</active>
+    <description>AV Execution Office Required</description>
+    <errorConditionFormula>AND(
+NOT(BypassValidation__c),  /* added to bypass validation on 6 may.*/
+ISBLANK(TEXT(Execution_Office__c)),
+Is_Converted__c = False,
+
+OR( 
+$RecordType.DeveloperName = &quot;AV_CC&quot;, 
+$RecordType.DeveloperName = &quot;AV_CR&quot;, 
+$RecordType.DeveloperName = &quot;AV_CV&quot;, 
+$RecordType.DeveloperName = &quot;AV_DB&quot;, 
+$RecordType.DeveloperName = &quot;AV_IA&quot;, 
+$RecordType.DeveloperName = &quot;AV_LO&quot;, 
+$RecordType.DeveloperName = &quot;AV&quot;, 
+$RecordType.DeveloperName = &quot;AV_PS&quot;, 
+$RecordType.DeveloperName = &quot;AV_TS&quot;, 
+$RecordType.DeveloperName = &quot;AV_Exhibitor_CR&quot;, 
+$RecordType.DeveloperName = &quot;AV_Exhibitor_CV&quot;, 
+$RecordType.DeveloperName = &quot;AV_Exhibitor_LO&quot;, 
+$RecordType.DeveloperName = &quot;AV_Exhibitor_CC&quot;, 
+$RecordType.DeveloperName = &quot;AV_Exhibitor_IA&quot;, 
+$RecordType.DeveloperName = &quot;AV_Exhibitor_DB&quot;, 
+$RecordType.DeveloperName = &quot;AV_Exhibitor_Master&quot;, 
+$RecordType.DeveloperName = &quot;AV_Exhibitor_PS&quot;, 
+$RecordType.DeveloperName = &quot;AV_Exhibitor_TS&quot;), 
+
+NOT(OR( 
+$Profile.Name = &quot;Super Users&quot;,
+$Profile.Name = &quot;GES Interface&quot;, 
+$Profile.Name = &quot;GES Administrator Interface&quot;, 
+$Profile.Name = &quot;Merge System Administrator&quot;, 
+$Profile.Name = &quot;ONS Integration Interface&quot;, 
+$Profile.Name = &quot;System Administrator&quot;
+)))</errorConditionFormula>
+    <errorDisplayField>Execution_Office__c</errorDisplayField>
+    <errorMessage>Execution Office must contain a value.</errorMessage>
+</ValidationRule>

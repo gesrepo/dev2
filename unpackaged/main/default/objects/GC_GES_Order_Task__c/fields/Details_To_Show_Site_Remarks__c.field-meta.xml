@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Details_To_Show_Site_Remarks__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Check if show site remarks are added to the remarks in External System.</description>
+    <inlineHelpText>Check if show site remarks are added to the remarks in External System.</inlineHelpText>
+    <label>Details to Show-Site Remarks</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

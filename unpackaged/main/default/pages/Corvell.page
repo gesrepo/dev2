@@ -1,0 +1,158 @@
+<apex:page standardController="Claims__Claim__c" extensions="CorvellController">
+   <apex:pageMessages />
+   <!-- hidden field -->
+   <apex:outputField value="{!Claims__Claim__c.Name}" rendered="false"/>
+   <!-- Actual fields on page -->
+   <apex:repeat value="{!Carriers}" var="Carrier">
+      <apex:pageBlock title="Corvel Data">
+         <apex:pageBlockSection columns="2" title="{!$Label.Claim_Details}"> 
+            <apex:outputField value="{!Carrier.Claim_Type__c}"/>
+            <apex:outputField value="{!Carrier.Status__c}"/>
+            <apex:outputField value="{!Carrier.Multiple_Claims__c}"/>
+            <apex:outputField value="{!Carrier.SSN__c}"/>
+            <apex:outputField value="{!Carrier.Date_of_Birth__c}"/> 
+            <apex:outputField value="{!Carrier.Date_of_Incident__c}"/>
+            <apex:outputField value="{!Carrier.Date_of_Hire__c}"/>
+            <apex:outputField value="{!Carrier.Jurisdiction_State__c}"/>
+            <apex:outputField value="{!Carrier.Flags__c}"/>
+            <apex:outputField value="{!Carrier.Employer__c}"/>
+            <apex:outputField value="{!Carrier.Customer__c}"/>
+            <apex:outputField value="{!Carrier.Adjuster__c}"/>
+            <apex:outputField value="{!Carrier.Jurisdiction_Claim_No__c}"/>
+            <apex:outputField value="{!Carrier.Policy_Term_Date__c}"/>
+            <apex:outputField value="{!Carrier.Policy__c}"/>
+         </apex:pageBlockSection>
+         <apex:pageBlockSection columns="2" title="{!$Label.Incident}">
+            <apex:outputField value="{!Carrier.Description_of_Loss__c}"/>
+            <apex:outputField value="{!Carrier.Date_Insured_Notified__c}"/>
+            <apex:outputField value="{!Carrier.Date_Incident_Reported__c}"/>
+            <apex:outputField value="{!Carrier.Date_Received__c}"/>
+            <apex:outputField value="{!Carrier.Date_Administrator_Notified__c}"/> 
+            <apex:outputField value="{!Carrier.Nature_of_Inventory__c}"/>
+            <apex:outputField value="{!Carrier.Cause_of_Injury__c}"/>
+            <apex:outputField value="{!Carrier.Injury_Work_Activity__c}"/>
+            <apex:outputField value="{!Carrier.Work_Type_at_Time_of_Incident__c}"/>
+            <apex:outputField value="{!Carrier.Incident_Object__c}"/>
+            <apex:outputField value="{!Carrier.Location_of_Loss__c}"/>
+            <apex:outputField value="{!Carrier.Policy_Report_Number__c}"/>
+            <apex:outputField value="{!Carrier.Vehicle_Number__c}"/>
+         </apex:pageBlockSection>
+         <apex:pageBlockSection columns="2" title="{!$Label.Body_Part_Listings}">
+            <apex:outputField value="{!Carrier.Primary__c}"/>
+            <apex:outputField value="{!Carrier.Body_Part__c}"/>
+            <apex:outputField value="{!Carrier.BP_Status__c}"/>
+            <apex:outputField value="{!Carrier.Certified_By__c}"/>
+            <apex:outputField value="{!Carrier.Status_Date__c}"/>
+            <apex:outputField value="{!Carrier.Note__c}"/>
+            <apex:outputField value="{!Carrier.Denial_Reason__c}"/>
+            <apex:outputField value="{!Carrier.Impairment_Percentage__c}"/>
+            <apex:outputField value="{!Carrier.Impairment_Percentage_Basis__c}"/>
+            <apex:outputField value="{!Carrier.MMI_Date__c}"/>            
+         </apex:pageBlockSection>
+         <apex:pageBlockSection columns="2" title="{!$Label.Claimant_Information}">
+            <apex:outputField value="{!Carrier.Name__c}"/>
+            <apex:outputField value="{!Carrier.Address__c}"/>
+            <apex:outputField value="{!Carrier.City__c}"/>
+            <apex:outputField value="{!Carrier.State__c}"/>
+            <apex:outputField value="{!Carrier.Zip_Code__c}"/>
+            <apex:outputField value="{!Carrier.Claimant_Address__c}"/>
+            <apex:outputField value="{!Carrier.Home_Phone__c}"/>
+            <apex:outputField value="{!Carrier.Work__c}"/>
+            <apex:outputField value="{!Carrier.Mobile_Phone__c }"/>
+            <apex:outputField value="{!Carrier.Claimant_Gender__c}"/>
+            <apex:outputField value="{!Carrier.Date_of_Birth__c}"/>
+            <apex:outputField value="{!Carrier.Age__c}"/>
+            <apex:outputField value="{!Carrier.Claimant_SSN__c}"/>
+            <apex:outputField value="{!Carrier.Claimant_Marital_Status__c}"/>
+         </apex:pageBlockSection>
+         <apex:pageBlockSection columns="2" title="{!$Label.Coverage_Claim_Classification}"> 
+            <apex:outputField value="{!Carrier.Coverage_Line__c}"/>
+            <apex:outputField value="{!Carrier.Sub_Class__c}"/>
+            <apex:outputField value="{!Carrier.Coverage_Date_of_Incident__c}"/>
+            <apex:outputField value="{!Carrier.Time__c}"/>            
+         </apex:pageBlockSection>
+         <apex:pageBlockSection columns="2" title="{!$Label.Claim_Information}">
+            <apex:outputField value="{!Carrier.CI_Date_Received__c }"/>
+            <apex:outputField value="{!Carrier.Time_Received__c}"/>
+            <apex:outputField value="{!Carrier.CL_Location__c}"/>
+            <apex:outputField value="{!Carrier.CL_Date_Incident_Reported__c}"/>
+            <apex:outputField value="{!Carrier.CL_Date_Administrator_Notified__c}"/>
+            <apex:outputField value="{!Carrier.Claimant_Contacted__c}"/>
+            <apex:outputField value="{!Carrier.Date_First_Contacted__c}"/>            
+         </apex:pageBlockSection>
+         <apex:pageBlockSection columns="2" title="{!$Label.Client_OSHA}">
+            <apex:outputField value="{!Carrier.OSHA_Reportable__c}"/>
+         </apex:pageBlockSection>
+         <apex:pageBlockSection columns="2" title="{!$Label.CS_Financial_Data}">
+         <!-- Inner Sections -->
+         <apex:pageBlockSection columns="2" title="{!$Label.Reserves_Payments}">
+          <apex:outputField value="{!Carrier.Res_Payments_Claim_No__c}"/>
+          <apex:outputField value="{!Carrier.Res_Payments_Claimant__c}"/>
+          <apex:outputField value="{!Carrier.Res_Payments_Company__c }"/>
+          <apex:outputField value="{!Carrier.Res_Payments_Date_of_Incident__c}"/>
+         </apex:pageBlockSection>
+
+      <apex:pageBlockSection columns="1" title="{!$Label.Posted_Summary}">
+         <apex:pageBlockTable value="{!Carrier}" var="item" title="{!$Label.Posted_Summary}">
+            <apex:column value="{!item.Posted_Summary_Category__c}"/>
+            <apex:column value="{!item.Posted_Summary_Current_Paid__c}"/>
+            <apex:column value="{!item.Posted_Summary_Current_Reserve__c}"/>
+            <apex:column value="{!item.Posted_Summary_Current_Incurred__c}"/>
+            <apex:column value="{!item.Posted_Summary_Last_Reserve_Change__c}"/>
+         </apex:pageBlockTable>
+      </apex:pageBlockSection>
+
+      </apex:pageBlockSection>
+         <apex:pageBlockSection columns="1" title="{!$Label.Claim_Notes}">
+         <apex:pageBlockTable value="{!Carrier}" var="item">
+            <apex:column value="{!item.Notes_Date__c}"/>
+            <apex:column value="{!item.Notes_Categories__c}"/>
+            <apex:column value="{!item.Notes_Service_Author__c}"/>
+            <apex:column value="{!item.Notes_Note__c}"/>
+         </apex:pageBlockTable>
+            
+         </apex:pageBlockSection>
+         <apex:pageBlockSection columns="2" title="{!$Label.Litigation_Profile}">
+            <apex:outputField value="{!Carrier.Litigated__c}"/>
+            <apex:outputField value="{!Carrier.Litigated_Date__c}"/>
+            <apex:outputField value="{!Carrier.Hearing_Trial_Date__c}"/>
+            <apex:outputField value="{!Carrier.Claimant_Self_Represented__c}"/>
+            <apex:outputField value="{!Carrier.Date_Claimant_Represented__c}"/>
+            <apex:outputField value="{!Carrier.Date_Referred_to_Defense_Council__c}"/>
+            <apex:outputField value="{!Carrier.Court_Room__c}"/>
+            <apex:outputField value="{!Carrier.Judge_Commissioner__c}"/>
+            <apex:outputField value="{!Carrier.Disclosure_Form_Received__c}"/>
+            <apex:outputField value="{!Carrier.Disclosure_Form_Date__c}"/>
+            <apex:outputField value="{!Carrier.Contested_Issues__c}"/>
+            <apex:outputField value="{!Carrier.Comments__c}"/>
+            <apex:outputField value="{!Carrier.Appeal__c}"/>
+            <apex:outputField value="{!Carrier.Date_of_Appeal__c}"/>
+            <apex:outputField value="{!Carrier.Disposition_Type__c}"/>
+            <apex:outputField value="{!Carrier.DisPosition_Date__c}"/>
+            <apex:outputField value="{!Carrier.Mass_Tort_Indicator__c}"/>
+            <apex:outputField value="{!Carrier.Results__c}"/>
+         </apex:pageBlockSection>
+         <apex:pageBlockSection columns="2" title="{!$Label.Claim_Attorneys}">
+         <!-- Inner Sections -->
+         <apex:pageBlockSection columns="2" title="{!$Label.Plaintiff_Attorney}">
+            <apex:outputField value="{!Carrier.Plaintiff_Attorney_Attorney__c}"/>
+            <apex:outputField value="{!Carrier.Plaintiff_Attorney_Address__c}"/>
+            <apex:outputField value="{!Carrier.Plaintiff_Attorney_City__c}"/>
+            <apex:outputField value="{!Carrier.Plaintiff_Attorney_State__c}"/>
+            <apex:outputField value="{!Carrier.Plaintiff_Attorney_Zip__c}"/>
+            <apex:outputField value="{!Carrier.Plaintiff_Attorney_Phone__c}"/>
+         </apex:pageBlockSection>
+
+         <apex:pageBlockSection columns="2" title="{!$Label.Defense_Attorney}">
+            <apex:outputField value="{!Carrier.Defense_Attorney_Attorney__c}"/>
+            <apex:outputField value="{!Carrier.Defense_Attorney_Address__c}"/>
+            <apex:outputField value="{!Carrier.Defense_Attorney_City__c}"/>
+            <apex:outputField value="{!Carrier.Defense_Attorney_State__c  }"/>
+            <apex:outputField value="{!Carrier.Defense_Attorney_Zip__c}"/>
+            <apex:outputField value="{!Carrier.Defense_Attorney_Phone__c}"/>
+         </apex:pageBlockSection>
+      </apex:pageBlockSection>
+
+      </apex:pageBlock>
+   </apex:repeat>
+</apex:page>

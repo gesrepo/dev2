@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>TEMPLATE_Sequence_and_Customer_View</fullName>
+    <columns>NAME</columns>
+    <columns>GroupOrdersByCategory__c</columns>
+    <columns>Display_Sequence__c</columns>
+    <columns>ShowOccrCustomerId__c</columns>
+    <columns>Show_OccCustomer_ID__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Connect2_Show__c</field>
+        <operation>equals</operation>
+        <value>CS-XXXXX</value>
+    </filters>
+    <label>TEMPLATE: Sequence and Customer View</label>
+</ListView>

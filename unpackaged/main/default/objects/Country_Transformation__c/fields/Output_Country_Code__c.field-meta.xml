@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Output_Country_Code__c</fullName>
+    <description>The name field is the country name, this field contains the 2-character abbreviation for the country.</description>
+    <externalId>false</externalId>
+    <label>Output Country Code</label>
+    <length>5</length>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

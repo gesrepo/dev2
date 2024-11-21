@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Installation_Type__c</fullName>
+    <label>Installation Type</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>NCS (10&#39; in 10&#39; aisles)</fullName>
+                <default>true</default>
+                <label>No Concrete Showing (NCS) (10&#39; in 10&#39; aisles)</label>
+            </value>
+            <value>
+                <fullName>STD (9&#39; in 10&#39; aisles)</fullName>
+                <default>false</default>
+                <label>Standard (STD) (9&#39; in 10&#39; aisles)</label>
+            </value>
+            <value>
+                <fullName>WTW (same Color under booths)</fullName>
+                <default>false</default>
+                <label>Wall to Wall (WTW) (same Color under booths)</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

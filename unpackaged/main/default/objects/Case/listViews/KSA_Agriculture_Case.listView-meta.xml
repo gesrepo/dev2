@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>KSA_Agriculture_Case</fullName>
+    <filterScope>Queue</filterScope>
+    <label>KSA Agriculture</label>
+    <queue>KSA_Agriculture</queue>
+    <sharedTo>
+        <allInternalUsers />
+    </sharedTo>
+</ListView>

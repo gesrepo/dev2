@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>New_Quote</fullName>
+    <availability>online</availability>
+    <description>Custom button to create Quote from Case record with pre-populated values.</description>
+    <displayType>massActionButton</displayType>
+    <encodingKey>UTF-8</encodingKey>
+    <linkType>url</linkType>
+    <masterLabel>New Quote</masterLabel>
+    <openType>replace</openType>
+    <protected>false</protected>
+    <requireRowSelection>false</requireRowSelection>
+    <url>/setup/ui/recordtypeselect.jsp?ent=01I400000006Mpb&amp;retURL=%2F{!Case.Id}&amp;save_new_url=%2Fa0l%2Fe%3FCF00N1W000003SykM%3D{!Case.CaseNumber}%26CF00N1W000003SykM_lkid%3D{!Case.Id}%26CF00N40000002RaJV%3D{!Case.Account}%26CF00N40000002RaJV_lkid%3D{!Case.AccountId}%26CF00N40000002RaJY%3D{!Case.Contact}%26CF00N40000002RaJY_lkid%3D{!Case.ContactId}%26CF00N40000002RaLO%3D{!Case.Show_Opportunity__c}%26CF00N40000002RaLO_lkid%3D{!Case.Show_OpportunityId__c}%26CF00N40000002RaJa%3D{!Case.Booth__c}%26CF00N40000002RaJa_lkid%3D{!Case.BoothId__c}%26retURL%3D%252F{!Case.Id}</url>
+</WebLink>

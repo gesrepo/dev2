@@ -1,0 +1,268 @@
+<apex:page standardStylesheets="true" showHeader="false" sidebar="false" docType="html-5.0" controller="GC_TaskSelectionPageController">
+    <head> 
+        <apex:includeScript value="{!$Resource.jQuery}" /> 
+        <!--<apex:includeScript value="{!URLFOR($Resource.GC_Assets, 'GC_Assets/js/jquery-ui.js')}" />
+<apex:stylesheet value="{!URLFOR($Resource.GC_Assets, 'GC_Assets/css/jquery-ui.css')}" />-->
+        <apex:includeScript value="{!URLFOR($Resource.GC_Assets, 'GC_Assets/js/GC_init.js')}" />
+        <!-- <apex:includeScript value="{!URLFOR($Resource.GC_DateTimePicker, 'GC_DateTimePicker/build/jquery.datetimepicker.full.min.js')}" /> -->
+        <apex:stylesheet value="{!URLFOR($Resource.Lightning_Design_System, 'assets/styles/salesforce-lightning-design-system.min.css')}" />
+        <apex:stylesheet value="{!URLFOR($Resource.GC_Assets, 'GC_Assets/css/GC_Styles.css')}" />
+        <!-- <apex:stylesheet value="{!URLFOR($Resource.GC_DateTimePicker, 'GC_DateTimePicker/jquery.datetimepicker.css')}" /> -->
+        
+        <script type="text/javascript">
+        function checkAll(cb, checkId, parentElementId) {
+            var inputElem = document.getElementById(parentElementId).getElementsByTagName("input"); 
+            
+            for (var i = 0; i < inputElem.length; i++) {
+                if ((inputElem[i].id.indexOf(checkId) != -1) && (inputElem[i].type == 'checkbox')){
+                    inputElem[i].checked = cb.checked;
+                }
+            }
+        }
+        </script>
+    </head>
+    <div class="slds">
+    <apex:form >
+    
+        <apex:outputpanel id="errormsg">
+            <apex:pagemessages />
+        </apex:outputpanel>
+        <apex:actionFunction name="selectTasks" action="{!selectTasks}" status="selectingTaskSpinner" reRender="errormsg" onComplete="submitTasks(); return false;" />
+        <apex:actionFunction name="submitTasks" action="{!submitTasks}" status="submittingTaskSpinner" reRender="errormsg" />
+        <apex:outputPanel id="statuses">
+            <apex:actionStatus id="selectingTaskSpinner">
+                <apex:facet name="start">
+                    <c:GC_Community_StatusSpinner statusMessage="Selecting Tasks." />
+                </apex:facet>
+            </apex:actionStatus>
+            <apex:actionStatus id="submittingTaskSpinner">
+                <apex:facet name="start">
+                    <c:GC_Community_StatusSpinner statusMessage="Submitting Tasks." />
+                </apex:facet>
+            </apex:actionStatus>
+        </apex:outputPanel>
+        <div class="slds-card__header slds-grid" role="banner">
+            <div class="slds-col slds-has-flexi-truncate">
+                
+            </div>
+            <div class="slds-col slds-no-flex--align-center">
+                <div class="slds-grid--align-center">
+                    <div class="slds-button" >
+                        <apex:commandButton title="To go back to the order" action="{!URLFOR($Page.GC_Community_OrderView,null,[orderId=currentOrder.Id,showId=currentOrder.Connect2_Show__c])}" value="Back to Order" id="BackToOrderButton" styleClass="slds-button slds-button--brand gc-teal-button"/>
+                        <apex:commandButton onClick="selectTasks(); return false;" value="Submit All" styleClass="slds-button slds-button--brand gc-teal-button" />
+                    </div>
+                </div>
+            </div>
+        </div>
+        <apex:outputPanel >
+            <div class="slds-card__header slds-grid" role="banner">
+                <div class="slds-col slds-has-flexi-truncate">
+                    <div class="slds-media">
+                        <div class="slds-media__body">
+                            <h1 class="slds-text-heading--medium slds-m-right--small slds-truncate slds-align-middle">GES Order Tasks</h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </apex:outputPanel>
+        
+        
+        
+        <!-- /PAGE HEADER -->
+        <section class="slds-col--padded slds-size--1-of-1 tableScrollBox" id="theOrders">
+            <apex:outputPanel id="GESInformation">
+                <apex:outputPanel >   
+                    <apex:outputPanel id="GESOrderTable">
+                        <apex:outputPanel > 
+                            <apex:outputPanel id="pbRelatedTasks" layout="block">
+                                <table class="slds-table slds-table--bordered slds-max-medium-table--stacked-horizontal">
+                                    <thead>
+                                        <tr class="slds-text-heading--label">
+                                            <th scope="col">
+                                                <span class="slds-truncate">
+                                                    <apex:inputCheckbox onclick="checkAll(this, 'gotSelectedItems','gotItems');">
+                                                    </apex:inputCheckbox>
+                                                </span>
+                                            </th>
+                                            <th scope="col">
+                                                <span class="slds-truncate">GES Order #</span>
+                                            </th>
+                                            <th scope="col">
+                                                <span class="slds-truncate">Status</span>
+                                            </th>                   
+                                            <th scope="col">
+                                                <span class="slds-truncate">Sign Title</span>
+                                            </th>
+                                            <th scope="col">
+                                                <span class="slds-truncate">Item #</span>
+                                            </th>
+                                            <th scope="col">
+                                                <span class="slds-truncate">Description</span>
+                                            </th>
+                                            <th scope="col">
+                                                <span class="slds-truncate">User Item Description</span>
+                                            </th>
+                                            <th scope="col">
+                                                <span class="slds-truncate">Price</span>
+                                            </th>
+                                            <th scope="col">
+                                                <span class="slds-truncate">Total Price</span>
+                                            </th>
+                                            <th scope="col">
+                                                <span class="slds-truncate">Units</span>
+                                            </th>
+                                            <th scope="col">
+                                                <span class="slds-truncate">Quantity</span>
+                                            </th>
+                                            
+                                            <th scope="col">
+                                                <span class="slds-truncate">Owner</span>
+                                            </th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id = "gotItems">
+                                        <apex:repeat value="{!gesOrderTasks}" var="gesTask">
+                                            <tr class="slds-hint-parent" >
+                                                <td>
+                                                    <apex:inputCheckbox id="gotSelectedItems" value="{!gesTask.isSelected}"/> <!---->
+                                                </td>
+                                                <td data-label="ges-order-task-name" role="row">
+                                                    <apex:outputField value="{!gesTask.task.Name}"/>
+                                                </td>                                                   
+                                                <td data-label="ges-status">
+                                                    <apex:outputField value="{!gesTask.task.Status__c}" />
+                                                </td>
+                                                <!--SAL-586-->
+                                                <td data-label="ges-signtitle">
+                                                    <apex:outputField value="{!gesTask.task.Sign_Title__c}" />
+                                                </td>
+                                                <td data-label="ges-itemNumber">
+                                                    <apex:outputField value="{!gesTask.task.Item_Number__c}" />
+                                                </td>
+                                                <td data-label="ges-description">
+                                                    <apex:outputField value="{!gesTask.task.Description__c}" />
+                                                </td>
+                                                <td data-label="ges-UserIdescription">
+                                                    <apex:outputField value="{!gesTask.task.User_Item_Description__c}" />
+                                                </td>
+                                                <td data-label="ges-price">
+                                                    <apex:outputField value="{!gesTask.task.Price__c}" />
+                                                </td>
+                                                <td data-label="ges-price">
+                                                    <apex:outputField value="{!gesTask.task.Total__c}" />
+                                                </td>
+                                                <td data-label="ges-uom">
+                                                    <apex:outputField value="{!gesTask.task.UOM__c}" />
+                                                </td>
+                                                <td data-label="ges-quantity">
+                                                    <apex:outputField value="{!gesTask.task.QuantityNum__c}" />
+                                                </td>
+                                                
+                                                <td data-label="ges-status">
+                                                    <apex:outputField value="{!gesTask.task.Status__c}" />
+                                                </td>
+                                            </tr>
+                                        </apex:repeat>
+                                    </tbody>
+                                </table>
+                            </apex:outputPanel>
+                        </apex:outputPanel>
+                    </apex:outputPanel>
+                    
+                    <!-- vendor Order Task -->      
+                    <div class="slds-col slds-has-flexi-truncate">
+                        <div class="slds-media">
+                            <div class="slds-media__body">
+                                <h1 class="slds-text-heading--medium slds-m-right--small slds-truncate slds-align-middle">Vendor Order Tasks</h1>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <apex:outputPanel id="pbVendorRelatedTasks" layout="block" >
+                        <table class="slds-table slds-table--bordered slds-max-medium-table--stacked-horizontal">
+                            <thead>
+                                <tr class="slds-text-heading--label">
+                                    <th scope="col">
+                                        <span class="slds-truncate">
+                                            <apex:inputCheckbox onclick="checkAll(this, 'votSelectedItems', 'votItems');">
+                                            </apex:inputCheckbox>
+                                        </span>
+                                    </th>
+                                    <th scope="col">
+                                        <span class="slds-truncate">VENDOR ORDER #</span>
+                                    </th>
+
+                                    <th scope="col">
+                                        <span class="slds-truncate">Status</span>
+                                    </th>
+                                    <th scope="col">
+                                        <span class="slds-truncate">Vendor</span>
+                                    </th>
+                                    <th scope="col">
+                                        <span class="slds-truncate">Services</span>
+                                    </th>
+                                    
+                                    <th scope="col">
+                                        <span class="slds-truncate">Date Sent</span>
+                                    </th>
+                                    <th scope="col">
+                                        <span class="slds-truncate">Last Modified By</span>
+                                    </th>
+                                    <th scope="col">
+                                        <span class="slds-truncate">Last Modified Date</span>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody id="votItems">
+                                <apex:repeat value="{!venOrderTasks}" var="vendorTask">
+                                    <tr class="slds-hint-parent" >
+                                        <td>
+                                            <apex:inputCheckbox id="votSelectedItems" value="{!vendorTask.isSelected}"/>
+                                        </td>
+                                        <td data-label="ges-order-task-name" role="row">
+                                            <apex:outputField value="{!vendorTask.task.Name}" />
+                                        </td>                                       
+                                        <td data-label="ges-status">
+                                            <apex:outputField value="{!vendorTask.task.Status__c}" />
+                                        </td>
+                                        
+                                        <td data-label="ges-vendor">
+                                            <apex:outputField value="{!vendorTask.task.Vendors__c}" />
+                                        </td>
+                                        <td data-label="ges-servicetype">
+                                            <apex:outputText value="{!vendorTask.task.Services__c}" />
+                                        </td>
+                                        
+                                        <td data-label="ges-submitteddate">
+                                            <apex:outputField value="{!vendorTask.task.Submitted_Date__c}" />
+                                        </td>
+                                        <td data-label="ges-lastmodifiedbyid">
+                                            <apex:outputField value="{!vendorTask.task.LastModifiedById}" />
+                                        </td>
+                                        <td data-label="ges-lastmodifieddate">
+                                            <apex:outputField value="{!vendorTask.task.LastModifiedDate}" />
+                                        </td>
+                                    </tr>
+                                </apex:repeat>
+                            </tbody>
+                        </table>
+                    </apex:outputPanel>
+                </apex:outputPanel>
+            </apex:outputPanel>
+        </section>
+        <div class="slds-card__header slds-grid" role="banner">
+            <div class="slds-col slds-has-flexi-truncate">
+                
+            </div>
+            <div class="slds-col slds-no-flex--align-center">
+                <div class="slds-grid--align-center">
+                    <div class="slds-button" >
+                        <apex:commandButton title="To go back to the order" action="{!URLFOR($Page.GC_Community_OrderView,null,[orderId=currentOrder.Id,showId=currentOrder.Connect2_Show__c])}" value="Back to Order" id="BackToOrderButton2" styleClass="slds-button slds-button--brand gc-teal-button"/>
+                        <apex:commandButton onClick="selectTasks(); return false;" value="Submit All" styleClass="slds-button slds-button--brand gc-teal-button" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </apex:form>
+    </div>
+</apex:page>

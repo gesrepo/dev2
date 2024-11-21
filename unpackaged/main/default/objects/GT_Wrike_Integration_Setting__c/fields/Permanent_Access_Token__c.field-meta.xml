@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Permanent_Access_Token__c</fullName>
+    <defaultValue>&quot;Bearer eyJ0dCI6InAiLCJhbGciOiJIUzI1NiIsInR2IjoiMSJ9.eyJkIjoie1wiYVwiOjE5ODIzMjEsXCJpXCI6NjUwNzY5OCxcImNcIjo0NjEzMzk3LFwidVwiOjY0OTkyNTcsXCJyXCI6XCJVU1wiLFwic1wiOltcIldcIixcIkZcIixcIklcIixcIlVcIixcIktcIixcIkNcIixcIkFcIixcIkxcIl0sXCJ6XCI6W10sXCJ0XCI6MH0iLCJpYXQiOjE1NjY5ODkyMDN9.lZZ5RHTfvHs3q1mnQn2t6wy2-3mVrPW8QuHf-bciujc&quot;</defaultValue>
+    <description>This field holds the value of Access Token Generated in Wrike For SFDC</description>
+    <inlineHelpText>This field holds the value of Access Token Generated in Wrike For SFDC</inlineHelpText>
+    <label>Permanent Access Token</label>
+    <length>500</length>
+    <trackTrending>false</trackTrending>
+    <type>LongTextArea</type>
+    <visibleLines>3</visibleLines>
+</CustomField>

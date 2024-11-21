@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>KSA_EV_LIVE_Case</fullName>
+    <filterScope>Queue</filterScope>
+    <label>KSA EV LIVE</label>
+    <queue>KSA_EV_LIVE</queue>
+    <sharedTo>
+        <allInternalUsers />
+    </sharedTo>
+</ListView>

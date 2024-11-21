@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Urgent_Requested_Date_Time</fullName>
+    <active>true</active>
+    <description>Urgent Requested must have 2-4 hours specified</description>
+    <errorConditionFormula>If (ISPICKVAL (Priority__c, &quot;Urgent (2-4 Business Hours)&quot;) &amp;&amp; (Requested_Complete_Date_Time__c &lt; NOW()+0.04167  || Requested_Complete_Date_Time__c &gt; NOW()+0.1667) &amp;&amp; ISPICKVAL (Status__c, &quot;New&quot;), TRUE, FALSE)</errorConditionFormula>
+    <errorDisplayField>Requested_Complete_Date_Time__c</errorDisplayField>
+    <errorMessage>You must specify the complete time within 1-4 Hours.</errorMessage>
+</ValidationRule>

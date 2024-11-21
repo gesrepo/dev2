@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>EMEA_DTX_Manchester_Case</fullName>
+    <filterScope>Queue</filterScope>
+    <label>EMEA DTX Manchester</label>
+    <queue>EMEA_DTX_Manchester</queue>
+    <sharedTo>
+        <allInternalUsers />
+    </sharedTo>
+</ListView>

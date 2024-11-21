@@ -1,0 +1,380 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Registration_Provider__c</fullName>
+    <inlineHelpText>Company providing Registration services for this exhibition opportunity</inlineHelpText>
+    <label>Registration Provider</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>true</sorted>
+            <value>
+                <fullName>a2z</fullName>
+                <default>false</default>
+                <label>a2z</label>
+            </value>
+            <value>
+                <fullName>Active</fullName>
+                <default>false</default>
+                <label>Active</label>
+            </value>
+            <value>
+                <fullName>American Tradeshow</fullName>
+                <default>false</default>
+                <label>American Tradeshow</label>
+            </value>
+            <value>
+                <fullName>An Ideal Partner</fullName>
+                <default>false</default>
+                <label>An Ideal Partner</label>
+            </value>
+            <value>
+                <fullName>ARI</fullName>
+                <default>false</default>
+                <label>ARI</label>
+            </value>
+            <value>
+                <fullName>Avectra</fullName>
+                <default>false</default>
+                <label>Avectra</label>
+            </value>
+            <value>
+                <fullName>BADGEGuys</fullName>
+                <default>false</default>
+                <label>BADGEGuys</label>
+            </value>
+            <value>
+                <fullName>Boomset</fullName>
+                <default>false</default>
+                <label>Boomset</label>
+            </value>
+            <value>
+                <fullName>CMI Resources</fullName>
+                <default>false</default>
+                <label>CMI Resources</label>
+            </value>
+            <value>
+                <fullName>CompuSystems (CSI)</fullName>
+                <default>false</default>
+                <label>CompuSystems (CSI)</label>
+            </value>
+            <value>
+                <fullName>Conexysis</fullName>
+                <default>false</default>
+                <label>Conexysis</label>
+            </value>
+            <value>
+                <fullName>Conference Direct</fullName>
+                <default>false</default>
+                <label>Conference Direct</label>
+            </value>
+            <value>
+                <fullName>Convention Data Services (CDS)</fullName>
+                <default>false</default>
+                <label>Convention Data Services (CDS)</label>
+            </value>
+            <value>
+                <fullName>Convention Management Resources</fullName>
+                <default>false</default>
+                <label>Convention Management Resources</label>
+            </value>
+            <value>
+                <fullName>CRG Events</fullName>
+                <default>false</default>
+                <label>CRG Events</label>
+            </value>
+            <value>
+                <fullName>CTE</fullName>
+                <default>false</default>
+                <label>CTE</label>
+            </value>
+            <value>
+                <fullName>CUNA</fullName>
+                <default>false</default>
+                <label>CUNA</label>
+            </value>
+            <value>
+                <fullName>Customreg.com</fullName>
+                <default>false</default>
+                <label>Customreg.com</label>
+            </value>
+            <value>
+                <fullName>Cvent</fullName>
+                <default>false</default>
+                <label>Cvent</label>
+            </value>
+            <value>
+                <fullName>Epic Registration Services</fullName>
+                <default>false</default>
+                <label>Epic Registration Services</label>
+            </value>
+            <value>
+                <fullName>eShow</fullName>
+                <default>false</default>
+                <label>eShow</label>
+            </value>
+            <value>
+                <fullName>eTouches</fullName>
+                <default>false</default>
+                <label>eTouches</label>
+            </value>
+            <value>
+                <fullName>Event Ready</fullName>
+                <default>false</default>
+                <label>Event Ready</label>
+            </value>
+            <value>
+                <fullName>Executive Events &amp; Management Company</fullName>
+                <default>false</default>
+                <label>Executive Events &amp; Management Company</label>
+            </value>
+            <value>
+                <fullName>Experient</fullName>
+                <default>false</default>
+                <label>Experient</label>
+            </value>
+            <value>
+                <fullName>Expologic</fullName>
+                <default>false</default>
+                <label>Expologic</label>
+            </value>
+            <value>
+                <fullName>Exposoft</fullName>
+                <default>false</default>
+                <label>Exposoft</label>
+            </value>
+            <value>
+                <fullName>Expo Tracker, LLC</fullName>
+                <default>false</default>
+                <label>Expo Tracker, LLC</label>
+            </value>
+            <value>
+                <fullName>Facility</fullName>
+                <default>false</default>
+                <label>Facility</label>
+            </value>
+            <value>
+                <fullName>Freeman</fullName>
+                <default>false</default>
+                <label>Freeman</label>
+            </value>
+            <value>
+                <fullName>George P. Johnson</fullName>
+                <default>false</default>
+                <label>George P. Johnson</label>
+            </value>
+            <value>
+                <fullName>Interactive Ticketing Solutions</fullName>
+                <default>false</default>
+                <label>Interactive Ticketing Solutions</label>
+            </value>
+            <value>
+                <fullName>ITN International, Inc.</fullName>
+                <default>false</default>
+                <label>ITN International, Inc.</label>
+            </value>
+            <value>
+                <fullName>J. Spargo &amp; Associates</fullName>
+                <default>false</default>
+                <label>J. Spargo &amp; Associates</label>
+            </value>
+            <value>
+                <fullName>Lanyon</fullName>
+                <default>false</default>
+                <label>Lanyon</label>
+            </value>
+            <value>
+                <fullName>Laser Registration</fullName>
+                <default>false</default>
+                <label>Laser Registration</label>
+            </value>
+            <value>
+                <fullName>Maritz</fullName>
+                <default>false</default>
+                <label>Maritz</label>
+            </value>
+            <value>
+                <fullName>Meeting Advice</fullName>
+                <default>false</default>
+                <label>Meeting Advice</label>
+            </value>
+            <value>
+                <fullName>Metronics</fullName>
+                <default>false</default>
+                <label>Metronics</label>
+            </value>
+            <value>
+                <fullName>MicroSpec Systems, Inc.</fullName>
+                <default>false</default>
+                <label>MicroSpec Systems, Inc.</label>
+            </value>
+            <value>
+                <fullName>N200</fullName>
+                <default>false</default>
+                <label>N200</label>
+            </value>
+            <value>
+                <fullName>Netcomm</fullName>
+                <default>false</default>
+                <label>Netcomm</label>
+            </value>
+            <value>
+                <fullName>netFORUM</fullName>
+                <default>false</default>
+                <label>netFORUM</label>
+            </value>
+            <value>
+                <fullName>No Provider Chosen</fullName>
+                <default>false</default>
+                <label>No Provider Chosen</label>
+            </value>
+            <value>
+                <fullName>Orion</fullName>
+                <default>false</default>
+                <label>Orion</label>
+            </value>
+            <value>
+                <fullName>Palisades Convention Management</fullName>
+                <default>false</default>
+                <label>Palisades Convention Management</label>
+            </value>
+            <value>
+                <fullName>Planitomaha</fullName>
+                <default>false</default>
+                <label>Planitomaha</label>
+            </value>
+            <value>
+                <fullName>Quality Management Systems (QMS)</fullName>
+                <default>false</default>
+                <label>Quality Management Systems (QMS)</label>
+            </value>
+            <value>
+                <fullName>Race IT</fullName>
+                <default>false</default>
+                <label>Race IT</label>
+            </value>
+            <value>
+                <fullName>Race Partner</fullName>
+                <default>false</default>
+                <label>Race Partner</label>
+            </value>
+            <value>
+                <fullName>Registration Control Systems (RCS)</fullName>
+                <default>false</default>
+                <label>Registration Control Systems (RCS)</label>
+            </value>
+            <value>
+                <fullName>Registration Headquarters (RHQ)</fullName>
+                <default>false</default>
+                <label>Registration Headquarters (RHQ)</label>
+            </value>
+            <value>
+                <fullName>Registration Systems Inc</fullName>
+                <default>false</default>
+                <label>Registration Systems Inc</label>
+            </value>
+            <value>
+                <fullName>Registration Technologies</fullName>
+                <default>false</default>
+                <label>Registration Technologies</label>
+            </value>
+            <value>
+                <fullName>RegTek</fullName>
+                <default>false</default>
+                <label>RegTek</label>
+            </value>
+            <value>
+                <fullName>Self (In-House)</fullName>
+                <default>false</default>
+                <label>Self (In-House)</label>
+            </value>
+            <value>
+                <fullName>Service Not Needed</fullName>
+                <default>false</default>
+                <label>Service Not Needed</label>
+            </value>
+            <value>
+                <fullName>Showcare Event Solutions</fullName>
+                <default>false</default>
+                <label>Showcare Event Solutions</label>
+            </value>
+            <value>
+                <fullName>Show Clix</fullName>
+                <default>false</default>
+                <label>Show Clix</label>
+            </value>
+            <value>
+                <fullName>Smart Reg</fullName>
+                <default>false</default>
+                <label>Smart Reg</label>
+            </value>
+            <value>
+                <fullName>SmithBucklin</fullName>
+                <default>false</default>
+                <label>SmithBucklin</label>
+            </value>
+            <value>
+                <fullName>Streampoint</fullName>
+                <default>false</default>
+                <label>Streampoint</label>
+            </value>
+            <value>
+                <fullName>The Pulse Network</fullName>
+                <default>false</default>
+                <label>The Pulse Network</label>
+            </value>
+            <value>
+                <fullName>Total Event and Association Management</fullName>
+                <default>false</default>
+                <label>Total Event and Association Management</label>
+            </value>
+            <value>
+                <fullName>Tradeshow Multimedia, Inc. (TMI)</fullName>
+                <default>false</default>
+                <label>Tradeshow Multimedia, Inc. (TMI)</label>
+            </value>
+            <value>
+                <fullName>TS Registrations, Inc.</fullName>
+                <default>false</default>
+                <label>TS Registrations, Inc.</label>
+            </value>
+            <value>
+                <fullName>Ungerboeck</fullName>
+                <default>false</default>
+                <label>Ungerboeck</label>
+            </value>
+            <value>
+                <fullName>Velocity Meetings</fullName>
+                <default>false</default>
+                <label>Velocity Meetings</label>
+            </value>
+            <value>
+                <fullName>WEG - Web Events Global</fullName>
+                <default>false</default>
+                <label>WEG - Web Events Global</label>
+            </value>
+            <value>
+                <fullName>Wex Management</fullName>
+                <default>false</default>
+                <label>Wex Management</label>
+            </value>
+            <value>
+                <fullName>Wingate Web</fullName>
+                <default>false</default>
+                <label>Wingate Web</label>
+            </value>
+            <value>
+                <fullName>WRI</fullName>
+                <default>false</default>
+                <label>WRI</label>
+            </value>
+            <value>
+                <fullName>Wyndham Jade</fullName>
+                <default>false</default>
+                <label>Wyndham Jade</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

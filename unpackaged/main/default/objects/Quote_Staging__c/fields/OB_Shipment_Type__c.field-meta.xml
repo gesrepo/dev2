@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>OB_Shipment_Type__c</fullName>
+    <description>Shipment Type</description>
+    <inlineHelpText>Shipment Type</inlineHelpText>
+    <label>Shipment Type</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Air Transportation</fullName>
+                <default>false</default>
+                <label>Air Transportation</label>
+            </value>
+            <value>
+                <fullName>Ground Transportation</fullName>
+                <default>false</default>
+                <label>Ground Transportation</label>
+            </value>
+            <value>
+                <fullName>Local Shipments</fullName>
+                <default>false</default>
+                <label>Local Shipments</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

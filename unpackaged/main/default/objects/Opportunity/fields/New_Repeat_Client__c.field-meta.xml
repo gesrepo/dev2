@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>New_Repeat_Client__c</fullName>
+    <description>Used to identify new/repeat at the client level. If GES has never worked with this client on ANY show, select &quot;New.&quot; If GES has worked with client on this show or any other show, select &quot;Repeat.&quot;</description>
+    <inlineHelpText>If GES has produced any event for this client previously, select &quot;Repeat.&quot; If GES has not produced any event for this client, select &quot;New.&quot;</inlineHelpText>
+    <label>New/Repeat Client</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>New</fullName>
+                <default>false</default>
+                <label>New</label>
+            </value>
+            <value>
+                <fullName>Repeat</fullName>
+                <default>false</default>
+                <label>Repeat</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Venue_Lead_Source__c</fullName>
+    <description>This is a Custom field to view venues</description>
+    <inlineHelpText>This is a custom field shows Venues</inlineHelpText>
+    <label>Venue Lead Source</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>true</sorted>
+            <value>
+                <fullName>Battersea Evolution</fullName>
+                <default>false</default>
+                <label>Battersea Evolution</label>
+            </value>
+            <value>
+                <fullName>Excel EVS</fullName>
+                <default>false</default>
+                <label>Excel EVS</label>
+            </value>
+            <value>
+                <fullName>Magazine London</fullName>
+                <default>false</default>
+                <label>Magazine London</label>
+            </value>
+            <value>
+                <fullName>Manchester Central</fullName>
+                <default>false</default>
+                <label>Manchester Central</label>
+            </value>
+            <value>
+                <fullName>Manchester Town Hall</fullName>
+                <default>false</default>
+                <label>Manchester Town Hall</label>
+            </value>
+            <value>
+                <fullName>NEC Conference Package</fullName>
+                <default>false</default>
+                <label>NEC Conference Package</label>
+            </value>
+            <value>
+                <fullName>Not In Public Domain</fullName>
+                <default>false</default>
+                <label>Not In Public Domain</label>
+            </value>
+            <value>
+                <fullName>Olympia</fullName>
+                <default>false</default>
+                <label>Olympia</label>
+            </value>
+            <value>
+                <fullName>SECC</fullName>
+                <default>false</default>
+                <label>SECC</label>
+            </value>
+            <value>
+                <fullName>Tobacco Dock</fullName>
+                <default>false</default>
+                <label>Tobacco Dock</label>
+            </value>
+            <value>
+                <fullName>Westminster Park Plaza</fullName>
+                <default>false</default>
+                <label>Westminster Park Plaza</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Critical_Requested_Date_Time</fullName>
+    <active>true</active>
+    <description>Critical Priority must have 1 hour specified</description>
+    <errorConditionFormula>If (ISPICKVAL (Priority__c, &quot;Critical (1 Business Hour)&quot;) &amp;&amp; (Requested_Complete_Date_Time__c &gt; NOW()+0.04167 || Requested_Complete_Date_Time__c &lt; NOW()) &amp;&amp; ISPICKVAL (Status__c, &quot;New&quot;), TRUE, FALSE)</errorConditionFormula>
+    <errorDisplayField>Requested_Complete_Date_Time__c</errorDisplayField>
+    <errorMessage>You must specify the complete time within the next hour on this critical article update request.</errorMessage>
+</ValidationRule>

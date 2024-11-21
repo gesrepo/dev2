@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Staffing_Strategy__c</fullName>
+    <label>Staffing Strategy</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Skye Agency</fullName>
+                <default>false</default>
+                <label>Skye Agency</label>
+            </value>
+            <value>
+                <fullName>Wootens</fullName>
+                <default>false</default>
+                <label>Wootens</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>BMS</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>BMS</label>
+            </value>
+            <value>
+                <fullName>Business Cards</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Business Cards</label>
+            </value>
+            <value>
+                <fullName>Kiosk (unstaffed)</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Kiosk (unstaffed)</label>
+            </value>
+            <value>
+                <fullName>LIVE/Staffed</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>LIVE/Staffed</label>
+            </value>
+            <value>
+                <fullName>LIVE/Unstaffed</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>LIVE/Unstaffed</label>
+            </value>
+            <value>
+                <fullName>Sky Staffing</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Sky Staffing</label>
+            </value>
+            <value>
+                <fullName>n/a</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>n/a</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

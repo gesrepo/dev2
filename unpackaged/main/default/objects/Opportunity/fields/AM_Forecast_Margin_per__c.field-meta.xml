@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>AM_Forecast_Margin_per__c</fullName>
+    <description>AM_Forecast_Margin__c  /  AM_Forecast_Price__c</description>
+    <formula>AM_Forecast_Margin__c  /  AM_Forecast_Price__c</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>AM_Forecast_Margin__c  /  AM_Forecast_Price__c</inlineHelpText>
+    <label>AM Forecast Margin%</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackHistory>false</trackHistory>
+    <type>Percent</type>
+</CustomField>

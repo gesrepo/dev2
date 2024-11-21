@@ -1,0 +1,14 @@
+<apex:page standardController="Case" extensions="PrintCaseController" action="{!emailPDF}" showHeader="false" sideBar="false">
+    <div align="left">
+        <apex:image value="{!$Resource.GESLogo}" />
+    </div>
+    <apex:form >
+        <apex:pageBlock >
+            <div align="center">
+                <apex:outputText value="An email has been sent to the email address listed in your Salesforce profile. Press 'Return' to return to the Case." />
+                <br/><br/>
+                <apex:commandButton value="Return" action="{!returnToCase}" />
+            </div>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

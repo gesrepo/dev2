@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Reason__c</fullName>
+    <label>Reason</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>CK-Acct Closed (The bank account was closed)</fullName>
+                <default>false</default>
+                <label>CK-Acct Closed (The bank account was closed)</label>
+            </value>
+            <value>
+                <fullName>CK-Nsf (Insufficient funds in bank)</fullName>
+                <default>false</default>
+                <label>CK-Nsf (Insufficient funds in bank)</label>
+            </value>
+            <value>
+                <fullName>CK-Payment Reversal (The payment was reversed)</fullName>
+                <default>false</default>
+                <label>CK-Payment Reversal (The payment was reversed)</label>
+            </value>
+            <value>
+                <fullName>CK-Reflections Payment (Move Payment to Reflections)</fullName>
+                <default>false</default>
+                <label>CK-Reflections Payment (Move Payment to Reflections)</label>
+            </value>
+            <value>
+                <fullName>CK-Resubmit Check (Resubmitting the check)</fullName>
+                <default>false</default>
+                <label>CK-Resubmit Check (Resubmitting the check)</label>
+            </value>
+            <value>
+                <fullName>CK-Stop Payment (Stop Payment)</fullName>
+                <default>false</default>
+                <label>CK-Stop Payment (Stop Payment)</label>
+            </value>
+            <value>
+                <fullName>CK-Uncollectable (Check uncollectable)</fullName>
+                <default>false</default>
+                <label>CK-Uncollectable (Check uncollectable)</label>
+            </value>
+            <value>
+                <fullName>CK-Wrong Amount (The wrong amount was entered)</fullName>
+                <default>false</default>
+                <label>CK-Wrong Amount (The wrong amount was entered)</label>
+            </value>
+            <value>
+                <fullName>CK-Wrong Bank (The wrong bank was entered)</fullName>
+                <default>false</default>
+                <label>CK-Wrong Bank (The wrong bank was entered)</label>
+            </value>
+            <value>
+                <fullName>CK-Wrong Customer (The wrong customer was entered)</fullName>
+                <default>false</default>
+                <label>CK-Wrong Customer (The wrong customer was entered)</label>
+            </value>
+            <value>
+                <fullName>Credit Card Failed - Payment Reversal (Credit Card Failed - Payment Reversal)</fullName>
+                <default>false</default>
+                <label>Credit Card Failed - Payment Reversal (Credit Card Failed - Payment Reversal)</label>
+            </value>
+            <value>
+                <fullName>Credit Card Refund Failed (Credit Card Refund Failed)</fullName>
+                <default>false</default>
+                <label>Credit Card Refund Failed (Credit Card Refund Failed)</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

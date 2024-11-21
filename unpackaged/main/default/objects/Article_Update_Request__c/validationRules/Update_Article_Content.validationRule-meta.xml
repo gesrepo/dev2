@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Update_Article_Content</fullName>
+    <active>true</active>
+    <description>The Article Content must be specified for the minor or major change.</description>
+    <errorConditionFormula>IF ((ISPICKVAL (Request_Type__c, &quot;Update Article (Minor Change)&quot;) || ISPICKVAL (Request_Type__c, &quot;Update Article (Major Change)&quot;)) &amp;&amp; ISBLANK (Article_Number_or_URL__c), TRUE, FALSE)</errorConditionFormula>
+    <errorDisplayField>Article_Content__c</errorDisplayField>
+    <errorMessage>You must specify the article content changes in order to perform this update.</errorMessage>
+</ValidationRule>

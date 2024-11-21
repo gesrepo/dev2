@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Contractor__c</fullName>
+    <label>Contractor</label>
+    <required>false</required>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Access Displays</fullName>
+                <default>false</default>
+                <label>Access Displays</label>
+            </value>
+            <value>
+                <fullName>Apex</fullName>
+                <default>false</default>
+                <label>Apex</label>
+            </value>
+            <value>
+                <fullName>Bang On</fullName>
+                <default>false</default>
+                <label>Bang On</label>
+            </value>
+            <value>
+                <fullName>Concept</fullName>
+                <default>false</default>
+                <label>Concept</label>
+            </value>
+            <value>
+                <fullName>D2I</fullName>
+                <default>false</default>
+                <label>D2I</label>
+            </value>
+            <value>
+                <fullName>Decrofloor</fullName>
+                <default>false</default>
+                <label>Decrofloor</label>
+            </value>
+            <value>
+                <fullName>Dimension 8</fullName>
+                <default>false</default>
+                <label>Dimension 8</label>
+            </value>
+            <value>
+                <fullName>DRP</fullName>
+                <default>false</default>
+                <label>DRP</label>
+            </value>
+            <value>
+                <fullName>D-Zine</fullName>
+                <default>false</default>
+                <label>D-Zine</label>
+            </value>
+            <value>
+                <fullName>EAS</fullName>
+                <default>false</default>
+                <label>EAS</label>
+            </value>
+            <value>
+                <fullName>EMC</fullName>
+                <default>false</default>
+                <label>EMC</label>
+            </value>
+            <value>
+                <fullName>Eventtech</fullName>
+                <default>false</default>
+                <label>Eventtech</label>
+            </value>
+            <value>
+                <fullName>Exhibit360</fullName>
+                <default>false</default>
+                <label>Exhibit360</label>
+            </value>
+            <value>
+                <fullName>Freeman</fullName>
+                <default>false</default>
+                <label>Freeman</label>
+            </value>
+            <value>
+                <fullName>Fresh Group</fullName>
+                <default>false</default>
+                <label>Fresh Group</label>
+            </value>
+            <value>
+                <fullName>Global Displays</fullName>
+                <default>false</default>
+                <label>Global Displays</label>
+            </value>
+            <value>
+                <fullName>Havills</fullName>
+                <default>false</default>
+                <label>Havills</label>
+            </value>
+            <value>
+                <fullName>Index</fullName>
+                <default>false</default>
+                <label>Index</label>
+            </value>
+            <value>
+                <fullName>Inspire</fullName>
+                <default>false</default>
+                <label>Inspire</label>
+            </value>
+            <value>
+                <fullName>Interchange Communications</fullName>
+                <default>false</default>
+                <label>Interchange Communications</label>
+            </value>
+            <value>
+                <fullName>JMT</fullName>
+                <default>false</default>
+                <label>JMT</label>
+            </value>
+            <value>
+                <fullName>J P Morgan</fullName>
+                <default>false</default>
+                <label>J P Morgan</label>
+            </value>
+            <value>
+                <fullName>Lion Exhibitions (Tony)</fullName>
+                <default>false</default>
+                <label>Lion Exhibitions (Tony)</label>
+            </value>
+            <value>
+                <fullName>Live Buzz</fullName>
+                <default>false</default>
+                <label>Live Buzz</label>
+            </value>
+            <value>
+                <fullName>Moyne</fullName>
+                <default>false</default>
+                <label>Moyne</label>
+            </value>
+            <value>
+                <fullName>My World of Expo</fullName>
+                <default>false</default>
+                <label>My World of Expo</label>
+            </value>
+            <value>
+                <fullName>N200</fullName>
+                <default>false</default>
+                <label>N200</label>
+            </value>
+            <value>
+                <fullName>Nimlok</fullName>
+                <default>false</default>
+                <label>Nimlok</label>
+            </value>
+            <value>
+                <fullName>Oplink - Conference</fullName>
+                <default>false</default>
+                <label>Oplink - Conference</label>
+            </value>
+            <value>
+                <fullName>Purtons Displays</fullName>
+                <default>false</default>
+                <label>Purtons Displays</label>
+            </value>
+            <value>
+                <fullName>Push Worldwide</fullName>
+                <default>false</default>
+                <label>Push Worldwide</label>
+            </value>
+            <value>
+                <fullName>QRS</fullName>
+                <default>false</default>
+                <label>QRS</label>
+            </value>
+            <value>
+                <fullName>Reed</fullName>
+                <default>false</default>
+                <label>Reed</label>
+            </value>
+            <value>
+                <fullName>Reftech</fullName>
+                <default>false</default>
+                <label>Reftech</label>
+            </value>
+            <value>
+                <fullName>Regbox</fullName>
+                <default>false</default>
+                <label>Regbox</label>
+            </value>
+            <value>
+                <fullName>Rocket</fullName>
+                <default>false</default>
+                <label>Rocket</label>
+            </value>
+            <value>
+                <fullName>Show Data Systems</fullName>
+                <default>false</default>
+                <label>Show Data Systems</label>
+            </value>
+            <value>
+                <fullName>Solutions 2</fullName>
+                <default>false</default>
+                <label>Solutions 2</label>
+            </value>
+            <value>
+                <fullName>Thorns</fullName>
+                <default>false</default>
+                <label>Thorns</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

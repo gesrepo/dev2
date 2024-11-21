@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Type__c</fullName>
+    <label>Type</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Proforma</fullName>
+                <default>false</default>
+                <label>Proforma</label>
+            </value>
+            <value>
+                <fullName>Plan</fullName>
+                <default>false</default>
+                <label>Plan</label>
+            </value>
+            <value>
+                <fullName>Forecast</fullName>
+                <default>false</default>
+                <label>Forecast</label>
+            </value>
+            <value>
+                <fullName>Actual 90-Day</fullName>
+                <default>false</default>
+                <label>Actual 90-Day</label>
+            </value>
+            <value>
+                <fullName>Actual Continuing</fullName>
+                <default>false</default>
+                <label>Actual Continuing</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

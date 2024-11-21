@@ -1,0 +1,955 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>GES_Type__c</fullName>
+    <description>!!! To keep SFDC in sync with Oracle, we need to have the CasetoSQRMapping completed as part of that process so that when the case are sent to Oracle, the data is aligned to the requirements in Oracle. Reach out to Bhargavi or Robynn Coulter if you need to add an additional type.!!!  Values constrained by Show Status field selection.</description>
+    <label>Type</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Show_Status__c</controllingField>
+        <valueSetDefinition>
+            <sorted>true</sorted>
+            <value>
+                <fullName>Any/All Services</fullName>
+                <default>false</default>
+                <label>Any/All Services</label>
+            </value>
+            <value>
+                <fullName>Audio Visual</fullName>
+                <default>false</default>
+                <label>Audio Visual</label>
+            </value>
+            <value>
+                <fullName>Billing Error/Dispute</fullName>
+                <default>false</default>
+                <label>Billing Error/Dispute</label>
+            </value>
+            <value>
+                <fullName>Callback</fullName>
+                <default>false</default>
+                <label>Callback</label>
+            </value>
+            <value>
+                <fullName>Cancellation</fullName>
+                <default>false</default>
+                <label>Cancellation</label>
+            </value>
+            <value>
+                <fullName>Carpet/Flooring Inquiry</fullName>
+                <default>false</default>
+                <label>Carpet/Flooring Inquiry</label>
+            </value>
+            <value>
+                <fullName>Complaint</fullName>
+                <default>false</default>
+                <label>Complaint</label>
+            </value>
+            <value>
+                <fullName>Complaint - Other</fullName>
+                <default>false</default>
+                <label>Complaint - Other</label>
+            </value>
+            <value>
+                <fullName>Complaint - Rude Staff</fullName>
+                <default>false</default>
+                <label>Complaint - Rude Staff</label>
+            </value>
+            <value>
+                <fullName>Compliment</fullName>
+                <default>false</default>
+                <label>Compliment</label>
+            </value>
+            <value>
+                <fullName>Dispute</fullName>
+                <default>false</default>
+                <label>Dispute</label>
+            </value>
+            <value>
+                <fullName>Documentation Request</fullName>
+                <default>false</default>
+                <label>Documentation Request</label>
+            </value>
+            <value>
+                <fullName>Electrical</fullName>
+                <default>false</default>
+                <label>Electrical</label>
+            </value>
+            <value>
+                <fullName>Exhibitor List</fullName>
+                <default>false</default>
+                <label>Exhibitor List</label>
+            </value>
+            <value>
+                <fullName>Floor-Covering</fullName>
+                <default>false</default>
+                <label>Floor-Covering</label>
+            </value>
+            <value>
+                <fullName>Furnishings</fullName>
+                <default>false</default>
+                <label>Furnishings</label>
+            </value>
+            <value>
+                <fullName>General Event Enquiry/Other</fullName>
+                <default>false</default>
+                <label>General Event Enquiry/Other</label>
+            </value>
+            <value>
+                <fullName>Ghost Call</fullName>
+                <default>false</default>
+                <label>Ghost Call</label>
+            </value>
+            <value>
+                <fullName>Graphics</fullName>
+                <default>false</default>
+                <label>Graphics</label>
+            </value>
+            <value>
+                <fullName>Insurance Requests (New Type to Create)</fullName>
+                <default>false</default>
+                <label>Insurance Requests</label>
+            </value>
+            <value>
+                <fullName>Invoice/Order Confirmation Explanation</fullName>
+                <default>false</default>
+                <label>Invoice/Order Confirmation Explanation</label>
+            </value>
+            <value>
+                <fullName>Invoice Request</fullName>
+                <default>false</default>
+                <label>Invoice Request</label>
+            </value>
+            <value>
+                <fullName>Labor</fullName>
+                <default>false</default>
+                <label>Labor</label>
+            </value>
+            <value>
+                <fullName>Lead Generation</fullName>
+                <default>false</default>
+                <label>Lead Generation</label>
+            </value>
+            <value>
+                <fullName>Logistics</fullName>
+                <default>false</default>
+                <label>Logistics</label>
+            </value>
+            <value>
+                <fullName>Logistics/Freight</fullName>
+                <default>false</default>
+                <label>Logistics/Freight</label>
+            </value>
+            <value>
+                <fullName>Logistics Lead</fullName>
+                <default>false</default>
+                <label>Logistics Lead</label>
+            </value>
+            <value>
+                <fullName>Mobile App</fullName>
+                <default>false</default>
+                <label>Mobile App</label>
+            </value>
+            <value>
+                <fullName>MultiService</fullName>
+                <default>false</default>
+                <label>MultiService</label>
+            </value>
+            <value>
+                <fullName>Nameboards</fullName>
+                <default>false</default>
+                <label>Nameboards</label>
+            </value>
+            <value>
+                <fullName>NL - Advance Construction</fullName>
+                <default>false</default>
+                <label>NL - Advance Construction</label>
+            </value>
+            <value>
+                <fullName>NL - AV</fullName>
+                <default>false</default>
+                <label>NL - AV</label>
+            </value>
+            <value>
+                <fullName>NL - Cleaning</fullName>
+                <default>false</default>
+                <label>NL - Cleaning</label>
+            </value>
+            <value>
+                <fullName>NL - Compressed air</fullName>
+                <default>false</default>
+                <label>NL - Compressed air</label>
+            </value>
+            <value>
+                <fullName>NL - Electrical Fittings</fullName>
+                <default>false</default>
+                <label>NL - Electrical Fittings</label>
+            </value>
+            <value>
+                <fullName>NL - Floor Covering</fullName>
+                <default>false</default>
+                <label>NL - Floor Covering</label>
+            </value>
+            <value>
+                <fullName>NL - Furniture</fullName>
+                <default>false</default>
+                <label>NL - Furniture</label>
+            </value>
+            <value>
+                <fullName>NL - Graphics</fullName>
+                <default>false</default>
+                <label>NL - Graphics</label>
+            </value>
+            <value>
+                <fullName>NL - Hostesses</fullName>
+                <default>false</default>
+                <label>NL - Hostesses</label>
+            </value>
+            <value>
+                <fullName>NL - Internet</fullName>
+                <default>false</default>
+                <label>NL - Internet</label>
+            </value>
+            <value>
+                <fullName>NL - Name boards</fullName>
+                <default>false</default>
+                <label>NL - Name boards</label>
+            </value>
+            <value>
+                <fullName>NL - Parking</fullName>
+                <default>false</default>
+                <label>NL - Parking</label>
+            </value>
+            <value>
+                <fullName>NL - Plants/ Floral</fullName>
+                <default>false</default>
+                <label>NL - Plants/ Floral</label>
+            </value>
+            <value>
+                <fullName>NL - Power Connection</fullName>
+                <default>false</default>
+                <label>NL - Power Connection</label>
+            </value>
+            <value>
+                <fullName>NL - Rigging</fullName>
+                <default>false</default>
+                <label>NL - Rigging</label>
+            </value>
+            <value>
+                <fullName>NL - Security</fullName>
+                <default>false</default>
+                <label>NL - Security</label>
+            </value>
+            <value>
+                <fullName>NL - Stand Fitting</fullName>
+                <default>false</default>
+                <label>NL - Stand Fitting</label>
+            </value>
+            <value>
+                <fullName>NL - Waste Management</fullName>
+                <default>false</default>
+                <label>NL - Waste Management</label>
+            </value>
+            <value>
+                <fullName>NL - Water Connections</fullName>
+                <default>false</default>
+                <label>NL - Water Connections</label>
+            </value>
+            <value>
+                <fullName>Non-Rev Form(s)</fullName>
+                <default>false</default>
+                <label>Non-Rev Form(s)</label>
+            </value>
+            <value>
+                <fullName>Non-Standard Service</fullName>
+                <default>false</default>
+                <label>Non-Standard Service</label>
+            </value>
+            <value>
+                <fullName>Non-Tradeshow</fullName>
+                <default>false</default>
+                <label>Non-Tradeshow</label>
+            </value>
+            <value>
+                <fullName>Online Issue</fullName>
+                <default>false</default>
+                <label>Online Issue</label>
+            </value>
+            <value>
+                <fullName>On-Line Order</fullName>
+                <default>false</default>
+                <label>On-Line Order</label>
+            </value>
+            <value>
+                <fullName>Order (Fax &amp; Phone)</fullName>
+                <default>false</default>
+                <label>Order (Fax &amp; Phone)</label>
+            </value>
+            <value>
+                <fullName>Order(s)</fullName>
+                <default>false</default>
+                <label>Order(s)</label>
+            </value>
+            <value>
+                <fullName>Order Confirmation</fullName>
+                <default>false</default>
+                <label>Order Confirmation</label>
+            </value>
+            <value>
+                <fullName>Price</fullName>
+                <default>false</default>
+                <label>Price</label>
+            </value>
+            <value>
+                <fullName>Problem Order(s)</fullName>
+                <default>false</default>
+                <label>Problem Order(s)</label>
+            </value>
+            <value>
+                <fullName>Problem Order - COI/EAC/NOI</fullName>
+                <default>false</default>
+                <label>Problem Order - COI/EAC/NOI</label>
+            </value>
+            <value>
+                <fullName>Problem Order - CSM Review</fullName>
+                <default>false</default>
+                <label>Problem Order - CSM Review</label>
+            </value>
+            <value>
+                <fullName>Problem Order - Incomplete</fullName>
+                <default>false</default>
+                <label>Problem Order - Incomplete</label>
+            </value>
+            <value>
+                <fullName>Problem Order - Incomplete Payment</fullName>
+                <default>false</default>
+                <label>Problem Order - Incomplete Payment</label>
+            </value>
+            <value>
+                <fullName>Problem Order - KIT / IT Issues</fullName>
+                <default>false</default>
+                <label>Problem Order - KIT / IT Issues</label>
+            </value>
+            <value>
+                <fullName>Problem Order - Other</fullName>
+                <default>false</default>
+                <label>Problem Order - Other</label>
+            </value>
+            <value>
+                <fullName>Problem Order - System Issue</fullName>
+                <default>false</default>
+                <label>Problem Order - System Issue</label>
+            </value>
+            <value>
+                <fullName>R3 Form Received</fullName>
+                <default>false</default>
+                <label>R3 Form Received</label>
+            </value>
+            <value>
+                <fullName>Registration</fullName>
+                <default>false</default>
+                <label>Registration</label>
+            </value>
+            <value>
+                <fullName>Service Desk</fullName>
+                <default>false</default>
+                <label>Service Desk</label>
+            </value>
+            <value>
+                <fullName>Show Info</fullName>
+                <default>false</default>
+                <label>Show Info</label>
+            </value>
+            <value>
+                <fullName>Show Info/Booth Info</fullName>
+                <default>false</default>
+                <label>Show Info/Booth Info</label>
+            </value>
+            <value>
+                <fullName>Show Ready</fullName>
+                <default>false</default>
+                <label>Show Ready</label>
+            </value>
+            <value>
+                <fullName>Stand-Fitting</fullName>
+                <default>false</default>
+                <label>Stand-Fitting</label>
+            </value>
+            <value>
+                <fullName>Survey Follow Up</fullName>
+                <default>false</default>
+                <label>Survey Follow Up</label>
+            </value>
+            <value>
+                <fullName>Track</fullName>
+                <default>false</default>
+                <label>Track</label>
+            </value>
+            <value>
+                <fullName>Twilio Automatic Case Closure</fullName>
+                <default>false</default>
+                <label>Twilio Automatic Case Closure</label>
+            </value>
+            <value>
+                <fullName>Twilio Automatic Case Creation</fullName>
+                <default>false</default>
+                <label>Twilio Automatic Case Creation</label>
+            </value>
+            <value>
+                <fullName>Venue Services</fullName>
+                <default>false</default>
+                <label>Venue Services</label>
+            </value>
+            <value>
+                <fullName>Visit</fullName>
+                <default>false</default>
+                <label>Visit</label>
+            </value>
+            <value>
+                <fullName>Visit Connect</fullName>
+                <default>false</default>
+                <label>Visit Connect</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>1-Pre</controllingFieldValue>
+            <controllingFieldValue>2-Showsite</controllingFieldValue>
+            <controllingFieldValue>3-Post</controllingFieldValue>
+            <controllingFieldValue>Pre-show</controllingFieldValue>
+            <controllingFieldValue>Showsite (Build)</controllingFieldValue>
+            <controllingFieldValue>Show Open</controllingFieldValue>
+            <controllingFieldValue>Showsite (Breakdown)</controllingFieldValue>
+            <controllingFieldValue>Post-show</controllingFieldValue>
+            <valueName>Audio Visual</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>1-Pre</controllingFieldValue>
+            <controllingFieldValue>2-Showsite</controllingFieldValue>
+            <controllingFieldValue>3-Post</controllingFieldValue>
+            <controllingFieldValue>Pre-show</controllingFieldValue>
+            <controllingFieldValue>Showsite (Build)</controllingFieldValue>
+            <controllingFieldValue>Show Open</controllingFieldValue>
+            <controllingFieldValue>Showsite (Breakdown)</controllingFieldValue>
+            <controllingFieldValue>Post-show</controllingFieldValue>
+            <valueName>Billing Error/Dispute</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>1-Pre</controllingFieldValue>
+            <controllingFieldValue>2-Showsite</controllingFieldValue>
+            <controllingFieldValue>4-Non Tradeshow-N/A</controllingFieldValue>
+            <controllingFieldValue>3-Post</controllingFieldValue>
+            <controllingFieldValue>Pre-show</controllingFieldValue>
+            <controllingFieldValue>Showsite (Build)</controllingFieldValue>
+            <controllingFieldValue>Show Open</controllingFieldValue>
+            <controllingFieldValue>Showsite (Breakdown)</controllingFieldValue>
+            <controllingFieldValue>Post-show</controllingFieldValue>
+            <valueName>Callback</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>1-Pre</controllingFieldValue>
+            <controllingFieldValue>Pre-show</controllingFieldValue>
+            <controllingFieldValue>Post-show</controllingFieldValue>
+            <valueName>Cancellation</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>1-Pre</controllingFieldValue>
+            <controllingFieldValue>2-Showsite</controllingFieldValue>
+            <controllingFieldValue>Pre-show</controllingFieldValue>
+            <controllingFieldValue>Showsite (Build)</controllingFieldValue>
+            <controllingFieldValue>Show Open</controllingFieldValue>
+            <controllingFieldValue>Showsite (Breakdown)</controllingFieldValue>
+            <controllingFieldValue>Post-show</controllingFieldValue>
+            <valueName>Carpet/Flooring Inquiry</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>1-Pre</controllingFieldValue>
+            <controllingFieldValue>2-Showsite</controllingFieldValue>
+            <controllingFieldValue>3-Post</controllingFieldValue>
+            <controllingFieldValue>Pre-show</controllingFieldValue>
+            <controllingFieldValue>Showsite (Build)</controllingFieldValue>
+            <controllingFieldValue>Show Open</controllingFieldValue>
+            <controllingFieldValue>Showsite (Breakdown)</controllingFieldValue>
+            <controllingFieldValue>Post-show</controllingFieldValue>
+            <valueName>Complaint</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>1-Pre</controllingFieldValue>
+            <controllingFieldValue>2-Showsite</controllingFieldValue>
+            <controllingFieldValue>3-Post</controllingFieldValue>
+            <controllingFieldValue>Pre-show</controllingFieldValue>
+            <controllingFieldValue>Showsite (Build)</controllingFieldValue>
+            <controllingFieldValue>Show Open</controllingFieldValue>
+            <controllingFieldValue>Showsite (Breakdown)</controllingFieldValue>
+            <controllingFieldValue>Post-show</controllingFieldValue>
+            <valueName>Compliment</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>1-Pre</controllingFieldValue>
+            <controllingFieldValue>2-Showsite</controllingFieldValue>
+            <controllingFieldValue>3-Post</controllingFieldValue>
+            <controllingFieldValue>Pre-show</controllingFieldValue>
+            <controllingFieldValue>Showsite (Build)</controllingFieldValue>
+            <controllingFieldValue>Show Open</controllingFieldValue>
+            <controllingFieldValue>Showsite (Breakdown)</controllingFieldValue>
+            <controllingFieldValue>Post-show</controllingFieldValue>
+            <valueName>Documentation Request</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>1-Pre</controllingFieldValue>
+            <controllingFieldValue>2-Showsite</controllingFieldValue>
+            <controllingFieldValue>Pre-show</controllingFieldValue>
+            <controllingFieldValue>Showsite (Build)</controllingFieldValue>
+            <controllingFieldValue>Show Open</controllingFieldValue>
+            <controllingFieldValue>Showsite (Breakdown)</controllingFieldValue>
+            <controllingFieldValue>Post-show</controllingFieldValue>
+            <valueName>Electrical</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>1-Pre</controllingFieldValue>
+            <valueName>Exhibitor List</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>1-Pre</controllingFieldValue>
+            <controllingFieldValue>2-Showsite</controllingFieldValue>
+            <controllingFieldValue>Pre-show</controllingFieldValue>
+            <controllingFieldValue>Showsite (Build)</controllingFieldValue>
+            <controllingFieldValue>Show Open</controllingFieldValue>
+            <controllingFieldValue>Showsite (Breakdown)</controllingFieldValue>
+            <controllingFieldValue>Post-show</controllingFieldValue>
+            <valueName>Furnishings</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>1-Pre</controllingFieldValue>
+            <controllingFieldValue>2-Showsite</controllingFieldValue>
+            <controllingFieldValue>Pre-show</controllingFieldValue>
+            <controllingFieldValue>Showsite (Build)</controllingFieldValue>
+            <controllingFieldValue>Show Open</controllingFieldValue>
+            <controllingFieldValue>Showsite (Breakdown)</controllingFieldValue>
+            <controllingFieldValue>Post-show</controllingFieldValue>
+            <valueName>Graphics</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>1-Pre</controllingFieldValue>
+            <valueName>Insurance Requests (New Type to Create)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>1-Pre</controllingFieldValue>
+            <controllingFieldValue>2-Showsite</controllingFieldValue>
+            <controllingFieldValue>3-Post</controllingFieldValue>
+            <controllingFieldValue>Pre-show</controllingFieldValue>
+            <controllingFieldValue>Showsite (Build)</controllingFieldValue>
+            <controllingFieldValue>Show Open</controllingFieldValue>
+            <controllingFieldValue>Showsite (Breakdown)</controllingFieldValue>
+            <controllingFieldValue>Post-show</controllingFieldValue>
+            <valueName>Invoice/Order Confirmation Explanation</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>1-Pre</controllingFieldValue>
+            <controllingFieldValue>2-Showsite</controllingFieldValue>
+            <controllingFieldValue>Pre-show</controllingFieldValue>
+            <controllingFieldValue>Showsite (Build)</controllingFieldValue>
+            <controllingFieldValue>Show Open</controllingFieldValue>
+            <controllingFieldValue>Showsite (Breakdown)</controllingFieldValue>
+            <controllingFieldValue>Post-show</controllingFieldValue>
+            <valueName>Labor</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>1-Pre</controllingFieldValue>
+            <controllingFieldValue>2-Showsite</controllingFieldValue>
+            <controllingFieldValue>Pre-show</controllingFieldValue>
+            <controllingFieldValue>Showsite (Build)</controllingFieldValue>
+            <controllingFieldValue>Show Open</controllingFieldValue>
+            <controllingFieldValue>Showsite (Breakdown)</controllingFieldValue>
+            <controllingFieldValue>Post-show</controllingFieldValue>
+            <valueName>Lead Generation</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>1-Pre</controllingFieldValue>
+            <controllingFieldValue>2-Showsite</controllingFieldValue>
+            <controllingFieldValue>3-Post</controllingFieldValue>
+            <controllingFieldValue>Pre-show</controllingFieldValue>
+            <controllingFieldValue>Showsite (Build)</controllingFieldValue>
+            <controllingFieldValue>Show Open</controllingFieldValue>
+            <controllingFieldValue>Showsite (Breakdown)</controllingFieldValue>
+            <controllingFieldValue>Post-show</controllingFieldValue>
+            <valueName>Logistics/Freight</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>1-Pre</controllingFieldValue>
+            <controllingFieldValue>2-Showsite</controllingFieldValue>
+            <controllingFieldValue>3-Post</controllingFieldValue>
+            <controllingFieldValue>Pre-show</controllingFieldValue>
+            <controllingFieldValue>Showsite (Build)</controllingFieldValue>
+            <controllingFieldValue>Show Open</controllingFieldValue>
+            <controllingFieldValue>Showsite (Breakdown)</controllingFieldValue>
+            <valueName>Logistics Lead</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>1-Pre</controllingFieldValue>
+            <controllingFieldValue>2-Showsite</controllingFieldValue>
+            <controllingFieldValue>3-Post</controllingFieldValue>
+            <controllingFieldValue>Pre-show</controllingFieldValue>
+            <controllingFieldValue>Showsite (Build)</controllingFieldValue>
+            <controllingFieldValue>Show Open</controllingFieldValue>
+            <controllingFieldValue>Showsite (Breakdown)</controllingFieldValue>
+            <controllingFieldValue>Post-show</controllingFieldValue>
+            <valueName>Mobile App</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>1-Pre</controllingFieldValue>
+            <controllingFieldValue>2-Showsite</controllingFieldValue>
+            <controllingFieldValue>Pre-show</controllingFieldValue>
+            <controllingFieldValue>Showsite (Build)</controllingFieldValue>
+            <controllingFieldValue>Show Open</controllingFieldValue>
+            <controllingFieldValue>Showsite (Breakdown)</controllingFieldValue>
+            <controllingFieldValue>Post-show</controllingFieldValue>
+            <valueName>Nameboards</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>1-Pre</controllingFieldValue>
+            <valueName>Non-Rev Form(s)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>1-Pre</controllingFieldValue>
+            <controllingFieldValue>2-Showsite</controllingFieldValue>
+            <controllingFieldValue>Pre-show</controllingFieldValue>
+            <controllingFieldValue>Showsite (Build)</controllingFieldValue>
+            <controllingFieldValue>Show Open</controllingFieldValue>
+            <controllingFieldValue>Showsite (Breakdown)</controllingFieldValue>
+            <controllingFieldValue>Post-show</controllingFieldValue>
+            <valueName>Non-Standard Service</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>1-Pre</controllingFieldValue>
+            <controllingFieldValue>2-Showsite</controllingFieldValue>
+            <controllingFieldValue>3-Post</controllingFieldValue>
+            <controllingFieldValue>Pre-show</controllingFieldValue>
+            <controllingFieldValue>Showsite (Build)</controllingFieldValue>
+            <controllingFieldValue>Show Open</controllingFieldValue>
+            <controllingFieldValue>Showsite (Breakdown)</controllingFieldValue>
+            <controllingFieldValue>Post-show</controllingFieldValue>
+            <valueName>Online Issue</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>1-Pre</controllingFieldValue>
+            <controllingFieldValue>2-Showsite</controllingFieldValue>
+            <controllingFieldValue>Pre-show</controllingFieldValue>
+            <controllingFieldValue>Showsite (Build)</controllingFieldValue>
+            <controllingFieldValue>Show Open</controllingFieldValue>
+            <controllingFieldValue>Showsite (Breakdown)</controllingFieldValue>
+            <controllingFieldValue>Post-show</controllingFieldValue>
+            <valueName>Order (Fax &amp; Phone)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>1-Pre</controllingFieldValue>
+            <valueName>Order(s)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>1-Pre</controllingFieldValue>
+            <valueName>Problem Order(s)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>1-Pre</controllingFieldValue>
+            <valueName>Problem Order - CSM Review</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>1-Pre</controllingFieldValue>
+            <controllingFieldValue>2-Showsite</controllingFieldValue>
+            <controllingFieldValue>Pre-show</controllingFieldValue>
+            <controllingFieldValue>Showsite (Build)</controllingFieldValue>
+            <controllingFieldValue>Show Open</controllingFieldValue>
+            <controllingFieldValue>Showsite (Breakdown)</controllingFieldValue>
+            <controllingFieldValue>Post-show</controllingFieldValue>
+            <valueName>Problem Order - Incomplete</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>1-Pre</controllingFieldValue>
+            <valueName>Problem Order - Incomplete Payment</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>1-Pre</controllingFieldValue>
+            <valueName>Problem Order - KIT / IT Issues</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>1-Pre</controllingFieldValue>
+            <controllingFieldValue>2-Showsite</controllingFieldValue>
+            <controllingFieldValue>Pre-show</controllingFieldValue>
+            <controllingFieldValue>Showsite (Build)</controllingFieldValue>
+            <controllingFieldValue>Show Open</controllingFieldValue>
+            <controllingFieldValue>Showsite (Breakdown)</controllingFieldValue>
+            <controllingFieldValue>Post-show</controllingFieldValue>
+            <valueName>Problem Order - Other</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>1-Pre</controllingFieldValue>
+            <controllingFieldValue>2-Showsite</controllingFieldValue>
+            <controllingFieldValue>Pre-show</controllingFieldValue>
+            <controllingFieldValue>Showsite (Build)</controllingFieldValue>
+            <controllingFieldValue>Show Open</controllingFieldValue>
+            <controllingFieldValue>Showsite (Breakdown)</controllingFieldValue>
+            <controllingFieldValue>Post-show</controllingFieldValue>
+            <valueName>Problem Order - System Issue</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>1-Pre</controllingFieldValue>
+            <valueName>R3 Form Received</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>1-Pre</controllingFieldValue>
+            <controllingFieldValue>2-Showsite</controllingFieldValue>
+            <controllingFieldValue>Pre-show</controllingFieldValue>
+            <controllingFieldValue>Showsite (Build)</controllingFieldValue>
+            <controllingFieldValue>Show Open</controllingFieldValue>
+            <controllingFieldValue>Showsite (Breakdown)</controllingFieldValue>
+            <controllingFieldValue>Post-show</controllingFieldValue>
+            <valueName>Show Info/Booth Info</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>1-Pre</controllingFieldValue>
+            <controllingFieldValue>2-Showsite</controllingFieldValue>
+            <controllingFieldValue>4-Non Tradeshow-N/A</controllingFieldValue>
+            <controllingFieldValue>3-Post</controllingFieldValue>
+            <controllingFieldValue>Pre-show</controllingFieldValue>
+            <controllingFieldValue>Showsite (Build)</controllingFieldValue>
+            <controllingFieldValue>Show Open</controllingFieldValue>
+            <controllingFieldValue>Showsite (Breakdown)</controllingFieldValue>
+            <controllingFieldValue>Post-show</controllingFieldValue>
+            <valueName>Survey Follow Up</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>1-Pre</controllingFieldValue>
+            <valueName>Visit</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>2-Showsite</controllingFieldValue>
+            <controllingFieldValue>Showsite (Build)</controllingFieldValue>
+            <valueName>Logistics</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>2-Showsite</controllingFieldValue>
+            <valueName>Twilio Automatic Case Creation</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>4-Non Tradeshow-N/A</controllingFieldValue>
+            <valueName>Ghost Call</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>4-Non Tradeshow-N/A</controllingFieldValue>
+            <valueName>Non-Tradeshow</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>3-Post</controllingFieldValue>
+            <controllingFieldValue>Pre-show</controllingFieldValue>
+            <controllingFieldValue>Showsite (Build)</controllingFieldValue>
+            <controllingFieldValue>Show Open</controllingFieldValue>
+            <controllingFieldValue>Showsite (Breakdown)</controllingFieldValue>
+            <controllingFieldValue>Post-show</controllingFieldValue>
+            <valueName>Service Desk</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Pre-show</controllingFieldValue>
+            <controllingFieldValue>Showsite (Build)</controllingFieldValue>
+            <controllingFieldValue>Show Open</controllingFieldValue>
+            <controllingFieldValue>Showsite (Breakdown)</controllingFieldValue>
+            <controllingFieldValue>Post-show</controllingFieldValue>
+            <valueName>Floor-Covering</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Pre-show</controllingFieldValue>
+            <controllingFieldValue>Showsite (Build)</controllingFieldValue>
+            <controllingFieldValue>Show Open</controllingFieldValue>
+            <controllingFieldValue>Showsite (Breakdown)</controllingFieldValue>
+            <controllingFieldValue>Post-show</controllingFieldValue>
+            <valueName>General Event Enquiry/Other</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Pre-show</controllingFieldValue>
+            <controllingFieldValue>Showsite (Build)</controllingFieldValue>
+            <controllingFieldValue>Show Open</controllingFieldValue>
+            <controllingFieldValue>Showsite (Breakdown)</controllingFieldValue>
+            <controllingFieldValue>Post-show</controllingFieldValue>
+            <valueName>MultiService</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Pre-show</controllingFieldValue>
+            <controllingFieldValue>Showsite (Build)</controllingFieldValue>
+            <controllingFieldValue>Show Open</controllingFieldValue>
+            <controllingFieldValue>Showsite (Breakdown)</controllingFieldValue>
+            <controllingFieldValue>Post-show</controllingFieldValue>
+            <valueName>NL - Advance Construction</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Pre-show</controllingFieldValue>
+            <controllingFieldValue>Showsite (Build)</controllingFieldValue>
+            <controllingFieldValue>Show Open</controllingFieldValue>
+            <controllingFieldValue>Showsite (Breakdown)</controllingFieldValue>
+            <controllingFieldValue>Post-show</controllingFieldValue>
+            <valueName>NL - AV</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Pre-show</controllingFieldValue>
+            <controllingFieldValue>Showsite (Build)</controllingFieldValue>
+            <controllingFieldValue>Show Open</controllingFieldValue>
+            <controllingFieldValue>Showsite (Breakdown)</controllingFieldValue>
+            <controllingFieldValue>Post-show</controllingFieldValue>
+            <valueName>NL - Cleaning</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Pre-show</controllingFieldValue>
+            <controllingFieldValue>Showsite (Build)</controllingFieldValue>
+            <controllingFieldValue>Show Open</controllingFieldValue>
+            <controllingFieldValue>Showsite (Breakdown)</controllingFieldValue>
+            <controllingFieldValue>Post-show</controllingFieldValue>
+            <valueName>NL - Compressed air</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Pre-show</controllingFieldValue>
+            <controllingFieldValue>Showsite (Build)</controllingFieldValue>
+            <controllingFieldValue>Show Open</controllingFieldValue>
+            <controllingFieldValue>Showsite (Breakdown)</controllingFieldValue>
+            <controllingFieldValue>Post-show</controllingFieldValue>
+            <valueName>NL - Electrical Fittings</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Pre-show</controllingFieldValue>
+            <controllingFieldValue>Showsite (Build)</controllingFieldValue>
+            <controllingFieldValue>Show Open</controllingFieldValue>
+            <controllingFieldValue>Showsite (Breakdown)</controllingFieldValue>
+            <controllingFieldValue>Post-show</controllingFieldValue>
+            <valueName>NL - Floor Covering</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Pre-show</controllingFieldValue>
+            <controllingFieldValue>Showsite (Build)</controllingFieldValue>
+            <controllingFieldValue>Show Open</controllingFieldValue>
+            <controllingFieldValue>Showsite (Breakdown)</controllingFieldValue>
+            <controllingFieldValue>Post-show</controllingFieldValue>
+            <valueName>NL - Furniture</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Pre-show</controllingFieldValue>
+            <controllingFieldValue>Showsite (Build)</controllingFieldValue>
+            <controllingFieldValue>Show Open</controllingFieldValue>
+            <controllingFieldValue>Showsite (Breakdown)</controllingFieldValue>
+            <controllingFieldValue>Post-show</controllingFieldValue>
+            <valueName>NL - Graphics</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Pre-show</controllingFieldValue>
+            <controllingFieldValue>Showsite (Build)</controllingFieldValue>
+            <controllingFieldValue>Show Open</controllingFieldValue>
+            <controllingFieldValue>Showsite (Breakdown)</controllingFieldValue>
+            <controllingFieldValue>Post-show</controllingFieldValue>
+            <valueName>NL - Hostesses</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Pre-show</controllingFieldValue>
+            <controllingFieldValue>Showsite (Build)</controllingFieldValue>
+            <controllingFieldValue>Show Open</controllingFieldValue>
+            <controllingFieldValue>Showsite (Breakdown)</controllingFieldValue>
+            <controllingFieldValue>Post-show</controllingFieldValue>
+            <valueName>NL - Internet</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Pre-show</controllingFieldValue>
+            <controllingFieldValue>Showsite (Build)</controllingFieldValue>
+            <controllingFieldValue>Show Open</controllingFieldValue>
+            <controllingFieldValue>Showsite (Breakdown)</controllingFieldValue>
+            <controllingFieldValue>Post-show</controllingFieldValue>
+            <valueName>NL - Name boards</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Pre-show</controllingFieldValue>
+            <controllingFieldValue>Showsite (Build)</controllingFieldValue>
+            <controllingFieldValue>Show Open</controllingFieldValue>
+            <controllingFieldValue>Showsite (Breakdown)</controllingFieldValue>
+            <controllingFieldValue>Post-show</controllingFieldValue>
+            <valueName>NL - Plants/ Floral</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Pre-show</controllingFieldValue>
+            <controllingFieldValue>Showsite (Build)</controllingFieldValue>
+            <controllingFieldValue>Show Open</controllingFieldValue>
+            <controllingFieldValue>Showsite (Breakdown)</controllingFieldValue>
+            <controllingFieldValue>Post-show</controllingFieldValue>
+            <valueName>NL - Power Connection</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Pre-show</controllingFieldValue>
+            <controllingFieldValue>Showsite (Build)</controllingFieldValue>
+            <controllingFieldValue>Show Open</controllingFieldValue>
+            <controllingFieldValue>Showsite (Breakdown)</controllingFieldValue>
+            <controllingFieldValue>Post-show</controllingFieldValue>
+            <valueName>NL - Rigging</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Pre-show</controllingFieldValue>
+            <controllingFieldValue>Showsite (Build)</controllingFieldValue>
+            <controllingFieldValue>Show Open</controllingFieldValue>
+            <controllingFieldValue>Showsite (Breakdown)</controllingFieldValue>
+            <controllingFieldValue>Post-show</controllingFieldValue>
+            <valueName>NL - Security</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Pre-show</controllingFieldValue>
+            <controllingFieldValue>Showsite (Build)</controllingFieldValue>
+            <controllingFieldValue>Show Open</controllingFieldValue>
+            <controllingFieldValue>Showsite (Breakdown)</controllingFieldValue>
+            <controllingFieldValue>Post-show</controllingFieldValue>
+            <valueName>NL - Stand Fitting</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Pre-show</controllingFieldValue>
+            <controllingFieldValue>Showsite (Build)</controllingFieldValue>
+            <controllingFieldValue>Show Open</controllingFieldValue>
+            <controllingFieldValue>Showsite (Breakdown)</controllingFieldValue>
+            <controllingFieldValue>Post-show</controllingFieldValue>
+            <valueName>NL - Waste Management</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Pre-show</controllingFieldValue>
+            <controllingFieldValue>Showsite (Build)</controllingFieldValue>
+            <controllingFieldValue>Show Open</controllingFieldValue>
+            <controllingFieldValue>Showsite (Breakdown)</controllingFieldValue>
+            <controllingFieldValue>Post-show</controllingFieldValue>
+            <valueName>NL - Water Connections</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Pre-show</controllingFieldValue>
+            <controllingFieldValue>Showsite (Build)</controllingFieldValue>
+            <controllingFieldValue>Show Open</controllingFieldValue>
+            <controllingFieldValue>Showsite (Breakdown)</controllingFieldValue>
+            <controllingFieldValue>Post-show</controllingFieldValue>
+            <valueName>Show Ready</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Pre-show</controllingFieldValue>
+            <controllingFieldValue>Showsite (Build)</controllingFieldValue>
+            <controllingFieldValue>Show Open</controllingFieldValue>
+            <controllingFieldValue>Showsite (Breakdown)</controllingFieldValue>
+            <controllingFieldValue>Post-show</controllingFieldValue>
+            <valueName>Stand-Fitting</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Pre-show</controllingFieldValue>
+            <valueName>Track</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Pre-show</controllingFieldValue>
+            <controllingFieldValue>Showsite (Build)</controllingFieldValue>
+            <controllingFieldValue>Show Open</controllingFieldValue>
+            <controllingFieldValue>Showsite (Breakdown)</controllingFieldValue>
+            <controllingFieldValue>Post-show</controllingFieldValue>
+            <valueName>Visit Connect</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Showsite (Build)</controllingFieldValue>
+            <controllingFieldValue>Show Open</controllingFieldValue>
+            <controllingFieldValue>Showsite (Breakdown)</controllingFieldValue>
+            <controllingFieldValue>Post-show</controllingFieldValue>
+            <valueName>Registration</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

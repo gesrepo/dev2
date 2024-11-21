@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Event_Re_Scheduled__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>To be used only if the Show/Event has been re-scheduled for a future date.</description>
+    <inlineHelpText>To be used only if the Show/Event has been re-scheduled for a future date.</inlineHelpText>
+    <label>Event Re-Scheduled</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

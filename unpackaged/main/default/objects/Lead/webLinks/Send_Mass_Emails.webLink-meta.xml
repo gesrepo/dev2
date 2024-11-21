@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Send_Mass_Emails</fullName>
+    <availability>online</availability>
+    <displayType>massActionButton</displayType>
+    <encodingKey>UTF-8</encodingKey>
+    <height>600</height>
+    <linkType>url</linkType>
+    <masterLabel>Send Mass Emails</masterLabel>
+    <openType>noSidebar</openType>
+    <protected>false</protected>
+    <requireRowSelection>false</requireRowSelection>
+    <url>https://ges.my.salesforce.com/ui/massmail/MassMailStageManager?setupid=MassMailFilter&amp;mm_type=Lead&amp;wizardRetUrl=%2F00Q%2Fo&amp;recipient_limit=500</url>
+</WebLink>

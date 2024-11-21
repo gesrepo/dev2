@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Intl_Logistics_Out_VAR_YOY__c</fullName>
+    <formula>IF(Intl_Logistics_Out_RY__c = 0,0, ((Intl_Logistics_Outbound__c - Intl_Logistics_Out_RY__c)/Intl_Logistics_Out_RY__c) )</formula>
+    <label>Int&#39;l Logistics Out</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Percent</type>
+</CustomField>

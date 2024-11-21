@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>F_B_Costs_Estimated__c</fullName>
+    <defaultValue>0</defaultValue>
+    <label>F&amp;B Costs Estimated</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>3</scale>
+    <trackTrending>false</trackTrending>
+    <type>Currency</type>
+</CustomField>

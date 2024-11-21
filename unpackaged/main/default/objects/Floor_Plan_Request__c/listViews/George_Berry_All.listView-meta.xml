@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>George_Berry_All</fullName>
+    <columns>NAME</columns>
+    <columns>UserEntered_Requested_Due_Date__c</columns>
+    <columns>Opportunity_Name__c</columns>
+    <columns>Production_Location__c</columns>
+    <columns>Requester__c</columns>
+    <columns>Claimed_By__c</columns>
+    <columns>CREATED_DATE</columns>
+    <columns>FPR_Show_Job_Number__c</columns>
+    <columns>Regional_Overhead_Picklist__c</columns>
+    <columns>LAST_UPDATE</columns>
+    <columns>Status__c</columns>
+    <columns>Request_Plan_Type__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Claimed_By__c</field>
+        <operation>equals</operation>
+        <value>George Berry</value>
+    </filters>
+    <label>George Berry All</label>
+    <language>en_US</language>
+</ListView>

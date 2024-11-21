@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>UAE_Plastics_Recycling_Show_Case</fullName>
+    <filterScope>Queue</filterScope>
+    <label>UAE Plastics &amp; Recycling Show</label>
+    <queue>UAE_Plastics_Recycling_Show</queue>
+    <sharedTo>
+        <allInternalUsers />
+    </sharedTo>
+</ListView>

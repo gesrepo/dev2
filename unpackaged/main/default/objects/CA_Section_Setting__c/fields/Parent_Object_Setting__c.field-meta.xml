@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Parent_Object_Setting__c</fullName>
+    <inlineHelpText>Select the parent record for which the section is being created</inlineHelpText>
+    <label>Parent Object Setting</label>
+    <lookupFilter>
+        <active>true</active>
+        <filterItems>
+            <field>$Source.Profile_Name__c</field>
+            <operation>equals</operation>
+            <valueField>CA_Personalized_Object_Setting__c.Profile_Name__c</valueField>
+        </filterItems>
+        <filterItems>
+            <field>$Source.Object_Name__c</field>
+            <operation>equals</operation>
+            <valueField>CA_Personalized_Object_Setting__c.Object_Name__c</valueField>
+        </filterItems>
+        <infoMessage>Please select the parent record keeping in mind the correct profile and object names</infoMessage>
+        <isOptional>true</isOptional>
+    </lookupFilter>
+    <referenceTo>CA_Personalized_Object_Setting__c</referenceTo>
+    <relationshipName>Section_Settings</relationshipName>
+    <relationshipOrder>0</relationshipOrder>
+    <reparentableMasterDetail>false</reparentableMasterDetail>
+    <trackTrending>false</trackTrending>
+    <type>MasterDetail</type>
+    <writeRequiresMasterRead>false</writeRequiresMasterRead>
+</CustomField>

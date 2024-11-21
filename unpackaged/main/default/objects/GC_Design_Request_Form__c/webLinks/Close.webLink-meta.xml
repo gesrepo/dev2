@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Close</fullName>
+    <availability>online</availability>
+    <description>Sets the status of the DRF to Closed if show is over and user is AM for the associated show</description>
+    <displayType>button</displayType>
+    <height>600</height>
+    <linkType>page</linkType>
+    <masterLabel>Close</masterLabel>
+    <openType>sidebar</openType>
+    <page>GC_DRFClose</page>
+    <protected>false</protected>
+</WebLink>

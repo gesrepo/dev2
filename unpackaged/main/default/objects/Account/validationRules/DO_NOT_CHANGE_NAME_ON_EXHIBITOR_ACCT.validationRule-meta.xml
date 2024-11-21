@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>DO_NOT_CHANGE_NAME_ON_EXHIBITOR_ACCT</fullName>
+    <active>true</active>
+    <description>Prevents the EXHIBITOR account name from being changed.</description>
+    <errorConditionFormula>AND(
+
+ISCHANGED(Name),
+Id = &#39;0014000000mOXkd&#39;)</errorConditionFormula>
+    <errorMessage>YOU CANNOT CHANGE THE NAME OF THIS ACCOUNT. PLEASE USE THE APPROPRIATE ACCOUNT. THIS IS A GENERAL HOLDING ACCOUNT FOR THE NSC.</errorMessage>
+</ValidationRule>

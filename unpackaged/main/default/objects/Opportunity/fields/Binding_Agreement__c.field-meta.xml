@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Binding_Agreement__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Audited - KEEP per SR 9/24/2019 Need for Legal</description>
+    <inlineHelpText>This indicates if we have a Binding Agreement. This is for contracts that are over 100K only.</inlineHelpText>
+    <label>Binding Agreement</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

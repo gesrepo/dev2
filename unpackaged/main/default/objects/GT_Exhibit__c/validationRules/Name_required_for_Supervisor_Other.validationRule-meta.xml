@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Name_required_for_Supervisor_Other</fullName>
+    <active>true</active>
+    <description>I&amp;D Name is required when &#39;Other&#39; option is selected for I&amp;D Supervisor</description>
+    <errorConditionFormula>IF( 
+AND( 
+ISPICKVAL(I_D_Supervisor__c , &#39;Other&#39;), 
+ISBLANK(I_D_Name_Other__c) 
+),true,false)</errorConditionFormula>
+    <errorDisplayField>I_D_Name_Other__c</errorDisplayField>
+    <errorMessage>I&amp;D Name (Other) is required</errorMessage>
+</ValidationRule>

@@ -1,0 +1,21 @@
+<apex:page >
+<script>
+      setTimeout(function () { window.close();}, 10000);
+  </script>
+
+    <apex:form >
+        <apex:pageBlock >
+            <h1>
+                <style type="text/css">
+
+        p { font-weight: bold; }
+
+    </style>
+
+ 
+    <p>Thank you for your response! It has been reflected in the record. </p>
+            </h1>
+        </apex:pageBlock>
+    </apex:form>
+    
+</apex:page>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>GES_Master_Customer_Number__c</fullName>
+    <description>GES Master Customer Number. Field datatype is VARCHAR2(30) in CORE. Not required field. Should be setup as External Id field as that would allow searching, indexing, matching (import/upsert) and ultiple records could have the same value. But unable to do so due to &quot;Custom field index limit exceeded&quot;</description>
+    <externalId>false</externalId>
+    <label>GES Master Customer Number</label>
+    <length>30</length>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

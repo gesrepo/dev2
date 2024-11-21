@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Total_Show_Occurences__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Note the number of occurrences included in proposal when that number exceeds 6 (note: up to 6 occurrences can be linked to this agreement).</inlineHelpText>
+    <label>Total Show Occurrences</label>
+    <precision>2</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

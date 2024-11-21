@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Housing_Provider__c</fullName>
+    <inlineHelpText>Company providing Housing services for this exhibition opportunity</inlineHelpText>
+    <label>Housing Provider</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>true</sorted>
+            <value>
+                <fullName>A111 Power of Conference Service</fullName>
+                <default>false</default>
+                <label>A111 Power of Conference Service</label>
+            </value>
+            <value>
+                <fullName>AC Central Reservations</fullName>
+                <default>false</default>
+                <label>AC Central Reservations</label>
+            </value>
+            <value>
+                <fullName>Active</fullName>
+                <default>false</default>
+                <label>Active</label>
+            </value>
+            <value>
+                <fullName>Anthony Travel &amp; airbnb</fullName>
+                <default>false</default>
+                <label>Anthony Travel &amp; airbnb</label>
+            </value>
+            <value>
+                <fullName>aRes Travel</fullName>
+                <default>false</default>
+                <label>aRes Travel</label>
+            </value>
+            <value>
+                <fullName>b-network</fullName>
+                <default>false</default>
+                <label>b-network</label>
+            </value>
+            <value>
+                <fullName>CMR – Convention Management Resources</fullName>
+                <default>false</default>
+                <label>CMR – Convention Management Resources</label>
+            </value>
+            <value>
+                <fullName>Conference Direct</fullName>
+                <default>false</default>
+                <label>Conference Direct</label>
+            </value>
+            <value>
+                <fullName>Connections Housing</fullName>
+                <default>false</default>
+                <label>Connections Housing</label>
+            </value>
+            <value>
+                <fullName>Convention Housing Management (CHMrooms)</fullName>
+                <default>false</default>
+                <label>Convention Housing Management (CHMrooms)</label>
+            </value>
+            <value>
+                <fullName>Convention Housing Partners</fullName>
+                <default>false</default>
+                <label>Convention Housing Partners</label>
+            </value>
+            <value>
+                <fullName>CVB</fullName>
+                <default>false</default>
+                <label>CVB</label>
+            </value>
+            <value>
+                <fullName>Cvent</fullName>
+                <default>false</default>
+                <label>Cvent</label>
+            </value>
+            <value>
+                <fullName>Davis_Trapp</fullName>
+                <default>false</default>
+                <label>Davis Trapp</label>
+            </value>
+            <value>
+                <fullName>De Prez</fullName>
+                <default>false</default>
+                <label>De Prez</label>
+            </value>
+            <value>
+                <fullName>Events in Focus</fullName>
+                <default>false</default>
+                <label>Events in Focus</label>
+            </value>
+            <value>
+                <fullName>Eventsphere</fullName>
+                <default>false</default>
+                <label>Eventsphere</label>
+            </value>
+            <value>
+                <fullName>Expovision</fullName>
+                <default>false</default>
+                <label>Expovision</label>
+            </value>
+            <value>
+                <fullName>Express Travel</fullName>
+                <default>false</default>
+                <label>Express Travel</label>
+            </value>
+            <value>
+                <fullName>Facility</fullName>
+                <default>false</default>
+                <label>Facility</label>
+            </value>
+            <value>
+                <fullName>Fusion Marketing</fullName>
+                <default>false</default>
+                <label>Fusion Marketing</label>
+            </value>
+            <value>
+                <fullName>Globetrotter Travel Management Services</fullName>
+                <default>false</default>
+                <label>Globetrotter Travel Management Services</label>
+            </value>
+            <value>
+                <fullName>Helms Brisco</fullName>
+                <default>false</default>
+                <label>Helms Brisco</label>
+            </value>
+            <value>
+                <fullName>Hotel Direct</fullName>
+                <default>false</default>
+                <label>Hotel Direct</label>
+            </value>
+            <value>
+                <fullName>Housing Connections</fullName>
+                <default>false</default>
+                <label>Housing Connections</label>
+            </value>
+            <value>
+                <fullName>ICS</fullName>
+                <default>false</default>
+                <label>ICS</label>
+            </value>
+            <value>
+                <fullName>IMN</fullName>
+                <default>false</default>
+                <label>IMN</label>
+            </value>
+            <value>
+                <fullName>Inactive</fullName>
+                <default>false</default>
+                <label>Inactive</label>
+            </value>
+            <value>
+                <fullName>InSITE Selection Services</fullName>
+                <default>false</default>
+                <label>InSITE Selection Services</label>
+            </value>
+            <value>
+                <fullName>J. Spargo &amp; Associates</fullName>
+                <default>false</default>
+                <label>J. Spargo &amp; Associates</label>
+            </value>
+            <value>
+                <fullName>Lanyon</fullName>
+                <default>false</default>
+                <label>Lanyon</label>
+            </value>
+            <value>
+                <fullName>Martiz (formerly Experient)</fullName>
+                <default>false</default>
+                <label>Martiz (formerly Experient)</label>
+            </value>
+            <value>
+                <fullName>MCI (formerly Wyndham Jade)</fullName>
+                <default>false</default>
+                <label>MCI (formerly Wyndham Jade)</label>
+            </value>
+            <value>
+                <fullName>Meeting Services Unlimited</fullName>
+                <default>false</default>
+                <label>Meeting Services Unlimited</label>
+            </value>
+            <value>
+                <fullName>National Travel</fullName>
+                <default>false</default>
+                <label>National Travel</label>
+            </value>
+            <value>
+                <fullName>No Provider Chosen</fullName>
+                <default>false</default>
+                <label>No Provider Chosen</label>
+            </value>
+            <value>
+                <fullName>OnPeak</fullName>
+                <default>false</default>
+                <label>OnPeak</label>
+            </value>
+            <value>
+                <fullName>Orchid</fullName>
+                <default>false</default>
+                <label>Orchid</label>
+            </value>
+            <value>
+                <fullName>Par Avion</fullName>
+                <default>false</default>
+                <label>Par Avion</label>
+            </value>
+            <value>
+                <fullName>Passkey</fullName>
+                <default>false</default>
+                <label>Passkey</label>
+            </value>
+            <value>
+                <fullName>Preferred Convention Services</fullName>
+                <default>false</default>
+                <label>Preferred Convention Services</label>
+            </value>
+            <value>
+                <fullName>PSE</fullName>
+                <default>false</default>
+                <label>PSE</label>
+            </value>
+            <value>
+                <fullName>Self (In-House)</fullName>
+                <default>false</default>
+                <label>Self (In-House)</label>
+            </value>
+            <value>
+                <fullName>Service Not Needed</fullName>
+                <default>false</default>
+                <label>Service Not Needed</label>
+            </value>
+            <value>
+                <fullName>Showcare Event Solutions</fullName>
+                <default>false</default>
+                <label>Showcare Event Solutions</label>
+            </value>
+            <value>
+                <fullName>SmithBucklin</fullName>
+                <default>false</default>
+                <label>SmithBucklin</label>
+            </value>
+            <value>
+                <fullName>Turon Travel</fullName>
+                <default>false</default>
+                <label>Turon Travel</label>
+            </value>
+            <value>
+                <fullName>VIP Meeting</fullName>
+                <default>false</default>
+                <label>VIP Meeting</label>
+            </value>
+            <value>
+                <fullName>WRI</fullName>
+                <default>false</default>
+                <label>WRI</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

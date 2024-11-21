@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>AV_Amount_Not_Editable</fullName>
+    <active>true</active>
+    <description>Makes Amount on AV opportunity record types unable to be edited</description>
+    <errorConditionFormula>AND(
+ISCHANGED(Amount),
+
+OR( 
+$RecordType.DeveloperName = &quot;AV_CC&quot;, 
+$RecordType.DeveloperName = &quot;AV_CR&quot;, 
+$RecordType.DeveloperName = &quot;AV_CV&quot;, 
+$RecordType.DeveloperName = &quot;AV_DB&quot;, 
+$RecordType.DeveloperName = &quot;AV_IA&quot;, 
+$RecordType.DeveloperName = &quot;AV_LO&quot;, 
+$RecordType.DeveloperName = &quot;AV&quot;, 
+$RecordType.DeveloperName = &quot;AV_PS&quot;, 
+$RecordType.DeveloperName = &quot;AV_TS&quot;, 
+$RecordType.DeveloperName = &quot;AV_Exhibitor_CR&quot;, 
+$RecordType.DeveloperName = &quot;AV_Exhibitor_CV&quot;, 
+$RecordType.DeveloperName = &quot;AV_Exhibitor_LO&quot;, 
+$RecordType.DeveloperName = &quot;AV_Exhibitor_CC&quot;, 
+$RecordType.DeveloperName = &quot;AV_Exhibitor_IA&quot;, 
+$RecordType.DeveloperName = &quot;AV_Exhibitor_DB&quot;, 
+$RecordType.DeveloperName = &quot;AV_Exhibitor_Master&quot;, 
+$RecordType.DeveloperName = &quot;AV_Exhibitor_PS&quot;, 
+$RecordType.DeveloperName = &quot;AV_Exhibitor_TS&quot;), 
+
+NOT(OR( 
+$Profile.Name = &quot;GES Interface&quot;, 
+$Profile.Name = &quot;GES Administrator Interface&quot;, 
+$Profile.Name = &quot;ONS Integration Interface&quot;,
+$Profile.Name = &quot;Super User&quot;,
+$Profile.Name = &quot;AV Support User&quot;,
+$Profile.Name = &quot;AV Support&quot;,
+$Profile.Name = &quot;Salesforce Support User&quot;,
+$Profile.Name = &quot;System Administrator&quot;)))</errorConditionFormula>
+    <errorDisplayField>Amount</errorDisplayField>
+    <errorMessage>You cannot edit the Amount field.</errorMessage>
+</ValidationRule>

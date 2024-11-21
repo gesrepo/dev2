@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Project_Manager_CrownCastle__c</fullName>
+    <label>CC Project Manager</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>true</sorted>
+            <value>
+                <fullName>Gina Carroll</fullName>
+                <default>false</default>
+                <label>Gina Carroll</label>
+            </value>
+            <value>
+                <fullName>Juanita Timney</fullName>
+                <default>false</default>
+                <label>Juanita Timney</label>
+            </value>
+            <value>
+                <fullName>Katie Lillie</fullName>
+                <default>false</default>
+                <label>Katie Lillie</label>
+            </value>
+            <value>
+                <fullName>Lacey Hull</fullName>
+                <default>false</default>
+                <label>Lacey Hull</label>
+            </value>
+            <value>
+                <fullName>Lisandra Fernandez</fullName>
+                <default>false</default>
+                <label>Lisandra Fernandez</label>
+            </value>
+            <value>
+                <fullName>Oswin Chackochan</fullName>
+                <default>false</default>
+                <label>Oswin Chackochan</label>
+            </value>
+            <value>
+                <fullName>Stephanie Naida</fullName>
+                <default>false</default>
+                <label>Stephanie Naida</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

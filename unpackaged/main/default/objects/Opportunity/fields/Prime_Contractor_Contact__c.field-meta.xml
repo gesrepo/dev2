@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Prime_Contractor_Contact__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <inlineHelpText>Primary sales person at contractor producing exhibition event; only use if Prime Contractor not GES</inlineHelpText>
+    <label>Exhibition Prime Contractor Contact</label>
+    <referenceTo>Contact</referenceTo>
+    <relationshipLabel>Opportunities (Prime Contractor Contact)</relationshipLabel>
+    <relationshipName>R00N40000001pjrGEAQ</relationshipName>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Lookup</type>
+</CustomField>

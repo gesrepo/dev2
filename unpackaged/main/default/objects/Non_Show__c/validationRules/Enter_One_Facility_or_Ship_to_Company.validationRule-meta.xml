@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Enter_One_Facility_or_Ship_to_Company</fullName>
+    <active>true</active>
+    <errorConditionFormula>OR( Facility__r.Name &lt;&gt; Ship_To_Company__c) 
+&amp;&amp; 
+LEN( Facility__r.Name ) &gt; 0 
+&amp;&amp; 
+LEN( Ship_To_Company__c )&gt;0
+&amp;&amp; NOT ($User.Id = &quot;005400000010HAt&quot;) 
+&amp;&amp;NOT
+(OR($Profile.Name = &#39;GES Interface&#39;,
+$Profile.Name = &#39;EMEA Spiro Interface&#39;,
+$Profile.Name = &quot;System Administrator&quot;, 
+$User.Id = &quot;00540000003NbAFAA0&quot;, 
+$User.Id = &quot;0051W000004H7uHQAS&quot;) /*Connie Masters and Shelly Barnes for AV Non-shows */ 
+)</errorConditionFormula>
+    <errorMessage>Please enter a Facility or Ship to Company, not both.</errorMessage>
+</ValidationRule>

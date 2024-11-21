@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ShippingType__c</fullName>
+    <inlineHelpText>This is the shipping type. Select Direct to send the shipment directly to show site. Or choose Drayage to send the shipment to the Advance shipping warehouse.</inlineHelpText>
+    <label>Shipping Type</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Direct</fullName>
+                <default>true</default>
+                <label>Direct</label>
+            </value>
+            <value>
+                <fullName>Drayage</fullName>
+                <default>false</default>
+                <label>Drayage</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

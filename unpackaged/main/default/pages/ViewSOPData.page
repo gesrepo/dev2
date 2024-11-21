@@ -1,0 +1,24 @@
+<apex:page standardController="Case" extensions="SOP_DataAccessController" showHeader="false" sideBar="false">
+    <div align="left">
+        <apex:image value="{!$Resource.GESLogo}" />
+    </div>
+    <apex:form >
+        <apex:pageBlock >
+            <apex:pageBlockSection columns="2">
+                <apex:pageBlockSectionItem >
+                    <apex:outputPanel >
+                        <apex:outputText value="Please select a service from the pick list then click 'Load'" /><br/>
+                        <apex:outputText value="You may close this window at any time when you are finished." />
+                    </apex:outputPanel>
+                </apex:pageBlockSectionItem>
+                <apex:pageBlockSectionItem >
+                    <apex:selectList size="1" value="{!selectedService}" multiselect="false">
+                        <apex:selectOption itemLabel="Order History" itemvalue="Order History" />
+                        <apex:selectOption itemLabel="Catalogues" itemvalue="Catalogues" />
+                    </apex:selectList>
+                    <apex:commandButton value="Load" action="{!serviceRedirect}" />
+                </apex:pageBlockSectionItem>
+            </apex:pageBlockSection>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

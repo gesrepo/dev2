@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Therapeutic_Area__c</fullName>
+    <label>Therapeutic Area</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>true</sorted>
+            <value>
+                <fullName>Access Support</fullName>
+                <default>false</default>
+                <label>Access Support</label>
+            </value>
+            <value>
+                <fullName>Advocacy</fullName>
+                <default>false</default>
+                <label>Advocacy</label>
+            </value>
+            <value>
+                <fullName>BIOM</fullName>
+                <default>false</default>
+                <label>BIOM</label>
+            </value>
+            <value>
+                <fullName>Biomarker</fullName>
+                <default>false</default>
+                <label>Biomarker</label>
+            </value>
+            <value>
+                <fullName>BioPharm</fullName>
+                <default>false</default>
+                <label>BioPharm</label>
+            </value>
+            <value>
+                <fullName>Biopharmaceuticals</fullName>
+                <default>false</default>
+                <label>Biopharmaceuticals</label>
+            </value>
+            <value>
+                <fullName>BioSimilars</fullName>
+                <default>false</default>
+                <label>BioSimilars</label>
+            </value>
+            <value>
+                <fullName>Cardiovascular</fullName>
+                <default>false</default>
+                <label>Cardiovascular</label>
+            </value>
+            <value>
+                <fullName>Clinical Trial / Global</fullName>
+                <default>false</default>
+                <label>Clinical Trial / Global</label>
+            </value>
+            <value>
+                <fullName>CORP</fullName>
+                <default>false</default>
+                <label>CORP</label>
+            </value>
+            <value>
+                <fullName>Diabetes</fullName>
+                <default>false</default>
+                <label>Diabetes</label>
+            </value>
+            <value>
+                <fullName>Diabetes Care</fullName>
+                <default>false</default>
+                <label>Diabetes Care</label>
+            </value>
+            <value>
+                <fullName>Eliquis</fullName>
+                <default>false</default>
+                <label>Eliquis</label>
+            </value>
+            <value>
+                <fullName>Empliciti</fullName>
+                <default>false</default>
+                <label>Empliciti</label>
+            </value>
+            <value>
+                <fullName>Endocrinology</fullName>
+                <default>false</default>
+                <label>Endocrinology</label>
+            </value>
+            <value>
+                <fullName>Fiber</fullName>
+                <default>false</default>
+                <label>Fiber</label>
+            </value>
+            <value>
+                <fullName>Foundation</fullName>
+                <default>false</default>
+                <label>Foundation</label>
+            </value>
+            <value>
+                <fullName>Gastroenterology</fullName>
+                <default>false</default>
+                <label>Gastroenterology</label>
+            </value>
+            <value>
+                <fullName>GEN MED</fullName>
+                <default>false</default>
+                <label>GEN MED</label>
+            </value>
+            <value>
+                <fullName>HAC</fullName>
+                <default>false</default>
+                <label>HAC</label>
+            </value>
+            <value>
+                <fullName>Healthcare Professionals (HCP)</fullName>
+                <default>false</default>
+                <label>Healthcare Professionals (HCP)</label>
+            </value>
+            <value>
+                <fullName>Hematology</fullName>
+                <default>false</default>
+                <label>Hematology</label>
+            </value>
+            <value>
+                <fullName>HEME</fullName>
+                <default>false</default>
+                <label>HEME</label>
+            </value>
+            <value>
+                <fullName>Hepatology</fullName>
+                <default>false</default>
+                <label>Hepatology</label>
+            </value>
+            <value>
+                <fullName>Human Resources</fullName>
+                <default>false</default>
+                <label>Human Resources</label>
+            </value>
+            <value>
+                <fullName>Ilum</fullName>
+                <default>false</default>
+                <label>Ilum</label>
+            </value>
+            <value>
+                <fullName>Immunology</fullName>
+                <default>false</default>
+                <label>Immunology</label>
+            </value>
+            <value>
+                <fullName>Infectious Disease</fullName>
+                <default>false</default>
+                <label>Infectious Disease</label>
+            </value>
+            <value>
+                <fullName>I-O</fullName>
+                <default>false</default>
+                <label>I-O</label>
+            </value>
+            <value>
+                <fullName>I-O Teach</fullName>
+                <default>false</default>
+                <label>I-O Teach</label>
+            </value>
+            <value>
+                <fullName>I-O unbranded</fullName>
+                <default>false</default>
+                <label>I-O unbranded</label>
+            </value>
+            <value>
+                <fullName>Market Access</fullName>
+                <default>false</default>
+                <label>Market Access</label>
+            </value>
+            <value>
+                <fullName>Medical Information</fullName>
+                <default>false</default>
+                <label>Medical Information</label>
+            </value>
+            <value>
+                <fullName>Nulojix</fullName>
+                <default>false</default>
+                <label>Nulojix</label>
+            </value>
+            <value>
+                <fullName>Obesity</fullName>
+                <default>false</default>
+                <label>Obesity</label>
+            </value>
+            <value>
+                <fullName>ONCO</fullName>
+                <default>false</default>
+                <label>ONCO</label>
+            </value>
+            <value>
+                <fullName>Opdivo</fullName>
+                <default>false</default>
+                <label>Opdivo</label>
+            </value>
+            <value>
+                <fullName>Orencia</fullName>
+                <default>false</default>
+                <label>Orencia</label>
+            </value>
+            <value>
+                <fullName>Patient</fullName>
+                <default>false</default>
+                <label>Patient</label>
+            </value>
+            <value>
+                <fullName>Patients &amp; HCP</fullName>
+                <default>false</default>
+                <label>Patients &amp; HCP</label>
+            </value>
+            <value>
+                <fullName>Product Communication</fullName>
+                <default>false</default>
+                <label>Product Communication</label>
+            </value>
+            <value>
+                <fullName>Product Communications</fullName>
+                <default>false</default>
+                <label>Product Communications</label>
+            </value>
+            <value>
+                <fullName>Recruiting</fullName>
+                <default>false</default>
+                <label>Recruiting</label>
+            </value>
+            <value>
+                <fullName>Research &amp; Development</fullName>
+                <default>false</default>
+                <label>Research &amp; Development</label>
+            </value>
+            <value>
+                <fullName>Sleep Medicine</fullName>
+                <default>false</default>
+                <label>Sleep Medicine</label>
+            </value>
+            <value>
+                <fullName>Sprycel</fullName>
+                <default>false</default>
+                <label>Sprycel</label>
+            </value>
+            <value>
+                <fullName>StayWell</fullName>
+                <default>false</default>
+                <label>StayWell</label>
+            </value>
+            <value>
+                <fullName>Study Connect</fullName>
+                <default>false</default>
+                <label>Study Connect</label>
+            </value>
+            <value>
+                <fullName>Surgery</fullName>
+                <default>false</default>
+                <label>Surgery</label>
+            </value>
+            <value>
+                <fullName>Therapeutic Area A</fullName>
+                <default>false</default>
+                <label>Therapeutic Area A</label>
+            </value>
+            <value>
+                <fullName>Therapeutic Area B</fullName>
+                <default>false</default>
+                <label>Therapeutic Area B</label>
+            </value>
+            <value>
+                <fullName>Therapeutic Area Brand A</fullName>
+                <default>false</default>
+                <label>Therapeutic Area Brand A</label>
+            </value>
+            <value>
+                <fullName>Therapeutic Area Brand B</fullName>
+                <default>false</default>
+                <label>Therapeutic Area Brand B</label>
+            </value>
+            <value>
+                <fullName>Therapeutic Area Brand C</fullName>
+                <default>false</default>
+                <label>Therapeutic Area Brand C</label>
+            </value>
+            <value>
+                <fullName>Therapeutic Area C</fullName>
+                <default>false</default>
+                <label>Therapeutic Area C</label>
+            </value>
+            <value>
+                <fullName>Trade</fullName>
+                <default>false</default>
+                <label>Trade</label>
+            </value>
+            <value>
+                <fullName>TYK 2</fullName>
+                <default>false</default>
+                <label>TYK 2</label>
+            </value>
+            <value>
+                <fullName>VACC</fullName>
+                <default>false</default>
+                <label>VACC</label>
+            </value>
+            <value>
+                <fullName>Womens Health</fullName>
+                <default>false</default>
+                <label>Womens Health</label>
+            </value>
+            <value>
+                <fullName>Yervoy</fullName>
+                <default>false</default>
+                <label>Yervoy</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

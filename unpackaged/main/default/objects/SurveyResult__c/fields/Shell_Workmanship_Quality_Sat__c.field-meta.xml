@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Shell_Workmanship_Quality_Sat__c</fullName>
+    <externalId>false</externalId>
+    <formula>CASE(  Sat_Shell_WORKMANSHIP_QUALITY__c  , 0, 0, 25, 0, 50, 100, 75, 100, 100, 100,  Sat_Shell_WORKMANSHIP_QUALITY__c )</formula>
+    <label>Shell Workmanship/Quality Sat</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

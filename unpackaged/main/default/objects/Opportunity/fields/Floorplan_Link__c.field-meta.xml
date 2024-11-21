@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Floorplan_Link__c</fullName>
+    <defaultValue>&quot;https://floorplans.ges.com&quot;</defaultValue>
+    <inlineHelpText>For login details please contact floorplanprintsuk@ges.com</inlineHelpText>
+    <label>Floorplan Link</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Url</type>
+</CustomField>

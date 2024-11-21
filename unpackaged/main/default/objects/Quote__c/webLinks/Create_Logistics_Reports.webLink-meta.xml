@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Create_Logistics_Reports</fullName>
+    <availability>online</availability>
+    <description>Creates BOL and DLS Excel Spreadsheet</description>
+    <displayType>button</displayType>
+    <linkType>javascript</linkType>
+    <masterLabel>Create Logistics Reports</masterLabel>
+    <openType>onClickJavaScript</openType>
+    <protected>false</protected>
+    <url>{!REQUIRESCRIPT(&quot;/soap/ajax/56.0/connection.js&quot;)}
+{!REQUIRESCRIPT(&quot;/soap/ajax/56.0/apex.js&quot;)}
+sforce.apex.execute(&quot;LogisticsReports&quot;,&quot;CreateLogisticsReport&quot;, {QuoteId:&quot;{!Quote__c.Id}&quot;});window.alert(&quot;Logistics Reports Created.&quot; );window.location.reload();</url>
+</WebLink>

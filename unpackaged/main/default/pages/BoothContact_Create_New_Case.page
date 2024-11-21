@@ -1,0 +1,5 @@
+<apex:page standardController="Oracle_Show_Booth_Contact__c" extensions="RedirectFlowController" tabStyle="Oracle_Show_Booth_Contact__c" showHeader="false" sideBar="false">
+    <flow:interview name="Case_Create_Case_from_BoothContact" interview="{!createFromBC}" finishLocation="{!redirectCaseFromBC}">
+        <apex:param name="var_boothcontact_id" value="{!Oracle_Show_Booth_Contact__c.Id}"/>
+    </flow:interview>
+</apex:page>

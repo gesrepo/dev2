@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Show_Type__c</fullName>
+    <description>The show type field from Show object, only for Custom Build opportunities</description>
+    <externalId>false</externalId>
+    <formula>IF( RecordTypeId = &#39;01240000000DuxL&#39;,  TEXT( Show_Name__r.Show_Type__c ) ,  TEXT( Show_Occurrence__r.Show_Name__r.Show_Type__c ) )</formula>
+    <inlineHelpText>The Show type</inlineHelpText>
+    <label>Show Type</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

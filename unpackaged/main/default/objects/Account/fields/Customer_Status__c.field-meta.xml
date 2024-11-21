@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Customer_Status__c</fullName>
+    <description>Spiro Customer has won opportunities within the last 24 months or currently has open opportunities</description>
+    <externalId>false</externalId>
+    <formula>IF((((YEAR( TODAY() ) - YEAR( Date_of_Last_Won_Deal__c ))*12) + ((MONTH( TODAY() )) - (MONTH( Date_of_Last_Won_Deal__c )))) &lt;= 24
+&amp;&amp;
+RecordType.DeveloperName = &quot;Exhibitor&quot;
+&amp;&amp;
+Won_Corp_Acct_Opps__c &gt; 0
+||
+of_Corp_Acct_Opps__c &gt; 0
+
+
+
+
+,&quot;Active w/ Recent Projects&quot;, &quot;No recent Projects&quot;)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>Spiiro Customer has won opportunities within the last 12 month or open opportunities.</inlineHelpText>
+    <label>Customer Status</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

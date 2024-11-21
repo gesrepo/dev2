@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Show_Occurrence_Details__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>Link Financial to Show Occurrence Public (copy object) to alow Force.com users (with privileges) to see Financials.</description>
+    <label>Show Occurrence Public</label>
+    <referenceTo>Show_Occurrence_Public__c</referenceTo>
+    <relationshipLabel>Financials</relationshipLabel>
+    <relationshipName>Financials</relationshipName>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Pre_show__c</fullName>
+    <label>Pre-show</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Delays experienced</fullName>
+                <default>false</default>
+                <label>Delays experienced</label>
+            </value>
+            <value>
+                <fullName>Difficult to make contact</fullName>
+                <default>false</default>
+                <label>Difficult to make contact</label>
+            </value>
+            <value>
+                <fullName>Errors</fullName>
+                <default>false</default>
+                <label>Errors</label>
+            </value>
+            <value>
+                <fullName>Inadequate staff knowledge/advice</fullName>
+                <default>false</default>
+                <label>Inadequate staff knowledge/advice</label>
+            </value>
+            <value>
+                <fullName>Technical problems</fullName>
+                <default>false</default>
+                <label>Technical problems</label>
+            </value>
+            <value>
+                <fullName>Unprofessional experience</fullName>
+                <default>false</default>
+                <label>Unprofessional experience</label>
+            </value>
+            <value>
+                <fullName>Vague information</fullName>
+                <default>false</default>
+                <label>Vague information</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

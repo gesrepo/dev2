@@ -1,0 +1,371 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Prechat_Product__c</fullName>
+    <description>Used on VF page - PageLiveAgentPreChat_EMEA</description>
+    <label>Prechat Product</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Graphics only Enquiry</fullName>
+                <default>false</default>
+                <label>Graphics only Enquiry</label>
+            </value>
+            <value>
+                <fullName>Logistics only Enquiry</fullName>
+                <default>false</default>
+                <label>Logistics only Enquiry</label>
+            </value>
+            <value>
+                <fullName>Electrics only Enquiry</fullName>
+                <default>false</default>
+                <label>Electrics only Enquiry</label>
+            </value>
+            <value>
+                <fullName>General Enquiry - Multiple Products/Services</fullName>
+                <default>false</default>
+                <label>General Enquiry - Multiple Products/Services</label>
+            </value>
+            <value>
+                <fullName>Algemeen onderzoek - Meerdere producten/diensten</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Algemeen onderzoek - Meerdere producten/diensten</label>
+            </value>
+            <value>
+                <fullName>Algemene aanvraag - Meerdere producten/diensten</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Algemene aanvraag - Meerdere producten/diensten</label>
+            </value>
+            <value>
+                <fullName>Algemene vraag - Meerdere producten/diensten</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Algemene vraag - Meerdere producten/diensten</label>
+            </value>
+            <value>
+                <fullName>Alleen elektriciteit</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Alleen elektriciteit</label>
+            </value>
+            <value>
+                <fullName>Alleen elektriciteit Aanvraag</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Alleen elektriciteit Aanvraag</label>
+            </value>
+            <value>
+                <fullName>Allgemeine Anfrage - Mehrere Produkte/Dienste</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Allgemeine Anfrage - Mehrere Produkte/Dienste</label>
+            </value>
+            <value>
+                <fullName>Allgemeine Anfrage - Mehrere Produkte/Dienstleistungen</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Allgemeine Anfrage - Mehrere Produkte/Dienstleistungen</label>
+            </value>
+            <value>
+                <fullName>Allgemeine Anfrage – Mehrere Produkte/Dienstleistungen</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Allgemeine Anfrage – Mehrere Produkte/Dienstleistungen</label>
+            </value>
+            <value>
+                <fullName>Consulta Geral - Múltiplos Produtos/Serviços</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Consulta Geral - Múltiplos Produtos/Serviços</label>
+            </value>
+            <value>
+                <fullName>Consulta apenas de Electrics</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Consulta apenas de Electrics</label>
+            </value>
+            <value>
+                <fullName>Consulta general - Múltiples productos / servicios</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Consulta general - Múltiples productos / servicios</label>
+            </value>
+            <value>
+                <fullName>Consulta general - Múltiples productos/servicios</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Consulta general - Múltiples productos/servicios</label>
+            </value>
+            <value>
+                <fullName>Demande de renseignements généraux - Produits / services multiples</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Demande de renseignements généraux - Produits / services multiples</label>
+            </value>
+            <value>
+                <fullName>Demande de renseignements généraux - Produits/services multiples</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Demande de renseignements généraux - Produits/services multiples</label>
+            </value>
+            <value>
+                <fullName>Demande de renseignements uniquement sur l’électricité</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Demande de renseignements uniquement sur l’électricité</label>
+            </value>
+            <value>
+                <fullName>Demande générale - Plusieurs produits/services</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Demande générale - Plusieurs produits/services</label>
+            </value>
+            <value>
+                <fullName>Demande générale - Produits/services multiples</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Demande générale - Produits/services multiples</label>
+            </value>
+            <value>
+                <fullName>Demande générale – Produits/services multiples</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Demande générale – Produits/services multiples</label>
+            </value>
+            <value>
+                <fullName>Enquête générale - Produits/services multiples</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Enquête générale - Produits/services multiples</label>
+            </value>
+            <value>
+                <fullName>Genel Sorgulama - Birden Fazla Ürün/Hizmet</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Genel Sorgulama - Birden Fazla Ürün/Hizmet</label>
+            </value>
+            <value>
+                <fullName>Genel Soru - Birden Fazla Ürün/Hizmet</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Genel Soru - Birden Fazla Ürün/Hizmet</label>
+            </value>
+            <value>
+                <fullName>Genel Soru - Çoklu Ürün/Hizmet</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Genel Soru - Çoklu Ürün/Hizmet</label>
+            </value>
+            <value>
+                <fullName>Inquérito Geral - Múltiplos Produtos/Serviços</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Inquérito Geral - Múltiplos Produtos/Serviços</label>
+            </value>
+            <value>
+                <fullName>Kun elektricitet Forespørgsel</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Kun elektricitet Forespørgsel</label>
+            </value>
+            <value>
+                <fullName>Kun elektronikk Forespørsel</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Kun elektronikk Forespørsel</label>
+            </value>
+            <value>
+                <fullName>Nur Elektrik Anfrage</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Nur Elektrik Anfrage</label>
+            </value>
+            <value>
+                <fullName>Nur Elektrik. Anfrage</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Nur Elektrik. Anfrage</label>
+            </value>
+            <value>
+                <fullName>Ogólne zapytanie - Wiele produktów / usług</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Ogólne zapytanie - Wiele produktów / usług</label>
+            </value>
+            <value>
+                <fullName>Richiesta generale - Più prodotti/servizi</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Richiesta generale - Più prodotti/servizi</label>
+            </value>
+            <value>
+                <fullName>Richiesta generale - Prodotti/servizi multipli</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Richiesta generale - Prodotti/servizi multipli</label>
+            </value>
+            <value>
+                <fullName>Richiesta solo impianto elettrico</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Richiesta solo impianto elettrico</label>
+            </value>
+            <value>
+                <fullName>Sadece Elektrik Sorgulama</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Sadece Elektrik Sorgulama</label>
+            </value>
+            <value>
+                <fullName>Solo electricidad Consulta</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Solo electricidad Consulta</label>
+            </value>
+            <value>
+                <fullName>Solo impianto elettrico</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Solo impianto elettrico</label>
+            </value>
+            <value>
+                <fullName>Solo impianto elettrico Richiesta</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Solo impianto elettrico Richiesta</label>
+            </value>
+            <value>
+                <fullName>Sólo electricidad Consulta</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Sólo electricidad Consulta</label>
+            </value>
+            <value>
+                <fullName>Yalnızca elektrik</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Yalnızca elektrik</label>
+            </value>
+            <value>
+                <fullName>Zapytanie ogólne - Wiele produktów/usług</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Zapytanie ogólne - Wiele produktów/usług</label>
+            </value>
+            <value>
+                <fullName>Zapytanie ogólne — wiele produktów/usług</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Zapytanie ogólne — wiele produktów/usług</label>
+            </value>
+            <value>
+                <fullName>Électricité uniquement</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Électricité uniquement</label>
+            </value>
+            <value>
+                <fullName>Загальний запит – кілька продуктів/послуг</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Загальний запит – кілька продуктів/послуг</label>
+            </value>
+            <value>
+                <fullName>Общий запрос - Несколько продуктов/услуг</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Общий запрос - Несколько продуктов/услуг</label>
+            </value>
+            <value>
+                <fullName>Общий запрос — несколько продуктов/услуг</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Общий запрос — несколько продуктов/услуг</label>
+            </value>
+            <value>
+                <fullName>Только электрика</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Только электрика</label>
+            </value>
+            <value>
+                <fullName>استعلام عام - منتجات / خدمات متعددة</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>استعلام عام - منتجات / خدمات متعددة</label>
+            </value>
+            <value>
+                <fullName>استفسار الكهرباء فقط</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>استفسار الكهرباء فقط</label>
+            </value>
+            <value>
+                <fullName>استفسارات الكهرباء فقط</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>استفسارات الكهرباء فقط</label>
+            </value>
+            <value>
+                <fullName>الاستعلام عن الكهرباء فقط</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>الاستعلام عن الكهرباء فقط</label>
+            </value>
+            <value>
+                <fullName>一般查詢 - 多種產品/服務</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>一般查詢 - 多種產品/服務</label>
+            </value>
+            <value>
+                <fullName>一般查询 - 多种产品/服务</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>一般查询 - 多种产品/服务</label>
+            </value>
+            <value>
+                <fullName>一般查询-多种产品/服务</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>一般查询-多种产品/服务</label>
+            </value>
+            <value>
+                <fullName>一般查询-多项产品/服务</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>一般查询-多项产品/服务</label>
+            </value>
+            <value>
+                <fullName>一般的なお問い合わせ - 複数の製品/サービス</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>一般的なお問い合わせ - 複数の製品/サービス</label>
+            </value>
+            <value>
+                <fullName>仅电气 询价</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>仅电气 询价</label>
+            </value>
+            <value>
+                <fullName>仅电气查询</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>仅电气查询</label>
+            </value>
+            <value>
+                <fullName>仅电询</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>仅电询</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

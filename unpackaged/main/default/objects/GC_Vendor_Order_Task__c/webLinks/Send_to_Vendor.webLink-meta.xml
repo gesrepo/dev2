@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Send_to_Vendor</fullName>
+    <availability>online</availability>
+    <displayType>button</displayType>
+    <linkType>javascript</linkType>
+    <masterLabel>Send to Vendor</masterLabel>
+    <openType>onClickJavaScript</openType>
+    <protected>false</protected>
+    <url>{!REQUIRESCRIPT(&quot;/soap/ajax/15.0/connection.js&quot;)}
+{!REQUIRESCRIPT(&quot;/soap/ajax/15.0/apex.js&quot;)}
+
+var vots = sforce.connection.query(&quot;SELECT id, name, status__c, Vendor__c  from GC_Vendor_Order_Task__c where id =&#39;{!GC_Vendor_Order_Task__c.Id}&#39; limit 1&quot;);
+
+records = vots.getArray(&quot;records&quot;); 
+var sendStatus;
+
+if(records[0].Vendor__c == null) {
+	alert(&quot;There are no vendors added. Please add one vendor to the task. Thank you.&quot;);
+} else{
+	sendStatus = sforce.apex.execute(&quot;GC_VOTSubmitForApproval&quot;,&quot;submitRecord&quot;,{votRecordId:&quot;{!GC_Vendor_Order_Task__c.Id}&quot;});
+	if(sendStatus==&#39;true&#39;){
+		alert(&quot;Task sent to the vendor successfully.&quot;);
+		window.location.reload();
+	}else{
+		alert(&quot;There is some error while sending the task to the vendor. Please contact your system admin.&quot;);
+	}
+	
+}</url>
+</WebLink>

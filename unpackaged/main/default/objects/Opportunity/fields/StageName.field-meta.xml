@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>StageName</fullName>
+    <inlineHelpText>SL3 - No client engagement
+SL1 - Client engaged
+TS - Tracking Show (New Business)
+PO - Proposal Opportunity
+PS - Proposal Sent
+CV - Contract Verbal
+CR - Contract Received
+DB - Declined to Bid
+LO - Lost
+CC - Contract Cancelled</inlineHelpText>
+    <trackFeedHistory>true</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <trackTrending>true</trackTrending>
+    <type>Picklist</type>
+</CustomField>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>US_Exh_Lists_Case</fullName>
+    <columns>CASES.CASE_NUMBER</columns>
+    <columns>NAME</columns>
+    <columns>CASES.SUBJECT</columns>
+    <columns>Show_Name__c</columns>
+    <columns>CASES.STATUS</columns>
+    <columns>CASES.PRIORITY</columns>
+    <columns>CASES.CREATED_DATE</columns>
+    <columns>CORE.USERS.ALIAS</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>Booth_Number__c</columns>
+    <columns>Booth_Dimensions__c</columns>
+    <filterScope>Queue</filterScope>
+    <label>US Exh Lists</label>
+    <language>en_US</language>
+    <queue>US_Exh_Lists</queue>
+    <sharedTo>
+        <allInternalUsers />
+    </sharedTo>
+</ListView>

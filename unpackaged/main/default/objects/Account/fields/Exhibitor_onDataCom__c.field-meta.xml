@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Exhibitor_onDataCom__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Filed used for checking if Accounts are created from exhibitor informa api and are updated throw data.com</description>
+    <label>Exhibitor onDataCom</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

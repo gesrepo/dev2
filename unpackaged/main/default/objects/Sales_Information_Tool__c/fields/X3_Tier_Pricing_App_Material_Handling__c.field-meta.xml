@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>X3_Tier_Pricing_App_Material_Handling__c</fullName>
+    <defaultValue>false</defaultValue>
+    <inlineHelpText>3-Tier Pricing (ST/ST, ST/OT, OT/OT) Applicable (Y/N)?</inlineHelpText>
+    <label>3-Tier Pricing App? - Material Handling</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

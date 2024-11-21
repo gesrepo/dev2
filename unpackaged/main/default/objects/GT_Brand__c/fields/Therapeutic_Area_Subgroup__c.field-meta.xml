@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Therapeutic_Area_Subgroup__c</fullName>
+    <label>Therapeutic Area Subgroup</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>System-wide event</fullName>
+                <default>false</default>
+                <label>System-wide event</label>
+            </value>
+            <value>
+                <fullName>Small Cell</fullName>
+                <default>false</default>
+                <label>Small Cell</label>
+            </value>
+            <value>
+                <fullName>Public Affairs/Govt’ Relations</fullName>
+                <default>false</default>
+                <label>Public Affairs/Govt’ Relations</label>
+            </value>
+            <value>
+                <fullName>Business Development &amp; Strategy</fullName>
+                <default>false</default>
+                <label>Business Development &amp; Strategy</label>
+            </value>
+            <value>
+                <fullName>Public Safety</fullName>
+                <default>false</default>
+                <label>Public Safety</label>
+            </value>
+            <value>
+                <fullName>Emerging Technologies</fullName>
+                <default>false</default>
+                <label>Emerging Technologies</label>
+            </value>
+            <value>
+                <fullName>Business Support/Career Fairs</fullName>
+                <default>false</default>
+                <label>Business Support/Career Fairs</label>
+            </value>
+            <value>
+                <fullName>Supply Chain/Diversity</fullName>
+                <default>false</default>
+                <label>Supply Chain/Diversity</label>
+            </value>
+            <value>
+                <fullName>Corporate – Other</fullName>
+                <default>false</default>
+                <label>Corporate – Other</label>
+            </value>
+            <value>
+                <fullName>Hemophilia</fullName>
+                <default>false</default>
+                <label>Hemophilia</label>
+            </value>
+            <value>
+                <fullName>Diabetes</fullName>
+                <default>false</default>
+                <label>Diabetes</label>
+            </value>
+            <value>
+                <fullName>Hypo Disease State</fullName>
+                <default>false</default>
+                <label>Hypo Disease State</label>
+            </value>
+            <value>
+                <fullName>Insulins</fullName>
+                <default>false</default>
+                <label>Insulins</label>
+            </value>
+            <value>
+                <fullName>Cardiovascular</fullName>
+                <default>false</default>
+                <label>Cardiovascular</label>
+            </value>
+            <value>
+                <fullName>Saxenda</fullName>
+                <default>false</default>
+                <label>Saxenda</label>
+            </value>
+            <value>
+                <fullName>Trade</fullName>
+                <default>false</default>
+                <label>Trade</label>
+            </value>
+            <value>
+                <fullName>Rethink</fullName>
+                <default>false</default>
+                <label>Rethink</label>
+            </value>
+            <value>
+                <fullName>Growth Disorder</fullName>
+                <default>false</default>
+                <label>Growth Disorder</label>
+            </value>
+            <value>
+                <fullName>Data Collection</fullName>
+                <default>false</default>
+                <label>Data Collection</label>
+            </value>
+            <value>
+                <fullName>Employer</fullName>
+                <default>false</default>
+                <label>Employer</label>
+            </value>
+            <value>
+                <fullName>Global</fullName>
+                <default>false</default>
+                <label>Global</label>
+            </value>
+            <value>
+                <fullName>Diabetes devices</fullName>
+                <default>false</default>
+                <label>Diabetes devices</label>
+            </value>
+            <value>
+                <fullName>Education</fullName>
+                <default>false</default>
+                <label>Education</label>
+            </value>
+            <value>
+                <fullName>Glucagon-Like Peptide-1</fullName>
+                <default>false</default>
+                <label>Glucagon-Like Peptide-1</label>
+            </value>
+            <value>
+                <fullName>Growth Disorders</fullName>
+                <default>false</default>
+                <label>Growth Disorders</label>
+            </value>
+            <value>
+                <fullName>Hormone Replacement Therapy</fullName>
+                <default>false</default>
+                <label>Hormone Replacement Therapy</label>
+            </value>
+            <value>
+                <fullName>Human insulin</fullName>
+                <default>false</default>
+                <label>Human insulin</label>
+            </value>
+            <value>
+                <fullName>Hypo</fullName>
+                <default>false</default>
+                <label>Hypo</label>
+            </value>
+            <value>
+                <fullName>Marketing</fullName>
+                <default>false</default>
+                <label>Marketing</label>
+            </value>
+            <value>
+                <fullName>Modern insulin</fullName>
+                <default>false</default>
+                <label>Modern insulin</label>
+            </value>
+            <value>
+                <fullName>New-generation insulin</fullName>
+                <default>false</default>
+                <label>New-generation insulin</label>
+            </value>
+            <value>
+                <fullName>Non-Alcoholic Steatohepatitis</fullName>
+                <default>false</default>
+                <label>Non-Alcoholic Steatohepatitis</label>
+            </value>
+            <value>
+                <fullName>Obesity</fullName>
+                <default>false</default>
+                <label>Obesity</label>
+            </value>
+            <value>
+                <fullName>Oral antidiabetic agent</fullName>
+                <default>false</default>
+                <label>Oral antidiabetic agent</label>
+            </value>
+            <value>
+                <fullName>Pharmaceutical</fullName>
+                <default>false</default>
+                <label>Pharmaceutical</label>
+            </value>
+            <value>
+                <fullName>Type 1 Diabetes</fullName>
+                <default>false</default>
+                <label>Type 1 Diabetes</label>
+            </value>
+            <value>
+                <fullName>Type 2 Diabetes</fullName>
+                <default>false</default>
+                <label>Type 2 Diabetes</label>
+            </value>
+            <value>
+                <fullName>Atherosclerosis</fullName>
+                <default>false</default>
+                <label>Atherosclerosis</label>
+            </value>
+            <value>
+                <fullName>Chronic Weight Management</fullName>
+                <default>false</default>
+                <label>Chronic Weight Management</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

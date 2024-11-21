@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SA_AR_Reason_for_Adjustment__c</fullName>
+    <label>AR Reason for Adjustment</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>true</sorted>
+            <value>
+                <fullName>Allowances Other</fullName>
+                <default>false</default>
+                <label>Allowances Other</label>
+            </value>
+            <value>
+                <fullName>CAD Operator Allowance</fullName>
+                <default>false</default>
+                <label>CAD Operator Allowance</label>
+            </value>
+            <value>
+                <fullName>Facility Commission</fullName>
+                <default>false</default>
+                <label>Facility Commission</label>
+            </value>
+            <value>
+                <fullName>Flex Spending/New Idea</fullName>
+                <default>false</default>
+                <label>Flex Spending/New Idea</label>
+            </value>
+            <value>
+                <fullName>Marketworks</fullName>
+                <default>false</default>
+                <label>Marketworks</label>
+            </value>
+            <value>
+                <fullName>Rebates</fullName>
+                <default>false</default>
+                <label>Rebates</label>
+            </value>
+            <value>
+                <fullName>Sales Allowance</fullName>
+                <default>false</default>
+                <label>Sales Allowance</label>
+            </value>
+            <value>
+                <fullName>Show Organizer Commission</fullName>
+                <default>false</default>
+                <label>Show Organizer Commission</label>
+            </value>
+            <value>
+                <fullName>Signing Bonus</fullName>
+                <default>false</default>
+                <label>Signing Bonus</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Cannot_Change_Target_System_after_Save</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND ( ISPICKVAL(PRIORVALUE( GBMS_CORE__c ), &quot;GBMS&quot;),
+ISPICKVAL( GBMS_CORE__c , &quot;CORE&quot;), NOT($Profile.Name = &quot;GES Administrator Interface&quot;), NOT($Profile.Name = &quot;EMEA System Administrator&quot;))</errorConditionFormula>
+    <errorDisplayField>GBMS_CORE__c</errorDisplayField>
+    <errorMessage>Target system cannot be changed.  Project must be abandoned and a new project created with the proper target system.</errorMessage>
+</ValidationRule>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Carpet_Grade__c</fullName>
+    <label>Requested Carpet Grade</label>
+    <required>true</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>New Requested</fullName>
+                <default>false</default>
+                <label>New Requested</label>
+            </value>
+            <value>
+                <fullName>Premium</fullName>
+                <default>true</default>
+                <label>Premium</label>
+            </value>
+            <value>
+                <fullName>Economy</fullName>
+                <default>false</default>
+                <label>Economy</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

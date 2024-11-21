@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>GES_CM_Email_Auto__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF((TEXT(Congress_Manager__c) == &quot;Andrew Rolls&quot;),&quot;ARER@novonordisk.com&quot;,
+IF((TEXT(Congress_Manager__c) == &quot;Joe Walsh&quot;),&quot;YJWQ@novonordisk.com&quot;,
+IF((TEXT(Congress_Manager__c) == &quot;John Hasemann&quot;),&quot;JXHM@novonordisk.com&quot;,
+IF((TEXT(Congress_Manager__c) == &quot;Rebecca Baker&quot;),&quot;RBBK@novonordisk.com&quot;,
+IF((TEXT(Congress_Manager__c) == &quot;Jacqueline Campo&quot;),&quot;JCCPnovonordisk.com&quot;,
+IF((TEXT(Congress_Manager__c) == &quot;Corrine Landolt&quot;),&quot;cnld@novonordisk.com&quot;,
+IF((TEXT(Congress_Manager__c) == &quot;Laurie Stein-Richards&quot;),&quot;LSIR@novonordisk.com&quot;,
+IF((TEXT(Congress_Manager__c) == &quot;Kaitlyn Reynolds&quot;),&quot;KLRL@novonordisk.com&quot;,
+IF((TEXT(Congress_Manager__c) == &quot;Nadine Curtin&quot;),&quot;nadine.curtin@merck.com&quot;,
+IF((TEXT(Congress_Manager__c) == &quot;Ralph Lopez&quot;),&quot;Ralph.lopez@merck.com&quot;,
+IF((TEXT(Congress_Manager__c) == &quot;Aleida Rosete&quot;),&quot;Aleida.rosete@merck.com&quot;,
+IF((TEXT(Congress_Manager__c) == &quot;Erica Kepes&quot;),&quot;Erica.kepes@merck.com&quot;,
+IF((TEXT(Congress_Manager__c) == &quot;Andrea Throckmorton&quot;),&quot;Andrea.throckmorton@merck.com&quot;,
+IF((TEXT(Congress_Manager__c) == &quot;Dan Schuler&quot;),&quot;Daniel_schuler@merck.com&quot;,
+IF((TEXT(Congress_Manager__c) == &quot;Dawn Syntcha&quot;),&quot;dawn.syntscha@merck.com&quot;,
+IF((TEXT(Congress_Manager__c) == &quot;Rose Marie Zarrillo&quot;),&quot;Rose.marie.zarrillo@merck.com&quot;,
+&quot; &quot;))))))))))))))))</formula>
+    <label>GES CM Email Auto</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

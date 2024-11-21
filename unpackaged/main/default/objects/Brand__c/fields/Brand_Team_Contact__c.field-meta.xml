@@ -1,0 +1,714 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Brand_Team_Contact__c</fullName>
+    <label>Brand Team Contact</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>true</sorted>
+            <value>
+                <fullName>Adamczyk, Alice</fullName>
+                <default>false</default>
+                <label>Adamczyk, Alice</label>
+            </value>
+            <value>
+                <fullName>Akkad, Fouad</fullName>
+                <default>false</default>
+                <label>Akkad, Fouad</label>
+            </value>
+            <value>
+                <fullName>Alitto, Liana</fullName>
+                <default>false</default>
+                <label>Alitto, Liana</label>
+            </value>
+            <value>
+                <fullName>Alper (Schubach), Jen</fullName>
+                <default>false</default>
+                <label>Alper (Schubach), Jen</label>
+            </value>
+            <value>
+                <fullName>Andrei, Elisa</fullName>
+                <default>false</default>
+                <label>Andrei, Elisa</label>
+            </value>
+            <value>
+                <fullName>Anjos, Suzana</fullName>
+                <default>false</default>
+                <label>Anjos, Suzana</label>
+            </value>
+            <value>
+                <fullName>Apostolakis, Yannis</fullName>
+                <default>false</default>
+                <label>Apostolakis, Yannis</label>
+            </value>
+            <value>
+                <fullName>Appel, Pam</fullName>
+                <default>false</default>
+                <label>Appel, Pam</label>
+            </value>
+            <value>
+                <fullName>Appetiti, Valentina</fullName>
+                <default>false</default>
+                <label>Appetiti, Valentina</label>
+            </value>
+            <value>
+                <fullName>Arghir, Andrei</fullName>
+                <default>false</default>
+                <label>Arghir, Andrei</label>
+            </value>
+            <value>
+                <fullName>Bagchi, Madhavi</fullName>
+                <default>false</default>
+                <label>Bagchi, Madhavi</label>
+            </value>
+            <value>
+                <fullName>Bakken, Dan</fullName>
+                <default>false</default>
+                <label>Bakken, Dan</label>
+            </value>
+            <value>
+                <fullName>Ilana Barishman</fullName>
+                <default>false</default>
+                <label>Barishman, Ilana</label>
+            </value>
+            <value>
+                <fullName>Bean, Erika</fullName>
+                <default>false</default>
+                <label>Bean, Erika</label>
+            </value>
+            <value>
+                <fullName>Beck, Elizabeth</fullName>
+                <default>false</default>
+                <label>Beck, Elizabeth</label>
+            </value>
+            <value>
+                <fullName>Belenkiy, Ilya</fullName>
+                <default>false</default>
+                <label>Belenkiy, Ilya</label>
+            </value>
+            <value>
+                <fullName>Bhalla, Atul</fullName>
+                <default>false</default>
+                <label>Bhalla, Atul</label>
+            </value>
+            <value>
+                <fullName>Boesch, Jerry</fullName>
+                <default>false</default>
+                <label>Boesch, Jerry</label>
+            </value>
+            <value>
+                <fullName>Bradatan, Bogdan</fullName>
+                <default>false</default>
+                <label>Bradatan, Bogdan</label>
+            </value>
+            <value>
+                <fullName>Brand, Lyndsey</fullName>
+                <default>false</default>
+                <label>Brand, Lyndsey</label>
+            </value>
+            <value>
+                <fullName>Bugbee, Todd</fullName>
+                <default>false</default>
+                <label>Bugbee, Todd</label>
+            </value>
+            <value>
+                <fullName>Burnett, Beth</fullName>
+                <default>false</default>
+                <label>Burnett, Beth</label>
+            </value>
+            <value>
+                <fullName>Carmen, Maria</fullName>
+                <default>false</default>
+                <label>Carmen, Maria</label>
+            </value>
+            <value>
+                <fullName>Carver, Jeff</fullName>
+                <default>false</default>
+                <label>Carver, Jeff</label>
+            </value>
+            <value>
+                <fullName>Cassidy Crook</fullName>
+                <default>false</default>
+                <label>Cassidy Crook</label>
+            </value>
+            <value>
+                <fullName>Catela, Maria</fullName>
+                <default>false</default>
+                <label>Catela, Maria</label>
+            </value>
+            <value>
+                <fullName>Cerati, Elisa</fullName>
+                <default>false</default>
+                <label>Cerati, Elisa</label>
+            </value>
+            <value>
+                <fullName>Chadwick, Ben</fullName>
+                <default>false</default>
+                <label>Chadwick, Ben</label>
+            </value>
+            <value>
+                <fullName>Chaturvedi, Tanya</fullName>
+                <default>false</default>
+                <label>Chaturvedi, Tanya</label>
+            </value>
+            <value>
+                <fullName>Chen, Jerry</fullName>
+                <default>false</default>
+                <label>Chen, Jerry</label>
+            </value>
+            <value>
+                <fullName>Chester, Barry</fullName>
+                <default>false</default>
+                <label>Chester, Barry</label>
+            </value>
+            <value>
+                <fullName>Chris Garcia</fullName>
+                <default>false</default>
+                <label>Chris Garcia</label>
+            </value>
+            <value>
+                <fullName>Christopher McCarthy</fullName>
+                <default>false</default>
+                <label>Christopher McCarthy</label>
+            </value>
+            <value>
+                <fullName>Chu, Christopher</fullName>
+                <default>false</default>
+                <label>Chu, Christopher</label>
+            </value>
+            <value>
+                <fullName>Coyle, Emma</fullName>
+                <default>false</default>
+                <label>Coyle, Emma</label>
+            </value>
+            <value>
+                <fullName>Daily, Rob</fullName>
+                <default>false</default>
+                <label>Daily, Rob</label>
+            </value>
+            <value>
+                <fullName>Daubisse, Marie</fullName>
+                <default>false</default>
+                <label>Daubisse, Marie</label>
+            </value>
+            <value>
+                <fullName>De Bodman, Quentin</fullName>
+                <default>false</default>
+                <label>De Bodman, Quentin</label>
+            </value>
+            <value>
+                <fullName>Dembinski, Tim</fullName>
+                <default>false</default>
+                <label>Dembinski, Tim</label>
+            </value>
+            <value>
+                <fullName>Derck, Heather</fullName>
+                <default>false</default>
+                <label>Derck, Heather</label>
+            </value>
+            <value>
+                <fullName>Dermody, Katie</fullName>
+                <default>false</default>
+                <label>Dermody, Katie</label>
+            </value>
+            <value>
+                <fullName>DeSantos, Mark</fullName>
+                <default>false</default>
+                <label>DeSantos, Mark</label>
+            </value>
+            <value>
+                <fullName>DeShong, Doug</fullName>
+                <default>false</default>
+                <label>DeShong, Doug</label>
+            </value>
+            <value>
+                <fullName>Discenza, Beth</fullName>
+                <default>false</default>
+                <label>Discenza, Beth</label>
+            </value>
+            <value>
+                <fullName>Domenica Davi</fullName>
+                <default>false</default>
+                <label>Domenica Davi</label>
+            </value>
+            <value>
+                <fullName>Externest, Doerthe</fullName>
+                <default>false</default>
+                <label>Externest, Doerthe</label>
+            </value>
+            <value>
+                <fullName>Faison, Warachal</fullName>
+                <default>false</default>
+                <label>Faison, Warachal</label>
+            </value>
+            <value>
+                <fullName>Fuga, Brian</fullName>
+                <default>false</default>
+                <label>Fuga, Brian</label>
+            </value>
+            <value>
+                <fullName>Fullerton, Mary</fullName>
+                <default>false</default>
+                <label>Fullerton, Mary</label>
+            </value>
+            <value>
+                <fullName>Fussel, Julian</fullName>
+                <default>false</default>
+                <label>Fussel, Julian</label>
+            </value>
+            <value>
+                <fullName>Gaeta, Sandy</fullName>
+                <default>false</default>
+                <label>Gaeta, Sandy</label>
+            </value>
+            <value>
+                <fullName>Gavin, Rene</fullName>
+                <default>false</default>
+                <label>Gavin, Rene</label>
+            </value>
+            <value>
+                <fullName>Gertsek, Marina</fullName>
+                <default>false</default>
+                <label>Gertsek, Marina</label>
+            </value>
+            <value>
+                <fullName>Gibson, Kevin</fullName>
+                <default>false</default>
+                <label>Gibson, Kevin</label>
+            </value>
+            <value>
+                <fullName>Glasel, Anne</fullName>
+                <default>false</default>
+                <label>Glasel, Anne</label>
+            </value>
+            <value>
+                <fullName>Gosselin, Gene</fullName>
+                <default>false</default>
+                <label>Gosselin, Gene</label>
+            </value>
+            <value>
+                <fullName>GÜVENEL, Zeynep</fullName>
+                <default>false</default>
+                <label>GÜVENEL, Zeynep</label>
+            </value>
+            <value>
+                <fullName>Hakes, Sharon</fullName>
+                <default>false</default>
+                <label>Hakes, Sharon</label>
+            </value>
+            <value>
+                <fullName>Hana Dembe</fullName>
+                <default>false</default>
+                <label>Hana Dembe</label>
+            </value>
+            <value>
+                <fullName>Hennessey, Danielle</fullName>
+                <default>false</default>
+                <label>Hennessey, Danielle</label>
+            </value>
+            <value>
+                <fullName>Hernandez, Chris</fullName>
+                <default>false</default>
+                <label>Hernandez, Chris</label>
+            </value>
+            <value>
+                <fullName>Hetal, Naik</fullName>
+                <default>false</default>
+                <label>Hetal, Naik</label>
+            </value>
+            <value>
+                <fullName>Hoang, Quynh</fullName>
+                <default>false</default>
+                <label>Hoang, Quynh</label>
+            </value>
+            <value>
+                <fullName>Holtz, Dawn</fullName>
+                <default>false</default>
+                <label>Holtz, Dawn</label>
+            </value>
+            <value>
+                <fullName>Hyjek, Michelle</fullName>
+                <default>false</default>
+                <label>Hyjek, Michelle</label>
+            </value>
+            <value>
+                <fullName>Ioana Panait</fullName>
+                <default>false</default>
+                <label>Ioana Panait</label>
+            </value>
+            <value>
+                <fullName>Irina Cherciu</fullName>
+                <default>false</default>
+                <label>Irina Cherciu</label>
+            </value>
+            <value>
+                <fullName>Jaclyn Viola</fullName>
+                <default>false</default>
+                <label>Jaclyn Viola</label>
+            </value>
+            <value>
+                <fullName>Jain, Shweta</fullName>
+                <default>false</default>
+                <label>Jain, Shweta</label>
+            </value>
+            <value>
+                <fullName>Jamie Hidalgo</fullName>
+                <default>false</default>
+                <label>Jamie Hidalgo</label>
+            </value>
+            <value>
+                <fullName>Josephs, Felicia</fullName>
+                <default>false</default>
+                <label>Josephs, Felicia</label>
+            </value>
+            <value>
+                <fullName>Judd, Donna</fullName>
+                <default>false</default>
+                <label>Judd, Donna</label>
+            </value>
+            <value>
+                <fullName>Kagan, Stephen</fullName>
+                <default>false</default>
+                <label>Kagan, Stephen</label>
+            </value>
+            <value>
+                <fullName>Kahen, Robin</fullName>
+                <default>false</default>
+                <label>Kahen, Robin</label>
+            </value>
+            <value>
+                <fullName>Kang, Yoonsun</fullName>
+                <default>false</default>
+                <label>Kang, Yoonsun</label>
+            </value>
+            <value>
+                <fullName>Kenesky, Aimee</fullName>
+                <default>false</default>
+                <label>Kenesky, Aimee</label>
+            </value>
+            <value>
+                <fullName>Kim, DoEun</fullName>
+                <default>false</default>
+                <label>Kim, DoEun</label>
+            </value>
+            <value>
+                <fullName>Kim, Katherine</fullName>
+                <default>false</default>
+                <label>Kim, Katherine</label>
+            </value>
+            <value>
+                <fullName>Klein, Jason</fullName>
+                <default>false</default>
+                <label>Klein, Jason</label>
+            </value>
+            <value>
+                <fullName>Klugman, Dina</fullName>
+                <default>false</default>
+                <label>Klugman, Dina</label>
+            </value>
+            <value>
+                <fullName>Kohn, Seth</fullName>
+                <default>false</default>
+                <label>Kohn, Seth</label>
+            </value>
+            <value>
+                <fullName>Kuperstein , David</fullName>
+                <default>false</default>
+                <label>Kuperstein , David</label>
+            </value>
+            <value>
+                <fullName>Laurence Oury</fullName>
+                <default>false</default>
+                <label>Laurence Oury</label>
+            </value>
+            <value>
+                <fullName>Lawler, Lisa</fullName>
+                <default>false</default>
+                <label>Lawler, Lisa</label>
+            </value>
+            <value>
+                <fullName>Lawrence, Jeffrey</fullName>
+                <default>false</default>
+                <label>Lawrence, Jeffrey</label>
+            </value>
+            <value>
+                <fullName>Lee, Micca</fullName>
+                <default>false</default>
+                <label>Lee, Micca</label>
+            </value>
+            <value>
+                <fullName>Levine, Lauren</fullName>
+                <default>false</default>
+                <label>Levine, Lauren</label>
+            </value>
+            <value>
+                <fullName>Little, Fred</fullName>
+                <default>false</default>
+                <label>Little, Fred</label>
+            </value>
+            <value>
+                <fullName>Little, Mark</fullName>
+                <default>false</default>
+                <label>Little, Mark</label>
+            </value>
+            <value>
+                <fullName>Lopienski, Karen</fullName>
+                <default>false</default>
+                <label>Lopienski, Karen</label>
+            </value>
+            <value>
+                <fullName>Loria, Christine</fullName>
+                <default>false</default>
+                <label>Loria, Christine</label>
+            </value>
+            <value>
+                <fullName>Machos, Lauren</fullName>
+                <default>false</default>
+                <label>Machos, Lauren</label>
+            </value>
+            <value>
+                <fullName>Mallaina, Pablo</fullName>
+                <default>false</default>
+                <label>Mallaina, Pablo</label>
+            </value>
+            <value>
+                <fullName>Jen Matyas</fullName>
+                <default>false</default>
+                <label>Matyas, Jen</label>
+            </value>
+            <value>
+                <fullName>McCorkle, Allison</fullName>
+                <default>false</default>
+                <label>McCorkle, Allison</label>
+            </value>
+            <value>
+                <fullName>McMaster, Kim</fullName>
+                <default>false</default>
+                <label>McMaster, Kim</label>
+            </value>
+            <value>
+                <fullName>Means, Rose</fullName>
+                <default>false</default>
+                <label>Means, Rose</label>
+            </value>
+            <value>
+                <fullName>Milne, Lisa</fullName>
+                <default>false</default>
+                <label>Milne, Lisa</label>
+            </value>
+            <value>
+                <fullName>Mondy, Kara</fullName>
+                <default>false</default>
+                <label>Mondy, Kara</label>
+            </value>
+            <value>
+                <fullName>Montgomery, Megan</fullName>
+                <default>false</default>
+                <label>Montgomery, Megan</label>
+            </value>
+            <value>
+                <fullName>Morton, Leslie</fullName>
+                <default>false</default>
+                <label>Morton, Leslie</label>
+            </value>
+            <value>
+                <fullName>Mulji, Salman</fullName>
+                <default>false</default>
+                <label>Mulji, Salman</label>
+            </value>
+            <value>
+                <fullName>Naik, Hetal</fullName>
+                <default>false</default>
+                <label>Naik, Hetal</label>
+            </value>
+            <value>
+                <fullName>Nduati, Maria</fullName>
+                <default>false</default>
+                <label>Nduati, Maria</label>
+            </value>
+            <value>
+                <fullName>Oliverio, Dominick P</fullName>
+                <default>false</default>
+                <label>Oliverio, Dominick P</label>
+            </value>
+            <value>
+                <fullName>--Other--</fullName>
+                <default>false</default>
+                <label>--Other--</label>
+            </value>
+            <value>
+                <fullName>Ottaviani, Tricia</fullName>
+                <default>false</default>
+                <label>Ottaviani, Tricia</label>
+            </value>
+            <value>
+                <fullName>Palumbo, Andrea</fullName>
+                <default>false</default>
+                <label>Palumbo, Andrea</label>
+            </value>
+            <value>
+                <fullName>Parmjit Agarwal</fullName>
+                <default>false</default>
+                <label>Parmjit Agarwal</label>
+            </value>
+            <value>
+                <fullName>Patel, Sophia</fullName>
+                <default>false</default>
+                <label>Patel, Sophia</label>
+            </value>
+            <value>
+                <fullName>Patella, Alessandra</fullName>
+                <default>false</default>
+                <label>Patella, Alessandra</label>
+            </value>
+            <value>
+                <fullName>Pathani, Oindrila</fullName>
+                <default>false</default>
+                <label>Pathani, Oindrila</label>
+            </value>
+            <value>
+                <fullName>Pedersen, Joyce</fullName>
+                <default>false</default>
+                <label>Pedersen, Joyce</label>
+            </value>
+            <value>
+                <fullName>Peterson, Christopher</fullName>
+                <default>false</default>
+                <label>Peterson, Christopher</label>
+            </value>
+            <value>
+                <fullName>Pugh, Leigh</fullName>
+                <default>false</default>
+                <label>Pugh, Leigh</label>
+            </value>
+            <value>
+                <fullName>Rehault, Emily</fullName>
+                <default>false</default>
+                <label>Rehault, Emily</label>
+            </value>
+            <value>
+                <fullName>Sack, Rachel</fullName>
+                <default>false</default>
+                <label>Sack, Rachel</label>
+            </value>
+            <value>
+                <fullName>Semel, David</fullName>
+                <default>false</default>
+                <label>Semel, David</label>
+            </value>
+            <value>
+                <fullName>Shah, Shweta</fullName>
+                <default>false</default>
+                <label>Shah, Shweta</label>
+            </value>
+            <value>
+                <fullName>Shultis, Megan</fullName>
+                <default>false</default>
+                <label>Shultis, Megan</label>
+            </value>
+            <value>
+                <fullName>Singerman, Nathan</fullName>
+                <default>false</default>
+                <label>Singerman, Nathan</label>
+            </value>
+            <value>
+                <fullName>Singewald, Craig</fullName>
+                <default>false</default>
+                <label>Singewald, Craig</label>
+            </value>
+            <value>
+                <fullName>Smedley, Andrew</fullName>
+                <default>false</default>
+                <label>Smedley, Andrew</label>
+            </value>
+            <value>
+                <fullName>Smets, Helga</fullName>
+                <default>false</default>
+                <label>Smets, Helga</label>
+            </value>
+            <value>
+                <fullName>Stanger, Steven</fullName>
+                <default>false</default>
+                <label>Stanger, Steven</label>
+            </value>
+            <value>
+                <fullName>Thorndell, Tracey</fullName>
+                <default>false</default>
+                <label>Thorndell, Tracey</label>
+            </value>
+            <value>
+                <fullName>Townsend, Emily</fullName>
+                <default>false</default>
+                <label>Townsend, Emily</label>
+            </value>
+            <value>
+                <fullName>Tuck, Niki</fullName>
+                <default>false</default>
+                <label>Tuck, Niki</label>
+            </value>
+            <value>
+                <fullName>Valdivieso, Jarod</fullName>
+                <default>false</default>
+                <label>Valdivieso, Jarod</label>
+            </value>
+            <value>
+                <fullName>Vallone, Bernadette</fullName>
+                <default>false</default>
+                <label>Vallone, Bernadette</label>
+            </value>
+            <value>
+                <fullName>Varones, Elizabeth</fullName>
+                <default>false</default>
+                <label>Varones, Elizabeth</label>
+            </value>
+            <value>
+                <fullName>Victoria Silva</fullName>
+                <default>false</default>
+                <label>Victoria Silva</label>
+            </value>
+            <value>
+                <fullName>Wain, Nicole</fullName>
+                <default>false</default>
+                <label>Wain, Nicole</label>
+            </value>
+            <value>
+                <fullName>Walker, Simon</fullName>
+                <default>false</default>
+                <label>Walker, Simon</label>
+            </value>
+            <value>
+                <fullName>Walt Slijepcevich</fullName>
+                <default>false</default>
+                <label>Walt Slijepcevich</label>
+            </value>
+            <value>
+                <fullName>Washington, Danielle</fullName>
+                <default>false</default>
+                <label>Washington, Danielle</label>
+            </value>
+            <value>
+                <fullName>Laryssa Wozniak</fullName>
+                <default>false</default>
+                <label>Wozniak, Laryssa</label>
+            </value>
+            <value>
+                <fullName>Wyatts, Amanda</fullName>
+                <default>false</default>
+                <label>Wyatts, Amanda</label>
+            </value>
+            <value>
+                <fullName>Zaccardi, Bryan</fullName>
+                <default>false</default>
+                <label>Zaccardi, Bryan</label>
+            </value>
+            <value>
+                <fullName>Zamparo, Joanne</fullName>
+                <default>false</default>
+                <label>Zamparo, Joanne</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

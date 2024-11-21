@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CompactLayout xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Housing_Reg_Compact_Layout</fullName>
+    <fields>Name</fields>
+    <fields>OwnerId</fields>
+    <fields>Show_Name__c</fields>
+    <fields>AccountId</fields>
+    <fields>Facility__c</fields>
+    <fields>Show_Close_Date__c</fields>
+    <fields>StageName</fields>
+    <fields>Probability</fields>
+    <fields>Amount</fields>
+    <label>Housing Reg Compact Layout</label>
+</CompactLayout>

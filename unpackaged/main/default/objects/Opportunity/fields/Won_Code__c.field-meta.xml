@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Won_Code__c</fullName>
+    <description>This field shows why an opportunity is closed won.</description>
+    <inlineHelpText>This field shows why an opportunity is closed won.</inlineHelpText>
+    <label>Won Code</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Won - Cost preferred</fullName>
+                <default>false</default>
+                <label>Won - Cost preferred</label>
+            </value>
+            <value>
+                <fullName>Won - Design preferred</fullName>
+                <default>false</default>
+                <label>Won - Design preferred</label>
+            </value>
+            <value>
+                <fullName>Won – Other</fullName>
+                <default>false</default>
+                <label>Won – Other</label>
+            </value>
+            <value>
+                <fullName>Won – Part of a programme of work</fullName>
+                <default>false</default>
+                <label>Won – Part of a programme of work</label>
+            </value>
+            <value>
+                <fullName>Won – Previous experience</fullName>
+                <default>false</default>
+                <label>Won – Previous experience</label>
+            </value>
+            <value>
+                <fullName>Won – relationship</fullName>
+                <default>false</default>
+                <label>Won – relationship</label>
+            </value>
+            <value>
+                <fullName>Won - System Preferred</fullName>
+                <default>false</default>
+                <label>Won - System Preferred</label>
+            </value>
+            <value>
+                <fullName>Won - Quick Response</fullName>
+                <default>false</default>
+                <label>Won - Quick Response</label>
+            </value>
+            <value>
+                <fullName>Creativity</fullName>
+                <default>false</default>
+                <label>Creativity</label>
+            </value>
+            <value>
+                <fullName>Best Design</fullName>
+                <default>false</default>
+                <label>Best Design</label>
+            </value>
+            <value>
+                <fullName>Products and Service Offering (Specify below)</fullName>
+                <default>false</default>
+                <label>Products and Service Offering (Specify below)</label>
+            </value>
+            <value>
+                <fullName>Competitive Costing</fullName>
+                <default>false</default>
+                <label>Competitive Costing</label>
+            </value>
+            <value>
+                <fullName>Won with Up-Sell</fullName>
+                <default>false</default>
+                <label>Won with Up-Sell</label>
+            </value>
+            <value>
+                <fullName>Won from Competitor</fullName>
+                <default>false</default>
+                <label>Won from Competitor</label>
+            </value>
+            <value>
+                <fullName>Previous Dealings with GES</fullName>
+                <default>false</default>
+                <label>Previous Dealings with GES</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

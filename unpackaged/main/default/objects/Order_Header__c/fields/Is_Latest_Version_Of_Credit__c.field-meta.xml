@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Is_Latest_Version_Of_Credit__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Identifies if the credit note is the latest version of the credit note. Each amendment creates a new invoice version with only the details of the amendment</description>
+    <inlineHelpText>Identifies if the credit note is the latest version of the credit note.</inlineHelpText>
+    <label>Is Latest Version Of Credit</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

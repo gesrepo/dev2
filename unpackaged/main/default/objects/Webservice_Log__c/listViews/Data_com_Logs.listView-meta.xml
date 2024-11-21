@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Data_com_Logs</fullName>
+    <columns>NAME</columns>
+    <columns>Integration_Name__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Integration_Name__c</field>
+        <operation>equals</operation>
+        <value>Data.Com</value>
+    </filters>
+    <label>Data.com Logs</label>
+    <language>en_US</language>
+</ListView>

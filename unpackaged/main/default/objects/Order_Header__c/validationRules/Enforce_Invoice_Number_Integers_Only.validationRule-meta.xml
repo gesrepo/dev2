@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Enforce_Invoice_Number_Integers_Only</fullName>
+    <active>true</active>
+    <description>Order Invoice Number cannot contain text characters; integers only.</description>
+    <errorConditionFormula>NOT(ISNUMBER(  InvoiceNumber__c  ))&amp;&amp;
+
+NOT(ISBLANK(InvoiceNumber__c))</errorConditionFormula>
+    <errorMessage>Order Invoice Number cannot contain text characters; integers only.</errorMessage>
+</ValidationRule>

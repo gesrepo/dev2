@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>US_EAC_Prod_Desk_Case</fullName>
+    <filterScope>Queue</filterScope>
+    <label>US EAC Pro Desk</label>
+    <queue>US_EAC_Prod_Desk</queue>
+    <sharedTo>
+        <allInternalUsers />
+    </sharedTo>
+</ListView>

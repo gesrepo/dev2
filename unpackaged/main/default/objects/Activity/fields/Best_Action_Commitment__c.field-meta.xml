@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Best_Action_Commitment__c</fullName>
+    <description>Test sam integration new sql  server</description>
+    <label>Best Action Commitment</label>
+    <required>false</required>
+    <type>TextArea</type>
+</CustomField>

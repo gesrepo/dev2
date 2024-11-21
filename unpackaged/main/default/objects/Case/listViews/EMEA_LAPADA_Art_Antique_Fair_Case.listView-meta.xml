@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>EMEA_LAPADA_Art_Antique_Fair_Case</fullName>
+    <filterScope>Queue</filterScope>
+    <label>EMEA LAPADA Art &amp; Antique Fair</label>
+    <queue>EMEA_LAPADA_Art_Antique_Fair</queue>
+    <sharedTo>
+        <allInternalUsers />
+    </sharedTo>
+</ListView>

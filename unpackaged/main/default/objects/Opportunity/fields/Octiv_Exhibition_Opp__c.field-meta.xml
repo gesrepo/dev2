@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Octiv_Exhibition_Opp__c</fullName>
+    <formula>IF(
+OR(
+RecordTypeId = &quot;012400000005OK7&quot;,  /*MasterShowOccurrence*/ 
+RecordTypeId = &quot;012400000005P1o&quot;, /*FieldSecurityCR*/ 
+RecordTypeId = &quot;012400000005P0q&quot;, /*CV*/
+RecordTypeId = &quot;012400000005P6j&quot;, /*DB*/
+RecordTypeId = &quot;0124000000016VM&quot;, /*IA*/
+RecordTypeId = &quot;012400000005P1t&quot;, /*LO*/
+RecordTypeId = &quot;012400000005P5q&quot;, /*LPE*/
+RecordTypeId = &quot;124000000014HI&quot;, /*LPM*/
+RecordTypeId = &quot;012400000005P5v&quot;, /*LR*/
+RecordTypeId = &quot;0124000000016VN&quot;, /*NE*/
+RecordTypeId = &quot;012400000005P0W&quot;, /*PS*/
+RecordTypeId = &quot;012400000005P6k&quot;, /*TS*/
+RecordTypeId = &quot;012400000005OKC&quot; /*SalesRepShowOccurrence*/), True, False)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Octiv Exhibition Opp</label>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

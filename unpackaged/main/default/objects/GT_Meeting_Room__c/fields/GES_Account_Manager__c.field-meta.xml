@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>GES_Account_Manager__c</fullName>
+    <label>GES Account Manager</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>true</sorted>
+            <value>
+                <fullName>Alita Mathews</fullName>
+                <default>false</default>
+                <label>Alita Mathews</label>
+            </value>
+            <value>
+                <fullName>Allyson Wagner</fullName>
+                <default>false</default>
+                <label>Allyson Wagner</label>
+            </value>
+            <value>
+                <fullName>Amanda Shulman</fullName>
+                <default>false</default>
+                <label>Amanda Shulman</label>
+            </value>
+            <value>
+                <fullName>Amy Ziccarelli</fullName>
+                <default>false</default>
+                <label>Amy Ziccarelli</label>
+            </value>
+            <value>
+                <fullName>Beyer, Lisa</fullName>
+                <default>false</default>
+                <label>Beyer, Lisa</label>
+            </value>
+            <value>
+                <fullName>Brosmore, Jamie</fullName>
+                <default>false</default>
+                <label>Brosmore, Jamie</label>
+            </value>
+            <value>
+                <fullName>Buzzatto, Stephanie</fullName>
+                <default>false</default>
+                <label>Buzzatto, Stephanie</label>
+            </value>
+            <value>
+                <fullName>Dabra Watters</fullName>
+                <default>false</default>
+                <label>Dabra Watters</label>
+            </value>
+            <value>
+                <fullName>Daphne Saavedra</fullName>
+                <default>false</default>
+                <label>Daphne Saavedra</label>
+            </value>
+            <value>
+                <fullName>Debbie Sullivan</fullName>
+                <default>false</default>
+                <label>Debbie Sullivan</label>
+            </value>
+            <value>
+                <fullName>Epperson, Jill</fullName>
+                <default>false</default>
+                <label>Epperson, Jill</label>
+            </value>
+            <value>
+                <fullName>GES Account Manager 1</fullName>
+                <default>false</default>
+                <label>GES Account Manager 1</label>
+            </value>
+            <value>
+                <fullName>GES Account Manager 2</fullName>
+                <default>false</default>
+                <label>GES Account Manager 2</label>
+            </value>
+            <value>
+                <fullName>GES Account Manager 3</fullName>
+                <default>false</default>
+                <label>GES Account Manager 3</label>
+            </value>
+            <value>
+                <fullName>Jessica Bodner</fullName>
+                <default>false</default>
+                <label>Jessica Bodner</label>
+            </value>
+            <value>
+                <fullName>Jill Eppelman</fullName>
+                <default>false</default>
+                <label>Jill Eppelman</label>
+            </value>
+            <value>
+                <fullName>Jill Johnson</fullName>
+                <default>false</default>
+                <label>Jill Johnson</label>
+            </value>
+            <value>
+                <fullName>Kayla Rogers</fullName>
+                <default>false</default>
+                <label>Kayla Rogers</label>
+            </value>
+            <value>
+                <fullName>Kevin Jones</fullName>
+                <default>false</default>
+                <label>Kevin Jones</label>
+            </value>
+            <value>
+                <fullName>Kimrlee Shamey-Golonka</fullName>
+                <default>false</default>
+                <label>Kimrlee Shamey-Golonka</label>
+            </value>
+            <value>
+                <fullName>Lauren Gallagher</fullName>
+                <default>false</default>
+                <label>Lauren Gallagher</label>
+            </value>
+            <value>
+                <fullName>Lauren Poole</fullName>
+                <default>false</default>
+                <label>Lauren Poole</label>
+            </value>
+            <value>
+                <fullName>Linda Holland</fullName>
+                <default>false</default>
+                <label>Linda Holland</label>
+            </value>
+            <value>
+                <fullName>Lisa Beyer</fullName>
+                <default>false</default>
+                <label>Lisa Beyer</label>
+            </value>
+            <value>
+                <fullName>Mary Jones</fullName>
+                <default>false</default>
+                <label>Mary Jones</label>
+            </value>
+            <value>
+                <fullName>Mary O’Connell</fullName>
+                <default>false</default>
+                <label>Mary O’Connell</label>
+            </value>
+            <value>
+                <fullName>Mathews , Alita</fullName>
+                <default>false</default>
+                <label>Mathews , Alita</label>
+            </value>
+            <value>
+                <fullName>Megan Sien</fullName>
+                <default>false</default>
+                <label>Megan Sien</label>
+            </value>
+            <value>
+                <fullName>Melinda Peterson</fullName>
+                <default>false</default>
+                <label>Melinda Peterson</label>
+            </value>
+            <value>
+                <fullName>Michael Ewell</fullName>
+                <default>false</default>
+                <label>Michael Ewell</label>
+            </value>
+            <value>
+                <fullName>Morris, Dana</fullName>
+                <default>false</default>
+                <label>Morris, Dana</label>
+            </value>
+            <value>
+                <fullName>Palermo, Angelina</fullName>
+                <default>false</default>
+                <label>Palermo, Angelina</label>
+            </value>
+            <value>
+                <fullName>Poole, Lauren</fullName>
+                <default>false</default>
+                <label>Poole, Lauren</label>
+            </value>
+            <value>
+                <fullName>Powell, Julie</fullName>
+                <default>false</default>
+                <label>Powell, Julie</label>
+            </value>
+            <value>
+                <fullName>Shamey-Golonka, Kimrlee</fullName>
+                <default>false</default>
+                <label>Shamey-Golonka, Kimrlee</label>
+            </value>
+            <value>
+                <fullName>Shulman, Amanda</fullName>
+                <default>false</default>
+                <label>Shulman, Amanda</label>
+            </value>
+            <value>
+                <fullName>Stephanie Specht</fullName>
+                <default>false</default>
+                <label>Stephanie Specht</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

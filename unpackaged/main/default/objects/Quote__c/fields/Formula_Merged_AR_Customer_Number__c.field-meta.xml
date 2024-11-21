@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Formula_Merged_AR_Customer_Number__c</fullName>
+    <externalId>false</externalId>
+    <formula>If(Booth__c!=null,IF(Booth__r.Oracle_AR_Customer_Number__c =&#39;&#39;,Booth__r.Oracle_Customer_Number__c ,Booth__r.Oracle_AR_Customer_Number__c ), If(Merged_AR_Customer_Number__c!=null, Merged_AR_Customer_Number__r.AR_Customer_Number__c,&#39;&#39; ))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Merged AR Customer Number</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

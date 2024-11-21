@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Exhibit_Interest__c</fullName>
+    <description>Captures the exhibit category selection from the web form..</description>
+    <label>Exhibit Interest</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Custom Design &amp; Build</fullName>
+                <default>false</default>
+                <label>Custom Design &amp; Build</label>
+            </value>
+            <value>
+                <fullName>Global Program Management</fullName>
+                <default>false</default>
+                <label>Global Program Management</label>
+            </value>
+            <value>
+                <fullName>Spiro In-House Creative Studio</fullName>
+                <default>false</default>
+                <label>Spiro In-House Creative Studio</label>
+            </value>
+            <value>
+                <fullName>Sustainable Modular Booths</fullName>
+                <default>false</default>
+                <label>Sustainable Modular Booths</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

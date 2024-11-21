@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>International_Won_Code_mandatory</fullName>
+    <active>false</active>
+    <description>Won code field is mandatory when stage = Closed Won and the user modifying the record type = International.</description>
+    <errorConditionFormula>AND(RecordTypeId = &quot;0124000000019RN&quot;, ISPICKVAL( StageName,&quot;CR&quot;),ISPICKVAL( Won_Code__c ,&quot;&quot;))</errorConditionFormula>
+    <errorDisplayField>Won_Code__c</errorDisplayField>
+    <errorMessage>Won code is mandatory when opportunity stage is Closed Won. Please fill out the Won Code.</errorMessage>
+</ValidationRule>

@@ -1,0 +1,2 @@
+<apex:page standardController="Discount__c" extensions="RedirectToDiscountEditPage" action="{!navigate}">
+ </apex:page>

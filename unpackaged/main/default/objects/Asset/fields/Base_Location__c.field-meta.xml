@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Base_Location__c</fullName>
+    <label>Base Location</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Haarlem – NL</fullName>
+                <default>false</default>
+                <label>Haarlem – NL</label>
+            </value>
+            <value>
+                <fullName>Elstree – UK</fullName>
+                <default>false</default>
+                <label>Elstree – UK</label>
+            </value>
+            <value>
+                <fullName>Dubai – AE</fullName>
+                <default>false</default>
+                <label>Dubai – AE</label>
+            </value>
+            <value>
+                <fullName>Wan Chai – HK</fullName>
+                <default>false</default>
+                <label>Wan Chai – HK</label>
+            </value>
+            <value>
+                <fullName>Chicago – US</fullName>
+                <default>false</default>
+                <label>Chicago – US</label>
+            </value>
+            <value>
+                <fullName>Lausanne – CH</fullName>
+                <default>false</default>
+                <label>Lausanne – CH</label>
+            </value>
+            <value>
+                <fullName>Sibiu – RO</fullName>
+                <default>false</default>
+                <label>Sibiu – RO</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

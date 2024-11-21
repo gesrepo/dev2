@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Visit_Not_Done_NL</fullName>
+    <columns>NAME</columns>
+    <columns>Account_Name__c</columns>
+    <columns>Account_Owner__c</columns>
+    <columns>Show_Full_Name__c</columns>
+    <columns>Venue__c</columns>
+    <columns>Sales_Stage__c</columns>
+    <columns>Show_Close_Date__c</columns>
+    <columns>Status__c</columns>
+    <columns>Your_location__c</columns>
+    <columns>CREATED_DATE</columns>
+    <columns>CREATEDBY_USER</columns>
+    <columns>Assigned_to__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Status__c</field>
+        <operation>notEqual</operation>
+        <value>Done</value>
+    </filters>
+    <filters>
+        <field>Your_location__c</field>
+        <operation>equals</operation>
+        <value>Visit</value>
+    </filters>
+    <filters>
+        <field>Account_Owner__c</field>
+        <operation>equals</operation>
+        <value>Sarah Moumen</value>
+    </filters>
+    <label>Visit Not Done_NL</label>
+    <language>en_US</language>
+</ListView>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Release_Hold</fullName>
+    <availability>online</availability>
+    <displayType>button</displayType>
+    <height>600</height>
+    <linkType>page</linkType>
+    <masterLabel>Release Hold</masterLabel>
+    <openType>sidebar</openType>
+    <page>GC_DesignElementReleaseHold</page>
+    <protected>false</protected>
+</WebLink>

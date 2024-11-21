@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BusinessProcess xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>US - Housing</fullName>
+    <description>Sales process for US Housing</description>
+    <isActive>true</isActive>
+    <values>
+        <fullName>CC</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>CR</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>CV</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Closed Lost</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>DB</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>IA</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>PO</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>PS</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Renewal Pending</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>SC</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>SL1</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>SL3</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>TS</fullName>
+        <default>false</default>
+    </values>
+</BusinessProcess>

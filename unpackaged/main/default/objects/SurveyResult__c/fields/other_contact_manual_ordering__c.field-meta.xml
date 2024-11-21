@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>other_contact_manual_ordering__c</fullName>
+    <label>Other contact.manual ordering</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>GES Expresso</fullName>
+                <default>false</default>
+                <label>GES Expresso</label>
+            </value>
+            <value>
+                <fullName>Order form download/print</fullName>
+                <default>false</default>
+                <label>Order form download/print</label>
+            </value>
+            <value>
+                <fullName>Online/interactive form</fullName>
+                <default>false</default>
+                <label>Online/interactive form</label>
+            </value>
+            <value>
+                <fullName>Used link to other ordering site</fullName>
+                <default>false</default>
+                <label>Used link to other ordering site</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

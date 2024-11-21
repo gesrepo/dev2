@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>BOOTH_LAST_UPDATE_DATE__c</fullName>
+    <description>Stores values from Oracle Customer Booth XGEC_SW_CUST_BOOTH_V.LAST_UPDATE_DATE column. This column is derived from XGEC_SW_CUST_BTH.LAST_UPDATE_DATE column.</description>
+    <label>Booth Last Modified</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>DateTime</type>
+</CustomField>

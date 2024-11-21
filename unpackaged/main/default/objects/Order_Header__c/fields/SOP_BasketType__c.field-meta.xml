@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SOP_BasketType__c</fullName>
+    <description>Displays the SOP Basket Type code, which corresponds to the current picklist value of Status.</description>
+    <externalId>false</externalId>
+    <formula>CASE( Status__c , 
+&quot;Quote&quot;, &quot;1&quot;, 
+&quot;Order in Progress&quot;, &quot;2&quot;,
+&quot;Order Invoiced&quot;, &quot;4&quot;,
+&quot;Quote Closed&quot;, &quot;10&quot;, 
+&quot;Order Canceled&quot;, &quot;20&quot;, 
+&quot;Refund&quot;, &quot;30&quot;,
+&quot;NA&quot;)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>Displays the SOP Basket Type code, which corresponds to the current picklist value of Status.</inlineHelpText>
+    <label>SOP BasketType</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

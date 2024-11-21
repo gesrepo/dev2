@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Exhibitor_Marketing_Decline_Reason__c</fullName>
+    <description>Field used for account managers to identify why an organizer has declined email marketing for the exhibitors.</description>
+    <externalId>false</externalId>
+    <label>Exhibitor Marketing Decline Reason</label>
+    <length>255</length>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

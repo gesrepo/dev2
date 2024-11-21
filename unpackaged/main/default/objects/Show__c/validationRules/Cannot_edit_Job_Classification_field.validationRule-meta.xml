@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Cannot_edit_Job_Classification_field</fullName>
+    <active>true</active>
+    <description>Only Allow Craig Dingwall to change Job Classification field after record creation
+(System Admin and EMEA System Admin profiles are the exceptions)</description>
+    <errorConditionFormula>AND
+(ISCHANGED(Job_Classification__c),
+NOT(OR(
+$Profile.Name = &quot;System Administrator&quot;,
+$Profile.Name = &quot;EMEA System Administrator&quot;,
+$User.Username = &quot;chsmith@ges.com&quot; 
+)))</errorConditionFormula>
+    <errorMessage>Please contact Craig Dingwall to make changes to the Job Classification field for all US related shows.
+For all Job Classification changes related shows within EMEA, please contact Chrystal Reilly</errorMessage>
+</ValidationRule>

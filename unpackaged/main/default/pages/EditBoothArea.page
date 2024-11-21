@@ -1,0 +1,2 @@
+<apex:page standardController="Booth_Area__c" extensions="Redirect" action="{!navigate}">
+ </apex:page>

@@ -1,0 +1,148 @@
+<apex:page standardStylesheets="true" controller="ExhibitDetail" showHeader="false" sidebar="false" applyHtmlTag="false" tabStyle="Account">
+    <html xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <head>
+            <apex:includeScript value="{!$Resource.jQuery}" />
+            <apex:stylesheet value="{!URLFOR($Resource.Lightning_Design_System, 'assets/styles/salesforce-lightning-design-system.min.css')}" />
+            <apex:stylesheet value="{!URLFOR($Resource.GC_Assets, 'GC_Assets/css/GC_Styles.css')}" />
+            <apex:includeScript value="{!URLFOR($Resource.GC_Assets, 'GC_Assets/js/GC_init.js')}" />
+        </head>
+        <div class="slds">
+            <c:GC_Community_Header /> 
+            <div class="slds-page-header gc-navigation--subHeader" role="banner">
+                <div class="slds-media">
+                    <div class="slds-media__figure">
+                        <apex:image url="{!URLFOR($Resource.GC_Assets, 'GC_Assets/img/custom13_60_teal.png')}" />
+                    </div>
+                    <div class="slds-media__body">
+                        <p class="slds-page-header__title slds-align-middle">
+                            <span>Exhibit Details</span>
+                            <span class="slds-truncate">{!e.Name}</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            <apex:form id="fm">    
+                <apex:pageBlock id="pb">
+                    <apex:pageBlockButtons location="top">
+                        <apex:commandButton value="Edit" action="{!ExhibitSave}" styleClass="slds-button slds-button--brand gc-teal-button"/>
+                        <apex:commandButton value="Back" action="{!ExhibitCancel}" styleClass="slds-button slds-button--brand gc-teal-button"/>
+                        <apex:commandButton value="Clone" action="{!ExhibitClone}" styleClass="slds-button slds-button--brand gc-teal-button" style="float:right" />
+                    </apex:pageBlockButtons>
+                    <apex:pageBlockSection title="Exhibit Detail" id="pbs">
+                        <!--  <apex:outputField value="{!e.Name}"/>-->
+                        <apex:outputField value="{!e.Exhibit_Name__c}"/>
+                        <apex:outputText label="Congress ID">
+                            <apex:outputLink value="{!$Page.Congressdetails}">{!congName}
+                                <apex:param name="id" value="{!congid}"/>
+                            </apex:outputLink>
+                        </apex:outputText>
+                        <!--  <apex:outputText label="GES Connet - Corporate Accounts" value="{!congid}" ></apex:outputText> 
+<apex:outputField value="{!e.id}"/> -->
+                        <apex:outputField value="{!e.Booth_Number__c}"/>
+                        <apex:outputText value="{!e.GES_Project_Number__c}"/>
+                        <apex:outputField value="{!e.Booth_Width__c}"/>
+                        <apex:outputField value="{!e.Activity_Level__c}"/>
+                        <apex:outputField value="{!e.Booth_Length__c}"/>
+                        <apex:outputField value="{!e.Exhibit_Type__c}"/>                 
+                        <apex:outputField value="{!e.Booth_Size_Units__c}"/>
+                        <apex:outputField value="{!e.Exhibit_Bundled_with_Sponsorsip__c}"/>
+                        <apex:outputField value="{!e.Exhibit_Space_Type__c}"/>
+                        <apex:outputField value="{!e.DoD_Properties__c}"/>
+                        <apex:outputField value="{!e.Activity_Not_Confirmed__c}"/>  
+                        <apex:outputField value="{!e.CSI_Form_Notes__c}"/> 
+                        
+                        <!--<apex:outputText ></apex:outputText>-->
+                        <!--     <apex:outputField value="{!e.Booth_Leadership_Type__c}"/> -->
+                        <apex:pageBlockSectionItem > 
+                            <div style="border-bottom:2px solid #1797c0;"/>
+                        </apex:pageBlockSectionItem>
+                        <apex:pageBlockSectionItem > 
+                            <div style="border-bottom:2px solid #1797c0;"/>
+                        </apex:pageBlockSectionItem>
+                        
+                        
+                        <apex:outputField value="{!e.Reality_Engineering_Utilized__c}" />     
+                        <apex:outputField value="{!e.Virtual_Engagement_Type__c}" />   <!--Amarab 03252021 SCA-874 Adding new fields -->         
+                        <!--<apex:outputField value="{!e.Reason_RE_not_used__c}" rendered="{!e.Reality_Engineering_Utilized__c=='No'}" /> 
+                        <apex:outputText rendered="{!e.Reality_Engineering_Utilized__c!='No'}"></apex:outputText>
+                        <apex:outputText rendered="{!(e.Reason_RE_not_used__c=='Not appropriate audience' && e.Reality_Engineering_Utilized__c=='No')}" > </apex:outputText>
+                        <apex:outputField value="{!e.If_not_appropriate_audience_Explanation__c}" rendered="{!(e.Reason_RE_not_used__c=='Not appropriate audience' && e.Reality_Engineering_Utilized__c=='No')}" />  --> 
+                        
+                        <apex:outputField value="{!e.Medical_Information__c}"/> 
+                        <!--<apex:outputField value="{!e.CurrencyIsoCode}"/>-->
+                        <!--<apex:outputText ></apex:outputText>--> <!--Amarab 03252021 SCA-874 Adding new fields -->
+                        <apex:outputField value="{!e.Exhibit_Registrants__c}"/>
+                        <apex:outputField value="{!e.HCP_tracking__c}"/>
+                        <apex:outputText ></apex:outputText>
+                        <!--<apex:outputField value="{!e.E_Permissions__c}"/> commented for SCA-726; dev rsinha-->
+                        <apex:outputField value="{!e.Staffing_Strategy__c}" />
+                        <apex:outputField value="{!e.Disease_State_booth__c}"/>
+                        <apex:outputField value="{!e.Quantity_of_Staffers__c}" rendered="{!(e.Staffing_Strategy__c != null)}" />
+                        <apex:outputText rendered="{!(e.Staffing_Strategy__c == null)}"></apex:outputText> 
+                        <apex:outputField value="{!e.Clinical_Trials_Recruiting__c}"/>
+                        <apex:outputField value="{!e.In_booth_promotion__c}"/>
+                        <apex:outputField value="{!e.In_booth_hospitality__c}"/>
+                        <apex:outputField value="{!e.In_booth_promotion_detail__c}"/>
+                        <apex:outputField value="{!e.In_booth_hospitality_detail__c}"/>
+                        <apex:outputField value="{!e.Exhibit_Notes__c}"/>
+                        <apex:outputText ></apex:outputText>
+                        <apex:outputField value="{!e.Canceled__c}"/>
+                        <apex:outputField value="{!e.CanceledDate__c}"/>
+                        <apex:outputField value="{!e.CancelReason__c}"/>
+                    </apex:pageBlockSection>
+                    
+                    <apex:pageBlockSection title="Exhibit Contacts">
+                        <apex:outputField value="{!e.GES_Congress_Manager__c}"/> <apex:outputField value="{!e.Agency_Name__c}"/>
+                        
+                        <apex:outputField value="{!e.Congress_Lead__c}"/> <apex:outputField value="{!e.Agency_Contact_Name__c}"/>
+                        <apex:outputField value="{!e.GES_Account_Executive__c}"/> <apex:outputField value="{!e.Agency_Contact_Phone__c}"/>
+                        
+                        
+                        
+                        <apex:outputField value="{!e.GES_Account_Manager__c}"/> <apex:outputField value="{!e.Agency_Contact_E_mail__c}"/>
+                        
+                        <apex:outputField value="{!e.GES_Project_Manager__c}"/> 
+                        <apex:outputField value="{!e.I_D_Supervisor__c}"/>
+                        <apex:outputText rendered="{! e.I_D_Supervisor__c=='Other'}" > </apex:outputText>
+                        <apex:outputField value="{!e.I_D_Name_Other__c}" rendered="{! e.I_D_Supervisor__c=='Other'}"/>
+                        
+                    </apex:pageBlockSection>
+                    
+                </apex:pageBlock>
+                
+                
+                
+                <!--<apex:inlineEditSupport event="ondblClick" /> -->
+            </apex:form>
+            <apex:form >
+                <apex:pageBlock title="Brands">
+                    <apex:pageBlockButtons location="top">
+                        <apex:commandButton value="New Brand" action="{!newBrand}" styleClass="slds-button slds-button--brand gc-teal-button"/>
+                    </apex:pageBlockButtons>            
+                    <apex:pageBlockTable value="{!brdlst}" var="b">
+                        <apex:column width="25px" headerValue="Action">
+                            <apex:outputLink value="{!$Page.ExhibitBrandEdit}"> Edit   
+                                <apex:param name="exhibitid" value="{!exhibitid}"/>
+                                <apex:param name="brandId" value="{!b.Id}"/> 
+                                <apex:param name="exhibitName" value="{!exhibitName}"/> 
+                                <apex:param name="congid" value="{!congid}"/> 
+                                <apex:param name="congName" value="{!congName}"/>                 
+                            </apex:outputLink>               
+                        </apex:column>
+                        <apex:column headerValue="Brand Instance Name" >
+                            <apex:outputLink value="{!$Page.ExhibitBrandDetails}"> {!b.Name}  
+                                <apex:param name="brandid" value="{!b.Id}"/> 
+                                <apex:param name="exhibitName" value="{!exhibitName}"/>
+                            </apex:outputLink>
+                        </apex:column>
+                        <apex:column headerValue="Brand Name" value="{!b.Brand_Name__c}"/>
+                        <apex:column headerValue="Brand Category" value="{!b.Brand_Category__c}"/>
+                        <apex:column headerValue="Business Unit" value="{!b.Business_Unit__c}"/>
+                        <apex:column headerValue="Canceled" value="{!b.Canceled__c}"/>
+                    </apex:pageBlockTable>
+                </apex:pageBlock>
+            </apex:form>
+        </div>
+    </html>    
+</apex:page>

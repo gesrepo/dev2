@@ -1,0 +1,33 @@
+<apex:page standardController="Claims__Incident_Report__c" extensions="IncidentReportPortalController" 
+tabStyle="Claims__Incident_Report__c" showHeader="true" sidebar="true">
+    <apex:sectionHeader title="" subtitle="Create Incident Report" />
+    <apex:stylesheet value="{!URLFOR($Resource.IncidentReportsForm, 'css/IncidentStyle.css')}" />
+
+    <!-- Incident Report Web Form -->
+    <apex:form id="pbForm" >
+
+        <apex:pageMessages />
+
+        <c:BodilyInjury IncidentReport="{!report}" Controller="{!controller}" 
+        ButtonLabel="{!$Label.Save_Report}" rendered="{!recordTypeName == $Label.Bodily_Injury}"/>
+
+        <c:MotorVehicle IncidentReport="{!report}" Controller="{!controller}" 
+        ButtonLabel="{!$Label.Save_Report}" rendered="{!recordTypeName == $Label.Motor_Vehicle}"/>
+
+        <c:FacilityDamage IncidentReport="{!report}" Controller="{!controller}"  
+        ButtonLabel="{!$Label.Save_Report}" rendered="{!recordTypeName == $Label.Facility_Damage}"/>
+
+        <c:PropertyDamage IncidentReport="{!report}" Controller="{!controller}"  
+        ButtonLabel="{!$Label.Save_Report}" rendered="{!recordTypeName == $Label.Property_Damage_RT}"/>
+
+        <c:WorkersCompensation IncidentReport="{!report}" Controller="{!controller}" 
+        ButtonLabel="{!$Label.Save_Report}" rendered="{!recordTypeName == $Label.Workers_Compensation_RT}"/>
+
+        <c:Theft IncidentReport="{!report}" Controller="{!controller}" 
+        ButtonLabel="{!$Label.Save_Report}" rendered="{!recordTypeName == $Label.Theft}"/>
+
+        <c:Missing IncidentReport="{!report}" Controller="{!controller}" 
+        ButtonLabel="{!$Label.Save_Report}" rendered="{!recordTypeName == $Label.Missing}"/>
+         
+    </apex:form>
+</apex:page>

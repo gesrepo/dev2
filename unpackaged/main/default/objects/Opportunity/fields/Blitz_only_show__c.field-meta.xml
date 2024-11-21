@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Blitz_only_show__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Used to flag if this opportunity is not an actual show and is something Blitz are working only</description>
+    <inlineHelpText>Please select if this is an Opportunity we do not have loaded as EMEA Exhibition</inlineHelpText>
+    <label>Blitz only show</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

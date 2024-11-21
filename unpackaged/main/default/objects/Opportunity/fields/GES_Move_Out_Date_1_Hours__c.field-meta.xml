@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>GES_Move_Out_Date_1_Hours__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>GES Move-Out Day 1 Hours.</inlineHelpText>
+    <label>GES Move-Out Date 1 Hours</label>
+    <length>25</length>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

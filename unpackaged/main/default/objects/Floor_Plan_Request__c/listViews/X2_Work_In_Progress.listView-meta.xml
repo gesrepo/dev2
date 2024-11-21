@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>X2_Work_In_Progress</fullName>
+    <booleanFilter>(1 AND 2 AND 3) OR (1 AND 2 AND 4)</booleanFilter>
+    <columns>NAME</columns>
+    <columns>UserEntered_Requested_Due_Date__c</columns>
+    <columns>Fire_Marshaling__c</columns>
+    <columns>Requested_Due_Date__c</columns>
+    <columns>Opportunity_Name__c</columns>
+    <columns>Production_Location__c</columns>
+    <columns>Requester__c</columns>
+    <columns>Claimed_By__c</columns>
+    <columns>CREATED_DATE</columns>
+    <columns>FPR_Show_Job_Number__c</columns>
+    <columns>Regional_Overhead_Picklist__c</columns>
+    <columns>FPR_Show_Name__c</columns>
+    <columns>Status__c</columns>
+    <columns>Request_Plan_Type__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Claimed_By__c</field>
+        <operation>notEqual</operation>
+    </filters>
+    <filters>
+        <field>Status__c</field>
+        <operation>equals</operation>
+        <value>Open Work Order,New,Rejected</value>
+    </filters>
+    <filters>
+        <field>UserEntered_Requested_Due_Date__c</field>
+        <operation>lessOrEqual</operation>
+        <value>TODAY</value>
+    </filters>
+    <filters>
+        <field>Requested_Due_Date__c</field>
+        <operation>lessOrEqual</operation>
+        <value>TODAY</value>
+    </filters>
+    <label>0 Due Today or Prior</label>
+</ListView>

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>GOT_Sign_Type__c</fullName>
+    <description>Sign Type to be used for the graphics order.</description>
+    <inlineHelpText>Sign Type to be used for the graphics order.</inlineHelpText>
+    <label>Sign Type</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>1/2 M Panel</fullName>
+                <default>false</default>
+                <label>1/2 M Panel</label>
+            </value>
+            <value>
+                <fullName>11&quot; x 14&quot;</fullName>
+                <default>false</default>
+                <label>11&quot; x 14&quot;</label>
+            </value>
+            <value>
+                <fullName>1M Panel</fullName>
+                <default>false</default>
+                <label>1M Panel</label>
+            </value>
+            <value>
+                <fullName>22&quot; x 28&quot;</fullName>
+                <default>false</default>
+                <label>22&quot; x 28&quot;</label>
+            </value>
+            <value>
+                <fullName>28&quot; x 44&quot;</fullName>
+                <default>false</default>
+                <label>28&quot; x 44&quot;</label>
+            </value>
+            <value>
+                <fullName>8 1/2&quot; x 11&quot;</fullName>
+                <default>false</default>
+                <label>8 1/2&quot; x 11&quot;</label>
+            </value>
+            <value>
+                <fullName>Adhesive Cling</fullName>
+                <default>false</default>
+                <label>Adhesive Cling</label>
+            </value>
+            <value>
+                <fullName>Aisle Sign</fullName>
+                <default>false</default>
+                <label>Aisle Sign</label>
+            </value>
+            <value>
+                <fullName>Banner - Aisle</fullName>
+                <default>false</default>
+                <label>Banner - Aisle</label>
+            </value>
+            <value>
+                <fullName>Banner - Fabric</fullName>
+                <default>false</default>
+                <label>Banner - Fabric</label>
+            </value>
+            <value>
+                <fullName>Banner - Mesh</fullName>
+                <default>false</default>
+                <label>Banner - Mesh</label>
+            </value>
+            <value>
+                <fullName>Banner - Vinyl Inside</fullName>
+                <default>false</default>
+                <label>Banner - Vinyl Inside</label>
+            </value>
+            <value>
+                <fullName>Banner - Vinyl Outside</fullName>
+                <default>false</default>
+                <label>Banner - Vinyl Outside</label>
+            </value>
+            <value>
+                <fullName>Custom/Other</fullName>
+                <default>false</default>
+                <label>Custom/Other</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

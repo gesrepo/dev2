@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CV_Date__c</fullName>
+    <description>Date the Opportunity is approved to CV stage, will populate automatically upon approval.</description>
+    <inlineHelpText>Date Opportunity is approved to a CV Stage, must be converted to CR Stage, prior to the first GES Move-In Day.</inlineHelpText>
+    <label>CV Date</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Date</type>
+</CustomField>

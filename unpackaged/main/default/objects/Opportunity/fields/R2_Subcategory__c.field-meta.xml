@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>R2_Subcategory__c</fullName>
+    <description>Blitz field for Opportunity Integration</description>
+    <inlineHelpText>Subcategory to &quot;Type/Category&quot;</inlineHelpText>
+    <label>R2 Subcategory</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>TBD</fullName>
+                <default>false</default>
+                <label>TBD</label>
+            </value>
+            <value>
+                <fullName>DESIGNBUILD</fullName>
+                <default>false</default>
+                <label>DESIGNBUILD</label>
+            </value>
+            <value>
+                <fullName>CORPEND</fullName>
+                <default>false</default>
+                <label>CORPEND</label>
+            </value>
+            <value>
+                <fullName>AGENCYPROD</fullName>
+                <default>false</default>
+                <label>AGENCYPROD</label>
+            </value>
+            <value>
+                <fullName>GRAPHICSBROAD</fullName>
+                <default>false</default>
+                <label>GRAPHICSBROAD</label>
+            </value>
+            <value>
+                <fullName>VENUE</fullName>
+                <default>false</default>
+                <label>VENUE</label>
+            </value>
+            <value>
+                <fullName>REGISTRATION</fullName>
+                <default>false</default>
+                <label>REGISTRATION</label>
+            </value>
+            <value>
+                <fullName>EXHIBITOR</fullName>
+                <default>false</default>
+                <label>EXHIBITOR</label>
+            </value>
+            <value>
+                <fullName>ORGANISER</fullName>
+                <default>false</default>
+                <label>ORGANISER</label>
+            </value>
+            <value>
+                <fullName>THEATRE</fullName>
+                <default>false</default>
+                <label>THEATRE</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

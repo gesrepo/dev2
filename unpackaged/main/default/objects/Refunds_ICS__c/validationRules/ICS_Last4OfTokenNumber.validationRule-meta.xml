@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ICS_Last4OfTokenNumber</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(NOT(isblank(Last_4_of_Token__c)),NOT(ISNUMBER(  Last_4_of_Token__c  )))</errorConditionFormula>
+    <errorDisplayField>Last_4_of_Token__c</errorDisplayField>
+    <errorMessage>Please Verify the Token #</errorMessage>
+</ValidationRule>

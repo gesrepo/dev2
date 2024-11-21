@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Instructions__c</fullName>
+    <defaultValue>&quot;Please ensure you enter as much information as possible for this Top Spec. When creating a new Top Spec first select which Exhibition this relates to then check the force re-fresh box and click Save. This will automatically set the open and close dates as well as other important pieces of information. All updates will be posted automatically to Chatter. For every section an additional information field has been added where you have show specific information. For all contracted services sections, you can add visuals by editing the field and clicking the image icon; this accepts .jpg and .png files. If you wish to attach a PDF please scroll to the bottom of the page and attach the PDF there.&quot;</defaultValue>
+    <label>Instructions</label>
+    <length>10000</length>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>LongTextArea</type>
+    <visibleLines>12</visibleLines>
+</CustomField>

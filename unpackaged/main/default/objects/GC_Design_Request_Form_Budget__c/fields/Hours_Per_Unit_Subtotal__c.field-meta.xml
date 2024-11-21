@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Hours_Per_Unit_Subtotal__c</fullName>
+    <externalId>false</externalId>
+    <formula>(New_Concept_Design_Style_Guide_hr_u__c * New_Concept_Design_Style_Guide_Units__c) + (New_Structures_to_be_Rendered_hr_u__c * New_Structures_to_be_Rendered_Units__c) + (Existing_Structures_Rendering_hr_u__c * Existing_Structures_Rendering_Units__c) + (New_Line_Drawing_Blackline_hr_u__c * New_Line_Drawing_Blackline_Only_Units__c) + (Update_Graphics_on_Structure_hr_u__c * Update_Graphics_only_on_Structure_Units__c) + (Detail_Extract_Pull_List_Structure_hr_u__c * Detail_Extract_Pull_List_Structures_est__c) + (Detail_Extract_Exi_List_Structures_hr_u__c * Detail_Extract_Exi_List_Structures_Units__c)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Hours/Unit Subtotal</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

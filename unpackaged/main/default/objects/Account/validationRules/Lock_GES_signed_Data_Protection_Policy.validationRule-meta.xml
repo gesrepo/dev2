@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Lock_GES_signed_Data_Protection_Policy</fullName>
+    <active>true</active>
+    <description>Please contact Michele Harris to edit this field.</description>
+    <errorConditionFormula>AND($RecordType.Name = &#39;Firm&#39;, ISCHANGED(GES_signed_Data_Protection_Policy__c), 
+NOT($User.Id = &#39;00540000003EC3R&#39;))</errorConditionFormula>
+    <errorDisplayField>GES_signed_Data_Protection_Policy__c</errorDisplayField>
+    <errorMessage>You cannot edit this field. Contact Michele Harris.</errorMessage>
+</ValidationRule>

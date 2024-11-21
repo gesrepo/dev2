@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Is_Rich_Text__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Determines if this is a rich text area field, if so, strip the html tags from it.</description>
+    <fieldManageability>DeveloperControlled</fieldManageability>
+    <inlineHelpText>Determines if this is a rich text area field, if so, strip the html tags from it.</inlineHelpText>
+    <label>Is Rich Text</label>
+    <type>Checkbox</type>
+</CustomField>

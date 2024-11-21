@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Transaction_Name__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(NOT(ISBLANK(AR_Adjustments__c)),&#39;AR Adjustment&#39;,
+IF(NOT(ISBLANK(Credit_Memo__c)),&#39;Credit Memo&#39;,
+IF(NOT(ISBLANK(Refunds__c)),&#39;Refunds&#39;,
+IF(NOT(ISBLANK(Receipt_Reversal__c)),&#39;Receipt Reversal&#39;,
+&#39;No Transaction Name&#39;))))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Transaction Name</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

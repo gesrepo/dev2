@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>EMEA_ETL_ESL_2023_Case</fullName>
+    <filterScope>Queue</filterScope>
+    <label>EMEA ETL &amp; ESL 2023</label>
+    <queue>EMEA_ETL_ESL_2023</queue>
+    <sharedTo>
+        <allInternalUsers />
+    </sharedTo>
+</ListView>

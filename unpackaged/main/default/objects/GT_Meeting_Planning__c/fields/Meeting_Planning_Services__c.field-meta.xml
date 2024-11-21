@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Meeting_Planning_Services__c</fullName>
+    <label>Meeting Planning Services</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Sleeping Rooms</fullName>
+                <default>false</default>
+                <label>Sleeping Rooms</label>
+            </value>
+            <value>
+                <fullName>Congress Registration</fullName>
+                <default>false</default>
+                <label>Congress Registration</label>
+            </value>
+            <value>
+                <fullName>Dinner Reservations</fullName>
+                <default>false</default>
+                <label>Dinner Reservations</label>
+            </value>
+            <value>
+                <fullName>VIP Car Service</fullName>
+                <default>false</default>
+                <label>VIP Car Service</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

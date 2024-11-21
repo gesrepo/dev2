@@ -1,0 +1,308 @@
+<apex:page showHeader="false" sidebar="false" standardController="GC_Connect2_Show__c" extensions="GC_OrderClone_Controller">
+
+    <head>
+        <style type="text/css">
+        .selectionDiv {
+            margin: 20px !important;
+        }
+
+        .itemTable td {
+            padding: 3px;
+        }
+
+        .columnHeader {
+            padding: 5px;
+        }
+
+        .pageButtons {
+            width: 300px;
+        }
+
+        .selectAllBox {
+            float: right;
+        }
+        
+        .bPageBlock .detailList tr td
+        {
+            border-bottom: white!important;
+        }
+        
+        .bPageBlock .detailList .labelCol {
+            width: 1%;
+        }
+        
+        .tableStyle {border-collapse: collapse; border-spacing: 0px 0px; }
+        .colStyle1 { width: 16.5%;text-align:right; padding-top:3px; padding-bottom:5px}
+        .colStyle2 { width: 10%; padding-left:20px; padding-top:5px; padding-bottom:5px}
+        .colStyle3 { width: 10%;text-align:right; padding-top:5px; padding-bottom:5px}
+        .colStyle4 { width: 21%; padding-left:20px; padding-top:5px; padding-bottom:5px}
+        .colStyle5 { width: 10%;text-align:right; padding-top:5px; padding-bottom:5px}
+        .colStyle6 { width: 32%; padding-left:20px; padding-top:5px; padding-bottom:4px}
+        .rowstyle { border-bottom-style:solid; border-bottom-width:1px;border-bottom-color:#E8E8E8 }
+
+        .colStyle11 { width: 1.5%;text-align:right; padding-top:3px; padding-bottom:5px}
+        .colStyle21 { width: 11%; padding-left:20px; padding-top:5px; padding-bottom:5px}
+        .colStyle31 { width: 10%;text-align:right; padding-top:5px; padding-bottom:5px}
+        .colStyle41 { width: 21%; padding-left:20px; padding-top:5px; padding-bottom:5px}
+        .colStyle51 { width: 10%;text-align:right; padding-top:5px; padding-bottom:5px}
+        .colStyle61 { width: 32%; padding-left:20px; padding-top:5px; padding-bottom:4px}
+        
+        .custom1 .pbSubheader{
+            font-size:medium;
+            color: darkred!important;
+            }
+            
+         .custom2 .pbSubheader{
+            font-size:medium;
+            }
+        </style>
+        
+    </head>
+    <script type="text/javascript">
+    function checkAll(cb, checkId) {
+        var inputElem = document.getElementsByTagName("input");
+        for (var i = 0; i < inputElem.length; i++) {
+            if (inputElem[i].id.indexOf(checkId) != -1) {
+                if (checkId == "selectedItems") 
+                {
+                    if (!cb.checked) {
+                        for (var j = 0; j < inputElem.length; j++) {
+                            inputElem[j].checked = cb.checked;
+                        }
+                    }
+                    inputElem[i].checked = cb.checked;
+                }
+                else if(checkId == "firstgridOrders")
+                {
+                    if (!cb.checked) {
+                        for (var j = 0; j < inputElem.length; j++) {
+                            inputElem[j].checked = cb.checked;
+                        }
+                    }
+                    inputElem[i].checked = cb.checked;
+                }
+            }
+        }
+    }
+
+    </script>
+        <apex:form >
+        <apex:pageMessages id="messages" />
+        
+        <apex:actionStatus id="serachStatusSpinner">
+            <apex:facet name="start">
+              <c:GC_StatusSpinner statusMessage="Searching." /> 
+            </apex:facet>
+        </apex:actionStatus>
+
+        <apex:actionStatus id="cloneOrdersSpinner">
+            <apex:facet name="start">
+              <c:GC_StatusSpinner statusMessage="Cloning." /> 
+            </apex:facet>
+        </apex:actionStatus>
+        
+        <apex:actionStatus id="Cancelling">
+            <apex:facet name="start">
+              <c:GC_StatusSpinner statusMessage="Cancelling cloning." /> 
+            </apex:facet>
+        </apex:actionStatus>
+        
+        <apex:actionStatus id="showOrders">
+            <apex:facet name="start">
+              <c:GC_StatusSpinner statusMessage="Fetching Orders." /> 
+            </apex:facet>
+        </apex:actionStatus>
+        
+        <apex:actionStatus id="mapDelLoc">
+            <apex:facet name="start">
+              <c:GC_StatusSpinner statusMessage="Mapping Delivery Locations." /> 
+            </apex:facet>
+        </apex:actionStatus>
+        
+        <apex:pageBlock id="pb1">
+            <apex:pageBlockSection id="filters" columns="1">
+                <apex:outputPanel rendered="{!showOrderGrids}">
+                 <apex:pageBlockSection title="Order Filters" columns="1">
+                    
+                    <apex:panelGrid columns="6" border="0" styleClass="tableStyle" width="100%" columnClasses="colStyle1,colStyle2,colStyle3,colStyle4,colStyle5,colStyle6" rowClasses="rowstyle">
+                        <apex:outputLabel value="Delivery Location" />
+                        <apex:selectList value="{!deliveryLocation}" size="1" styleClass="slds-select" style="width: 200px;">
+                          <apex:selectOptions value="{!deliveryLocations}"></apex:selectOptions>
+                        </apex:selectList>
+
+                        <apex:outputLabel value="Area Description" />
+                        <apex:selectList value="{!areaDescription}" size="1" styleClass="slds-select" style="width: 200px;">
+                          <apex:selectOptions value="{!orderAreaDescriptions}"></apex:selectOptions>
+                        </apex:selectList>
+
+                        <apex:outputLabel value="Delivery Area" />
+                        <apex:selectList value="{!delivery}" size="1" styleClass="slds-select" style="width: 200px;">
+                          <apex:selectOptions value="{!deliveryAreas}"></apex:selectOptions>
+                        </apex:selectList>
+
+                         <apex:outputLabel value="Department" />
+                        <apex:selectList value="{!department}" size="1" styleClass="slds-select" style="width: 200px;">
+                          <apex:selectOptions value="{!departments}"></apex:selectOptions>
+                        </apex:selectList>
+
+                        <apex:outputLabel value="User Name" />
+                        <apex:selectList value="{!username}" size="8" styleClass="slds-select" multiselect="true" style="height: 100px;width: 200px;">
+                          <apex:selectOptions value="{!usernames}"></apex:selectOptions>
+                        </apex:selectList>
+
+                        <apex:outputLabel value="Venue Location" />
+                        <apex:selectList value="{!venue}" size="1" styleClass="slds-select" style="width: 200px;">
+                          <apex:selectOptions value="{!venueLocations}"></apex:selectOptions> 
+                        </apex:selectList>
+
+                        <apex:outputLabel value="Vendor" />
+                        <apex:selectList value="{!vendor}" size="1" styleClass="slds-select" style="width: 200px;">
+                          <apex:selectOptions value="{!vendors}"></apex:selectOptions> 
+                        </apex:selectList>
+
+                        <apex:outputLabel value="Keyword Search" />
+                        <apex:inputText styleClass="slds-input"  value="{!searchString}" style="width: 200px"/>  
+
+                    </apex:panelGrid>
+
+                    
+                    <apex:pageBlockSection id="pbs7" columns="3" collapsible="false">
+                         <apex:pageBlockSectionItem >
+                        </apex:pageBlockSectionItem>
+
+                        <apex:pageBlockSectionItem >
+                            <apex:outputPanel layout="none"> 
+                                <apex:outputLabel value="" /> 
+                                <apex:commandButton value="Search" action="{!searchResults}" styleClass="pageButton" reRender="pbs1, messages" style="margin-left: 0px;" status="serachStatusSpinner" /> 
+                                
+                            </apex:outputPanel> 
+                        </apex:pageBlockSectionItem> 
+
+                        <apex:pageBlockSectionItem >
+                        </apex:pageBlockSectionItem>
+                    </apex:pageBlockSection>
+                  
+                </apex:pageBlockSection>
+                </apex:outputPanel>
+                </apex:pageBlockSection> 
+                <apex:pageBlockSection id="pbs1" title="Select Order(s) to clone" columns="1" collapsible="false">
+                    <apex:panelGrid columns="2">
+                    <apex:commandButton action="{!toggleContent}" value="Take me to Shows" style="left:0px;position:relative;" styleClass="slds-button slds-button--brand gc-teal-button" />
+                    <apex:commandButton action="{!cancelclone}" value="Cancel Cloning" style="left:0px;position:relative;" styleClass="slds-button slds-button--brand gc-teal-button" status="Cancelling" />
+                    </apex:panelGrid>
+                   <!--  <div id="Shows" style="display:{!if(showContent,"block","none")};">-->
+                   
+                   <apex:outputPanel rendered="{!showContent}" >
+                       <apex:pageBlockSection id="pbs4" title="Select Shows to Associate" columns="1" collapsible="false">
+                            <apex:pageblocksectionItem >
+                                <apex:outputLabel value="Show:" />
+                                <apex:selectList value="{!selectedshow}" multiselect="false" size="1">
+                                    <apex:actionsupport event="onchange" action="{!showOrderGrids}" reRender="pbs1, messages,filters" status="showOrders"/>
+                                    <apex:selectOptions value="{!openShowOptions}"/> 
+                                </apex:selectList>
+                            </apex:pageblocksectionItem>
+                            <apex:commandButton action="{!cloneOrders}" value="Clone" style="left:0px;position:relative;" styleClass="slds-button slds-button--brand gc-teal-button"  status="cloneOrdersSpinner"/>
+                       </apex:pageBlockSection>
+                   </apex:outputPanel>
+                   
+                   <apex:outputPanel rendered="{!showOrderGrids1}" styleClass="custom1" >
+                    <apex:pageBlockSection columns="1" title="Warning: Delivery Location(s) do not exist on this show please select a new delivery location.">
+                        <apex:pageBlockSectionItem >
+                            <apex:panelGrid columns="5">
+                                <apex:outputLabel value="Delivery Location:" />
+                                <apex:selectList value="{!fromShowDelLocMap}" size="1">
+                                    <apex:selectOptions value="{!delLocationFromShow}"/>
+                                </apex:selectList>
+                                <apex:outputLabel value="New Delivery Location:" />
+                                <apex:selectList value="{!toShowDelLocMap}" size="1">
+                                    <apex:selectOptions value="{!delLocationToShow}"/>
+                                </apex:selectList>
+                                <apex:commandButton action="{!mapDeliveryLocations}" value="Set Delivery Locations" reRender="pbs1, messages" status="mapDelLoc"/>
+                            </apex:panelGrid>
+                        </apex:pageBlockSectionItem>
+                        <apex:pageBlockTable value="{!orderHoldersWODL}" var="orderHolder" styleClass="itemTable" id="itemTable3" headerClass="columnHeader">
+                            <apex:column >
+                                <apex:facet name="header">
+                                    <apex:inputCheckbox onclick="checkAll(this, 'firstgridOrders');">
+                                    </apex:inputCheckbox>
+                                </apex:facet>
+                                <apex:inputCheckbox value="{!orderHolder.selected}" id="firstgridOrders" />
+                            </apex:column>
+                            <apex:column >
+                                <apex:facet name="header">Order Name</apex:facet>
+                                <apex:outputText value="{!orderHolder.order.Name}" />
+                            </apex:column>
+                            <apex:column >
+                                <apex:facet name="header">Ready To Clone</apex:facet>
+                                <div style="color: red;text-align: center;font-size: medium;">
+                                    &#10071;
+                                </div>
+                            </apex:column>
+                            <apex:column >
+                                <apex:facet name="header">Order Number</apex:facet>
+                                <apex:outputText value="{!orderHolder.order.Order_Number__c}" />
+                            </apex:column>
+                            <apex:column >
+                                <apex:facet name="header">Delivery Location </apex:facet>
+                                <apex:outputText value="{!orderHolder.order.Booth_Area__c}" />
+                            </apex:column>
+                            <apex:column headerValue="New Delivery Location - Please Select">
+                                <apex:selectList value="{!orderHolder.newDeliveryLocation}" size="1">
+                                    <apex:selectOptions value="{!delLocationToShow}"/>
+                                </apex:selectList>
+                            </apex:column>
+                             <apex:column >
+                                <apex:facet name="header">Order Area Description </apex:facet>
+                                <apex:outputText value="{!orderHolder.order.Order_Area_Description__c}" />
+                            </apex:column>
+                            <apex:column >
+                                <apex:facet name="header"> Status </apex:facet>
+                                <apex:outputText value="{!orderHolder.order.Status__c}" />
+                            </apex:column>
+                        </apex:pageBlockTable>
+                    </apex:pageBlockSection>
+                    </apex:outputPanel>
+                    <apex:outputPanel rendered="{!showOrderGrids}" styleClass="custom2" > 
+                    <apex:pageBlockSection columns="1" title="Orders - Ready For Cloning" >                                                              
+                    <apex:pageBlockTable value="{!orderHolders}" var="orderHolder" styleClass="itemTable" id="itemTable2" headerClass="columnHeader">
+                        <apex:column >
+                            <apex:facet name="header">
+                                <apex:inputCheckbox onclick="checkAll(this, 'selectedItems');">
+                                </apex:inputCheckbox>
+                            </apex:facet>
+                            <apex:inputCheckbox value="{!orderHolder.selected}" id="selectedItems" />
+                        </apex:column>
+                        <apex:column >
+                            <apex:facet name="header">Order Name</apex:facet>
+                            <apex:outputText value="{!orderHolder.order.Name}" />
+                        </apex:column>
+                        <apex:column >
+                                <apex:facet name="header">Ready To Clone</apex:facet>
+                                <div style="color: green;text-align: center;font-size: medium;">
+                                    &#x2714;
+                                </div>
+                        </apex:column>
+                        <apex:column >
+                            <apex:facet name="header">Order Number</apex:facet>
+                            <apex:outputText value="{!orderHolder.order.Order_Number__c}" />
+                        </apex:column>
+                        <apex:column >
+                            <apex:facet name="header">Delivery Location </apex:facet>
+                            <apex:outputText value="{!orderHolder.order.Booth_Area__c}" />
+                        </apex:column>
+                         <apex:column >
+                            <apex:facet name="header">Order Area Description </apex:facet>
+                            <apex:outputText value="{!orderHolder.order.Order_Area_Description__c}" />
+                        </apex:column>
+                        <apex:column >
+                            <apex:facet name="header"> Status </apex:facet>
+                            <apex:outputText value="{!orderHolder.order.Status__c}" />
+                        </apex:column>
+                    </apex:pageBlockTable>
+                    </apex:pageBlockSection>
+                    </apex:outputPanel>
+                </apex:pageBlockSection>
+                 
+        </apex:pageBlock>    
+    </apex:form>
+</apex:page>

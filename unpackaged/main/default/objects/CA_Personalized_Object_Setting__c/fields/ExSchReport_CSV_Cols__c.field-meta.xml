@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ExSchReport_CSV_Cols__c</fullName>
+    <description>enter the field names for csv download here</description>
+    <inlineHelpText>enter the field names for csv download here</inlineHelpText>
+    <label>ExSchReport CSV Cols</label>
+    <length>2500</length>
+    <trackTrending>false</trackTrending>
+    <type>LongTextArea</type>
+    <visibleLines>3</visibleLines>
+</CustomField>

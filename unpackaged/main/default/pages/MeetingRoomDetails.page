@@ -1,0 +1,144 @@
+<apex:page standardStylesheets="true" controller="MeetingRoomDetail" showHeader="false" sidebar="false" applyHtmlTag="false" tabStyle="Account">
+    <html xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <head>
+            <apex:includeScript value="{!$Resource.jQuery}" />
+            <apex:stylesheet value="{!URLFOR($Resource.Lightning_Design_System, 'assets/styles/salesforce-lightning-design-system.min.css')}" />
+            <apex:stylesheet value="{!URLFOR($Resource.GC_Assets, 'GC_Assets/css/GC_Styles.css')}" />
+            <apex:includeScript value="{!URLFOR($Resource.GC_Assets, 'GC_Assets/js/GC_init.js')}" />
+        </head>
+        <div class="slds">
+            <c:GC_Community_Header /> 
+            <div class="slds-page-header gc-navigation--subHeader" role="banner">
+                <div class="slds-media">
+                    <div class="slds-media__figure">
+                        <apex:image url="{!URLFOR($Resource.GC_Assets, 'GC_Assets/img/custom13_60_teal.png')}" />
+                    </div>
+                    <div class="slds-media__body">
+                        <p class="slds-page-header__title slds-align-middle">
+                            <span>Meeting Room Details</span>
+                            <span class="slds-truncate">{!mr.Name}</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            <apex:form >
+                <apex:pageBlock title="">
+                    <apex:pageBlockButtons location="top">
+                        <apex:commandButton value="Edit" action="{!MeetingRoomSave}" styleClass="slds-button slds-button--brand gc-teal-button"/>
+                        <apex:commandButton value="Back" action="{!MeetingRoomcancel}" styleClass="slds-button slds-button--brand gc-teal-button"/>
+                        <apex:commandButton value="Clone" action="{!MeetingRoomClone}" styleClass="slds-button slds-button--brand gc-teal-button" style="float:right" />
+                    </apex:pageBlockButtons>
+                    <apex:pageBlockSection title="Meeting Room Detail">
+                        <apex:outputField value="{!mr.Meeting_Room_Name__c}"/>
+                        <apex:outputText label="Congress ID">
+                            <apex:outputLink value="{!$Page.Congressdetails}">
+                                {!congName}
+                                <apex:param name="id" value="{!congid}"/>                       
+                            </apex:outputLink>
+                        </apex:outputText>
+                        <apex:outputField value="{!mr.Meeting_Room_Location__c}"/>
+                        <apex:outputField value="{!mr.Activity_Level__c}"/>
+                        <apex:outputField value="{!mr.Meeting_Room_Number__c}"/>
+                        <apex:outputField value="{!mr.GES_Project_Number__c}"/>
+                        <apex:outputText value="{0,date, MMMM d, yyyy  hh:mm a}" label="Meeting Room Date & Time"> <apex:param value="{!mr.Meeting_Room_Time__c+ offset}" /> </apex:outputText>
+                        <apex:outputField value="{!mr.MR_Type__c}"/>
+                        <apex:outputField value="{!mr.Meeting_Room_Lead__c}"/>
+                        <apex:outputField value="{!mr.Meeting_Room_Use__c}"/>
+                        <apex:outputField value="{!mr.Meeting_Room_Notes__c}"/>
+                        <apex:outputText ></apex:outputText>
+                        <apex:outputField value="{!mr.AV__c}"/>
+                        <apex:outputField value="{!mr.Activity_Not_Confirmed__c}"/>                    
+                        <apex:outputField value="{!mr.F_B__c}"/>
+                        <apex:outputField value="{!mr.Canceled__c}"/>
+                        <apex:outputField value="{!mr.Furnitire__c}"/>
+                        <apex:outputField value="{!mr.Cancel_Reason__c}"/> 
+                        <apex:outputField value="{!mr.Internet__c}"/> 
+                        <apex:outputField value="{!mr.CanceledDate__c}"/>
+                        
+                        <!--<apex:outputField value="{!mr.CurrencyIsoCode}"/>-->
+                        <apex:outputText ></apex:outputText>                       
+                        <apex:outputText ></apex:outputText>
+                        <apex:outputText >________________________________________________________________________________</apex:outputText>
+                        <apex:outputText >________________________________________________________________________________</apex:outputText>
+                        <!--    <apex:outputText value="{0,date, MMMM d, yyyy  hh:mm a}" label="Day 1 - Open date & time"> <apex:param value="{!mr.Day_1_Open_date_time__c+ offset}" /> </apex:outputText> -->
+                        <apex:outputText value="{!OpenDay1}" label="Day 1 - Open date & time"/> 
+                        <apex:outputText value="{!CloseDay1}" label="Day 1 - Close date & time"/> 
+                        <!--   <apex:outputText value="{0,date, MMMM d, yyyy  hh:mm a}" label="Day 1 - Close date & time"> <apex:param value="{!mr.Day_1_Close_date_time__c+ offset}" /> </apex:outputText>
+<!--   <apex:outputText value="{0,date, MMMM d, yyyy  hh:mm a}" label="Day 2 - Open date & time"> <apex:param value="{!mr.Day_2_Open_date_time__c+ offset}" /> </apex:outputText> -->
+                        <apex:outputText value="{!OpenDay2}" label="Day 2 - Open date & time"/> 
+                        <apex:outputText value="{!CloseDay2}" label="Day 2 - Close date & time"/> 
+                        <!-- <apex:outputText value="{0,date, MMMM d, yyyy  hh:mm a}" label="Day 2 - Close date & time"> <apex:param value="{!mr.Day_2_Close_date_time__c+ offset}" /> </apex:outputText> -->
+                        <!--    <apex:outputText value="{0,date, MMMM d, yyyy  hh:mm a}" label="Day 3 - Open date & time"> <apex:param value="{!mr.Day_3_Open_date_time__c+ offset}" /> </apex:outputText> -->
+                        <apex:outputText value="{!OpenDay3}" label="Day 3 - Open date & time"/> 
+                        <apex:outputText value="{!CloseDay3}" label="Day 3 - Close date & time"/>
+                        <!--    <apex:outputText value="{0,date, MMMM d, yyyy  hh:mm a}" label="Day 3 - Close date & time"> <apex:param value="{!mr.Day_3_Close_date_time__c+ offset}" /> </apex:outputText> -->
+                        <!-- <apex:outputText value="{0,date, MMMM d, yyyy  hh:mm a}" label="Day 4 - Open date & time"> <apex:param value="{!mr.Day_4_Open_date_time__c+ offset}" /> </apex:outputText> -->
+                        <apex:outputText value="{!OpenDay4}" label="Day 4 - Open date & time"/> 
+                        <apex:outputText value="{!CloseDay4}" label="Day 4 - Close date & time"/>
+                        <!-- <apex:outputText value="{0,date, MMMM d, yyyy  hh:mm a}" label="Day 4 - Close date & time"> <apex:param value="{!mr.Day_4_Close_date_time__c+ offset}" /> </apex:outputText> -->
+                        <!-- <apex:outputText value="{0,date, MMMM d, yyyy  hh:mm a}" label="Day 5 - Open date & time"> <apex:param value="{!mr.Day_5_Open_date_time__c+ offset}" /> </apex:outputText> -->
+                        <apex:outputText value="{!OpenDay5}" label="Day 5 - Open date & time"/> 
+                        <apex:outputText value="{!CloseDay5}" label="Day 5 - Close date & time"/>
+                        <!--  <apex:outputText value="{0,date, MMMM d, yyyy  hh:mm a}" label="Day 5 - Close date & time"> <apex:param value="{!mr.Day_5_Close_date_time__c+ offset}" /> </apex:outputText> -->
+                        
+                        <apex:outputText >________________________________________________________________________________</apex:outputText>
+                        <apex:outputText >________________________________________________________________________________</apex:outputText>      
+                        
+                    </apex:pageBlockSection>
+                    <apex:pageBlockSection title="Meeting Room Contacts">
+                        <apex:outputField value="{!mr.GES_Congress_Manager__c}"/> <apex:outputField value="{!mr.Agency_Name__c}"/> 
+                        <apex:outputField value="{!mr.Congress_Lead__c}"/> <apex:outputField value="{!mr.Agency_Contact_Name__c}"/> 
+                        <apex:outputField value="{!mr.GES_Account_Executive__c}"/> <apex:outputField value="{!mr.Agency_Contact_Phone__c}"/>
+                        
+                        <apex:outputField value="{!mr.GES_Account_Manager__c}"/> <apex:outputField value="{!mr.Agency_Contact_E_mail__c}"/>  
+                        <apex:outputField value="{!mr.GES_Project_Manager__c}"/> 
+                        <apex:outputField value="{!mr.I_D_Supervisor__c}"/> <apex:outputText rendered="{! mr.I_D_Supervisor__c=='Other'}" > </apex:outputText>
+                        <apex:outputField value="{!mr.I_D_Name_Other__c}" rendered="{! mr.I_D_Supervisor__c=='Other'}"/>
+                        
+                    </apex:pageBlockSection>
+                    
+                </apex:pageBlock>
+                
+                <!--  <apex:inlineEditSupport event="ondblClick" /> -->
+            </apex:form>
+            <apex:form >
+                <apex:pageBlock title="Brand">
+                    <apex:pageBlockButtons location="top">
+                        <apex:commandButton value="New Brand" action="{!MeetingRoomNewBrand}" styleClass="slds-button slds-button--brand gc-teal-button"/>
+                    </apex:pageBlockButtons>            
+                    <apex:pageBlockTable value="{!brdlist}" var="b">
+                        <apex:column headerValue="Action" style="width:100px" >
+                            <apex:outputLink value="{!$Page.MeetingRoomBrandEdit}"> Edit  
+                                <apex:param name="congid" value="{!congid}"/>                 
+                                <apex:param name="brandid" value="{!b.Id}"/>
+                                <apex:param name="congName" value="{!congName}"/>
+                                <apex:param name="mrid" value="{!mrid}"/>
+                                <apex:param name="mrName" value="{!mrName}"/>
+                                <!--<apex:param name="id" value="{!a.Id}" assignTo="{!aId}" />-->
+                            </apex:outputLink>
+                        </apex:column> 
+                        <apex:column headerValue="Brand Instance Name">
+                            <apex:outputLink value="{!$Page.MeetingRoomBrandDetail}"> {!b.Name}
+                                <apex:param name="congid" value="{!congid}"/>                 
+                                <apex:param name="mrnbrandid" value="{!b.Id}"/>
+                                <apex:param name="congName" value="{!congName}"/>
+                                <apex:param name="mrid" value="{!mrid}"/>
+                                <apex:param name="mrName" value="{!mr.Name}"/>
+                                <!--<apex:param name="id" value="{!a.Id}" assignTo="{!aId}" />-->
+                            </apex:outputLink>
+                        </apex:column> 
+                        <apex:column headerValue="Brand Name" value="{!b.Brand_Name__c}"/>
+                        <apex:column headerValue="Brand Category" value="{!b.Brand_Category__c}"/>
+                        <apex:column headerValue="Business Unit" value="{!b.Business_Unit__c}"/>
+                        <apex:column headerValue="Canceled" value="{!b.Canceled__c}"/>
+                        <!--<apex:column headervalue="Created Date" value="{!b.Createddate}">                
+</apex:column>
+<apex:column headervalue="modified Date" value="{!b.LastModifiedDate}"/>-->
+                    </apex:pageBlockTable>
+                </apex:pageBlock>
+            </apex:form></div>
+        <!-- <apex:relatedList list="Activity_Type_Exhibit_Instance__r" title="{!a.name} Exhibit"/>
+<apex:relatedList list="Sponsorship_Instance__r" title="{!a.name} Sponsorship"/>-->
+    </html>    
+</apex:page>

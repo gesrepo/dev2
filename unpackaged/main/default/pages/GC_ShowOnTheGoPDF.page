@@ -1,0 +1,689 @@
+<apex:page showHeader="false" sidebar="false" controller="GC_ShowOnTheGoController" readonly="true" tabStyle="GC_Order__c" applyBodyTag="false" standardStylesheets="false" applyHtmlTag="false" renderAs="pdf">
+    <!--renderAs="pdf"-->
+    <head>
+        <style>
+            form {
+            margin: 0px;
+            padding: 0px;
+            }
+            
+            body {
+            font-family: Arial Unicode MS;
+            font-weight: normal;
+            font-size: 70%;
+            }
+            
+            h1,h2,h3,h4,h5,h6 {
+            font-family: 'Verdana', 'Geneva', sans-serif;
+            font-size: 100%;
+            margin: 0px;
+            display: inline;
+            }
+            
+            textarea {
+            font-family: 'Arial', 'Helvetica', sans-serif;
+            font-size: 100%;
+            }
+            
+            label {
+            font-weight: bold !important;
+            }
+            
+            @page {
+            size: portrait;
+            margin-top: 0.25in;
+            @top-center {
+            }
+            
+            
+            @bottom-center {
+            content: "Page " counter(page) " of " counter(pages);
+            
+            }
+            @bottom-right {
+            content: "Report Date: {!MONTH(TODAY())}.{!DAY(TODAY())}.{!YEAR(TODAY())}";
+            font-family: sans-serif;
+            font-size: 80%;
+            }
+            
+            }
+            
+            .page-break {
+            display: block;
+            page-break-after: always;
+            }
+            
+            .page-break-before {
+            display: block;
+            page-break-before: always;
+            }
+            
+            .padding {
+            padding-top: 5px;
+            }
+            
+            table {
+            table-layout: fixed;
+            border: 1px;
+            width: 100%;
+            border-style: hidden;
+            border-color: black;
+            }
+            
+            .summary-table{
+            table-layout: auto;
+            border: 1px;
+            width: 100%;
+            border-style: solid;
+            }
+            
+            .outer-border-table-top {
+            border-top: 1px;
+            border-bottom: 0px;
+            border-style: solid;
+            width: 100%;
+            padding-right: 6px;
+            }
+            
+              .outer-border-table-bottom {
+            border-top: 0px;
+            border-bottom: 0.5px;
+            border-left: 0px;
+            border-right: 0px;
+            border-style: solid;
+            width: 100%;
+            padding-right: 6px;
+            }
+            
+            .outer-border-table-rlb {
+            border-top: 0px;
+            border-bottom: 1px;
+            border-left: 1px;
+            border-right: 1px;
+            border-style: solid;
+            width: 100%;
+            padding-right: 6px;
+            }
+            
+            .summary-table tr {
+            vertical-align: top !important;
+            }
+            
+            body > table:last-of-type{page-break-after:auto}
+            
+            .summary-table td {
+            border-top: 2px solid gray !important;
+            }
+            
+            .summary-table th {
+            border-bottom: 0;
+            }
+            
+            .summary-table table {
+            border-collapse: collapse;
+            }
+            
+            @top-right {
+            content: "Top Right";
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 80%;
+            }
+            
+            .sectionHeader {
+            width: 100%;
+            background-color:#C0C0C0;
+            font-size: 12px;
+            font-weight:bold;
+            padding: 5px;
+            //margin: 20px 0px;
+            font-weight: bold;
+            }
+        </style>
+        
+    </head>
+    <body>
+        <apex:form >
+        <!-- <div id="section-to-print" style="page-break-after:always;"> -->
+            <apex:variable var="i" value="{!0}"/>
+            <apex:variable value="{!0}" var="rowNum"/>
+            <apex:repeat value="{!OrderWrappers}" var="orderWrapper">
+                <apex:variable var="rowNum" value="{!rowNum + 1}"/>   
+                <!--Task Information here -->
+                <apex:outputPanel rendered="{!orderWrapper.gesTasks.size > 0}"> 
+                    
+                     <table class="headerTable">
+                    <tr>
+                        <td width="32%">
+                            <apex:image value="{!$Resource.GESLog}"/> 
+                        </td>
+                        <td width = "38%">
+                            <div align="center">
+                                <h1 style="font-size:13px">  {!orderWrapper.order.Connect2_Show__r.Show_Name__c} 
+                                    
+                                </h1>
+                                <br/>
+                                <h1 style="font-size:11px">
+                                    <apex:outputText value="{0,date,MM'/'dd'/'yyyy}">
+                                        <apex:param value="{!startdate }" />
+                                    </apex:outputText>
+                                    -
+                                    &nbsp; 
+                                    <apex:outputText value="{0,date,MM'/'dd'/'yyyy}">
+                                        <apex:param value="{!enddate}" />
+                                    </apex:outputText>
+                                    <!--  <apex:outputText value="{!Showdate}"> -->
+                                </h1>
+                            </div>
+                        </td>
+                        <td></td>
+                        <td width= "30%">
+                            <div align="right">
+                                <h5> Show Number:{!orderWrapper.order.Connect2_Show__r.Name}</h5>
+                                <br/>
+                                <h5> Job Number:{!orderWrapper.order.Connect2_Show__r.Job_Number__c}</h5>
+                                <br/>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+                <apex:outputPanel rendered="{!i==0}">
+                    <apex:variable var="i" value="{!i+1}"/>
+                </apex:outputPanel>
+                
+                <!-- order Information -->
+                
+                <div class="sectionHeader">
+                    <!--h5 style="font-size:15px">Delivery Location:  ({!orderWrapper.order.Booth_Area__c})</h5--> <!--commented by Sajid on 04/05/23 Ticket-1209 -->
+                    <h5 style="font-size:15px">Order:  ({!orderWrapper.order.Booth_Area__c})</h5>  <!-- added by Sajid on 04/05/23 Ticket-1209 -->
+                </div>
+                <table>
+                    <tr>
+                        <td style="text-align:left;">
+                            <h1>
+                                <apex:outputLabel value="Area Description:" />
+                            </h1>
+                            <apex:outputText > {!orderWrapper.order.Order_Area_Description__c}</apex:outputText>
+                            <apex:outputText value="-" rendered="{!orderWrapper.order.Order_Area_Description__c==null}" />
+                        </td>
+                        <td style="text-align:right;">
+                            <h1>
+                                <apex:outputLabel value="Last Modified:" />
+                            </h1>
+                            <apex:outputField value="{!orderWrapper.order.LastModifiedDate}"> </apex:outputField>
+                            &nbsp;
+                            <apex:outputText >({!orderWrapper.order.Name}) </apex:outputText>
+                            
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:left;">
+                            <h1>
+                                <apex:outputLabel value="Prepared By:" />
+                            </h1>
+                            <apex:outputText value="{!orderWrapper.order.owner.name}"/>
+                        </td>
+                        <td style="text-align:right;">
+                            <h1>
+                                <apex:outputLabel value="Status:" />
+                            </h1>
+                            <apex:outputText value="{!orderWrapper.order.Status__c}" />
+                            <apex:outputText value="-" rendered="{!orderWrapper.order.Status__c==null}" />
+                        </td>
+                    </tr>
+                </table>
+                
+                <apex:outputPanel rendered="{!orderWrapper.order.Delivery_Date_Time__c!=null || orderWrapper.order.Completion_Date_Time__c!=null || orderWrapper.order.Removal_Date_Time__c!=null}">
+                    <table>
+                        <tr>
+                            <td style="text-align:left;">
+                                <h1>
+                                    <apex:outputLabel value="Delivery:" />
+                                </h1>
+                                <apex:outputField value="{!orderWrapper.order.Delivery_Date_Time__c}" rendered="{!orderWrapper.order.Delivery_Date_Time__c!=null}" />
+                                <apex:outputText value="-" rendered="{!orderWrapper.order.Delivery_Date_Time__c==null}" />
+                            </td>
+                            <td style="text-align:center;">
+                                <h1>
+                                    <apex:outputLabel value="Completion:" />
+                                </h1>
+                                <apex:outputField value="{!orderWrapper.order.Completion_Date_Time__c}" rendered="{!orderWrapper.order.Completion_Date_Time__c!=null}" />
+                                <apex:outputText value="-" rendered="{!orderWrapper.order.Completion_Date_Time__c==null}" />
+                            </td>
+                            <td style="text-align:right;">
+                                <h1>
+                                    <apex:outputLabel value="Removal:" />
+                                </h1>
+                                <apex:outputField value="{!orderWrapper.order.Removal_Date_Time__c}" rendered="{!orderWrapper.order.Removal_Date_Time__c!=null}" />
+                                <apex:outputText value="-" rendered="{!orderWrapper.order.Removal_Date_Time__c==null}" />
+                            </td>
+                        </tr>
+                    </table>
+                </apex:outputPanel>
+                <apex:outputPanel rendered="{!orderWrapper.listOrderAttachment != null && orderWrapper.listOrderAttachment.Size > 0}">
+                    <table>
+                        <apex:repeat value="{!orderWrapper.listOrderAttachment}" var="a">
+                            <tr>
+                                <td>
+                                    <apex:outputLink value="{!BaseURL}{!a.id}">
+                                        {!a.Name} ({!a.BodyLength} B)
+                                    </apex:outputLink>
+                                </td>
+                            </tr>
+                        </apex:repeat>
+                    </table>
+                </apex:outputPanel>
+                <br/>  
+                    <div class="sectionHeader">
+                        <!--h5 style="font-size:15px">GES Tasks</h5--> <!--commented by Sajid on 04/05/23 Ticket-1209 -->
+                        <h5 style="font-size:15px">GES Items</h5>  <!-- added by Sajid on 04/05/23 Ticket-1209 -->
+                    </div>
+                    <div class="outer-border-table-top">
+                    </div>
+                    <apex:repeat value="{!orderWrapper.gesTasks}" var="gesTask">
+                    <div class="outer-border-table-rlb">
+                            <apex:outputPanel rendered="{!gesTask.Description__c!=null || gesTask.User_Item_Description__c!=null || gesTask.Item_Number__c!=null || gesTask.QuantityNum__c!=null}">
+                                <table>
+                                    <tr>
+                                        <td style="text-align:left;">
+                                            <h1 >
+                                                <apex:outputLabel rendered="{!gesTask.QuantityNum__c!=null}" /> ({!gesTask.QuantityNum__c})  {!gesTask.Item_Number__c}  {!gesTask.Description__c}
+                                                <apex:outputText value="-" rendered="{!gesTask.Item_Number__c==null}" />
+                                                <apex:outputLabel />
+                                            </h1>
+                                        </td>
+                                        <td style="text-align:center;">
+                                            <h1 >
+                                                <apex:outputLabel rendered="{!gesTask.User_Item_Description__c!=null}" value="{!gesTask.User_Item_Description__c}"/>
+                                                <apex:outputText value="-" rendered="{!gesTask.User_Item_Description__c == null}" />
+                                                <apex:outputLabel />
+                                            </h1>
+                                        </td>
+                                        <td style="text-align:right;">
+                                            <apex:outputLabel rendered="{!gesTask.Name!=null}" /> ({!gesTask.Name}) 
+                                        </td>
+                                    </tr>
+                                </table>
+                            </apex:outputPanel>
+                            <apex:outputPanel rendered="{!gesTask.Delivery_Location__c!=null || gesTask.SA_Venue_Location__r.Name!=null || gesTask.Department__r.Name!=null }">
+                                <table>
+                                    <tr>
+                                        <td style="text-align:left;"> 
+                                            <h1>
+                                                <apex:outputLabel value="Area:" />
+                                            </h1>
+                                            <apex:outputLabel value="{!gesTask.Delivery_Location__c}" />
+                                        </td>
+                                        <td style="text-align:center;">
+                                            <h1>
+                                                <apex:outputLabel value="Venue:" />
+                                            </h1>
+                                            <apex:outputLabel value="{!gesTask.SA_Venue_Location__r.Name}" />
+                                        </td>
+                                        <td style="text-align:right;">
+                                            <h1>
+                                                <apex:outputLabel value="Department:" />
+                                            </h1>
+                                            <apex:outputLabel value="{!gesTask.Department__r.Name}" />
+                                        </td>
+                                    </tr>  
+                                </table>
+                            </apex:outputPanel>
+                            <apex:outputPanel rendered="{!gesTask.Delivery_Date_Time__c!=null || gesTask.Completion_Date_Time__c!=null || gesTask.Removal_Date_Time__c!=null}">
+                                <table>
+                                    <tr>
+                                        <td style="text-align:left;"> 
+                                            <h1>
+                                                <apex:outputLabel value="Delivery:" />
+                                            </h1>
+                                            <apex:outputField rendered="{!gesTask.Delivery_Date_Time__c!=null}" value="{!gesTask.Delivery_Date_Time__c}"/> 
+                                            <apex:outputText value="-" rendered="{!gesTask.Delivery_Date_Time__c==null}" />
+                                        </td>
+                                        <td style="text-align:center;">
+                                            <h1>
+                                                <apex:outputLabel value="Completion:" />
+                                            </h1>
+                                            <apex:outputField rendered="{!gesTask.Completion_Date_Time__c!=null}" value="{!gesTask.Completion_Date_Time__c}"/> 
+                                            <apex:outputText value="-" rendered="{!gesTask.Completion_Date_Time__c==null}" />
+                                        </td>
+                                        <td style="text-align:right;">
+                                            <h1>
+                                                <apex:outputLabel value="Removal:" />
+                                            </h1>
+                                            <apex:outputField rendered="{!gesTask.Removal_Date_Time__c!=null}" value="{!gesTask.Removal_Date_Time__c}"/> 
+                                            <apex:outputText value="-" rendered="{!gesTask.Removal_Date_Time__c==null}" />
+                                        </td>
+                                    </tr>
+                                </table>
+                            </apex:outputPanel>
+                            <apex:outputPanel rendered="{!gesTask.Onsite_Contact__r.Name != null || gesTask.Onsite_Contact_Person_FML__c != null || gesTask.Onsite_Contact_Person_Number_Other__c != null}">
+                                <table>
+                                    <tr>
+                                        <td style="text-align:left;"> 
+                                            <h1>
+                                                <apex:outputLabel value="Onsite Contact:" />
+                                            </h1>
+                                            <apex:outputLabel rendered="{!gesTask.Onsite_Contact__r.Name!=null}" value="{!gesTask.Onsite_Contact__r.Name}"/> 
+                                            <apex:outputText value="-" rendered="{!gesTask.Onsite_Contact__r.Name==null}" />
+                                        </td>
+                                        <td style="text-align:center;">
+                                            <h1>
+                                                <apex:outputLabel value="Onsite Contact:" />
+                                            </h1>
+                                            <apex:outputLabel rendered="{!gesTask.Onsite_Contact_Person_FML__c!=null}" value="{!gesTask.Onsite_Contact_Person_FML__c}"/> 
+                                            <apex:outputText value="-" rendered="{!gesTask.Onsite_Contact_Person_FML__c==null}" />
+                                        </td>
+                                        <td style="text-align:right;">
+                                            <h1>
+                                                <apex:outputLabel value="Contact Number:" />
+                                            </h1>
+                                            <apex:outputLabel rendered="{!gesTask.Onsite_Contact_Person_Number_Other__c!=null}" value="{!gesTask.Onsite_Contact_Person_Number_Other__c}"/> 
+                                            <apex:outputText value="-" rendered="{!gesTask.Onsite_Contact_Person_Number_Other__c==null}" />
+                                        </td>
+                                    </tr>
+                                </table>
+                            </apex:outputPanel>
+                            <apex:outputPanel rendered="{!gesTask.Sign_Title__c != null}">
+                                <table>
+                                    <tr>
+                                        <td style="text-align:left;" colspan="3">
+                                            <h1>
+                                                <apex:outputLabel value="Sign Information: " />
+                                                <apex:outputLabel rendered="{!gesTask.Sign_Title__c!=null}" value="{!gesTask.Sign_Title__c}"/> 
+                                                <apex:outputText value="-" rendered="{!gesTask.Sign_Title__c==null}" />
+                                            </h1>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </apex:outputPanel>
+                            <apex:outputPanel rendered="{!gesTask.GOT_Sign_Type__c != null || gesTask.GOT_Sign_Type_Other__c != null || gesTask.GOT_Single_Double_Sided__c != null }">
+                                <table>
+                                    <tr>
+                                        <td style="text-align:left;">
+                                            <h1>
+                                                <apex:outputLabel value="Type:" />
+                                            </h1>
+                                            <apex:outputLabel rendered="{!gesTask.GOT_Sign_Type__c!=null}" value="{!gesTask.GOT_Sign_Type__c}"/> 
+                                            <apex:outputText value="-" rendered="{!gesTask.GOT_Sign_Type__c==null}" />
+                                        </td>
+                                        <td style="text-align:center;">
+                                            <h1>
+                                                <apex:outputLabel value="Other:" />
+                                            </h1>
+                                            <apex:outputLabel rendered="{!gesTask.GOT_Sign_Type_Other__c!=null}" value="{!gesTask.GOT_Sign_Type_Other__c}"/> 
+                                            <apex:outputText value="-" rendered="{!gesTask.GOT_Sign_Type_Other__c==null}" />
+                                        </td>
+                                        <td style="text-align:right;">
+                                            <h1>
+                                                <apex:outputLabel value="Sided:" />
+                                            </h1>
+                                            <apex:outputLabel rendered="{!gesTask.GOT_Single_Double_Sided__c!=null}" value="{!gesTask.GOT_Single_Double_Sided__c}"/> 
+                                            <apex:outputText value="-" rendered="{!gesTask.GOT_Single_Double_Sided__c==null}" />
+                                        </td>
+                                    </tr>
+                                </table>
+                            </apex:outputPanel>
+                            <apex:outputPanel rendered="{!gesTask.Material__r.Name != null || gesTask.Installation_Method__c != null || gesTask.Save_Signs__c != null }">
+                                <table>
+                                    <tr>
+                                        <td style="text-align:left;">
+                                            <h1>
+                                                <apex:outputLabel value="Material:" />
+                                            </h1>
+                                            <apex:outputLabel rendered="{!gesTask.Material__r.Name!=null}" value="{!gesTask.Material__r.Name}"/> 
+                                            <apex:outputText value="-" rendered="{!gesTask.Material__r.Name==null}" />
+                                        </td>
+                                        <td style="text-align:center;">
+                                            <h1>
+                                                <apex:outputLabel value="Installation:" />
+                                            </h1>
+                                            <apex:outputLabel rendered="{!gesTask.Installation_Method__c!=null}" value="{!gesTask.Installation_Method__c}"/> 
+                                            <apex:outputText value="-" rendered="{!gesTask.Installation_Method__c==null}" />
+                                        </td>
+                                        <td style="text-align:center;">
+                                            <h1>
+                                                <apex:outputLabel value="Save:" />
+                                            </h1>
+                                            <apex:outputLabel rendered="{!gesTask.Save_Signs__c!=null}" value="{!gesTask.Save_Signs__c}"/> 
+                                            <apex:outputText value="-" rendered="{!gesTask.Save_Signs__c==null}" />
+                                        </td>
+                                        <td style="text-align:right;">
+                                            <h1>
+                                                <apex:outputLabel value="Outdoors:" />
+                                            </h1>
+                                            <apex:outputLabel rendered="{!gesTask.Outdoors__c!=null}" value="{!gesTask.Outdoors__c}"/> 
+                                            <apex:outputText value="-" rendered="{!gesTask.Outdoors__c==null}" />
+                                        </td>
+                                    </tr>
+                                </table>
+                            </apex:outputPanel>  
+                            <apex:outputPanel rendered="{!gesTask.Sign_Copy__c != null}">
+                                <table>
+                                    <tr>
+                                        <td style="text-align:left;">
+                                            <h1>
+                                                <apex:outputLabel value="Sign Copy:" />
+                                            </h1>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="text-align:left;">
+                                            <apex:outputText rendered="{!gesTask.Sign_Copy__c!=null}" value="{!gesTask.Sign_Copy__c}" escape="false"/> 
+                                            <apex:outputText value="-" rendered="{!gesTask.Sign_Copy__c==null}" />
+                                        </td>
+                                    </tr>
+                                </table>
+                            </apex:outputPanel>
+                            <apex:outputPanel rendered="{!gesTask.Layout__c != null}">
+                                <table>
+                                    <tr>
+                                        <td style="text-align:left;">
+                                            <h1>
+                                                <apex:outputLabel value="Layout Notes:" />
+                                            </h1>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <apex:outputText value="{!gesTask.Layout__c}" rendered="{!gesTask.Layout__c!=null}" escape="false"/>
+                                            <apex:outputText value="-" rendered="{!gesTask.Layout__c==null}" />
+                                        </td>
+                                    </tr>
+                                </table>
+                            </apex:outputPanel>
+                            <!-- Special Instruction -->
+                            <apex:outputPanel rendered="{!gesTask.Show_Management_Field__c != null}">
+                                <table>
+                                    <tr>
+                                        <td style="text-align:left;">
+                                            <h1>
+                                                <apex:outputLabel value="Special Instructions:" />
+                                            </h1>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <apex:outputText value="{!gesTask.Show_Management_Field__c}" escape="false" rendered="{!gesTask.Show_Management_Field__c!=null}" />
+                                            <apex:outputText value="-" escape="false" rendered="{!gesTask.Show_Management_Field__c==null}" />
+                                        </td>
+                                    </tr>
+                                </table>
+                            </apex:outputPanel>
+                            <!-- File Links -->
+                            <apex:outputPanel rendered="{!gesTask.Attachments != null && gesTask.Attachments.Size > 0}">
+                                <h1>Task Attachments:</h1>
+                                <table>
+                                    <apex:repeat value="{!gesTask.Attachments}" var="a">
+                                        <tr>
+                                            <td>
+                                                <apex:outputLink value="{!BaseURL}{!a.id}">
+                                                    {!a.Name} ({!a.BodyLength} B)
+                                                </apex:outputLink>
+                                            </td>
+                                        </tr>
+                                    </apex:repeat>
+                                </table>
+                            </apex:outputPanel>
+                            
+                            <apex:outputPanel rendered="{!gesTask.ContentDocumentLinks != null && gesTask.ContentDocumentLinks.Size > 0}">
+                                <h1>Files:</h1>
+                                <table>
+                                    <apex:repeat value="{!gesTask.ContentDocumentLinks}" var="cdl">
+                                        <apex:repeat value="{!cdlToDocMap[cdl.ContentDocumentId]}" var="cv">
+                                            <tr>
+                                                <td>
+                                                    <apex:outputLink value="{!BaseURLForDocs}{!cv.id}">
+                                                        {!cv.Title} 
+                                                    </apex:outputLink>
+                                                </td>
+                                            </tr>
+                                        </apex:repeat>
+                                    </apex:repeat>
+                                </table>
+                            </apex:outputPanel>
+                        </div>
+                    </apex:repeat>
+            <br />
+            <br />
+            <div class="{!IF(orderWrapper.vendorTasks.size > 0 || rowNum == OrderWrappers.size,'','page-break')}" />
+            
+               </apex:outputPanel>
+                <!--            Vendor Task here  -->
+                <apex:outputPanel rendered="{!orderWrapper.vendorTasks.size > 0}">
+                    <div class="sectionHeader">
+                        <h5 style="font-size:15px">Vendor Tasks</h5>
+                    </div>
+                    <div class="outer-border-table-top">
+                    </div>
+                    <apex:repeat value="{!orderWrapper.vendorTasks}" var="vendorTask">
+                        <div class="outer-border-table-rlb">
+                            <apex:outputPanel rendered="{!vendorTask.Services__c!=null || vendorTask.Vendors__c!=null || vendorTask.Name != null}">
+                                <table>
+                                    <tr>
+                                        <td style="text-align:left;">
+                                            <h1>
+                                                <apex:outputLabel value="{!vendorTask.Services__c}" />
+                                            </h1>
+                                        </td>
+                                        <td style="text-align:center;">
+                                            <apex:outputLabel value="Contact: " />
+                                            <apex:outputLabel rendered="{!vendorTask.Vendors__c!=null}" value="{!vendorTask.Vendors__c}"/> 
+                                            <apex:outputText value="-" rendered="{!vendorTask.Vendors__c==null}" />
+                                        </td>
+                                        <td style="text-align:right;">
+                                            <h1>
+                                                <apex:outputLabel value="({!vendorTask.Name})" />
+                                            </h1>
+                                        </td>
+                                    </tr>
+                                </table>
+                                <div class="outer-border-table-bottom">
+                                </div>
+                            </apex:outputPanel>
+                            <apex:outputPanel rendered="{!vendorTask.Delivery_Location_Ven__c!=null || vendorTask.SA_Venue_Location_Ven__r.Name!=null}">
+                                <table>
+                                    <tr>
+                                        <td style="text-align:left;">
+                                            <h1>
+                                                <apex:outputLabel value="Venue: " />
+                                            </h1>
+                                            <apex:outputText value="{!vendorTask.Delivery_Location_Ven__c}" rendered="{!vendorTask.Delivery_Location_Ven__c!=null}" />
+                                            <apex:outputText value="-" rendered="{!vendorTask.Delivery_Location_Ven__c==null}" />
+                                        </td>
+                                        <td colspan="2" style="text-align:left;">
+                                            <h1>
+                                                <apex:outputLabel value="Area: " />
+                                            </h1>
+                                            <apex:outputText value="{!vendorTask.SA_Venue_Location_Ven__r.Name}" rendered="{!vendorTask.SA_Venue_Location_Ven__r.Name!=null}" />
+                                            <apex:outputText value="-" rendered="{!vendorTask.SA_Venue_Location_Ven__r.Name==null}" />
+                                        </td>
+                                    </tr>
+                                </table>
+                            </apex:outputPanel>
+                            <apex:outputPanel rendered="{!vendorTask.Delivery_Date_Time_Ven__c!=null || vendorTask.Completion_Date_Time_Ven__c!=null || vendorTask.Removal_Date_Time_Ven__c!=null}">
+                                <table>
+                                    <tr>
+                                        <td style="text-align:left;"> 
+                                            <h1>
+                                                <apex:outputLabel value="Delivery: " />
+                                            </h1>
+                                            <apex:outputField value="{!vendorTask.Delivery_Date_Time_Ven__c}" rendered="{!vendorTask.Delivery_Date_Time_Ven__c != null}" />
+                                            <apex:outputText value="-" rendered="{!vendorTask.Delivery_Date_Time_Ven__c==null}" />
+                                        </td>                                   
+                                        <td style="text-align:center;"> 
+                                            <h1>
+                                                <apex:outputLabel value="Completion:" />
+                                            </h1>
+                                            
+                                            <apex:outputField value="{!vendorTask.Completion_Date_Time_Ven__c}" rendered="{!vendorTask.Completion_Date_Time_Ven__c!=null}" />
+                                            <apex:outputText value="-" rendered="{!vendorTask.Completion_Date_Time_Ven__c==null}" />
+                                        </td>                                    
+                                        <td style="text-align:right;"> 
+                                            <h1>
+                                                <apex:outputLabel value="Removal:" />
+                                            </h1>
+                                            <apex:outputField value="{!vendorTask.Removal_Date_Time_Ven__c}" rendered="{!vendorTask.Removal_Date_Time_Ven__c!=null}" />
+                                            <apex:outputText value="-" rendered="{!vendorTask.Removal_Date_Time_Ven__c==null}" />
+                                        </td>
+                                    </tr>
+                                    <!--<tr>
+                                        <td>
+                                            <apex:outputText value="{!vendorTask.Vendor_Instructions__c}" rendered="{!vendorTask.Vendor_Instructions__c!=null}" escape="false" />
+                                            <apex:outputText value="-" rendered="{!vendorTask.Vendor_Instructions__c==null}" />
+                                        </td>   
+                                    </tr>       -->
+                                </table>
+                            </apex:outputPanel>
+                            <apex:outputPanel rendered="{!vendorTask.Vendor_Instructions__c!=null}">
+                                <table>
+                                    <tr>
+                                        <td style="text-align:left;"> 
+                                            <h1>
+                                                <apex:outputLabel value="Vendor Instructions: " />
+                                            </h1>
+                                            <apex:outputText value="{!vendorTask.Vendor_Instructions__c}" rendered="{!vendorTask.Vendor_Instructions__c!=null}" escape="false" />
+                                            <apex:outputText value="-" rendered="{!vendorTask.Vendor_Instructions__c==null}" />
+                                        </td>
+                                    </tr>
+                                </table>
+                            </apex:outputPanel>
+                            
+                            <apex:outputPanel rendered="{!vendorTask.Attachments != null && vendorTask.Attachments.Size > 0}">
+                                <h1>Task Attachments and Files</h1>
+                                <table>
+                                    <th>
+                                        <apex:outputLabel value="File Name" />
+                                    </th>
+                                    <apex:repeat value="{!vendorTask.Attachments}" var="a">
+                                        <tr>
+                                            <td>
+                                                <apex:outputLink value="{!BaseURL}{!a.id}">
+                                                    {!a.Name} ({!a.BodyLength} B)
+                                                </apex:outputLink>
+                                            </td>
+                                        </tr>
+                                    </apex:repeat>
+                                </table>
+                            </apex:outputPanel>
+                            <apex:outputPanel rendered="{!vendorTask.ContentDocumentLinks != null && vendorTask.ContentDocumentLinks.Size > 0}">
+                                <table>
+                                    <apex:repeat value="{!vendorTask.ContentDocumentLinks}" var="cdl">
+                                        <apex:repeat value="{!cdlToDocMap[cdl.ContentDocumentId]}" var="cv">
+                                            <tr>
+                                                <td>
+                                                    <apex:outputLink value="{!BaseURLForDocs}{!cv.id}">
+                                                        {!cv.Title} 
+                                                    </apex:outputLink>
+                                                </td>
+                                            </tr>
+                                        </apex:repeat>
+                                    </apex:repeat>
+                                </table>
+                            </apex:outputPanel>
+                        </div>
+                    </apex:repeat>
+                <div class="{!IF(rowNum == OrderWrappers.size,'','page-break')}" />
+                </apex:outputPanel>
+            </apex:repeat>
+        </apex:form>
+    </body>
+</apex:page>

@@ -1,0 +1,298 @@
+<apex:page standardStylesheets="true" controller="ExhibitScheduleBasicReport" showHeader="false" sidebar="false" applyHtmlTag="false" tabStyle="Account" docType="html-5.0" readOnly="true">
+    <html xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <head>
+            <apex:includeScript value="{!$Resource.jQuery}" />
+            <apex:stylesheet value="{!URLFOR($Resource.Lightning_Design_System, 'assets/styles/salesforce-lightning-design-system.min.css')}" />
+            <apex:stylesheet value="{!URLFOR($Resource.GC_Assets, 'GC_Assets/css/GC_Styles.css')}" />
+            <apex:includeScript value="{!URLFOR($Resource.GC_Assets, 'GC_Assets/js/GC_init.js')}" />
+            <apex:includeScript value="{!$Resource.Alasql}"/>
+            <script src="https://cdn.jsdelivr.net/alasql/0.3/alasql.min.js"></script>
+            <script>
+                $( document ).ready(function() {
+                $("#divId1").show();
+            });
+            ExhibitScheduleBasicReport.getOnLoad(
+                function(results, event) {
+                    var table1 = '';  
+                    console.log(results);
+                    for(var i=0 ; i<results.length; i++){
+                        if(results[i].Activity_Type_Exhibit_Instance_c__c != undefined){
+                        table1 += '<tr style="border:1px solid #E0E3E5">';
+                        table1 += ' <td style="text-align:left">';
+                        table1 += '<div style="padding-left:5px">'+results[i].Activity_Type_Exhibit_Instance_c__r.Name_of_Congress__c+'</div>';
+                        table1 += '</td>';
+                        table1 += ' <td style="text-align:left">';
+                        table1 += '<div style="padding-left:8px">'+results[i].Activity_Type_Exhibit_Instance_c__r.Acronym_of_Congress__c+'</div>';
+                        table1 += '</td>';
+                        table1 += ' <td style="text-align:left">';
+                        table1 += '<div style="padding-left:5px">'+results[i].Activity_Level__c+'</div>';
+                        table1 += '</td>';
+                        table1 += ' <td style="text-align:left">';
+                        var openDate= new Date(results[i].Activity_Type_Exhibit_Instance_c__r.Exhibit_Open_Date__c);
+                        openDate.toString("MM/DD/YYYY");
+                        var openDateFormatted = openDate.getMonth()+1+'/'+openDate.getDate() + '/'+ openDate.getFullYear();
+                        table1 += '<div style="padding-left:5px">'+openDateFormatted+'</div>';
+                        table1 += '</td>';
+                        var closeDate= new Date(results[i].Activity_Type_Exhibit_Instance_c__r.Exhibit_Close_Date__c);
+                        closeDate.toString("MM/DD/YYYY");
+                        var closeDateFormatted = closeDate.getMonth()+1+'/'+closeDate.getDate() + '/'+ closeDate.getFullYear();
+                        table1 += ' <td style="text-align:left">';
+                        table1 += '<div style="padding-left:5px">'+closeDateFormatted+'</div>';
+                        table1 += '</td>';
+                        table1 += ' <td style="text-align:left">';
+                        table1 += '<div style="padding-left:5px">'+results[i].Activity_Type_Exhibit_Instance_c__r.Shipping_City__c  + ',' + results[i].Activity_Type_Exhibit_Instance_c__r.Shipping_State_Province__c+'</div>';
+                        table1 += '</td>';
+                        table1 += ' <td>';
+                        table1 += '<div style="padding-left:5px">'+results[i].Activity_Type_Exhibit_Instance_c__r.Facility_Name__c+'</div>';
+                        table1 += '</td>';
+                        table1 += ' <td style="text-align:left">';
+                        table1 += '<div style="padding-left:5px">'+results[i].Booth_Length__c+'</div>';
+                        table1 += '</td>';
+                        table1 += ' <td style="text-align:left">';
+                        table1 += '<div style="padding-left:5px">'+results[i].Booth_Width__c+'</div>';
+                        table1 += '</td>';
+                        table1 += ' <td style="text-align:left">';
+                        table1 += '<div style="padding-left:5px">'+results[i].Booth_Number__c+'</div>';
+                        table1 += '</td>';
+                        table1 += '</tr>';
+                            }
+                    }
+                    $("#idTable1 tbody").append(table1);
+                }      
+            );
+            function getFilteredRecords() {
+                var startDate = document.getElementById('j_id0:fm:pb:pbs:openDate').value;
+                var endDate = document.getElementById('j_id0:fm:pb:pbs:closeDate').value;
+                Visualforce.remoting.Manager.invokeAction(
+                    '{!$RemoteAction.ExhibitScheduleBasicReport.ExhibitSchData}',startDate,endDate,
+                    function(results, event) {
+                        console.log(results);
+                        $("#idTable1 tbody").empty();
+                        var table1 = '';
+                        for(var i=0 ; i<results.length; i++){
+                            if(results[i].Activity_Type_Exhibit_Instance_c__c != undefined){
+                            table1 += '<tr style="border:1px solid #E0E3E5">';
+                            table1 += ' <td style="text-align:left">';
+                            table1 += '<div style="padding-left:5px">'+results[i].Activity_Type_Exhibit_Instance_c__r.Name_of_Congress__c+'</div>';
+                            table1 += '</td>';
+                            table1 += ' <td style="text-align:left">';
+                            table1 += '<div style="padding-left:5px">'+results[i].Activity_Type_Exhibit_Instance_c__r.Acronym_of_Congress__c+'</div>';
+                            table1 += '</td>';
+                            table1 += ' <td style="text-align:left">';
+                            table1 += '<div style="padding-left:5px">'+results[i].Activity_Level__c+'</div>';
+                            table1 += '</td>';
+                            
+                            var openDate= new Date(results[i].Activity_Type_Exhibit_Instance_c__r.Exhibit_Open_Date__c);
+                            openDate.toString();
+                            var openDateFormatted = openDate.getMonth()+1+'/'+openDate.getDate() + '/'+ openDate.getFullYear();
+                            table1 += ' <td style="text-align:left">';
+                            table1 += '<div style="padding-left:5px">'+openDateFormatted+'</div>';
+                            table1 += '</td>';
+                            var closeDate= new Date(results[i].Activity_Type_Exhibit_Instance_c__r.Exhibit_Close_Date__c);
+                            closeDate.toString("MM/DD/YYYY");
+                            var closeDateFormatted = closeDate.getMonth()+1+'/'+closeDate.getDate() + '/'+ closeDate.getFullYear();
+                            table1 += ' <td style="text-align:left">';
+                            table1 += '<div style="padding-left:5px">'+closeDateFormatted+'</div>';
+                            table1 += '</td>';
+                            table1 += ' <td style="text-align:left">';
+                            table1 += '<div style="padding-left:5px">'+results[i].Activity_Type_Exhibit_Instance_c__r.Shipping_City__c  + ',' + results[i].Activity_Type_Exhibit_Instance_c__r.Shipping_State_Province__c+'</div>';
+                            table1 += '</td>';
+                            table1 += ' <td>';
+                            table1 += '<div style="padding-left:5px">'+results[i].Activity_Type_Exhibit_Instance_c__r.Facility_Name__c+'</div>';
+                            table1 += '</td>';
+                            table1 += ' <td style="text-align:left">';
+                            table1 += '<div style="padding-left:5px">'+results[i].Booth_Length__c+'</div>';
+                            table1 += '</td>';
+                            table1 += ' <td style="text-align:left">';
+                            table1 += '<div style="padding-left:5px">'+results[i].Booth_Width__c+'</div>';
+                            table1 += '</td>';
+                            table1 += ' <td style="text-align:left">';
+                            table1 += '<div style="padding-left:5px">'+results[i].Booth_Number__c+'</div>';
+                            table1 += '</td>';
+                            table1 += '</tr>';
+                                }
+                        }
+                        $("#idTable1 tbody").append(table1);
+                    }      
+                );
+            }
+            
+            function SetOffsetSize(){
+                
+                }
+            
+            function exportReport() {
+                var startDate = document.getElementById('j_id0:fm:pb:pbs:openDate').value;
+                var endDate = document.getElementById('j_id0:fm:pb:pbs:closeDate').value;
+                Visualforce.remoting.Manager.invokeAction(
+                    '{!$RemoteAction.ExhibitScheduleBasicReport.exportExcelReport}',startDate,endDate,
+                    function(result, event) {
+                        if (event.status) {
+                            var json = result.replace(/&(lt|gt|quot);/g, function (m, p) { 
+                                console.log(p);
+                                return (p == "lt") ? "<" : ((p == "gt") ? ">" : '"');
+                            });
+                            result = JSON.parse(json);
+                            //We can customize the result values according to requriment in javascript before exorting the report.
+                            for(var i=0; i < result.length; i++) {
+                                result[i].CityState = '';
+                                result[i].nameOfCongress = '';
+                                result[i].GESProjectNumber ='';
+                                result[i].FacilityName = '';
+                                result[i].exhiBitOpenDate ='';
+                                result[i].exhiBitCloseDate ='';
+                                if(result[i].Activity_Type_Exhibit_Instance_c__r != undefined) {
+                                    if(result[i].Activity_Type_Exhibit_Instance_c__r.Shipping_City__c != null && result[i].Activity_Type_Exhibit_Instance_c__r.Shipping_State_Province__c != null) {
+                                        result[i].CityState = result[i].Activity_Type_Exhibit_Instance_c__r.Shipping_City__c + ',' + result[i].Activity_Type_Exhibit_Instance_c__r.Shipping_State_Province__c;
+                                    }else
+                                        if(result[i].Activity_Type_Exhibit_Instance_c__r.Shipping_City__c != null) {
+                                            result[i].CityState = result[i].Activity_Type_Exhibit_Instance_c__r.Shipping_City__c;
+                                        }else
+                                            if(result[i].Activity_Type_Exhibit_Instance_c__r.Shipping_State_Province__c != null) {
+                                                result[i].CityState = result[i].Activity_Type_Exhibit_Instance_c__r.Shipping_State_Province__c;
+                                            }
+                                    
+                                    if(result[i].Activity_Type_Exhibit_Instance_c__r.Acronym_of_Congress__c != null) {
+                                        result[i].nameOfCongress = result[i].Activity_Type_Exhibit_Instance_c__r.Acronym_of_Congress__c;
+                                    }
+                                    
+                                    if(result[i].Activity_Type_Exhibit_Instance_c__r.Facility_Name__c != null) {
+                                        result[i].FacilityName = result[i].Activity_Type_Exhibit_Instance_c__r.Facility_Name__c;
+                                    } 
+                                    
+                                    if(result[i].Activity_Type_Exhibit_Instance_c__r.Name_of_Congress__c != null) {
+                                        result[i].GESProjectNumber = result[i].Activity_Type_Exhibit_Instance_c__r.Name_of_Congress__c;
+                                    }
+                                    
+                                    if(result[i].Activity_Type_Exhibit_Instance_c__r.Exhibit_Open_Date__c != null) {
+                                        result[i].exhiBitOpenDate = result[i].Activity_Type_Exhibit_Instance_c__r.Exhibit_Open_Date__c;
+                                        var temp = new Array();
+                                        // this will return an array with strings "1", "2", etc.
+                                        temp = result[i].Activity_Type_Exhibit_Instance_c__r.Exhibit_Open_Date__c.split("-");
+                                        result[i].exhiBitOpenDate = temp[1] +'/'+temp[2]+'/'+temp[0];
+                                    }
+                                    
+                                    if(result[i].Activity_Type_Exhibit_Instance_c__r.Exhibit_Close_Date__c != null) {
+                                        result[i].exhiBitCloseDate = result[i].Activity_Type_Exhibit_Instance_c__r.Exhibit_Close_Date__c;
+                                        var temp = new Array();
+                                        temp = result[i].Activity_Type_Exhibit_Instance_c__r.Exhibit_Close_Date__c.split("-");
+                                        result[i].exhiBitCloseDate = temp[1] +'/'+temp[2]+'/'+temp[0];
+                                    }
+                                }
+                                result[i].exhibitSize = '';
+                                if(result[i].Booth_Length__c != null) {
+                                    result[i].exhibitSize = result[i].Booth_Length__c;
+                                }
+                                result[i].exhibitSize1 = '';
+                                if(result[i].Booth_Width__c != null) {
+                                    result[i].exhibitSize1 = result[i].Booth_Width__c;
+                                }  
+                                result[i].boothNo = '';
+                                if(result[i].Booth_Number__c != null) {
+                                    result[i].boothNo = result[i].Booth_Number__c;
+                                }
+                                result[i].acronym = '';
+                                if(result[i].Activity_Level__c != null) {
+                                    result[i].acronym = result[i].Activity_Level__c;
+                                }  
+                            }
+                            alasql('SELECT * INTO XLS("ExhibitScheduleBasic.xls",?) FROM ?', [mystyle, result]);
+                        } else if (event.type === 'exception') {
+                            
+                        } 
+                        
+                    });
+            }
+            //Column header title and field values bind with that header of report
+            var mystyle = {
+                headers:true,
+                columns: [
+                    { columnid: 'GESProjectNumber', title: 'Name of Congress'},
+                    { columnid: 'nameOfCongress', title: 'Acronym of Congress'},
+                    { columnid: 'acronym', title: 'Activity Level'},
+                    { columnid: 'exhiBitOpenDate', title: 'Exhibit Open Date'},
+                    { columnid: 'exhiBitCloseDate', title: 'Exhibit Close Date'},
+                    { columnid: 'CityState', title: 'Location'},
+                    { columnid: 'FacilityName', title: 'Facility Name'},
+                    { columnid: 'exhibitSize', title: 'Booth Length'},
+                    { columnid: 'exhibitSize1', title: 'Booth Width'},
+                    { columnid: 'boothNo', title: 'Booth Number'},
+                ],
+                    };
+                    </script>
+        </head>
+        <div class="slds">
+            <c:GC_Community_Header /> 
+            
+            <apex:form id="fm">  
+                <apex:actionStatus id="serachStatusSpinner">
+                    <apex:facet name="start">
+                        <c:GC_Community_StatusSpinner statusMessage="Searching." /> 
+                    </apex:facet>
+                </apex:actionStatus>   
+                <apex:pageBlock id="pb">
+                    <apex:pageBlockSection title="Exhibit Schedule Basic" id="pbs">
+                        <apex:input type="date" label="Exhibit Open Date" styleClass="slds-input" style="width: 38%; left:20px;position:relative;" value="{!fromdate}" id="openDate"/>
+                        <apex:input type="date" label="Exhibit Close Date" styleClass="slds-input" style="width: 38%; left:20px;position:relative;" value="{!todate}" id="closeDate"/>    
+                    </apex:pageBlockSection>  
+                    
+                    <apex:pageBlockSection columns="2" collapsible="false">
+                        <div style="text-align: center">
+                            <apex:outputPanel >
+                                <apex:commandButton onclick="getFilteredRecords();" value="Run Report" styleClass="slds-button slds-button--small slds-button--brand gc-teal-button" reRender="pbst" style="right:15px;position:relative;" status="serachStatusSpinner">
+                                </apex:commandButton>                              
+                                <apex:commandButton value="Export Report" style="right:10px;position:relative;" styleClass="slds-button slds-button--brand gc-teal-button" onclick="exportReport();" rerender="none"/>  
+                                <apex:commandButton value="Back" action="{!back}" style="right:10px;position:relative;" styleClass="slds-button slds-button--brand gc-teal-button"/>       
+                            </apex:outputPanel>
+                        </div>
+                    </apex:pageBlockSection>
+                    
+                    
+                    <div id="tableDivId" style="padding:8px 15px; border:1px solid #E0E3E5; border-radius:3px; border-top:3px solid #3564f2;"> 
+                        <table id="idTable1" style="background-color:white" align="center">
+                            
+                            <thead style="background-color:#F2F3F3" >
+                                <tr style="border-bottom: 1px solid #E0E3E5; border-top: 1px solid #E0E3E5; border-collapse: collapse;">
+                                    <th scope="col" height="26px" width="10%" style="border:1px solid #E0E3E5; text-align:left">
+                                        <div title="Name of Congress" style="padding-right:15px;padding-left:5px">Name of Congress</div>
+                                    </th>
+                                    <th scope="col" width="10%" style="border-right:1px solid #E0E3E5; text-align:left">
+                                        <div title="Acronym of Congress" style="padding-right:10px;padding-left:5px">Acronym of Congress</div>
+                                    </th>
+                                    <th scope="col" width="10%" style="border-right:1px solid #E0E3E5; text-align:left">
+                                        <div title="Activity Level" style="padding-left:5px">Activity Level</div>
+                                    </th>
+                                    <th scope="col" width="10%" style="border-right:1px solid #E0E3E5; text-align:left">
+                                        <div title="Exhibit Open Date" style="padding-left:5px">Exhibit Open Date</div>
+                                    </th>
+                                    <th class="" scope="col" width="10%" style="border-right:1px solid #E0E3E5; text-align:left">
+                                        <div title="Exhibit Close Date" style="padding-left:5px">Exhibit Close Date</div>
+                                    </th>
+                                    <th class="" scope="col" width="10%" style="border-right:1px solid #E0E3E5; text-align:left">
+                                        <div title="Location" style="padding-left:5px">Location</div>
+                                    </th>
+                                    <th class="" scope="col" width="10%" style="border-right:1px solid #E0E3E5; text-align:left">
+                                        <div title="Facility Name" style="padding-left:5px">Facility Name</div>
+                                    </th>
+                                    <th class="" scope="col" width="10%" style="border-right:1px solid #E0E3E5; text-align:left">
+                                        <div title="Booth Length" style="padding-left:5px">Booth Length</div>
+                                    </th>
+                                    <th scope="col" width="10%" style="border-right:1px solid #E0E3E5; text-align:left">
+                                        <div title="Booth Width" style="padding-left:5px">Booth Length</div>
+                                    </th>
+                                    <th class="" scope="col" width="10%" style="border-right:1px solid #E0E3E5; text-align:left">
+                                        <div title="Booth Number" style="padding-left:5px">Booth Number</div>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                            </tbody>
+                        </table>
+                        <apex:commandButton value="Previous" action="{!previous}" style="right:10px;position:relative;" styleClass="slds-button slds-button--brand gc-teal-button"/>       
+                        <apex:commandButton value="Next"  action="{!next}" style="right:10px;position:relative;" styleClass="slds-button slds-button--brand gc-teal-button"/>
+                    </div>
+                </apex:pageBlock>
+            </apex:form>
+        </div>
+    </html>         
+</apex:page>

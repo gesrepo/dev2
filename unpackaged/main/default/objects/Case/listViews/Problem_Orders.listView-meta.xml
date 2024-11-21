@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Problem_Orders</fullName>
+    <columns>CASES.CASE_NUMBER</columns>
+    <columns>Age__c</columns>
+    <columns>Show_Name__c</columns>
+    <columns>Project_Number__c</columns>
+    <columns>Days_to_Show__c</columns>
+    <columns>CASES.PRIORITY</columns>
+    <columns>GES_Type__c</columns>
+    <columns>Reason__c</columns>
+    <columns>Substatus__c</columns>
+    <columns>CREATEDBY_USER.ALIAS</columns>
+    <columns>Booth_Number__c</columns>
+    <columns>Booth_Dimensions__c</columns>
+    <filterScope>Queue</filterScope>
+    <filters>
+        <field>CASES.STATUS</field>
+        <operation>notEqual</operation>
+        <value>Closed</value>
+    </filters>
+    <label>US-Problem Orders</label>
+    <language>en_US</language>
+    <queue>US_Problem_Orders</queue>
+    <sharedTo>
+        <allInternalUsers />
+    </sharedTo>
+</ListView>

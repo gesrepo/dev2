@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Show_Name_Calculated__c</fullName>
+    <description>Determines the Show Name even on E&amp;E Opportunities by going through the linked Show Occurrence</description>
+    <externalId>false</externalId>
+    <formula>IF( LEN( TEXT( StageName )) &lt;4,  Show_Name__r.Name ,  Show_Occurrence__r.Show_Name__r.Name )</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Show Name - Calculated</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

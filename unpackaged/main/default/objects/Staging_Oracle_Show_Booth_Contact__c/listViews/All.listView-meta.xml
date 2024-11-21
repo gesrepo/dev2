@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>All</fullName>
+    <columns>NAME</columns>
+    <columns>Interface_Batch_Number__c</columns>
+    <columns>CUST_BTH_ID__c</columns>
+    <columns>CUST_CONT_ID__c</columns>
+    <columns>SHOW_OCCR_CUST_ID__c</columns>
+    <columns>FIRST_NAME__c</columns>
+    <columns>LAST_NAME__c</columns>
+    <columns>EMAIL_ADDRESS__c</columns>
+    <columns>COUNTRY_CODE__c</columns>
+    <columns>AREA_CODE__c</columns>
+    <columns>PHONE__c</columns>
+    <columns>EXTENSION__c</columns>
+    <columns>PRIMARY_FLAG__c</columns>
+    <columns>Interface_Status__c</columns>
+    <filterScope>Everything</filterScope>
+    <label>All</label>
+</ListView>

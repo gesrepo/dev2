@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Lost_Reasons_Other_is_selected</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND( 
+ INCLUDES( Lost_Reasons__c , &quot;Lost Other&quot;), ISBLANK( Other__c )  )</errorConditionFormula>
+    <errorMessage>Please Fill Other field</errorMessage>
+</ValidationRule>

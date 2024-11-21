@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Forecast_Margin_per_c__c</fullName>
+    <description>=Forecast Sales Margin / Forecast Sales Price *100</description>
+    <formula>Forecast_Sales_Margin_c__c  /  Forecast_Sales_Price__c</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>=Forecast Sales Margin / Forecast Sales Price *100</inlineHelpText>
+    <label>Forecast Margin %</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>1</scale>
+    <trackHistory>false</trackHistory>
+    <type>Percent</type>
+</CustomField>

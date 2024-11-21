@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Call_to_case__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Used in EMEA to track if this is a call to case. Exhibitor has rang the dedicated number displayed onsite</description>
+    <inlineHelpText>Please select this if this is a call to case only</inlineHelpText>
+    <label>Call to case</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Phone_number_should_be_valid</fullName>
+    <active>true</active>
+    <errorConditionFormula>Phone_Number__c == &quot;.&quot; ||
+ Phone_Number__c = &quot;TBC&quot; ||
+ Phone_Number__c = &quot;TBD&quot; ||
+ Phone_Number__c = &quot;tbc&quot; ||
+ Phone_Number__c = &quot;tbd&quot; ||
+ Phone_Number__c = &quot;N/A&quot; ||
+ Phone_Number__c == &quot;Already Set Up&quot; ||
+ Phone_Number__c == &quot;already set up&quot; ||
+ Phone_Number__c == &quot;unknown&quot; ||
+ Phone_Number__c = &quot;n/a&quot;</errorConditionFormula>
+    <errorMessage>Please enter the phone number. Data quality is important</errorMessage>
+</ValidationRule>

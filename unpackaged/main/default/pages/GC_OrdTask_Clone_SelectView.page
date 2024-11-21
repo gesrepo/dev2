@@ -1,0 +1,154 @@
+<apex:page showHeader="false" sidebar="false" standardController="GC_GES_Order_Task__c" extensions="GC_OrderTaskClone_Controller">
+    
+    <head>
+        <style type="text/css">
+            .selectionDiv {
+            margin: 20px !important;
+            }
+            
+            .itemTable td {
+            padding: 3px;
+            }
+            
+            .columnHeader {
+            padding: 5px;
+            }
+            
+            .pageButtons {
+            width: 300px;
+            }
+            
+            .selectAllBox {
+            float: right;
+            }
+            
+            .bPageBlock .detailList .labelCol {
+            width: 1%;
+            }
+        </style>
+        
+    </head>
+    
+    <script type="text/javascript">
+    function showErrorMsg(){
+        //alert(document.getElementById('ShowSelectList').value);
+        document.getElementByName('j_id0:j_id2:pb1:pbs1:pbs4:j_id52').disabled = true;
+        
+    }
+    function checkAll(cb, checkId) {
+        var inputElem = document.getElementsByTagName("input");
+        for (var i = 0; i < inputElem.length; i++) {
+            if (inputElem[i].id.indexOf(checkId) != -1) {
+                if (checkId == "selectedItems") {
+                    if (!cb.checked) {
+                        for (var j = 0; j < inputElem.length; j++) {
+                            inputElem[j].checked = cb.checked;
+                        }
+                    }
+                    inputElem[i].checked = cb.checked;
+                }
+            }
+        }
+    }
+    
+    </script>
+    <apex:form >
+        
+        <apex:pageMessages id="messages" />
+        
+        
+        <apex:actionStatus id="cloneOrdersSpinner">
+            <apex:facet name="start">
+                <c:GC_StatusSpinner statusMessage="Cloning." /> 
+            </apex:facet>
+        </apex:actionStatus>
+        <apex:actionStatus id="FetchingOrders">
+            <apex:facet name="start">
+                <c:GC_StatusSpinner statusMessage="Fetching Orders." />
+            </apex:facet>
+        </apex:actionStatus>
+        <apex:actionStatus id="CancellingClone">
+            <apex:facet name="start">
+                <c:GC_StatusSpinner statusMessage="Cancelling Cloning." />
+            </apex:facet>
+        </apex:actionStatus> 
+        
+        
+        <apex:pageBlock id="pb1"> 
+            <!--apex:pageBlockSection id="pbs1" title="Select OrderTask(s) to clone" columns="1" collapsible="false"--> <!--commented by Sajid on 04/05/23 Ticket-1209 -->
+            <apex:pageBlockSection id="pbs1" title="Select Item(s) to clone" columns="1" collapsible="false"> <!-- added by Sajid on 04/05/23 Ticket-1209 -->
+                <apex:panelGrid columns="2">
+                    <apex:commandButton action="{!getopenShowOptions}" value="Take me to Shows" style="left:0px;position:relative;"  />
+                    <apex:commandButton action="{!cancelclone}" value="Cancel Cloning" style="left:0px;position:relative;" /> 
+                </apex:panelGrid>
+                
+                <apex:outputPanel rendered="{!showContent}" >
+                    <apex:pageBlockSection id="pbs4" title="Select Shows to Associate" columns="1" collapsible="false">
+                        <apex:pageBlockSectionItem >
+                            <apex:outputLabel value="Show:" />
+                            <apex:selectList value="{!selectedshow}" multiselect="false" size="1" id="ShowSelectList">                                        
+                                <apex:selectOptions value="{!optns}" />
+                                <apex:actionsupport id="order" event="onchange" action="{!getopenOrderOptions}" rerender="pbs4" status="FetchingOrders" oncomplete="showErrorMsg();"/>
+                            </apex:selectList>
+                        </apex:pageBlockSectionItem>
+                        <apex:pageBlockSectionItem > 
+                            <apex:outputLabel value="Order:" />                                    
+                            <apex:selectList value="{!selectedOrder}" multiselect="false" size="1" id="Orderid">
+                                <apex:selectOptions value="{!opt}" /> 
+                            </apex:selectList>
+                        </apex:pageBlockSectionItem>  
+                        <apex:outputLabel rendered="{!noOrderError}">
+                            <span style="color:red;">
+                                No Orders for the selected Show
+                            </span>
+                        </apex:outputLabel>
+                        <apex:commandButton action="{!cloneOrdTasks}" value="Clone" style="left:0px;position:relative;" styleClass="slds-button slds-button--brand gc-teal-button" disabled="{!disableCloneBtn}"  status="cloneOrdersSpinner"/>
+                    </apex:pageBlockSection>
+                </apex:outputPanel>
+                
+                <apex:pageBlockTable value="{!ordTaskList}" var="ordTaskHolder" styleClass="itemTable" id="itemTable2" headerClass="columnHeader">
+                    <apex:column >
+                        <apex:facet name="header">
+                            <apex:inputCheckbox onclick="checkAll(this, 'selectedItems');">
+                            </apex:inputCheckbox>
+                        </apex:facet>
+                        <apex:inputCheckbox value="{!ordTaskHolder.selected}" id="selectedItems" />
+                    </apex:column>
+                    <apex:column >
+                        <!--apex:facet name="header">GES ORDER TASK NUMBER</apex:facet--> <!--commented by Sajid on 04/05/23 Ticket-1209 -->
+                        <apex:facet name="header">GES ITEM NUMBER</apex:facet> <!-- added by Sajid on 04/05/23 Ticket-1209 -->
+                        <apex:outputText value="{!ordTaskHolder.ordtask.Name}" />
+                    </apex:column>
+                    <apex:column >
+                        <apex:facet name="header">ITEM NUMBER</apex:facet>
+                        <apex:outputText value="{!ordTaskHolder.ordtask.Item_Number__c}" />
+                    </apex:column>
+                    <apex:column >
+                        <apex:facet name="header">DESCRIPTION</apex:facet>
+                        <apex:outputText value="{!ordTaskHolder.ordtask.Description__c}" />
+                    </apex:column>
+                    <apex:column >
+                        <apex:facet name="header">USER ITEM DESCRIPTION</apex:facet>
+                        <apex:outputText value="{!ordTaskHolder.ordtask.User_Item_Description__c}" />
+                    </apex:column>
+                    <apex:column >
+                        <apex:facet name="header">PRICE</apex:facet>
+                        <apex:outputText value="{!ordTaskHolder.ordtask.Price__c}" />
+                    </apex:column>
+                    <apex:column >
+                        <apex:facet name="header">TOTAL PRICE</apex:facet>
+                        <apex:outputText value="{!ordTaskHolder.ordtask.Total__c}" />
+                    </apex:column>
+                    <apex:column >
+                        <apex:facet name="header">QUANTITY</apex:facet>
+                        <apex:outputText value="{!ordTaskHolder.ordtask.QuantityNum__c}" />
+                    </apex:column>
+                    <apex:column >
+                        <apex:facet name="header">UNITS</apex:facet>
+                        <apex:outputText value="{!ordTaskHolder.ordtask.UOM__c}" />
+                    </apex:column>
+                </apex:pageBlockTable>
+            </apex:pageBlockSection>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

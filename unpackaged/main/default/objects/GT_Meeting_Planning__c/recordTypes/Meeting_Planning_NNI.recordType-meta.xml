@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Meeting_Planning_NNI</fullName>
+    <active>true</active>
+    <description>Meeting Planning for NNI client</description>
+    <label>Meeting Planning NNI</label>
+    <picklistValues>
+        <picklist>Congress_Manager_Onsite__c</picklist>
+        <values>
+            <fullName>Andrew Rolls</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Corrine Landolt</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Jacqueline Campo</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Joe Walsh</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>John Hasemann</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Kaitlyn Reynolds</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Laurie Stein-Richards</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rebecca Baker</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Congress_Manager__c</picklist>
+        <values>
+            <fullName>Andrew Rolls</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Corrine Landolt</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Jacqueline Campo</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Joe Walsh</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>John Hasemann</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Kaitlyn Reynolds</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Laurie Stein-Richards</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rebecca Baker</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>GES_Account_Executive_Onsite__c</picklist>
+        <values>
+            <fullName>Jennifer Spencer</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>GES_Account_Executive__c</picklist>
+        <values>
+            <fullName>Jennifer Spencer</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>GES_Account_Manager_Onsite__c</picklist>
+        <values>
+            <fullName>Jill Johnson</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Kevin Jones</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mary Jones</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Melinda Peterson</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>GES_Account_Manager__c</picklist>
+        <values>
+            <fullName>Jill Johnson</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Kevin Jones</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mary Jones</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Melinda Peterson</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>GES_Meeting_Planner__c</picklist>
+        <values>
+            <fullName>Allyson Wagner</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Brenda Chambers</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Brian Travis</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Kayla Rogers</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Maria Kramer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Marie Caci</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>GES_Project_Manager__c</picklist>
+        <values>
+            <fullName>Alexa Kelly</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ana Wainman</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Antonio Ferraro</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Camille Da silva</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Chris Wright</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Heather Medus</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mike Porter</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Nick Ward</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Project Manager 1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Project Manager 2</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Project Manager 3</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sarah Montagne</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>I_D_Supervisor__c</picklist>
+        <values>
+            <fullName>Alan Squyres</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Dave Dragoone</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Heather Campbell</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Joe Holland</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ken Pantoliano</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Steve Burgess</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tom Kessler</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Meeting_Planning_Services__c</picklist>
+        <values>
+            <fullName>Congress Registration</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Dinner Reservations</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sleeping Rooms</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>VIP Car Service</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>On_Site_Meeting_Contact__c</picklist>
+        <values>
+            <fullName>Allyson Wagner</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Brenda Chambers</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Brian Travis</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Kayla Rogers</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Maria Kramer%2C</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Marie Caci</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Reason_for_Cancellation__c</picklist>
+        <values>
+            <fullName>Budget Cut</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Exhibit Space Sold Out</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Influenza Outbreak</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Product Owner Decision</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Strategy Change</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

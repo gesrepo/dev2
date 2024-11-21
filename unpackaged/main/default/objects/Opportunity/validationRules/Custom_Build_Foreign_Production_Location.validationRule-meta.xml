@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Custom_Build_Foreign_Production_Location</fullName>
+    <active>false</active>
+    <description>For custom build, you must specify a foreign production location</description>
+    <errorConditionFormula>/* We only want this to run against Custom build
+If the foreign production location is blank, prompt the user
+*/
+$RecordType.DeveloperName = &#39;EMEA_Custom_Build&#39;
+&amp;&amp; ISPICKVAL( Foreign_Production_Location__c ,&#39;&#39;)
+&amp;&amp; Not(ISNEW())</errorConditionFormula>
+    <errorMessage>You must select a foreign production location</errorMessage>
+</ValidationRule>

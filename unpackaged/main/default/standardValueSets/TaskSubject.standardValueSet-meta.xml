@@ -1,0 +1,369 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StandardValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sorted>false</sorted>
+    <standardValue>
+        <fullName>A New Opportunity has been created for You!</fullName>
+        <default>false</default>
+        <label>A New Opportunity has been created for You!</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Other</fullName>
+        <default>false</default>
+        <label>Other</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Show: Confirmed Show Data</fullName>
+        <default>false</default>
+        <label>Show: Confirmed Show Data</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Show: Confirmed Show Organizer (Account)</fullName>
+        <default>false</default>
+        <label>Show: Confirmed Show Organizer (Account)</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Show: Requested Show Organizer (Account) Change</fullName>
+        <default>false</default>
+        <label>Show: Requested Show Organizer (Account) Change</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Show: Confirmed Show Active/Inactive</fullName>
+        <default>false</default>
+        <label>Show: Confirmed Show Active/Inactive</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Show Occurrence: **Reminder** Send to DOS</fullName>
+        <default>false</default>
+        <label>Show Occurrence: **Reminder** Send to DOS</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Show Occurrence: Sent to DOS</fullName>
+        <default>false</default>
+        <label>Show Occurrence: Sent to DOS</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Account: Confirmed Show Organizer Data</fullName>
+        <default>false</default>
+        <label>Account: Confirmed Show Organizer Data</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Account: Requested Change to Show Organizer Data (Address Info)</fullName>
+        <default>false</default>
+        <label>Account: Requested Change to Show Organizer Data (Address Info)</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Contact: Identified Key Contact (Updated &quot;Primary&quot; Check-box)</fullName>
+        <default>false</default>
+        <label>Contact: Identified Key Contact (Updated &quot;Primary&quot; Check-box)</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Contact: Updated Existing Contact Info</fullName>
+        <default>false</default>
+        <label>Contact: Updated Existing Contact Info</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Contact: Created New Contact</fullName>
+        <default>false</default>
+        <label>Contact: Created New Contact</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Show Occurrence: Confirmed Occurrence Data: [ENTER NAME HERE]</fullName>
+        <default>false</default>
+        <label>Show Occurrence: Confirmed Occurrence Data: [ENTER NAME HERE]</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Intro Call: Show Occurrence: [ENTER NAME HERE]</fullName>
+        <default>false</default>
+        <label>Intro Call: Show Occurrence: [ENTER NAME HERE]</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Follow Up Call: Show Occurrence: [ENTER NAME HERE]</fullName>
+        <default>false</default>
+        <label>Follow Up Call: Show Occurrence: [ENTER NAME HERE]</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Intro Email: Show Occurrence: [ENTER NAME HERE]</fullName>
+        <default>false</default>
+        <label>Intro Email: Show Occurrence: [ENTER NAME HERE]</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Follow Up Email: Show Occurrence: [ENTER NAME HERE]</fullName>
+        <default>false</default>
+        <label>Follow Up Email: Show Occurrence: [ENTER NAME HERE]</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Show: Requested Show Inactivation</fullName>
+        <default>false</default>
+        <label>Show: Requested Show Inactivation</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Ownership Reassignment</fullName>
+        <default>false</default>
+        <label>Ownership Reassignment</label>
+    </standardValue>
+    <standardValue>
+        <fullName>ORDER enquiry</fullName>
+        <default>false</default>
+        <label>ORDER enquiry</label>
+    </standardValue>
+    <standardValue>
+        <fullName>ORDER new</fullName>
+        <default>false</default>
+        <label>ORDER new</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Electrical enquiry</fullName>
+        <default>false</default>
+        <label>Electrical enquiry</label>
+    </standardValue>
+    <standardValue>
+        <fullName>INVOICE request/sent</fullName>
+        <default>false</default>
+        <label>INVOICE request/sent</label>
+    </standardValue>
+    <standardValue>
+        <fullName>PAYMENT query</fullName>
+        <default>false</default>
+        <label>PAYMENT query</label>
+    </standardValue>
+    <standardValue>
+        <fullName>FURNITURE availability query</fullName>
+        <default>false</default>
+        <label>FURNITURE availability query</label>
+    </standardValue>
+    <standardValue>
+        <fullName>PAYMENT details received</fullName>
+        <default>false</default>
+        <label>PAYMENT details received</label>
+    </standardValue>
+    <standardValue>
+        <fullName>ORDER form request/query</fullName>
+        <default>false</default>
+        <label>ORDER form request/query</label>
+    </standardValue>
+    <standardValue>
+        <fullName>DIAGRAM received</fullName>
+        <default>false</default>
+        <label>DIAGRAM received</label>
+    </standardValue>
+    <standardValue>
+        <fullName>ORDER amendment</fullName>
+        <default>false</default>
+        <label>ORDER amendment</label>
+    </standardValue>
+    <standardValue>
+        <fullName>QUOTE request/sent</fullName>
+        <default>false</default>
+        <label>QUOTE request/sent</label>
+    </standardValue>
+    <standardValue>
+        <fullName>FLOOR COVERING general enquiry</fullName>
+        <default>false</default>
+        <label>FLOOR COVERING general enquiry</label>
+    </standardValue>
+    <standardValue>
+        <fullName>STAND FITTING dimensions</fullName>
+        <default>false</default>
+        <label>STAND FITTING dimensions</label>
+    </standardValue>
+    <standardValue>
+        <fullName>INVOICE not received</fullName>
+        <default>false</default>
+        <label>INVOICE not received</label>
+    </standardValue>
+    <standardValue>
+        <fullName>REFUND request/sent</fullName>
+        <default>false</default>
+        <label>REFUND request/sent</label>
+    </standardValue>
+    <standardValue>
+        <fullName>DIAGRAM query</fullName>
+        <default>false</default>
+        <label>DIAGRAM query</label>
+    </standardValue>
+    <standardValue>
+        <fullName>STAND FITTING display advice</fullName>
+        <default>false</default>
+        <label>STAND FITTING display advice</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Graphics enquiry</fullName>
+        <default>false</default>
+        <label>Graphics enquiry</label>
+    </standardValue>
+    <standardValue>
+        <fullName>PRICE enquiry</fullName>
+        <default>false</default>
+        <label>PRICE enquiry</label>
+    </standardValue>
+    <standardValue>
+        <fullName>INVOICE error</fullName>
+        <default>false</default>
+        <label>INVOICE error</label>
+    </standardValue>
+    <standardValue>
+        <fullName>COMPLAINT on-site issues</fullName>
+        <default>false</default>
+        <label>COMPLAINT on-site issues</label>
+    </standardValue>
+    <standardValue>
+        <fullName>LEAD (MSC generated)</fullName>
+        <default>false</default>
+        <label>LEAD (MSC generated)</label>
+    </standardValue>
+    <standardValue>
+        <fullName>RESERVE request/sent</fullName>
+        <default>false</default>
+        <label>RESERVE request/sent</label>
+    </standardValue>
+    <standardValue>
+        <fullName>BROCHURE request/sent</fullName>
+        <default>false</default>
+        <label>BROCHURE request/sent</label>
+    </standardValue>
+    <standardValue>
+        <fullName>ORDER cancellation</fullName>
+        <default>false</default>
+        <label>ORDER cancellation</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Name board query</fullName>
+        <default>false</default>
+        <label>Name board query</label>
+    </standardValue>
+    <standardValue>
+        <fullName>QUOTE accepted</fullName>
+        <default>false</default>
+        <label>QUOTE accepted</label>
+    </standardValue>
+    <standardValue>
+        <fullName>PACKAGE CONTENT enquiry</fullName>
+        <default>false</default>
+        <label>PACKAGE CONTENT enquiry</label>
+    </standardValue>
+    <standardValue>
+        <fullName>INVOICE received</fullName>
+        <default>false</default>
+        <label>INVOICE received</label>
+    </standardValue>
+    <standardValue>
+        <fullName>STAND query (size/open sides/etc)</fullName>
+        <default>false</default>
+        <label>STAND query (size/open sides/etc)</label>
+    </standardValue>
+    <standardValue>
+        <fullName>DIAGRAM request</fullName>
+        <default>false</default>
+        <label>DIAGRAM request</label>
+    </standardValue>
+    <standardValue>
+        <fullName>STAND FITTING system enquiry</fullName>
+        <default>false</default>
+        <label>STAND FITTING system enquiry</label>
+    </standardValue>
+    <standardValue>
+        <fullName>FURNITURE suitability query</fullName>
+        <default>false</default>
+        <label>FURNITURE suitability query</label>
+    </standardValue>
+    <standardValue>
+        <fullName>FLOOR COVERING shell scheme colour</fullName>
+        <default>false</default>
+        <label>FLOOR COVERING shell scheme colour</label>
+    </standardValue>
+    <standardValue>
+        <fullName>APPOINTED SERVICES query</fullName>
+        <default>false</default>
+        <label>APPOINTED SERVICES query</label>
+    </standardValue>
+    <standardValue>
+        <fullName>STAND FITTING storage area enquiry</fullName>
+        <default>false</default>
+        <label>STAND FITTING storage area enquiry</label>
+    </standardValue>
+    <standardValue>
+        <fullName>STAND NUMBER amendment/query</fullName>
+        <default>false</default>
+        <label>STAND NUMBER amendment/query</label>
+    </standardValue>
+    <standardValue>
+        <fullName>FURNITURE dimensions</fullName>
+        <default>false</default>
+        <label>FURNITURE dimensions</label>
+    </standardValue>
+    <standardValue>
+        <fullName>FLOOR COVERING sample request</fullName>
+        <default>false</default>
+        <label>FLOOR COVERING sample request</label>
+    </standardValue>
+    <standardValue>
+        <fullName>DELIVERY enquiry</fullName>
+        <default>false</default>
+        <label>DELIVERY enquiry</label>
+    </standardValue>
+    <standardValue>
+        <fullName>STAND FITTING platform enquiry</fullName>
+        <default>false</default>
+        <label>STAND FITTING platform enquiry</label>
+    </standardValue>
+    <standardValue>
+        <fullName>STAND FITTING removal of fascia/ceiling grid</fullName>
+        <default>false</default>
+        <label>STAND FITTING removal of fascia/ceiling grid</label>
+    </standardValue>
+    <standardValue>
+        <fullName>ACCESS opening times/date enquiry</fullName>
+        <default>false</default>
+        <label>ACCESS opening times/date enquiry</label>
+    </standardValue>
+    <standardValue>
+        <fullName>COMPLAINT invoice</fullName>
+        <default>false</default>
+        <label>COMPLAINT invoice</label>
+    </standardValue>
+    <standardValue>
+        <fullName>DASHBOARD functionality problem/s</fullName>
+        <default>false</default>
+        <label>DASHBOARD functionality problem/s</label>
+    </standardValue>
+    <standardValue>
+        <fullName>PERSON change of contact details</fullName>
+        <default>false</default>
+        <label>PERSON change of contact details</label>
+    </standardValue>
+    <standardValue>
+        <fullName>FURNITURE missing</fullName>
+        <default>false</default>
+        <label>FURNITURE missing</label>
+    </standardValue>
+    <standardValue>
+        <fullName>COMPLAINT LOB communication (not ServiCentre)</fullName>
+        <default>false</default>
+        <label>COMPLAINT LOB communication (not ServiCentre)</label>
+    </standardValue>
+    <standardValue>
+        <fullName>FURNITURE lock enquiry</fullName>
+        <default>false</default>
+        <label>FURNITURE lock enquiry</label>
+    </standardValue>
+    <standardValue>
+        <fullName>STAND FITTING picture request</fullName>
+        <default>false</default>
+        <label>STAND FITTING picture request</label>
+    </standardValue>
+    <standardValue>
+        <fullName>FURNITURE non-stock item request</fullName>
+        <default>false</default>
+        <label>FURNITURE non-stock item request</label>
+    </standardValue>
+    <standardValue>
+        <fullName>DASHBOARD stock alternatives</fullName>
+        <default>false</default>
+        <label>DASHBOARD stock alternatives</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Storage enquiry</fullName>
+        <default>false</default>
+        <label>Storage enquiry</label>
+    </standardValue>
+</StandardValueSet>

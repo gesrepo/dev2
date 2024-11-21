@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>No_of_Months_From_First_Won__c</fullName>
+    <description>Number of 12 months Account has been a customer.</description>
+    <externalId>false</externalId>
+    <formula>ABS((MONTH( Date_of_First_Won_Deal__c ) + (12*(YEAR(Date_of_First_Won_Deal__c)-YEAR(TODAY()))) - MONTH(TODAY())))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>No of Months From First Won</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackHistory>false</trackHistory>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

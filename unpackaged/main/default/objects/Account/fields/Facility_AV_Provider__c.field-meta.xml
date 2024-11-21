@@ -1,0 +1,865 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Facility_AV_Provider__c</fullName>
+    <label>AV Provider</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>true</sorted>
+            <value>
+                <fullName>Absolute Productions</fullName>
+                <default>false</default>
+                <label>Absolute Productions</label>
+            </value>
+            <value>
+                <fullName>Access Audio Visual</fullName>
+                <default>false</default>
+                <label>Access Audio Visual</label>
+            </value>
+            <value>
+                <fullName>ADM</fullName>
+                <default>false</default>
+                <label>ADM</label>
+            </value>
+            <value>
+                <fullName>AEE Productions</fullName>
+                <default>false</default>
+                <label>AEE Productions</label>
+            </value>
+            <value>
+                <fullName>Aesthetic Visual Solutions</fullName>
+                <default>false</default>
+                <label>Aesthetic Visual Solutions</label>
+            </value>
+            <value>
+                <fullName>AG Light and Sound</fullName>
+                <default>false</default>
+                <label>AG Light and Sound</label>
+            </value>
+            <value>
+                <fullName>Alford Media</fullName>
+                <default>false</default>
+                <label>Alford Media</label>
+            </value>
+            <value>
+                <fullName>Alliance AV</fullName>
+                <default>false</default>
+                <label>Alliance AV</label>
+            </value>
+            <value>
+                <fullName>Alliant</fullName>
+                <default>false</default>
+                <label>Alliant</label>
+            </value>
+            <value>
+                <fullName>American AV</fullName>
+                <default>false</default>
+                <label>American AV</label>
+            </value>
+            <value>
+                <fullName>ASP Group</fullName>
+                <default>false</default>
+                <label>ASP Group</label>
+            </value>
+            <value>
+                <fullName>Atlanta AV</fullName>
+                <default>false</default>
+                <label>Atlanta AV</label>
+            </value>
+            <value>
+                <fullName>Audio Visual One</fullName>
+                <default>false</default>
+                <label>Audio Visual One</label>
+            </value>
+            <value>
+                <fullName>Audio Visual One, Ltd.</fullName>
+                <default>false</default>
+                <label>Audio Visual One, Ltd.</label>
+            </value>
+            <value>
+                <fullName>Audio Visual Technology Services (AVTS)</fullName>
+                <default>false</default>
+                <label>Audio Visual Technology Services (AVTS)</label>
+            </value>
+            <value>
+                <fullName>AV-Canada</fullName>
+                <default>false</default>
+                <label>AV-Canada</label>
+            </value>
+            <value>
+                <fullName>AV Concepts</fullName>
+                <default>false</default>
+                <label>AV Concepts</label>
+            </value>
+            <value>
+                <fullName>AV Connections</fullName>
+                <default>false</default>
+                <label>AV Connections</label>
+            </value>
+            <value>
+                <fullName>AV Experience</fullName>
+                <default>false</default>
+                <label>AV Experience</label>
+            </value>
+            <value>
+                <fullName>AVI SPL</fullName>
+                <default>false</default>
+                <label>AVI SPL</label>
+            </value>
+            <value>
+                <fullName>AV Matters</fullName>
+                <default>false</default>
+                <label>AV Matters</label>
+            </value>
+            <value>
+                <fullName>AVMS (Audio Visual Management Solutions)</fullName>
+                <default>false</default>
+                <label>AVMS (Audio Visual Management Solutions)</label>
+            </value>
+            <value>
+                <fullName>AV Network</fullName>
+                <default>false</default>
+                <label>AV Network</label>
+            </value>
+            <value>
+                <fullName>AV Outsource</fullName>
+                <default>false</default>
+                <label>AV Outsource</label>
+            </value>
+            <value>
+                <fullName>AV Partners</fullName>
+                <default>false</default>
+                <label>AV Partners</label>
+            </value>
+            <value>
+                <fullName>AVPG</fullName>
+                <default>false</default>
+                <label>AVPG</label>
+            </value>
+            <value>
+                <fullName>AV PRO</fullName>
+                <default>false</default>
+                <label>AV PRO</label>
+            </value>
+            <value>
+                <fullName>AVPS - Audio Visual Production Services</fullName>
+                <default>false</default>
+                <label>AVPS - Audio Visual Production Services</label>
+            </value>
+            <value>
+                <fullName>avts group</fullName>
+                <default>false</default>
+                <label>avts group</label>
+            </value>
+            <value>
+                <fullName>Backstage Logic</fullName>
+                <default>false</default>
+                <label>Backstage Logic</label>
+            </value>
+            <value>
+                <fullName>Bartha</fullName>
+                <default>false</default>
+                <label>Bartha</label>
+            </value>
+            <value>
+                <fullName>Bartha Audio Visual</fullName>
+                <default>false</default>
+                <label>Bartha Audio Visual</label>
+            </value>
+            <value>
+                <fullName>BAV Services</fullName>
+                <default>false</default>
+                <label>BAV Services</label>
+            </value>
+            <value>
+                <fullName>Bear AV</fullName>
+                <default>false</default>
+                <label>Bear AV</label>
+            </value>
+            <value>
+                <fullName>Bishop McCann</fullName>
+                <default>false</default>
+                <label>Bishop McCann</label>
+            </value>
+            <value>
+                <fullName>Broadstreet</fullName>
+                <default>false</default>
+                <label>Broadstreet</label>
+            </value>
+            <value>
+                <fullName>CCR Events</fullName>
+                <default>false</default>
+                <label>CCR Events</label>
+            </value>
+            <value>
+                <fullName>CEAVCO</fullName>
+                <default>false</default>
+                <label>CEAVCO</label>
+            </value>
+            <value>
+                <fullName>Cenero</fullName>
+                <default>false</default>
+                <label>Cenero</label>
+            </value>
+            <value>
+                <fullName>Center Stage AV</fullName>
+                <default>false</default>
+                <label>Center Stage AV</label>
+            </value>
+            <value>
+                <fullName>Century Audio Visual</fullName>
+                <default>false</default>
+                <label>Century Audio Visual</label>
+            </value>
+            <value>
+                <fullName>Clark’s Audio Visual Services, Ltd.</fullName>
+                <default>false</default>
+                <label>Clark’s Audio Visual Services, Ltd.</label>
+            </value>
+            <value>
+                <fullName>CMI Communications</fullName>
+                <default>false</default>
+                <label>CMI Communications</label>
+            </value>
+            <value>
+                <fullName>Concept X</fullName>
+                <default>false</default>
+                <label>Concept X</label>
+            </value>
+            <value>
+                <fullName>Conferencetech</fullName>
+                <default>false</default>
+                <label>Conferencetech</label>
+            </value>
+            <value>
+                <fullName>Cornerstone AV</fullName>
+                <default>false</default>
+                <label>Cornerstone AV</label>
+            </value>
+            <value>
+                <fullName>Cornerstone Technologies</fullName>
+                <default>false</default>
+                <label>Cornerstone Technologies</label>
+            </value>
+            <value>
+                <fullName>Creative Technology</fullName>
+                <default>false</default>
+                <label>Creative Technology</label>
+            </value>
+            <value>
+                <fullName>CRS Rental</fullName>
+                <default>false</default>
+                <label>CRS Rental</label>
+            </value>
+            <value>
+                <fullName>Datasis Corp</fullName>
+                <default>false</default>
+                <label>Datasis Corp</label>
+            </value>
+            <value>
+                <fullName>David Michael Productions</fullName>
+                <default>false</default>
+                <label>David Michael Productions</label>
+            </value>
+            <value>
+                <fullName>Directions AV</fullName>
+                <default>false</default>
+                <label>Directions AV</label>
+            </value>
+            <value>
+                <fullName>DMP Productions</fullName>
+                <default>false</default>
+                <label>DMP Productions</label>
+            </value>
+            <value>
+                <fullName>Dodd Technologies</fullName>
+                <default>false</default>
+                <label>Dodd Technologies</label>
+            </value>
+            <value>
+                <fullName>Encore AV</fullName>
+                <default>false</default>
+                <label>Encore AV</label>
+            </value>
+            <value>
+                <fullName>EPRAV Productions</fullName>
+                <default>false</default>
+                <label>EPRAV Productions</label>
+            </value>
+            <value>
+                <fullName>etech</fullName>
+                <default>false</default>
+                <label>etech</label>
+            </value>
+            <value>
+                <fullName>ETS (Event Technology Services)</fullName>
+                <default>false</default>
+                <label>ETS (Event Technology Services)</label>
+            </value>
+            <value>
+                <fullName>EventEQ</fullName>
+                <default>false</default>
+                <label>EventEQ</label>
+            </value>
+            <value>
+                <fullName>Evolution</fullName>
+                <default>false</default>
+                <label>Evolution</label>
+            </value>
+            <value>
+                <fullName>Fastforward Marketing Communications</fullName>
+                <default>false</default>
+                <label>Fastforward Marketing Communications</label>
+            </value>
+            <value>
+                <fullName>Fern Exposition &amp; Events</fullName>
+                <default>false</default>
+                <label>Fern Exposition &amp; Events</label>
+            </value>
+            <value>
+                <fullName>Four Moon Productions</fullName>
+                <default>false</default>
+                <label>Four Moon Productions</label>
+            </value>
+            <value>
+                <fullName>Freeman AV</fullName>
+                <default>false</default>
+                <label>Freeman AV</label>
+            </value>
+            <value>
+                <fullName>Freestyle Productions</fullName>
+                <default>false</default>
+                <label>Freestyle Productions</label>
+            </value>
+            <value>
+                <fullName>Frischkorn MEDIACO</fullName>
+                <default>false</default>
+                <label>Frischkorn MEDIACO</label>
+            </value>
+            <value>
+                <fullName>Front Runner Productions</fullName>
+                <default>false</default>
+                <label>Front Runner Productions</label>
+            </value>
+            <value>
+                <fullName>Gary Musick Productions</fullName>
+                <default>false</default>
+                <label>Gary Musick Productions</label>
+            </value>
+            <value>
+                <fullName>Glickman Productions</fullName>
+                <default>false</default>
+                <label>Glickman Productions</label>
+            </value>
+            <value>
+                <fullName>Group Incorporated</fullName>
+                <default>false</default>
+                <label>Group Incorporated</label>
+            </value>
+            <value>
+                <fullName>Hargrove</fullName>
+                <default>false</default>
+                <label>Hargrove</label>
+            </value>
+            <value>
+                <fullName>Harvest Productions, Inc.</fullName>
+                <default>false</default>
+                <label>Harvest Productions, Inc.</label>
+            </value>
+            <value>
+                <fullName>Heroic Productions</fullName>
+                <default>false</default>
+                <label>Heroic Productions</label>
+            </value>
+            <value>
+                <fullName>Honeysweet Productions</fullName>
+                <default>false</default>
+                <label>Honeysweet Productions</label>
+            </value>
+            <value>
+                <fullName>Hotel Direct</fullName>
+                <default>false</default>
+                <label>Hotel Direct</label>
+            </value>
+            <value>
+                <fullName>Image Technologies</fullName>
+                <default>false</default>
+                <label>Image Technologies</label>
+            </value>
+            <value>
+                <fullName>Impact Lighting &amp; Production</fullName>
+                <default>false</default>
+                <label>Impact Lighting &amp; Production</label>
+            </value>
+            <value>
+                <fullName>IMS</fullName>
+                <default>false</default>
+                <label>IMS</label>
+            </value>
+            <value>
+                <fullName>In-House</fullName>
+                <default>false</default>
+                <label>In-House</label>
+            </value>
+            <value>
+                <fullName>Inland AV</fullName>
+                <default>false</default>
+                <label>Inland AV</label>
+            </value>
+            <value>
+                <fullName>invert720 productions inc</fullName>
+                <default>false</default>
+                <label>invert720 productions inc</label>
+            </value>
+            <value>
+                <fullName>InVision</fullName>
+                <default>false</default>
+                <label>InVision</label>
+            </value>
+            <value>
+                <fullName>inVNT AV</fullName>
+                <default>false</default>
+                <label>inVNT AV</label>
+            </value>
+            <value>
+                <fullName>J &amp; H</fullName>
+                <default>false</default>
+                <label>J &amp; H</label>
+            </value>
+            <value>
+                <fullName>J&amp;S AV</fullName>
+                <default>false</default>
+                <label>J&amp;S AV</label>
+            </value>
+            <value>
+                <fullName>JM Stamp Company</fullName>
+                <default>false</default>
+                <label>JM Stamp Company</label>
+            </value>
+            <value>
+                <fullName>Kelly Companies</fullName>
+                <default>false</default>
+                <label>Kelly Companies</label>
+            </value>
+            <value>
+                <fullName>Kuala Lumpur Convention Center</fullName>
+                <default>false</default>
+                <label>Kuala Lumpur Convention Center</label>
+            </value>
+            <value>
+                <fullName>KVL</fullName>
+                <default>false</default>
+                <label>KVL</label>
+            </value>
+            <value>
+                <fullName>Lakeshore AV</fullName>
+                <default>false</default>
+                <label>Lakeshore AV</label>
+            </value>
+            <value>
+                <fullName>Leading Authorities</fullName>
+                <default>false</default>
+                <label>Leading Authorities</label>
+            </value>
+            <value>
+                <fullName>LMG</fullName>
+                <default>false</default>
+                <label>LMG</label>
+            </value>
+            <value>
+                <fullName>Markey’s Stage Production</fullName>
+                <default>false</default>
+                <label>Markey’s Stage Production</label>
+            </value>
+            <value>
+                <fullName>Marks Productions</fullName>
+                <default>false</default>
+                <label>Marks Productions</label>
+            </value>
+            <value>
+                <fullName>Mass AV</fullName>
+                <default>false</default>
+                <label>Mass AV</label>
+            </value>
+            <value>
+                <fullName>McCune</fullName>
+                <default>false</default>
+                <label>McCune</label>
+            </value>
+            <value>
+                <fullName>Meeting Services International (MSI)</fullName>
+                <default>false</default>
+                <label>Meeting Services International (MSI)</label>
+            </value>
+            <value>
+                <fullName>Merkel</fullName>
+                <default>false</default>
+                <label>Merkel</label>
+            </value>
+            <value>
+                <fullName>Metro MultiMedia</fullName>
+                <default>false</default>
+                <label>Metro MultiMedia</label>
+            </value>
+            <value>
+                <fullName>MIG</fullName>
+                <default>false</default>
+                <label>MIG</label>
+            </value>
+            <value>
+                <fullName>Mike Mallinson</fullName>
+                <default>false</default>
+                <label>Mike Mallinson</label>
+            </value>
+            <value>
+                <fullName>MIlls Jones</fullName>
+                <default>false</default>
+                <label>MIlls Jones</label>
+            </value>
+            <value>
+                <fullName>MIS Audio Visual Services</fullName>
+                <default>false</default>
+                <label>MIS Audio Visual Services</label>
+            </value>
+            <value>
+                <fullName>MP Productions</fullName>
+                <default>false</default>
+                <label>MP Productions</label>
+            </value>
+            <value>
+                <fullName>MSI</fullName>
+                <default>false</default>
+                <label>MSI</label>
+            </value>
+            <value>
+                <fullName>M Squared Onstage</fullName>
+                <default>false</default>
+                <label>M Squared Onstage</label>
+            </value>
+            <value>
+                <fullName>NMR</fullName>
+                <default>false</default>
+                <label>NMR</label>
+            </value>
+            <value>
+                <fullName>No Provider</fullName>
+                <default>false</default>
+                <label>No Provider</label>
+            </value>
+            <value>
+                <fullName>Not Yet Contracted</fullName>
+                <default>false</default>
+                <label>Not Yet Contracted</label>
+            </value>
+            <value>
+                <fullName>Occam Events</fullName>
+                <default>false</default>
+                <label>Occam Events</label>
+            </value>
+            <value>
+                <fullName>On Event Services</fullName>
+                <default>false</default>
+                <label>On Event Services</label>
+            </value>
+            <value>
+                <fullName>ON Services</fullName>
+                <default>false</default>
+                <label>ON Services</label>
+            </value>
+            <value>
+                <fullName>Onsite AV</fullName>
+                <default>false</default>
+                <label>Onsite AV</label>
+            </value>
+            <value>
+                <fullName>OSA International</fullName>
+                <default>false</default>
+                <label>OSA International</label>
+            </value>
+            <value>
+                <fullName>Ovation</fullName>
+                <default>false</default>
+                <label>Ovation</label>
+            </value>
+            <value>
+                <fullName>Palazzo Lighting</fullName>
+                <default>false</default>
+                <label>Palazzo Lighting</label>
+            </value>
+            <value>
+                <fullName>Pixel</fullName>
+                <default>false</default>
+                <label>Pixel</label>
+            </value>
+            <value>
+                <fullName>Planitomaha</fullName>
+                <default>false</default>
+                <label>Planitomaha</label>
+            </value>
+            <value>
+                <fullName>Prestige Audio Visual</fullName>
+                <default>false</default>
+                <label>Prestige Audio Visual</label>
+            </value>
+            <value>
+                <fullName>PRG</fullName>
+                <default>false</default>
+                <label>PRG</label>
+            </value>
+            <value>
+                <fullName>Production Association</fullName>
+                <default>false</default>
+                <label>Production Association</label>
+            </value>
+            <value>
+                <fullName>Production World</fullName>
+                <default>false</default>
+                <label>Production World</label>
+            </value>
+            <value>
+                <fullName>Projection</fullName>
+                <default>false</default>
+                <label>Projection</label>
+            </value>
+            <value>
+                <fullName>PSAV</fullName>
+                <default>false</default>
+                <label>PSAV</label>
+            </value>
+            <value>
+                <fullName>Pulse Staging</fullName>
+                <default>false</default>
+                <label>Pulse Staging</label>
+            </value>
+            <value>
+                <fullName>Random International</fullName>
+                <default>false</default>
+                <label>Random International</label>
+            </value>
+            <value>
+                <fullName>Razor Exhibits</fullName>
+                <default>false</default>
+                <label>Razor Exhibits</label>
+            </value>
+            <value>
+                <fullName>Reaction AV</fullName>
+                <default>false</default>
+                <label>Reaction AV</label>
+            </value>
+            <value>
+                <fullName>Rick Bloom Audio Visual</fullName>
+                <default>false</default>
+                <label>Rick Bloom Audio Visual</label>
+            </value>
+            <value>
+                <fullName>Riverview Systems</fullName>
+                <default>false</default>
+                <label>Riverview Systems</label>
+            </value>
+            <value>
+                <fullName>Rosemont in house</fullName>
+                <default>false</default>
+                <label>Rosemont in house</label>
+            </value>
+            <value>
+                <fullName>Royal Productions</fullName>
+                <default>false</default>
+                <label>Royal Productions</label>
+            </value>
+            <value>
+                <fullName>RRG</fullName>
+                <default>false</default>
+                <label>RRG</label>
+            </value>
+            <value>
+                <fullName>Sands AV</fullName>
+                <default>false</default>
+                <label>Sands AV</label>
+            </value>
+            <value>
+                <fullName>Sardis Media</fullName>
+                <default>false</default>
+                <label>Sardis Media</label>
+            </value>
+            <value>
+                <fullName>Seamless Event Solutions</fullName>
+                <default>false</default>
+                <label>Seamless Event Solutions</label>
+            </value>
+            <value>
+                <fullName>Self Provided</fullName>
+                <default>false</default>
+                <label>Self Provided</label>
+            </value>
+            <value>
+                <fullName>SES</fullName>
+                <default>false</default>
+                <label>SES</label>
+            </value>
+            <value>
+                <fullName>Show Gear Productions</fullName>
+                <default>false</default>
+                <label>Show Gear Productions</label>
+            </value>
+            <value>
+                <fullName>ShowTec</fullName>
+                <default>false</default>
+                <label>ShowTec</label>
+            </value>
+            <value>
+                <fullName>Smart City</fullName>
+                <default>false</default>
+                <label>Smart City</label>
+            </value>
+            <value>
+                <fullName>Smart Source</fullName>
+                <default>false</default>
+                <label>Smart Source</label>
+            </value>
+            <value>
+                <fullName>Solin AV</fullName>
+                <default>false</default>
+                <label>Solin AV</label>
+            </value>
+            <value>
+                <fullName>Southwest AV</fullName>
+                <default>false</default>
+                <label>Southwest AV</label>
+            </value>
+            <value>
+                <fullName>Specialized Event Services</fullName>
+                <default>false</default>
+                <label>Specialized Event Services</label>
+            </value>
+            <value>
+                <fullName>Spectrum Audio Visual</fullName>
+                <default>false</default>
+                <label>Spectrum Audio Visual</label>
+            </value>
+            <value>
+                <fullName>Stage-it Inc.</fullName>
+                <default>false</default>
+                <label>Stage-it Inc.</label>
+            </value>
+            <value>
+                <fullName>Stagevision Inc.</fullName>
+                <default>false</default>
+                <label>Stagevision Inc.</label>
+            </value>
+            <value>
+                <fullName>Synergy - Mobiletape</fullName>
+                <default>false</default>
+                <label>Synergy - Mobiletape</label>
+            </value>
+            <value>
+                <fullName>T3</fullName>
+                <default>false</default>
+                <label>T3</label>
+            </value>
+            <value>
+                <fullName>Tallen Technology Rentals</fullName>
+                <default>false</default>
+                <label>Tallen Technology Rentals</label>
+            </value>
+            <value>
+                <fullName>TECHNOLOGY RESOURCE CORPORATION</fullName>
+                <default>false</default>
+                <label>TECHNOLOGY RESOURCE CORPORATION</label>
+            </value>
+            <value>
+                <fullName>Temporary Technology</fullName>
+                <default>false</default>
+                <label>Temporary Technology</label>
+            </value>
+            <value>
+                <fullName>Touch</fullName>
+                <default>false</default>
+                <label>Touch</label>
+            </value>
+            <value>
+                <fullName>TPI Productions</fullName>
+                <default>false</default>
+                <label>TPI Productions</label>
+            </value>
+            <value>
+                <fullName>Trade Show Technical</fullName>
+                <default>false</default>
+                <label>Trade Show Technical</label>
+            </value>
+            <value>
+                <fullName>Unbridled Solutions</fullName>
+                <default>false</default>
+                <label>Unbridled Solutions</label>
+            </value>
+            <value>
+                <fullName>Unknown</fullName>
+                <default>false</default>
+                <label>Unknown</label>
+            </value>
+            <value>
+                <fullName>VAE</fullName>
+                <default>false</default>
+                <label>VAE</label>
+            </value>
+            <value>
+                <fullName>VCI Event Technology</fullName>
+                <default>false</default>
+                <label>VCI Event Technology</label>
+            </value>
+            <value>
+                <fullName>VEP</fullName>
+                <default>false</default>
+                <label>VEP</label>
+            </value>
+            <value>
+                <fullName>Video West, Inc.</fullName>
+                <default>false</default>
+                <label>Video West, Inc.</label>
+            </value>
+            <value>
+                <fullName>Visual Technologies</fullName>
+                <default>false</default>
+                <label>Visual Technologies</label>
+            </value>
+            <value>
+                <fullName>Viva</fullName>
+                <default>false</default>
+                <label>Viva</label>
+            </value>
+            <value>
+                <fullName>Volume Eventz</fullName>
+                <default>false</default>
+                <label>Volume Eventz</label>
+            </value>
+            <value>
+                <fullName>VSC AV</fullName>
+                <default>false</default>
+                <label>VSC AV</label>
+            </value>
+            <value>
+                <fullName>VX3</fullName>
+                <default>false</default>
+                <label>VX3</label>
+            </value>
+            <value>
+                <fullName>Webb Audio Visual</fullName>
+                <default>false</default>
+                <label>Webb Audio Visual</label>
+            </value>
+            <value>
+                <fullName>Williams/Gerard Productions</fullName>
+                <default>false</default>
+                <label>Williams/Gerard Productions</label>
+            </value>
+            <value>
+                <fullName>World Stage</fullName>
+                <default>false</default>
+                <label>World Stage</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

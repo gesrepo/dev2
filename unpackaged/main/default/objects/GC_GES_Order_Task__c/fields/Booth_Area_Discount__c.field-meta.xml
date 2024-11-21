@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Booth_Area_Discount__c</fullName>
+    <description>Booth Area discount percentage as determined by the Parent Orders booth area.</description>
+    <inlineHelpText>Booth Area discount percentage 0-100</inlineHelpText>
+    <label>Booth Area Discount</label>
+    <precision>3</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Percent</type>
+</CustomField>

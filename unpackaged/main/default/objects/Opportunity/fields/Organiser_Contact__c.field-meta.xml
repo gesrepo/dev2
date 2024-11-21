@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Organiser_Contact__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>Lookup to contact, on Organiser Account based on Lead Owner</description>
+    <inlineHelpText>Name of Contact linked to Organiser</inlineHelpText>
+    <label>Organiser Contact</label>
+    <lookupFilter>
+        <active>true</active>
+        <filterItems>
+            <field>Contact.Account.Id</field>
+            <operation>equals</operation>
+            <valueField>Contact.Account.Id</valueField>
+        </filterItems>
+        <infoMessage>Please select the correct Organiser contact</infoMessage>
+        <isOptional>true</isOptional>
+    </lookupFilter>
+    <referenceTo>Contact</referenceTo>
+    <relationshipLabel>Opportunities (Organiser Contact)</relationshipLabel>
+    <relationshipName>OpportunitiesOrganiserContact</relationshipName>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Lookup</type>
+</CustomField>

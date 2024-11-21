@@ -1,0 +1,16 @@
+<apex:page standardController="Booth_Area__c"  extensions="PC_BoothAreaController" >
+    <apex:includeLightning />
+    <div id="containerDiv"></div>
+    <script>
+    $Lightning.use("c:PC_DeleteBoothAreaContainerApp", function() {
+        $Lightning.createComponent("c:PC_Delete_BoothArea",
+                                   { 
+                                       baRecordId: '{!referredToShowId}',
+                                       refererUrl: '{!returnToUrl}'
+                                   },
+                                   "containerDiv",
+                                   function(component) {
+                                   });
+    });
+    </script>
+</apex:page>

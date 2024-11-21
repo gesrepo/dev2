@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>GC_Is_Allowed_Requestor__c</fullName>
+    <formula>OR(
+ INCLUDES(GC_Show_Role__c, &#39;GC Account Manager&#39;),
+ INCLUDES(GC_Show_Role__c, &#39;GC Creative Director&#39;),
+ INCLUDES(GC_Show_Role__c, &#39;GC Traffic Administrator&#39;),
+ INCLUDES(GC_Show_Role__c, &#39;GC Director of Account Management&#39;),
+ INCLUDES(GC_Show_Role__c, &#39;GC Sales Manager&#39;)
+)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Is Allowed Requestor</label>
+    <type>Checkbox</type>
+</CustomField>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Format_Exhibitor_Fac_BillingPostalCode</fullName>
+    <active>false</active>
+    <description>United States billing addresses requires postal code in this format: 99999-9999 for &quot;Exhibitor&quot; and &quot;Facility&quot; type Accounts.</description>
+    <errorConditionFormula>AND(ISNEW(), NOT(OR($Profile.Name = &#39;GES Interface&#39;, $Profile.Name = &#39;EMEA Spiro Interface&#39;, $Profile.Name = &#39;EDAdmin_Interface&#39;,$Profile.Name = &#39;GES Interface&#39;,$Profile.Name = &#39;System Administrator&#39;,$Profile.Name =&#39;EEPriorityLeadGen&#39;, $Profile.Name = &quot;GES Administrator Interface&quot;, $User.Update_Locked_Account_Fields__c)), IF(OR($RecordType.Name = &#39;Exhibitor&#39;, $RecordType.Name = &#39;Facility&#39;), IF(AND(NOT(ISNULL(BillingCountry)), OR(UPPER(BillingCountry) = &#39;US&#39;)), IF(REGEX(BillingPostalCode, &quot;[0-9]{5}-[0-9]{4}&quot;), false, true), false), false))</errorConditionFormula>
+    <errorDisplayField>BillingPostalCode</errorDisplayField>
+    <errorMessage>United States billing address postal code must include 4 digit extension. Please enter postal code in this format: 99999-9999.</errorMessage>
+</ValidationRule>

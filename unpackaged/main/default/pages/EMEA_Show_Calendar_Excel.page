@@ -1,0 +1,1 @@
+<apex:page standardController="Opportunity" extensions="EMEAShowCalendarPrint" recordSetVar="shows" contenttype="text/csv#EMEA_Show_Calendar_{!TODAY()}.csv" showHeader="false" sidebar="false" cache="false">{!RenderedExcel}</apex:page>

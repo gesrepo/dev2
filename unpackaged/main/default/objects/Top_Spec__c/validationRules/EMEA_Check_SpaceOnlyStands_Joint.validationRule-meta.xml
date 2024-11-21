@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>EMEA_Check_SpaceOnlyStands_Joint</fullName>
+    <active>true</active>
+    <errorConditionFormula>ISPICKVAL( SpaceOnly_Contractor_Status__c  ,&quot;Joint&quot;) &amp;&amp; Len(  SpaceOnly_Joint_Contractor_Details__c ) =0</errorConditionFormula>
+    <errorMessage>If we are joint contractor for Space Only / D&amp;B you must enter the joint contractor details</errorMessage>
+</ValidationRule>

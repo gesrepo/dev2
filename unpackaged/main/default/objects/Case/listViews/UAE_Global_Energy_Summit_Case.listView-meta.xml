@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>UAE_Global_Energy_Summit_Case</fullName>
+    <filterScope>Queue</filterScope>
+    <label>UAE Global Smart Energy Summit</label>
+    <queue>UAE_Global_Smart_Energy_Summit</queue>
+    <sharedTo>
+        <allInternalUsers />
+    </sharedTo>
+</ListView>

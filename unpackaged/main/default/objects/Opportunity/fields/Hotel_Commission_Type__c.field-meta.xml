@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Hotel_Commission_Type__c</fullName>
+    <inlineHelpText>Hotel Commission (ie. fee based or revenue share/percentage based)</inlineHelpText>
+    <label>Hotel Commission Type</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Fee - Per Reservation</fullName>
+                <default>false</default>
+                <label>Fee - Per Reservation</label>
+            </value>
+            <value>
+                <fullName>Fee - Per Room Night</fullName>
+                <default>false</default>
+                <label>Fee - Per Room Night</label>
+            </value>
+            <value>
+                <fullName>Percentage</fullName>
+                <default>false</default>
+                <label>Percentage</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

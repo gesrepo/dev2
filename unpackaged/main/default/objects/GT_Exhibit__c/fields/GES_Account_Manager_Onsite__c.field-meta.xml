@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>GES_Account_Manager_Onsite__c</fullName>
+    <label>GES Account Manager</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>true</sorted>
+            <value>
+                <fullName>Chambers, Brenda</fullName>
+                <default>false</default>
+                <label>Chambers, Brenda</label>
+            </value>
+            <value>
+                <fullName>Darba Watters</fullName>
+                <default>false</default>
+                <label>Darba Watters</label>
+            </value>
+            <value>
+                <fullName>Holland, Linda</fullName>
+                <default>false</default>
+                <label>Holland, Linda</label>
+            </value>
+            <value>
+                <fullName>Jamie Brosmore</fullName>
+                <default>false</default>
+                <label>Jamie Brosmore</label>
+            </value>
+            <value>
+                <fullName>Jessica Bodner</fullName>
+                <default>false</default>
+                <label>Jessica Bodner</label>
+            </value>
+            <value>
+                <fullName>Jill Johnson</fullName>
+                <default>false</default>
+                <label>Jill Johnson</label>
+            </value>
+            <value>
+                <fullName>Kelly, Sue</fullName>
+                <default>false</default>
+                <label>Kelly, Sue</label>
+            </value>
+            <value>
+                <fullName>Kevin Jones</fullName>
+                <default>false</default>
+                <label>Kevin Jones</label>
+            </value>
+            <value>
+                <fullName>Maria Golopapenko</fullName>
+                <default>false</default>
+                <label>Maria Golopapenko</label>
+            </value>
+            <value>
+                <fullName>Mary Jones</fullName>
+                <default>false</default>
+                <label>Mary Jones</label>
+            </value>
+            <value>
+                <fullName>Melinda Peterson</fullName>
+                <default>false</default>
+                <label>Melinda Peterson</label>
+            </value>
+            <value>
+                <fullName>Rogers, Kayla</fullName>
+                <default>false</default>
+                <label>Rogers, Kayla</label>
+            </value>
+            <value>
+                <fullName>Stephanie Specht</fullName>
+                <default>false</default>
+                <label>Stephanie Specht</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Lock_Facility_Account_Billing_Address</fullName>
+    <active>true</active>
+    <description>Make Account Billing Address fields read-only for a selected list of profiles.</description>
+    <errorConditionFormula>AND($RecordType.Name = &#39;Facility&#39;, OR(ISCHANGED(BillingStreet),ISCHANGED(BillingState), ISCHANGED(BillingCity), ISCHANGED(BillingCountry), ISCHANGED(BillingPostalCode)), NOT(OR($Profile.Name = &#39;System Administrator&#39;, 
+$Profile.Name = &#39;EMEA System Administrator&#39;, 
+$Profile.Name = &#39;Salesforce Support User&#39;,
+$Profile.Name = &#39;Events Salesforce Support User&#39;, 
+$Profile.Name = &#39;GES Interface&#39;, 
+$Profile.Name = &#39;EMEA Spiro Interface&#39;, 
+$Profile.Name = &quot;GES EMEA Service Manager&quot; ,  
+$Profile.Name =&quot;EMEA Credit Control&quot;, 
+$Profile.Name = &quot;EMEA Salesforce Support User&quot;, 
+$Profile.Name =&quot;R2 Interface&quot;, 
+$Profile.Name = &quot;GES Administrator Interface&quot;, 
+$Profile.Name = &quot;Marketing Super Users&quot;,
+$User.Id =&#39;00540000000oQTe&#39;, 
+$User.Id =&#39;00540000000oEOn&#39;)))</errorConditionFormula>
+    <errorMessage>Account Billing Address cannot be modified. Please send an email to Craig Dingwall cdingwall@ges.com to update this information.</errorMessage>
+</ValidationRule>

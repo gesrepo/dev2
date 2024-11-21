@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>AREA_CODE__c</fullName>
+    <description>Stores values from Oracle Show Occurrence Booth Contact XGES_SW_CUST_CONT.AREA_CODE column.</description>
+    <externalId>false</externalId>
+    <label>Area Code</label>
+    <precision>15</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

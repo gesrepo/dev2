@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Your_location__c</fullName>
+    <inlineHelpText>Please select your location, this will allow us to route the request to the relevant Salesforce support person</inlineHelpText>
+    <label>Your location</label>
+    <required>true</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>true</sorted>
+            <value>
+                <fullName>Account Management Amsterdam</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Account Management Amsterdam</label>
+            </value>
+            <value>
+                <fullName>Account Management UK</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Account Management UK</label>
+            </value>
+            <value>
+                <fullName>Amsterdam</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Amsterdam</label>
+            </value>
+            <value>
+                <fullName>Blitz</fullName>
+                <default>false</default>
+                <label>Blitz</label>
+            </value>
+            <value>
+                <fullName>Client Relations</fullName>
+                <default>false</default>
+                <label>Client Relations</label>
+            </value>
+            <value>
+                <fullName>D&amp;B Coventry</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>D&amp;B Coventry</label>
+            </value>
+            <value>
+                <fullName>D&amp;B Germany</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>D&amp;B Germany</label>
+            </value>
+            <value>
+                <fullName>DB_Sheffield</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>D&amp;B Sheffield</label>
+            </value>
+            <value>
+                <fullName>Events</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Events</label>
+            </value>
+            <value>
+                <fullName>Glasgow</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Glasgow</label>
+            </value>
+            <value>
+                <fullName>New Business</fullName>
+                <default>false</default>
+                <label>New Business</label>
+            </value>
+            <value>
+                <fullName>Spiro</fullName>
+                <default>false</default>
+                <label>Spiro</label>
+            </value>
+            <value>
+                <fullName>UAE Office</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>UAE Office</label>
+            </value>
+            <value>
+                <fullName>Visit</fullName>
+                <default>false</default>
+                <label>Visit</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

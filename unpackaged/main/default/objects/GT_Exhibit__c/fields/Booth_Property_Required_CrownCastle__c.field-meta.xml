@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Booth_Property_Required_CrownCastle__c</fullName>
+    <label>Booth Property Required</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>true</sorted>
+            <value>
+                <fullName>BDX Display</fullName>
+                <default>false</default>
+                <label>BDX Display</label>
+            </value>
+            <value>
+                <fullName>Channels Pull-up</fullName>
+                <default>false</default>
+                <label>Channels Pull-up</label>
+            </value>
+            <value>
+                <fullName>Community Pull-up’s</fullName>
+                <default>false</default>
+                <label>Community Pull-up’s</label>
+            </value>
+            <value>
+                <fullName>Corporate 10x10</fullName>
+                <default>false</default>
+                <label>Corporate 10x10</label>
+            </value>
+            <value>
+                <fullName>Corporate Pull-up’s</fullName>
+                <default>false</default>
+                <label>Corporate Pull-up’s</label>
+            </value>
+            <value>
+                <fullName>Custom</fullName>
+                <default>false</default>
+                <label>Custom</label>
+            </value>
+            <value>
+                <fullName>EIABs</fullName>
+                <default>false</default>
+                <label>EIABs</label>
+            </value>
+            <value>
+                <fullName>Fiber 10x10</fullName>
+                <default>false</default>
+                <label>Fiber 10x10</label>
+            </value>
+            <value>
+                <fullName>Fiber Graphic Tradeshow Pull-up</fullName>
+                <default>false</default>
+                <label>Fiber Graphic Tradeshow Pull-up</label>
+            </value>
+            <value>
+                <fullName>Fiber Lobby Event Pull-up</fullName>
+                <default>false</default>
+                <label>Fiber Lobby Event Pull-up</label>
+            </value>
+            <value>
+                <fullName>Fiber Product List Pull-up</fullName>
+                <default>false</default>
+                <label>Fiber Product List Pull-up</label>
+            </value>
+            <value>
+                <fullName>Hanging Sign</fullName>
+                <default>false</default>
+                <label>Hanging Sign</label>
+            </value>
+            <value>
+                <fullName>Literature Rack</fullName>
+                <default>false</default>
+                <label>Literature Rack</label>
+            </value>
+            <value>
+                <fullName>Pedestal</fullName>
+                <default>false</default>
+                <label>Pedestal</label>
+            </value>
+            <value>
+                <fullName>Turnkey Booth Solution</fullName>
+                <default>false</default>
+                <label>Turnkey Booth Solution</label>
+            </value>
+            <value>
+                <fullName>WISPA 10x10</fullName>
+                <default>false</default>
+                <label>WISPA 10x10</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

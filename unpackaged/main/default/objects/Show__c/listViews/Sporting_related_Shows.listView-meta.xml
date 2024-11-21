@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Sporting_related_Shows</fullName>
+    <booleanFilter>1 and 2</booleanFilter>
+    <columns>NAME</columns>
+    <columns>Show_ID__c</columns>
+    <columns>Account__c</columns>
+    <columns>Exhibition_Provider__c</columns>
+    <columns>Exhibition_Expiration_Date__c</columns>
+    <columns>Show_Type__c</columns>
+    <columns>Sub_Type__c</columns>
+    <columns>Sales_Person__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Show_Type__c</field>
+        <operation>contains</operation>
+        <value>Sporting</value>
+    </filters>
+    <filters>
+        <field>RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Show__c.Tradeshow</value>
+    </filters>
+    <label>Sporting related Shows</label>
+    <language>en_US</language>
+</ListView>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>AV_Content_Mangement_Company_Required</fullName>
+    <active>true</active>
+    <description>Select &quot;Yes&quot; Content Management makes Content Management Company field Required</description>
+    <errorConditionFormula>AND(ISPICKVAL( Content_Management__c ,&quot;Yes&quot;),ISPICKVAL (Content_Management_Company__c,&quot;&quot; ), NOT($Profile.Name = &quot;GES Administrator Interface&quot;))</errorConditionFormula>
+    <errorDisplayField>Content_Management_Company__c</errorDisplayField>
+    <errorMessage>Please fill out the Content Management Company. Content Management Company is required when you choose Yes for Content Management.</errorMessage>
+</ValidationRule>

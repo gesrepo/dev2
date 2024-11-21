@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Exhibition_Opportunity__c</fullName>
+    <deleteConstraint>Restrict</deleteConstraint>
+    <inlineHelpText>Please link this to the Exhibition Opportunity</inlineHelpText>
+    <label>Exhibition Opportunity</label>
+    <lookupFilter>
+        <active>true</active>
+        <errorMessage>You must select an Exhibition Opportunity</errorMessage>
+        <filterItems>
+            <field>Opportunity.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>EMEA - Exhibition</value>
+        </filterItems>
+        <infoMessage>Please select the relevant Exhibition Opportunity</infoMessage>
+        <isOptional>false</isOptional>
+    </lookupFilter>
+    <referenceTo>Opportunity</referenceTo>
+    <relationshipLabel>Top Specs</relationshipLabel>
+    <relationshipName>Top_Specs</relationshipName>
+    <required>true</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

@@ -1,0 +1,15 @@
+<apex:page standardController="GC_Design_Request_Form_Budget__c" tabStyle="GC_Design_Request_Form_Budget__c">
+    <apex:form id="myForm">
+        <apex:pagemessages />
+        <apex:detail subject="{!GC_Design_Request_Form_Budget__c.Id}" relatedList="true" inlineEdit="true" title="true"/>
+    </apex:form>
+    <script language="JavaScript" type="text/javascript">
+    var allTdTags = document.getElementsByTagName('td');
+    for (var i = 0; i < allTdTags.length; i++) {
+
+        if (allTdTags[i].className == 'pbButton') {
+            document.getElementsByName('piSubmit')[0].style.display = "none";
+        }
+    }
+    </script>
+</apex:page>

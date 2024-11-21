@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Portfolio__c</fullName>
+    <inlineHelpText>Is this Account tied to a Portfolio?</inlineHelpText>
+    <label>Portfolio</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Type</controllingField>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Yes</fullName>
+                <default>false</default>
+                <label>Yes</label>
+            </value>
+            <value>
+                <fullName>No</fullName>
+                <default>true</default>
+                <label>No</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Industry Associate</controllingFieldValue>
+            <controllingFieldValue>Convention Center</controllingFieldValue>
+            <controllingFieldValue>Hotel</controllingFieldValue>
+            <controllingFieldValue>Competitor</controllingFieldValue>
+            <controllingFieldValue>Agency</controllingFieldValue>
+            <controllingFieldValue>Vendor</controllingFieldValue>
+            <controllingFieldValue>Association</controllingFieldValue>
+            <controllingFieldValue>Event Management</controllingFieldValue>
+            <controllingFieldValue>Corporation</controllingFieldValue>
+            <controllingFieldValue>Analyst</controllingFieldValue>
+            <controllingFieldValue>Other Facility Types</controllingFieldValue>
+            <controllingFieldValue>Contractor Competitor</controllingFieldValue>
+            <controllingFieldValue>Partner</controllingFieldValue>
+            <controllingFieldValue>Prospect</controllingFieldValue>
+            <controllingFieldValue>Investor</controllingFieldValue>
+            <controllingFieldValue>Reseller</controllingFieldValue>
+            <controllingFieldValue>Customer</controllingFieldValue>
+            <controllingFieldValue>Independent Organizer</controllingFieldValue>
+            <controllingFieldValue>Show Management</controllingFieldValue>
+            <valueName>No</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Portfolio</controllingFieldValue>
+            <valueName>Yes</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

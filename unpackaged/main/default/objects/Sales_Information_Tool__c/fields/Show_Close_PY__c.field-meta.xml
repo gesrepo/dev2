@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Show_Close_PY__c</fullName>
+    <description>Show Close Date on Show Opportunity Occurrence</description>
+    <formula>Occurrence_for_Plan__r.Show_Close_Date__c</formula>
+    <label>Show Close</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Date</type>
+</CustomField>

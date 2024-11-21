@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Customer_Type__c</fullName>
+    <label>Customer Type</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Carrier</fullName>
+                <default>false</default>
+                <label>Carrier</label>
+            </value>
+            <value>
+                <fullName>EAC</fullName>
+                <default>false</default>
+                <label>EAC</label>
+            </value>
+            <value>
+                <fullName>Exhibitor</fullName>
+                <default>false</default>
+                <label>Exhibitor</label>
+            </value>
+            <value>
+                <fullName>GES</fullName>
+                <default>false</default>
+                <label>GES</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>Third Party</fullName>
+                <default>false</default>
+                <label>Third Party</label>
+            </value>
+            <value>
+                <fullName>Stand Contractor</fullName>
+                <default>false</default>
+                <label>Stand Contractor</label>
+            </value>
+            <value>
+                <fullName>Organiser</fullName>
+                <default>false</default>
+                <label>Organiser</label>
+            </value>
+            <value>
+                <fullName>Service Partner (GES)</fullName>
+                <default>false</default>
+                <label>Service Partner (GES)</label>
+            </value>
+            <value>
+                <fullName>Show Management</fullName>
+                <default>false</default>
+                <label>Show Management</label>
+            </value>
+            <value>
+                <fullName>Non-Tradeshow</fullName>
+                <default>false</default>
+                <label>Non-Tradeshow</label>
+            </value>
+            <value>
+                <fullName>SMS Message</fullName>
+                <default>false</default>
+                <label>SMS Message</label>
+            </value>
+            <value>
+                <fullName>SMS Message - Open</fullName>
+                <default>false</default>
+                <label>SMS Message - Open</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Pre_show_Live_Chat__c</fullName>
+    <label>Pre- show  Live Chat</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Inaccurate advice</fullName>
+                <default>false</default>
+                <label>Inaccurate advice</label>
+            </value>
+            <value>
+                <fullName>Technical issues</fullName>
+                <default>false</default>
+                <label>Technical issues</label>
+            </value>
+            <value>
+                <fullName>Slow to respond</fullName>
+                <default>false</default>
+                <label>Slow to respond</label>
+            </value>
+            <value>
+                <fullName>Unprofessional service</fullName>
+                <default>false</default>
+                <label>Unprofessional service</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

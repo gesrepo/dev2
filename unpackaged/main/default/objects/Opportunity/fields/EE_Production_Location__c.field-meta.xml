@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>EE_Production_Location__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(OR(ISNULL(Job_Number__c),ISBLANK(Job_Number__c)),
+IF(OR(ISNULL(Show_Occurrence__c),ISBLANK(Show_Occurrence__c)),IF(OR(ISNULL(Non_Show__c),ISBLANK(Non_Show__c)),&#39;&#39;,TEXT(Non_Show__r.Production_Location__c)),TEXT(Show_Occurrence__r.Production_Location__c)), 
+IF(MID(Job_Number__c, 2, 2) = &quot;11&quot;, &#39;110- Las Vegas&#39;,
+IF(MID(Job_Number__c, 2, 2) = &quot;14&quot;, &#39;140- Salt Lake City&#39;,
+IF(MID(Job_Number__c, 2, 2) = &quot;15&quot;, &#39;150- Reno&#39;,
+IF(MID(Job_Number__c, 2, 2) = &quot;16&quot;, &#39;160- Denver&#39;,
+IF(MID(Job_Number__c, 2, 2) = &quot;17&quot;, &#39;170- Phoenix&#39;,
+IF(MID(Job_Number__c, 2, 2) = &quot;21&quot;, &#39;214- Glendale&#39;,
+IF(MID(Job_Number__c, 2, 2) = &quot;22&quot;, &#39;220- Los Angeles, CA&#39;,
+IF(MID(Job_Number__c, 2, 2) = &quot;23&quot;, &#39;230- GES Corporate Events&#39;,
+IF(MID(Job_Number__c, 2, 2) = &quot;24&quot;, &#39;240- San Francisco, San Jose&#39;,
+IF(MID(Job_Number__c, 2, 2) = &quot;25&quot;, &#39;250- San Diego&#39;,
+IF(MID(Job_Number__c, 2, 2) = &quot;27&quot;, &#39;270- Corporate Events (Marketing Dept only)&#39;,
+IF(MID(Job_Number__c, 2, 2) = &quot;31&quot;, &#39;310- Construction Depot&#39;,
+IF(MID(Job_Number__c, 2, 2) = &quot;42&quot;, &#39;420- Austin, Dallas, Houston, San Antonio&#39;,
+IF(MID(Job_Number__c, 2, 2) = &quot;46&quot;, &#39;460 - Calgary, Canada&#39;,
+IF(MID(Job_Number__c, 2, 2) = &quot;47&quot;, &#39;470 - Edmonton, Canada&#39;,
+IF(MID(Job_Number__c, 2, 2) = &quot;48&quot;, &#39;480- Montreal, Canada - ESS&#39;,
+IF(MID(Job_Number__c, 2, 2) = &quot;51&quot;, &#39;510- Atlanta&#39;,
+IF(MID(Job_Number__c, 2, 2) = &quot;52&quot;, &#39;520- Florida&#39;,
+IF(MID(Job_Number__c, 2, 2) = &quot;53&quot;, &#39;530- New Orleans&#39;,
+IF(MID(Job_Number__c, 2, 2) = &quot;61&quot;, &#39;610- Portland, Seattle&#39;,
+IF(MID(Job_Number__c, 2, 2) = &quot;71&quot;, &#39;710- Chicago, Cleveland, Milwaukee, St. Louis&#39;,
+IF(MID(Job_Number__c, 2, 2) = &quot;79&quot;, &#39;794- Minneapolis&#39;,
+IF(MID(Job_Number__c, 2, 2) = &quot;81&quot;, &#39;810- New York &amp; Boston&#39;,
+IF(MID(Job_Number__c, 2, 2) = &quot;83&quot;, &#39;830-DC, Philadelphia&#39;,
+IF(MID(Job_Number__c, 2, 2) = &quot;85&quot;, &#39;854- Baltimore&#39;,
+IF(MID(Job_Number__c, 2, 2) = &quot;89&quot;, &#39;890- Toronto, Canada&#39;,
+IF(MID(Job_Number__c, 2, 2) = &quot;90&quot;, &#39;904- Corporate&#39;,
+IF(MID(Job_Number__c, 2, 2) = &quot;94&quot;, &#39;944- National-Intl&#39;,
+IF(MID(Job_Number__c, 2, 2) = &quot;99&quot;, &#39;996- Intercompany E&amp;E Projects&#39;,
+NULL))))))))))))))))))))))))))))))</formula>
+    <label>E&amp;E Production Location</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

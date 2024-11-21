@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Case_Lock_Closed</fullName>
+    <active>true</active>
+    <description>Prevent edits to Case when status is Closed</description>
+    <errorConditionFormula>IF(
+AND(
+NOT(ISCHANGED(LastModifiedDate)),
+OR(
+AND(ISCHANGED(Status), ISPICKVAL(PRIORVALUE(Status), &#39;Closed&#39;)), AND(NOT(ISCHANGED(Status)),ISPICKVAL(Status, &#39;Closed&#39;))
+), 
+NOT(OR( $User.Manage_Closed_Case__c, $Profile.Name = &#39;System Administrator&#39;, $Profile.Name = &#39;GES EMEA Service&#39;, $Profile.Name = &#39;GES EMEA Service Manager&#39;, $Profile.Name = &#39;GES EMEA Service Supervisor&#39;, $Profile.Name = &#39;GES EMEA Service Onsite Contractor&#39;, $Profile.Name = &#39;GES EMEA Service Onsite Contractor 3rd party&#39;, $Profile.Name = &#39;EMEA Operations/Account Mgmt&#39;, $Profile.Name = &#39;GES EMEA Service Onsite&#39;, $Profile.Name = &#39;SOP Interface&#39; , $Profile.Name = &#39;GES Service&#39;, $Profile.Name = &#39;Digital Products/IT Admin&#39;, $Profile.Name =&#39;GES Interface&#39;))
+),
+true,
+false
+)</errorConditionFormula>
+    <errorMessage>You do not have sufficient privileges to modify closed case(s).</errorMessage>
+</ValidationRule>

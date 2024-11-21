@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Facility_Name_or_Shipping_Name_Required</fullName>
+    <active>false</active>
+    <errorConditionFormula>OR( 
+LEN( Facility__c)  = 0 &amp;&amp; LEN(Name) = 0
+&amp;&amp;NOT 
+(OR($Profile.Name = &quot;System Administrator&quot;, 
+$User.Id = &quot;00540000003NbAFAA0&quot;, 
+$User.Id = &quot;0051W000004H7uHQAS&quot;)) /*Connie Masters and Shelly Barnes for AV Non-shows */ 
+
+
+)</errorConditionFormula>
+    <errorMessage>Please fill in Facility or Show Name</errorMessage>
+</ValidationRule>

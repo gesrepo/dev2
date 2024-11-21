@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>EMEA_SR_Enhancements_Case</fullName>
+    <filterScope>Queue</filterScope>
+    <label>EMEA SR Enhancements</label>
+    <queue>EMEA_SR_Enhancements</queue>
+    <sharedTo>
+        <allInternalUsers />
+    </sharedTo>
+</ListView>

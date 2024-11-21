@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CA_PreventCancellation</fullName>
+    <active>true</active>
+    <description>Validation to prevent activity cancellation if main event is cancelled</description>
+    <errorConditionFormula>AND( Cancelled__c = false,
+Event__r.Event_Cancelled__c =true)</errorConditionFormula>
+    <errorDisplayField>Cancelled__c</errorDisplayField>
+    <errorMessage>You can not Un-Cancel Sponsorship details considering Main Event already cancelled.</errorMessage>
+</ValidationRule>

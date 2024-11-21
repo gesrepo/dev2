@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Booth__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <inlineHelpText>Please select the booth record this relates to</inlineHelpText>
+    <label>Booth</label>
+    <lookupFilter>
+        <active>true</active>
+        <filterItems>
+            <field>Oracle_Show_Booth__c.Show_Occurrence__c</field>
+            <operation>equals</operation>
+            <valueField>$Source.Opportunity__c</valueField>
+        </filterItems>
+        <isOptional>false</isOptional>
+    </lookupFilter>
+    <referenceTo>Oracle_Show_Booth__c</referenceTo>
+    <relationshipLabel>Testimonials</relationshipLabel>
+    <relationshipName>Testimonials</relationshipName>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

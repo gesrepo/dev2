@@ -1,0 +1,214 @@
+<apex:page standardController="GC_GES_Order_Task__c" extensions="GC_GESOrderTaskEditController" showHeader="true" sidebar="true" action="{!loadAction}" id="gotPage">
+  <apex:stylesheet value="{!URLFOR($Resource.GC_Assets, 'GC_Assets/css/GC_PageStyles.css')}" />
+  <apex:includeScript value="https://code.jquery.com/jquery-1.10.2.js" />
+  <apex:includeScript value="https://code.jquery.com/ui/1.11.4/jquery-ui.js" />
+  <apex:styleSheet value="https://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css" />
+  <script>
+  var $j = jQuery.noConflict();
+
+
+  $j(function() {
+    $j('.dateTimePicker').datetimepicker({
+      format: 'm/d/Y h:i A',
+      formatTime: 'h:i A',
+      formatDate: 'm/d/Y',
+      closeOnDateSelect: true
+    });
+  });
+
+  var originalOnLoad = window.onload;
+  window.onload = loadSession;
+
+  function loadSession() {
+    originalOnLoad();
+    SessionLoad_JS();
+  }; 
+
+  </script>
+  <apex:form id="gotForm">
+    <!--apex:sectionHeader title="GES Order Task" subtitle="{!got.Name}"></apex:sectionHeader--> <!--commented by Sajid on 04/05/23 Ticket-1209 -->
+    <apex:sectionHeader title="GES Item" subtitle="{!got.Name}"></apex:sectionHeader> <!-- added by Sajid on 04/05/23 Ticket-1209 -->
+    <apex:pageMessages id="messages" />
+    <apex:outputPanel rendered="{!isActive}">
+      <br/>
+      <br/>
+      <apex:outputLink value="/{!got.Order__c}" rendered="{!isActive}">Return to Order</apex:outputLink>
+      <br/>
+      <br/>
+      <!--apex:outputLink value="/{!got.Id}" rendered="{!isActive}">Return to Order Task</apex:outputLink--> <!--commented by Sajid on 04/05/23 Ticket-1209 -->
+      <apex:outputLink value="/{!got.Id}" rendered="{!isActive}">Return to Item</apex:outputLink> <!-- added by Sajid on 04/05/23 Ticket-1209 -->
+    </apex:outputPanel>
+    <apex:pageBlock id="mainPageBlock" rendered="{!!isActive}">
+      <apex:actionFunction action="{!sessionLoad}" name="SessionLoad_JS" status="loadStatus" reRender="statuses" rendered="{!!isRevision}" oncomplete="ProductsLoad_JS();" />
+      <apex:actionFunction action="{!coreApi.obtainProducts}" name="ProductsLoad_JS" status="productsStatus" reRender="statuses, messages, itemsPageBlock" oncomplete="ReloadCkEditor();" />
+      <apex:outputPanel id="statuses">
+        <apex:actionStatus id="loadStatus">
+          <apex:facet name="start">
+            <c:GC_StatusSpinner statusMessage="Connecting to Web Service." />
+          </apex:facet>
+        </apex:actionStatus>
+        <apex:actionStatus id="productsStatus">
+          <apex:facet name="start">
+            <c:GC_StatusSpinner statusMessage="Obtaining Products." />
+          </apex:facet>
+        </apex:actionStatus>
+        <apex:actionStatus id="saveStatus">
+          <apex:facet name="start">
+            <c:GC_StatusSpinner statusMessage="Saving." />
+          </apex:facet>
+        </apex:actionStatus>
+        <apex:actionStatus id="saveApproveStatus">
+          <apex:facet name="start">
+            <c:GC_StatusSpinner statusMessage="Saving and Setting to Approve." />
+          </apex:facet>
+        </apex:actionStatus>
+        <apex:actionStatus id="cancelStatus">
+          <apex:facet name="start">
+              <!--c:GC_StatusSpinner statusMessage="Cancelling Edit Task." /--> <!--commented by Sajid on 04/05/23 Ticket-1209 -->
+            <c:GC_StatusSpinner statusMessage="Cancelling Edit Item." /> <!-- added by Sajid on 04/05/23 Ticket-1209 -->
+          </apex:facet>
+        </apex:actionStatus>
+        <apex:actionStatus id="orderStatus">
+          <apex:facet name="start">
+            <c:GC_StatusSpinner statusMessage="Changing Order." />
+          </apex:facet>
+        </apex:actionStatus>
+        <apex:actionStatus id="selectCategoryStatus">
+          <apex:facet name="start">
+            <c:GC_StatusSpinner statusMessage="Selecting Parent Category" />
+          </apex:facet>
+        </apex:actionStatus>
+          <apex:actionStatus id="selectChildCategoryStatus">
+          <apex:facet name="start">
+            <c:GC_StatusSpinner statusMessage="Selecting Child Category" />
+          </apex:facet>
+        </apex:actionStatus>
+        <apex:actionStatus id="selectItemStatus">
+          <apex:facet name="start">
+            <c:GC_StatusSpinner statusMessage="Selecting Item" />
+          </apex:facet>
+        </apex:actionStatus>
+      </apex:outputPanel>
+      <apex:pageBlockButtons >
+        <apex:commandButton value="Save" action="{!saveAction}" title="Saves the Task." reRender="statuses, messages, itemOptionsSections" status="saveStatus" oncomplete="ReloadCkEditor();"></apex:commandButton>
+        <apex:commandButton value="Save and Approve" action="{!saveAndApproveAction}" title="Saves the Task and Performs validation on Required fields for Submitting, Upon successful validation, sets the Status to Approved" reRender="statuses, messages, itemOptionsSections" status="saveApproveStatus" oncomplete="ReloadCkEditor();"></apex:commandButton>
+        <apex:commandButton value="Save, Approve, and New" action="{!saveAndApproveAndNewAction}" title="Saves the Task and Performs validation on Required fields for Submitting, Upon successful validation, sets the Status to Approved and redirects to page to create a new task" reRender="statuses, messages, itemOptionsSections" status="saveApproveStatus" oncomplete="ReloadCkEditor();"></apex:commandButton>
+        <apex:commandButton value="Cancel" action="{!cancelAction}" reRender="statuses, messages" status="cancelStatus"></apex:commandButton>
+      </apex:pageBlockButtons>
+      <apex:pageBlockSection title="Information">
+        <apex:pageBlockSectionItem >
+          <apex:outputText value="Order" />
+          <apex:actionRegion >
+            <apex:outputField value="{!got.Order__c}" rendered="{!got.Order__c != null}" />
+            <apex:inputField value="{!got.Order__c}" rendered="{!got.Order__c == null}">
+              <apex:actionSupport event="onchange" reRender="statuses, messages, itemsPageBlock" action="{!orderChanged}" status="orderStatus" oncomplete="ReloadCkEditor();" />
+            </apex:inputField>
+          </apex:actionRegion>
+        </apex:pageBlockSectionItem>
+        <apex:outputField value="{!got.Name}" />
+        <apex:outputField value="{!got.Status__c}" />
+        <apex:outputField value="{!got.Submitted_Date__c}" />
+        <apex:outputField value="{!got.Revision__c}" />
+        <apex:outputField value="{!got.Previous_Revision__c}" />
+        <apex:outputField value="{!got.Last_Revision__c}" />
+      </apex:pageBlockSection>
+      <apex:pageBlockSection columns="1">
+        <c:GC_CustomRTF targetclass="showManagement" rendered="true" toolbar="full" uniqueid="showManagement" />
+        <apex:inputTextarea styleClass="showManagement ckeditor" richText="false" value="{!got.Show_Management_Field__c}" style="width:100%" />
+      </apex:pageBlockSection>
+      <apex:pageBlockSection title="Department">
+        <apex:selectList id="departmentSelect" value="{!got.Department__c}" size="1" styleClass="slds-select">
+          <apex:selectOptions value="{!departmentAttributes}"></apex:selectOptions>
+        </apex:selectList>
+        <apex:inputField value="{!got.Budget_Code__c}" />
+      </apex:pageBlockSection>
+      <c:GC_ItemOptionsArea gotAttribute="{!got}" venueOptions="{!venueLocations}" defaultDeliveryTimeInput="{!referenceOrder.Delivery_Date_Time__c}" defaultCompletionTimeInput="{!referenceOrder.Completion_Date_Time__c}" defaultRemovalTimeInput="{!referenceOrder.Removal_Date_Time__c}">
+      </c:GC_ItemOptionsArea>
+      <apex:outputPanel id="itemsPageBlock">
+        <apex:pageBlockSection rendered="{!coreApi.selectedBooth != null && !isRevision}" title="Item Selection" columns="3">
+          <!-- <apex:pageBlockSectionItem helpText="Select the item category from this list.">
+            <apex:outputLabel value="Select Item Category" />
+            <apex:selectList id="categorySelect" value="{!coreApi.selectedCategory}" size="1">
+              <apex:selectOptions value="{!coreApi.productCategories}" rendered="{!coreApi.selectedBooth != null}"></apex:selectOptions>
+              <apex:actionSupport action="{!coreApi.selectCategories}" event="onchange" reRender="statuses, messages, itemsPageBlock" status="selectCategoryStatus" oncomplete="ReloadCkEditor();" />
+            </apex:selectList>
+          </apex:pageBlockSectionItem> -->
+          <apex:pageBlockSectionItem helpText="Select the item category from this list.">
+            <apex:outputLabel value="Category" />
+            <apex:selectList id="categorySelect" value="{!coreApi.selectedParentCategory}" size="1">
+              <apex:selectOptions value="{!coreApi.productCategories}" rendered="{!coreApi.selectedBooth != null}"></apex:selectOptions>
+              <apex:actionSupport action="{!coreApi.selectCategories}" event="onchange" reRender="statuses, messages, itemsPageBlock" status="selectCategoryStatus" oncomplete="ReloadCkEditor();" />
+            </apex:selectList>
+          </apex:pageBlockSectionItem>
+          <apex:pageBlockSectionItem helpText="Select the item category from this list.">
+            <apex:outputLabel value="Sub-Category" />
+            <apex:selectList id="categorySelect" value="{!coreApi.selectedChildCategory}" size="1">
+              <apex:selectOptions value="{!coreApi.childCategories}" rendered="{!coreApi.selectedBooth != null}"></apex:selectOptions>
+              <apex:actionSupport action="{!coreApi.selectChildCategories}" event="onchange" reRender="statuses, messages, itemsPageBlock" status="selectChildCategoryStatus" oncomplete="ReloadCkEditor();" />
+            </apex:selectList>
+          </apex:pageBlockSectionItem>
+          <apex:pageBlockSectionItem helpText="Select the item to order from this list.">
+            <apex:outputLabel value="Select Item" />
+            <apex:selectList id="itemSelect" value="{!coreApi.selectedItemNumberAndDescription}" size="1">
+            <!--  <apex:selectOptions value="{!coreApi.ProductList}" rendered="{!coreApi.selectedBooth != null}"></apex:selectOptions> -->
+              <apex:selectOptions value="{!coreApi.ProductList.0}" rendered="{!coreApi.selectedBooth != null}"></apex:selectOptions>
+              <apex:selectOptions value="{!coreApi.ProductList.1}" rendered="{!coreApi.selectedBooth != null}"></apex:selectOptions>
+              <apex:actionSupport action="{!coreApi.selectItem}" event="onchange" reRender="statuses, messages, itemsPageBlock" status="selectItemStatus" oncomplete="ReloadCkEditor();" />
+            </apex:selectList>
+          </apex:pageBlockSectionItem>
+          <apex:image url="{!coreApi.selectedImagePath}" />
+        </apex:pageBlockSection>
+        <apex:pageBlockSection title="Item Details" id="renu">
+          <apex:outputPanel rendered="{!isRevision}">
+            * The item can not be edited for this task since this is a revision of a previous task.
+          </apex:outputPanel>
+          <apex:pageBlockSectionItem rendered="{!isRevision}" />
+          <apex:outputField value="{!got.Description__c}" />
+          <apex:outputField value="{!got.Price__c}" />
+          <apex:outputField value="{!got.UOM__c}" />
+          <apex:outputField value="{!got.Booth_Area_Discount__c}" />
+          <apex:outputField value="{!got.Item_Number__c}" />
+         <apex:pageBlockSectionItem >
+                              <apex:outputLabel value="Booth Area Discount Override" />
+                            <apex:actionRegion >
+                                <apex:inputField value="{!got.Booth_Area_Discount_Override__c}" >
+                                    <apex:actionSupport event="onchange" action="{!clearDiscountValues}" reRender="renu"/>
+                                </apex:inputField>
+                            </apex:actionRegion>
+                            </apex:pageBlockSectionItem> 
+                            
+                           <apex:pageBlockSectionItem >                         
+                              <apex:outputLabel value="Discount Reason Code" rendered="{!got.Booth_Area_Discount_Override__c != null}"/>
+                             <apex:actionRegion >
+                                 <apex:inputField value="{!got.Discount_Reason_Code__c}" rendered="{!got.Booth_Area_Discount_Override__c != null}" required="true" />
+                        </apex:actionRegion>
+                       </apex:pageBlockSectionItem>
+                       
+                        <apex:pageBlockSectionItem >                         
+                              <apex:outputLabel value="Discount Reason Text" rendered="{!got.Booth_Area_Discount_Override__c != null}"/>
+                             <apex:actionRegion >
+                                 <apex:inputField id="discountReasonText" value="{!got.Discount_Reason_Text__c}" rendered="{!got.Booth_Area_Discount_Override__c != null}" required="true"/>
+                        </apex:actionRegion>
+                       </apex:pageBlockSectionItem>
+          <apex:outputField value="{!got.Item_Template__c}" />
+          <apex:inputField value="{!got.File_Reference_Link__c}" style="width:100%" />
+          <apex:inputField value="{!got.User_Item_Description__c}" style="width:100%" />
+          <apex:inputField value="{!got.New_Price__c}" rendered="{!got.Price__c == null}"/>
+          <apex:image url="{!coreApi.selectedImagePath}" rendered="{!isRevision}" />
+        </apex:pageBlockSection>
+        <apex:outputPanel id="itemOptionsSections">
+          <c:GC_ItemOptions gotAttribute="{!got}" coreApiAttribute="{!coreApi}" designElementTaskOptions="{!designElementTasks}" materialOptions="{!materialAttributes}" activeGemStructureTaskOptions="{!activeGemStructureTasks}"></c:GC_ItemOptions>
+        </apex:outputPanel>
+        <apex:pageBlockSection title="Remarks">
+          <apex:inputField value="{!got.Invoice_Remarks__c}" style="width:100%" />
+          <apex:inputField value="{!got.Details_To_Invoice_Remarks__c}" />
+          <apex:inputField value="{!got.Show_Site_Remarks__c}" style="width:100%" />
+          <apex:inputField value="{!got.Details_To_Show_Site_Remarks__c}" />
+          <apex:inputField value="{!got.Production_Remarks__c}" style="width:100%" />
+          <apex:inputField value="{!got.Details_To_Production_Remarks__c}" />
+          <apex:inputField value="{!got.Item_Type_Remarks__c}" style="width:100%" />
+        </apex:pageBlockSection>
+      </apex:outputPanel>
+    </apex:pageBlock>
+  </apex:form>
+</apex:page>

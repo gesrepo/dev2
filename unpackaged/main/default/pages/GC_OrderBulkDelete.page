@@ -1,0 +1,135 @@
+<apex:page showHeader="true" sidebar="true" standardController="GC_Order__c" recordSetVar="tasks" extensions="GC_OrderBulkDeleteController">
+    <head>
+        <apex:includeScript value="{!$Resource.jQuery}" />
+        <apex:stylesheet value="{!URLFOR($Resource.Lightning_Design_System, 'assets/styles/salesforce-lightning-design-system.min.css')}" />
+        <apex:stylesheet value="{!URLFOR($Resource.GC_Assets, 'GC_Assets/css/GC_Styles.css')}" />
+        <apex:includeScript value="{!URLFOR($Resource.GC_Assets, 'GC_Assets/js/GC_init.js')}" />
+        <script src="https://cdn.jsdelivr.net/alasql/0.3/alasql.min.js"></script>
+        <style type="text/css">
+        .selectionDiv {
+            margin: 20px !important;
+        }
+
+        .itemTable td {
+            padding: 3px;
+        }
+
+        .columnHeader {
+            padding: 5px;
+        }
+
+        .pageButtons {
+            width: 300px;
+        }
+
+        .selectAllBox {
+            float: right;
+        }
+        </style>
+        <script>
+            $("document").ready( function () {
+                    $("#dateSelectionDialog").show();
+                });
+                
+            function closeItemPopup()
+                {
+                    console.log('Inside selectDates');                
+                    $("#dateSelectionDialog").hide();
+                    returnToList();
+                    return false; 
+                } 
+                function deleteAndReturn()
+                {
+                    console.log('Inside selectDates');                
+                    $("#dateSelectionDialog").hide();
+                    deleteSelected();
+                    //returnToList();
+                    return false;
+                }
+                
+            //setTimeout(function(){
+            //  returnToList(); 
+            //  }, 2000);   
+        </script>
+        
+    </head>
+    <apex:form >
+        <apex:actionFunction name="deleteSelected" action="{!bulkDelete}" rerender="ordersTable" status="deleting" />
+        <apex:actionFunction name="returnToList" action="{!backAction}" rerender="none" />
+        <apex:pageMessages id="messages" />
+        <apex:actionStatus id="deleting">
+        <apex:facet name="start">
+          <c:GC_StatusSpinner statusMessage="Deleting orders" />
+        </apex:facet>
+      </apex:actionStatus>
+        <apex:pageBlock >
+            <apex:outputPanel id="ordersTable" >
+                <apex:pageBlockSection id="pbs" title="Status of orders after deletion" columns="2">
+                    <apex:pageBlockTable value="{!resultList}" var="dr" styleClass="itemTable" id="itemTable1" headerClass="columnHeader">
+                        <apex:column >
+                            <apex:facet name="header">GES Order ID</apex:facet>
+                            <apex:outputText value="{!dr.name}" />
+                        </apex:column>
+                        <apex:column >
+                            <apex:facet name="header">Status</apex:facet>
+                            <apex:outputText value="{!dr.status}" />
+                        </apex:column>
+                    </apex:pageBlockTable>
+                </apex:pageBlockSection>
+                <apex:commandButton value="Back" action="{!backAction}" styleClass="pageButton" reRender="pbs, messages" />
+            </apex:outputPanel>
+        </apex:pageBlock>
+        <div class="slds">
+            <div id="dateSelectionDialog"  align = "center" style="display:none;">
+            <apex:outputPanel id="HomeGesPanel" rendered="{!orders.size>0}" >
+                <div role="alertdialog" class="slds-modal slds-fade-in-open slds-modal--prompt prompt">
+                    <div class="slds-modal__container" style="width:400px;height: 300px;">
+                        <div class="slds-modal__header">
+                               <button class="slds-button slds-modal__close slds-button--icon-inverse prompt_close" title="Close" style="color: #b41955!important;" onclick="closeItemPopup();return false;">
+                                <svg aria-hidden="true" class="slds-button__icon slds-button__icon--large">
+                                    <use href="{!URLFOR($Resource.Lightning_Design_System, '/assets/icons/action-sprite/svg/symbols.svg#close')}"></use>
+                                </svg>
+                                <span class="slds-assistive-text">Close</span>
+                            </button>   
+                           <!-- <h2 class="slds-text-heading--medium" id="prompt-heading-id">Are you sure?</h2>    -->
+                        </div>
+                        <div class="slds-modal__content slds-p-around--medium">
+                            <h3 class="slds-section-title--divider" style="display: inherit;">Are You Sure You Want To Delete These Orders?</h3>                                 
+                            <br/>
+                        </div>  
+                        <div class="slds-modal__footer slds-theme--default">  
+                            <button class="slds-button slds-button--brand gc-teal-button prompt_close" id="closeButton" onclick="deleteAndReturn();return false;" >Confirm</button> 
+                            <button class="slds-button slds-button--brand gc-teal-button prompt_close" id="closeButton" onclick="closeItemPopup();return false;" >Cancel</button> 
+                        </div>
+                    </div>
+                </div>
+                <div class="slds-backdrop slds-backdrop--open prompt"></div>
+            </apex:outputPanel>
+            <apex:outputPanel id="errorPanel" rendered="{!orders.size=0}" >
+                <div role="alertdialog" class="slds-modal slds-fade-in-open slds-modal--prompt prompt">
+                    <div class="slds-modal__container" style="width:400px;height: 300px;">
+                        <div class="slds-modal__header">
+                               <button class="slds-button slds-modal__close slds-button--icon-inverse prompt_close" title="Close" style="color: #b41955!important;" onclick="closeItemPopup();return false;">
+                                <svg aria-hidden="true" class="slds-button__icon slds-button__icon--large">
+                                    <use href="{!URLFOR($Resource.Lightning_Design_System, '/assets/icons/action-sprite/svg/symbols.svg#close')}"></use>
+                                </svg>
+                                <span class="slds-assistive-text">Close</span>
+                            </button>   
+                            <!--    <h2 class="slds-text-heading--medium" id="prompt-heading-id">No Orders Selected</h2>    -->
+                        </div>
+                        <div class="slds-modal__content slds-p-around--medium">
+                            <h3 class="slds-section-title--divider" style="display: inherit;">Please select one or more orders to delete.</h3>                                 
+                            <br/>
+                        </div>  
+                        <div class="slds-modal__footer slds-theme--default">  
+                            <button class="slds-button slds-button--brand gc-teal-button prompt_close" id="closeButton" onclick="closeItemPopup();return false;" >OK</button> 
+                        </div>
+                    </div>
+                </div>
+                <div class="slds-backdrop slds-backdrop--open prompt"></div>
+            </apex:outputPanel>
+            </div>
+        </div>
+        
+    </apex:form>
+</apex:page>

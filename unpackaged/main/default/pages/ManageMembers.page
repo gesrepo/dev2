@@ -1,0 +1,265 @@
+<apex:page standardcontroller="Campaign"  extensions="ManageMembersController" id="mypage">
+<apex:form id="myform">
+
+<apex:sectionHeader title="Campaign" subtitle="Manage Members"/>
+<div class="ptBreadcrumb">
+&nbsp; &nbsp; &nbsp;  « &nbsp; 
+<apex:outputlink styleclass="actionLink" value="/{!campaign.Id}"  > Back to Campaign :  {!Campaign.Name} </apex:outputlink>
+</div>
+<br/>
+
+<apex:includeScript value="/EXT/ext-3.0.0/ext.js" />
+<apex:actionfunction name="saveall" action="{!copyvalueandsave}" />
+    
+<apex:pageblock id="myblock">
+<apex:pageblocksection columns="1">
+
+<apex:panelgrid columns="4" id="filtergrid">
+<apex:outputlabel value="Field" style="font-weight:bold" />
+
+<apex:outputlabel value="Operator" style="font-weight:bold" />
+
+<apex:outputlabel value="Value" style="font-weight:bold" /> 
+<apex:outputtext value="" />
+
+<apex:selectlist value="{!field1}" size="1">
+<apex:selectoptions value="{!fields2}" />
+</apex:selectlist>
+
+
+<apex:selectlist value="{!operator1}" size="1">
+<apex:selectoption itemvalue="" itemlabel="--None--"  />
+<apex:selectoption itemvalue="equals" itemlabel="equals"  />
+<apex:selectoption itemvalue="not equal to"  itemlabel="not equal to"  />
+<apex:selectoption itemvalue="starts with" itemlabel="starts with"   />
+<apex:selectoption itemvalue="contains" itemlabel="contains"   />
+<apex:selectoption itemvalue="does not contain" itemlabel="does not contain" />
+<apex:selectoption itemvalue="less than" itemlabel="less than"  />
+<apex:selectoption itemvalue="greater than"  itemlabel="greater than" />
+<apex:selectoption itemvalue="less or equal" itemlabel="less or equal"  />
+<apex:selectoption itemvalue="greater or equal" itemlabel="greater or equal"  />
+<apex:selectoption itemvalue="includes" itemlabel="includes" />
+<apex:selectoption itemvalue="excludes" itemlabel="excludes" />
+
+</apex:selectlist>
+<apex:inputtext value="{!value1}" />
+<apex:outputlabel value="AND" />
+
+<apex:selectlist value="{!field2}" size="1">
+<apex:selectoptions value="{!fields2}" />
+</apex:selectlist>
+
+
+<apex:selectlist value="{!operator2}" size="1">
+<apex:selectoption itemvalue="" itemlabel="--None--"  />
+<apex:selectoption itemvalue="equals" itemlabel="equals"  />
+<apex:selectoption itemvalue="not equal to"  itemlabel="not equal to"  />
+<apex:selectoption itemvalue="starts with" itemlabel="starts with"   />
+<apex:selectoption itemvalue="contains" itemlabel="contains"   />
+<apex:selectoption itemvalue="does not contain" itemlabel="does not contain" />
+<apex:selectoption itemvalue="less than" itemlabel="less than"  />
+<apex:selectoption itemvalue="greater than"  itemlabel="greater than" />
+<apex:selectoption itemvalue="less or equal" itemlabel="less or equal"  />
+<apex:selectoption itemvalue="greater or equal" itemlabel="greater or equal"  />
+<apex:selectoption itemvalue="includes" itemlabel="includes" />
+<apex:selectoption itemvalue="excludes" itemlabel="excludes" />
+
+</apex:selectlist>
+<apex:inputtext value="{!value2}" />
+<apex:outputlabel value="AND" />
+
+
+<apex:selectlist value="{!field3}" size="1">
+<apex:selectoptions value="{!fields2}" />
+</apex:selectlist>
+
+<apex:selectlist value="{!operator3}" size="1">
+<apex:selectoption itemvalue="" itemlabel="--None--"  />
+<apex:selectoption itemvalue="equals" itemlabel="equals"  />
+<apex:selectoption itemvalue="not equal to"  itemlabel="not equal to"  />
+<apex:selectoption itemvalue="starts with" itemlabel="starts with"   />
+<apex:selectoption itemvalue="contains" itemlabel="contains"   />
+<apex:selectoption itemvalue="does not contain" itemlabel="does not contain" />
+<apex:selectoption itemvalue="less than" itemlabel="less than"  />
+<apex:selectoption itemvalue="greater than"  itemlabel="greater than" />
+<apex:selectoption itemvalue="less or equal" itemlabel="less or equal"  />
+<apex:selectoption itemvalue="greater or equal" itemlabel="greater or equal"  />
+<apex:selectoption itemvalue="includes" itemlabel="includes" />
+<apex:selectoption itemvalue="excludes" itemlabel="excludes" />
+
+</apex:selectlist>
+<apex:inputtext value="{!value3}" />
+<apex:outputlabel value="AND" />
+
+
+<apex:selectlist value="{!field4}" size="1">
+<apex:selectoptions value="{!fields2}" />
+</apex:selectlist>
+
+<apex:selectlist value="{!operator4}" size="1">
+<apex:selectoption itemvalue="" itemlabel="--None--"  />
+<apex:selectoption itemvalue="equals" itemlabel="equals"  />
+<apex:selectoption itemvalue="not equal to"  itemlabel="not equal to"  />
+<apex:selectoption itemvalue="starts with" itemlabel="starts with"   />
+<apex:selectoption itemvalue="contains" itemlabel="contains"   />
+<apex:selectoption itemvalue="does not contain" itemlabel="does not contain" />
+<apex:selectoption itemvalue="less than" itemlabel="less than"  />
+<apex:selectoption itemvalue="greater than"  itemlabel="greater than" />
+<apex:selectoption itemvalue="less or equal" itemlabel="less or equal"  />
+<apex:selectoption itemvalue="greater or equal" itemlabel="greater or equal"  />
+<apex:selectoption itemvalue="includes" itemlabel="includes" />
+<apex:selectoption itemvalue="excludes" itemlabel="excludes" />
+
+</apex:selectlist>
+<apex:inputtext value="{!value4}" />
+<apex:outputlabel value="AND" />
+
+<apex:selectlist value="{!field5}" size="1">
+<apex:selectoptions value="{!fields2}" />
+</apex:selectlist>
+
+<apex:selectlist value="{!operator5}" size="1">
+<apex:selectoption itemvalue="" itemlabel="--None--"  />
+<apex:selectoption itemvalue="equals" itemlabel="equals"  />
+<apex:selectoption itemvalue="not equal to"  itemlabel="not equal to"  /> 
+<apex:selectoption itemvalue="starts with" itemlabel="starts with"   />
+<apex:selectoption itemvalue="contains" itemlabel="contains"   />
+<apex:selectoption itemvalue="does not contain" itemlabel="does not contain" />
+<apex:selectoption itemvalue="less than" itemlabel="less than"  />
+<apex:selectoption itemvalue="greater than"  itemlabel="greater than" />
+<apex:selectoption itemvalue="less or equal" itemlabel="less or equal"  />
+<apex:selectoption itemvalue="greater or equal" itemlabel="greater or equal"  />
+<apex:selectoption itemvalue="includes" itemlabel="includes" />
+<apex:selectoption itemvalue="excludes" itemlabel="excludes" />
+
+</apex:selectlist>
+<apex:inputtext value="{!value5}" />
+<apex:outputtext />
+<apex:outputtext />
+<apex:outputtext />
+<apex:commandlink value="Clear filters" action="{!clearfilters}"  rerender="filtergrid"/>
+
+</apex:panelgrid>
+
+<apex:commandbutton value="Go! " action="{!go}" rerender="tableid" />
+</apex:pageblocksection>
+
+
+<apex:pageblocksection columns="1" id="mysection">
+<apex:outputpanel id="pp">
+<div align="left">
+<apex:commandbutton value="Remove" action="{!remove}" rerender="tableid" />
+
+<apex:selectlist value="{!statusupdate}" size="1">
+<apex:selectOptions value="{!statuses}" />
+
+<apex:actionsupport event="onchange" action="{!changestatus}" rerender="tableid" />
+</apex:selectlist>
+</div>
+
+
+
+
+<div align="right">
+<apex:commandlink value="Edit Columns" styleClass="rightLink" action="{!showcolumns}" rerender="pp" />
+<apex:outputpanel rendered="{!showcolumns}" >
+<div align="right" style="position:absolute;background-color:white;width:1%;right:.5em;z-index:50" >
+<table style="background-color:white">
+<tr>
+<td>
+     <c:multiselectpicklist leftLabel="Available Columns"
+    leftOptions1="{!fields}"
+    rightLabel="Selected Columns" 
+    rightOptions1="{!selectedcolumns}"
+    size="14"
+    width="150px"/>
+    
+</td>
+</tr>
+<tr>
+<td>
+<div class="columnSelectorButtons">
+ <apex:commandbutton value="Save" action="{!savecolumns}" rerender="pp,tableid" />
+    <apex:commandbutton value="Cancel" action="{!cancelcolumns}" rerender="pp" />
+</div>
+</td>
+</tr>
+</table>
+</div>
+</apex:outputpanel>
+</div>
+</apex:outputpanel>
+
+<apex:dynamicComponent componentValue="{!MyPageBlockTable}"/>
+                
+        
+             
+             
+
+</apex:pageblocksection>
+</apex:pageblock>
+<apex:outputpanel id="navigation">
+<div class="bottomNav" >
+                            <div class="paginator">
+                                <span class="left"> <apex:outputText >{!(curin * pagesize)+1-pagesize}-{!IF((curin * pagesize)>noOfRecords, noOfRecords,(curin * pagesize))} of {!noOfRecords}</apex:outputText>
+                                
+                                Showing &nbsp;<apex:inputtext value="{!pagesize}"  maxlength="3" size="3">
+                                <apex:actionsupport event="onchange" rerender="tableid,navigation" action="{!recalculatelines}" />
+                                </apex:inputtext>
+                                 
+                                 &nbsp; records per page
+                                </span> <span class="prevNextLinks"> <span class="prevNext"> 
+                                
+                                <apex:commandlink action="{!first}"
+                                            status="fetchStatus" rerender="tableid,navigation" >
+                                            <img src="/s.gif" class="first" />
+                                        </apex:commandlink> </span> <span class="prevNext"> <apex:commandlink action="{!previos}" status="fetchStatus"
+                                            rerender="tableid,navigation" >
+                                            <img src="/s.gif" class="prev" />
+                                            
+                                        </apex:commandlink> <apex:commandlink value="Previous" status="fetchStatus"
+                                            action="{!previos}" rerender="tableid,navigation" /> </span> <span class="prevNext"> <apex:commandlink value="Next" status="fetchStatus" action="{!next}" rerender="tableid,navigation"
+                                             /> <apex:commandlink action="{!next}" 
+                                            status="fetchStatus" rerender="tableid,navigation">
+                                            <img src="/s.gif" class="next"  />
+                                        </apex:commandlink> </span> <span class="prevNext"> <apex:commandlink action="{!last}" status="fetchStatus"
+                                            rerender="tableid,navigation" >
+                                            <img src="/s.gif" class="last"  />
+                                        </apex:commandlink> </span> </span> <span class="right"> <apex:outputlabel value="Page " /> <apex:outputtext id="theInputText"
+                                        value="{!curin}" /> <apex:outputlabel value=" of {!listsize}" />
+                                </span>
+                                <apex:outputPanel style="color:#4AA02C;font-weight:bold">
+                                    <apex:actionStatus id="fetchStatus" startText="Fetching..." stopText="" />
+                                </apex:outputPanel>
+                            </div>
+                        </div>
+                    </apex:outputpanel> 
+                    <br/>
+       
+</apex:form>
+<script type="text/javascript">
+    function checkmultiselection()
+    {
+        var inputs = document.querySelectorAll("input[type='checkbox']");
+       var checkboxesChecked = [];
+     
+       
+        for (i = 0; i < inputs.length; i++) 
+        { 
+         
+          if (inputs[i].checked) {checkboxesChecked.push(inputs[i]);}
+        }
+        
+        if(checkboxesChecked.length > 0)
+        {
+      
+        if(!confirm('Do you want to update all selected records?'))
+            return false;
+       
+        
+        
+        return true;
+        }
+    }
+    </script>
+</apex:page>

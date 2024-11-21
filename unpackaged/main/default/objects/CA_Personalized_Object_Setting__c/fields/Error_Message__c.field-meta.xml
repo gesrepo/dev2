@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Error_Message__c</fullName>
+    <defaultValue>&quot;An error occurred while saving the record. Please contact your system admin.&quot;</defaultValue>
+    <externalId>false</externalId>
+    <inlineHelpText>Enter the text that you want to be displayed when the record save fails. Leave it blank for default message</inlineHelpText>
+    <label>Error Message</label>
+    <length>255</length>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

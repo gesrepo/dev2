@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Shell_Scheme_System__c</fullName>
+    <inlineHelpText>Please select the Shell scheme from the list. If the selection you require is not listed please email EMEASalesforceAdmin@ges.com</inlineHelpText>
+    <label>Shell Scheme System</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Clad Shell (MDF Fascia and MDF Poles)</fullName>
+                <default>false</default>
+                <label>Clad Shell (MDF Fascia and MDF Poles)</label>
+            </value>
+            <value>
+                <fullName>Edge 46mm</fullName>
+                <default>false</default>
+                <label>Edge 46mm</label>
+            </value>
+            <value>
+                <fullName>Edge 91mm</fullName>
+                <default>false</default>
+                <label>Edge 91mm</label>
+            </value>
+            <value>
+                <fullName>GES Complete</fullName>
+                <default>false</default>
+                <label>GES Complete</label>
+            </value>
+            <value>
+                <fullName>Hybrid</fullName>
+                <default>false</default>
+                <label>Hybrid</label>
+            </value>
+            <value>
+                <fullName>Octanorm</fullName>
+                <default>false</default>
+                <label>Octanorm</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>Sodem (Not GES Complete)</fullName>
+                <default>false</default>
+                <label>Sodem (Not GES Complete)</label>
+            </value>
+            <value>
+                <fullName>Hestex (by Hesta)</fullName>
+                <default>false</default>
+                <label>Hestex (by Hesta)</label>
+            </value>
+            <value>
+                <fullName>Traditional</fullName>
+                <default>false</default>
+                <label>Traditional</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

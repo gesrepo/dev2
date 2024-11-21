@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Check_VAT_Number_Button</fullName>
+    <availability>online</availability>
+    <description>Calls the VIAD public service stack VAT service.</description>
+    <displayType>button</displayType>
+    <linkType>javascript</linkType>
+    <masterLabel>Check VAT Number</masterLabel>
+    <openType>onClickJavaScript</openType>
+    <protected>false</protected>
+    <url>{!REQUIRESCRIPT(&quot;/soap/ajax/32.0/connection.js&quot;)};
+{!REQUIRESCRIPT(&quot;/soap/ajax/32.0/apex.js&quot;)};
+
+var vatNumberValue = &#39;{!Account.Vat_Number__c}&#39;;
+var vatCountryCode = &#39;{!Account.VAT_Number_Country_Code__c}&#39;;
+
+var result = getResult();
+alert(&#39;Vat number is: &#39; + result);
+
+window.location.reload();
+
+function getResult(){
+
+    //if (vatCountryCode.length &gt; 0) {
+
+        if (vatNumberValue.length == 0) {
+            alert(&#39;Please enter a VAT Number&#39;);
+                saveAccount(&#39;Invalid&#39;,&#39;Invalid&#39;,&#39;Invalid&#39;);
+            return &#39;Invalid&#39;;
+        }
+        else {
+                vatNumberValue = vatCountryCode + vatNumberValue;
+                var result = sforce.apex.execute(&quot;VatNumberValidator&quot;,&quot;ValidateVatNumber&quot;,{vatNumber: vatNumberValue});
+                result = sforce.apex.execute(&quot;VatNumberValidator&quot;,&quot;ValidateVatNumber&quot;,{vatNumber: vatNumberValue});
+                result = sforce.apex.execute(&quot;VatNumberValidator&quot;,&quot;ValidateVatNumber&quot;,{vatNumber: vatNumberValue});
+                result = sforce.apex.execute(&quot;VatNumberValidator&quot;,&quot;ValidateVatNumber&quot;,{vatNumber: vatNumberValue});
+
+                var vatCompany = &#39;&#39;;
+                var vatAddress = &#39;&#39;;
+
+                if (result != &#39;Invalid&#39;) {
+                    var obj = JSON.parse(result);
+                    vatAddress = obj.Address;
+                    vatCompany = obj.Name;
+                    result = &#39;Valid&#39;;
+                    saveAccount(vatAddress,vatCompany,result);
+                    return result;
+                    // alert(&quot;Vat number is Valid&quot;);
+                }
+                else {
+                    vatAddress = &#39;Invalid&#39;;
+                    vatCompany = &#39;Invalid&#39;;
+                    result = &#39;Invalid&#39;;
+                    saveAccount(vatAddress,vatCompany,result);
+                    return result;
+                    // alert(&quot;Vat number is Invalid&quot;);
+                }
+        }
+ /*   }
+    else {
+        result = &#39;Invalid&#39;;
+        alert(&#39;Please select a country code from the list.&#39;);
+        saveAccount(&#39;Invalid&#39;,&#39;Invalid&#39;,result);
+        return result;
+    }*/
+} 
+
+function saveAccount(vatAddress,vatCompany,result) {
+    // Save Vat number status to Account object
+    var a = new sforce.SObject(&#39;Account&#39;);
+    a.id = &#39;{!Account.Id}&#39;;
+    a.VIES_VAT_Validation_Status__c = result;
+    a.VAT_Registered_Address__c = vatAddress;
+    a.VAT_Registered_Company__c = vatCompany;
+    sforce.connection.update([a]);
+}</url>
+</WebLink>

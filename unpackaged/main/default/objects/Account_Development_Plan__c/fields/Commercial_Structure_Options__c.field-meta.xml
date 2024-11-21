@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Commercial_Structure_Options__c</fullName>
+    <label>Commercial Structure/ Options</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Reducing rates with growth</fullName>
+                <default>false</default>
+                <label>Reducing rates with growth</label>
+            </value>
+            <value>
+                <fullName>Increasing rates if Shrinkage</fullName>
+                <default>false</default>
+                <label>Increasing rates if Shrinkage</label>
+            </value>
+            <value>
+                <fullName>Commission Structure</fullName>
+                <default>false</default>
+                <label>Commission Structure</label>
+            </value>
+            <value>
+                <fullName>Payment Terms</fullName>
+                <default>false</default>
+                <label>Payment Terms</label>
+            </value>
+            <value>
+                <fullName>FOC allowances vs discounts</fullName>
+                <default>false</default>
+                <label>FOC allowances vs discounts</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Price_Increase_Percent__c</fullName>
+    <description>Audited - KEEP per SR 9/24/2019</description>
+    <externalId>false</externalId>
+    <inlineHelpText>In lieu of PSP (as line item on exhibition/exhibitor invoice), exhibition sales can opt for general price increase; if included in exhibition contract, note percent here</inlineHelpText>
+    <label>Price Increase Percent</label>
+    <precision>3</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

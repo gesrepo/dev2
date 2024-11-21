@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Fire_Marshal_Show_Schedule_2021</fullName>
+    <booleanFilter>1 AND 2 AND 3 AND 4 AND 5</booleanFilter>
+    <columns>NAME</columns>
+    <columns>Opportunity_Name__c</columns>
+    <columns>StageName__c</columns>
+    <columns>Job_Number__c</columns>
+    <columns>Client_Services_Manager__c</columns>
+    <columns>Fire_Marshal_Status__c</columns>
+    <columns>FM_Notes__c</columns>
+    <columns>Production_Location__c</columns>
+    <columns>Facility__c</columns>
+    <columns>Show_Start_Date__c</columns>
+    <columns>Zone_Uploaded_By__c</columns>
+    <columns>GES_Move_In_Date_1__c</columns>
+    <columns>GES_Move_Out_Date_1__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Job_Number__c</field>
+        <operation>notEqual</operation>
+    </filters>
+    <filters>
+        <field>StageName__c</field>
+        <operation>equals</operation>
+        <value>CV,CR,NE</value>
+    </filters>
+    <filters>
+        <field>Production_Location__c</field>
+        <operation>notContain</operation>
+        <value>,Coventry,UAE,EXCEL,London,Glasgow,Holland,Calgary,Sheffield,Foreign,Canada</value>
+    </filters>
+    <filters>
+        <field>Show_Start_Date__c</field>
+        <operation>greaterThan</operation>
+        <value>TODAY</value>
+    </filters>
+    <filters>
+        <field>Production_Location__c</field>
+        <operation>contains</operation>
+        <value>110,150,230,240,250,510,520,710,530,810,830,420,790,220,170,160,610,836</value>
+    </filters>
+    <label>~Fire Marshal Show Schedule-2021</label>
+</ListView>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Meal_included_with_SE_with_Space__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(ISBLANK(Meal_included_with_Speaking_Engagement__c), NULL, 
+SUBSTITUTE( 
+IF(INCLUDES(Meal_included_with_Speaking_Engagement__c, &#39;Breakfast&#39;), &#39;Breakfast, &#39;, NULL) + 
+IF(INCLUDES(Meal_included_with_Speaking_Engagement__c, &#39;Lunch&#39;), &#39;Lunch, &#39;, NULL) + 
+IF(INCLUDES(Meal_included_with_Speaking_Engagement__c, &#39;Dinner&#39;), &#39;Dinner, &#39;, NULL) + 
+IF(INCLUDES(Meal_included_with_Speaking_Engagement__c, &#39;Reception&#39;), &#39;Reception, &#39;, NULL) + 
+&quot;.&quot;, &quot;, .&quot;, &quot; &quot;))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Meal included with Speaking Engagement</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

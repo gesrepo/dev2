@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Move_Out_PY__c</fullName>
+    <description>Move-Out date on Show Opportunity Occurrence</description>
+    <formula>Occurrence_for_Plan__r.Move_Out__c</formula>
+    <label>Move-Out</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Date</type>
+</CustomField>

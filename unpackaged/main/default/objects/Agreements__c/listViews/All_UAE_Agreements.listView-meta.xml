@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>All_UAE_Agreements</fullName>
+    <columns>NAME</columns>
+    <columns>Account__c</columns>
+    <columns>Agreement_on_File__c</columns>
+    <columns>Agreement_Status__c</columns>
+    <columns>Contract_Expiration_Date__c</columns>
+    <columns>Show_Name__c</columns>
+    <columns>Show_Occurrence__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Agreements__c.Show_Contract_UAE</value>
+    </filters>
+    <label>All UAE Agreements</label>
+    <language>en_US</language>
+</ListView>

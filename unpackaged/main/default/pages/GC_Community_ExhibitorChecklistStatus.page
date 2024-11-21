@@ -1,0 +1,249 @@
+<apex:page standardStylesheets="true"  showHeader="{!showHeaderVal}" sidebar="false" applyHtmlTag="{!showHeaderVal}" controller="ExhibitorOrderShowProgressController" readonly="true" >
+ <html xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <head>
+            <apex:includeScript value="{!$Resource.jQuery}" />
+            <apex:stylesheet value="{!URLFOR($Resource.Lightning_Design_System, 'assets/styles/salesforce-lightning-design-system.min.css')}" />
+            <apex:stylesheet value="{!URLFOR($Resource.GC_Assets, 'GC_Assets/css/GC_Styles.css')}" />
+            <apex:includeScript value="{!URLFOR($Resource.GC_Assets, 'GC_Assets/js/GC_init.js')}" />
+            <apex:includeScript value="{!$Resource.Alasql}"/>
+            <apex:includeScript value="https://cdnjs.cloudflare.com/ajax/libs/alasql/0.3.2/alasql.min.js"/>
+            <script>
+            $( document ).ready(function() {
+                $("#divId1").hide();
+            });
+                var projectNumber = GetURLParameter('projectNumber');
+                var standName='Booth Number';
+                var showId = GetURLParameter('showId');
+                var fName="ExhibitorChecklistStatus_";
+                if(projectNumber == undefined) {
+                    projectNumber = null;
+                }
+                if(showId == undefined) {
+                    showId = null;
+                }
+                console.log(projectNumber);
+            ExhibitorOrderShowProgressController.GetExhibitorChecklistStatus(
+                projectNumber,
+                showId,
+                function(results, event) {
+                    if(event.type === 'exception'){
+                        console.log("exception");
+                        console.log(event);
+                    }else if(event.status){
+                        if(projectNumber.includes("0000")){
+                            standName='Stand Number';
+                            document.getElementById("standId").innerHTML = standName; 
+                        }
+                        var json = results.replace(/&(lt|gt|quot);/g, function (m, p) { 
+                              //console.log(p);
+                            return (p == "lt") ? "<" : ((p == "gt") ? ">" : '"');
+                          });
+                            results = JSON.parse(json);
+                            if(results.ExChkWrapList== null ){
+                                $("#spinnerDiv").hide();
+                                
+                                window.alert("Woops.. No report data available for this show. Please contact your GES Account Manager if you need assistance. Thank you!");
+                                $("#divId1").show();
+                            }
+                        fName+=results.showName;
+                        if(results.startDate.length>4){
+                            fName= fName+ "_"+ results.startDate.substr(results.startDate.length -4);
+                        }
+                        var show='';
+                        show+='<tr>'; 
+                        show+=' <td style="font-weight: bold;width:50%" >Show Name</td>';
+                        show+=' <td style="width:50%" >'+results.showName+'</td><td></td><td></td><td></td>';
+                        show+='</tr><tr>';
+                        show+='<td style="font-weight: bold;width:50%">Show Start Date</td>';
+                        show+=' <td style="width:50%" >'+results.startDate+'</td><td></td><td></td><td></td></tr><tr>';                      
+                        show+='<td style="font-weight: bold;width:50%">Show End Date</td>';
+                        show+=' <td style="width:50%" >'+results.endDate+'</td><td></td><td></td><td></td></tr>';
+                    var table1 = '';
+                    table1 += '<tr>';
+                        table1 += ' <td>  '+results.ExChkWrapList[0].CompanyName+'</td>';
+                        table1 += ' <td>  '+results.ExChkWrapList[0].BoothNumber+'</td>';
+                        table1 += ' <td>  '+results.ExChkWrapList[0].Title+'</td>';
+                        table1 += ' <td>  '+results.ExChkWrapList[0].Status+'</td>';
+                        table1 += ' <td>  '+results.ExChkWrapList[0].DateUpdated+'</td>';
+                    table1 += '</tr>';
+                    for(i=1; i<results.ExChkWrapList.length; i++){
+                        table1 += '<tr>';
+                        if(results.ExChkWrapList[i].CompanyName==results.ExChkWrapList[i-1].CompanyName){
+                            table1 += ' <td> </td>';
+                            table1 += ' <td>  </td>';
+                        }else{
+                            table1 += ' <td>  '+results.ExChkWrapList[i].CompanyName+'</td>';
+                            table1 += ' <td>  '+results.ExChkWrapList[i].BoothNumber+'</td>';
+                        }
+                        table1 += ' <td>  '+results.ExChkWrapList[i].Title+'</td>';
+                        table1 += ' <td>  '+results.ExChkWrapList[i].Status+'</td>';
+                        table1 += ' <td>  '+results.ExChkWrapList[i].DateUpdated+'</td>';
+                        
+                        table1 += '</tr>';
+                    }
+                    $("#idTable2 tbody").append(show);
+                    $("#idTable1 tbody").append(table1);
+                    
+                    }else{
+                        console.log(event.message);
+                    }
+                    $("#spinnerDiv").hide();
+                    $("#divId1").show();
+                }
+            );          
+            var excelStyling={
+                sheetid: 'ExhibitorChecklistStatus',
+                headers: false,
+                caption: {
+                    title:'Show Details',
+                    style:'align:left;font-size:50px; font-weight:bold;'
+                },
+                column: {
+                    style:'font-size:30px'
+                },
+                row: {
+                    style: function(sheet,row,rowidx){
+                        return 'border:1px black solid; padding-left:5px; padding-right:5px;font-size:13px';
+                    }
+                },
+                rows: {
+                    0:{cell:{style:'border:none'}},
+                    1:{cell:{style:'border:none'}},
+                    2:{cell:{style:'border:none'}},
+                    3:{cell:{style:'background:#00a0af;border:1px black solid; font-weight:bold; font-size:15px'}}
+                },
+                cells: {
+                  0:{
+                        0:{
+                          style: 'font-size:15px;font-weight:bold;border:none',
+                        }
+                    },
+                    1:{
+                        0:{
+                          style: 'font-size:15px;font-weight:bold;border:none',
+                        }
+                    },
+                    2:{
+                        0:{
+                          style: 'font-size:15px;font-weight:bold;border:none',
+                        }
+                    },
+                }
+            };
+            
+            function exportCSV() {
+                fName+=".xls";
+                var data1 = alasql('SELECT * FROM HTML("#idTable1",{headers:false})');
+                var data2 = alasql('SELECT * FROM HTML("#idTable2",{headers:false})');
+                data=data2.concat(data1);
+                alasql('SELECT * INTO XLS("'+fName+'",?) FROM ?', [excelStyling,data]);
+            }
+            
+            function GetURLParameter(sParam) {
+                var sPageURL = window.location.search.substring(1);
+                var sURLVariables = sPageURL.split('&');
+                for (var i = 0; i < sURLVariables.length; i++)
+                {
+                    var sParameterName = sURLVariables[i].split('=');
+                    if (sParameterName[0] == sParam)
+                    {
+                        return sParameterName[1];
+                    }
+                }
+            }
+            
+            </script>
+            <style>
+                table.classTable1 td {
+                  border: 1px solid black;
+                  padding: 5px;
+                }
+                table.classTable1 tbody tr:first-child {
+                    background-color: #00a0af;
+                    font-weight: bold;
+                }               
+                table.classTable2 td {
+                  border: none;
+                  padding: 5px;
+                }
+                
+                table.classTable2 caption { 
+                  display: table-caption;
+                  text-align: center;
+                  border: 1px solid black;
+                }
+
+            </style>
+        </head>
+        
+        <div class="slds">
+            <c:GC_Community_Header rendered="{!(!isClassic)}"/> 
+            <div id="divId1">
+                <div class="slds-page-header gc-navigation--subHeader" role="banner">
+                    <div class="slds-media">
+                          <div class="slds-media__body">
+                            <p class="slds-page-header__title slds-align-middle">
+                                <!--<span><b>Exhibitor Checklist Status</b></span>-->
+                                <apex:form id="fm">
+                                    <apex:actionStatus id="serachStatusSpinner">
+                                        <apex:facet name="start">
+                                          <c:GC_Community_StatusSpinner statusMessage="Please Wait" /> 
+                                        </apex:facet>
+                                    </apex:actionStatus>
+                                    <apex:commandButton value="Back" action="{!returnToReportList}" style="right:10px;position:relative;" styleClass="slds-button slds-button--brand gc-teal-button"  rerender="none" status="serachStatusSpinner"/>
+                                    <apex:commandButton value="Export Report" style="right:10px;position:relative;" styleClass="slds-button slds-button--brand gc-teal-button" onclick="exportCSV();" rerender="none" status="serachStatusSpinner"/>
+                                </apex:form>
+                                <div id="tableDivId2" align="left"> 
+                                    <table  id="idTable2" border="1"  align="left" style="width:30%" class="classTable2" >
+                                        <caption><b>Show Details</b></caption>
+                                        <thead>
+                                        </thead>
+                                        <tbody>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                
+                                <div id="tableDivId" > 
+                                    <table  id="idTable1" border="1"  align="center" class="classTable1">
+                                        <caption><b>Exhibitor Checklist Status</b></caption>
+                                        <thead>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td style=" width:30%" >Company Name</td>
+                                                <td id="standId"  >Booth Number</td>
+                                                <td style="width:30%" >Title</td>
+                                                <td style="width:10%" >Status</td>
+                                                <td style="width:20%" >Date Updated</td>
+                                                
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="spinnerDiv" >
+
+                    <div class="slds-spinner_container">
+                        <div class="popupBackground" />
+                        <div class="popupPanel">
+                          <div class="slds-spinner--brand slds-spinner slds-spinner--large" aria-hidden="false" role="alert">
+                            <div class="slds-spinner__dot-a"></div>
+                            <div class="slds-spinner__dot-b"></div>
+                          </div>
+                          <table border="0" width="100%" height="100%" style="text-align: center;">
+                            <tr>
+                              <td align="center" style="text-align: center;color:  white;"><b>Fetching Report... Please wait<br/></b></td>
+                            </tr>
+                          </table>
+                        </div>
+                    </div>
+            </div>
+        
+                          
+    </div>
+</html>                                
+</apex:page>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Facility_Constr_Renov_New_Constr__c</fullName>
+    <label>Facility Construction</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Renovation</fullName>
+                <default>false</default>
+                <label>Renovation</label>
+            </value>
+            <value>
+                <fullName>New Construction</fullName>
+                <default>false</default>
+                <label>New Construction</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

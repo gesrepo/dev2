@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Show_Cancelled_Due_to_Coronavirus</fullName>
+    <active>true</active>
+    <description>Show Cancelled Due to Coronavirus if checked Opp must be in SC stage</description>
+    <errorConditionFormula>AND(
+Show_Cancelled_Due_to_Coronavirus__c = True,
+
+NOT(ISPICKVAL(StageName,&quot;SC&quot;)),
+CASE($RecordType.DeveloperName,
+&#39;EMEA_CORE&#39;,1,
+&#39;EMEA_AV&#39;, 1,
+&#39;EMEA_Custom_Build&#39;, 1,
+&#39;EMEA_Exhibitor_Graphics&#39;, 1,
+&#39;EMEA_Features&#39;, 1,
+&#39;EMEA_Middle_East&#39;, 1,
+&#39;EMEA_Poken_and_Visit&#39;, 1,
+&#39;EMEA_Show_Ready&#39;, 1,
+&#39;AV&#39;, 1,
+0) = 0
+)</errorConditionFormula>
+    <errorMessage>If Show Cancelled Due to Coronavirus checkbox is true, stage must be SC.</errorMessage>
+</ValidationRule>

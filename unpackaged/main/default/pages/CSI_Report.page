@@ -1,0 +1,798 @@
+<apex:page standardStylesheets="true"  showHeader="false" sidebar="false" applyHtmlTag="false" tabStyle="Account" standardController="GES_Connect_Corporate_Accounts__c" extensions="CSIreport" >
+    <html xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <head>
+            <apex:includeScript value="{!$Resource.jQuery}" />
+            <apex:stylesheet value="{!URLFOR($Resource.Lightning_Design_System, 'assets/styles/salesforce-lightning-design-system.min.css')}" />
+            <apex:stylesheet value="{!URLFOR($Resource.GC_Assets, 'GC_Assets/css/GC_Styles.css')}" />
+            <apex:includeScript value="{!URLFOR($Resource.GC_Assets, 'GC_Assets/js/GC_init.js')}" />
+        </head>
+        <div class="slds">
+            <c:GC_Community_Header /> 
+            <div class="slds-page-header gc-navigation--subHeader" role="banner">
+                <div class="slds-media">
+                    <div class="slds-media__body">
+                        <p class="slds-page-header__title slds-align-middle">
+                            <span><b>CSI Report</b></span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <style type = "text/css">  
+                .rightAlign {text-align:right; float: left;}
+            </style>
+            
+            <apex:form id="fm">
+                
+                
+                <apex:pageBlock id="pb" >
+                    <apex:pageBlockButtons location="top">
+                        
+                        <apex:commandButton value="Back" action="{!URLFOR($Page.GC_Community_CSI_Report)}"  style="float:left;" styleClass="slds-button slds-button--brand gc-teal-button"/> 
+                        <apex:commandButton value="Export Report" action="{!save}" style="float:right;" styleClass="slds-button slds-button--brand gc-teal-button"/>                    
+                        
+                    </apex:pageBlockButtons>
+                    
+                    <apex:pageBlockSection id="pbs" collapsible="true">
+                        <apex:outputField value="{!ges.Name_of_Congress__c}"/>
+                        <apex:outputField value="{!ges.Exhibit_Open_Date__c}" />
+                        <apex:outputField value="{!ges.Acronym_of_Congress__c}"/>
+                        <apex:outputField value="{!ges.Exhibit_Close_Date__c}" /> 
+                        <apex:outputField value="{!ges.Congress_Website__c}"/>
+                        <apex:outputField value="{!ges.Congress_Level__c}"/>
+                        <apex:outputText value="{!location}" label="Location(City,State)" />
+                        <apex:outputText value="{!ges.currencyISOCode}" label="Congress Currency" style="text-align:right"/>
+                        <apex:outputText value="{!location1}" label="Location(Country)"/>
+                        
+                        <apex:outputText ></apex:outputText> 
+                        <apex:outputText ></apex:outputText>
+                        <apex:outputText ></apex:outputText> 
+                        <apex:outputField value="{!ges.Association_Name__c}"/>
+                        <apex:outputField value="{!ges.Secretariat_Name__c}"/>
+                        <apex:outputField value="{!ges.Association_Contact_Name__c}"/>
+                        <apex:outputField value="{!ges.Secretariat_Contact_Name__c}"/>
+                        <apex:outputText value="{!Association1}" label="Association Contact Email"/>
+                        <apex:outputField value="{!ges.Secretariat_Contact_Email__c}"/>
+                        <apex:outputText value="{!Association2}" label="Association Contact Phone"/>
+                        <apex:outputField value="{!ges.Secretariat_Contact_Phone__c}"/>
+                        <apex:outputText ></apex:outputText>
+                        <apex:outputText ></apex:outputText> 
+                        <apex:outputField value="{!ges.Housing_Required_PL__c}"/>
+                        <apex:outputText rendered="{!showHousingRequiredFields}"></apex:outputText> 
+                        <apex:outputField value="{!ges.Brand_1__c}" rendered="{!showHousingRequiredFields}"/>
+                        <!--<apex:outputField value="{!TEC.Total_Estimated_Cost__c}" rendered="{!!showHousingRequiredFields}"/>-->
+                        <apex:outputText rendered="{!!showHousingRequiredFields}">
+                        <apex:outputLabel style="margin-left:110px;" value="Total Actual Cost"/>
+                            <apex:outputLabel style="margin-left:15px;" value="{!currSymbol}"/>
+                                <apex:outputText style="margin-left:2px;" value="{0, number, ###,##0.00}">
+                                    <apex:param value="{!TEC.Total_Estimated_Cost__c}" />
+                                </apex:outputText>
+                        </apex:outputText>
+                        
+                        <apex:outputField value="{!ges.Number_of_Rooms_Requested_1__c}" rendered="{!showHousingRequiredFields}"/>
+                        <apex:outputField value="{!ges.Brand_2__c}" rendered="{!showHousingRequiredFields}"/>
+                        <apex:outputField value="{!ges.Number_of_Rooms_Requested_2__c}" rendered="{!showHousingRequiredFields}"/>
+                        <apex:outputField value="{!ges.Brand_3__c}" rendered="{!showHousingRequiredFields}"/>
+                        <apex:outputField value="{!ges.Number_of_Rooms_Requested_3__c}" rendered="{!showHousingRequiredFields}"/>
+                        <apex:outputField value="{!ges.Brand_4__c}" rendered="{!showHousingRequiredFields}"/>
+                        <apex:outputField value="{!ges.Number_of_Rooms_Requested_4__c}" rendered="{!showHousingRequiredFields}"/>
+                        <apex:outputField value="{!ges.Brand_5__c}" rendered="{!showHousingRequiredFields}"/>
+                        <apex:outputField value="{!ges.Number_of_Rooms_Requested_5__c}" rendered="{!showHousingRequiredFields}"/>
+                        <apex:outputText rendered="{!showHousingRequiredFields}"></apex:outputText>
+                        <apex:outputField value="{!ges.Total_No_of_Rooms_Req__c}"/>
+                        <apex:outputText rendered="{!showHousingRequiredFields}"></apex:outputText>
+                        <apex:outputText rendered="{!showHousingRequiredFields}"></apex:outputText>
+                        <!--<apex:outputField value="{!TEC.Total_Estimated_Cost__c}" rendered="{!showHousingRequiredFields}"/>-->
+                        <apex:outputText rendered="{!showHousingRequiredFields}">
+                        <apex:outputLabel style="margin-left:110px;" value="Total Actual Cost"/>
+                            <apex:outputLabel style="margin-left:15px;" value="{!currSymbol}"/>
+                                <apex:outputText style="margin-left:2px;" value="{0, number, ###,##0.00}">
+                                    <apex:param value="{!TEC.Total_Estimated_Cost__c}" />
+                                </apex:outputText>
+                        </apex:outputText>
+                        
+                        <!--<apex:outputText rendered="{!!showHousingRequiredFields}">
+                        <apex:outputLabel value="Total Estimated Cost"/>
+                                <apex:outputLabel style="margin-left:15px;" value="{!currSymbol}"/>
+                                <apex:outputText style="margin-left:2px;" value="{0, number, ###,##0.00}">
+                                    <apex:param value="{!totalEstimatedCost}" />
+                                </apex:outputText>
+                        </apex:outputText>
+                        <apex:outputText rendered="{!showHousingRequiredFields}">
+                            <apex:outputLabel value="Brand 1:" rendered="{!showHousingRequiredFields}"/>
+                            <apex:outputText style="margin-left:15px;" value="{!ges.Brand_1__c}"  rendered="{!showHousingRequiredFields}"/>
+                            <div style="float:right;margin-right:5px;">
+                                <apex:outputLabel value="Total Estimated Cost" rendered="{!showHousingRequiredFields}"/>
+                                <apex:outputLabel style="margin-left:15px;" value="{!currSymbol}" rendered="{!showHousingRequiredFields}"/>
+                                <apex:outputText style="margin-left:2px;" value="{0, number, ###,##0.00}" rendered="{!showHousingRequiredFields}">
+                                    <apex:param value="{!totalEstimatedCost}" />
+                                </apex:outputText>
+                            </div>
+                            
+                            <div style="float:right;margin-right:20px;">
+                                <apex:outputLabel style="margin-left:40px;" value="Number of Rooms Requested:" rendered="{!showHousingRequiredFields}"/>
+                                <apex:outputText style="margin-left:15px;" value="{!ges.Number_of_Rooms_Requested_1__c}" rendered="{!showHousingRequiredFields}"/>
+                            </div>
+                        </apex:outputText>
+                        <apex:outputField value="{!ges.Total_No_of_Rooms_Req__c}" label="Quantity of Rooms:"/>
+                        <apex:outputText >
+                            <apex:outputLabel value="Brand 2:" rendered="{!showHousingRequiredFields}"/>
+                            <apex:outputText style="margin-left:15px;" value="{!ges.Brand_2__c}"  rendered="{!showHousingRequiredFields}"/>
+                            <div style="float:right;margin-right:200px;">
+                                <apex:outputLabel style="margin-left:20px;" value="Number of Rooms Requested:" rendered="{!showHousingRequiredFields}"/>
+                                <apex:outputText style="margin-left:15px;" value="{!ges.Number_of_Rooms_Requested_2__c}" rendered="{!showHousingRequiredFields}"/>
+                            </div>
+                            <apex:outputLabel style="margin-left:100px;"/>
+                        </apex:outputText>
+                        <apex:outputText ></apex:outputText>
+                        <apex:outputText >
+                            <apex:outputLabel value="Brand 3:" rendered="{!showHousingRequiredFields}"/>
+                            <apex:outputText style="margin-left:15px;" value="{!ges.Brand_3__c}"  rendered="{!showHousingRequiredFields}"/>
+                            <div style="float:right;margin-right:200px;">
+                                <apex:outputLabel style="margin-left:20px;" value="Number of Rooms Requested:" rendered="{!showHousingRequiredFields}"/>
+                                <apex:outputText style="margin-left:15px;" value="{!ges.Number_of_Rooms_Requested_3__c}" rendered="{!showHousingRequiredFields}"/>
+                            </div>
+                            <apex:outputLabel style="margin-left:100px;"/>
+                        </apex:outputText>
+                        <apex:outputText ></apex:outputText>
+                        <apex:outputText >
+                            <apex:outputLabel value="Brand 4:" rendered="{!showHousingRequiredFields}"/>
+                            <apex:outputText style="margin-left:15px;" value="{!ges.Brand_4__c}"  rendered="{!showHousingRequiredFields}"/>
+                            <div style="float:right;margin-right:200px;">
+                                <apex:outputLabel style="margin-left:20px;" value="Number of Rooms Requested:" rendered="{!showHousingRequiredFields}"/>
+                                <apex:outputText style="margin-left:15px;" value="{!ges.Number_of_Rooms_Requested_4__c}" rendered="{!showHousingRequiredFields}"/>
+                            </div>
+                            <apex:outputLabel style="margin-left:100px;"/>
+                        </apex:outputText>
+                        <apex:outputText ></apex:outputText>
+                        <apex:outputText >
+                            <apex:outputLabel value="Brand 5:" rendered="{!showHousingRequiredFields}"/>
+                            <apex:outputText style="margin-left:15px;" value="{!ges.Brand_5__c}"  rendered="{!showHousingRequiredFields}"/>
+                            <div style="float:right;margin-right:200px;">
+                                <apex:outputLabel style="margin-left:20px;" value="Number of Rooms Requested:" rendered="{!showHousingRequiredFields}"/>
+                            <apex:outputText style="margin-left:15px;" value="{!ges.Number_of_Rooms_Requested_5__c}" rendered="{!showHousingRequiredFields}"/>
+                            </div>
+                            <apex:outputLabel style="margin-left:100px;"/>
+                        </apex:outputText>-->
+                    </apex:pageBlockSection>
+                </apex:pageBlock> 
+                <apex:pageBlock title="Exhibit" rendered ="{!dispWrapper.size>0}" >
+                    <td WIDTH="15%" ALIGN="CENTER">
+                        <apex:pageBlockTable value="{!ges}" var="agr">
+                            <apex:column width="10%"><apex:facet name="header">Status</apex:facet></apex:column>
+                            <apex:column width="10%"><apex:facet name="header">Updated Date</apex:facet></apex:column>
+                            <apex:column width="10%"></apex:column>
+                            <apex:column width="10%"></apex:column>
+                            <apex:column width="10%"></apex:column>
+                            <apex:column width="10%"></apex:column>
+                            <apex:column width="10%"></apex:column>
+                            <apex:column width="10%"></apex:column>
+                            <apex:column width="10%"></apex:column>
+                            <apex:column width="10%">
+                                <apex:facet name="header">Total Booth Actual Cost</apex:facet>
+                                <span>{!currSymbol}<apex:outputText value="{0, number, ###,##0.00}" >
+                                    <apex:param value="{!TEC.Total_Booth_Estimated_Cost__c}" />
+                                    </apex:outputText></span>                            
+                            </apex:column>
+                            
+                            <!-- <apex:column width="10%">
+<apex:facet name="header">Total Exhibit Estimated Cost</apex:facet>
+<span>{!currSymbol} <apex:outputText value="{0, number, ###,##0.00}" >
+<apex:param value="{!ExhibitEstCost}" />
+</apex:outputText></span>
+</apex:column>       -->                             
+                        </apex:pageBlockTable></td>    
+                    
+                    <apex:repeat value="{!dispWrapper}" var="a">                
+                        <apex:pageBlockTable value="{!a}" var="e" id="pbt">
+                            
+                            <apex:column width="10%">
+                                <apex:facet name="header"></apex:facet>
+                                <apex:outputText value="{!e.status}" />
+                            </apex:column>
+                            <apex:column width="10%">
+                                <apex:facet name="header"></apex:facet>
+                                <apex:outputText value="{!e.lastModifiedDate}" />
+                            </apex:column>
+                            <apex:column width="10%">    
+                                <apex:facet name="header">Exhibit Name</apex:facet>                     
+                                <apex:outputText value="{!e.ExhibitName}" />
+                            </apex:column>
+                            <apex:column width="10%">
+                                <apex:facet name="header">Congress Manager</apex:facet>
+                                <apex:outputText value="{!e.CongressManager}" />
+                            </apex:column>
+                            <apex:column width="10%">
+                                <apex:facet name="header">Congress Lead</apex:facet>
+                                <apex:outputText value="{!e.CongressLead}" />
+                            </apex:column>
+                            <apex:column width="10%">
+                                <apex:facet name="header">Level</apex:facet>
+                                <apex:outputText value="{!e.Level}" />
+                            </apex:column>
+                            
+                            <apex:column width="10%"></apex:column>
+                            <apex:column width="10%"></apex:column>
+                            <apex:column width="10%">
+                                <apex:facet name="header">Exhibit Notes</apex:facet>
+                                <apex:outputText value="{!e.Notes}" escape="false" />
+                            </apex:column>
+                            <apex:column width="10%"></apex:column>
+                            
+                        </apex:pageBlockTable> 
+                        <apex:outputpanel rendered ="{!a.brands.size>0}" >
+                            <apex:pageBlockTable value="{!a.brands}" var="brand" id="pbt1">
+                                <apex:column width="10%">
+                                    <apex:facet name="header"></apex:facet>
+                                    <apex:outputText value="{!brand.status}" />
+                                </apex:column>
+                                <apex:column width="10%">
+                                    <apex:facet name="header"></apex:facet>
+                                    <apex:outputText value="{!brand.lastModifiedDate}" />
+                                </apex:column>
+                                <apex:column width="10%">  </apex:column>
+                                <apex:column width="10%">
+                                    <apex:facet name="header">Brand Name</apex:facet>
+                                    <apex:outputText value="{!brand.brand.Brand_Name__c}" />
+                                </apex:column>
+                                <apex:column width="10%">
+                                    <apex:facet name="header">Cost Center</apex:facet>
+                                    <apex:outputText value="{!brand.brand.Cost_Center__c}" />
+                                </apex:column>
+                                <apex:column width="10%">
+                                    <apex:facet name="header">FP Region</apex:facet>
+                                    <apex:outputText value="{!brand.brand.Funding_Provider_Region__c}" />
+                                </apex:column>
+                                <!--SAL-643-->
+                                <apex:column width="10%">
+                                    <apex:facet name="header">FP Dept</apex:facet>
+                                    <apex:outputText value="{!brand.brand.Funding_Provider_Department__c}" />
+                                </apex:column>
+                                <apex:column width="10%">
+                                    <apex:facet name="header">Company Code</apex:facet>
+                                    <apex:outputText value="{!brand.brand.Company_Code__c}" />
+                                </apex:column>
+                                <apex:column width="10%">
+                                    <apex:facet name="header">Brand Contact</apex:facet>
+                                    <apex:outputText value="{!brand.brand.Brand_Team_Contact__c}" rendered="{!(brand.brand.Brand_Team_Contact__c!= '--Other--')}" />
+                                    <apex:outputText value="{!brand.brand.Contact_Not_Listed__c}" rendered="{!(brand.brand.Brand_Team_Contact__c=='--Other--')}" />
+                                </apex:column>
+                                <apex:column width="10%"></apex:column>
+                                <apex:column width="10%">
+                                    <apex:facet name="header">Booth Actual Cost</apex:facet>
+                                    <!--<apex:outputField value="{!brand.brand.Booth_Space_Cost_Actual__c}"/>-->
+                                    <span>{!currSymbol} <apex:outputText value="{0, number, ###,##0.00}" >
+                                        <apex:param value="{!brand.brand.Booth_Space_Cost_Actual__c}" />
+                                        </apex:outputText></span>
+                                    
+                                </apex:column>
+                                <!-- <apex:column width="10%">
+<apex:facet name="header">Exhibit Estimated Cost</apex:facet>
+<span>{!currSymbol} <apex:outputText value="{0, number, ###,##0.00}" >
+<apex:param value="{!brand.brand.Exhibit_Costs_Estimated__c}" />
+</apex:outputText></span>
+
+</apex:column> -->
+                            </apex:pageBlockTable>
+                            <apex:pageBlockTable value="{!ges}" var="v">
+                                <apex:column width="10%"></apex:column>
+                                <apex:column width="10%"></apex:column>
+                                <apex:column width="10%"></apex:column>
+                                <apex:column width="10%"></apex:column>
+                                <apex:column width="10%"></apex:column>
+                                <apex:column width="10%">
+                                    <apex:facet name="header"></apex:facet>
+                                </apex:column> 
+                                <apex:column width="10%"></apex:column>
+                                <apex:column width="10%"></apex:column>
+                                <apex:column width="10%"></apex:column>
+                                <apex:column width="10%"></apex:column>
+                            </apex:pageBlockTable>
+                        </apex:outputpanel>
+                    </apex:repeat>
+                </apex:pageBlock>
+                <apex:pageBlock title="Sponsorship" rendered ="{!sponWrapper.size>0}" >
+                    <apex:pageBlockTable value="{!ges}" var="spnd">
+                        <apex:column width="10%"><apex:facet name="header">Status</apex:facet></apex:column>
+                        <apex:column width="10%"><apex:facet name="header">Updated Date</apex:facet></apex:column>
+                        <apex:column width="10%"></apex:column>
+                        <apex:column width="10%"></apex:column>
+                        <apex:column width="10%"></apex:column>
+                        <apex:column width="10%"></apex:column>
+                        <apex:column width="10%"></apex:column>
+                        <apex:column width="10%"></apex:column>
+                        <apex:column width="10%"></apex:column>
+                        <apex:column width="10%">
+                            <apex:facet name="header">Total Sponsorship Actual Cost</apex:facet>
+                            <span>{!currSymbol}<apex:outputText value="{0, number, ###,##0.00}" >
+                                <apex:param value="{!TEC.Total_Cost__c}" />
+                                </apex:outputText></span>
+                            
+                        </apex:column>
+                        
+                    </apex:pageBlockTable>
+                    <apex:repeat value="{!sponWrapper}" var="a"> 
+                        <apex:pageBlockTable value="{!a}" var="e" id="pbt" >
+                            <apex:column width="10%">
+                                <apex:facet name="header"></apex:facet>
+                                <apex:outputText value="{!e.status}" />
+                            </apex:column>
+                            <apex:column width="10%">
+                                <apex:facet name="header"></apex:facet>
+                                <apex:outputText value="{!e.lastModifiedDate}" />
+                            </apex:column>      
+                            <apex:column width="10%">
+                                <apex:facet name="header">Sponsorship Name</apex:facet>
+                                <apex:outputText value="{!e.SponName}" />
+                            </apex:column>
+                            <apex:column width="10%">
+                                <apex:facet name="header">Congress Manager</apex:facet>
+                                <apex:outputText value="{!e.CongressManager}" />
+                            </apex:column>
+                            <apex:column width="10%">
+                                <apex:facet name="header">Congress Lead</apex:facet>
+                                <apex:outputText value="{!e.CongressLead}" />
+                            </apex:column>
+                            <apex:column width="10%">
+                                <apex:facet name="header">Level</apex:facet>
+                                <apex:outputText value="{!e.Level}" />
+                            </apex:column>
+                            <apex:column width="10%"></apex:column>
+                            <apex:column width="10%"></apex:column>
+                            <apex:column width="10%">
+                                <apex:facet name="header">Sponsorship Notes</apex:facet>
+                                <apex:outputText value="{!e.SponsorshipNotes}" escape="false" />
+                            </apex:column>
+                            <apex:column width="10%"></apex:column>
+                            
+                        </apex:pageBlockTable>
+                        <apex:outputpanel rendered ="{!a.brands.size>0}" >
+                            <apex:pageBlockTable value="{!a.brands}" var="brand" id="pbt1"> 
+                                <apex:column width="10%">
+                                    <apex:facet name="header"></apex:facet>
+                                    <apex:outputText value="{!brand.status}" />
+                                </apex:column>
+                                <apex:column width="10%">
+                                    <apex:facet name="header"></apex:facet>
+                                    <apex:outputText value="{!brand.lastModifiedDate}" />
+                                </apex:column>
+                                <apex:column width="10%">  </apex:column>
+                                <apex:column width="10%">
+                                    <apex:facet name="header">Brand Name</apex:facet>
+                                    <apex:outputText value="{!brand.brand.Brand_Name__c}" />
+                                </apex:column>
+                                <apex:column width="10%">
+                                    <apex:facet name="header">Cost Center</apex:facet>
+                                    <apex:outputText value="{!brand.brand.Cost_Center__c}" />
+                                </apex:column>
+                                <apex:column width="10%">
+                                    <apex:facet name="header">FP Region</apex:facet>
+                                    <apex:outputText value="{!brand.brand.Funding_Provider_Region__c}" />
+                                </apex:column>
+                                <!--SAL-643-->
+                                <apex:column width="10%">
+                                    <apex:facet name="header">FP Dept</apex:facet>
+                                    <apex:outputText value="{!brand.brand.Funding_Provider_Department__c}" />
+                                </apex:column>
+                                <apex:column width="10%">
+                                    <apex:facet name="header">Company Code</apex:facet>
+                                    <apex:outputText value="{!brand.brand.Company_Code__c}" />
+                                </apex:column>
+                                <apex:column width="10%">
+                                    <apex:facet name="header">Brand Contact</apex:facet>
+                                    <apex:outputText value="{!brand.brand.Brand_Team_Contact__c}" rendered="{!(brand.brand.Brand_Team_Contact__c!= '--Other--')}" />
+                                    <apex:outputText value="{!brand.brand.Contact_Not_Listed__c}" rendered="{!(brand.brand.Brand_Team_Contact__c=='--Other--')}" />
+                                </apex:column>
+                                <apex:column width="10%"></apex:column>
+                                <apex:column width="10%">
+                                    <apex:facet name="header">Sponsorship Actual Cost</apex:facet>
+                                    <!--<apex:outputField value="{!brand.brand.Sponsorship_Costs_Actual__c}"/>-->
+                                    <span>{!currSymbol} <apex:outputText value="{0, number, ###,##0.00}" >
+                                        <apex:param value="{!brand.brand.Sponsorship_Costs_Actual__c}" />
+                                        </apex:outputText></span>
+                                    
+                                </apex:column>
+                                
+                            </apex:pageBlockTable>
+                            <apex:pageBlockTable value="{!ges}" var="v">
+                                <apex:column width="10%"></apex:column>
+                                <apex:column width="10%"></apex:column>
+                                <apex:column width="10%"></apex:column>
+                                <apex:column width="10%"></apex:column>
+                                <apex:column width="10%"></apex:column>
+                                <apex:column width="10%">
+                                    <apex:facet name="header"></apex:facet>
+                                </apex:column>   
+                                <apex:column width="10%"></apex:column>
+                                <apex:column width="10%"></apex:column>
+                                <apex:column width="10%"></apex:column>
+                                <apex:column width="10%"></apex:column>
+                            </apex:pageBlockTable>
+                        </apex:outputpanel>
+                    </apex:repeat>
+                </apex:pageBlock>
+                <apex:pageBlock title="Product Theater"  rendered ="{!prdtrWrapper.size>0}" >
+                    <apex:pageBlockTable value="{!ges}" var="prd">
+                        <apex:column width="10%"><apex:facet name="header">Status</apex:facet></apex:column>
+                        <apex:column width="10%"><apex:facet name="header">Updated Date</apex:facet></apex:column>
+                        <apex:column width="10%"></apex:column>
+                        <apex:column width="10%"></apex:column>
+                        <apex:column width="10%"></apex:column>
+                        <apex:column width="10%"></apex:column>
+                        <apex:column width="10%"></apex:column>
+                        <apex:column width="10%"></apex:column>
+                        <apex:column width="10%"></apex:column>
+                        <apex:column width="10%">
+                            
+                            <apex:facet name="header">Total Product Theater Actual Cost</apex:facet>
+                            <span>{!currSymbol}<apex:outputText value="{0, number, ###,##0.00}" >
+                                <apex:param value="{!TEC.Total_Product_Theater_Estimated_Cost__c}" />
+                                </apex:outputText></span>
+                            
+                        </apex:column>
+                    </apex:pageBlockTable>
+                    <apex:repeat value="{!prdtrWrapper}" var="a"> 
+                        <apex:pageBlockTable value="{!a}" var="e" id="pbt" >
+                            <apex:column width="10%">
+                                <apex:facet name="header"></apex:facet>
+                                <apex:outputText value="{!e.status}" />
+                            </apex:column>
+                            <apex:column width="10%">
+                                <apex:facet name="header"></apex:facet>
+                                <apex:outputText value="{!e.lastModifiedDate}" />
+                            </apex:column>
+                            <apex:column width="10%">
+                                <apex:facet name="header">Product Theater Name</apex:facet>
+                                <apex:outputText value="{!e.PrdtrName}" />
+                            </apex:column>
+                            <apex:column width="10%">
+                                <apex:facet name="header">Congress Manager</apex:facet>
+                                <apex:outputText value="{!e.CongressManager}" />
+                            </apex:column>
+                            <apex:column width="10%">
+                                <apex:facet name="header">Congress Lead</apex:facet>
+                                <apex:outputText value="{!e.CongressLead}" />
+                            </apex:column>
+                            <apex:column width="10%">
+                                <apex:facet name="header">Level</apex:facet>
+                                <apex:outputText value="{!e.Level}" />
+                            </apex:column>
+                            <apex:column width="10%">
+                                <apex:facet name="header">Reqested Start Date</apex:facet>
+                                <apex:outputText value="{!e.onlyDate}"/>
+                            </apex:column>
+                            <apex:column width="10%">
+                                <apex:facet name="header">Reqested Time</apex:facet>
+                                <apex:outputText value="{!e.onlyTime}"/>
+                            </apex:column>
+                            <apex:column width="10%">
+                                <apex:facet name="header">Product Theater Notes</apex:facet>
+                                <apex:outputText value="{!e.ProductTheaterNotes}" escape="false" />
+                            </apex:column>
+                            <apex:column width="10%"></apex:column>
+                        </apex:pageBlockTable>
+                        <apex:outputpanel rendered ="{!a.brands.size>0}" >
+                            <apex:pageBlockTable value="{!a.brands}" var="brand" id="pbt1">
+                                <apex:column width="10%">
+                                    <apex:facet name="header"></apex:facet>
+                                    <apex:outputText value="{!brand.status}" />
+                                </apex:column>
+                                <apex:column width="10%">
+                                    <apex:facet name="header"></apex:facet>
+                                    <apex:outputText value="{!brand.lastModifiedDate}" />
+                                </apex:column>
+                                <apex:column width="10%">  </apex:column>
+                                <apex:column width="10%">
+                                    <apex:facet name="header">Brand Name</apex:facet>
+                                    <apex:outputText value="{!brand.brand.Brand_Name__c}" />
+                                </apex:column>
+                                <apex:column width="10%">
+                                    <apex:facet name="header">Cost Center</apex:facet>
+                                    <apex:outputText value="{!brand.brand.Cost_Center__c}" />
+                                </apex:column>
+                                <apex:column width="10%">
+                                    <apex:facet name="header">FP Region</apex:facet>
+                                    <apex:outputText value="{!brand.brand.Funding_Provider_Region__c}" />
+                                </apex:column>
+                                <!--SAL-643-->
+                                <apex:column width="10%">
+                                    <apex:facet name="header">FP Dept</apex:facet>
+                                    <apex:outputText value="{!brand.brand.Funding_Provider_Department__c}" />
+                                </apex:column>
+                                <apex:column width="10%">
+                                    <apex:facet name="header">Company Code</apex:facet>
+                                    <apex:outputText value="{!brand.brand.Company_Code__c}" />
+                                </apex:column>
+                                <apex:column width="10%">
+                                    <apex:facet name="header">Brand Contact</apex:facet>
+                                    <apex:outputText value="{!brand.brand.Brand_Team_Contact__c}" rendered="{!(brand.brand.Brand_Team_Contact__c!= '--Other--')}" />
+                                    <apex:outputText value="{!brand.brand.Contact_Not_Listed__c}" rendered="{!(brand.brand.Brand_Team_Contact__c=='--Other--')}" />
+                                </apex:column>
+                                <apex:column width="10%">  </apex:column>
+                                <apex:column width="10%">
+                                    <apex:facet name="header">Product Theater Actual Cost</apex:facet>
+                                    <!--<apex:outputField value="{!brand.brand.Product_Theater_Costs_Actual__c}"/>-->
+                                    <span>{!currSymbol} <apex:outputText value="{0, number, ###,##0.00}" >
+                                        <apex:param value="{!brand.brand.Product_Theater_Costs_Actual__c}" />
+                                        </apex:outputText></span>
+                                </apex:column>
+                                
+                            </apex:pageBlockTable>
+                            <apex:pageBlockTable value="{!ges}" var="v">
+                                <apex:column width="10%"></apex:column>
+                                <apex:column width="10%"></apex:column>
+                                <apex:column width="10%"></apex:column>
+                                <apex:column width="10%">
+                                    <apex:facet name="header"></apex:facet>
+                                </apex:column> 
+                                <apex:column width="10%">  </apex:column>
+                                <apex:column width="10%">  </apex:column>
+                                <apex:column width="10%">  </apex:column>
+                                <apex:column width="10%">  </apex:column>
+                                
+                            </apex:pageBlockTable>
+                        </apex:outputpanel>
+                    </apex:repeat>
+                </apex:pageBlock>
+                
+                <apex:pageBlock title="Symposia" rendered ="{!syWrapper.size>0}" >
+                    <apex:pageBlockTable value="{!ges}" var="sym">
+                        <apex:column width="10%"><apex:facet name="header">Status</apex:facet></apex:column>
+                        <apex:column width="10%"><apex:facet name="header">Updated Date</apex:facet></apex:column>
+                        <apex:column width="10%"></apex:column>
+                        <apex:column width="10%"></apex:column>
+                        <apex:column width="10%"></apex:column>
+                        <apex:column width="10%"></apex:column>
+                        <apex:column width="10%"></apex:column>
+                        <apex:column width="10%"></apex:column>
+                        <apex:column width="10%"></apex:column>
+                        <apex:column width="10%">
+                            <apex:facet name="header">Total Symposia Actual Cost</apex:facet>
+                            <span>{!currSymbol}<apex:outputText value="{0, number, ###,##0.00}" >
+                                <apex:param value="{!TEC.Total_Symposia_Estimated_Cost__c}" />
+                                </apex:outputText></span>
+                            
+                        </apex:column>
+                        
+                    </apex:pageBlockTable>
+                    <apex:repeat value="{!syWrapper}" var="a"> 
+                        <apex:pageBlockTable value="{!a}" var="e" id="pbt" >
+                            <apex:column width="10%">
+                                <apex:facet name="header"></apex:facet>
+                                <apex:outputText value="{!e.status}" />
+                            </apex:column>
+                            <apex:column width="10%">
+                                <apex:facet name="header"></apex:facet>
+                                <apex:outputText value="{!e.lastModifiedDate}" />
+                            </apex:column>
+                            <apex:column width="10%">
+                                <apex:facet name="header">Symposia Name</apex:facet>
+                                <apex:outputText value="{!e.SypmName}" />
+                            </apex:column>
+                            <apex:column width="10%">
+                                <apex:facet name="header">Congress Manager</apex:facet>
+                                <apex:outputText value="{!e.CongressManager}" />
+                            </apex:column>
+                            <apex:column width="10%">
+                                <apex:facet name="header">Congress Lead</apex:facet>
+                                <apex:outputText value="{!e.CongressLead}" />
+                            </apex:column>
+                            <apex:column width="10%">
+                                <apex:facet name="header">Level</apex:facet>
+                                <apex:outputText value="{!e.Level}" />
+                            </apex:column>
+                            <apex:column width="10%">
+                                <apex:facet name="header">Reqested Start Date</apex:facet>
+                                <apex:outputText value="{!e.onlyDate}"/>
+                            </apex:column>
+                            <apex:column width="10%">
+                                <apex:facet name="header">Reqested Time</apex:facet>
+                                <apex:outputText value="{!e.onlyTime}"/>
+                            </apex:column>
+                            <apex:column width="10%">
+                                <apex:facet name="header">Symposium Notes</apex:facet>
+                                <apex:outputText value="{!e.SymposiumNotes}" escape="false" />
+                            </apex:column>
+                            <apex:column width="10%"></apex:column>
+                        </apex:pageBlockTable> 
+                        <apex:outputpanel rendered ="{!a.brands.size>0}" >
+                            <apex:pageBlockTable value="{!a.brands}" var="brand" id="pbt1"  >
+                                <apex:column width="10%">
+                                    <apex:facet name="header"></apex:facet>
+                                    <apex:outputText value="{!brand.status}" />
+                                </apex:column>
+                                <apex:column width="10%">
+                                    <apex:facet name="header"></apex:facet>
+                                    <apex:outputText value="{!brand.lastModifiedDate}" />
+                                </apex:column>
+                                <apex:column width="10%">  </apex:column>
+                                <apex:column width="10%">
+                                    <apex:facet name="header">Brand Name</apex:facet>
+                                    <apex:outputText value="{!brand.brand.Brand_Name__c}" />
+                                </apex:column>
+                                <apex:column width="10%">
+                                    <apex:facet name="header">Cost Center</apex:facet>
+                                    <apex:outputText value="{!brand.brand.Cost_Center__c}" />
+                                </apex:column>
+                                <apex:column width="10%">
+                                    <apex:facet name="header">FP Region</apex:facet>
+                                    <apex:outputText value="{!brand.brand.Funding_Provider_Region__c}" />
+                                </apex:column>
+                                <!--SAL-643-->
+                                <apex:column width="10%">
+                                    <apex:facet name="header">FP Dept</apex:facet>
+                                    <apex:outputText value="{!brand.brand.Funding_Provider_Department__c}" />
+                                </apex:column>
+                                <apex:column width="10%">
+                                    <apex:facet name="header">Company Code</apex:facet>
+                                    <apex:outputText value="{!brand.brand.Company_Code__c}" />
+                                </apex:column>
+                                <apex:column width="10%">
+                                    <apex:facet name="header">Brand Contact</apex:facet>
+                                    <apex:outputText value="{!brand.brand.Brand_Team_Contact__c}" rendered="{!(brand.brand.Brand_Team_Contact__c!= '--Other--')}" />
+                                    <apex:outputText value="{!brand.brand.Contact_Not_Listed__c}" rendered="{!(brand.brand.Brand_Team_Contact__c=='--Other--')}" />
+                                </apex:column>
+                                <apex:column width="10%"></apex:column>
+                                <apex:column width="10%">
+                                    <apex:facet name="header">Symposia Actual Cost</apex:facet>
+                                    <!--<apex:outputField value="{!brand.brand.Symposia_Actual_Cost__c}"/>-->
+                                    <span>{!currSymbol} <apex:outputText value="{0, number, ###,##0.00}" >
+                                        <apex:param value="{!brand.brand.Symposia_Actual_Cost__c}" />
+                                        </apex:outputText></span>
+                                </apex:column>
+                            </apex:pageBlockTable>
+                            <apex:pageBlockTable value="{!ges}" var="v">
+                                <apex:column width="10%"></apex:column>
+                                <apex:column width="10%"></apex:column>
+                                <apex:column width="10%"></apex:column>
+                                <apex:column width="10%"></apex:column>
+                                <apex:column width="10%"></apex:column>
+                                <apex:column width="10%">
+                                    <apex:facet name="header"></apex:facet>
+                                </apex:column> 
+                                <apex:column width="10%"></apex:column>
+                                <apex:column width="10%"></apex:column>
+                                <apex:column width="10%"></apex:column>
+                                <apex:column width="10%"></apex:column>
+                                
+                            </apex:pageBlockTable>
+                        </apex:outputpanel>
+                    </apex:repeat>                   
+                </apex:pageBlock>
+                
+                <apex:pageBlock title="Meeting Room" rendered ="{!MtrmWrapper.size>0}" >
+                    <apex:pageBlockTable value="{!ges}" var="mtrm">
+                        <apex:column width="10%"><apex:facet name="header">Status</apex:facet></apex:column>
+                        <apex:column width="10%"><apex:facet name="header">Updated Date</apex:facet></apex:column>
+                        <apex:column width="10%"></apex:column>
+                        <apex:column width="10%"></apex:column>
+                        <apex:column width="10%"></apex:column>
+                        <apex:column width="10%"></apex:column>
+                        <apex:column width="10%"></apex:column>
+                        <apex:column width="10%"></apex:column>
+                        <apex:column width="10%"></apex:column><!-- SAL-643-->
+                        <!--<apex:column width="10%">
+<apex:facet name="header">Total MR Services Estimated Costs</apex:facet>
+<span>{!currSymbol} <apex:outputText value="{0, number, ###,##0.00}" >
+<apex:param value="{!GESMREstCost}" />
+</apex:outputText></span>
+
+</apex:column> -->
+                        <apex:column width="10%">
+                            <apex:facet name="header">Total Meeting Room Actual Cost</apex:facet>
+                            <span>{!currSymbol}<apex:outputText value="{0, number, ###,##0.00}" >
+                                <apex:param value="{!TEC.Total_Meeting_Room_Estimated_Cost__c}" />
+                                </apex:outputText></span>
+                            
+                        </apex:column>
+                        
+                        
+                    </apex:pageBlockTable>
+                    <apex:repeat value="{!MtrmWrapper}" var="a"> 
+                        <apex:pageBlockTable value="{!a}" var="e" id="pbt" >
+                            <apex:column width="10%">
+                                <apex:facet name="header"></apex:facet>
+                                <apex:outputText value="{!e.status}" />
+                            </apex:column>
+                            <apex:column width="10%">
+                                <apex:facet name="header"></apex:facet>
+                                <apex:outputText value="{!e.lastModifiedDate}" />
+                            </apex:column>
+                            <apex:column width="10%">
+                                <apex:facet name="header">Meeting Room Name</apex:facet>
+                                <apex:outputText value="{!e.MtrmName}" />
+                            </apex:column>
+                            <apex:column width="10%">
+                                <apex:facet name="header">Congress Manager</apex:facet>
+                                <apex:outputText value="{!e.CongressManager}" />
+                            </apex:column>
+                            <apex:column width="10%">
+                                <apex:facet name="header">Congress Lead</apex:facet>
+                                <apex:outputText value="{!e.CongressLead}" />
+                            </apex:column>
+                            <apex:column width="10%">
+                                <apex:facet name="header">Level</apex:facet>
+                                <apex:outputText value="{!e.Level}" />
+                            </apex:column>
+                            <apex:column width="10%"></apex:column>
+                            <apex:column width="10%"></apex:column>
+                            <apex:column width="10%">
+                                <apex:facet name="header">Meeting Room Notes</apex:facet>
+                                <apex:outputText value="{!e.MeetingRoomNotes}"  escape="false" />
+                            </apex:column>
+                            <apex:column width="10%"></apex:column>
+                            
+                        </apex:pageBlockTable>
+                        <apex:outputpanel rendered ="{!a.brands.size>0}" >
+                            <apex:pageBlockTable value="{!a.brands}" var="brand" id="pbt1"  >
+                                <apex:column width="10%">
+                                    <apex:facet name="header"></apex:facet>
+                                    <apex:outputText value="{!brand.status}" />
+                                </apex:column>
+                                <apex:column width="10%">
+                                    <apex:facet name="header"></apex:facet>
+                                    <apex:outputText value="{!brand.lastModifiedDate}" />
+                                </apex:column>
+                                <apex:column width="10%">  </apex:column>
+                                <apex:column width="10%">
+                                    <apex:facet name="header"  >Brand Name</apex:facet>
+                                    <apex:outputText value="{!brand.brand.Brand_Name__c}" />
+                                </apex:column>
+                                <apex:column width="10%">
+                                    <apex:facet name="header">Cost Center</apex:facet>
+                                    <apex:outputText value="{!brand.brand.Cost_Center__c}" />
+                                </apex:column>
+                                <apex:column width="10%">
+                                    <apex:facet name="header">FP Region</apex:facet>
+                                    <apex:outputText value="{!brand.brand.Funding_Provider_Region__c}" />
+                                </apex:column>
+                                <!--SAL-643-->
+                                <apex:column width="10%">
+                                    <apex:facet name="header">FP Dept</apex:facet>
+                                    <apex:outputText value="{!brand.brand.Funding_Provider_Department__c}" />
+                                </apex:column>
+                                <apex:column width="10%">
+                                    <apex:facet name="header">Company Code</apex:facet>
+                                    <apex:outputText value="{!brand.brand.Company_Code__c}" />
+                                </apex:column>
+                                <apex:column width="10%">
+                                    <apex:facet name="header">Brand Contact</apex:facet>
+                                    <apex:outputText value="{!brand.brand.Brand_Team_Contact__c}" rendered="{!(brand.brand.Brand_Team_Contact__c!= '--Other--')}" />
+                                    <apex:outputText value="{!brand.brand.Contact_Not_Listed__c}" rendered="{!(brand.brand.Brand_Team_Contact__c=='--Other--')}" />
+                                </apex:column>
+                                <!--  <apex:column width="10%">
+<apex:facet name="header">MR Services Estimated Costs</apex:facet>
+<span>{!currSymbol} <apex:outputText value="{0, number, ###,##0.00}" >
+<apex:param value="{!brand.brand.MR_Services_Estimated_Costs__c}" />
+</apex:outputText></span>                               
+</apex:column> -->
+                                <apex:column width="10%">  </apex:column>
+                                <apex:column width="10%">
+                                    <apex:facet name="header">Meeting Room Actual Cost</apex:facet>
+                                     <!--<apex:outputField value="{!brand.brand.Meeting_Room_Actual_Cost__c}"/>-->
+                                   <span>{!currSymbol} <apex:outputText value="{0, number, ###,##0.00}" >
+                                        <apex:param value="{!brand.brand.Meeting_Room_Actual_Cost__c}" />
+                                        </apex:outputText></span>
+                                    
+                                </apex:column>
+                            </apex:pageBlockTable>
+                            <apex:pageBlockTable value="{!ges}" var="v">
+                                <apex:column width="10%"></apex:column>
+                                <apex:column width="10%"></apex:column>
+                                <apex:column width="10%"></apex:column>
+                                <apex:column width="10%"></apex:column>
+                                <apex:column width="10%"></apex:column>
+                                <apex:column width="10%">
+                                    <apex:facet name="header"></apex:facet>
+                                </apex:column>   
+                                <apex:column width="10%"></apex:column>
+                                <apex:column width="10%"></apex:column>
+                                <apex:column width="10%"></apex:column>
+                                <apex:column width="10%"></apex:column>
+                            </apex:pageBlockTable>
+                        </apex:outputpanel>
+                    </apex:repeat>
+                </apex:pageBlock>                                
+            </apex:form>                            
+        </div>
+    </html>                                
+</apex:page>

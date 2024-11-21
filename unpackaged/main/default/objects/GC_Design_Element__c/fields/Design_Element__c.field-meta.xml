@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Design_Element__c</fullName>
+    <description>Design Element Type</description>
+    <inlineHelpText>Design Element Type</inlineHelpText>
+    <label>Design Element</label>
+    <required>false</required>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Task_Type__c</controllingField>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Bookstore</fullName>
+                <default>false</default>
+                <label>Bookstore</label>
+            </value>
+            <value>
+                <fullName>Charging Station</fullName>
+                <default>false</default>
+                <label>Charging Station</label>
+            </value>
+            <value>
+                <fullName>Column Wrap</fullName>
+                <default>false</default>
+                <label>Column Wrap</label>
+            </value>
+            <value>
+                <fullName>Design Style Guide</fullName>
+                <default>false</default>
+                <label>Design Style Guide</label>
+            </value>
+            <value>
+                <fullName>Entrance</fullName>
+                <default>false</default>
+                <label>Entrance</label>
+            </value>
+            <value>
+                <fullName>Exhibitor Pods</fullName>
+                <default>false</default>
+                <label>Exhibitor Pods</label>
+            </value>
+            <value>
+                <fullName>Fill-in</fullName>
+                <default>false</default>
+                <label>Fill-in</label>
+            </value>
+            <value>
+                <fullName>Impact Unit</fullName>
+                <default>false</default>
+                <label>Impact Unit</label>
+            </value>
+            <value>
+                <fullName>Information Booth</fullName>
+                <default>false</default>
+                <label>Information Booth</label>
+            </value>
+            <value>
+                <fullName>Kiosks</fullName>
+                <default>false</default>
+                <label>Kiosks</label>
+            </value>
+            <value>
+                <fullName>Kit Booth Packages</fullName>
+                <default>false</default>
+                <label>Kit Booth Packages</label>
+            </value>
+            <value>
+                <fullName>Lounge</fullName>
+                <default>false</default>
+                <label>Lounge</label>
+            </value>
+            <value>
+                <fullName>Management Booth</fullName>
+                <default>false</default>
+                <label>Management Booth</label>
+            </value>
+            <value>
+                <fullName>Product Showcases</fullName>
+                <default>false</default>
+                <label>Product Showcases</label>
+            </value>
+            <value>
+                <fullName>Publication Bin</fullName>
+                <default>false</default>
+                <label>Publication Bin</label>
+            </value>
+            <value>
+                <fullName>Registration/Counters</fullName>
+                <default>false</default>
+                <label>Registration/Counters</label>
+            </value>
+            <value>
+                <fullName>Resource Center</fullName>
+                <default>false</default>
+                <label>Resource Center</label>
+            </value>
+            <value>
+                <fullName>Schedule at a Glance</fullName>
+                <default>false</default>
+                <label>Schedule at a Glance</label>
+            </value>
+            <value>
+                <fullName>Service Desk</fullName>
+                <default>false</default>
+                <label>Service Desk</label>
+            </value>
+            <value>
+                <fullName>Stage</fullName>
+                <default>false</default>
+                <label>Stage</label>
+            </value>
+            <value>
+                <fullName>Theater</fullName>
+                <default>false</default>
+                <label>Theater</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Design</controllingFieldValue>
+            <controllingFieldValue>Detailing</controllingFieldValue>
+            <valueName>Bookstore</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Design</controllingFieldValue>
+            <controllingFieldValue>Detailing</controllingFieldValue>
+            <valueName>Charging Station</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Design</controllingFieldValue>
+            <controllingFieldValue>Detailing</controllingFieldValue>
+            <valueName>Column Wrap</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Design</controllingFieldValue>
+            <valueName>Design Style Guide</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Design</controllingFieldValue>
+            <controllingFieldValue>Detailing</controllingFieldValue>
+            <valueName>Entrance</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Design</controllingFieldValue>
+            <controllingFieldValue>Detailing</controllingFieldValue>
+            <valueName>Exhibitor Pods</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Design</controllingFieldValue>
+            <controllingFieldValue>Detailing</controllingFieldValue>
+            <valueName>Fill-in</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Design</controllingFieldValue>
+            <controllingFieldValue>Detailing</controllingFieldValue>
+            <valueName>Impact Unit</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Design</controllingFieldValue>
+            <controllingFieldValue>Detailing</controllingFieldValue>
+            <valueName>Information Booth</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Design</controllingFieldValue>
+            <controllingFieldValue>Detailing</controllingFieldValue>
+            <valueName>Kiosks</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Design</controllingFieldValue>
+            <controllingFieldValue>Detailing</controllingFieldValue>
+            <valueName>Kit Booth Packages</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Design</controllingFieldValue>
+            <controllingFieldValue>Detailing</controllingFieldValue>
+            <valueName>Lounge</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Design</controllingFieldValue>
+            <controllingFieldValue>Detailing</controllingFieldValue>
+            <valueName>Management Booth</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Design</controllingFieldValue>
+            <controllingFieldValue>Detailing</controllingFieldValue>
+            <valueName>Product Showcases</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Design</controllingFieldValue>
+            <controllingFieldValue>Detailing</controllingFieldValue>
+            <valueName>Publication Bin</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Design</controllingFieldValue>
+            <controllingFieldValue>Detailing</controllingFieldValue>
+            <valueName>Registration/Counters</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Design</controllingFieldValue>
+            <controllingFieldValue>Detailing</controllingFieldValue>
+            <valueName>Resource Center</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Design</controllingFieldValue>
+            <controllingFieldValue>Detailing</controllingFieldValue>
+            <valueName>Schedule at a Glance</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Design</controllingFieldValue>
+            <controllingFieldValue>Detailing</controllingFieldValue>
+            <valueName>Service Desk</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Design</controllingFieldValue>
+            <controllingFieldValue>Detailing</controllingFieldValue>
+            <valueName>Stage</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Design</controllingFieldValue>
+            <controllingFieldValue>Detailing</controllingFieldValue>
+            <valueName>Theater</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Design</controllingFieldValue>
+            <controllingFieldValue>Detailing</controllingFieldValue>
+            <valueName>Other</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

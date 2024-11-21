@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ApexPage xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>35.0</apiVersion>
+    <availableInTouch>false</availableInTouch>
+    <confirmationTokenRequired>false</confirmationTokenRequired>
+    <description>GES order task edit page. Dynamic page to select a catalog item from the external system based on selected booth area for the order. On page load queries for available items to order from the external system. Allows the Client user to select from a picklist of available items to order for that show. Allows save / save and submit / cancel functions.</description>
+    <label>GC_Community_gotCreateEdit</label>
+</ApexPage>

@@ -1,0 +1,584 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StandardValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sorted>true</sorted>
+    <standardValue>
+        <fullName>1st Call</fullName>
+        <default>false</default>
+        <label>1st Call</label>
+    </standardValue>
+    <standardValue>
+        <fullName>2nd Call</fullName>
+        <default>false</default>
+        <label>2nd Call</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Abandons Basket</fullName>
+        <default>false</default>
+        <label>Abandons Basket</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Added</fullName>
+        <default>false</default>
+        <label>Added</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Already Purchased</fullName>
+        <default>false</default>
+        <label>Already Purchased</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Attended</fullName>
+        <default>false</default>
+        <label>Attended</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Attended- Already Contacted</fullName>
+        <default>false</default>
+        <label>Attended- Already Contacted</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Attended On Demand</fullName>
+        <default>false</default>
+        <label>Attended On Demand</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Attended-on-demand</fullName>
+        <default>false</default>
+        <label>Attended-on-demand</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Attending</fullName>
+        <default>false</default>
+        <label>Attending</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Begin Checkout</fullName>
+        <default>false</default>
+        <label>Begin Checkout</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Booth Visit</fullName>
+        <default>false</default>
+        <label>Booth Visit</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Bounced</fullName>
+        <default>false</default>
+        <label>Bounced</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Call #1</fullName>
+        <default>false</default>
+        <label>Call #1</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Call #2</fullName>
+        <default>false</default>
+        <label>Call #2</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Call #3</fullName>
+        <default>false</default>
+        <label>Call #3</label>
+    </standardValue>
+    <standardValue>
+        <fullName>called</fullName>
+        <default>false</default>
+        <label>called</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Can_OptIn</fullName>
+        <default>false</default>
+        <label>Can_OptIn</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Clicked</fullName>
+        <default>false</default>
+        <label>Clicked</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Clicked (Success)</fullName>
+        <default>false</default>
+        <label>Clicked (Success)</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Clicked Personalized</fullName>
+        <default>false</default>
+        <label>Clicked Personalized</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Completed Survey</fullName>
+        <default>false</default>
+        <label>Completed Survey</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Contacted</fullName>
+        <default>false</default>
+        <label>Contacted</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Contacted by Sales</fullName>
+        <default>false</default>
+        <label>Contacted by Sales</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Converted</fullName>
+        <default>false</default>
+        <label>Converted</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Customer Service Referral</fullName>
+        <default>false</default>
+        <label>Customer Service Referral</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Declined Invite</fullName>
+        <default>false</default>
+        <label>Declined Invite</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Did not attend</fullName>
+        <default>false</default>
+        <label>Did not attend</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Did Not Open</fullName>
+        <default>false</default>
+        <label>Did Not Open</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Disqualified</fullName>
+        <default>false</default>
+        <label>Disqualified</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Download</fullName>
+        <default>false</default>
+        <label>Download</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Downloaded</fullName>
+        <default>false</default>
+        <label>Downloaded</label>
+    </standardValue>
+    <standardValue>
+        <fullName>DPA-DECLINED</fullName>
+        <default>false</default>
+        <label>DPA-DECLINED</label>
+    </standardValue>
+    <standardValue>
+        <fullName>DPA-RETURNED</fullName>
+        <default>false</default>
+        <label>DPA-RETURNED</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email #1</fullName>
+        <default>false</default>
+        <label>Email #1</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email #2</fullName>
+        <default>false</default>
+        <label>Email #2</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email #3</fullName>
+        <default>false</default>
+        <label>Email #3</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Emailed</fullName>
+        <default>false</default>
+        <label>Emailed</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Engaged</fullName>
+        <default>false</default>
+        <label>Engaged</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Engaged - High Click</fullName>
+        <default>false</default>
+        <label>Engaged - High Click</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Engaged in Chat</fullName>
+        <default>false</default>
+        <label>Engaged in Chat</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Engaged - Low Click</fullName>
+        <default>false</default>
+        <label>Engaged - Low Click</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Engaged - Opened</fullName>
+        <default>false</default>
+        <label>Engaged - Opened</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Filled Out Form</fullName>
+        <default>false</default>
+        <label>Filled Out Form</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Form Fill Completed</fullName>
+        <default>false</default>
+        <label>Form Fill Completed</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Form Filled</fullName>
+        <default>false</default>
+        <label>Form Filled</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Hard Bounced</fullName>
+        <default>false</default>
+        <label>Hard Bounced</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Identified</fullName>
+        <default>false</default>
+        <label>Identified</label>
+    </standardValue>
+    <standardValue>
+        <fullName>inactive</fullName>
+        <default>false</default>
+        <label>inactive</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Inbound</fullName>
+        <default>false</default>
+        <label>Inbound</label>
+    </standardValue>
+    <standardValue>
+        <fullName>In Queue</fullName>
+        <default>false</default>
+        <label>In Queue</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Invited</fullName>
+        <default>false</default>
+        <label>Invited</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Marketing Sent</fullName>
+        <default>false</default>
+        <label>Marketing Sent</label>
+    </standardValue>
+    <standardValue>
+        <fullName>MCL</fullName>
+        <default>false</default>
+        <label>MCL</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Meeting Confirmed</fullName>
+        <default>false</default>
+        <label>Meeting Confirmed</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Meeting Held</fullName>
+        <default>false</default>
+        <label>Meeting Held</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Meeting Requested</fullName>
+        <default>false</default>
+        <label>Meeting Requested</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Meeting Tentative</fullName>
+        <default>false</default>
+        <label>Meeting Tentative</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Member</fullName>
+        <default>false</default>
+        <label>Member</label>
+    </standardValue>
+    <standardValue>
+        <fullName>MQL</fullName>
+        <default>false</default>
+        <label>MQL</label>
+    </standardValue>
+    <standardValue>
+        <fullName>No interest</fullName>
+        <default>false</default>
+        <label>No interest</label>
+    </standardValue>
+    <standardValue>
+        <fullName>No Order</fullName>
+        <default>false</default>
+        <label>No Order</label>
+    </standardValue>
+    <standardValue>
+        <fullName>No Response</fullName>
+        <default>false</default>
+        <label>No Response</label>
+    </standardValue>
+    <standardValue>
+        <fullName>No Show</fullName>
+        <default>false</default>
+        <label>No Show</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Not attending</fullName>
+        <default>false</default>
+        <label>Not attending</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Not Engaged</fullName>
+        <default>false</default>
+        <label>Not Engaged</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Not in Program</fullName>
+        <default>false</default>
+        <label>Not in Program</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Not interested</fullName>
+        <default>false</default>
+        <label>Not interested</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Open</fullName>
+        <default>false</default>
+        <label>Open</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Opened</fullName>
+        <default>false</default>
+        <label>Opened</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Opted In</fullName>
+        <default>false</default>
+        <label>Opted In</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Opted-In</fullName>
+        <default>false</default>
+        <label>Opted-In</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Opted Out</fullName>
+        <default>false</default>
+        <label>Opted Out</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Opt In</fullName>
+        <default>false</default>
+        <label>Opt In</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Option 1</fullName>
+        <default>false</default>
+        <label>Option 1</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Option 2</fullName>
+        <default>false</default>
+        <label>Option 2</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Option 3</fullName>
+        <default>false</default>
+        <label>Option 3</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Option 4</fullName>
+        <default>false</default>
+        <label>Option 4</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Opt Out</fullName>
+        <default>false</default>
+        <label>Opt Out</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Ordered</fullName>
+        <default>false</default>
+        <label>Ordered</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Outbound</fullName>
+        <default>false</default>
+        <label>Outbound</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Qualified</fullName>
+        <default>false</default>
+        <label>Qualified</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Raised Hand</fullName>
+        <default>false</default>
+        <label>Raised Hand</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Raised-Hand</fullName>
+        <default>false</default>
+        <label>Raised-Hand</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Redeemed</fullName>
+        <default>false</default>
+        <label>Redeemed</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Registered</fullName>
+        <default>false</default>
+        <label>Registered</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Registered/Attended</fullName>
+        <default>false</default>
+        <label>Registered/Attended</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Registered/Did Not Attend</fullName>
+        <default>false</default>
+        <label>Registered/Did Not Attend</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Replied</fullName>
+        <default>false</default>
+        <label>Replied</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Requested contact</fullName>
+        <default>false</default>
+        <label>Requested contact</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Requested-Quote</fullName>
+        <default>false</default>
+        <label>Requested-Quote</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Responded</fullName>
+        <default>false</default>
+        <label>Responded</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Responded to Email</fullName>
+        <default>false</default>
+        <label>Responded to Email</label>
+    </standardValue>
+    <standardValue>
+        <fullName>SAL</fullName>
+        <default>false</default>
+        <label>SAL</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Scanned</fullName>
+        <default>false</default>
+        <label>Scanned</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Scheduled Meeting</fullName>
+        <default>false</default>
+        <label>Scheduled Meeting</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Sent</fullName>
+        <default>false</default>
+        <label>Sent</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Sent_FollowUp</fullName>
+        <default>false</default>
+        <label>Sent_FollowUp</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Sent_PreReg</fullName>
+        <default>false</default>
+        <label>Sent_PreReg</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Sent Email</fullName>
+        <default>false</default>
+        <label>Sent Email</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Sent to Logistics</fullName>
+        <default>false</default>
+        <label>Sent to Logistics</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Sent to Preshow</fullName>
+        <default>false</default>
+        <label>Sent to Preshow</label>
+    </standardValue>
+    <standardValue>
+        <fullName>SQL</fullName>
+        <default>false</default>
+        <label>SQL</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Started Survey</fullName>
+        <default>false</default>
+        <label>Started Survey</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Strategy Generated</fullName>
+        <default>false</default>
+        <label>Strategy Generated</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Strategy Influenced</fullName>
+        <default>false</default>
+        <label>Strategy Influenced</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Suspect</fullName>
+        <default>false</default>
+        <label>Suspect</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Unable to Contact</fullName>
+        <default>false</default>
+        <label>Unable to Contact</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Unsubscribe</fullName>
+        <default>false</default>
+        <label>Unsubscribe</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Unsubscribed</fullName>
+        <default>false</default>
+        <label>Unsubscribed</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Visited</fullName>
+        <default>false</default>
+        <label>Visited</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Visited Booth</fullName>
+        <default>false</default>
+        <label>Visited Booth</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Visited Webpage</fullName>
+        <default>false</default>
+        <label>Visited Webpage</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Visited Web Page</fullName>
+        <default>false</default>
+        <label>Visited Web Page</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Waitlisted</fullName>
+        <default>false</default>
+        <label>Waitlisted</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Won/Post</fullName>
+        <default>false</default>
+        <label>Won/Post</label>
+    </standardValue>
+</StandardValueSet>

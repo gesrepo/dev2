@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CompactLayout xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Booth_Upload_Custom</fullName>
+    <fields>Name</fields>
+    <fields>Opportunity__c</fields>
+    <fields>Organiser_2__c</fields>
+    <fields>Status__c</fields>
+    <fields>Number_of_Booths__c</fields>
+    <fields>Confirmation_Date_Time__c</fields>
+    <label>Booth Upload Custom</label>
+</CompactLayout>

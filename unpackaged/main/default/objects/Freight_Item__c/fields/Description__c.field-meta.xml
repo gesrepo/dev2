@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Description__c</fullName>
+    <label>Description</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Carpets</fullName>
+                <default>false</default>
+                <label>Carpets</label>
+            </value>
+            <value>
+                <fullName>Cartons (Cardboard)</fullName>
+                <default>false</default>
+                <label>Cartons (Cardboard)</label>
+            </value>
+            <value>
+                <fullName>Crates (Wooden)</fullName>
+                <default>false</default>
+                <label>Crates (Wooden)</label>
+            </value>
+            <value>
+                <fullName>Fiber Cases/Trunks</fullName>
+                <default>false</default>
+                <label>Fiber Cases/Trunks</label>
+            </value>
+            <value>
+                <fullName>Machines</fullName>
+                <default>false</default>
+                <label>Machines</label>
+            </value>
+            <value>
+                <fullName>Miscellaneous</fullName>
+                <default>false</default>
+                <label>Miscellaneous</label>
+            </value>
+            <value>
+                <fullName>Padded Display</fullName>
+                <default>false</default>
+                <label>Padded Display</label>
+            </value>
+            <value>
+                <fullName>Skids/Pallets</fullName>
+                <default>false</default>
+                <label>Skids/Pallets</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

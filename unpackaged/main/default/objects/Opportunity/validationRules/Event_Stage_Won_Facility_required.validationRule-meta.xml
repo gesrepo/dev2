@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Event_Stage_Won_Facility_required</fullName>
+    <active>true</active>
+    <description>When Stage is Contract Win or Verbal Win, Facility is required</description>
+    <errorConditionFormula>AND(
+$RecordType.DeveloperName = &quot;EventAndExperiential&quot;,
+ISPICKVAL(GBMS_CORE__c, &quot;CORE&quot;),
+ISBLANK(Facility__c),
+OR(ISPICKVAL(Requested_Stage__c,&quot;Verbal Win&quot;),
+ISPICKVAL(Requested_Stage__c,&quot;Contract Win&quot;)))</errorConditionFormula>
+    <errorMessage>Facility is required when Requested Stage is Contract Win or Verbal Win</errorMessage>
+</ValidationRule>

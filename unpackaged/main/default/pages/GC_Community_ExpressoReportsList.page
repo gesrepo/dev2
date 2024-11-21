@@ -1,0 +1,124 @@
+<apex:page standardStylesheets="false" showHeader="{!showHeaderVal}" sidebar="false" applyHtmlTag="{!showHeaderVal}" applyBodyTag="false" docType="html-5.0" controller="GC_Community_ExpressoReportsController" action="{!generateSessionID}" >
+    <!-- put action current users profile name if acconomus redirect them to login page or URL rewritter -->
+    <html xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        
+        <head>
+            <apex:includeScript value="{!$Resource.jQuery}" />
+            <apex:stylesheet value="{!URLFOR($Resource.Lightning_Design_System, 'assets/styles/salesforce-lightning-design-system.min.css')}" />
+            <apex:stylesheet value="{!URLFOR($Resource.GC_Assets, 'GC_Assets/css/GC_Styles.css')}" />
+            <apex:includeScript value="{!URLFOR($Resource.GC_Assets, 'GC_Assets/js/GC_init.js')}" />
+            
+            <script type="text/javascript">
+            var $j = jQuery.noConflict();
+            function selectDates(){
+                console.log('Inside selectDates');
+                // $j( "[id$='theHiddenInput']" ).val(congressId);
+                $j('#dateSelectionDialog').show();
+                return false;
+            }
+            function validateFields(){
+                if($j('#txtPrjNumber input').val().trim() == ''){
+                    alert('Please enter a Project Number');
+                    return false;
+                }
+                return true;
+            }
+            </script>
+            <style>
+                 p:hover {
+                background-color: #b3ecff;
+                }
+            </style>
+        </head>
+        <body>
+            <div class="slds">
+                <c:GC_Community_Header rendered="{!((!isClassic) && (!isLightningComm))}" /><br />
+                <apex:form > 
+                    <div class="slds-grid slds-grid--align-left">
+                        <div>
+                            <apex:commandButton value="Back" action="{!URLFOR($Page.gc_community_connectanaltyticshome)}" styleClass="slds-button slds-button--small slds-button--brand gc-teal-button"  style="left:15px;position:relative;" rendered="{!((!isClassic) && (!isLightningComm))}" />
+                        </div>
+                    </div>
+                </apex:form>
+                <apex:pageMessages id="messages" />
+                <div class="slds-grid slds-wrap gc-main-body">
+                    <div class="slds-card gc-grey-background">
+                        <!-- CARD HEADER -->
+                        <div class="slds-card__header slds-grid">
+                            <div class="slds-media slds-media--center slds-has-flexi-truncate">
+                                <div class="slds-media__body">
+                                    <h2 class="slds-text-heading--small slds-truncate">Expresso Reports</h2>
+                                    <!-- Need to add some help text -->
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slds-card__body">
+                            <apex:outputPanel id="filterControls">
+                                <apex:form >
+                                    <div class="slds-grid slds-grid--align-center">
+                                        <apex:outputPanel rendered="{!isClassic}" styleClass="requiredInput" layout="block" >
+                                            <div>
+                                                <div class="slds-form-element">
+                                                    <label class="slds-form-element__label">Project Number</label>
+                                                    <div class="slds-form-element__control" id="txtPrjNumber">
+                                                        <apex:inputText styleClass="slds-input" style="width: 100%;" value="{!projectNumber}" required="true" id="pNum" />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </apex:outputPanel>
+                                    </div>
+                                    <br />
+                                    
+                                    <p >
+                                        <apex:commandLink styleClass="Black" action="{!ExhibitorOrderShowProgress}" value="Exhibitor Order Show Progress" id="reportLink1" /> <br />
+                                    </p><br/>
+                                    <p >
+                                        <apex:commandLink styleClass="Black" onclick="selectDates();return false;" reRender="none" value="Exhibitor Orders By Category" id="reportLink2" /><br /> </p><br/>
+                                    <p > <apex:commandLink styleClass="Black" action="{!SubmittedFormShowProgress}" value="Checklist Activity Overview" id="reportLink3" /><br /></p> <br/>                 
+                                   <!-- <p > <apex:commandLink styleClass="Black" action="{!ExhibitorChecklistStatus}" value="Exhibitor Checklist Status" id="reportLink4" /><br/></p><br/>-->
+                                    <p > <apex:commandLink styleClass="Black"  action="{!ShowInstanceChecklistItems}" value="View Checklist Forms" id="reportLink5" >﻿</apex:commandLink><br /></p><br/>
+                                    
+                                    
+                                    <div class="slds">
+                                        <div id="dateSelectionDialog"  align = "center" style="display:none;">
+                                            <div role="alertdialog" class="slds-modal slds-fade-in-open slds-modal--prompt prompt">
+                                                <div class="slds-modal__container" style="width:600px;height: 500px;">
+                                                    <div class="slds-modal__header">
+                                                        <button class="slds-button slds-modal__close slds-button--icon-inverse prompt_close" title="Close" style="color: #b41955!important;" onclick="closeItemPopup();return false;">
+                                                            <svg aria-hidden="true" class="slds-button__icon slds-button__icon--large">
+                                                                <use href="{!URLFOR($Resource.Lightning_Design_System, '/assets/icons/action-sprite/svg/symbols.svg#close')}"></use>
+                                                            </svg>
+                                                            <span class="slds-assistive-text">Close</span>
+                                                        </button>   
+                                                        <h2 class="slds-text-heading--medium" id="prompt-heading-id">Select a Date Range</h2>
+                                                    </div>
+                                                    <div class="slds-modal__content slds-p-around--medium">
+                                                        <h3 class="slds-section-title--divider" style="display: inherit;"><b>The date range is the </b></h3>
+                                                        
+                                                        <apex:outputLabel value="Enter Start Date  " />
+                                                        <apex:input id="date1" type="date" value="{!startDate}" required="true"  />
+                                                        
+                                                        
+                                                        <apex:outputLabel value="Enter End Date  " />
+                                                        <apex:input id="date2" type="date" value="{!endDate}" required="true"  />
+                                                        
+                                                        
+                                                        <br/>
+                                                    </div>  
+                                                    <div class="slds-modal__footer slds-theme--default">  
+                                                        <apex:commandButton value="Generate Report"  action="{!ExhibitorOrdersByCategory}" style="right:10px;position:relative;" styleClass="slds-button slds-button--brand gc-teal-button"/>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="slds-backdrop slds-backdrop--open prompt"></div>
+                                        </div>
+                                    </div>
+                                </apex:form>
+                            </apex:outputPanel>
+                        </div>
+                    </div>
+                </div>
+            </div>  
+        </body>
+    </html>
+</apex:page>

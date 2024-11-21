@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Customer_Name__c</fullName>
+    <description>Enter customer name as free-form text, when Exhibitor/Customer is not available in Salesforce. Field defaulted with same value as the Account Name field, unless Account Name is a generic exhibitor. In which case, this field is required.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Defaulted with value from Account Name field, for actual exhibitors. For generic customer records (Exhibitor and Non-Exhibitor), value needs to be entered manually.</inlineHelpText>
+    <label>Customer Name</label>
+    <length>255</length>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

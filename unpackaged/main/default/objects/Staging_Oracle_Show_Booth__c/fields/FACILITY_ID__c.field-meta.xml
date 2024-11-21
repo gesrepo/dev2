@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FACILITY_ID__c</fullName>
+    <description>Stores values from Oracle Customer Booth XGEC_SW_CUST_BOOTH_V.FACILITY_ID column. This column is derived from XGEC_SW_FCLT_HDR_V.FACILITY_ID column.</description>
+    <externalId>false</externalId>
+    <label>Facility ID</label>
+    <length>20</length>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

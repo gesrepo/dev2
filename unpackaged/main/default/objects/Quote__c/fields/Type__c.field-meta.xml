@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Type__c</fullName>
+    <description>Quote Type</description>
+    <label>Type</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Custom Booth</fullName>
+                <default>false</default>
+                <label>Custom Booth</label>
+            </value>
+            <value>
+                <fullName>Custom Graphics</fullName>
+                <default>false</default>
+                <label>Custom Graphics</label>
+            </value>
+            <value>
+                <fullName>Exhibit Select</fullName>
+                <default>false</default>
+                <label>Exhibit Select</label>
+            </value>
+            <value>
+                <fullName>Logistics Canadian</fullName>
+                <default>false</default>
+                <label>Logistics Canadian</label>
+            </value>
+            <value>
+                <fullName>Logistics Canadian - Inbound</fullName>
+                <default>false</default>
+                <label>Logistics Canadian - Inbound</label>
+            </value>
+            <value>
+                <fullName>Logistics Canadian - Outbound</fullName>
+                <default>false</default>
+                <label>Logistics Canadian - Outbound</label>
+            </value>
+            <value>
+                <fullName>Logistics Domestic</fullName>
+                <default>false</default>
+                <label>Logistics Domestic</label>
+            </value>
+            <value>
+                <fullName>Logistics Domestic - Inbound</fullName>
+                <default>true</default>
+                <label>Logistics Domestic - Inbound</label>
+            </value>
+            <value>
+                <fullName>Logistics Domestic - Outbound</fullName>
+                <default>false</default>
+                <label>Logistics Domestic - Outbound</label>
+            </value>
+            <value>
+                <fullName>Logistics Intl</fullName>
+                <default>false</default>
+                <label>Logistics Intl</label>
+            </value>
+            <value>
+                <fullName>Logistics Intl - Inbound</fullName>
+                <default>false</default>
+                <label>Logistics Intl - Inbound</label>
+            </value>
+            <value>
+                <fullName>Logistics Intl - Outbound</fullName>
+                <default>false</default>
+                <label>Logistics Intl - Outbound</label>
+            </value>
+            <value>
+                <fullName>Pool Program</fullName>
+                <default>false</default>
+                <label>Pool Program</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

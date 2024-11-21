@@ -1,0 +1,863 @@
+<apex:page showHeader="true"  sidebar="false" standardController="GC_Order__c" extensions="GC_OrderViewController" >
+      <!-- action="{!loadAction}" Removing because not used-->
+      <apex:includeScript value="https://code.jquery.com/jquery-1.10.2.js" />
+      <apex:includeScript value="https://code.jquery.com/ui/1.11.4/jquery-ui.js" />
+      <apex:styleSheet value="https://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css" />
+     <apex:stylesheet value="{!URLFOR($Resource.Lightning_Design_System, 'assets/styles/salesforce-lightning-design-system.min.css')}" /> 
+      <style>
+          .picklistWidth{
+              width:200px;
+          }
+      </style>
+      <script type="text/javascript">
+        var $j = jQuery.noConflict();
+        var screenWidth = $j(document).width();
+        var dataTableMargin = 65;
+        var inProgress = false;
+        var performingSubmit = false;
+        var performingCancel = false;
+        var obtainedProducts = false;
+
+        function startProgress() {
+            inProgress = true;
+        }
+
+        function stopProgress() {
+            inProgress = false;
+        }
+        
+        function confirmDelete() {
+            if ({!checkVendorStatus}) {
+              if (confirm('Task has been sent to Vendor. Are you sure you want to delete?')) {
+                  DeleteOrder();
+                  return true;
+                } else {
+                  return false;
+                }
+            } else {
+                  DeleteOrder();
+                  return true;
+            }
+        }
+      
+        function searchItems(){
+                console.log('Inside SearchItem');
+                var content;
+                var searchText = $j('[id$=searchInput]').val().toLowerCase();
+                $j('[id$=serachItemHidden]').val('searchItemHidden');
+                var listOfItems = [];
+                $j('[id$=itemSelect] option').filter(function(){
+                    if($j(this).val().toLowerCase().indexOf(searchText) > -1)
+                    {
+                        listOfItems.push($j(this).val());
+                        //return true;
+                    }
+                   
+                   /* Modified the search for SAL 519 */
+         
+                });
+                if(listOfItems.length == 0) {
+                    $j('#noSearchText').show();
+                } else
+                if(listOfItems.length == 1) {
+                    $j('[id$=itemSelect]').val(listOfItems[0]).change();
+                } else
+                {
+                    content = '';
+                    for(i=0; i<listOfItems.length; i++){
+                        content +=  '<tr>';
+                        content +=  '       <td role="gridcell" class="slds-cell-shrink" scope="col">';
+                        content +=  '               <input name="itemName" type="radio" style="margin-right: 2" value="' + listOfItems[i]  + '"/>';
+                        content +=  '       </td>';
+                        content +=  '       <td> &nbsp;&nbsp;'+ listOfItems[i]  + '</td>';
+                        content +=  '   </tr>';
+                    }
+                    $j("#itemTable tbody").append(content);
+                    $j('#itemSelectionDialog').show();
+                }
+                return true;
+        }
+            
+        function selectItemFromList() {
+                var radioValue = $j("input[name='itemName']:checked").val();
+                listOfItems=[];
+                content = null;
+                searchText=null;
+                $j('#itemSelectionDialog').hide();
+                $j('[id$=itemSelect]').val(radioValue).change();
+                $j('#itemTable tbody').empty();
+        }
+            
+        function closeItemPopup() {
+                $j('#itemTable tbody').empty();
+                $j('#itemSelectionDialog').hide();
+        }
+            
+            <!--SAL - 586 yo Upload Files-->
+        function showFileUploadPopup() {
+        jQuery('#fileUploadDialog').show();
+        }
+    
+        function closefileUploadDialog() {
+        jQuery('#fileUploadDialog').hide();
+        }
+        
+        function uploadFile(){
+            jQuery('#fileUploadDialog').hide();
+            uploadFileAction();
+            return false;
+        }       
+        <!--SAL - 586 Ends Here-->
+                
+            
+            //Rahul: Added this function for SAL 512 
+        $j(document).ready(function(){    
+            $j(document).on("keypress", "input", function() {
+                if(event.keyCode == 13){
+                    
+                    if(event.target.id == 'searchInput' ) {
+                        //searchItems();
+                        populateProductList();
+                    } 
+                    return false;
+                }
+            });
+            });
+          
+    </script>
+    <apex:stylesheet value="{!URLFOR($Resource.GC_Assets, 'GC_Assets/css/GC_PageStyles.css')}" />
+    <apex:sectionHeader title="GES Order: {!currentOrder.Name}" subtitle="Order Details" />
+    <apex:form id="fr">
+        <apex:pageMessages id="messages"></apex:pageMessages>
+        <apex:actionFunction name="SubmitOrderStep1" action="{!sessionLoad}" status="connectingStatusSpinner" reRender="statuses, messages" oncomplete="ValidateSession();" />
+        <apex:actionFunction name="ValidateSession" action="{!validateSessionID}" status="validationStatusSpinner" reRender="statuses, messages" oncomplete="SubmitOrderStep2();" />
+        <apex:actionFunction name="SubmitOrderStep2" action="{!sessionLogin}" status="loggingInStatusSpinner" reRender="statuses, messages" oncomplete="SubmitOrderStep3();" />
+        <apex:actionFunction name="SubmitOrderStep3" action="{!submitOrderAction}" status="submittingOrderStatusSpinner" reRender="statuses, messages" oncomplete="SubmitOrderStep4();" />
+        <apex:actionFunction name="SubmitOrderStep4" action="{!processOrderAction}" status="processingOrderStatusSpinner" reRender="statuses, messages, pbPanel, pbRelatedTasks, relatedItems" oncomplete="performingSubmit = false; SubmitOrderStep5();" />
+        <apex:actionFunction name="SubmitOrderStep5" action="{!insertCoreLogs}" status="insertingLogsStatus" reRender="statuses, messages" />
+        <apex:actionFunction name="CancelOrderStep1" action="{!sessionLoad}" status="connectingStatusSpinner" reRender="statuses, messages" oncomplete="CancelOrderStep2();" />
+        <apex:actionFunction name="CancelOrderStep2" action="{!sessionLogin}" status="loggingInStatusSpinner" reRender="statuses, messages" oncomplete="CancelOrderStep3();" />
+        <apex:actionFunction name="CancelOrderStep3" action="{!cancelOrderAction}" status="cancelOrderStatusSpinner" reRender="statuses, messages" oncomplete="CancelOrderStep4();" />
+        <apex:actionFunction name="CancelOrderStep4" action="{!processCancelOrderAction}" status="processingOrderStatusSpinner" reRender="statuses, messages, pbPanel, pbRelatedTasks, relatedItems" oncomplete="performingCancel = false;" />
+        <apex:actionFunction action="{!sessionLoad}" name="SessionLoad_JS" status="connectingStatusSpinner" reRender="statuses, messages" oncomplete="ObtainProducts_JS();" />
+        <apex:actionFunction action="{!coreApi.obtainProducts}" name="ObtainProducts_JS" status="obtainProductsStatusSpinner" reRender="statuses, messages, pbRelatedTasks, selectedItemPB" oncomplete="obtainedProducts = true;" />
+        <apex:actionFunction name="DeleteOrder" action="{!deleteOrderAction}" status="deleteStatus" reRender="statuses, messages" />
+         <apex:actionFunction name="populateProductList" action="{!coreApi.populateProductList}" status="obtainProductsStatusSpinner" oncomplete="searchItems();" reRender="itemSelect"/>
+        <apex:outputPanel id="statuses">
+            <apex:actionStatus id="connectingStatusSpinner">
+                <apex:facet name="start">
+                    <c:GC_StatusSpinner statusMessage="Connecting to Web Service." />
+                </apex:facet>
+            </apex:actionStatus>
+            <apex:actionStatus id="validationStatusSpinner">
+                <apex:facet name="start">
+                    <c:GC_StatusSpinner statusMessage="Validating the session." />
+                </apex:facet>
+            </apex:actionStatus>
+            <apex:actionStatus id="loggingInStatusSpinner">
+                <apex:facet name="start">
+                    <c:GC_StatusSpinner statusMessage="Logging In." />
+                </apex:facet>
+            </apex:actionStatus>
+            <apex:actionStatus id="submittingOrderStatusSpinner">
+                <apex:facet name="start">
+                    <c:GC_StatusSpinner statusMessage="Submitting Order." />
+                </apex:facet>
+            </apex:actionStatus>
+            <apex:actionStatus id="processingOrderStatusSpinner">
+                <apex:facet name="start">
+                    <c:GC_StatusSpinner statusMessage="Processing Order." />
+                </apex:facet>
+            </apex:actionStatus>
+            <apex:actionStatus id="cancelOrderStatusSpinner">
+                <apex:facet name="start">
+                    <c:GC_StatusSpinner statusMessage="Cancelling Order." />
+                </apex:facet>
+            </apex:actionStatus>
+            <apex:actionStatus id="cloneOrderStatusSpinner">
+                <apex:facet name="start">
+                    <!--c:GC_StatusSpinner statusMessage="Cloning Order and Order Tasks." /--> <!--commented by Sajid on 04/05/23 Ticket-1209 -->
+                    <c:GC_StatusSpinner statusMessage="Cloning Order and Item." /> <!-- added by Sajid on 04/05/23 Ticket-1209 -->
+                </apex:facet>
+            </apex:actionStatus>
+            <apex:actionStatus id="editOrderStatusSpinner">
+                <apex:facet name="start">
+                    <c:GC_StatusSpinner statusMessage="Editing Order." />
+                </apex:facet>
+            </apex:actionStatus>
+            <apex:actionStatus id="obtainProductsStatusSpinner">
+                <apex:facet name="start">
+                    <c:GC_StatusSpinner statusMessage="Obtaining Products." />
+                </apex:facet>
+            </apex:actionStatus>
+            <apex:actionStatus id="newTaskSpinner">
+                <apex:facet name="start">
+                    <!--c:GC_StatusSpinner statusMessage="New Task." /--> <!--commented by Sajid on 04/05/23 Ticket-1209 -->
+                    <c:GC_StatusSpinner statusMessage="New Item." /> <!-- added by Sajid on 04/05/23 Ticket-1209 -->
+                </apex:facet>
+            </apex:actionStatus>
+            <apex:actionStatus id="loadVendorsSpinner">
+                <apex:facet name="start">
+                    <c:GC_StatusSpinner statusMessage="Loading Vendors." />
+                </apex:facet>
+            </apex:actionStatus>
+            <apex:actionStatus id="editTaskSpinner">
+                <apex:facet name="start">
+                    <!--c:GC_StatusSpinner statusMessage="Editing Task." /--> <!--commented by Sajid on 04/05/23 Ticket-1209 -->
+                    <c:GC_StatusSpinner statusMessage="Editing Item." /> <!-- added by Sajid on 04/05/23 Ticket-1209 -->
+                </apex:facet>
+            </apex:actionStatus>
+            <apex:actionStatus id="deleteTaskSpinner">
+                <apex:facet name="start">
+                    <!--c:GC_StatusSpinner statusMessage="Removing Task." /--> <!--commented by Sajid on 04/05/23 Ticket-1209 -->
+                    <c:GC_StatusSpinner statusMessage="Removing Item." /> <!-- added by Sajid on 04/05/23 Ticket-1209 -->
+                </apex:facet>
+            </apex:actionStatus>
+            <apex:actionStatus id="sendTaskSpinner">
+                <apex:facet name="start">
+                    <c:GC_StatusSpinner statusMessage="Emailing Vendors Task." />
+                </apex:facet>
+            </apex:actionStatus>
+            <apex:actionStatus id="submitGraphicsTaskSpinner">
+                <apex:facet name="start">
+                    <c:GC_StatusSpinner statusMessage="Submitting Task to Graphics." />
+                </apex:facet>
+            </apex:actionStatus>
+            <apex:actionStatus id="reviseTaskStatusSpinner">
+                <apex:facet name="start">
+                    <!--c:GC_StatusSpinner statusMessage="Revising Active Task." /--> <!--commented by Sajid on 04/05/23 Ticket-1209 -->
+                    <c:GC_StatusSpinner statusMessage="Revising Active Item." /> <!-- added by Sajid on 04/05/23 Ticket-1209 -->
+                </apex:facet>
+            </apex:actionStatus>
+            <apex:actionStatus id="cloneTaskStatusSpinner">
+                <apex:facet name="start">
+                    <!--c:GC_StatusSpinner statusMessage="Cloning Task." /--> <!--commented by Sajid on 04/05/23 Ticket-1209 -->
+                    <c:GC_StatusSpinner statusMessage="Cloning Item." /> <!-- added by Sajid on 04/05/23 Ticket-1209 -->
+                </apex:facet>
+            </apex:actionStatus>
+            <apex:actionStatus id="cancelTaskStatusSpinner">
+                <apex:facet name="start">
+                    <!--c:GC_StatusSpinner statusMessage="Canceling Task." /--> <!--commented by Sajid on 04/05/23 Ticket-1209 -->
+                    <c:GC_StatusSpinner statusMessage="Canceling Item." /> <!-- added updated by Sajid on 04/05/23 Ticket-1209 -->
+                </apex:facet>
+            </apex:actionStatus>
+            <apex:actionStatus id="approveTaskStatusSpinner">
+                <apex:facet name="start">
+                    <c:GC_StatusSpinner statusMessage="Approving For Submittal." />
+                </apex:facet>
+            </apex:actionStatus>
+            <apex:actionStatus id="reworkTaskStatusSpinner">
+                <apex:facet name="start">
+                    <c:GC_StatusSpinner statusMessage="Resetting to new for Update." />
+                </apex:facet>
+            </apex:actionStatus>
+            <apex:actionStatus id="placeOnHoldTaskStatusSpinner">
+                <apex:facet name="start">
+                    <c:GC_StatusSpinner statusMessage="Placing On Hold." />
+                </apex:facet>
+            </apex:actionStatus>
+            <apex:actionStatus id="releaseFromHoldTaskStatusSpinner">
+                <apex:facet name="start">
+                    <c:GC_StatusSpinner statusMessage="Releasing From Hold." />
+                </apex:facet>
+            </apex:actionStatus>
+            <apex:actionStatus id="selectCategoryStatus">
+                <apex:facet name="start">
+                    <c:GC_StatusSpinner statusMessage="Changing Category." />
+                </apex:facet>
+            </apex:actionStatus>
+            <apex:actionStatus id="selectItemStatus">
+                <apex:facet name="start">
+                    <c:GC_StatusSpinner statusMessage="Selecting Item." />
+                </apex:facet>
+            </apex:actionStatus>
+            <apex:actionStatus id="saveTaskStatus">
+                <apex:facet name="start">
+                    <!--c:GC_StatusSpinner statusMessage="Saving Task." /--> <!--commented by Sajid on 04/05/23 Ticket-1209 -->
+                    <c:GC_StatusSpinner statusMessage="Saving Item." /> <!-- added by Sajid on 04/05/23 Ticket-1209 -->
+                </apex:facet>
+            </apex:actionStatus>
+            <apex:actionStatus id="cancelTaskStatus">
+                <apex:facet name="start">
+                    <!--c:GC_StatusSpinner statusMessage="Cancel Edit Task."  <!--commented by Sajid on 04/05/23 Ticket-1209 -->
+                    <c:GC_StatusSpinner statusMessage="Cancel Edit Item." /> <!-- added by Sajid on 04/05/23 Ticket-1209 -->
+                </apex:facet>
+            </apex:actionStatus>
+            <apex:actionStatus id="additionalOptionsSpinner">
+                <apex:facet name="start">
+                    <c:GC_StatusSpinner statusMessage="Additional Options." />
+                </apex:facet>
+            </apex:actionStatus>
+            <apex:actionStatus id="recallTaskSpinner">
+                <apex:facet name="start">
+                     <!--c:GC_StatusSpinner statusMessage="Recall Task." /--> <!--commented by Sajid on 04/05/23 Ticket-1209 -->
+                    <c:GC_StatusSpinner statusMessage="Recall Item." /> <!-- added by Sajid on 04/05/23 Ticket-1209 -->
+                </apex:facet>
+            </apex:actionStatus>
+            <apex:actionStatus id="deleteStatus">
+                <apex:facet name="start">
+                    <!--c:GC_StatusSpinner statusMessage="Deleting order and its associated tasks." /--> <!--commented by Sajid on 04/05/23 Ticket-1209 -->
+                    <c:GC_StatusSpinner statusMessage="Deleting order and its associated items." /> <!-- added by Sajid on 04/05/23 Ticket-1209 -->
+                </apex:facet>
+            </apex:actionStatus>
+            <apex:actionStatus id="insertingLogsStatus">
+                <apex:facet name="start">
+                    <c:GC_StatusSpinner statusMessage="Generating Logs For The Transaction." />
+                </apex:facet>
+            </apex:actionStatus>
+        </apex:outputPanel>
+        <apex:pageBlock id="pb">
+            <apex:pageBlockButtons location="top" id="buttons">
+                <apex:commandButton value="Back to Show" action="{!URLFOR($Page.GC_Connect2ShowView, null, [id=currentOrder.Connect2_Show__c])}" title="Gets you back to Connect2 Show" />
+                <apex:commandButton value="Edit" action="{!editAction}" reRender="statuses, messages" status="editOrderStatusSpinner" />
+                <!--apex:commandButton value="Clone" title="Clones order and all associated tasks to a new order and resets all of their status" action="{!cloneAction}" reRender="statuses, messages" status="cloneOrderStatusSpinner" /--> <!--commented by Sajid on 04/05/23 Ticket-1209 -->
+                <apex:commandButton value="Clone" title="Clones order and all associated items to a new order and resets all of their status" action="{!cloneAction}" reRender="statuses, messages" status="cloneOrderStatusSpinner" /> <!-- added by Sajid on 04/05/23 Ticket-1209 -->
+                <!--apex:commandButton value="Delete" title="Deletes order and all associated tasks" rendered="{!canDelete}"  onclick="confirmDelete();" reRender="statuses, messages" --> <!--commented by Sajid on 04/05/23 Ticket-1209 -->
+                <apex:commandButton value="Delete" title="Deletes order and all associated items" rendered="{!canDelete}"  onclick="confirmDelete();" reRender="statuses, messages" >  <!-- added by Sajid on 04/05/23 Ticket-1209 -->
+                </apex:commandButton>
+                <!--apex:commandButton value="Submit to Core" title="Submits all Tasks in the Approved Status to the External System." reRender="messages, pb, relatedItems" action="{!submitOrderValidate}" status="submitStatus"--> <!--commented by Sajid on 04/05/23 Ticket-1209 -->
+                <apex:commandButton value="Submit to Core" title="Submits all Items in the Approved Status to the External System." reRender="messages, pb, relatedItems" action="{!submitOrderValidate}" status="submitStatus"> <!-- added by Sajid on 04/05/23 Ticket-1209 -->
+                    <apex:actionStatus id="submitStatus">
+                        <apex:facet name="stop">
+                            <apex:outputPanel rendered="{!hasItemstoSubmit && !hasValidationErrors}">
+                                <script>
+                                    if (!performingSubmit) {
+                                      performingSubmit = true;
+                                      SubmitOrderStep1();
+                                    }
+                                </script>
+                            </apex:outputPanel>
+                        </apex:facet>
+                    </apex:actionStatus>
+                </apex:commandButton>
+                <!--apex:commandButton value="Cancel Order in Core" title="Submits all Tasks to be canceled where Status is canceled and has not been flagged as already Canceled via the external system." reRender="messages, pb" action="{!cancelOrderValidate}" status="cancelStatus"--> <!--commented by Sajid on 04/05/23 Ticket-1209 -->
+                <apex:commandButton value="Cancel Order in Core" title="Submits all Items to be canceled where Status is canceled and has not been flagged as already Canceled via the external system." reRender="messages, pb" action="{!cancelOrderValidate}" status="cancelStatus"> <!--added by Sajid on 04/05/23 Ticket-1209 -->
+                    <apex:actionStatus id="cancelStatus">
+                        <apex:facet name="stop">
+                            <apex:outputPanel rendered="{!hasItemstoCancel}">
+                                <script>
+                                    if (!performingCancel) {
+                                      performingCancel = true;
+                                      CancelOrderStep1();
+                                    }
+                                </script>
+                            </apex:outputPanel>
+                        </apex:facet>
+                    </apex:actionStatus>
+                </apex:commandButton>
+            </apex:pageBlockButtons>
+            <apex:outputPanel id="pbPanel">
+                <apex:pageBlockSection title="Show" columns="2">
+                    <apex:outputField value="{!currentOrder.Connect2_Show__c}"></apex:outputField>
+                    <apex:outputField value="{!currentOrder.Connect2_Show__r.Show_Name__c}"></apex:outputField>
+                    <apex:outputField value="{!currentOrder.Connect2_Show__r.Job_Number__c}"></apex:outputField>
+                </apex:pageBlockSection>
+                <apex:pageBlockSection title="Order Description" columns="2">
+                    <apex:outputField value="{!currentOrder.Order_Number__c}"></apex:outputField>
+                    <apex:outputField value="{!currentOrder.Status__c}"></apex:outputField>
+                    <apex:outputField value="{!currentOrder.Order_Area_Description__c}"></apex:outputField>
+                </apex:pageBlockSection>
+                <apex:pageBlockSection title="Booth Area" columns="2">
+                    <apex:outputField value="{!currentOrder.Booth_Area__c}"></apex:outputField>
+                    <apex:outputField value="{!currentOrder.Booth_Area_ID__c}"></apex:outputField>
+                    <apex:outputField value="{!currentOrder.Delivery_Date_Time__c}"></apex:outputField>
+                    <apex:pageBlockSectionItem />
+                    <apex:outputField value="{!currentOrder.Completion_Date_Time__c}"></apex:outputField>
+                    <apex:pageBlockSectionItem />
+                    <apex:outputField value="{!currentOrder.Removal_Date_Time__c}"></apex:outputField>
+                    <apex:pageBlockSectionItem />
+                </apex:pageBlockSection>
+                <apex:pageBlockSection title="System Information" columns="2">
+                    <apex:outputField value="{!currentOrder.OwnerId}"></apex:outputField>
+                    <apex:outputField value="{!currentOrder.LastModifiedById}"></apex:outputField>
+                    <apex:outputField value="{!currentOrder.LastModifiedDate}"></apex:outputField>
+                </apex:pageBlockSection>
+            </apex:outputPanel>     
+        </apex:pageBlock>
+        
+        <apex:outputPanel id="GesTable2Vendor">
+            <apex:outputPanel rendered="{!!(selectedVendorTask != null)}"> 
+                <!--apex:pageBlock title="GES Order Tasks"--> <!--commented by Sajid on 04/05/23 Ticket-1209 -->
+                <apex:pageBlock title="GES Items"> <!--added by Sajid on 04/05/23 Ticket-1209 -->
+                    <apex:pageBlockButtons location="top">
+                        <!--apex:commandButton value="New GES Order Task" action="{!newTask}" status="newTaskSpinner" reRender="statuses, messages, pbRelatedTasks, selectedItemPB, VendorInformation, VendorLayout, GesTable" oncomplete="if (!obtainedProducts) { SessionLoad_JS(); }" /--> <!--commented by Sajid on 04/05/23 Ticket-1209 -->
+                        <apex:commandButton value="New GES Item" action="{!newTask}" status="newTaskSpinner" reRender="statuses, messages, pbRelatedTasks, selectedItemPB, VendorInformation, VendorLayout, GesTable" oncomplete="if (!obtainedProducts) { SessionLoad_JS(); }" />  <!-- added by Sajid on 04/05/23 Ticket-1209 -->
+                        <!--apex:commandButton value="Clone GES Order Task" action="{!cloneOrderTaskNonCommunity}"/--> <!--commented by Sajid on 04/05/23 Ticket-1209 -->
+                        <apex:commandButton value="Clone GES Item" action="{!cloneOrderTaskNonCommunity}"/>  <!-- added by Sajid on 04/05/23 Ticket-1209 -->
+                        <!--apex:commandButton value="Move GES Order Task" action="{!moveOrderTaskNonCommunity}"/--> <!--commented by Sajid on 04/05/23 Ticket-1209 -->
+                        <apex:commandButton value="Move GES Item" action="{!moveOrderTaskNonCommunity}"/>	 <!-- added by Sajid on 04/05/23 Ticket-1209 -->
+                    </apex:pageBlockButtons>
+        
+        
+                    <apex:outputPanel id="GesTable">
+                        <apex:outputPanel rendered="{!!(selectedGesTask != null)}">  
+                            <apex:pageBlockSection id="pbRelatedTasks" columns="1" collapsible="false">
+                                <apex:pageBlockTable value="{!gesOrderTasks}" var="gesTask" rendered="{!gesOrderTasks.size > 0}">
+                                    <apex:column headerValue="Action">
+                                        <apex:commandLink value="Clone" rendered="{!taskPermissions[gesTask.task.Id].CanClone}" target="_top" action="{!cloneTask}" reRender="statuses, messages, pbRelatedTasks, selectedItemPB,pbPanel, VendorInformation, VendorLayout, GesTable" status="cloneTaskStatusSpinner" oncomplete="if (!obtainedProducts) SessionLoad_JS();">
+                                            <apex:param name="taskId" value="{!gesTask.task.Id}" />
+                                        </apex:commandLink>
+                                        <apex:outputText rendered="{!taskPermissions[gesTask.task.Id].CanEdit}" value=" | " />
+                                        <apex:commandLink value="Edit " rendered="{!taskPermissions[gesTask.task.Id].CanEdit}" target="_top" action="{!editTask}" reRender="statuses, messages, pbRelatedTasks, selectedItemPB,pbPanel, VendorInformation, VendorLayout, GesTable" status="editTaskSpinner" oncomplete="if (!obtainedProducts) SessionLoad_JS();">
+                                            <apex:param name="taskId" value="{!gesTask.task.Id}" />
+                                        </apex:commandLink>
+                                        <apex:outputText rendered="{!taskPermissions[gesTask.task.Id].CanRevise}" value=" | " />
+                                        <apex:commandLink value="Revise" rendered="{!taskPermissions[gesTask.task.Id].CanRevise}" target="_top" action="{!reviseTask}" reRender="statuses, messages, pbRelatedTasks, selectedItemPB,pbPanel,  VendorInformation, VendorLayout, GesTable" status="reviseTaskStatusSpinner" oncomplete="if (!obtainedProducts) SessionLoad_JS();">
+                                            <apex:param name="taskId" value="{!gesTask.task.Id}" />
+                                        </apex:commandLink>
+                                        <apex:outputText rendered="{!taskPermissions[gesTask.task.Id].CanCancel}" value=" | " />
+                                        <apex:commandLink value="Cancel" rendered="{!taskPermissions[gesTask.task.Id].CanCancel}" target="_top" action="{!cancelTask}" reRender="statuses, messages, pbRelatedTasks, selectedItemPB,pbPanel" status="cancelTaskStatusSpinner">
+                                            <apex:param name="taskId" value="{!gesTask.task.Id}" />
+                                        </apex:commandLink>
+                                        <apex:outputText rendered="{!taskPermissions[gesTask.task.Id].CanPlaceOnHold}" value=" | " />
+                                        <apex:commandLink value="Place on Hold" rendered="{!taskPermissions[gesTask.task.Id].CanPlaceOnHold}" target="_top" action="{!placeOnHoldTask}" reRender="statuses, messages, pbRelatedTasks, selectedItemPB,pbPanel" status="placeOnHoldTaskStatusSpinner">
+                                            <apex:param name="taskId" value="{!gesTask.task.Id}" />
+                                        </apex:commandLink>
+                                        <apex:outputText rendered="{!taskPermissions[gesTask.task.Id].CanReleaseFromHold}" value=" | " />
+                                        <apex:commandLink value="Release from Hold" rendered="{!taskPermissions[gesTask.task.Id].CanReleaseFromHold}" target="_top" action="{!releaseFromHoldTask}" reRender="statuses, messages, pbRelatedTasks, selectedItemPB,pbPanel" status="releaseFromHoldTaskStatusSpinner">
+                                            <apex:param name="taskId" value="{!gesTask.task.Id}" />
+                                        </apex:commandLink>
+                                        <apex:outputText rendered="{!taskPermissions[gesTask.task.Id].CanApprove}" value=" | " />
+                                        <apex:commandLink value="Approve" rendered="{!taskPermissions[gesTask.task.Id].CanApprove}" target="_top" action="{!approveTask}" reRender="statuses, messages, pbRelatedTasks, selectedItemPB,pbPanel" status="approveTaskStatusSpinner">
+                                            <apex:param name="taskId" value="{!gesTask.task.Id}" />
+                                        </apex:commandLink>
+                                        <apex:outputText rendered="{!taskPermissions[gesTask.task.Id].CanReset}" value=" | " />
+                                        <apex:commandLink value="Rework" rendered="{!taskPermissions[gesTask.task.Id].CanReset}" target="_top" action="{!reworkTask}" reRender="statuses, messages, pbRelatedTasks, selectedItemPB,pbPanel" status="reworkTaskStatusSpinner">
+                                            <apex:param name="taskId" value="{!gesTask.task.Id}" />
+                                        </apex:commandLink>
+                                        <apex:outputText rendered="{!taskPermissions[gesTask.task.Id].CanDelete}" value=" | " />
+                                        <apex:commandLink value="Remove" rendered="{!taskPermissions[gesTask.task.Id].CanDelete}" action="{!deleteTask}" reRender="statuses, messages, pbRelatedTasks, selectedItemPB,pbPanel" status="deleteTaskSpinner">
+                                            <apex:param name="taskId" value="{!gesTask.task.Id}" />
+                                        </apex:commandLink>
+                                        <apex:outputText rendered="{!taskPermissions[gesTask.task.Id].CanRecall}" value=" | " />
+                                        <apex:commandLink value="Recall" rendered="{!taskPermissions[gesTask.task.Id].CanRecall}" action="{!recallTask}" reRender="statuses, messages, pbRelatedTasks, selectedItemPB,pbPanel" status="recallTaskSpinner">
+                                            <apex:param name="taskId" value="{!gesTask.task.Id}" />
+                                        </apex:commandLink>
+                                        <apex:outputText rendered="{!taskPermissions[gesTask.task.Id].CanSubmittoCore}" value=" | " />
+                                        <apex:commandLink value="Submit to Core" rendered="{!taskPermissions[gesTask.task.Id].CanSubmittoCore}" action="{!submitOrderValidate}" reRender="statuses, messages, pbRelatedTasks, selectedItemPB,pbPanel" status="submittocoreStatus">
+                                            <apex:param name="singleTaskId" value="{!gesTask.task.Id}" />
+                                            <apex:actionStatus id="submittocoreStatus">
+                                                <apex:facet name="stop">
+                                                    <apex:outputPanel rendered="{!hasItemstoSubmit && !hasValidationErrors}">
+                                                        <script>
+                                                            if (!performingSubmit) {
+                                                              performingSubmit = true;
+                                                              SubmitOrderStep1();
+                                                            }
+                                                        </script>
+                                                    </apex:outputPanel>
+                                                </apex:facet>
+                                            </apex:actionStatus>
+                                        </apex:commandLink>
+                                        <apex:outputText rendered="{!taskPermissions[gesTask.task.Id].CanSubmitGraphics && taskPermissions[gesTask.task.Id].canSubmitToReview}" value=" | " />
+                                        <apex:commandLink value="Submit to Graphics PM" rendered="{!taskPermissions[gesTask.task.Id].CanSubmitGraphics && taskPermissions[gesTask.task.Id].canSubmitToReview}" action="{!submitToGPM}" reRender="statuses, messages, pbRelatedTasks, selectedItemPB,pbPanel" status="submitGraphicsTaskSpinner">
+                                            <apex:param name="singleTaskId" value="{!gesTask.task.Id}" />
+                                        </apex:commandLink>
+                                        
+                                        <apex:outputText rendered="{!taskPermissions[gesTask.task.Id].canSubmitToAM}" value=" | " />
+                                        <apex:commandLink value="Submit to AM" rendered="{!taskPermissions[gesTask.task.Id].canSubmitToAM}" action="{!submitToAMReview}" reRender="statuses, messages, pbRelatedTasks, selectedItemPB,pbPanel" status="submitGraphicsTaskSpinner">
+                                            <apex:param name="singleTaskId" value="{!gesTask.task.Id}" />
+                                        </apex:commandLink>
+                                        
+                                    </apex:column>
+                                    <apex:column headerValue="GES Order #">
+                                        <apex:commandLink value="{!gesTask.task.Name}" action="/{!gesTask.task.Id}"></apex:commandLink>
+                                    </apex:column>
+                                      <!-- SAL-612 -->
+                                      <!-- SAL-586 -->
+                                    <apex:column headerValue="Files" style="width: 100px;" > 
+                                        <!--<td data-label="ges-files"> -->
+                                            <apex:commandLink id="theCommandLink"  target="_blank" action="{!URLFOR($Page.GC_FileUploadPage, null, [recordId = gesTask.task.Id, recordName = gesTask.task.Name])}">
+                                                <apex:param name="taskId" value="{!gesTask.task.Id}" />
+                                                <apex:image id="theImage" value="{!$Resource.GC_OrdertaskUpload}" width="25" height="5" alt="Upload" />
+                                            </apex:commandLink> &nbsp;&nbsp;&nbsp;&nbsp;
+                                            <apex:outputLink value="{!$Page.GC_OrderTaskView}">                                                 
+                                                <apex:param name="Id" value="{!gesTask.task.Id}"/>
+                                                <apex:param name="showId" value="{!gesTask.task.Order__r.Connect2_Show__c}"/>
+                                                <apex:param name="orderId" value="{!currentOrder.Id}"/>
+                                                <apex:param name="scrolltodiv" value="relatedListId"/>
+                                                <apex:outputText value="{!gesTask.fileCount}" />
+                                            </apex:outputLink> 
+                                        <!--</td> -->                                                       
+                                    </apex:column> 
+                                    <apex:column value="{!gesTask.task.Status__c}" />
+                                    <apex:column value="{!gesTask.task.Sign_Title__c}" />
+                                    <apex:column value="{!gesTask.task.Item_Number__c}" />
+                                    <apex:column value="{!gesTask.task.Description__c}" />
+                                    <apex:column value="{!gesTask.task.User_Item_Description__c}" /> 
+                                    <!-- <apex:column value="{!gesTask.task.Price__c}" />   -->
+                                    <apex:column value="{!gesTask.task.QuantityNum__c}" />
+                                    <!-- <apex:column value="{!gesTask.task.UOM__c}" /> 
+                                    <apex:column value="{!gesTask.task.Total__c}" />   --> 
+                                    <apex:column value="{!gesTask.task.OwnerId}" headerValue="Owner"/>
+                                    <apex:column value="{!gesTask.task.Submitted_Date__c}" />
+                                   <apex:column >
+                                       <apex:facet name="header">CORE#</apex:facet>
+                                                {!gesTask.task.Order_Number__c}
+                                     </apex:column>
+                                    <apex:column >
+                                       <apex:facet name="header">Line#</apex:facet>
+                                                {!gesTask.task.Line_Item_Number__c}
+                                      </apex:column>
+                                    <apex:column value="{!gesTask.task.Line_Item_Status__c}" />
+                                </apex:pageBlockTable>
+            
+                            </apex:pageBlockSection>
+                        </apex:outputPanel>
+                    </apex:outputPanel>   
+                </apex:pageBlock>
+            </apex:outputPanel>
+        </apex:outputPanel>  
+        
+        <apex:outputPanel id="selectedItemPB" >
+            <apex:pageBlock id="pb1" rendered="{!selectedGesTask != null}">
+                <apex:pageBlockButtons >
+                    <!--apex:commandButton value="Save Task" action="{!saveTask}" reRender="statuses, messages, pbRelatedTasks, selectedItemPB,pbPanel, VendorInformation, VendorLayout, GesTable"  status="saveTaskStatus"--> <!--added by Sajid on 04/05/23 Ticket-1209 -->
+                    <apex:commandButton value="Save Item" action="{!saveTask}" reRender="statuses, messages, pbRelatedTasks, selectedItemPB,pbPanel, VendorInformation, VendorLayout, GesTable"  status="saveTaskStatus"> <!-- added by Sajid on 04/05/23 Ticket-1209 -->
+                    </apex:commandButton>
+                    <apex:commandButton value="Cancel Edit" action="{!cancelEditTask}" reRender="statuses, messages, pbRelatedTasks, selectedItemPB, VendorInformation, VendorLayout, GesTable" status="cancelTaskStatus">
+                    </apex:commandButton>
+                </apex:pageBlockButtons>
+                <apex:pageBlockSection showHeader="false" columns="1" collapsible="false">
+                    <apex:pageBlockSection rendered="{!coreApi.selectedBooth != null && !selectedGesTask.isRevision}" title="Item Selection" columns="3">
+                        <apex:pageBlockSectionItem helpText="Use Search Item button to search for products having the search text associated with them ">
+                            <apex:outputLabel value="Enter Search Text" />
+                            <input  value="" id="searchInput" style="width:298px" />                        
+                        </apex:pageBlockSectionItem>    
+                        <apex:commandButton value="Search Item" onclick="populateProductList();return false;" status="saveTaskStatus" id="serachItem" > </apex:commandButton>            
+                        <apex:inputHidden value="{!coreApi.searchItemClick}" id="serachItemHidden"/>                        
+                        <apex:pageBlockSectionItem helpText="Select the item category from this list.">
+                            <apex:outputLabel value="Select Item Category" />
+                            <apex:selectList id="categorySelect" value="{!coreApi.selectedCategory}" size="1">
+                                <apex:selectOptions value="{!coreApi.productCategories}" rendered="{!coreApi.selectedBooth != null}"></apex:selectOptions>
+                                <apex:actionSupport action="{!coreApi.selectCategories}" event="onchange" reRender="statuses, messages, selectedItemPB" status="selectCategoryStatus" />
+                            </apex:selectList>
+                        </apex:pageBlockSectionItem>
+                        <apex:pageBlockSectionItem helpText="Select the item to order from this list.">
+                            <apex:outputLabel value="Select Item" />
+                            <apex:selectList id="itemSelect" value="{!coreApi.selectedItemNumberAndDescription}" size="1">
+                                <!--<apex:selectOptions value="{!coreApi.ProductList}" rendered="{!coreApi.selectedBooth != null}"></apex:selectOptions>-->
+                                <apex:selectOptions value="{!coreApi.ProductList.0}" rendered="{!coreApi.selectedBooth != null}"></apex:selectOptions>
+                                <apex:selectOptions value="{!coreApi.ProductList.1}" rendered="{!coreApi.selectedBooth != null}"></apex:selectOptions>
+                                <apex:actionSupport action="{!coreApi.selectItem}" event="onchange" reRender="statuses, messages, selectedItemPB" status="selectItemStatus" />
+                            </apex:selectList>
+                        </apex:pageBlockSectionItem>
+                        <apex:image url="{!coreApi.selectedImagePath}" />
+                    </apex:pageBlockSection>
+                    <apex:pageBlockSection title="Item Details">
+                        <apex:outputPanel rendered="{!selectedGesTask.isRevision}">
+                            * The item can not be edited for this task since this is a revision of a previous task.
+                        </apex:outputPanel>
+                        <apex:pageBlockSectionItem rendered="{!selectedGesTask.isRevision}" />
+                        <apex:outputField value="{!selectedGesTask.task.Description__c}" />
+                        <apex:outputField value="{!selectedGesTask.task.Price__c}" />
+                        <!-- SAL-501 -->
+                        <apex:inputField value="{!selectedGesTask.task.User_Item_Description__c}" style="width:100%" />
+                        <apex:inputField value="{!selectedGesTask.task.New_Price__c}" />                
+                        <apex:outputField value="{!selectedGesTask.task.UOM__c}" />
+                        <apex:outputField value="{!selectedGesTask.task.Booth_Area_Discount__c}" />
+                        <apex:outputField value="{!selectedGesTask.task.Item_Number__c}" />
+                        <apex:pageBlockSectionItem >
+                              <apex:outputLabel value="Booth Area Discount Override" />
+                            <apex:actionRegion >
+                                <apex:inputField value="{!selectedGesTask.task.Booth_Area_Discount_Override__c}" >
+                                    <apex:actionSupport event="onchange" action="{!clearDiscountValues}"  reRender="pb1"/>
+                                </apex:inputField>
+                            </apex:actionRegion>
+                            </apex:pageBlockSectionItem> 
+                            
+                           <apex:pageBlockSectionItem >                         
+                              <apex:outputLabel value="Discount Reason Code" rendered="{!selectedGesTask.task.Booth_Area_Discount_Override__c != null}"/>
+                             <apex:actionRegion >
+                            <apex:inputField value="{!selectedGesTask.task.Discount_Reason_Code__c}" rendered="{!selectedGesTask.task.Booth_Area_Discount_Override__c != null}" required="true" >
+                                <apex:actionSupport event="onchange"  reRender="pb1"/>
+                            </apex:inputField>
+                        </apex:actionRegion>
+                       </apex:pageBlockSectionItem>
+                       
+                        <apex:pageBlockSectionItem >                         
+                              <apex:outputLabel value="Discount Reason Text" rendered="{!selectedGesTask.task.Booth_Area_Discount_Override__c != null}"/>
+                             <apex:actionRegion >
+                            <apex:inputField value="{!selectedGesTask.task.Discount_Reason_Text__c}" rendered="{!selectedGesTask.task.Booth_Area_Discount_Override__c != null}" required="true">
+                                <apex:actionSupport event="onchange"  reRender="pb1"/>
+                            </apex:inputField>
+                        </apex:actionRegion>
+                       </apex:pageBlockSectionItem>
+                        <apex:outputField value="{!selectedGesTask.task.Item_Template__c}" />
+                        <apex:inputField value="{!selectedGesTask.task.File_Reference_Link__c}" style="width:100%" />
+                        <apex:image url="{!coreApi.selectedImagePath}" rendered="{!selectedGesTask.isRevision}" />
+                    </apex:pageBlockSection>
+                    <c:GC_ItemOptions gotAttribute="{!selectedGesTask.task}" coreApiAttribute="{!coreApi}" designElementTaskOptions="{!designElementTasks}" materialOptions="{!materialOptions}" activeGemStructureTaskOptions="{!activeGemStructureTasks}">
+                    </c:GC_ItemOptions>
+                    <c:GC_CustomRTF targetclass="showManagement" rendered="true" toolbar="full" uniqueid="showManagement" />
+                    <!-- <apex:panelGrid columns="2">
+                        <apex:commandLink value="Show Additional Options" action="{!toggleAdditionalOptions}" reRender="statuses, selectedItemPB" rendered="{!!selectedGesTask.additionalOptions}" status="additionalOptionsSpinner" />
+                        <apex:commandLink value="Hide Additional Options" action="{!toggleAdditionalOptions}" reRender="statuses, selectedItemPB" rendered="{!selectedGesTask.additionalOptions}" status="additionalOptionsSpinner" />
+                      </apex:panelGrid> -->
+                    <!--   <apex:outputPanel rendered="{!selectedGesTask.additionalOptions}"> -->
+                    <apex:pageBlockSection columns="1">
+                        <c:GC_CustomRTF targetclass="showManagement" rendered="true" toolbar="full" uniqueid="showManagement" />
+                        <apex:inputTextarea styleClass="showManagement ckeditor" richText="false" value="{!selectedGesTask.task.Show_Management_Field__c}" style="width:100%" />
+                    </apex:pageBlockSection>
+                    <apex:pageBlockSection title="Department">
+                        <apex:selectList id="departmentSelect" value="{!selectedGesTask.task.Department__c}" size="1" >
+                            <apex:selectOptions value="{!departmentAttributes}"></apex:selectOptions>
+                        </apex:selectList>
+                        <apex:inputField value="{!selectedGesTask.task.Budget_Code__c}" />
+                    </apex:pageBlockSection>
+                    <c:GC_ItemOptionsArea gotAttribute="{!selectedGesTask.task}" venueOptions="{!venueLocations}" defaultDeliveryTimeInput="{!currentOrder.Delivery_Date_Time__c}" defaultCompletionTimeInput="{!currentOrder.Completion_Date_Time__c}" defaultRemovalTimeInput="{!currentOrder.Removal_Date_Time__c}">
+                    </c:GC_ItemOptionsArea>
+                    <apex:pageBlockSection title="Remarks">
+                        <apex:inputField value="{!selectedGesTask.task.Invoice_Remarks__c}" style="width:100%" />
+                        <apex:inputField value="{!selectedGesTask.task.Details_To_Invoice_Remarks__c}" />
+                        <apex:inputField value="{!selectedGesTask.task.Show_Site_Remarks__c}" style="width:100%" />
+                        <apex:inputField value="{!selectedGesTask.task.Details_To_Show_Site_Remarks__c}" />
+                        <apex:inputField value="{!selectedGesTask.task.Production_Remarks__c}" style="width:100%" />
+                        <!--SAL-501 -->
+                        <apex:inputCheckbox value="{!selectedGesTask.task.Add_Client_Special_Info_Order_Remarks__c}" selected="True"/>
+                        <apex:inputField value="{!selectedGesTask.task.Item_Type_Remarks__c}" style="width:100%" />
+                        <apex:inputField value="{!selectedGesTask.task.Details_To_Production_Remarks__c}" />
+                    </apex:pageBlockSection>
+                    <!--  </apex:outputPanel> -->
+                </apex:pageBlockSection>
+            </apex:pageBlock>
+        </apex:outputPanel>
+
+        <!-- Vendor order Task   -->
+        <apex:outputPanel id="VendorInformation" rendered="{!(showAttrFlag)}">
+            <apex:outputPanel rendered="{!!(selectedGesTask != null)}">   
+                <apex:pageBlock title="Vendor Order Tasks" >
+                    <apex:pageBlockButtons location="top">
+                        <apex:commandButton value="New Vendor Order Task" action="{!newVendorTask}" reRender="statuses, messages, pbVendorRelatedTasks, selectedVendorItemPB, GesTable2Vendor, VendorTable" status="newTaskSpinner" />
+                    </apex:pageBlockButtons>  
+                    <apex:outputPanel id="VendorTable">
+                        <apex:outputPanel rendered="{!!(selectedVendorTask!= null)}">     
+                            <apex:pageBlockSection id="pbVendorRelatedTasks" columns="1" collapsible="false">
+                                <apex:pageBlockTable value="{!vendorOrderTasks}" var="vendorTask" rendered="{!vendorOrderTasks.size > 0}">
+                                    <apex:column headerValue="Action">
+                                        <apex:commandLink value="Clone" target="_top" action="{!cloneVendorTask}" reRender="statuses, messages, pbVendorRelatedTasks, selectedVendorItemPB, GesTable2Vendor, VendorTable" status="cloneTaskStatusSpinner">
+                                            <apex:param name="taskId" value="{!vendorTask.task.Id}" />                        
+                                        </apex:commandLink>
+                                        <apex:outputText value=" | " />
+                                        <apex:commandLink value="Edit" target="_top" action="{!editVendorTask}" reRender="statuses, messages, pbVendorRelatedTasks, selectedVendorItemPB, GesTable2Vendor, VendorTable" status="editTaskSpinner">
+                                            <apex:param name="taskId" value="{!vendorTask.task.Id}" />
+                                        </apex:commandLink>
+                                        <apex:outputText value=" | " />
+                                        <apex:commandLink value="Remove" target="_top" action="{!deleteVendorTask}" reRender="statuses, messages, pbVendorRelatedTasks, selectedVendorItemPB" status="deleteTaskSpinner">
+                                            <apex:param name="taskId" value="{!vendorTask.task.Id}" />
+                                        </apex:commandLink>
+                                        <apex:outputText value=" | " />
+                                        <apex:commandLink value="Send to Vendor(s)" target="_top" action="{!sendVendorTask}" reRender="statuses, messages, pbVendorRelatedTasks, selectedVendorItemPB" status="sendTaskSpinner" rendered="{!(vendorTask.task.Status__c=='New')}">
+                                            <apex:param name="taskId" value="{!vendorTask.task.Id}" />
+                                        </apex:commandLink>
+                                        <apex:commandLink value="Re-Send to Vendor(s)" target="_top" action="{!sendVendorTask}" reRender="statuses, messages, pbVendorRelatedTasks, selectedVendorItemPB" status="sendTaskSpinner" rendered="{!(vendorTask.task.Status__c!='New')}">
+                                            <apex:param name="taskId" value="{!vendorTask.task.Id}" />
+                                        </apex:commandLink>
+                            
+                                    </apex:column>
+                                    <apex:column headerValue="Vendor Order #">
+                                        <apex:commandLink value="{!vendorTask.task.Name}" action="/{!vendorTask.task.Id}"></apex:commandLink>
+                                    </apex:column>
+                                    <!--SAL-612 -->
+                                    <!-- SAL-586 -->
+                                    <apex:column headerValue="Files" >
+                                        <!--<td data-label="VOT-files"> -->
+                                        <apex:commandLink id="theCommandLink" target="_blank" action="{!URLFOR($Page.GC_FileUploadPage, null, [recordId = vendorTask.task.Id, recordName = vendorTask.task.Name])}">
+                                            <apex:param name="taskId" value="{!vendorTask.task.Id}" />
+                                            <apex:image id="theImage" value="{!$Resource.GC_OrdertaskUpload}" width="25" height="5" alt="Upload"/>
+                                        </apex:commandLink> &nbsp;  &nbsp; &nbsp;
+
+                                        <apex:commandLink action="/{!vendorTask.task.Id}">                                           
+                                            <apex:param name="votId" value="{!vendorTask.task.Id}"/>
+                                            <apex:outputText value="{!vendorTask.fileCount}" />
+                                        </apex:commandLink>                                                                                         
+                                    </apex:column>
+                                    <!-- SAL-586 -->
+                                    <apex:column value="{!vendorTask.task.Status__c}" />
+                                    <apex:column value="{!vendorTask.task.Vendors__c}" />       
+                                    <!-- SAL-612 <apex:column value="{!vendorTask.task.Vendor_Instructions__c}" /> -->
+                                    <apex:column value="{!vendorTask.task.Services__c}" />         
+                                    <apex:column value="{!vendorTask.task.Submitted_Date__c}" />
+                                    <apex:column value="{!vendorTask.task.LastModifiedById}" />
+                                    <apex:column value="{!vendorTask.task.LastModifiedDate}" />
+                                </apex:pageBlockTable>
+                            </apex:pageBlockSection>
+                        </apex:outputPanel>
+                    </apex:outputPanel> 
+                </apex:pageBlock>
+            </apex:outputPanel>     
+        </apex:outputPanel>
+        
+        <apex:outputPanel id="VendorLayout">
+            <apex:outputPanel rendered="{!!(selectedGesTask != null)}"> 
+                <apex:outputPanel id="selectedVendorItemPB">
+                    <apex:pageBlock rendered="{!selectedVendorTask != null}">
+                        <apex:pageBlockButtons >
+                            <apex:commandButton value="Save Task" action="{!saveVendorTask}" status="saveTaskStatus" reRender="statuses, messages, pbVendorRelatedTasks, selectedVendorItemPB, GesTable2Vendor, VendorTable" >
+                            </apex:commandButton>
+                            <apex:commandButton value="Cancel Edit" action="{!cancelEditVendorTask}" status="cancelTaskStatus" reRender="statuses, messages, pbVendorRelatedTasks, selectedVendorItemPB, GesTable2Vendor, VendorTable" >
+                            </apex:commandButton>
+                        </apex:pageBlockButtons>
+                        <c:GC_CustomRTF targetclass="serviceType" rendered="true" toolbar="full" uniqueid="serviceType" />                   
+                        <!-- service type and vendor display  -->                  
+                        <apex:pageBlockSection >
+                            <apex:selectList value="{!selectedVendorTask.task.Service_Type__c}" size="1">
+                                <apex:selectOptions value="{!serviceTypes}"></apex:selectOptions>
+                                <apex:actionSupport event="onchange" action="{!filterVendors}" rerender="vendor1" status="loadVendorsSpinner" >
+                                  <apex:param name="vendor1Select" value="Vendor1" assignTo="{!vendorSelect}"/>
+                                </apex:actionsupport>
+                            </apex:selectList> 
+                              
+                            <apex:selectList value="{!selectedVendorTask.task.Vendor__c}" id="vendor1" size="1" styleClass="picklistWidth">
+                                <apex:selectOptions value="{!userslist}"></apex:selectOptions> 
+                            </apex:selectList>
+                            <apex:selectList value="{!selectedVendorTask.task.Service_Type2__c}" size="1">
+                                <apex:selectOptions value="{!serviceTypes}"></apex:selectOptions>
+                                    <apex:actionSupport event="onchange" action="{!filterVendors}" rerender="vendor2" status="loadVendorsSpinner">
+                                        <apex:param name="vendor2Select" value="Vendor2" assignTo="{!vendorSelect}"/>
+                                    </apex:actionSupport>
+                            </apex:selectList>  
+                            <apex:selectList value="{!selectedVendorTask.task.Vendor2__c}" id="vendor2" size="1"  styleClass="picklistWidth">
+                                <apex:selectOptions value="{!userslist1}"></apex:selectOptions> 
+                            </apex:selectList>          
+                            <apex:selectList value="{!selectedVendorTask.task.Service_Type3__c}" size="1">
+                                <apex:selectOptions value="{!serviceTypes}"></apex:selectOptions>
+                                    <apex:actionSupport event="onchange" action="{!filterVendors}" rerender="vendor3" status="loadVendorsSpinner">
+                                        <apex:param name="vendor3Select" value="Vendor3" assignTo="{!vendorSelect}"/>
+                                    </apex:actionSupport>
+                            </apex:selectList>
+                            <apex:selectList value="{!selectedVendorTask.task.Vendor3__c}" id="vendor3" size="1"  styleClass="picklistWidth">
+                                <apex:selectOptions value="{!userslist2}"></apex:selectOptions> 
+                            </apex:selectList>
+                            <apex:selectList value="{!selectedVendorTask.task.Service_Type4__c}" size="1">
+                                <apex:selectOptions value="{!serviceTypes}"></apex:selectOptions>
+                                <apex:actionSupport event="onchange" action="{!filterVendors}" rerender="vendor4" status="loadVendorsSpinner">
+                                    <apex:param name="vendor4Select" value="Vendor4" assignTo="{!vendorSelect}"/>
+                                </apex:actionSupport>
+                            </apex:selectList>
+                            <apex:selectList value="{!selectedVendorTask.task.Vendor4__c}" id="vendor4" size="1"  styleClass="picklistWidth">
+                                <apex:selectOptions value="{!userslist3}"></apex:selectOptions> 
+                            </apex:selectList>
+                            <apex:selectList value="{!selectedVendorTask.task.Service_Type5__c}" size="1">
+                                <apex:selectOptions value="{!serviceTypes}"></apex:selectOptions>
+                                    <apex:actionSupport event="onchange" action="{!filterVendors}" rerender="vendor5" status="loadVendorsSpinner">
+                                        <apex:param name="vendor5Select" value="Vendor5" assignTo="{!vendorSelect}"/>
+                                    </apex:actionSupport>
+                            </apex:selectList>
+                            <apex:selectList value="{!selectedVendorTask.task.Vendor5__c}" id="vendor5" size="1"  styleClass="picklistWidth">
+                                <apex:selectOptions value="{!userslist4}"></apex:selectOptions> 
+                            </apex:selectList>                            
+                        </apex:pageBlockSection>
+                        <apex:pageBlockSection columns="1">
+                            <apex:inputTextarea styleClass="serviceType ckeditor" richText="false" value="{!selectedVendorTask.task.Vendor_Instructions__c}" style="width:100%" />
+                        </apex:pageBlockSection>
+                        <apex:pageBlockSection columns="2">
+                            <apex:inputField value="{!selectedVendorTask.task.SelectAllOrderTasks__c}" />
+                            <apex:outputText ></apex:outputText>
+                            <apex:selectList value="{!selectedVendorTask.task.GESOrderTask1__c}" size="1">
+                                <apex:selectOptions value="{!gesOrderTasksForVendors}"></apex:selectOptions>
+                            </apex:selectList>
+                            <!--<apex:inputField value="{!selectedVendorTask.task.SA_Venue_Location_Ven__c}" />   -->
+                            <apex:selectList id="venueLocationsSelect" value="{!selectedVendorTask.task.SA_Venue_Location_Ven__c}" size="1" styleClass="slds-select">
+                                <apex:selectOptions value="{!venueLocations}"></apex:selectOptions>
+                            </apex:selectList>
+                            <apex:selectList value="{!selectedVendorTask.task.GESOrderTask2__c}" size="1">
+                                <apex:selectOptions value="{!gesOrderTasksForVendors}"></apex:selectOptions>
+                            </apex:selectList>
+                            <apex:inputField value="{!selectedVendorTask.task.Delivery_Location_Ven__c}" />
+                            <apex:selectList value="{!selectedVendorTask.task.GESOrderTask3__c}" size="1">
+                                <apex:selectOptions value="{!gesOrderTasksForVendors}"></apex:selectOptions>
+                            </apex:selectList>
+                            <apex:inputField value="{!selectedVendorTask.task.Delivery_Date_Time_Ven__c}" />
+                            <apex:selectList value="{!selectedVendorTask.task.GESOrderTask4__c}" size="1">
+                                <apex:selectOptions value="{!gesOrderTasksForVendors}"></apex:selectOptions>
+                            </apex:selectList>
+                            <apex:inputField value="{!selectedVendorTask.task.Completion_Date_Time_Ven__c}" />
+                            <apex:selectList value="{!selectedVendorTask.task.GESOrderTask5__c}" size="1">
+                                <apex:selectOptions value="{!gesOrderTasksForVendors}"></apex:selectOptions>
+                            </apex:selectList>
+                            <apex:inputField value="{!selectedVendorTask.task.Removal_Date_Time_Ven__c}" />
+                      
+                        </apex:pageBlockSection>
+                    </apex:pageBlock>
+                </apex:outputPanel>
+            </apex:outputPanel>     
+        </apex:outputPanel>
+    </apex:form>
+    <!-- Putting the old code -> Start --> 
+      <apex:outputPanel id="relatedItems">
+        <apex:relatedList subject="{!currentOrder}" list="AttachedContentDocuments" />
+        <apex:relatedList subject="{!currentOrder}" list="CombinedAttachments" />
+        <apex:relatedList subject="{!currentOrder}" list="GC_Core_Interface_Logs__r" title="Web Service Logs" />
+      </apex:outputPanel>
+    <!-- Putting the old code -> Finish --> 
+      
+      <!-- commenting the below as we need to deploy 502, please mention ticket number for this change-->
+      <!--<apex:outputPanel id="relatedItemsNon" rendered="{!hasNonAdminAccess}">
+        <!-- <apex:relatedList subject="{!currentOrder}" list="GES_Order_Tasks__r" pageSize="100"/> -->
+        <!-- <apex:relatedList subject="{!currentOrder}" list="Vendor_Order_Tasks__r" /> --> 
+      <!--  <apex:relatedList subject="{!currentOrder}" list="AttachedContentDocuments" />
+        <apex:relatedList subject="{!currentOrder}" list="GC_Core_Interface_Logs__r" title="Web Service Logs" />
+      </apex:outputPanel> -->
+     
+      
+      <!-- commenting the below as we need to deploy 502, please mention ticket number for this change-->
+      <!--<apex:outputPanel id="relatedItems" rendered="{!hasAdminAccess}">
+        <!-- <apex:relatedList subject="{!currentOrder}" list="GES_Order_Tasks__r" pageSize="100"/> -->
+        <!-- <apex:relatedList subject="{!currentOrder}" list="Vendor_Order_Tasks__r" /> --> 
+       <!-- <apex:relatedList subject="{!currentOrder}" list="AttachedContentDocuments" />
+        <apex:relatedList subject="{!currentOrder}" list="AttachedContentNotes" />
+        <apex:relatedList subject="{!currentOrder}" list="CombinedAttachments" />
+        <apex:relatedList subject="{!currentOrder}" list="GC_Core_Interface_Logs__r" title="Web Service Logs" />
+      </apex:outputPanel> -->
+      
+      <!-- Rahul: for SAL 502, gives out the Search Item Functionlity -> Start here -->
+      
+    <body>
+        <div class="slds">
+            <div id="itemSelectionDialog"  align = "center" style="display:none;">
+                <div role="alertdialog" class="slds-modal slds-fade-in-open slds-modal--prompt prompt">
+                    <div class="slds-modal__container" style="width:600px;height: 500px;">
+                        <div class="slds-modal__header">
+                            <button class="slds-button slds-modal__close slds-button--icon-inverse prompt_close" title="Close" style="color: #b41955!important;" onclick="closeItemPopup();return false;">
+                                <svg aria-hidden="true" class="slds-button__icon slds-button__icon--large">
+                                    <use href="{!URLFOR($Resource.Lightning_Design_System, '/assets/icons/action-sprite/svg/symbols.svg#close')}"></use>
+                                </svg>
+                                <span class="slds-assistive-text">Close</span>
+                            </button>
+                            <h2 class="slds-text-heading--medium" id="prompt-heading-id">Select An Item</h2>
+                        </div>
+                        <div class="slds-modal__content slds-p-around--medium">
+                            <h3 class="slds-section-title--divider" style="display: inherit;"><b>Items</b></h3>
+                            
+                            <table class="slds-table slds-table--bordered slds-max-medium-table--stacked-horizontal" id="itemTable" style="margin-top: 12px;">
+                                <thead>
+                                    <tr class="slds-text-heading--label">
+                                        <td role="gridcell" class="slds-cell-shrink" scope="col">
+                                            <label class="slds-checkbox">
+                                                
+                                            </label>
+                                        </td>
+                                        <th scope="col">
+                                            <span class="slds-truncate">Item Name</span>
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    
+                                </tbody>
+                            </table>
+                            <br/>
+                        </div>  
+                        <div class="slds-modal__footer slds-theme--default">  
+                            <button class="slds-button slds-button--brand gc-teal-button prompt_close" id="selectItemButton" onclick="selectItemFromList();" >Select</button> 
+                        </div>
+                    </div>
+                </div>
+                <div class="slds-backdrop slds-backdrop--open prompt"></div>
+            </div>
+        </div>   
+    </body>
+        
+      <!-- Rahul: for SAL 502, gives out the Search Item Functionlity -> Finish here -->
+    </apex:page>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>EMEA_EWMA_2024_Case</fullName>
+    <filterScope>Queue</filterScope>
+    <label>EMEA EWMA 2024</label>
+    <queue>EMEA_EWMA_2024</queue>
+    <sharedTo>
+        <allInternalUsers />
+    </sharedTo>
+</ListView>

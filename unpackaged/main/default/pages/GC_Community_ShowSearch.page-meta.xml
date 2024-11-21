@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ApexPage xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>35.0</apiVersion>
+    <availableInTouch>false</availableInTouch>
+    <confirmationTokenRequired>false</confirmationTokenRequired>
+    <description>Home lander page. Displays a list view of all shows the current user has access to along with criteria for filtering shows. When a show is selected from the list view, it takes navigates to the Community Home page.</description>
+    <label>GC_Community_ShowSearch</label>
+</ApexPage>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>GES_AM_Phone2_Auto__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF((TEXT(GES_Account_Manager2__c) == &quot;Jessica Bodner&quot;),&quot;859-283-8737&quot;,
+IF((TEXT(GES_Account_Manager2__c) == &quot;Stephanie Specht&quot;),&quot;412-208-2253&quot;,
+IF((TEXT(GES_Account_Manager2__c) == &quot;Jamie Brosmore&quot;),&quot;859-283-8702&quot;,
+IF((TEXT(GES_Account_Manager2__c) == &quot;Jill Johnson&quot;),&quot;(763) 488-5365&quot;,
+IF((TEXT(GES_Account_Manager2__c) == &quot;Kevin Jones&quot;),&quot;(508) 408-2105&quot;,
+IF((TEXT(GES_Account_Manager2__c) == &quot;Melinda Peterson&quot;),&quot;(412) 208-2279&quot;,
+IF((TEXT(GES_Account_Manager2__c) == &quot;Mary Jones&quot;),&quot;(407) 370-3963&quot;,
+IF((TEXT(GES_Account_Manager2__c) == &quot;Lisa Beyer&quot;),&quot;630-339-7327&quot;,
+IF((TEXT(GES_Account_Manager2__c) == &quot;Lauren Gallagher&quot;),&quot;412-208-2262&quot;,
+IF((TEXT(GES_Account_Manager2__c) == &quot;Lauren Poole&quot;),&quot;630-351-7773&quot;,
+IF((TEXT(GES_Account_Manager2__c) == &quot;Kimrlee Shamey-Golonka&quot;),&quot;412-208-2267&quot;,
+IF((TEXT(GES_Account_Manager2__c) == &quot;Allyson Wagner&quot;),&quot;412-523-2991&quot;,
+IF((TEXT(GES_Account_Manager2__c) == &quot;Angelina Palermo&quot;),&quot;412-208-2277&quot;,
+IF((TEXT(GES_Account_Manager2__c) == &quot;Daphne Saavedra&quot;),&quot;(412) 951-0288&quot;,
+IF((TEXT(GES_Account_Manager2__c) == &quot;Jill Eppelman&quot;),&quot; &quot;,
+IF((TEXT(GES_Account_Manager2__c) == &quot;Alita Mathews&quot;),&quot;412-418-9758&quot;,
+IF((TEXT(GES_Account_Manager2__c) == &quot;Amanda Shulman&quot;),&quot;508 408-2106&quot;,
+IF((TEXT(GES_Account_Manager2__c) == &quot;Linda Holland&quot;),&quot;(412) 208-2256&quot;,
+IF((TEXT(GES_Account_Manager2__c) == &quot;Kayla Rogers&quot;),&quot; &quot;,
+IF((TEXT(GES_Account_Manager2__c) == &quot;Debbie Sullivan&quot;),&quot;(508) 326-5259&quot;,
+IF((TEXT(GES_Account_Manager2__c) == &quot;GES Account Manager 1&quot;),&quot;### ###-####&quot;,
+IF((TEXT(GES_Account_Manager2__c) == &quot;GES Account Manager 2&quot;),&quot;(###) ###-####&quot;,
+IF((TEXT(GES_Account_Manager2__c) == &quot;GES Account Manager 3&quot;),&quot;### ###-####&quot;,
+IF((TEXT(GES_Account_Manager2__c) == &quot;Aldridge, Hannah&quot;),&quot;(630) 295-6004&quot;,
+IF((TEXT(GES_Account_Manager2__c) == &quot;Callaway, Carsen&quot;),&quot;(407) 370-3927&quot;,
+IF((TEXT(GES_Account_Manager2__c) == &quot;Carey-Smalls, Fanchon&quot;),&quot;(562) 356-3715&quot;,
+IF((TEXT(GES_Account_Manager2__c) == &quot;Dewey, Kaila&quot;),&quot;(630) 351-7816&quot;,
+IF((TEXT(GES_Account_Manager2__c) == &quot;Fletcher, Samantha&quot;),&quot;+ 44 777 197 1337&quot;,
+IF((TEXT(GES_Account_Manager2__c) == &quot;Kearney, Jaclynn&quot;),&quot;(630) 295 6039&quot;,
+IF((TEXT(GES_Account_Manager2__c) == &quot;Medus, Heather&quot;),&quot;+ 44 797 768 7837&quot;,
+IF((TEXT(GES_Account_Manager2__c) == &quot;O’Connell, Mary&quot;),&quot;(301) 928-0961&quot;,
+IF((TEXT(GES_Account_Manager2__c) == &quot;Platt, Becky&quot;),&quot;(407) 370-4031&quot;,
+IF((TEXT(GES_Account_Manager2__c) == &quot;Smith, Lindsey&quot;),&quot;(214) 443-2503&quot;,
+IF((TEXT(GES_Account_Manager2__c) == &quot;Versleys, Beth&quot;),&quot;+ 07977 237327&quot;,
+IF((TEXT(GES_Account_Manager2__c) == &quot;Villwock, Kelly&quot;),&quot;(407) 370-3856&quot;,
+IF((TEXT(GES_Account_Manager2__c) == &quot;Wagoner, Brian&quot;),&quot;(214) 443-2538&quot;,
+IF((TEXT(GES_Account_Manager2__c) == &quot;Wainman, Ana&quot;),&quot;+44 797 486 9984&quot;,
+IF((TEXT(GES_Account_Manager2__c) == &quot;Ward, Nick&quot;),&quot;+ 44 114 231 7818&quot;,
+&quot; &quot;))))))))))))))))))))))))))))))))))))))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>GES AM Phone2 Auto</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

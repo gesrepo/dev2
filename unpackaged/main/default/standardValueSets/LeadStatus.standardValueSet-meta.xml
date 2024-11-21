@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StandardValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sorted>false</sorted>
+    <standardValue>
+        <fullName>Not Yet Contacted</fullName>
+        <default>true</default>
+        <label>Not Yet Contacted</label>
+        <converted>false</converted>
+    </standardValue>
+    <standardValue>
+        <fullName>1st Call</fullName>
+        <default>false</default>
+        <label>1st Call</label>
+        <converted>false</converted>
+    </standardValue>
+    <standardValue>
+        <fullName>2nd Call</fullName>
+        <default>false</default>
+        <label>2nd Call</label>
+        <converted>false</converted>
+    </standardValue>
+    <standardValue>
+        <fullName>3rd Call</fullName>
+        <default>false</default>
+        <label>3rd Call</label>
+        <converted>false</converted>
+    </standardValue>
+    <standardValue>
+        <fullName>Emailed</fullName>
+        <default>false</default>
+        <label>Emailed</label>
+        <converted>false</converted>
+    </standardValue>
+    <standardValue>
+        <fullName>2nd Email</fullName>
+        <default>false</default>
+        <label>2nd Email</label>
+        <converted>false</converted>
+    </standardValue>
+    <standardValue>
+        <fullName>3rd Email</fullName>
+        <default>false</default>
+        <label>3rd Email</label>
+        <converted>false</converted>
+    </standardValue>
+    <standardValue>
+        <fullName>Contacted - Follow up needed</fullName>
+        <default>false</default>
+        <label>Contacted - Follow up needed</label>
+        <converted>false</converted>
+    </standardValue>
+    <standardValue>
+        <fullName>Not Responded</fullName>
+        <default>false</default>
+        <label>Not Responded</label>
+        <converted>false</converted>
+    </standardValue>
+    <standardValue>
+        <fullName>Disqualified</fullName>
+        <default>false</default>
+        <label>Disqualified</label>
+        <converted>false</converted>
+    </standardValue>
+    <standardValue>
+        <fullName>LinkedIn Message</fullName>
+        <default>false</default>
+        <label>LinkedIn Message</label>
+        <converted>false</converted>
+    </standardValue>
+    <standardValue>
+        <fullName>Qualified</fullName>
+        <default>false</default>
+        <label>Qualified</label>
+        <converted>true</converted>
+    </standardValue>
+    <standardValue>
+        <fullName>Qualified_Special</fullName>
+        <default>false</default>
+        <label>Qualified - Special</label>
+        <converted>false</converted>
+    </standardValue>
+    <standardValue>
+        <fullName>Referred to Logistics</fullName>
+        <default>false</default>
+        <label>Referred to Logistics</label>
+        <converted>false</converted>
+    </standardValue>
+    <standardValue>
+        <fullName>Referred to Pre Show Coordinator</fullName>
+        <default>false</default>
+        <label>Referred to Pre Show Coordinator</label>
+        <converted>false</converted>
+    </standardValue>
+    <standardValue>
+        <fullName>Referred to Trade Show Lead Gen</fullName>
+        <default>false</default>
+        <label>Referred to Trade Show Lead Gen</label>
+        <converted>false</converted>
+    </standardValue>
+    <standardValue>
+        <fullName>Sold Exhibit System</fullName>
+        <default>false</default>
+        <label>Sold Exhibit System</label>
+        <converted>false</converted>
+    </standardValue>
+    <standardValue>
+        <fullName>Sold Kit items</fullName>
+        <default>false</default>
+        <label>Sold Kit items</label>
+        <converted>false</converted>
+    </standardValue>
+</StandardValueSet>

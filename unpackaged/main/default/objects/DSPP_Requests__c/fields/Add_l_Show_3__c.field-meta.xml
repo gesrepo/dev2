@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Add_l_Show_3__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <label>Add’l Show 3</label>
+    <referenceTo>Show__c</referenceTo>
+    <relationshipLabel>DSPP Requests (Add’l Show 3)</relationshipLabel>
+    <relationshipName>DSPP_Requests2</relationshipName>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

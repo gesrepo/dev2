@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Feedback_Type_Detail__c</fullName>
+    <externalId>false</externalId>
+    <formula>(IF(  TEXT(   GES_Type__c) = &quot;Electrical&quot;,
+  IMAGE(&quot;https://na2.salesforce.com/servlet/servlet.ImageServer?oid=00DOx000008V1mQ&amp;id=01540000001EADV&quot;, &quot;*&quot;, 16, 16) , 
+
+(IF(  TEXT( GES_Type__c) = &quot;Floor-Covering&quot;,
+ IMAGE(&quot;https://na2.salesforce.com/servlet/servlet.ImageServer?oid=00DOx000008V1mQ&amp;id=01540000001EAFq&quot;, &quot;*&quot;, 16, 16) ,
+
+(IF(  TEXT( GES_Type__c) = &quot;Furnishings&quot;,
+ IMAGE(&quot;https://na2.salesforce.com/servlet/servlet.ImageServer?oid=00DOx000008V1mQ&amp;id=01540000001EA7b&quot;, &quot;*&quot;, 16, 16) ,
+
+(IF(  TEXT( GES_Type__c) = &quot;General Event Enquiry/Other&quot;,
+ IMAGE(&quot;https://na2.salesforce.com/servlet/servlet.ImageServer?oid=00DOx000008V1mQ&amp;id=01540000001EAL7&quot;, &quot;*&quot;, 16, 16) ,
+
+(IF(  TEXT( GES_Type__c) = &quot;Graphics&quot;,
+ IMAGE(&quot;https://na2.salesforce.com/servlet/servlet.ImageServer?oid=00DOx000008V1mQ&amp;id=01540000001EA7g&quot;, &quot;*&quot;, 16, 16) ,
+
+(IF(  TEXT( GES_Type__c) = &quot;Lead Generation&quot;,
+ IMAGE(&quot;https://na2.salesforce.com/servlet/servlet.ImageServer?oid=00DOx000008V1mQ&amp;id=01540000001EABv&quot;, &quot;*&quot;, 16, 16) ,
+
+(IF(  TEXT( GES_Type__c) = &quot;Logistics/Freight&quot;,
+ IMAGE(&quot;https://na2.salesforce.com/servlet/servlet.ImageServer?oid=00DOx000008V1mQ&amp;id=01540000001EADm&quot;, &quot;*&quot;, 16, 16) ,
+
+(IF(  TEXT( GES_Type__c) = &quot;Nameboards&quot;,
+ IMAGE(&quot;https://na2.salesforce.com/servlet/servlet.ImageServer?oid=00DOx000008V1mQ&amp;id=01540000001EADL&quot;, &quot;*&quot;, 16, 16) ,
+
+(IF(  TEXT( GES_Type__c) = &quot;Non-Standard Service&quot;,
+ IMAGE(&quot;https://na2.salesforce.com/servlet/servlet.ImageServer?oid=00DOx000008V1mQ&amp;id=01540000001EALh&quot;, &quot;*&quot;, 16, 16) ,
+
+(IF(  TEXT( GES_Type__c) = &quot;Registration&quot;,
+ IMAGE(&quot;https://na2.salesforce.com/servlet/servlet.ImageServer?oid=00DOx000008V1mQ&amp;id=01540000001EA4f&quot;, &quot;*&quot;, 16, 16) ,
+
+(IF(  TEXT( GES_Type__c) = &quot;Stand-Fitting&quot;,
+ IMAGE(&quot;https://na2.salesforce.com/servlet/servlet.ImageServer?oid=00DOx000008V1mQ&amp;id=01540000001EAE4&quot;, &quot;*&quot;, 16, 16) ,
+
+
+(IF(  TEXT( GES_Type__c) = &quot;Audio Visual&quot;,
+ IMAGE(&quot;https://na2.salesforce.com/servlet/servlet.ImageServer?oid=00DOx000008V1mQ&amp;id=01540000001EAIO&quot;, &quot;*&quot;, 16, 16) , &quot;Type Detail?&quot;))))))))))))))))))))))))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Feedback - Type detail</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

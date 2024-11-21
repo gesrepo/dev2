@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>EMEA_Practical_Classic_Car_Restoration_Case</fullName>
+    <filterScope>Queue</filterScope>
+    <label>EMEA Practical Classic Car &amp; Restoration</label>
+    <queue>EMEA_Practical_Classic_Car_Restoration</queue>
+    <sharedTo>
+        <allInternalUsers />
+    </sharedTo>
+</ListView>

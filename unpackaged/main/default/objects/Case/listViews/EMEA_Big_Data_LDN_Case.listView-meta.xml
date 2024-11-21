@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>EMEA_Big_Data_LDN_Case</fullName>
+    <filterScope>Queue</filterScope>
+    <label>EMEA Big Data LDN</label>
+    <queue>EMEA_Big_Data_LDN</queue>
+    <sharedTo>
+        <allInternalUsers />
+    </sharedTo>
+</ListView>

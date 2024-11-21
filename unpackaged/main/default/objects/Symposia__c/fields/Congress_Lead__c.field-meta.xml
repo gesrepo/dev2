@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Congress_Lead__c</fullName>
+    <label>Congress Lead</label>
+    <required>true</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Don Schmid</fullName>
+                <default>false</default>
+                <label>Don Schmid</label>
+            </value>
+            <value>
+                <fullName>Laine Mann</fullName>
+                <default>false</default>
+                <label>Laine Mann</label>
+            </value>
+            <value>
+                <fullName>Lee Kim</fullName>
+                <default>false</default>
+                <label>Lee Kim</label>
+            </value>
+            <value>
+                <fullName>Sandra Kusek</fullName>
+                <default>false</default>
+                <label>Sandra Kusek</label>
+            </value>
+            <value>
+                <fullName>Suthee Suvansri</fullName>
+                <default>false</default>
+                <label>Suthee Suvansri</label>
+            </value>
+            <value>
+                <fullName>Virginia Hayward</fullName>
+                <default>false</default>
+                <label>Virginia Hayward</label>
+            </value>
+            <value>
+                <fullName>n/a</fullName>
+                <default>false</default>
+                <label>n/a</label>
+            </value>
+            <value>
+                <fullName>Jeffery Carson</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Jeffery Carson</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

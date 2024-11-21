@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Greater_than_50_characters</fullName>
+    <active>true</active>
+    <errorConditionFormula>LEN( Billing_Email_Address__c ) &gt; 50</errorConditionFormula>
+    <errorDisplayField>Billing_Email_Address__c</errorDisplayField>
+    <errorMessage>Account Billing Address must be less than 50 characters</errorMessage>
+</ValidationRule>

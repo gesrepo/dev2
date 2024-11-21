@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ACCC_Status__c</fullName>
+    <label>ACCC Status</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Open</fullName>
+                <default>true</default>
+                <label>Open</label>
+            </value>
+            <value>
+                <fullName>Mail has been sent for requesting CC</fullName>
+                <default>false</default>
+                <label>Mail has been sent for requesting CC</label>
+            </value>
+            <value>
+                <fullName>received and Validated CC</fullName>
+                <default>false</default>
+                <label>received and Validated CC</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

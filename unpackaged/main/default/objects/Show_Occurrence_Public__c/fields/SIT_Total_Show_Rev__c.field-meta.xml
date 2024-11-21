@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SIT_Total_Show_Rev__c</fullName>
+    <formula>SIT_Carpet__c  +  SIT_Cleaning__c  +  SIT_Contract_Adjust__c  +  SIT_Electrical__c  +  SIT_Freight__c  +  SIT_GEM__c  +  SIT_General_Showsite__c  +  SIT_Graphics__c  +  SIT_I_D__c  +  SIT_Logistics__c  +  SIT_Other_Subs__c  +  SIT_Packages__c  +  Rigging__c  +  SIT_Special_Furniture__c  +  SIT_Std_Furniture__c</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Total Show Rev</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackTrending>false</trackTrending>
+    <type>Currency</type>
+</CustomField>

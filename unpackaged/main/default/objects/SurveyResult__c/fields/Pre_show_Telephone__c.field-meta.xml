@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Pre_show_Telephone__c</fullName>
+    <label>Pre- show  Telephone</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Confusing/vague information</fullName>
+                <default>false</default>
+                <label>Confusing/vague information</label>
+            </value>
+            <value>
+                <fullName>Delays caused</fullName>
+                <default>false</default>
+                <label>Delays caused</label>
+            </value>
+            <value>
+                <fullName>Difficulties getting through</fullName>
+                <default>false</default>
+                <label>Difficulties getting through</label>
+            </value>
+            <value>
+                <fullName>Errors</fullName>
+                <default>false</default>
+                <label>Errors</label>
+            </value>
+            <value>
+                <fullName>Staff professionalism</fullName>
+                <default>false</default>
+                <label>Staff professionalism</label>
+            </value>
+            <value>
+                <fullName>Technical problems</fullName>
+                <default>false</default>
+                <label>Technical problems</label>
+            </value>
+            <value>
+                <fullName>Unsatisfactory knowledge/advice</fullName>
+                <default>false</default>
+                <label>Unsatisfactory knowledge/advice</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

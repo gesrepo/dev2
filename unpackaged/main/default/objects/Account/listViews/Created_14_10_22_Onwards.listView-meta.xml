@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Created_14_10_22_Onwards</fullName>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>ACCOUNT.SITE</columns>
+    <columns>ACCOUNT.ADDRESS1_STATE</columns>
+    <columns>ACCOUNT.PHONE1</columns>
+    <columns>ACCOUNT.TYPE</columns>
+    <columns>CORE.USERS.ALIAS</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>ACCOUNT.CREATED_DATE</field>
+        <operation>greaterOrEqual</operation>
+        <value>10/14/2022 12:00 AM</value>
+    </filters>
+    <filters>
+        <field>UK_SOP_ID__c</field>
+        <operation>equals</operation>
+    </filters>
+    <filters>
+        <field>EMEA__c</field>
+        <operation>equals</operation>
+        <value>1</value>
+    </filters>
+    <label>Created 14/10/22 Onwards</label>
+    <language>en_US</language>
+</ListView>

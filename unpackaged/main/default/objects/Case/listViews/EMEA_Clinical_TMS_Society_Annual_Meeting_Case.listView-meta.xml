@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>EMEA_Clinical_TMS_Society_Annual_Meeting_Case</fullName>
+    <filterScope>Queue</filterScope>
+    <label>EMEA Clinical TMS Society Annual Meeting</label>
+    <queue>EMEA_Clinical_TMS_Society_Annual_Meeting</queue>
+    <sharedTo>
+        <allInternalUsers />
+    </sharedTo>
+</ListView>

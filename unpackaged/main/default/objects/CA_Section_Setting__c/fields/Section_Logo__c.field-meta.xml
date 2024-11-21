@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Section_Logo__c</fullName>
+    <description>Upload an image in community/static resources and paste the link here. Use a small size image to avoid making the page heavy</description>
+    <inlineHelpText>Upload an image in community/static resources and paste the link here. Use a small size image to avoid making the page heavy</inlineHelpText>
+    <label>Section Logo</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Url</type>
+</CustomField>

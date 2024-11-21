@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Billing_City_Required</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(LEN(BillingCity) =0,NOT(OR($Profile.Name = &#39;GES Interface&#39;,$Profile.Name = &#39;SOP Interface&#39;,$Profile.Name = &#39;System Administrator&#39;, $Profile.Name =&#39;EEPriorityLeadGen&#39;, $User.Update_Locked_Account_Fields__c,$Profile.Name = &#39;EDAdmin_Interface&#39;,$Profile.Name = &quot;GES Administrator Interface&quot;, $Profile.Name = &#39;EMEA Spiro Interface&#39;, $Profile.Name = &#39;EMEA System Administrator&#39;)))</errorConditionFormula>
+    <errorDisplayField>BillingCity</errorDisplayField>
+    <errorMessage>Please enter the billing city</errorMessage>
+</ValidationRule>

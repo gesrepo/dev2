@@ -1,0 +1,141 @@
+<apex:component controller="GC_ItemOptionsControllerVOT" selfClosing="true">
+  <apex:attribute name="gotAttribute" description="The task being passed in" type="GC_Vendor_Order_Task__c" required="true" assignTo="{!got}" />
+  <apex:attribute name="venueOptions" description="Select Options" type="SelectOption[]" required="true" assignTo="{!venueAttributes}" />
+  <apex:attribute name="defaultDeliveryTimeInput" description="Select Options" type="DateTime" required="true" assignTo="{!deliveryDateTime}" />
+  <apex:attribute name="defaultCompletionTimeInput" description="Select Options" type="DateTime" required="true" assignTo="{!completionDateTime}" />
+  <apex:attribute name="defaultRemovalTimeInput" description="Select Options" type="DateTime" required="true" assignTo="{!removalDateTime}" />
+  <apex:attribute name="taskFieldMan" description="Task Fields to be shown" type="GC_Task_Field_Manager__c" required="false" assignTo="{!taskFieldManager}" />
+  <apex:stylesheet value="{!URLFOR($Resource.GC_Assets, 'GC_Assets/css/GC_PageStyles.css')}" />
+  <apex:stylesheet value="{!URLFOR($Resource.GC_DateTimePicker, 'GC_DateTimePicker/jquery.datetimepicker.css')}" />
+  <!--  <apex:includeScript value="{!$Resource.jQuery}" />
+  <apex:includeScript value="{!URLFOR($Resource.GC_DateTimePicker, 'GC_DateTimePicker/build/jquery.datetimepicker.full.min.js')}" />    -->
+  <apex:includeScript value="{!$Resource.jQuery}" />
+ <apex:includeScript value="{!URLFOR($Resource.jquerydatetimepicker)}" />
+ <apex:stylesheet value="{!URLFOR($Resource.bootstrapdatetimepickercss)}" />
+  <apex:actionFunction action="{!setDateTime}" name="setDeliveryDateTime_JS" reRender="messages">
+    <apex:param name="DDT" value="" />
+  </apex:actionFunction>
+  <apex:actionFunction action="{!setDateTime}" name="setCompletionDateTime_JS" reRender="messages">
+    <apex:param name="CDT" value="" />
+  </apex:actionFunction>
+  <apex:actionFunction action="{!setDateTime}" name="setRemovalDateTime_JS" reRender="messages">
+    <apex:param name="RDT" value="" />
+  </apex:actionFunction>
+  <legend class="form-element__legend slds-form-element__label slds-text-title--caps gc-section-margin-top">Area Information</legend>
+  <apex:outputPanel layout="none" id="boothOutputPanel">
+    <div class="slds-grid" style="height: 60px;">
+      <!-- Left Side -->
+      <div class="slds-p-horizontal--small slds-size--1-of-1 slds-medium-size--1-of-1 slds-large-size--1-of-2">
+        <div class="slds-form--stacked">
+          <!-- Venue Location -->
+          <div class="slds-form-element">
+            <apex:outputLabel value="Venue Location" styleClass="slds-form-element__label" />
+            <div class="slds-form-element__control">
+              <div class="gc-relative">
+                <apex:selectList id="venueLocationsSelect" value="{!got.SA_Venue_Location_Ven__c}" size="1" styleClass="slds-select">
+                  <apex:selectOptions value="{!venueAttributes}"></apex:selectOptions>
+                </apex:selectList>
+                <!-- <apex:inputField styleClass="gc-lookup" value="{!got.SA_Venue_Location__c}" /> -->
+              </div>
+            </div>
+          </div>
+          
+          
+        </div>
+      </div>
+      <!-- Right Side -->
+      <div class="slds-p-horizontal--small slds-size--1-of-1 slds-medium-size--1-of-1 slds-large-size--1-of-2">
+        <div class="slds-form--stacked">
+          <!-- Delivery Location -->
+           <div class="slds-form-element">
+            <apex:outputLabel value="Delivery Area" styleClass="slds-form-element__label" 
+            rendered="{!(taskFieldManager.Delivery_Area__c!= $Label.GC_Label_TFM_Hide)}"/>
+            <apex:outputText rendered="{!(taskFieldManager.Delivery_Area__c== $Label.GC_Label_TFM_Hide)}"></apex:outputText>
+            <div class="slds-form-element__control">
+              <div class="gc-relative">
+                <apex:inputField styleClass="slds-input" value="{!got.Delivery_Location_Ven__c}" 
+                rendered="{!(taskFieldManager.Delivery_Area__c!= $Label.GC_Label_TFM_Hide)}"/>
+                 <apex:outputText rendered="{!(taskFieldManager.Delivery_Area__c== $Label.GC_Label_TFM_Hide)}"></apex:outputText>
+              </div>
+            </div>
+          </div>
+          
+          <div class="gc-form__spacer"></div>
+          <ul>
+            <li class="classtest"></li>
+          </ul>
+          
+        </div>
+      </div>
+    </div>
+    <!-- </fieldset> -->
+    <!-- /AREA INFORMATION -->
+    <apex:actionFunction action="{!setDateTime}" name="setDeliveryDateTime_JS" reRender="messages">
+      <apex:param name="DDT" value="" />
+    </apex:actionFunction>
+    <apex:actionFunction action="{!setDateTime}" name="setCompletionDateTime_JS" reRender="messages">
+      <apex:param name="CDT" value="" />
+    </apex:actionFunction>
+    <apex:actionFunction action="{!setDateTime}" name="setRemovalDateTime_JS" reRender="messages">
+      <apex:param name="RDT" value="" />
+    </apex:actionFunction>
+    <legend class="slds-form-element__label slds-text-title--caps gc-section-margin-top">Area Schedule</legend>
+    <fieldset class="slds-form--compound">
+      <div class="form-element__group">
+        <div class="slds-form-element__row">
+          <div class="slds-form-element slds-size--1-of-3 slds-p-horizontal--small">
+            <apex:outputLabel value="Delivery Date/Time" styleClass="slds-form-element__label" />
+            <div class="slds-form-element__control">
+              <div class="gc-relative">
+                <input id="showddatetime" class="dateTimePicker" type="text" value="{!DeliveryDateTimeFormatted}" onchange="setDeliveryDateTime_JS(this.value);" style="width:75%" />
+              </div>
+            </div>
+          </div>
+          <!-- SAL-636-->
+                    <div class="slds-form-element slds-size--1-of-3 slds-p-horizontal--small">
+            <apex:outputLabel value="Completion Date/Time" styleClass="slds-form-element__label" 
+            rendered="{!(taskFieldManager.Completion_Date_Time__c!= $Label.GC_Label_TFM_Hide)}"/>
+            <apex:outputText rendered="{!(taskFieldManager.Completion_Date_Time__c== $Label.GC_Label_TFM_Hide)}"></apex:outputText>
+                <div class="slds-form-element__control">
+              <div class="gc-relative">
+                <input id="showcdatetime" class="dateTimePicker" type="text" value="{!CompletionDateTimeFormatted}" onchange="setCompletionDateTime_JS(this.value);" style="width:75%" 
+                rendered="{!(taskFieldManager.Completion_Date_Time__c!= $Label.GC_Label_TFM_Hide)}"/>
+                <apex:outputText rendered="{!(taskFieldManager.Completion_Date_Time__c== $Label.GC_Label_TFM_Hide)}"></apex:outputText>
+              </div>
+            </div>
+          </div>
+          
+          <div class="slds-form-element slds-size--1-of-3 slds-p-horizontal--small">
+            <apex:outputLabel value="Removal Date/Time" styleClass="slds-form-element__label" />
+            <div class="slds-form-element__control">
+              <div class="gc-relative">
+                <input id="showrdatetime" class="dateTimePicker" type="text" value="{!RemovalDateTimeFormatted}" onchange="setRemovalDateTime_JS(this.value);" style="width:75%" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </fieldset>
+  </apex:outputPanel>
+  <script>
+      var $j = jQuery.noConflict();
+      /*setTimeout(function(){
+         $j('.dateTimePicker').datetimepicker({
+          format: 'm/d/Y h:i A',
+          formatTime: 'h:i A',
+          formatDate: 'm/d/Y'
+        });
+      },200);*/
+      
+      function datetimepicker() {
+          setTimeout(function(){
+             $j('.dateTimePicker').datetimepicker({
+              format: 'm/d/Y H:i',
+              formatTime: 'H:i',
+              formatDate: 'm/d/Y',
+            });
+          },200);
+      }
+      datetimepicker();
+  </script>
+</apex:component>

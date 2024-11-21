@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Agency_Exhibition_Edit</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND( 
+ISCHANGED( Agency_Work__c ) , 
+NOT(
+OR(
+$User.Email = &#39;srosenberg@ges.com&#39;,
+$User.Email = &#39;cdingwall@ges.com&#39;,
+$User.Email = &#39;gmorales@ges.com&#39;,
+$User.Email = &#39;dgonzalez@ges.com&#39;
+)
+)
+)</errorConditionFormula>
+    <errorDisplayField>Agency_Work__c</errorDisplayField>
+    <errorMessage>Cannot edit the field</errorMessage>
+</ValidationRule>

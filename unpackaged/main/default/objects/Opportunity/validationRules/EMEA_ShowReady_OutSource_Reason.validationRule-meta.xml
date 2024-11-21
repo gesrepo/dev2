@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>EMEA_ShowReady_OutSource_Reason</fullName>
+    <active>true</active>
+    <description>In Outsource Reason field, if other or Package deviant is selected. please fill the text field</description>
+    <errorConditionFormula>($RecordType.DeveloperName = &#39;EMEA_Show_Ready&#39;) 
+&amp;&amp; (ISPICKVAL(  OutSource_Reason__c  ,&#39;Other&#39;) || ISPICKVAL ( OutSource_Reason__c  ,&#39;Package deviant&#39;)) 
+ &amp;&amp; ISBLANK(  If_Other_or_PackageDeviant_is_Selected__c  )</errorConditionFormula>
+    <errorDisplayField>If_Other_or_PackageDeviant_is_Selected__c</errorDisplayField>
+    <errorMessage>Please fill the text field called &#39;If Other or PackageDeviant is Selected&#39;</errorMessage>
+</ValidationRule>

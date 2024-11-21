@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PRFOther_Components__c</fullName>
+    <label>Other Components</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>1 Meter Gem Counter</fullName>
+                <default>false</default>
+                <label>1 Meter Gem Counter</label>
+            </value>
+            <value>
+                <fullName>2 Meter Gem Counter</fullName>
+                <default>false</default>
+                <label>2 Meter Gem Counter</label>
+            </value>
+            <value>
+                <fullName>Archway / Entrance Way</fullName>
+                <default>false</default>
+                <label>Archway / Entrance Way</label>
+            </value>
+            <value>
+                <fullName>Curved Gem Counter</fullName>
+                <default>false</default>
+                <label>Curved Gem Counter</label>
+            </value>
+            <value>
+                <fullName>Demo Station</fullName>
+                <default>false</default>
+                <label>Demo Station</label>
+            </value>
+            <value>
+                <fullName>Display case</fullName>
+                <default>false</default>
+                <label>Display case</label>
+            </value>
+            <value>
+                <fullName>Flat shelf</fullName>
+                <default>false</default>
+                <label>Flat shelf</label>
+            </value>
+            <value>
+                <fullName>Grid wall</fullName>
+                <default>false</default>
+                <label>Grid wall</label>
+            </value>
+            <value>
+                <fullName>Ground Supported Sign</fullName>
+                <default>false</default>
+                <label>Ground Supported Sign</label>
+            </value>
+            <value>
+                <fullName>Hanging Sign</fullName>
+                <default>false</default>
+                <label>Hanging Sign</label>
+            </value>
+            <value>
+                <fullName>Kiosk</fullName>
+                <default>false</default>
+                <label>Kiosk</label>
+            </value>
+            <value>
+                <fullName>Literature rack</fullName>
+                <default>false</default>
+                <label>Literature rack</label>
+            </value>
+            <value>
+                <fullName>Meeting Room</fullName>
+                <default>false</default>
+                <label>Meeting Room</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>Peg board</fullName>
+                <default>false</default>
+                <label>Peg board</label>
+            </value>
+            <value>
+                <fullName>Planter</fullName>
+                <default>false</default>
+                <label>Planter</label>
+            </value>
+            <value>
+                <fullName>Podium</fullName>
+                <default>false</default>
+                <label>Podium</label>
+            </value>
+            <value>
+                <fullName>Slant shelf</fullName>
+                <default>false</default>
+                <label>Slant shelf</label>
+            </value>
+            <value>
+                <fullName>Slat wall</fullName>
+                <default>false</default>
+                <label>Slat wall</label>
+            </value>
+            <value>
+                <fullName>Theater</fullName>
+                <default>false</default>
+                <label>Theater</label>
+            </value>
+            <value>
+                <fullName>Wire wall</fullName>
+                <default>false</default>
+                <label>Wire wall</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>6</visibleLines>
+</CustomField>

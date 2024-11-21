@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>GESOrderTask3__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>Lookup to the GES Order Task associated with this vendor order task.</description>
+    <inlineHelpText>Lookup to the GES Order Task associated with this vendor order task.</inlineHelpText>
+    <label>GES Order Task 3</label>
+    <referenceTo>GC_GES_Order_Task__c</referenceTo>
+    <relationshipLabel>GES Order Tasks</relationshipLabel>
+    <relationshipName>GES_Order_Tasks3</relationshipName>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

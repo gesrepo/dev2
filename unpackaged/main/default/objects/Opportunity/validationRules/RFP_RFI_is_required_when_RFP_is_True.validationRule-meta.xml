@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>RFP_RFI_is_required_when_RFP_is_True</fullName>
+    <active>true</active>
+    <description>RFP/RFI Field is required when RFP is True</description>
+    <errorConditionFormula>AND(RFP__c = True ,ISNULL(PRFOther_Info__c), NOT($Profile.Name = &quot;GES Administrator Interface&quot;), $RecordType.DeveloperName = &quot;E_D_Projects&quot;)</errorConditionFormula>
+    <errorMessage>RFP/RFI Field is required when RFP is True</errorMessage>
+</ValidationRule>

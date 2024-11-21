@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Last_won_Opportunity_Date__c</fullName>
+    <inlineHelpText>Related Opportunity with recent closed won date</inlineHelpText>
+    <label>Last won Opportunity Date</label>
+    <summarizedField>Opportunity.Actual_Closed_Won_Date__c</summarizedField>
+    <summaryForeignKey>Opportunity.AccountId</summaryForeignKey>
+    <summaryOperation>max</summaryOperation>
+    <trackHistory>false</trackHistory>
+    <type>Summary</type>
+</CustomField>

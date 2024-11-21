@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Global_Switch__c</fullName>
+    <defaultValue>true</defaultValue>
+    <fieldManageability>SubscriberControlled</fieldManageability>
+    <inlineHelpText>Uncheck the checkbox any time when the trigger should not be performing any of the operations or calling any handlers. Remember, if you keep it unchecked, the trigger for that object will be ineffective.</inlineHelpText>
+    <label>Global Switch</label>
+    <type>Checkbox</type>
+</CustomField>

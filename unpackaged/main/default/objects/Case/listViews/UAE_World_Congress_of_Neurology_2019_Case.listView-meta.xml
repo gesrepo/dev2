@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>UAE_World_Congress_of_Neurology_2019_Case</fullName>
+    <filterScope>Queue</filterScope>
+    <label>UAE World Congress of Neurology 2019</label>
+    <queue>UAE_World_Congress_of_Neurology_2019</queue>
+    <sharedTo>
+        <allInternalUsers />
+    </sharedTo>
+</ListView>

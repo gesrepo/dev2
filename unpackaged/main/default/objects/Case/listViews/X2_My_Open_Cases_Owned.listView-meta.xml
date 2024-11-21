@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>X2_My_Open_Cases_Owned</fullName>
+    <columns>CASES.CASE_NUMBER</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>Show_Name__c</columns>
+    <columns>NAME</columns>
+    <columns>CASES.SUBJECT</columns>
+    <columns>CASES.PRIORITY</columns>
+    <columns>Show_Open_Date__c</columns>
+    <columns>Substatus__c</columns>
+    <columns>CASES.CREATED_DATE</columns>
+    <columns>Booth_Number__c</columns>
+    <filterScope>Mine</filterScope>
+    <filters>
+        <field>CASES.STATUS</field>
+        <operation>equals</operation>
+        <value>In Process,Pending,Open</value>
+    </filters>
+    <label>My Open Cases - Shala</label>
+    <sharedTo>
+        <roleAndSubordinatesInternal>EMEA_AV_Executive</roleAndSubordinatesInternal>
+        <roleAndSubordinatesInternal>EMEA_Executive</roleAndSubordinatesInternal>
+        <roleAndSubordinatesInternal>EMEA_Operations</roleAndSubordinatesInternal>
+        <roleAndSubordinatesInternal>Exhibitor_Services_Co_Ordinator</roleAndSubordinatesInternal>
+        <roleAndSubordinatesInternal>Finance_EMEA</roleAndSubordinatesInternal>
+        <roleAndSubordinatesInternal>Floorplan_Technician_EMEA</roleAndSubordinatesInternal>
+        <roleAndSubordinatesInternal>GES_EMEA_Operations</roleAndSubordinatesInternal>
+        <roleAndSubordinatesInternal>GES_EMEA_Servi_Centre</roleAndSubordinatesInternal>
+        <roleAndSubordinatesInternal>GES_EMEA_Servi_Centre_Manager</roleAndSubordinatesInternal>
+        <roleAndSubordinatesInternal>GES_EMEA_Servi_Centre_Supervisor</roleAndSubordinatesInternal>
+        <roleAndSubordinatesInternal>Marketing_EMEA</roleAndSubordinatesInternal>
+    </sharedTo>
+</ListView>

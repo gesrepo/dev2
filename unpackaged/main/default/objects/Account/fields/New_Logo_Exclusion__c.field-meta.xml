@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>New_Logo_Exclusion__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>If checked,Opportunities related to this account will be excluded from creating new logo</description>
+    <label>New Logo Exclusion</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

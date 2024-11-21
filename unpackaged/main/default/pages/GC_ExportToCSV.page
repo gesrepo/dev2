@@ -1,0 +1,2 @@
+<apex:page controller="GC_ExportToCSVController" cache="true" contentType="text/csv;charset=Windows-1252#Export.csv;" showHeader="false">{!csvContent}</apex:page>
+<!-- <apex:pageMessages id="messages"/> -->

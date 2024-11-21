@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ApexPage xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>35.0</apiVersion>
+    <availableInTouch>false</availableInTouch>
+    <confirmationTokenRequired>false</confirmationTokenRequired>
+    <description>Vendor order task edit page. Client selects a vendor user along with a set of vendor instructions. Allows save / save and submit / cancel functions.</description>
+    <label>GC_Community_votCreateEdit</label>
+</ApexPage>

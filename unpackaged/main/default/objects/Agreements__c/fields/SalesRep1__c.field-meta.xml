@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SalesRep1__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>Sales Rep 1</description>
+    <label>SalesRep1</label>
+    <lookupFilter>
+        <active>true</active>
+        <booleanFilter>1 OR 2 OR 3</booleanFilter>
+        <errorMessage>SalesRep1 must be eligible for incentives or an Events User. The selected Sales Person is not eligible/Events.</errorMessage>
+        <filterItems>
+            <field>User.Eligible_for_Incentives__c</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </filterItems>
+        <filterItems>
+            <field>User.Profile.Id</field>
+            <operation>equals</operation>
+            <value>00e40000000rbEl</value>
+        </filterItems>
+        <filterItems>
+            <field>User.Id</field>
+            <operation>equals</operation>
+            <value>00540000001bLQi</value>
+        </filterItems>
+        <isOptional>false</isOptional>
+    </lookupFilter>
+    <referenceTo>User</referenceTo>
+    <relationshipName>Agreements1</relationshipName>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

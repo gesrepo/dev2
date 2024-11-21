@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Director_Account_Management_Rule</fullName>
+    <active>true</active>
+    <description>Rules for Director of Account Management</description>
+    <errorConditionFormula>AND(
+    ISPICKVAL(Show_Role__c, &#39;Director of Account Management&#39;),
+(NOT(INCLUDES(User__r.GC_Show_Role__c, &#39;GC Director of Account Management&#39;)))
+)</errorConditionFormula>
+    <errorMessage>Only Users with Director of Account Management Profiles can have the Director of Account Management Role.</errorMessage>
+</ValidationRule>

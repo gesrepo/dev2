@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>GC_Show_Role__c</fullName>
+    <label>GES Connect Show Role</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>GC Account Manager</fullName>
+                <default>false</default>
+                <label>GC Account Manager</label>
+            </value>
+            <value>
+                <fullName>GC Creative Director</fullName>
+                <default>false</default>
+                <label>GC Creative Director</label>
+            </value>
+            <value>
+                <fullName>GC Traffic Administrator</fullName>
+                <default>false</default>
+                <label>GC Traffic Administrator</label>
+            </value>
+            <value>
+                <fullName>GC Detailer</fullName>
+                <default>false</default>
+                <label>GC Detailer</label>
+            </value>
+            <value>
+                <fullName>GC Director of Account Management</fullName>
+                <default>false</default>
+                <label>GC Director of Account Management</label>
+            </value>
+            <value>
+                <fullName>GC Sales Manager</fullName>
+                <default>false</default>
+                <label>GC Sales Manager</label>
+            </value>
+            <value>
+                <fullName>GC Graphics Project Manager</fullName>
+                <default>false</default>
+                <label>GC Graphics Project Manager</label>
+            </value>
+            <value>
+                <fullName>GC Community Client</fullName>
+                <default>false</default>
+                <label>GC Community Client</label>
+            </value>
+            <value>
+                <fullName>GC Community Vendor</fullName>
+                <default>false</default>
+                <label>GC Community Vendor</label>
+            </value>
+            <value>
+                <fullName>GC Drafter</fullName>
+                <default>false</default>
+                <label>GC Drafter</label>
+            </value>
+            <value>
+                <fullName>GC Convention Planning Manager</fullName>
+                <default>false</default>
+                <label>GC Convention Planning Manager</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

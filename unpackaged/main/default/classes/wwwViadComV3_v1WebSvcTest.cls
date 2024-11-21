@@ -1,0 +1,182 @@
+@isTest
+private class wwwViadComV3_v1WebSvcTest {
+   
+    @isTest static void coverGeneratedCodeTypes() {
+        Test.setMock(WebServiceMock.class, new wwwViadComV3_v1MockImpl());
+        wwwViadComV3_v1 parentObject = new wwwViadComV3_v1();
+        new CORE_DATA_CONTRACT_ORDER.OrderPaymentProcessingFault();
+        new CORE_DATA_CONTRACT_ORDER.OrderSubmissionFault();
+        new wwwViadComDataV3_v1.ArrayOfCreateOrderLine();
+        new wwwViadComDataV3_v1.ArrayOfOrderComposite();
+        new wwwViadComDataV3_v1.ArrayOfOrderHold();
+        new wwwViadComDataV3_v1.ArrayOfOrderLine();
+        new wwwViadComDataV3_v1.ArrayOfOrderPaymentInfoDetail();
+        new wwwViadComDataV3_v1.ArrayOfShowOrgAddToOrderChoice();
+        new wwwViadComDataV3_v1.ArrayOfShowOrgOrderEntryStatus();
+        new wwwViadComDataV3_v1.CreateOrderHeader();
+        new wwwViadComDataV3_v1.CreateOrderLine();
+        new wwwViadComDataV3_v1.CreateOrderRequest();
+        new wwwViadComDataV3_v1.CreateOrderResponse();
+        new wwwViadComDataV3_v1.CreateShowOrgOrder();
+        new wwwViadComDataV3_v1.CreditCard();
+        new wwwViadComDataV3_v1.CreditCardSubmission();
+        new wwwViadComDataV3_v1.GetOrderAndSqrCountsResp();
+        new wwwViadComDataV3_v1.OrderBoothUpdate();
+        new wwwViadComDataV3_v1.OrderComposite();
+        new wwwViadComDataV3_v1.OrderHeader();
+        new wwwViadComDataV3_v1.OrderHold();
+        new wwwViadComDataV3_v1.OrderLine();
+        new wwwViadComDataV3_v1.OrderPaymentInfo();
+        new wwwViadComDataV3_v1.OrderPaymentInfoDetail();
+        new wwwViadComDataV3_v1.ShowOrgAddToOrderChoice();
+        new wwwViadComDataV3_v1.ShowOrgOrderEntryStatus();
+        new wwwViadComDataV3_v1.UpdateOrderPaymentRequest();
+        new CORE_SERIALIZATION_ARRAYS.ArrayOfint();
+        new CORE_SERIALIZATION_ARRAYS.ArrayOfKeyValueOfstringstring();
+        new CORE_SERIALIZATION_ARRAYS.ArrayOfKeyValueOfstringstring_KeyValueOfstringstring_element();
+        new CORE_SERIALIZATION_ARRAYS.ArrayOfstring();
+        new wwwViadComV3_v1.ProcessShowOrgOrder_element();
+        new wwwViadComV3_v1.ProcessShowOrgOrderBatch_element();
+        new wwwViadComV3_v1.ProcessShowOrgOrderBatchResponse_element();
+        new wwwViadComV3_v1.ProcessShowOrgOrderResponse_element();
+        new wwwViadComV3_v1.SubmitShowOrgOrder_element();
+        new wwwViadComV3_v1.SubmitShowOrgOrderResponse_element();
+        new wwwViadComV3_v1.GetShowCustomerOrdersResponse_element();
+        new wwwViadComV3_v1.GetShowCustomerOrdersResponse_element();
+        new wwwViadComV3_v1.CancelOrderResponse_element();
+        new wwwViadComV3_v1.GetAddToOrderChoicesResponse_element();
+        new wwwViadComV3_v1.SubmitOrderResponse_element();
+        new wwwViadComV3_v1.GetHeldShowCustomerOrdersResponse_element();
+        new wwwViadComV3_v1.SubmitCreditCardInformationResponse_element();
+        new wwwViadComV3_v1.ListShowElectricalOrdersAsXML_element();
+        new wwwViadComV3_v1.ListShowElectricalOrdersAsXMLResponse_element();
+        new wwwViadComV3_v1.GetHeldBoothOrders_element();
+        new wwwViadComV3_v1.GetOrderAndSqrCounts_element();
+        new wwwViadComV3_v1.GetOrderPaymentInformationResponse_element();
+        new wwwViadComV3_v1.CancelOrder_element();
+        new wwwViadComV3_v1.GetProjectOrdersResponse_element();
+        new wwwViadComV3_v1.GetHeldProjectOrdersByStatusResponse_element();
+        new wwwViadComV3_v1.GetBoothOrders_element();
+        new wwwViadComV3_v1.GetOrderByOrderHeaderId_element();
+        new wwwViadComV3_v1.GetHeldProjectOrders_element();
+        new wwwViadComV3_v1.GetHeldShowOrders_element();
+        new wwwViadComV3_v1.ReleaseHoldResponse_element();
+        new wwwViadComV3_v1.ApplyHold_element();
+        new wwwViadComV3_v1.GetPaymentRestrictionsResponse_element();
+        new wwwViadComV3_v1.ResubmitOrder_element();
+        new wwwViadComV3_v1.SubmitCreditCardInformation_element();
+        new wwwViadComV3_v1.GetOrderAndSqrCountsResponse_element();
+        new wwwViadComV3_v1.GetBoothOrdersResponse_element();
+        new wwwViadComV3_v1.GetHeldShowOrdersResponse_element();
+        new wwwViadComV3_v1.SubmitOrder_element();
+        new wwwViadComV3_v1.GetProjectOrders_element();
+        new wwwViadComV3_v1.ResubmitOrderResponse_element();
+        new wwwViadComV3_v1.GetHeldShowCustomerOrders_element();
+        new wwwViadComV3_v1.GetPaymentRestrictions_element();
+        new wwwViadComV3_v1.GetOrderByOrderHeaderIdResponse_element();
+        new wwwViadComV3_v1.ApplyHoldResponse_element();
+        new wwwViadComV3_v1.GetAddToOrderChoices_element();
+        new wwwViadComV3_v1.GetHeldBoothOrdersResponse_element();
+        new wwwViadComV3_v1.GetShowCustomerOrders_element();
+        new wwwViadComV3_v1.GetOrderPaymentInformation_element();
+        new wwwViadComV3_v1.GetHeldProjectOrdersByStatus_element();
+        new wwwViadComV3_v1.ReleaseHold_element();
+        new wwwViadComV3_v1.GetBoothAreaOrders_element();
+        new wwwViadComV3_v1.GetBoothAreaOrdersResponse_element();
+        new wwwViadComV3_v1.GetShowOrdersResponse_element();
+        new wwwViadComV3_v1.GetHeldProjectOrdersResponse_element();
+        new wwwViadComV3_v1.GetShowOrders_element();
+     
+    }
+    @isTest static void coverCodeForProcessShowOrgOrder(){
+        Test.setMock(WebServiceMock.class, new wwwViadComV3_v1MockImpl());
+        wwwViadComV3_v1.BasicHttpBinding_IOrderService testObject = new wwwViadComV3_v1.BasicHttpBinding_IOrderService();
+        testObject.ProcessShowOrgOrder(null, null);
+    }
+    @isTest static void coverCodeForProcessShowOrgOrderBatch(){
+        Test.setMock(WebServiceMock.class, new wwwViadComV3_v1MockImpl());
+        wwwViadComV3_v1.BasicHttpBinding_IOrderService testObject = new wwwViadComV3_v1.BasicHttpBinding_IOrderService();
+        testObject.ProcessShowOrgOrderBatch(null);
+    }
+    @isTest static void coverCodeForListShowElectricalOrdersAsXML(){
+        Test.setMock(WebServiceMock.class, new wwwViadComV3_v1MockImpl());
+        wwwViadComV3_v1.BasicHttpBinding_IOrderService testObject = new wwwViadComV3_v1.BasicHttpBinding_IOrderService();
+        testObject.ListShowElectricalOrdersAsXML(null,null);
+    }
+    @isTest static void coverCodeForGetPaymentRestrictions(){
+        Test.setMock(WebServiceMock.class, new wwwViadComV3_v1MockImpl());
+        wwwViadComV3_v1.BasicHttpBinding_IOrderService testObject = new wwwViadComV3_v1.BasicHttpBinding_IOrderService();
+        testObject.GetPaymentRestrictions(null);
+    }
+    @isTest static void coverCodeForGetOrderByOrderHeaderId(){
+        Test.setMock(WebServiceMock.class, new wwwViadComV3_v1MockImpl());
+        wwwViadComV3_v1.BasicHttpBinding_IOrderService testObject = new wwwViadComV3_v1.BasicHttpBinding_IOrderService();
+        testObject.GetOrderByOrderHeaderId(null,null,null);
+    }
+     @isTest static void coverCodeForGetShowCustomerOrders(){
+        Test.setMock(WebServiceMock.class, new wwwViadComV3_v1MockImpl());
+        wwwViadComV3_v1.BasicHttpBinding_IOrderService testObject = new wwwViadComV3_v1.BasicHttpBinding_IOrderService();
+        testObject.GetShowCustomerOrders(null,null,null);
+    }
+    @isTest static void coverCodeForGetHeldShowCustomerOrders(){
+        Test.setMock(WebServiceMock.class, new wwwViadComV3_v1MockImpl());
+        wwwViadComV3_v1.BasicHttpBinding_IOrderService testObject = new wwwViadComV3_v1.BasicHttpBinding_IOrderService();
+        testObject.GetHeldShowCustomerOrders(null,null,null,null);
+    }
+    @isTest static void coverCodeForGetOrderPaymentInformation(){
+        Test.setMock(WebServiceMock.class, new wwwViadComV3_v1MockImpl());
+        wwwViadComV3_v1.BasicHttpBinding_IOrderService testObject = new wwwViadComV3_v1.BasicHttpBinding_IOrderService();
+        testObject.GetOrderPaymentInformation(null,null);
+    }
+     @isTest static void coverCodeForGetHeldProjectOrdersByStatus(){
+        Test.setMock(WebServiceMock.class, new wwwViadComV3_v1MockImpl());
+        wwwViadComV3_v1.BasicHttpBinding_IOrderService testObject = new wwwViadComV3_v1.BasicHttpBinding_IOrderService();
+        testObject.GetHeldProjectOrdersByStatus(null,null,null,null,null);
+    }
+     @isTest static void coverCodeForApplyHold(){
+        Test.setMock(WebServiceMock.class, new wwwViadComV3_v1MockImpl());
+        wwwViadComV3_v1.BasicHttpBinding_IOrderService testObject = new wwwViadComV3_v1.BasicHttpBinding_IOrderService();
+        testObject.ApplyHold(null,null,null);
+    }
+    @isTest static void coverCodeForGetProjectOrders(){
+        Test.setMock(WebServiceMock.class, new wwwViadComV3_v1MockImpl());
+        wwwViadComV3_v1.BasicHttpBinding_IOrderService testObject = new wwwViadComV3_v1.BasicHttpBinding_IOrderService();
+        testObject.GetProjectOrders(null,null,null,null,null);
+    }
+    @isTest static void coverCodeForReleaseHold(){
+        Test.setMock(WebServiceMock.class, new wwwViadComV3_v1MockImpl());
+        wwwViadComV3_v1.BasicHttpBinding_IOrderService testObject = new wwwViadComV3_v1.BasicHttpBinding_IOrderService();
+        testObject.ReleaseHold(null,null,null);
+    }
+    @isTest static void coverCodeForGetHeldShowOrders(){
+        Test.setMock(WebServiceMock.class, new wwwViadComV3_v1MockImpl());
+        wwwViadComV3_v1.BasicHttpBinding_IOrderService testObject = new wwwViadComV3_v1.BasicHttpBinding_IOrderService();
+        testObject.GetHeldShowOrders(null,null,null,null,null,null);
+    }
+    @isTest static void coverCodeForGetHeldProjectOrders(){
+        Test.setMock(WebServiceMock.class, new wwwViadComV3_v1MockImpl());
+        wwwViadComV3_v1.BasicHttpBinding_IOrderService testObject = new wwwViadComV3_v1.BasicHttpBinding_IOrderService();
+        testObject.GetHeldProjectOrders(null,null,null,null,null,null);
+    }
+     @isTest static void coverCodeForGetAddToOrderChoices(){
+        Test.setMock(WebServiceMock.class, new wwwViadComV3_v1MockImpl());
+        wwwViadComV3_v1.BasicHttpBinding_IOrderService testObject = new wwwViadComV3_v1.BasicHttpBinding_IOrderService();
+        testObject.GetAddToOrderChoices(null,null);
+    }
+     @isTest static void coverCodeForGetShowOrders(){
+        Test.setMock(WebServiceMock.class, new wwwViadComV3_v1MockImpl());
+        wwwViadComV3_v1.BasicHttpBinding_IOrderService testObject = new wwwViadComV3_v1.BasicHttpBinding_IOrderService();
+        testObject.GetShowOrders(null,null,null,null,null);
+    }
+    @isTest static void coverCodeForCancelOrder(){
+        Test.setMock(WebServiceMock.class, new wwwViadComV3_v1MockImpl());
+        wwwViadComV3_v1.BasicHttpBinding_IOrderService testObject = new wwwViadComV3_v1.BasicHttpBinding_IOrderService();
+        testObject.CancelOrder(null,null,null);
+    }
+     @isTest static void coverCodeForGetOrderAndSqrCounts(){
+        Test.setMock(WebServiceMock.class, new wwwViadComV3_v1MockImpl());
+        wwwViadComV3_v1.BasicHttpBinding_IOrderService testObject = new wwwViadComV3_v1.BasicHttpBinding_IOrderService();
+        testObject.GetOrderAndSqrCounts(null,null);
+    }
+    
+}

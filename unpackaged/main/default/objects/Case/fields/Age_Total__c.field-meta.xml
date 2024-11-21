@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Age_Total__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF ( A2subA1__c &gt; 0, 
+TEXT(FLOOR( A2subA1__c)) &amp; &quot; days &quot; &amp; 
+TEXT( FLOOR( 24 * ( A2subA1__c - FLOOR(A2subA1__c) ))) &amp; &quot; hours &quot; &amp; 
+TEXT( ROUND(60 * (ROUND( 24 * ( A2subA1__c - FLOOR(A2subA1__c) ),8) - FLOOR( 
+ROUND( 24 * ( A2subA1__c - FLOOR(A2subA1__c) ),8)) ),0)) &amp; &quot; mn &quot; 
+,&quot;&quot;)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Age Total</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

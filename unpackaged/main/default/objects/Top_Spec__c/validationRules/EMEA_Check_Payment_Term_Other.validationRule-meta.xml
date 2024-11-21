@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>EMEA_Check_Payment_Term_Other</fullName>
+    <active>true</active>
+    <errorConditionFormula>!ISPICKVAL( Payment_Terms__c , &quot;Other&quot;) &amp;&amp;  Len(Payment_Terms_Other__c) &gt;0</errorConditionFormula>
+    <errorMessage>If you have not selected Other as the Payment Terms, you do not need to enter anything in Payment Terms (Other)</errorMessage>
+</ValidationRule>

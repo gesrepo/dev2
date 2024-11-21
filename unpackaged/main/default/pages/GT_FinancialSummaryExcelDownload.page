@@ -1,0 +1,545 @@
+<apex:page standardStylesheets="true"  showHeader="false" sidebar="false" applyHtmlTag="false" tabStyle="Account" standardController="GT_Event__c" extensions="GT_FinancialSummaryReport" contentType="application/vnd.ms-excel#FinancialSummaryReport.xls" cache="true">
+    <apex:form >
+        <apex:pageBlock id="pbst">           
+            <apex:pageBlockTable value="{!connectEventwrapper}" var="ce" id="pbt">
+                <apex:column width="10%">
+                    <apex:facet name="header">Name Of {!programName}</apex:facet>
+                    <apex:outputText rendered="{!programName == 'Event'}" value="{!ce.ConnectEventName}" />
+                    <apex:outputText rendered="{!programName == 'Congress'}" value="{!ce.congressName}" />
+                </apex:column>
+                <apex:column width="10%">
+                    <apex:facet name="header">Location</apex:facet>
+                    <apex:outputText value="{!ce.ConnectEventLocation}" />
+                </apex:column>
+                <apex:column width="16%">
+                    <apex:facet name="header">{!programName} Start Date</apex:facet>
+                    <apex:outputText rendered="{!programName == 'Event'}" value="{0, date, MMMM d','  yyyy}">
+                        <apex:param value="{!ce.EventStartDate}" /> 
+                    </apex:outputText>
+                     <apex:outputText rendered="{!programName == 'Congress'}" value="{0, date, MMMM d','  yyyy}">
+                        <apex:param value="{!ce.congressStartDate}" /> 
+                    </apex:outputText>
+                </apex:column>
+                <apex:column width="16%">
+                    <apex:facet name="header">{!programName} End Date</apex:facet>
+                    <apex:outputText rendered="{!programName == 'Event'}" value="{0, date, MMMM d','  yyyy}">
+                        <apex:param value="{!ce.EventEndDate}" /> 
+                    </apex:outputText>
+                     <apex:outputText rendered="{!programName == 'Congress'}" value="{0, date, MMMM d','  yyyy}">
+                        <apex:param value="{!ce.congressEndDate}" /> 
+                    </apex:outputText>
+                </apex:column>
+            </apex:pageBlockTable>
+        </apex:pageBlock>
+        <apex:pageBlock id="pbst1" rendered="{!IF(OR(dispWrapper.size > 0, sponWrapper.size > 0,spkngengWrapper.size > 0,MtrmWrapper.size > 0,eventWrapper.size > 0,regattndonlyWrapper.size > 0), TRUE, FALSE)}">           
+            <apex:pageBlockTable value="{!TotalCost}" var="tc">
+                <apex:column width="10%"></apex:column>
+                <apex:column width="10%"></apex:column>
+                <apex:column width="16%"></apex:column>
+                <apex:column width="16%">
+                    <apex:facet name="header">Total Estimated Cost</apex:facet>
+                    <apex:outputText value="{!IF(tc['TotalEstimatedCost'] != '', '$ '+TEXT(tc['TotalEstimatedCost']), '$ 0.00')}"/>
+                </apex:column>
+                <apex:column width="16%">
+                    <apex:facet name="header">Total Actual Cost</apex:facet>
+                    <apex:outputText value="{!IF(tc['TotalActualCost'] != '', '$ '+TEXT(tc['TotalActualCost']), '$ 0.00')}"/>
+                </apex:column>
+                
+            </apex:pageBlockTable>
+        </apex:pageBlock>
+        <apex:pageBlock title="Exhibits" rendered="{!if(dispWrapper.size > 0 , true,false)}">
+            <td WIDTH="15%" ALIGN="CENTER">
+                <apex:pageBlockTable value="{!getExhibitTotalDetails}" var="agr">
+                    <apex:column width="10%"></apex:column>
+                    <apex:column width="10%"></apex:column>
+                    <apex:column width="16%"></apex:column>
+                    <apex:column width="16%"><apex:facet name="header">Total GES Cost Estimated</apex:facet>
+                        <apex:outputText value="{!IF(agr['totalGESEstimatedCost'] != '', '$ '+TEXT(agr['totalGESEstimatedCost']), '$ 0.00')}"/>
+                    </apex:column>
+                    <apex:column width="16%">
+                        <apex:facet name="header">Total GES Cost Actual</apex:facet>
+                        <apex:outputText value="{!IF(agr['totalGESActualCost'] != '', '$ '+TEXT(agr['totalGESActualCost']), '$ 0.00')}"/>
+                    </apex:column>
+                    <apex:column width="16%">
+                        <apex:facet name="header">Total Booth Estimated Cost</apex:facet>
+                        <apex:outputText value="{!IF(agr['totalBoothEstimatedCost'] != '', '$ '+TEXT(agr['totalBoothEstimatedCost']), '$ 0.00')}"/>
+                    </apex:column>
+                    <apex:column width="16%">
+                        <apex:facet name="header">Total Booth Actual Cost</apex:facet>
+                        <apex:outputText value="{!IF(agr['totalBoothActualCost'] != '', '$ '+TEXT(agr['totalBoothActualCost']), '$ 0.00')}" />
+                    </apex:column>
+                    <apex:column width="20%" rendered="{!showAdditionalCost}">
+                        <apex:facet name="header">Total Additional Exhibit Cost</apex:facet>
+                        <apex:outputText value="{!IF(agr['totalExhibitAdditional'] != '', '$ '+TEXT(agr['totalExhibitAdditional']), '$ 0.00')}" />
+                    </apex:column>
+                    
+                </apex:pageBlockTable></td>
+            <apex:pageBlockTable value="{!dispWrapper}" var="a" id="pbt">
+                <apex:column width="10%">
+                    <apex:facet name="header">Exhibit</apex:facet>
+                    <apex:outputText value="{!a.ExhibitId}" />
+                </apex:column>
+                <apex:column width="10%">
+                    <apex:facet name="header">Exhibit Name</apex:facet>
+                    <apex:outputText value="{!a.ExhibitName}" />
+                </apex:column>
+                <apex:column width="16%">
+                    <apex:facet name="header">Products</apex:facet>
+                    <apex:outputText value="{!a.Brand}" />
+                </apex:column>
+                <apex:column width="16%">
+                    <apex:facet name="header">GES Cost Estimated</apex:facet>
+                    <apex:outputText value="$ {!a.GESEstimatedCost}" />
+                </apex:column>
+                <apex:column width="16%">
+                    <apex:facet name="header">GES Cost Actual</apex:facet>
+                    <apex:outputText value="$ {!a.GESActualCost}" />
+                </apex:column>
+                <apex:column width="16%">
+                    <apex:facet name="header">Booth Estimated Cost</apex:facet>
+                    <apex:outputText value="$ {!a.BoothSpaceEstimatedCost}" />
+                </apex:column>
+                <apex:column width="16%">
+                    <apex:facet name="header">Booth Actual Cost</apex:facet>
+                    <apex:outputText value="$ {!a.BoothSpaceActualCost}" />
+                </apex:column>
+                <apex:column width="16%" rendered="{!showAdditionalCost}">
+                    <apex:facet name="header">Additional Cost</apex:facet>
+                    <apex:outputText value="$ {!a.AdditionalCost}" />
+                </apex:column>
+            </apex:pageBlockTable>
+        </apex:pageBlock>
+        <apex:pageBlock title="Sponsorships" rendered="{!if(sponWrapper.size > 0 , true,false)}">
+            <apex:pageBlockTable value="{!getSponsorshipTotalDetails}" var="spnd">
+                <apex:column width="20%"></apex:column>
+                <apex:column width="15%"></apex:column>
+                <apex:column width="25%"></apex:column>
+                <apex:column width="20%">
+                    <apex:facet name="header">Total Sponsorship Estimated Cost</apex:facet>
+                    <apex:outputText value="{!IF(spnd['totalSponsorshipEstimatedCost'] != '', '$ '+TEXT(spnd['totalSponsorshipEstimatedCost']), '$ 0.00')}"/>
+                </apex:column>
+                <apex:column width="20%">
+                    <apex:facet name="header">Total Sponsorship Actual Cost</apex:facet>
+                    <apex:outputText value="{!IF(spnd['totalSponsorshipActualCost'] != '', '$ '+TEXT(spnd['totalSponsorshipActualCost']), '$ 0.00')}" />
+                </apex:column>
+                <apex:column width="20%" rendered="{!showAdditionalCost}">
+                </apex:column>
+                <apex:column width="20%" rendered="{!showAdditionalCost}">
+                </apex:column>
+                <apex:column width="20%" rendered="{!showAdditionalCost}">
+                    <apex:facet name="header">Total Additional Sponsorship Cost</apex:facet>
+                    <apex:outputText value="{!IF(spnd['totalSponsorshipAdditional'] != '', '$ '+TEXT(spnd['totalSponsorshipAdditional']), '$ 0.00')}" />
+                </apex:column>
+            </apex:pageBlockTable>
+            <apex:pageBlockTable value="{!sponWrapper}" var="ab">
+                <apex:column width="20%">
+                    <apex:facet name="header">Sponsorship</apex:facet>
+                    <apex:outputText value="{!ab.SponId}" />
+                </apex:column>
+                <apex:column width="15%">
+                    <apex:facet name="header">Sponsorship Name</apex:facet>
+                    <apex:outputText value="{!ab.SponName}" />
+                </apex:column>
+                <apex:column width="25%">
+                    <apex:facet name="header">Products</apex:facet>
+                    <apex:outputText value="{!ab.BrandName}" />
+                </apex:column>
+                <apex:column width="20%">
+                    <apex:facet name="header">Sponsorship Estimated Cost</apex:facet>
+                    <apex:outputText value="$ {!ab.BrandSponEstimatedCost}" />
+                </apex:column>
+                <apex:column width="20%">
+                    <apex:facet name="header">Sponsorship Actual Cost</apex:facet>
+                    <apex:outputText value="$ {!ab.BrandSponActualCost}" />
+                </apex:column>
+                <apex:column width="20%" rendered="{!showAdditionalCost}">
+                </apex:column>
+                <apex:column width="20%" rendered="{!showAdditionalCost}">
+                </apex:column>
+                <apex:column width="20%" rendered="{!showAdditionalCost}">
+                    <apex:facet name="header">Additional Cost</apex:facet>
+                    <apex:outputText value="$ {!ab.BrandSponAddtnlCost}" />
+                </apex:column>
+            </apex:pageBlockTable>
+        </apex:pageBlock>
+        <apex:pageBlock title="Speaking Engagements" rendered="{!if(spkngengWrapper.size > 0 , true,false)}">
+            <apex:pageBlockTable value="{!getSpkngEngTotalDetails}" var="se">
+                <apex:column width="20%"></apex:column>
+                <apex:column width="15%"></apex:column>
+                <apex:column width="25%"></apex:column>
+                <apex:column width="20%">
+                    <apex:facet name="header">Total Speaking Engagement Estimated Cost</apex:facet>
+                    <apex:outputText value="{!IF(se['totalSpkngEngmtEstimatedCost'] != '', '$ '+TEXT(se['totalSpkngEngmtEstimatedCost']), '$ 0.00')}"/>
+                </apex:column>
+                <apex:column width="20%">
+                    <apex:facet name="header">Total Speaking Engagement Actual Cost</apex:facet>
+                    <apex:outputText value="{!IF(se['totalSpkngEngmtActualCost'] != '', '$ '+TEXT(se['totalSpkngEngmtActualCost']), '$ 0.00')}" />
+                </apex:column>
+                <apex:column width="20%" rendered="{!showAdditionalCost}">
+                </apex:column>
+                <apex:column width="20%" rendered="{!showAdditionalCost}">
+                </apex:column>
+                <apex:column width="20%" rendered="{!showAdditionalCost}">
+                    <apex:facet name="header">Total Additional Speaking Engagement Cost</apex:facet>
+                    <apex:outputText value="{!IF(se['totalSpEgAdditional'] != '', '$ '+TEXT(se['totalSpEgAdditional']), '$ 0.00')}" />
+                </apex:column>
+            </apex:pageBlockTable>
+            <apex:pageBlockTable value="{!spkngengWrapper}" var="se">
+                <apex:column width="20%">
+                    <apex:facet name="header">Speaking Engagement</apex:facet>
+                    <apex:outputText value="{!se.spkngengId}" />
+                </apex:column>
+                <apex:column width="15%">
+                    <apex:facet name="header">Speaking Engagement Type</apex:facet>
+                    <apex:outputText value="{!se.spkngengType}" />
+                </apex:column>
+                <apex:column width="25%">
+                    <apex:facet name="header">Products</apex:facet>
+                    <apex:outputText value="{!se.BrandName}" />
+                </apex:column>
+                <apex:column width="20%">
+                    <apex:facet name="header">Speaking Engagement Estimated Cost</apex:facet>
+                    <apex:outputText value="$ {!se.spkngengEstimatedCost}" />
+                </apex:column>
+                <apex:column width="20%">
+                    <apex:facet name="header">Speaking Engagement Actual Cost</apex:facet>
+                    <apex:outputText value="$ {!se.spkngengActualCost}" />
+                </apex:column>
+                <apex:column width="20%" rendered="{!showAdditionalCost}">
+                </apex:column>
+                <apex:column width="20%" rendered="{!showAdditionalCost}">
+                </apex:column>
+                <apex:column width="20%" rendered="{!showAdditionalCost}">
+                    <apex:facet name="header">Additional Cost</apex:facet>
+                    <apex:outputText value="$ {!se.spkngengAddtnlCost}" />
+                </apex:column>
+            </apex:pageBlockTable>
+        </apex:pageBlock>
+        <apex:pageBlock title="Meeting Rooms" rendered="{!if(MtrmWrapper.size > 0 , true,false)}">
+            <apex:pageBlockTable value="{!getMtRmTotalDetails}" var="mr">
+                <apex:column width="20%"></apex:column>
+                <apex:column width="20%"></apex:column>
+                <apex:column width="20%"></apex:column>
+                <apex:column width="20%">
+                    <apex:facet name="header">Total MR Services Estimated Cost</apex:facet>
+                    <apex:outputText value="{!IF(mr['totalMtRmServicesEstimatedCost'] != '', '$ '+TEXT(mr['totalMtRmServicesEstimatedCost']), '$ 0.00')}"/>
+                </apex:column>
+                <apex:column width="20%">
+                    <apex:facet name="header">Total MR Services Actual Cost</apex:facet>
+                    <apex:outputText value="{!IF(mr['totalMtRmServicesActualCost'] != '', '$ '+TEXT(mr['totalMtRmServicesActualCost']), '$ 0.00')}"/>
+                </apex:column>
+                <apex:column width="20%">
+                    <apex:facet name="header">Total MR Estimated Cost</apex:facet>
+                    <apex:outputText value="{!IF(mr['totalMtRmEstimatedCost'] != '', '$ '+TEXT(mr['totalMtRmEstimatedCost']), '$ 0.00')}"/>
+                </apex:column>
+                <apex:column width="20%">
+                    <apex:facet name="header">Total MR Actual Cost</apex:facet>
+                    <apex:outputText value="{!IF(mr['totalMtRmActualCost'] != '', '$ '+TEXT(mr['totalMtRmActualCost']), '$ 0.00')}" />
+                </apex:column>
+                <apex:column width="25%" rendered="{!showAdditionalCost}">
+                    <apex:facet name="header">Total Additional MR Cost</apex:facet>
+                    <apex:outputText value="{!IF(mr['totalMtRmAdditional'] != '', '$ '+TEXT(mr['totalMtRmAdditional']), '$ 0.00')}" />
+                </apex:column>
+            </apex:pageBlockTable>
+            <apex:pageBlockTable value="{!MtrmWrapper}" var="mr">
+                <apex:column width="20%">
+                    <apex:facet name="header">Meeting room</apex:facet>
+                    <apex:outputText value="{!mr.MtrmId}" />
+                </apex:column>
+                <apex:column width="15%">
+                    <apex:facet name="header">Meeting room Name</apex:facet>
+                    <apex:outputText value="{!mr.MtrmName}" />
+                </apex:column>
+                <apex:column width="25%">
+                    <apex:facet name="header">Products</apex:facet>
+                    <apex:outputText value="{!mr.BrandName}" />
+                </apex:column>
+                <apex:column width="20%">
+                    <apex:facet name="header">MR Services Estimated Cost</apex:facet>
+                    <apex:outputText value="$ {!mr.MtrmSerEstimatedCost}" />
+                </apex:column>
+                <apex:column width="20%">
+                    <apex:facet name="header">MR Services Actual Cost</apex:facet>
+                    <apex:outputText value="$ {!mr.MtrmSerActualCost}" />
+                </apex:column> 
+                <apex:column width="20%">
+                    <apex:facet name="header">MR Estimated Cost</apex:facet>
+                    <apex:outputText value="$ {!mr.MtrmEstimatedCost}" />
+                </apex:column>
+                <apex:column width="20%">
+                    <apex:facet name="header">MR Actual Cost</apex:facet>
+                    <apex:outputText value="$ {!mr.MtrmActualCost}" />
+                </apex:column>
+                <apex:column width="20%" rendered="{!showAdditionalCost}">
+                    <apex:facet name="header">Additional Cost</apex:facet>
+                    <apex:outputText value="$ {!mr.MtrmAddtnlCost}" />
+                </apex:column>
+            </apex:pageBlockTable>
+        </apex:pageBlock>
+        <apex:pageBlock title="Events" rendered="{!if(eventWrapper.size > 0 , true,false)}">
+            <apex:pageBlockTable value="{!getEventTotalDetails}" var="ev">
+                <apex:column width="20%"></apex:column>
+                <apex:column width="15%"></apex:column>
+                <apex:column width="25%"></apex:column>
+                <apex:column width="20%">
+                    <apex:facet name="header">Total Event Estimated Cost</apex:facet>
+                    <apex:outputText value="{!IF(ev['totalEventEstimatedCost'] != '', '$ '+TEXT(ev['totalEventEstimatedCost']), '$ 0.00')}"/>
+                </apex:column>
+                <apex:column width="20%">
+                    <apex:facet name="header">Total Event Actual Cost</apex:facet>
+                    <apex:outputText value="{!IF(ev['totalEventActualCost'] != '', '$ '+TEXT(ev['totalEventActualCost']), '$ 0.00')}" />
+                </apex:column>
+                <apex:column width="20%" rendered="{!showAdditionalCost}">
+                </apex:column>
+                <apex:column width="20%" rendered="{!showAdditionalCost}">
+                </apex:column>
+                <apex:column width="20%" rendered="{!showAdditionalCost}">
+                    <apex:facet name="header">Total Additional Event Cost</apex:facet>
+                    <apex:outputText value="{!IF(ev['totalEvtAdditional'] != '', '$ '+TEXT(ev['totalEvtAdditional']), '$ 0.00')}" />
+                </apex:column>
+            </apex:pageBlockTable>
+            <apex:pageBlockTable value="{!eventWrapper}" var="ev">
+                <apex:column width="20%">
+                    <apex:facet name="header">Event</apex:facet>
+                    <apex:outputText value="{!ev.eventId}" />
+                </apex:column>
+                <apex:column width="15%">
+                    <apex:facet name="header">Event Name</apex:facet>
+                    <apex:outputText value="{!ev.eventName}" />
+                </apex:column>
+                <apex:column width="25%">
+                    <apex:facet name="header">Products</apex:facet>
+                    <apex:outputText value="{!ev.BrandName}" />
+                </apex:column>
+                <apex:column width="20%">
+                    <apex:facet name="header">Event Estimated Cost</apex:facet>
+                    <apex:outputText value="$ {!ev.eventEstimatedCost}" />
+                </apex:column>
+                <apex:column width="20%">
+                    <apex:facet name="header">Event Actual Cost</apex:facet>
+                    <apex:outputText value="$ {!ev.eventActualCost}" />
+                </apex:column>
+				                <apex:column width="20%" rendered="{!showAdditionalCost}">
+                </apex:column>
+				                <apex:column width="20%" rendered="{!showAdditionalCost}">
+                </apex:column>
+                <apex:column width="20%" rendered="{!showAdditionalCost}">
+                    <apex:facet name="header">Additional Cost</apex:facet>
+                    <apex:outputText value="$ {!ev.eventAddtnlCost}" />
+                </apex:column> 				
+            </apex:pageBlockTable>
+        </apex:pageBlock>
+        <apex:pageBlock title="Registrations/Attend Only" rendered="{!if(regattndonlyWrapper.size > 0 , true,false)}">
+            <apex:pageBlockTable value="{!getRAonlyTotalDetails}" var="ra">
+                <apex:column width="20%"></apex:column>
+                <apex:column width="15%"></apex:column>
+                <apex:column width="25%"></apex:column>
+                <apex:column width="20%">
+                    <apex:facet name="header">Total R/A Estimated Cost</apex:facet>
+                    <apex:outputText value="{!IF(ra['totalRaOnlyEstimatedCost'] != '', '$ '+TEXT(ra['totalRaOnlyEstimatedCost']), '$ 0.00')}"/>
+                </apex:column>
+                <apex:column width="20%">
+                    <apex:facet name="header">Total R/A Actual Cost</apex:facet>                       
+                    <apex:outputText value="{!IF(ra['totalRaOnlyActualCost'] != '', '$ '+TEXT(ra['totalRaOnlyActualCost']), '$ 0.00')}" />
+                </apex:column>
+                <apex:column width="20%" rendered="{!showAdditionalCost}">
+                </apex:column>
+                <apex:column width="20%" rendered="{!showAdditionalCost}">
+                </apex:column>
+                <apex:column width="20%" rendered="{!showAdditionalCost}">
+                    <apex:facet name="header">Total Additional R/A  Cost</apex:facet>                       
+                    <apex:outputText value="{!IF(ra['totalRgAtAdditional'] != '', '$ '+TEXT(ra['totalRgAtAdditional']), '$ 0.00')}" />
+                </apex:column>
+            </apex:pageBlockTable>
+            <apex:pageBlockTable value="{!regattndonlyWrapper}" var="ra">
+                <apex:column width="20%">
+                    <apex:facet name="header">Registration/Attend Only</apex:facet>
+                    <apex:outputText value="{!ra.regattndonlyId}" />
+                </apex:column>
+                <apex:column width="15%">
+                    <apex:facet name="header">Registration/Attend Only Name</apex:facet>
+                    <apex:outputText value="{!ra.regattndonlyName}" />
+                </apex:column>
+                <apex:column width="25%">
+                    <apex:facet name="header">Products</apex:facet>
+                    <apex:outputText value="{!ra.BrandName}" />
+                </apex:column>
+                <apex:column width="20%">
+                    <apex:facet name="header">R/A Estimated Cost</apex:facet>
+                    <apex:outputText value="$ {!ra.regattndonlyEstimatedCost}" />
+                </apex:column>
+                <apex:column width="20%">
+                    <apex:facet name="header">R/A Actual Cost</apex:facet>
+                    <apex:outputText value="$ {!ra.regattndonlyActualCost}" />
+                </apex:column>
+                <apex:column width="20%" rendered="{!showAdditionalCost}">
+                </apex:column>
+                <apex:column width="20%" rendered="{!showAdditionalCost}">
+                </apex:column>
+                <apex:column width="20%" rendered="{!showAdditionalCost}">
+				<apex:facet name="header">Additional Cost</apex:facet>
+                    <apex:outputText value="$ {!ra.regattndonlyAddtnlCost}" />
+                </apex:column>
+                
+            </apex:pageBlockTable>
+        </apex:pageBlock>
+        <apex:pageBlock title="Sporting Event" rendered="{!if(sportingEventWrapper.size > 0 , true,false)}">
+            <td WIDTH="15%" ALIGN="CENTER">
+                <apex:pageBlockTable value="{!getSportingEventTotalDetails}" var="agr">
+                    <apex:column width="10%"></apex:column>
+                    <apex:column width="10%"></apex:column>
+                    <apex:column width="16%"></apex:column>
+                    <apex:column width="16%">
+                        <apex:facet name="header">Total FB Cost Estimated</apex:facet>
+                        <apex:outputText value="{!IF(agr['totalFBEstimatedCosts'] != '', '$ '+TEXT(agr['totalFBEstimatedCosts']), '$ 0.00')}"/>
+                    </apex:column>
+                    <apex:column width="16%">
+                        <apex:facet name="header">Total FB Cost Actual</apex:facet>
+                        <apex:outputText value="{!IF(agr['totalFBActualCosts'] != '', '$ '+TEXT(agr['totalFBActualCosts']), '$ 0.00')}"/>
+                    </apex:column>
+                    <apex:column width="16%">
+                        <apex:facet name="header">Total Sporting Event Estimated Cost</apex:facet>
+                        <apex:outputText value="{!IF(agr['totalSportingEventEstimatedCost'] != '', '$ '+TEXT(agr['totalSportingEventEstimatedCost']), '$ 0.00')}"/>
+                    </apex:column>
+                    <apex:column width="16%">
+                        <apex:facet name="header">Total Sporting Event Actual Cost</apex:facet>
+                        <apex:outputText value="{!IF(agr['totalSportingEventActualCost'] != '', '$ '+TEXT(agr['totalSportingEventActualCost']), '$ 0.00')}" />
+                    </apex:column>
+                    <apex:column width="20%" rendered="{!showAdditionalCost}">
+                        <apex:facet name="header">Total Additional Sporting Event Cost</apex:facet>
+                        <apex:outputText value="{!IF(agr['totalSpEvAdditional'] != '', '$ '+TEXT(agr['totalSpEvAdditional']), '$ 0.00')}" />
+                    </apex:column>
+                </apex:pageBlockTable></td>
+            <apex:pageBlockTable value="{!sportingEventWrapper}" var="se" id="pbt">
+                <apex:column width="10%">
+                    <apex:facet name="header">Sporting Event</apex:facet>
+                    <apex:outputText value="{!se.sportingEventId}"/>
+                </apex:column>
+                <apex:column width="10%">
+                    <apex:facet name="header">Sporting Event Name</apex:facet>
+                    <apex:outputText value="{!se.sportingEventName}" />
+                </apex:column>
+                <apex:column width="16%">
+                    <apex:facet name="header">Products</apex:facet>
+                    <apex:outputText value="{!se.BrandName}" />
+                </apex:column>
+                <apex:column width="16%">
+                    <apex:facet name="header">FB Cost Estimated</apex:facet>
+                    <apex:outputText value="$ {!se.FBEstimatedCost}" />
+                </apex:column>
+                <apex:column width="16%">
+                    <apex:facet name="header">FB Cost Actual</apex:facet>
+                    <apex:outputText value="$ {!se.FBActualCost}" />
+                </apex:column>
+                <apex:column width="16%">
+                    <apex:facet name="header">Sporting Event Estimated Cost</apex:facet>
+                    <apex:outputText value="$ {!se.sportingEventEstimatedCost}" />
+                </apex:column>
+                <apex:column width="16%">
+                    <apex:facet name="header">Sporting Event Actual Cost</apex:facet>
+                    <apex:outputText value="$ {!se.sportingEventActualCost}" />
+                </apex:column>
+                <apex:column width="16%" rendered="{!showAdditionalCost}">
+                    <apex:facet name="header">Additional Cost</apex:facet>
+                    <apex:outputText value="$ {!se.sportingEventAddtnlCost}"/>
+                </apex:column>
+            </apex:pageBlockTable>
+        </apex:pageBlock>
+        <apex:pageBlock title="Meeting Planning" rendered="{!if(meetingPlanningWrapper.size > 0 , true,false)}">
+            <apex:pageBlockTable value="{!getMeetingPlanningTotalDetails}" var="mp">
+                <apex:column width="20%"></apex:column>
+                <apex:column width="20%"></apex:column>
+                <apex:column width="20%"></apex:column>
+                <apex:column width="20%">
+                    <apex:facet name="header">Total MP Estimated Cost</apex:facet>
+                    <apex:outputText value="{!IF(mp['totalMeetingPlanningEstimatedCost'] != '', '$ '+TEXT(mp['totalMeetingPlanningEstimatedCost']), '$ 0.00')}"/>
+                </apex:column>
+                <apex:column width="20%">
+                    <apex:facet name="header">Total MP Actual Cost</apex:facet>
+                    <apex:outputText value="{!IF(mp['totalMeetingPlanningActualCost'] != '', '$ '+TEXT(mp['totalMeetingPlanningActualCost']), '$ 0.00')}" />
+                </apex:column>
+                <apex:column width="25%" rendered="{!showAdditionalCost}">
+                    <apex:facet name="header">Total Additional MP Cost</apex:facet>
+                    <apex:outputText value="{!IF(mp['totalMtPlAdditional'] != '', '$ '+TEXT(mp['totalMtPlAdditional']), '$ 0.00')}" />
+                </apex:column>
+            </apex:pageBlockTable>
+            <apex:pageBlockTable value="{!meetingPlanningWrapper}" var="mp">
+                <apex:column width="20%">
+                    <apex:facet name="header">Meeting Planning</apex:facet>
+                    <apex:outputText value="{!mp.meetingPlanningStdName}" />
+                </apex:column>
+                <apex:column width="15%">
+                    <apex:facet name="header">Meeting Planning Name</apex:facet>
+                    <apex:outputText value="{!mp.meetingPlanningName}" />
+                </apex:column>
+                <apex:column width="25%">
+                    <apex:facet name="header">Products</apex:facet>
+                    <apex:outputText value="{!mp.BrandName}" />
+                </apex:column>
+                <apex:column width="20%">
+                    <apex:facet name="header">MP Estimated Cost</apex:facet>
+                    <apex:outputText value="$ {!mp.meetingPlanningEstimatedCost}" />
+                </apex:column>
+                <apex:column width="20%">
+                    <apex:facet name="header">MP Actual Cost</apex:facet>
+                    <apex:outputText value="$ {!mp.meetingPlanningActualCost}" />
+                </apex:column>
+            </apex:pageBlockTable>
+        </apex:pageBlock>
+        <apex:pageBlock title="Membership" rendered="{!if(membershipWrapper.size > 0 , true,false)}">
+            <td WIDTH="15%" ALIGN="CENTER">
+                <apex:pageBlockTable value="{!getMembershipTotalDetails}" var="agr">
+                    <apex:column width="10%"></apex:column>
+                    <apex:column width="10%"></apex:column>
+                    <apex:column width="16%"></apex:column>
+                    <apex:column width="16%">
+                        <apex:facet name="header">Total Membership Estimated Cost</apex:facet>
+                        <apex:outputText value="{!IF(agr['totalMembershipEstimatedCost'] != '', '$ '+TEXT(agr['totalMembershipEstimatedCost']), '$ 0.00')}"/>
+                    </apex:column>
+                    <apex:column width="16%">
+                        <apex:facet name="header">Total Membership Actual Cost</apex:facet>
+                        <apex:outputText value="{!IF(agr['totalMembershipActualCost'] != '', '$ '+TEXT(agr['totalMembershipActualCost']), '$ 0.00')}" />
+                    </apex:column>
+                    <apex:column width="20%" rendered="{!showAdditionalCost}">
+                    </apex:column>
+                    <apex:column width="20%" rendered="{!showAdditionalCost}">
+                    </apex:column>
+                    <apex:column width="20%" rendered="{!showAdditionalCost}">
+                        <apex:facet name="header">Total Additional Membership Cost</apex:facet>
+                        <apex:outputText value="{!IF(agr['totalMemberAdditional'] != '', '$ '+TEXT(agr['totalMemberAdditional']), '$ 0.00')}" />
+                    </apex:column>
+                    
+                </apex:pageBlockTable></td>
+            <apex:pageBlockTable value="{!membershipWrapper}" var="membership" id="pbt">
+                <apex:column width="10%">
+                    <apex:facet name="header">Membership</apex:facet>
+                    <apex:outputText value="{!membership.membershipId}"/>
+                </apex:column>
+                <apex:column width="10%">
+                    <apex:facet name="header">Membership Name</apex:facet>
+                    <apex:outputText value="{!membership.membershipName}" />
+                </apex:column>
+                <apex:column width="16%">
+                    <apex:facet name="header">Products</apex:facet>
+                    <apex:outputText value="{!membership.BrandName}" />
+                </apex:column>
+                <apex:column width="16%">
+                    <apex:facet name="header">Membership Estimated Cost</apex:facet>
+                    <apex:outputText value="$ {!membership.membershipEstimatedCost}" />
+                </apex:column>
+                <apex:column width="20%">
+                    <apex:facet name="header">Membership Actual Cost</apex:facet>
+                    <apex:outputText value="$ {!membership.membershipActualCost}" />
+                </apex:column>
+                <apex:column width="20%" rendered="{!showAdditionalCost}">
+                </apex:column>
+                <apex:column width="20%" rendered="{!showAdditionalCost}">
+                </apex:column>
+                <apex:column width="20%" rendered="{!showAdditionalCost}">
+                    <apex:facet name="header">Additional Cost</apex:facet>
+                    <apex:outputText value="$ {!membership.membershipAddtnlCost}" />
+                </apex:column>
+            </apex:pageBlockTable>
+        </apex:pageBlock>
+    </apex:form>                          
+</apex:page>

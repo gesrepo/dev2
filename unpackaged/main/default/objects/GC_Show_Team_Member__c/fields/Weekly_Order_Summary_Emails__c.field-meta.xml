@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Weekly_Order_Summary_Emails__c</fullName>
+    <defaultValue>false</defaultValue>
+    <inlineHelpText>Check this box if you want the Show Team member to get a weekly summary email.</inlineHelpText>
+    <label>Weekly Order Summary Emails</label>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

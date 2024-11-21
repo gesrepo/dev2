@@ -1,0 +1,83 @@
+<apex:page standardStylesheets="true" standardController="GES_Connect_Corporate_Accounts__c" extensions="SponsorshipEdit" showHeader="false" sidebar="false" applyHtmlTag="false" tabStyle="Account">
+ <html xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <head>
+            <apex:includeScript value="{!$Resource.jQuery}" />
+            <apex:stylesheet value="{!URLFOR($Resource.Lightning_Design_System, 'assets/styles/salesforce-lightning-design-system.min.css')}" />
+            <apex:stylesheet value="{!URLFOR($Resource.GC_Assets, 'GC_Assets/css/GC_Styles.css')}" />
+            <apex:includeScript value="{!URLFOR($Resource.GC_Assets, 'GC_Assets/js/GC_init.js')}" />
+        </head>
+         <div class="slds">
+                 <c:GC_Community_Header />    
+                <div class="slds-page-header gc-navigation--subHeader" role="banner">
+                    <div class="slds-media">
+                        <div class="slds-media__figure">
+                            <apex:image url="{!URLFOR($Resource.GC_Assets, 'GC_Assets/img/custom13_60_teal.png')}" />
+                        </div>
+                        <div class="slds-media__body">
+                            <p class="slds-page-header__title slds-align-middle">
+                                <span>Sponsorship Details</span>
+                                <span class="slds-truncate">{!congName}</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>    <apex:form >
+        <apex:pageBlock title="Sponsorship Detail" id="pb">
+        <apex:pageBlockButtons >
+            <apex:commandButton value="Save" action="{!SponsorshipSave}" styleClass="slds-button slds-button--brand gc-teal-button"/>
+         <!--   <apex:commandButton value="Save" action="{!SponsorshipSave}"/>--->
+            <apex:commandButton value="Cancel" action="{!sponsorshipCancel}" styleClass="slds-button slds-button--brand gc-teal-button" immediate="true"/>
+        </apex:pageBlockButtons>
+            <apex:pageBlockSection title="Sponsorship Detail">
+                   <!-- <apex:inputField value="{!e.Activity_Type_Exhibit_Instance_c__c}"/>
+                    <apex:inputText label="GES Connet - Corporate Accounts" value="{!congName}"/>
+                    
+                  <apex:inputField value="{!sp.Sponsorship__c}" /> -->
+                  
+                    <apex:inputField value="{!sp.Sponsorship_Name__c}" required="true"/>
+                    <apex:outputtext label="Congress ID" value="{!congName}" rendered="{!(toClone !='true')}" />   
+  
+                   <apex:inputField value="{!sp.Sponsorship__c}" rendered="{!(toClone =='true')}"/>
+                   <!-- <apex:outputtext label="Congress ID" value="{!congName }"/> -->
+                    <apex:inputField value="{!sp.Exhibit_Bundled_with_Sponsorsip__c}"/>
+                    <!--<apex:inputField value="{!sp.Activity_Level__c}" required="true"/>  Amarab 03/25/2021 SCA-878 Remove required setting -->
+                    <apex:inputField value="{!sp.Activity_Level__c}"/>
+                    <apex:inputField value="{!sp.Sponsorship_Notes__c}"/>
+                    <apex:inputField value="{!sp.Sponsorship_Type__c}" required="true"/>                   
+                    <apex:inputField value="{!sp.Activity_Not_Confirmed__c}"/>
+                    <!--Amarab 03252021 SCA-874 Adding new fields -->
+                    <apex:inputField value="{!sp.Alternate_Activity__c}"/>
+                    <apex:outputText ></apex:outputText>
+                    <apex:inputField value="{!sp.Sponsorship_Registrants__c}"/>
+                    <!--<apex:inputField value="{!sp.Sponsorship_Costs_Estimated__c}"/>--> 
+                    <!--<apex:inputField value="{!sp.Sponsorship_Costs_Actual__c}"/>-->           
+                    <apex:pageBlockSectionItem >
+                        <apex:outputLabel value="Canceled" />
+                            <apex:actionRegion >
+                            <apex:inputField value="{!sp.Canceled__c}">
+                                <apex:actionSupport event="onchange" action="{!cancelOperation}" reRender="pbs1,pbs2"/>
+                            </apex:inputField>
+                        </apex:actionRegion>
+                    </apex:pageBlockSectionItem>
+                
+                <!--<apex:inputField value="{!sp.CurrencyIsoCode}"/>-->
+                <apex:outputText ></apex:outputText>
+                    <apex:outputField value="{!sp.CanceledDate__c}" id="pbs1"/>
+                    <apex:outputText ></apex:outputText>
+                    <apex:inputField value="{!sp.CancelReason__c}" required="{!cancelReason}" id="pbs2"/>
+                    </apex:pageBlockSection>
+                    <apex:pageBlockSection title="Sponsorship Contacts">
+                    <apex:inputField value="{!sp.GES_Congress_Manager__c}"/> <apex:inputField value="{!sp.Agency_Name__c}"/> 
+                    <apex:inputField value="{!sp.Congress_Lead__c}"/> <apex:inputField value="{!sp.Agency_Contact_Name__c}"/> 
+                    <apex:inputField value="{!sp.GES_Account_Executive__c}"/> <apex:inputField value="{!sp.Agency_Contact_Phone__c}"/>                
+                    <apex:inputField value="{!sp.GES_Account_Manager__c}"/> <apex:inputField value="{!sp.Agency_Contact_E_mail__c}"/> 
+                    
+            </apex:pageBlockSection>
+        </apex:pageBlock>
+      
+        <apex:inlineEditSupport event="ondblClick" />
+    </apex:form></div>
+    <!--
+    <apex:relatedList list="Activity_Type_Exhibit_Instance__r" title="{!a.name} Exhibit"/>
+        <apex:relatedList list="Sponsorship_Instance__r" title="{!a.name} Sponsorship"/>-->
+    </html>    
+    </apex:page>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Chat_Omni_For_EMEA_MessagingSession</fullName>
+    <filterScope>Queue</filterScope>
+    <label>Chat Omni For EMEA</label>
+    <queue>Chat_Omni_For_EMEA</queue>
+    <sharedTo>
+        <allInternalUsers />
+    </sharedTo>
+</ListView>

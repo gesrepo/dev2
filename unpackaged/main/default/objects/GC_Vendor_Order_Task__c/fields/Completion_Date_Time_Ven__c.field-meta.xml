@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Completion_Date_Time_Ven__c</fullName>
+    <description>If Set, will use this time instead of the Default Order&#39;s Completion Date/Time</description>
+    <inlineHelpText>If Set, will use this time instead of the Default Order&#39;s Completion Date/Time</inlineHelpText>
+    <label>Completion Date/Time</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>DateTime</type>
+</CustomField>

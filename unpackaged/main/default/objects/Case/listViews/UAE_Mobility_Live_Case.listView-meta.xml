@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>UAE_Mobility_Live_Case</fullName>
+    <filterScope>Queue</filterScope>
+    <label>UAE Mobility Live</label>
+    <queue>UAE_Mobility_Live</queue>
+    <sharedTo>
+        <allInternalUsers />
+    </sharedTo>
+</ListView>

@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Services_already_aware_of__c</fullName>
+    <label>Services already aware of</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>AV (Blitz/GES)</fullName>
+                <default>false</default>
+                <label>AV (Blitz/GES)</label>
+            </value>
+            <value>
+                <fullName>Carpet Hire</fullName>
+                <default>false</default>
+                <label>Carpet Hire</label>
+            </value>
+            <value>
+                <fullName>Carpet Outright</fullName>
+                <default>false</default>
+                <label>Carpet Outright</label>
+            </value>
+            <value>
+                <fullName>Carpet Removal</fullName>
+                <default>false</default>
+                <label>Carpet Removal</label>
+            </value>
+            <value>
+                <fullName>Carpet Tiles</fullName>
+                <default>false</default>
+                <label>Carpet Tiles</label>
+            </value>
+            <value>
+                <fullName>Custom Build</fullName>
+                <default>false</default>
+                <label>Custom Build</label>
+            </value>
+            <value>
+                <fullName>Electrical Services</fullName>
+                <default>false</default>
+                <label>Electrical Services</label>
+            </value>
+            <value>
+                <fullName>Expresso</fullName>
+                <default>false</default>
+                <label>Expresso</label>
+            </value>
+            <value>
+                <fullName>Furniture hire</fullName>
+                <default>false</default>
+                <label>Furniture hire</label>
+            </value>
+            <value>
+                <fullName>Graphics</fullName>
+                <default>false</default>
+                <label>Graphics</label>
+            </value>
+            <value>
+                <fullName>Logistical services</fullName>
+                <default>false</default>
+                <label>Logistical services</label>
+            </value>
+            <value>
+                <fullName>N200|GES Visit Connect</fullName>
+                <default>false</default>
+                <label>N200|GES Visit Connect</label>
+            </value>
+            <value>
+                <fullName>Service Desk</fullName>
+                <default>false</default>
+                <label>Service Desk</label>
+            </value>
+            <value>
+                <fullName>Shell Scheme Stand</fullName>
+                <default>false</default>
+                <label>Shell Scheme Stand</label>
+            </value>
+            <value>
+                <fullName>Specialist Lighting</fullName>
+                <default>false</default>
+                <label>Specialist Lighting</label>
+            </value>
+            <value>
+                <fullName>Standfitting</fullName>
+                <default>false</default>
+                <label>Standfitting</label>
+            </value>
+            <value>
+                <fullName>Unsure</fullName>
+                <default>false</default>
+                <label>Unsure</label>
+            </value>
+            <value>
+                <fullName>None of the above</fullName>
+                <default>false</default>
+                <label>None of the above</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

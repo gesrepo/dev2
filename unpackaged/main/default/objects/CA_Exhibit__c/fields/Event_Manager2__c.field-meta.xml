@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Event_Manager2__c</fullName>
+    <label>Event Manager2</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>true</sorted>
+            <value>
+                <fullName>Curtin, Nadine</fullName>
+                <default>false</default>
+                <label>Curtin, Nadine</label>
+            </value>
+            <value>
+                <fullName>Horvath, Judy</fullName>
+                <default>false</default>
+                <label>Horvath, Judy</label>
+            </value>
+            <value>
+                <fullName>Rocha, Paula</fullName>
+                <default>false</default>
+                <label>Rocha, Paula</label>
+            </value>
+            <value>
+                <fullName>Shamey-Golonka, Kimrlee</fullName>
+                <default>false</default>
+                <label>Shamey-Golonka, Kimrlee</label>
+            </value>
+            <value>
+                <fullName>Throckmorton, Andrea</fullName>
+                <default>false</default>
+                <label>Throckmorton, Andrea</label>
+            </value>
+            <value>
+                <fullName>Zarrillo, Rose Marie</fullName>
+                <default>false</default>
+                <label>Zarrillo, Rose Marie</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Channel__c</fullName>
+    <label>Channel</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>true</sorted>
+            <value>
+                <fullName>Corporate</fullName>
+                <default>false</default>
+                <label>Corporate</label>
+            </value>
+            <value>
+                <fullName>Expedia Only</fullName>
+                <default>false</default>
+                <label>Expedia Only</label>
+            </value>
+            <value>
+                <fullName>Saas</fullName>
+                <default>false</default>
+                <label>Saas</label>
+            </value>
+            <value>
+                <fullName>Small Meetings</fullName>
+                <default>false</default>
+                <label>Small Meetings</label>
+            </value>
+            <value>
+                <fullName>Sourcing</fullName>
+                <default>false</default>
+                <label>Sourcing</label>
+            </value>
+            <value>
+                <fullName>Sports</fullName>
+                <default>false</default>
+                <label>Sports</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

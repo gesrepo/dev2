@@ -1,0 +1,104 @@
+<apex:component controller="GC_ItemOptionsController" selfClosing="true">
+  <apex:attribute name="gotAttribute" description="The task being passed in" type="GC_GES_Order_Task__c" required="true" assignTo="{!got}" />
+  <apex:attribute name="venueOptions" description="Select Options" type="SelectOption[]" required="true" assignTo="{!venueAttributes}" />
+  <apex:attribute name="defaultDeliveryTimeInput" description="Select Options" type="DateTime" required="true" assignTo="{!deliveryDateTime}" />
+  <apex:attribute name="defaultCompletionTimeInput" description="Select Options" type="DateTime" required="true" assignTo="{!completionDateTime}" />
+  <apex:attribute name="defaultRemovalTimeInput" description="Select Options" type="DateTime" required="true" assignTo="{!removalDateTime}" />
+  <apex:attribute name="taskFieldMan" description="Task Fields to be shown" type="GC_Task_Field_Manager__c" required="false" assignTo="{!taskFieldManager}" />
+  <apex:stylesheet value="{!URLFOR($Resource.GC_Assets, 'GC_Assets/css/GC_PageStyles.css')}" />
+  <apex:stylesheet value="{!URLFOR($Resource.GC_DateTimePicker, 'GC_DateTimePicker/jquery.datetimepicker.css')}" />
+  <apex:includeScript value="{!$Resource.jQuery}" />
+  <!--<apex:includeScript value="{!URLFOR($Resource.GC_DateTimePicker, 'GC_DateTimePicker/build/jquery.datetimepicker.full.min.js')}" /> -->
+  
+  <apex:includeScript value="{!URLFOR($Resource.jquerydatetimepicker)}" />
+  <apex:stylesheet value="{!URLFOR($Resource.bootstrapdatetimepickercss)}" /> 
+  
+  <apex:actionFunction action="{!setDateTime}" name="setDeliveryDateTime_JS" reRender="messages">
+    <apex:param name="DDT" value="" />
+  </apex:actionFunction>
+  <apex:actionFunction action="{!setDateTime}" name="setCompletionDateTime_JS" reRender="messages">
+    <apex:param name="CDT" value="" />
+  </apex:actionFunction>
+  <apex:actionFunction action="{!setDateTime}" name="setRemovalDateTime_JS" reRender="messages">
+    <apex:param name="RDT" value="" />
+  </apex:actionFunction>
+    <apex:pageBlockSection title="Area Information" id="dateTimeSection">
+        <apex:selectList id="venueLocationsSelect" value="{!got.SA_Venue_Location__c}" size="1" styleClass="slds-select">
+          <apex:selectOptions value="{!venueAttributes}"></apex:selectOptions>
+        </apex:selectList>
+        <apex:inputField value="{!got.Delivery_Location__c}" style="width:100%" rendered="{!(taskFieldManager.Delivery_Area__c!= $Label.GC_Label_TFM_Hide)}"/>
+        <apex:outputText rendered="{!(taskFieldManager.Delivery_Area__c== $Label.GC_Label_TFM_Hide)}"></apex:outputText>
+        
+        <apex:inputField value="{!got.Onsite_Contact__c}" rendered="{!(taskFieldManager.Onsite_Contact_Person__c!= $Label.GC_Label_TFM_Hide)}"        />
+        <apex:outputText rendered="{!(taskFieldManager.Onsite_Contact_Person__c== $Label.GC_Label_TFM_Hide)}"></apex:outputText>
+        
+        <apex:pageBlockSectionItem >
+        </apex:pageBlockSectionItem>
+        
+        <apex:inputField value="{!got.Onsite_Contact_Person_Other__c}" rendered="{!(taskFieldManager.Onsite_Contact_Person_Number__c!= $Label.GC_Label_TFM_Hide)}" />
+        <apex:outputText rendered="{!(taskFieldManager.Onsite_Contact_Person_Number__c== $Label.GC_Label_TFM_Hide)}"></apex:outputText>
+        
+        <apex:inputField value="{!got.Onsite_Contact_Person_Number_Other__c}" 
+        rendered="{!(taskFieldManager.Onsite_Contact_Person_Number__c!= $Label.GC_Label_TFM_Hide)}" />
+        <apex:outputText rendered="{!(taskFieldManager.Onsite_Contact_Person_Number__c== $Label.GC_Label_TFM_Hide)}"></apex:outputText>
+        
+    </apex:pageBlockSection>
+    <apex:pageBlockSection id="dateTimeSection1">
+        <!-- TODO need to display this in local time zone -->
+            <apex:pageBlockSectionItem ></apex:pageBlockSectionItem>
+            <apex:pageBlockSectionItem rendered="{!(taskFieldManager.Installation_Delivery_Date_Time__c!= $Label.GC_Label_TFM_Hide && taskFieldManager.Completion_Date_Time__c!= $Label.GC_Label_TFM_Hide && taskFieldManager.Removal_Date_Time__c== $Label.GC_Label_TFM_Hide )}" >
+                <apex:outputLabel value="Use default Order dates?" />
+                    <apex:actionRegion >
+                        <apex:inputField value="{!got.Copy_Default_Order_Dates__c}">
+                            <apex:actionSupport event="onchange" action="{!copyDates}" reRender="dateTimeSection1"/>
+                        </apex:inputField>
+                </apex:actionRegion>
+            </apex:pageBlockSectionItem>
+        <apex:pageBlockSectionItem helpText="Default Order's Delivery Date/Time">
+          <apex:outputLabel value="Default Delivery Date/Time" rendered="{!(taskFieldManager.Default_Installation_Delivery_Date_Time__c!= $Label.GC_Label_TFM_Hide)}"/>
+            <apex:outputText value="{!strDeliveryDateTime}" rendered="{!(taskFieldManager.Default_Installation_Delivery_Date_Time__c!= $Label.GC_Label_TFM_Hide)}"/>
+        </apex:pageBlockSectionItem>
+
+            
+        <apex:inputField value="{!got.Delivery_Date_Time__c}" showDatePicker="true" rendered="{!(taskFieldManager.Installation_Delivery_Date_Time__c!= $Label.GC_Label_TFM_Hide)}"/>
+        <apex:outputText rendered="{!(taskFieldManager.Installation_Delivery_Date_Time__c== $Label.GC_Label_TFM_Hide)}"></apex:outputText>
+        
+        <apex:pageBlockSectionItem helpText="Default Order's Completion Date/Time">
+          <apex:outputLabel value="Default Completion Date/Time" rendered="{!(taskFieldManager.Default_Completion_Date_Time__c!= $Label.GC_Label_TFM_Hide)}"/>        
+            <apex:outputText value="{!strCompletionDateTime}" rendered="{!(taskFieldManager.Default_Completion_Date_Time__c!= $Label.GC_Label_TFM_Hide)}"/>
+        </apex:pageBlockSectionItem>
+
+            
+        <apex:inputField value="{!got.Completion_Date_Time__c}" showDatePicker="true" rendered="{!(taskFieldManager.Completion_Date_Time__c!= $Label.GC_Label_TFM_Hide)}" />
+        <apex:outputText rendered="{!(taskFieldManager.Completion_Date_Time__c== $Label.GC_Label_TFM_Hide)}"></apex:outputText>
+            
+        <apex:pageBlockSectionItem helpText="Default Order's Removal Date/Time">
+            <apex:outputLabel value="Default Removal Date/Time" rendered="{!(taskFieldManager.Default_Removal_Date_Time__c!= $Label.GC_Label_TFM_Hide)}"/>
+                <apex:outputText value="{!strRemovalDateTime}" rendered="{!(taskFieldManager.Default_Removal_Date_Time__c!= $Label.GC_Label_TFM_Hide)}"/>
+        </apex:pageBlockSectionItem>
+            
+        <apex:inputField value="{!got.Removal_Date_Time__c}" showDatePicker="true" 
+        rendered="{!(taskFieldManager.Removal_Date_Time__c!= $Label.GC_Label_TFM_Hide)}"/>
+        <apex:outputText rendered="{!(taskFieldManager.Removal_Date_Time__c== $Label.GC_Label_TFM_Hide)}"></apex:outputText>
+        
+    </apex:pageBlockSection>
+    <script>
+        var $j = jQuery.noConflict();
+          /*setTimeout(function(){
+             $j('.dateTimePicker').datetimepicker({
+              format: 'm/d/Y h:i A',
+              formatTime: 'h:i A',
+              formatDate: 'm/d/Y',
+              closeOnDateSelect: true
+            });
+          },200);*/
+        console.log('datetime');
+        setTimeout(function(){
+             $j('.dateTimePicker').datetimepicker({
+              format: 'm/d/Y h:i',
+              formatTime: 'h:i',
+              formatDate: 'm/d/Y'
+            });
+        },200);
+    </script>
+</apex:component>

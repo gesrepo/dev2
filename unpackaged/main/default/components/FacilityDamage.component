@@ -1,0 +1,149 @@
+<apex:component allowDML="true">
+   <apex:attribute name="IncidentReport" description="incident report record." type="Claims__Incident_Report__c" required="true"/>
+   <apex:attribute name="Controller" description="Controller for component" type="IncidentReportPortalController" required="true"/>
+   <apex:attribute name="Route" description="Route into component, Incident Portal or New Incident Report in backend" type="String" default="new"/>
+   <apex:attribute name="ButtonLabel" description="button label." type="string" />
+   <apex:componentBody >
+      <apex:pageBlock >
+         <apex:actionStatus startText="applying value..." id="status"/>
+         <!-- Incident Details -->
+         <apex:pageBlockSection title="{!$Label.Initial_Information}" columns="2">
+            <apex:inputField value="{!IncidentReport.Incident_Discovered__c}" />
+            <apex:inputField value="{!IncidentReport.Job_Number__c}" />
+            <apex:inputField value="{!IncidentReport.Location_Code__c}" />
+            <apex:inputField value="{!IncidentReport.Facility__c}" />
+            <apex:inputField value="{!IncidentReport.Claims__IncidentLocation__c}" />
+            <apex:inputField value="{!IncidentReport.Show_Name_or_ID__c}" />
+            <apex:inputField value="{!IncidentReport.State_of_Loss__c}" />
+            <apex:inputField value="{!IncidentReport.Claims__First_Name__c}" />
+            <apex:inputField value="{!IncidentReport.Claims__Last_Name__c}" />
+            <apex:inputField value="{!IncidentReport.Claims__Email__c}" />
+            <apex:inputField value="{!IncidentReport.Preparer_Phone__c}" required="true" />
+            <apex:inputField value="{!IncidentReport.Receiver__c}" />
+            <apex:inputField value="{!IncidentReport.Todays_Date__c}" />
+            <apex:inputField value="{!IncidentReport.Claims__IncidentDate__c}"/>
+         </apex:pageBlockSection>
+         <apex:pageBlockSection title="{!$Label.Manager_Section}" columns="2">
+            <!-- <apex:inputField value="{!IncidentReport.Manager_Full_Name__c}" />-->
+             <apex:inputField value="{!IncidentReport.Manager_First_Name__c}" />
+             <apex:inputField value="{!IncidentReport.Manager_Last_Name__c}" />
+             <apex:inputField value="{!IncidentReport.Manager_Email__c}" />
+             <apex:inputField value="{!IncidentReport.Manager_Cell_Phone__c}" />
+             <apex:inputField value="{!IncidentReport.Manager_City__c}" />
+          </apex:pageBlockSection>
+         <!-- Incident Information -->
+         <apex:pageBlockSection title="{!$Label.Incident_Information}" columns="2">
+            <apex:inputField value="{!IncidentReport.Booth__c}" />
+            <apex:inputField value="{!IncidentReport.Claims__Date_Reported__c}" />
+            <apex:inputField value="{!IncidentReport.LOB__c}" />
+            <apex:inputField value="{!IncidentReport.EAC_Rep_Name__c}" />
+            <apex:inputField value="{!IncidentReport.EAC_Company_Name__c}" />
+            <apex:inputField value="{!IncidentReport.Customer__c}" />
+            <apex:inputField value="{!IncidentReport.Customer_Company_Name__c}" />
+            <apex:inputField value="{!IncidentReport.Contact_Name__c}" />
+            <apex:inputField value="{!IncidentReport.Customer_Email__c}" />
+            <apex:inputField value="{!IncidentReport.Dept__c}" />
+            <apex:inputField value="{!IncidentReport.Daytime_Number__c}" />
+            <apex:inputField value="{!IncidentReport.Address__c}" />
+            <apex:inputField value="{!IncidentReport.City__c}" />
+            <apex:inputField value="{!IncidentReport.State__c}" />
+            <apex:inputField value="{!IncidentReport.Zip_Code__c}" />
+         </apex:pageBlockSection>
+         <!-- Incident Details -->
+         <apex:pageBlockSection title="{!$Label.Incident_Details}" columns="1" showHeader="false">
+            <apex:inputField styleClass="textAreaBox" value="{!IncidentReport.Claims__Description_of_Incident__c}" />
+            <apex:inputField styleClass="textAreaBox" value="{!IncidentReport.Description_of_Location__c}" />
+         </apex:pageBlockSection>
+         <!-- List any Witnesses to the Incident -->
+         <apex:outputPanel id="WitnessSection" >
+            <apex:PageBlockSection title="{!$Label.List_witnesses}" columns="2">
+               <apex:pageBlockSectionItem >
+                  <apex:outputLabel value="{!$Label.Witness_to_incident}" />
+                  <apex:actionRegion >
+                     <apex:inputField value="{!IncidentReport.Are_there_any_witnesses_to_the_incident__c}" >
+                        <apex:actionSupport event="onchange" rerender="WitnessSection,witenessTwoSection,witnessThreeSection" status="status" />
+                     </apex:inputField>
+                  </apex:actionRegion>
+               </apex:pageBlockSectionItem>
+            </apex:PageBlockSection>
+            <apex:PageBlockSection rendered="{!IncidentReport.Are_there_any_witnesses_to_the_incident__c == 'Yes'}">
+               <apex:inputField value="{!IncidentReport.Witness_1_Name__c}" />
+               <apex:inputField value="{!IncidentReport.LastName_Witness_1__c}" />
+               <apex:inputField value="{!IncidentReport.Home_Phone_wit_1__c}" />
+               <apex:inputField value="{!IncidentReport.Work_Phone_wit_1__c}" />
+               <apex:inputField value="{!IncidentReport.Address_wit_1__c}" />
+               <apex:inputField value="{!IncidentReport.City_wit_1__c}" />
+               <apex:inputField value="{!IncidentReport.State_Witness_1__c}" />
+               <apex:inputField value="{!IncidentReport.Zip_Code_witness_1__c}" />
+               <apex:inputField value="{!IncidentReport.Witness_1_Company_Name__c}" />
+               <apex:inputField value="{!IncidentReport.Witness_Email_Address__c}"/> 
+               <apex:pageBlockSectionItem />
+               <apex:pageBlockSectionItem />
+               <apex:pageBlockSectionItem />
+               <apex:pageBlockSectionItem >
+                  <apex:outputLabel value="{!$ObjectType.Claims__Incident_Report__c.fields.Enter_Witness_2_Details__c.Label}" />
+                  <apex:actionRegion >
+                     <apex:inputField value="{!IncidentReport.Enter_Witness_2_Details__c}" >
+                        <apex:actionSupport event="onchange" rerender="witenessTwoSection" status="status" />
+                     </apex:inputField>
+                  </apex:actionRegion>
+               </apex:pageBlockSectionItem>
+               <apex:pageBlockSectionItem />
+            </apex:PageBlockSection>
+         </apex:outputPanel>
+         <apex:outputPanel id="witenessTwoSection" >
+            <apex:PageBlockSection rendered="{!IncidentReport.Are_there_any_witnesses_to_the_incident__c == 'Yes' 
+            && IncidentReport.Enter_Witness_2_Details__c}" >
+               <apex:inputField value="{!IncidentReport.Witness_2_Name__c}"  />
+               <apex:inputField value="{!IncidentReport.LastName_Witness_2__c}" />
+               <apex:inputField value="{!IncidentReport.Home_Phone_witness_2__c}" />
+               <apex:inputField value="{!IncidentReport.Work_Phone_witness_2__c}"  />
+               <apex:inputField value="{!IncidentReport.Address_wit_2__c}" />
+               <apex:inputField value="{!IncidentReport.City_wit_2__c}" />
+               <apex:inputField value="{!IncidentReport.State_witness_2__c}"  />
+               <apex:inputField value="{!IncidentReport.Zip_Code_witness_2__c}"  />
+               <apex:inputField value="{!IncidentReport.Witness_2_Company_Name__c}" />
+               <apex:inputField value="{!IncidentReport.Witness_2_Email_Address__c}"/> 
+            </apex:PageBlockSection>
+            <apex:PageBlockSection >
+               <apex:pageBlockSectionItem />
+               <apex:pageBlockSectionItem />
+               <apex:pageBlockSectionItem />
+               <apex:pageBlockSectionItem rendered="{!IncidentReport.Enter_Witness_2_Details__c}" >
+                  <apex:outputLabel value="{!$ObjectType.Claims__Incident_Report__c.fields.Enter_Witness_3_Details__c.Label}" />
+                  <apex:actionRegion >
+                     <apex:inputField value="{!IncidentReport.Enter_Witness_3_Details__c}" >
+                        <apex:actionSupport event="onchange" rerender="witnessThreeSection" status="status" />
+                     </apex:inputField>
+                  </apex:actionRegion>
+               </apex:pageBlockSectionItem>
+               <apex:pageBlockSectionItem />
+            </apex:PageBlockSection>
+         </apex:outputPanel>
+         <apex:outputPanel id="witnessThreeSection" >
+            <apex:PageBlockSection rendered="{!IncidentReport.Are_there_any_witnesses_to_the_incident__c == 'Yes' 
+            &&  IncidentReport.Enter_Witness_2_Details__c && IncidentReport.Enter_Witness_3_Details__c}" >
+               <apex:inputField value="{!IncidentReport.Witness_3_Name__c}"  />
+               <apex:inputField value="{!IncidentReport.LastName_Witness_3__c}" />
+               <apex:inputField value="{!IncidentReport.Home_Phone_Witness_3__c}" />
+               <apex:inputField value="{!IncidentReport.Work_Phone_Witness_3__c}"  />
+               <apex:inputField value="{!IncidentReport.Address_Witness_3__c}" />
+               <apex:inputField value="{!IncidentReport.City_wit_3__c}" />
+               <apex:inputField value="{!IncidentReport.State_Witness_3__c}"  />
+               <apex:inputField value="{!IncidentReport.Zip_Code_Witness_3__c}"  />
+               <apex:inputField value="{!IncidentReport.Witness_3_Company_Name__c}" />
+               <apex:inputField value="{!IncidentReport.Witness_3_Email__c}"/> 
+            </apex:PageBlockSection>
+         </apex:outputPanel>
+         <!-- Additional Comments -->
+         <apex:PageBlockSection title="{!$Label.Additional_Comments_BI}" columns="1">
+            <apex:inputField styleClass="textAreaBox" value="{!IncidentReport.Additional_Comments__c}" />
+         </apex:PageBlockSection>
+         <!-- Save Button -->
+         <apex:pageBlockButtons location="bottom">
+            <apex:commandButton action="{!Controller.Save}" value="{!ButtonLabel}" />
+            <apex:commandButton action="{!Controller.SaveWithoutSubmission}" value="{!$Label.SaveWithoutSubmit}" />
+         </apex:pageBlockButtons>
+      </apex:pageBlock>
+   </apex:componentBody>
+</apex:component>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Default_Electrics_Assignee__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>Default Electrics Assignee</description>
+    <inlineHelpText>Please select the Default Electrics Assignee from the list</inlineHelpText>
+    <label>Default Electrics Assignee</label>
+    <lookupFilter>
+        <active>true</active>
+        <errorMessage>You must select an active Salesforce account for the default Electrics assignee</errorMessage>
+        <filterItems>
+            <field>User.IsActive</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </filterItems>
+        <infoMessage>Please select the default Electrics  assignee from the list. They must have an active Salesforce Account.</infoMessage>
+        <isOptional>false</isOptional>
+    </lookupFilter>
+    <referenceTo>User</referenceTo>
+    <relationshipName>UsertoOpportunitiesElectricsAssignee</relationshipName>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Lookup</type>
+</CustomField>

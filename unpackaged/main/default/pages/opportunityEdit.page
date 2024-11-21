@@ -1,0 +1,67 @@
+<apex:page standardController="Opportunity" sidebar="true">
+    <apex:sectionHeader title="Edit Opportunity Lost Codes" subtitle="{!opportunity.name}"/>
+    
+    <apex:form >
+        <apex:pageBlock title="Edit Opportunity" id="thePageBlock" mode="edit">
+        
+            <apex:pageMessages />
+            
+            <apex:pageBlockButtons >
+                <apex:commandButton value="Save" action="{!save}"/>
+            </apex:pageBlockButtons>
+            
+            <apex:actionRegion >
+                <apex:pageBlockSection id="pbs0" title="Show Opportunity Information" columns="1">
+                    <apex:inputField value="{!opportunity.name}"/>
+                    <apex:inputField value="{!opportunity.GBMS_Project_ID__c}"/>
+                    <apex:inputField id="ifStageName" value="{!opportunity.StageName}"/>
+                </apex:pageBlockSection>
+            </apex:actionRegion>
+            
+            <apex:actionRegion >
+                <apex:pageBlockSection id="pbs1" title="Closed Lost Information" columns="1" > <!--  rendered="{!opportunity.stageName == 'Closed Lost'}" -->  
+                    <apex:inputField id="ifLostCode" value="{!opportunity.Lost_Code__c}" required="true">
+                        <apex:actionSupport event="onchange" rerender="pbs1,pbs2" />
+                    </apex:inputField>         
+                </apex:pageBlockSection>
+            </apex:actionRegion>
+            
+            <apex:pageBlockSection id="pbs2" title="Additional Closed Lost Information" columns="1" >
+                <apex:inputField id="ifLostReason" value="{!opportunity.Reason_Lost__c}" required="true" rendered="{!(opportunity.Lost_Code__c == 'Lost - Capabilities' || opportunity.Lost_Code__c == 'Lost - Stayed w/ Incumbent' || opportunity.Lost_Code__c == 'Lost - Design' || opportunity.Lost_Code__c == 'Lost - Price' || opportunity.Lost_Code__c == 'Lost - Relationship' || opportunity.Lost_Code__c == 'Lost - Returned to Lead Gen' || opportunity.Lost_Code__c == 'Lost - Other' || opportunity.Lost_Code__c == 'Canceled - Duplicate Project' || opportunity.Lost_Code__c == 'Canceled - Client Canceled')}"/>                  
+                <apex:inputField id="ifDisqualifiedReason" value="{!opportunity.Reason_Disqualified__c}" required="true" rendered="{!(opportunity.Lost_Code__c == 'Disqualified - GES declined to bid' || opportunity.Lost_Code__c == 'Disqualified - Client' || opportunity.Lost_Code__c == 'Disqualified - Other')}" />
+                <apex:inputField id="ifLostToFirmReq" value="{!opportunity.Lost_to_Firm__c}" required="true" rendered="{!(opportunity.Lost_Code__c == 'Lost - Capabilities' || opportunity.Lost_Code__c == 'Lost - Stayed w/ Incumbent' || opportunity.Lost_Code__c == 'Lost - Design' || opportunity.Lost_Code__c == 'Lost - Price' || opportunity.Lost_Code__c == 'Lost - Relationship' || opportunity.Lost_Code__c == 'Lost - Other')}"/>
+                <apex:inputField id="ifLostToFirm" value="{!opportunity.Lost_to_Firm__c}" rendered="{!(opportunity.Lost_Code__c != 'Lost - Capabilities' && opportunity.Lost_Code__c != 'Lost - Stayed w/ Incumbent' && opportunity.Lost_Code__c != 'Lost - Design' && opportunity.Lost_Code__c != 'Lost - Price' && opportunity.Lost_Code__c != 'Lost - Relationship' && opportunity.Lost_Code__c != 'Lost - Other')}"/>
+                <apex:inputField id="ifLostToSalesRep" value="{!opportunity.Lost_to_Sales_Rep__c}" />
+                <apex:inputField id="ifGESDesigner1Req" value="{!opportunity.GES_Designer_1__c}" required="true" rendered="{!(opportunity.Lost_Code__c == 'Lost - Design')}"/>
+                <apex:inputField id="ifGESDesigner1" value="{!opportunity.GES_Designer_1__c}" rendered="{!(opportunity.Lost_Code__c != 'Lost - Design')}"/>
+                <apex:inputField id="ifGESDesigner2" value="{!opportunity.GES_Designer_2__c}" />    
+                <apex:inputField id="ifGESDesigner3" value="{!opportunity.GES_Designer_3__c}" />                    
+            </apex:pageBlockSection>            
+            
+            <apex:pageBlockSection id="pbs3">
+                <apex:inputHidden id="hifGBMSWorkflowStatus" value="{!opportunity.GBMS_Workflow_Status__c}"></apex:inputHidden>
+                <apex:inputHidden id="hifGBMSProjectStatus" value="{!opportunity.GBMSProjectStatus__c}"></apex:inputHidden>
+                <!--  <apex:inputHidden id="hififStageName" value="{!opportunity.StageName}"></apex:inputHidden> -->
+            </apex:pageBlockSection>
+        </apex:pageBlock>
+    </apex:form>
+    
+    <script>
+        function updateHiddenFields() {
+            
+            var GBMSWorkflowStatus = document.getElementById('j_id0:j_id2:thePageBlock:pbs3:hifGBMSWorkflowStatus');
+            var GBMSProjectStatus = document.getElementById('j_id0:j_id2:thePageBlock:pbs3:hifGBMSProjectStatus');
+            var StageName = document.getElementById('j_id0:j_id2:thePageBlock:pbs0:ifStageName');
+            
+            GBMSWorkflowStatus.value = 'Lost';
+            GBMSProjectStatus.value = 'Lost';
+            StageName.value = 'Closed Lost';
+            
+            /* alert("GBMS Workflow Status: " + GBMSWorkflowStatus.value + " GBMS Project Status: " + GBMSProjectStatus.value + " Stage Name: " + StageName.value); */
+        }
+        
+        updateHiddenFields();
+        
+    </script>
+    
+</apex:page>

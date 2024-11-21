@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Remote_Drafter_Shows</fullName>
+    <booleanFilter>1 AND 2 AND 3 AND 4 AND 5 AND 6 AND 7</booleanFilter>
+    <columns>NAME</columns>
+    <columns>Job_Number__c</columns>
+    <columns>Production_Location__c</columns>
+    <columns>Opportunity_Name__c</columns>
+    <columns>Show_Start_Date__c</columns>
+    <columns>Fire_Marshal_Status__c</columns>
+    <columns>Zone_Status__c</columns>
+    <columns>Zone_Uploaded_By__c</columns>
+    <columns>AssignedRemote_Drafter__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Job_Number__c</field>
+        <operation>notEqual</operation>
+    </filters>
+    <filters>
+        <field>StageName__c</field>
+        <operation>equals</operation>
+        <value>CV,CR</value>
+    </filters>
+    <filters>
+        <field>Production_Location__c</field>
+        <operation>notContain</operation>
+        <value>,Coventry,UAE,EXCEL,London,Glasgow,Holland,Calgary,Sheffield,Foreign,Canada,Intl</value>
+    </filters>
+    <filters>
+        <field>Show_Start_Date__c</field>
+        <operation>greaterThan</operation>
+        <value>6/1/2020</value>
+    </filters>
+    <filters>
+        <field>Production_Location__c</field>
+        <operation>contains</operation>
+        <value>110,140,150,160,170,220,240,250,420,510,520,530,610,710,790,810,830</value>
+    </filters>
+    <filters>
+        <field>AssignedRemote_Drafter__c</field>
+        <operation>equals</operation>
+        <value>,Troy Berube,Jean Beck,Jason Lucina,Irene Almanza,Lisanne Pizzato,Genessis Ocana,Jim Anderberg,George Berry,Cary Hatcher,Benika Stancil,Sergio Jorge,Joseph Lawson,David McDermid,Jeffrey Haas</value>
+    </filters>
+    <filters>
+        <field>AssignedRemote_Drafter__c</field>
+        <operation>notEqual</operation>
+    </filters>
+    <label>Assigned/Remote Drafter Shows</label>
+</ListView>

@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>EE_GES_Event__c</fullName>
+    <description>Allows Exhibits &amp; Events group to opt-in their contacts for a specific marketing campaign</description>
+    <label>Corp Acct GES Event</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>2020 Alice Campaign</fullName>
+                <default>false</default>
+                <label>2020 Alice Campaign</label>
+            </value>
+            <value>
+                <fullName>EX18_VIP</fullName>
+                <default>false</default>
+                <label>EX18_VIP</label>
+            </value>
+            <value>
+                <fullName>Coffee Mailer</fullName>
+                <default>false</default>
+                <label>Coffee Mailer</label>
+            </value>
+            <value>
+                <fullName>Exhibitor Live 2018</fullName>
+                <default>false</default>
+                <label>Exhibitor Live 2018</label>
+            </value>
+            <value>
+                <fullName>EX15_VIP</fullName>
+                <default>false</default>
+                <label>EX15_VIP</label>
+            </value>
+            <value>
+                <fullName>2014 Springtime Reception</fullName>
+                <default>false</default>
+                <label>2014 Springtime Reception</label>
+            </value>
+            <value>
+                <fullName>Activ8 NY</fullName>
+                <default>false</default>
+                <label>Activ8 NY</label>
+            </value>
+            <value>
+                <fullName>A - Trend Tracker</fullName>
+                <default>false</default>
+                <label>A - Trend Tracker</label>
+            </value>
+            <value>
+                <fullName>B - Trend Tracker</fullName>
+                <default>false</default>
+                <label>B - Trend Tracker</label>
+            </value>
+            <value>
+                <fullName>IAEE</fullName>
+                <default>false</default>
+                <label>IAEE</label>
+            </value>
+            <value>
+                <fullName>EXSW</fullName>
+                <default>false</default>
+                <label>EXSW</label>
+            </value>
+            <value>
+                <fullName>Blog</fullName>
+                <default>false</default>
+                <label>Blog</label>
+            </value>
+            <value>
+                <fullName>EX13_VIP</fullName>
+                <default>false</default>
+                <label>EX13_VIP</label>
+            </value>
+            <value>
+                <fullName>EX14_VIP</fullName>
+                <default>false</default>
+                <label>EX14_VIP</label>
+            </value>
+            <value>
+                <fullName>EX19_VIP</fullName>
+                <default>false</default>
+                <label>EX19_VIP</label>
+            </value>
+            <value>
+                <fullName>EX19_BoothTeaser</fullName>
+                <default>false</default>
+                <label>EX19_BoothTeaser</label>
+            </value>
+            <value>
+                <fullName>EXLIVE20_VIP_PARTY_INVITE</fullName>
+                <default>false</default>
+                <label>EXLIVE20_VIP_PARTY_INVITE</label>
+            </value>
+            <value>
+                <fullName>EXLIVE20_BOOTH_INVITE</fullName>
+                <default>false</default>
+                <label>EXLIVE20_BOOTH_INVITE</label>
+            </value>
+            <value>
+                <fullName>EXLIVE20_BOOTH_INVITE_HOTLIST</fullName>
+                <default>false</default>
+                <label>EXLIVE20_BOOTH_INVITE_HOTLIST</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>3</visibleLines>
+</CustomField>

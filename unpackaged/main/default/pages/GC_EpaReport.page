@@ -1,0 +1,247 @@
+<apex:page standardStylesheets="true" showHeader="false" sidebar="false" applyHtmlTag="false" applyBodyTag="false" docType="html-5.0" controller="Epa3ReportController" readOnly="true">
+    <!-- put action current users profile name if acconomus redirect them to login page or URL rewritter -->
+    <html xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        
+        <head>
+            <apex:includeScript value="{!$Resource.jQuery}" />
+            <apex:stylesheet value="{!URLFOR($Resource.Lightning_Design_System, 'assets/styles/salesforce-lightning-design-system.min.css')}" />
+            <apex:stylesheet value="{!URLFOR($Resource.GC_Assets, 'GC_Assets/css/GC_Styles.css')}" />
+            <apex:includeScript value="{!URLFOR($Resource.GC_Assets, 'GC_Assets/js/GC_init.js')}" />
+            <apex:includeScript value="{!$Resource.Alasql}"/>
+            
+            
+        </head>
+        
+        <body>
+            <div class="slds">
+                <c:GC_Community_Header />  
+                
+                <apex:pageMessages id="messages" />
+                <apex:actionStatus id="serachStatusSpinner">
+                    <apex:facet name="start">
+                        <c:GC_Community_StatusSpinner statusMessage="Searching." /> 
+                    </apex:facet>
+                </apex:actionStatus>        
+                
+                <div class="slds-grid slds-wrap gc-main-body">
+                    <section class="slds-col--padded slds-size--1-of-1 slds-medium-size--1-of-1 slds-large-size--2-of-3">
+                        <div class="slds-card gc-grey-background">
+                            <!-- CARD HEADER -->
+                            <div class="slds-card__header slds-grid">
+                                <div class="slds-media slds-media--center slds-has-flexi-truncate">
+                                    <div class="slds-media__body">
+                                        <h2 class="slds-text-heading--small slds-truncate">Filters</h2>
+                                        <!-- Need to add some help text -->
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="slds-card__body">
+                                <apex:outputPanel id="filterControls">
+                                    <apex:form >
+                                        
+                                       
+                                           
+                                            CONGRESS START DATE:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<apex:input type="date" label="Exhibit Open Date" styleClass="slds-input" style="width: 20%; left:20px;" value="{!congressDate}" id="startDateId"/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                          	CONGRESS END DATE:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<apex:input type="date" label="Exhibit Close Date" styleClass="slds-input" style="width: 20%; left:20px;" value="{!congressToDate}" id="endDateId"/>         
+                                            
+                                       
+                                        
+                                        <br />
+                                         <br />
+                                        <div class="slds-grid slds-grid--align-center">
+                                            <div>
+                                                <apex:commandButton action="{!beginning}" value="Search" styleClass="slds-button slds-button--small slds-button--brand gc-teal-button" reRender="outputQueries, outputButtons" style="right:15px;position:relative;" status="serachStatusSpinner"/>
+                                            </div>
+                                            <div>
+                                                <apex:commandButton action="{!resetSearch}" value="Reset" styleClass="slds-button slds-button--small slds-button--brand gc-teal-button" reRender="filterControls, outputQueries, outputButtons" status="serachStatusSpinner" />
+                                            </div>
+                                        </div>
+                                    </apex:form>
+                                </apex:outputPanel>
+                            </div>
+                            <br />
+                        </div>
+                        <br />
+                        <div>
+                            <apex:outputPanel id="outputButtons">
+                                <apex:form styleClass="tableScrollBox">
+                                    
+                                    <div class="slds-grid">
+                                        <div>
+                                            <apex:outputText >
+                                                
+                                            </apex:outputText>
+                                        </div>
+                                        <div>
+                                            <apex:outputPanel >
+                                                <apex:actionStatus startText="Loading Data..." id="pagStatus">
+                                                    <apex:facet name="start">
+                                                        <apex:outputPanel >
+                                                            <img src="/img/loading32.gif" width="16" height="16" style="margin:-3px 8px;" />
+                                                            <apex:outputText value="Loading Data..." />
+                                                        </apex:outputPanel>
+                                                    </apex:facet>
+                                                </apex:actionStatus>
+                                            </apex:outputPanel>
+                                        </div>
+                                    </div>
+                                </apex:form>
+                            </apex:outputPanel>
+                        </div>
+                        
+                        <br />
+                        
+                        <div class="slds-card gc-grey-background">
+                            <div class="slds-card__header slds-grid">
+                                <div class="slds-media slds-media--center slds-has-flexi-truncate">
+                                    <div class="slds-media__body">
+                                        <h2 class="slds-text-heading--small slds-truncate">Congress</h2>
+                                    </div>
+                                </div>
+                                
+                                
+                                <apex:form >
+                                    <div class="slds-no-flex">
+                                        <div align="right" draggable="false" class="slds-no-flex"> 
+                                            <apex:commandButton value="Export Report"  style="margin-right:10px;" styleClass="slds-button slds-button--brand gc-teal-button" action="{!excelReport}" />  
+                                            <apex:commandButton value="Back" action="{!back}" style="right:10px;position:relative;" styleClass="slds-button slds-button--brand gc-teal-button"/>
+                                            <!-- <apex:commandButton value="New Congress" action="{!Congressedit}" style="right:10px;position:relative;" styleClass="slds-button slds-button--brand gc-teal-button"/>-->
+                                        </div>
+                                    </div>
+                                </apex:form>
+                            </div>  
+                            <div class="slds-card__body">
+                                <apex:outputPanel id="outputQueries" styleClass="tableScrollBox">
+                                    <apex:form >
+                                        <!-- TASK LIST -->
+                                        <apex:outputPanel id="pbst">
+                                            <table class="slds-table slds-table--bordered slds-max-medium-table--stacked-horizontal">
+                                                <thead>
+                                                    <tr class="slds-text-heading--label">
+                                                        <th scope="col">
+                                                            <span class="slds-truncate">
+                                                                <div style="color:black">
+                                                                    Congress Name  
+                                                                </div>
+                                                            </span>
+                                                        </th>
+                                                        <th scope="col">
+                                                            <span class="slds-truncate">
+                                                                <div style="color:black">
+                                                                    Congress Acronym    
+                                                                </div>
+                                                            </span>
+                                                        </th>
+                                                        <th scope="col">
+                                                            <div style="color:black">
+                                                                Congress Start Date    
+                                                            </div>
+                                                        </th>
+                                                        
+                                                        <th scope="col">
+                                                            <span class="slds-truncate">
+                                                                <div style="color:black">
+                                                                    Congress End Date    
+                                                                </div>
+                                                            </span>
+                                                        </th>
+                                                        
+                                                        <th scope="col">
+                                                            <span class="slds-truncate">
+                                                                <div style="color:black">
+                                                                    Congress Level    
+                                                                </div>
+                                                            </span>
+                                                        </th>
+                                                        
+                                                        
+                                                        <th scope="col">
+                                                            <span class="slds-truncate">
+                                                                <div style="color:black">
+                                                                    Congress Manager     
+                                                                </div>
+                                                            </span>
+                                                        </th>
+                                                        
+                                                        
+                                                        <th scope="col">
+                                                            <span class="slds-truncate">
+                                                                <div style="color:black">
+                                                                    Account Executive     
+                                                                </div>
+                                                            </span>
+                                                        </th>
+                                                        
+                                                        <th scope="col">
+                                                            <span class="slds-truncate">
+                                                                <div style="color:black">
+                                                                    Account Manager    
+                                                                </div>
+                                                            </span>
+                                                        </th>
+                                                        <th scope="col">
+                                                            <span class="slds-truncate">
+                                                                <div style="color:black">
+                                                                    Epa3 closed date     
+                                                                </div>
+                                                            </span>
+                                                        </th>
+                                                        
+                                                        
+                                                        
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <apex:repeat value="{!dispWrapper}" var="congress">
+                                                        <tr class="slds-hint-parent">
+                                                            <td data-label="showName">            
+                                                                <apex:outputText value="{!congress.nameOfCongress}" />
+                                                            </td>
+                                                            <td data-label="showName">
+                                                                <apex:outputText value="{!congress.acronym}" />
+                                                            </td>
+                                                            <td data-label="showName">
+                                                                <apex:outputText value=" {!congress.exhiBitOpenDate}" />
+                                                            </td>                          
+                                                            <td data-label="facility">
+                                                                <apex:outputText value=" {!congress.exhiBitCloseDate}" />
+                                                            </td>
+                                                            <td data-label="facility">
+                                                                <apex:outputText value=" {!congress.level}" />
+                                                            </td>
+                                                            
+                                                            <td data-label="facility">
+                                                                <apex:outputText value=" {!congress.GesCongressMgr}" />
+                                                            </td>
+                                                            <td data-label="facility">
+                                                                <apex:outputText value=" {!congress.GESAccountExe}" />
+                                                            </td>
+                                                            <td data-label="facility">
+                                                                <apex:outputText value=" {!congress.GESAccountMgr}" />
+                                                            </td>
+                                                            <td data-label="facility">
+                                                                <apex:outputText value=" {!congress.epCloseDate}" />
+                                                            </td>
+                                                        </tr>
+                                                    </apex:repeat>
+                                                </tbody>
+                                            </table>
+                                            <div style="text-align: center">
+                                                <apex:outputPanel >
+                                                    <apex:commandButton action="{!beginning}" value="<<" disabled="{!DisablePrevious}" styleClass="slds-button slds-button--small slds-button--brand gc-teal-button" reRender="pbst" style="right:15px;position:relative;" status="serachStatusSpinner"/>
+                                                    <apex:commandButton action="{!previous}" value="<" disabled="{!DisablePrevious}" styleClass="slds-button slds-button--small slds-button--brand gc-teal-button" reRender="pbst" style="right:15px;position:relative;" status="serachStatusSpinner" />
+                                                    <apex:commandButton action="{!next}" value=">" disabled="{!DisableNext}" styleClass="slds-button slds-button--small slds-button--brand gc-teal-button" reRender="pbst" style="right:15px;position:relative;"  status="serachStatusSpinner" />
+                                                    <apex:commandButton action="{!last}" value=">>" disabled="{!DisableNext}" styleClass="slds-button slds-button--small slds-button--brand gc-teal-button" reRender="pbst" style="right:15px;position:relative;"  status="serachStatusSpinner"/>
+                                                </apex:outputPanel>
+                                            </div>
+                                        </apex:outputPanel>
+                                    </apex:form>
+                                </apex:outputPanel>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </body>
+    </html>
+</apex:page>

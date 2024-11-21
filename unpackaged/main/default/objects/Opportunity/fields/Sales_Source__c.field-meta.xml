@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Sales_Source__c</fullName>
+    <label>Sales Source</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Organiser__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>true</sorted>
+            <value>
+                <fullName>Customer Service Team</fullName>
+                <default>false</default>
+                <label>Customer Service Team</label>
+            </value>
+            <value>
+                <fullName>MSD-SR Team</fullName>
+                <default>false</default>
+                <label>MSD-SR Team</label>
+            </value>
+            <value>
+                <fullName>Operations Team</fullName>
+                <default>false</default>
+                <label>Operations Team</label>
+            </value>
+            <value>
+                <fullName>Sales Team</fullName>
+                <default>false</default>
+                <label>Sales Team</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>UBM</controllingFieldValue>
+            <valueName>Customer Service Team</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>UBM</controllingFieldValue>
+            <valueName>MSD-SR Team</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>UBM</controllingFieldValue>
+            <valueName>Operations Team</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>UBM</controllingFieldValue>
+            <valueName>Sales Team</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

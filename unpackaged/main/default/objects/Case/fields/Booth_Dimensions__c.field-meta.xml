@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Booth_Dimensions__c</fullName>
+    <externalId>false</externalId>
+    <formula>TEXT(Booth__r.BOOTH_LENGTH__c)&amp; &quot;x&quot; &amp; TEXT(Booth__r.BOOTH_WIDTH__c)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Booth Dimensions</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

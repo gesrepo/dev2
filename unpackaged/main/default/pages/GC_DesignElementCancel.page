@@ -1,0 +1,4 @@
+<apex:page standardController="GC_Design_Element__c" extensions="GC_DesignElementUploadController" action="{!cancel}">
+    <apex:pageMessages />
+    <apex:outputLink value="/{!de.Id}">&lt; Return to Design Element Task</apex:outputLink>
+</apex:page>

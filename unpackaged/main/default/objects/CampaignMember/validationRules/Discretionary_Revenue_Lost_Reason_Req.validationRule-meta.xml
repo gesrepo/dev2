@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Discretionary_Revenue_Lost_Reason_Req</fullName>
+    <active>true</active>
+    <description>If Discretionary Revenue Status = contacted-no sale, require a lost reason</description>
+    <errorConditionFormula>AND(ISPickval(Discretionary_Revenue_Status__c  ,&#39;Contacted - No sale&#39;),
+Ispickval(Discretionary_Revenue_Lost_Reason__c,&#39;&#39;))</errorConditionFormula>
+    <errorDisplayField>Discretionary_Revenue_Lost_Reason__c</errorDisplayField>
+    <errorMessage>If Discretionary Revenue Status = contacted-no sale, please indicate a lost revenue reason.</errorMessage>
+</ValidationRule>

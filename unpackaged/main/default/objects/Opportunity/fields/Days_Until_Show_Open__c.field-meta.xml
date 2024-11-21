@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Days_Until_Show_Open__c</fullName>
+    <description>This formula shows the number of days until show open (exhibition open date) if the show open date is less than 140 days (20 weeks) away.</description>
+    <externalId>false</externalId>
+    <formula>IF( Show_Open_Date__c &lt; TODAY() + 140,
+Show_Open_Date__c - TODAY(),
+0)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>This formula shows the number of days until show open (exhibition open date) if the show open date is less than 140 days (20 weeks) away.</inlineHelpText>
+    <label>Days Until Show Open</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackHistory>false</trackHistory>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

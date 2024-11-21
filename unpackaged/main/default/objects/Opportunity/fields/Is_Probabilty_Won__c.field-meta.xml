@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Is_Probabilty_Won__c</fullName>
+    <description>100% Probability</description>
+    <formula>Probability = 1</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Is Probabilty Won</label>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

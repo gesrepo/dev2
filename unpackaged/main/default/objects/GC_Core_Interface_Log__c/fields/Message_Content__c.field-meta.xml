@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Message_Content__c</fullName>
+    <description>The content of the call that is made into the COREInterface class (JSON Serialized)</description>
+    <label>Message Content</label>
+    <length>32768</length>
+    <trackTrending>false</trackTrending>
+    <type>LongTextArea</type>
+    <visibleLines>30</visibleLines>
+</CustomField>

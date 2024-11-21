@@ -1,0 +1,514 @@
+<apex:page standardController="Sales_Information_Tool__c">
+<style>
+   .col40px { width: 40px; }
+   .col50px { width: 50px; }
+   .col60px { width: 60px; }
+   .col70px { width: 70px; }
+   .col80px { width: 80px; }
+   .col90px { width: 90px; }
+   .col100px { width: 100px; }
+   .col110px { width: 110px; }
+   .col120px { width: 120px; }
+   .col130px { width: 130px; }
+   .col140px { width: 140px; }
+   .col150px { width: 150px; }
+   .col160px { width: 160px; }
+   .showMetricsLeft { border-right: 1px solid #B6B6B6; }
+   .showMetricsRight { }
+   .leftSide { width: 550px; }
+</style>
+
+    <apex:sectionHeader title="{!$ObjectType.Sales_Information_Tool__c.label}" subtitle="{!Sales_Information_Tool__c.name}"/>
+    <apex:pageBlock title="{!$ObjectType.Sales_Information_Tool__c.label} Detail">
+        <apex:pageBlockButtons >
+        <apex:form >
+            <apex:commandButton action="{!edit}" value="Edit"/>
+            <apex:commandButton action="{!URLFOR($Action.Sales_Information_Tool__c.Share,Sales_Information_Tool__c.Id)}" value="Share"/>
+        </apex:form>
+        </apex:pageBlockButtons>
+                <apex:pageBlockSection showHeader="false" columns="1" >
+                    <apex:panelGrid columns="6" id="SIT" columnClasses="col160px" >
+                            <apex:outputLabel value="Show Name:" style="font-weight: bold" />
+                            <apex:outputField value="{!Sales_Information_Tool__c.Show__c}"/>
+                            <apex:outputLabel value="Show Opportunity Referenced" style="font-weight: bold" />
+                            <apex:outputField value="{!Sales_Information_Tool__c.Show_Opportunity_Public_Ref__c}"/>
+                            <apex:outputLabel value="SIT Status" style="font-weight: bold" />
+                            <apex:outputField value="{!Sales_Information_Tool__c.Status__c}"/>
+                    </apex:panelGrid>
+                </apex:pageBlockSection>
+        </apex:pageBlock>
+
+ <!--  Show Occurrence Information -->
+    <!--  Two Column Block 1 -->
+        <apex:pageBlock >
+                <apex:pageBlockSection columns="1" showHeader="false" title="Select your Show to Plan and Show to Reference">
+                    <apex:panelGrid columns="10" id="SITPlan1" width="100%" 
+                        frame="none" rules="none"
+                        cellpadding="5" cellspacing="5" columnClasses="col130px">
+                            <apex:outputLabel value="" />
+                            <apex:outputLabel value="Show Name:" style="font-weight: bold" />
+                            <apex:outputLabel value="Show ID:" style="font-weight: bold" />
+                            <apex:outputLabel value="YRMO:" style="font-weight: bold" />
+                            <apex:outputLabel value="Facility ID:" style="font-weight: bold" />
+                            <apex:outputLabel value="City:" style="font-weight: bold" />
+                            <apex:outputLabel value="Job Number:" style="font-weight: bold" />
+                            <apex:outputLabel value="Salesperson:" style="font-weight: bold" />
+                            <apex:outputLabel value="AM / NAM:" style="font-weight: bold" />
+                            <apex:outputLabel value="OM / SOM:" style="font-weight: bold" />
+                            <apex:outputLabel value="Show Occurrence Being Planned:" />
+                            <apex:outputField value="{!Sales_Information_Tool__c.Show_Name__c}" />
+                            <apex:outputField value="{!Sales_Information_Tool__c.Show_ID__c}"/>
+                            <apex:outputField value="{!Sales_Information_Tool__c.YRMO_PY__c}"/>
+                            <apex:outputField value="{!Sales_Information_Tool__c.Facility_PY__c}"/>
+                            <apex:outputField value="{!Sales_Information_Tool__c.City_PY__c}"/>
+                            <apex:outputField value="{!Sales_Information_Tool__c.Project_PY__c}"/>
+                            <apex:outputField value="{!Sales_Information_Tool__c.Salesperson_PY__c}"/>
+                            <apex:outputText value="{!Sales_Information_Tool__c.AM_NAM__c}"/>
+                            <apex:outputText value="{!Sales_Information_Tool__c.OM_SOM__c}"/>
+                            <apex:outputLabel value="Show Occurrence Being Referenced:" />
+                            <apex:outputField value="{!Sales_Information_Tool__c.Show_Name__c}" />
+                            <apex:outputField value="{!Sales_Information_Tool__c.Show_ID__c}"/>
+                            <apex:outputField value="{!Sales_Information_Tool__c.YRMO_RY__c}"/>
+                            <apex:outputField value="{!Sales_Information_Tool__c.Facility_RY__c}"/>
+                            <apex:outputField value="{!Sales_Information_Tool__c.City_RY__c}"/>
+                            <apex:outputField value="{!Sales_Information_Tool__c.Job_Number_RY__c}"/>
+                            <apex:outputField value="{!Sales_Information_Tool__c.Salesperson_RY__c}"/>
+                            <apex:pageBlockSectionItem />
+                            <apex:pageBlockSectionItem />
+                    </apex:panelGrid>
+                </apex:pageBlockSection>
+        </apex:pageBlock>
+
+<!--  Show Occurrence Information -->
+<!--  Two Column Block 1 -->
+
+        <apex:pageBlock title="Show Occurrence Information">
+
+    <!--  Column 1: Show Metrics -->
+                <apex:pageBlockSection title="Show Metrics">
+                    <apex:outputPanel layout="block" styleClass="showMetricsLeft" >
+                        <apex:panelGrid columns="4" id="ShowMetrics" columnClasses="col110px">
+                                <apex:pageBlockSectionItem />
+                                <apex:outputText value="Referenced Year" style="font-weight: bold"/>
+                                <apex:outputText value="Planned Year Estimate" style="font-weight: bold"/>
+                                <apex:outputText value="Variance" style="font-weight: bold" />
+                                <apex:outputLabel value="Exhibitor Count:" />
+                                <apex:outputField value="{!Sales_Information_Tool__c.Exhibitor_Count_RY__c}"/>
+                                <apex:outputField value="{!Sales_Information_Tool__c.Exhibitor_Count_PY__c}"/>
+                                <apex:outputField value="{!Sales_Information_Tool__c.Exhibitor_Count_Var_to_BSY__c}"/>
+                                <apex:outputLabel value="Exhibitor NSF:" />
+                                <apex:outputField value="{!Sales_Information_Tool__c.Exhibitor_NSF_RY__c}"/>
+                                <apex:outputField value="{!Sales_Information_Tool__c.Exhibitor_NSF_PY__c}"/>
+                                <apex:outputField value="{!Sales_Information_Tool__c.Exhibitor_NSF_Var_to_BSY__c}"/>
+                                <apex:outputLabel value="Exhibitor Billable CWT:" />
+                                <apex:outputField value="{!Sales_Information_Tool__c.Exh_Billable_CWT_RY__c}"/>
+                                <apex:outputField value="{!Sales_Information_Tool__c.Exh_Billable_CWT_PY__c}"/>
+                                <apex:outputField value="{!Sales_Information_Tool__c.Exh_Billable_CWT_Var_to_BSY__c}"/>
+                                <apex:outputLabel value="Graphics Depot NSF:" />
+                                <apex:outputField value="{!Sales_Information_Tool__c.Graphics_Depot_NSF_RY__c}"/>
+                                <apex:outputField value="{!Sales_Information_Tool__c.Graphics_Depot_NSF_PY__c}"/>
+                                <apex:outputField value="{!Sales_Information_Tool__c.Graphics_Depot_NSF_Var_to_BSY__c}"/>
+                                <apex:outputLabel value="Carpet Depot SQYD:" />
+                                <apex:outputField value="{!Sales_Information_Tool__c.Carpet_Depot_Sq_Yd_RY__c}"/>
+                                <apex:outputField value="{!Sales_Information_Tool__c.Carpet_Depot_Sq_Yd_PY__c}"/>
+                                <apex:outputField value="{!Sales_Information_Tool__c.Carpet_Depot_Sq_Yd_Var_to_BSY__c}"/>
+                                <apex:outputLabel value="New Show Look?" />
+                                <apex:pageBlockSectionItem />
+                                <apex:outputField value="{!Sales_Information_Tool__c.New_Show_Look__c}"/>
+                                <apex:pageBlockSectionItem />
+                                <apex:outputLabel value="Venue Change?" />
+                                <apex:pageBlockSectionItem />
+                                <apex:outputField value="{!Sales_Information_Tool__c.Venue_Change__c}"/>
+                                <apex:pageBlockSectionItem />
+                                <apex:outputLabel value="Floor Plans in City?" />
+                                <apex:pageBlockSectionItem />
+                                <apex:outputField value="{!Sales_Information_Tool__c.Floorplans_placed_in_city_folder__c}"/>
+                                <apex:pageBlockSectionItem />
+                                <apex:outputLabel value="Notes on Depot/Metrics" />
+                                <apex:outputField value="{!Sales_Information_Tool__c.Other_Depot_Metrics_Notes__c}"/>
+                                <apex:pageBlockSectionItem />
+                                <apex:pageBlockSectionItem />
+                        </apex:panelGrid>
+                    </apex:outputPanel>
+                    <apex:outputPanel layout="block" styleClass="showMetricsRight">
+                        <apex:panelGrid columns="4" id="ShowMetrics2" columnClasses="col110px">
+                                <apex:pageBlockSectionItem />
+                                <apex:outputLabel value="Referenced Year" style="font-weight: bold" />
+                                <apex:outputLabel value="Planned Year" style="font-weight: bold" />
+                                <apex:outputLabel value="If Different, Enter Here:" style="font-weight: bold" />
+                                <apex:outputLabel value="Move-In:" />
+                                <apex:outputField value="{!Sales_Information_Tool__c.GES_Move_In_RY__c}"/>
+                                <apex:outputField value="{!Sales_Information_Tool__c.GES_Move_In_PY__c}"/>
+                                <apex:outputField value="{!Sales_Information_Tool__c.If_Different_enter_date_Move_In__c}"/>
+                                <apex:outputLabel value="Show Open:" />
+                                <apex:outputField value="{!Sales_Information_Tool__c.Show_Open_RY__c}"/>
+                                <apex:outputField value="{!Sales_Information_Tool__c.Show_Open_PY__c}"/>
+                                <apex:outputField value="{!Sales_Information_Tool__c.If_Different_enter_date_Show_Open__c}"/>
+                                <apex:outputLabel value="Show Close:" />
+                                <apex:outputField value="{!Sales_Information_Tool__c.Show_Close_RY__c}"/>
+                                <apex:outputField value="{!Sales_Information_Tool__c.Show_Close_PY__c}"/>
+                                <apex:outputField value="{!Sales_Information_Tool__c.If_Different_enter_date_Show_Close__c}"/>
+                                <apex:outputLabel value="Move-Out:" />
+                                <apex:outputField value="{!Sales_Information_Tool__c.Move_Out_RY__c}"/>
+                                <apex:outputField value="{!Sales_Information_Tool__c.Move_Out_PY__c}"/>
+                                <apex:outputField value="{!Sales_Information_Tool__c.If_Different_enter_date_Move_Out__c}"/>
+                                <apex:outputLabel value="More OT/DT?:" />
+                                <apex:pageBlockSectionItem />
+                                <apex:outputField value="{!Sales_Information_Tool__c.More_OT_DT__c}"/>
+                                <apex:pageBlockSectionItem />
+                                <apex:outputLabel value="Holidays?" />
+                                <apex:pageBlockSectionItem />
+                                <apex:outputField value="{!Sales_Information_Tool__c.Holidays__c}"/>
+                                <apex:pageBlockSectionItem />
+                                <apex:outputLabel value="Notes on Schedule" />
+                                <apex:outputText value="{!Sales_Information_Tool__c.Notes_On_Schedule__c}" />
+                        </apex:panelGrid>
+                    </apex:outputPanel>
+                </apex:pageBlockSection>
+                
+    <!--/ Column 1: Show Metrics -->
+        </apex:pageBlock>
+    
+    <!--/ Show Occurrence Information -->
+
+    <!--  Show Organizer Information -->
+        <apex:pageBlock title="Show Organizer Information">
+                <apex:pageBlockSection showHeader="true" title="Show Organizer Information" columns="2">
+                    <apex:outputField value="{!Sales_Information_Tool__c.Price_increase_for_Show_Org__c}"/>
+                    <apex:outputField value="{!Sales_Information_Tool__c.Multi_Year_Step__c}"/>
+                    <apex:outputField value="{!Sales_Information_Tool__c.Concessions__c}"/>
+                    <apex:outputField value="{!Sales_Information_Tool__c.Signing_Bonuses__c}"/>
+                    <apex:outputField value="{!Sales_Information_Tool__c.Spending_Allowances__c}"/>
+                    <apex:outputField value="{!Sales_Information_Tool__c.Commissions__c}"/>
+                    <apex:outputField value="{!Sales_Information_Tool__c.If_Yes_Please_Explain_x__c}"/>
+                    <apex:outputField value="{!Sales_Information_Tool__c.Changes_for_SO_Req_vs_Base_Contracts__c}"/>
+                    <apex:outputField value="{!Sales_Information_Tool__c.Other_SO_Notes_e_g_no_charge_items__c}"/>
+                </apex:pageBlockSection>
+        </apex:pageBlock>
+    
+    <!--/ Show Organizer Information -->
+    
+    <!--  Two Column Block 1 -->
+    <apex:pageBlock >
+        <apex:pageBlockSection columns="2">
+    
+    <!--  Column 1: Exhibitor Pricing -->
+    
+            <apex:pageBlockSection showHeader="true" title="Show Org Billing" columns="1">
+                <apex:outputPanel layout="block" >
+                <apex:panelGrid columns="4" id="ShowOrgBilling" columnClasses="col160px">
+                    <apex:pageBlockSectionItem />
+                    <apex:outputText value="Referenced Year" style="font-weight: bold"/>
+                    <apex:outputText value="Planned Year Estimate" style="font-weight: bold"/>
+                    <apex:outputText value="Variance YOY" style="font-weight: bold" />
+                    <apex:outputLabel value="Freight:" />
+                    <apex:outputField value="{!Sales_Information_Tool__c.Freight_RY__c}"/>
+                    <apex:outputField value="{!Sales_Information_Tool__c.Freight_PY__c}"/>
+                    <apex:outputField value="{!Sales_Information_Tool__c.Freight_Var_YOY__c}"/>
+                    <apex:outputLabel value="Logistics:" />
+                    <apex:outputField value="{!Sales_Information_Tool__c.Logistics_RY__c}"/>
+                    <apex:outputField value="{!Sales_Information_Tool__c.Logistics_PY__c}"/>
+                    <apex:outputField value="{!Sales_Information_Tool__c.Logistics_Var_YOY__c}"/>
+                    <apex:outputLabel value="Packages:" />
+                    <apex:outputField value="{!Sales_Information_Tool__c.Packages_RY__c}"/>
+                    <apex:outputField value="{!Sales_Information_Tool__c.Packages_PY__c}"/>
+                    <apex:outputField value="{!Sales_Information_Tool__c.Packages_Var_YOY__c}"/>
+                    <apex:outputLabel value="Std Furniture:" />
+                    <apex:outputField value="{!Sales_Information_Tool__c.Std_Furniture_RY__c}"/>
+                    <apex:outputField value="{!Sales_Information_Tool__c.Std_Furniture_PY__c}"/>
+                    <apex:outputField value="{!Sales_Information_Tool__c.Std_Furniture_Var_YOY__c}"/>
+                    <apex:outputLabel value="Special Furniture:" />
+                    <apex:outputField value="{!Sales_Information_Tool__c.Special_Furniture_RY__c}"/>
+                    <apex:outputField value="{!Sales_Information_Tool__c.Special_Furniture_PY__c}"/>
+                    <apex:outputField value="{!Sales_Information_Tool__c.Special_Furniture_Var_YOY__c}"/>
+                    <apex:outputLabel value="Carpet:" />
+                    <apex:outputField value="{!Sales_Information_Tool__c.Carpet_RY__c}"/>
+                    <apex:outputField value="{!Sales_Information_Tool__c.Carpet_PY__c}"/>
+                    <apex:outputField value="{!Sales_Information_Tool__c.Carpet_Var_YOY__c}"/>
+                    <apex:outputLabel value="Rigging:" />
+                    <apex:outputField value="{!Sales_Information_Tool__c.Rigging_RY__c}"/>
+                    <apex:outputField value="{!Sales_Information_Tool__c.Rigging_PY__c}"/>
+                    <apex:outputField value="{!Sales_Information_Tool__c.Rigging_Var_YOY__c}"/>
+                    <apex:outputLabel value="Graphics:" />
+                    <apex:outputField value="{!Sales_Information_Tool__c.Graphics_RY__c}"/>
+                    <apex:outputField value="{!Sales_Information_Tool__c.Graphics_PY__c}"/>
+                    <apex:outputField value="{!Sales_Information_Tool__c.Graphics_Var_YOY__c}"/>
+                    <apex:outputLabel value="Cleaning:" />
+                    <apex:outputField value="{!Sales_Information_Tool__c.Cleaning_RY__c}"/>
+                    <apex:outputField value="{!Sales_Information_Tool__c.Cleaning_PY__c}"/>
+                    <apex:outputField value="{!Sales_Information_Tool__c.Cleaning_Var_YOY__c}"/>
+                    <apex:outputLabel value="Other Subs:" />
+                    <apex:outputField value="{!Sales_Information_Tool__c.Other_Subs_RY__c}"/>
+                    <apex:outputField value="{!Sales_Information_Tool__c.Other_Subs_PY__c}"/>
+                    <apex:outputField value="{!Sales_Information_Tool__c.Other_Subs_Var_YOY__c}"/>
+                    <apex:outputLabel value="Electrical:" />
+                    <apex:outputField value="{!Sales_Information_Tool__c.Electrical_RY__c}"/>
+                    <apex:outputField value="{!Sales_Information_Tool__c.Electrical_PY__c}"/>
+                    <apex:outputField value="{!Sales_Information_Tool__c.Electrical_Var_YOY__c}"/>
+                    <apex:outputLabel value="GEM:" />
+                    <apex:outputField value="{!Sales_Information_Tool__c.GEM_RY__c}"/>
+                    <apex:outputField value="{!Sales_Information_Tool__c.GEM_PY__c}"/>
+                    <apex:outputField value="{!Sales_Information_Tool__c.GEM_Var_YOY__c}"/>
+                    <apex:outputLabel value="I&D:" />
+                    <apex:outputField value="{!Sales_Information_Tool__c.I_D_RY__c}"/>
+                    <apex:outputField value="{!Sales_Information_Tool__c.I_D_PY__c}"/>
+                    <apex:outputField value="{!Sales_Information_Tool__c.I_D_Var_YOY__c}"/>
+                    <apex:outputLabel value="General Showsite:" />
+                    <apex:outputField value="{!Sales_Information_Tool__c.General_Showsite_RY__c}"/>
+                    <apex:outputField value="{!Sales_Information_Tool__c.General_Showsite_PY__c}"/>
+                    <apex:outputField value="{!Sales_Information_Tool__c.General_Showsite_Var_YOY__c}"/>
+                    <apex:outputLabel value="Contract Adjust:" />
+                    <apex:outputField value="{!Sales_Information_Tool__c.Contract_Adjust_RY__c}"/>
+                    <apex:outputField value="{!Sales_Information_Tool__c.Contract_Adjust_PY__c}"/>
+                    <apex:outputField value="{!Sales_Information_Tool__c.Contract_Adjust_Var_YOY__c}"/>
+                    <apex:outputLabel value="Show Org Total:" style="border-top: 1px solid #b6b6b6;"/>
+                    <apex:outputField value="{!Sales_Information_Tool__c.Total_Show_Rev_RY__c}" style="border-top: 1px solid #b6b6b6;"/>
+                    <apex:outputField value="{!Sales_Information_Tool__c.Total_Show_Rev_PY__c}" style="border-top: 1px solid #b6b6b6;"/>
+                    <apex:outputField value="{!Sales_Information_Tool__c.Total_Show_Rev_Var_YOY__c}" style="border-top: 1px solid #b6b6b6;"/>
+                </apex:panelGrid>
+                </apex:outputPanel>
+            </apex:pageblocksection>
+            <apex:pageBlockSection showHeader="true" title="Exhibitor Pricing" columns="1">
+                <apex:outputPanel layout="block" >
+                    <apex:panelGrid columns="4" id="PricingLevelOverride" columnClasses="col130px">
+                        <apex:outputLabel value="Select Pricing Level for Referenced Show:" style="font-weight: bold" />
+                        <apex:outputField value="{!Sales_Information_Tool__c.If_Same_City_Pricing_Level_PY__c}"/>
+                        <apex:outputLabel value="Select Pricing Level for Planned Show:" style="font-weight: bold" />
+                        <apex:outputField value="{!Sales_Information_Tool__c.If_Same_City_Pricing_Level_RY__c}"/>
+                    </apex:panelGrid>
+                </apex:outputpanel>
+                <apex:pageBlockSectionItem />
+                <apex:pageBlockSectionItem />
+                <apex:outputPanel layout="block" >
+                    <apex:panelGrid columns="5" id="ExhibitorPricing" columnClasses="col110px">
+                        <apex:outputText value="LOB" style="font-weight: bold"/>
+                        <apex:outputText value="Contracted Rates?" style="font-weight: bold;" />
+                        <apex:outputText value="3-Tier Pricing Applicable?" style="font-weight: bold;"/ >
+                        <apex:outputText value="Price Increase (%)" style="font-weight: bold;" />
+                        <apex:outputText value="GES Service?" style="font-weight: bold;" />
+                        <apex:outputLabel value="Material Handling:" style="text-align:left;" />
+                        <apex:outputField value="{!Sales_Information_Tool__c.Contracted_Rates_Material_Handling__c}" />
+                        <apex:outputField value="{!Sales_Information_Tool__c.X3_Tier_Pricing_App_Material_Handling__c}" />
+                        <apex:outputField value="{!Sales_Information_Tool__c.Price_Increase_to_PY_Mat_Handling__c}" />
+                        <apex:pageBlockSectionItem />
+                        <apex:outputLabel value="Furniture:" style="text-align:left;" />
+                        <apex:outputField value="{!Sales_Information_Tool__c.Contracted_Rates_Furniture__c}"  />
+                        <apex:outputField value="{!Sales_Information_Tool__c.X3_Tier_Pricing_App_Furniture__c}"  />
+                        <apex:outputField value="{!Sales_Information_Tool__c.Price_Increase_to_PY_Furniture__c}"  />
+                        <apex:pageBlockSectionItem />
+                        <apex:outputLabel value="Carpet:" style="text-align:left;" />
+                        <apex:outputField value="{!Sales_Information_Tool__c.Contracted_Rates_Carpet__c}" />
+                        <apex:outputField value="{!Sales_Information_Tool__c.X3_Tier_Pricing_App_Carpet__c}" />
+                        <apex:outputField value="{!Sales_Information_Tool__c.Price_Increase_to_PY_Carpet__c}" />
+                        <apex:pageBlockSectionItem />
+                        <apex:outputLabel value="Labor/I&D:" style="text-align:left;" />
+                        <apex:outputField value="{!Sales_Information_Tool__c.Contracted_Rates_Labor_I_D__c}" />
+                        <apex:outputField value="{!Sales_Information_Tool__c.X3_Tier_Pricing_App_Labor_I_D__c}" />
+                        <apex:outputField value="{!Sales_Information_Tool__c.Price_Increase_to_PY_Labor_I_D__c}" />
+                        <apex:pageBlockSectionItem />
+                        <apex:outputLabel value="Rigging:" style="text-align:left;"/>
+                        <apex:outputField value="{!Sales_Information_Tool__c.Contracted_Rates_Rigging__c}" />
+                        <apex:outputField value="{!Sales_Information_Tool__c.X3_Tier_Pricing_App_Rigging__c}" />
+                        <apex:outputField value="{!Sales_Information_Tool__c.Price_Increase_to_PY_Rigging__c}" />
+                        <apex:outputField value="{!Sales_Information_Tool__c.GES_Service_Rigging__c}" />
+                        <apex:outputLabel value="Electrical:" style="text-align:left;"/>
+                        <apex:outputField value="{!Sales_Information_Tool__c.Contracted_Rates_Electrical__c}" />
+                        <apex:outputField value="{!Sales_Information_Tool__c.X3_Tier_Pricing_App_Electrical__c}" />
+                        <apex:outputField value="{!Sales_Information_Tool__c.Price_Increase_to_PY_Electrical__c}" />
+                        <apex:outputField value="{!Sales_Information_Tool__c.GES_Service_Electrical__c}" />
+                        <apex:outputLabel value="Cleaning:" style="text-align:left;"/>
+                        <apex:outputField value="{!Sales_Information_Tool__c.Contracted_Rates_Cleaning__c}" />
+                        <apex:outputField value="{!Sales_Information_Tool__c.X3_Tier_Pricing_App_Cleaning__c}" />
+                        <apex:outputField value="{!Sales_Information_Tool__c.Price_Increase_to_PY_Cleaning__c}" />
+                        <apex:outputField value="{!Sales_Information_Tool__c.GES_Service_Cleaning__c}" />
+                    </apex:panelGrid>
+                </apex:outputPanel>
+            </apex:pageBlockSection>
+            <!--/ Column 1: Exhibitor Pricing -->
+    
+            <!--  Column 2: Material Handling -->
+
+            <!--/ Column 2: Material Handling -->
+            
+        </apex:pageBlockSection>
+    </apex:pageBlock>
+    <!--/ Two Column Block 1 -->
+    
+    <!--  Two Column Block 2 -->
+    <apex:pageBlock title="Cost Information for Planned Show">
+        <apex:pageBlockSection columns="2">
+        
+            <!--  Column 1: Cost Information for Planned Show -->
+            
+            <apex:pageBlockSection columns="1">
+                <apex:outputPanel layout="block" >
+                    <apex:panelGrid columns="4" id="CostInfo" columnClasses="col110px">
+                        <apex:outputLabel value="Accoustic Sound Wall?" style="font-weight: bold" />
+                        <apex:outputField value="{!Sales_Information_Tool__c.Acoustic_Sound_Wall__c}" />
+                        <apex:outputLabel value="Transfers?" style="font-weight: bold"/>
+                        <apex:outputField value="{!Sales_Information_Tool__c.Transfers__c}"/>
+                        <apex:outputLabel value="Show Org Rentals?" style="font-weight: bold" />
+                        <apex:outputField value="{!Sales_Information_Tool__c.Show_Org_Rentals__c}"/>
+                        <apex:outputLabel value="Specific Purchases?" style="font-weight: bold" />
+                        <apex:outputField value="{!Sales_Information_Tool__c.Any_Specific_Purchases__c}" />
+                        <apex:outputLabel value="If Yes, Please Explain:" style="font-weight: bold" />
+                        <apex:outputText value="{!Sales_Information_Tool__c.If_Yes_Please_Explain_xxx__c}"/>
+                        <apex:outputLabel value="Other Cost Comments:" style="font-weight: bold" />
+                        <apex:outputText value="{!Sales_Information_Tool__c.Other_Cost_Comments__c}" />
+                    </apex:panelGrid>
+                </apex:outputPanel>
+            </apex:pageBlockSection>
+            <apex:pageBlockSection showHeader="false" title="T&E Budgets" columns="1">
+                <apex:outputPanel layout="block" >
+                    <apex:panelGrid columns="5" id="T_EBudgets" columnClasses="col160px,col110px,col110px,col110px,col110px">
+                        <apex:outputText value="T&E Budgets" style="font-weight: bold"/>
+                        <apex:outputText value="Sales/Designers" style="font-weight: bold"/>
+                        <apex:outputText value="ES/OM/AM" style="font-weight: bold" />
+                        <apex:outputText value="Union" style="font-weight: bold" />
+                        <apex:outputText value="Total" style="font-weight: bold" />
+                        <apex:outputLabel value="Number of Travelers:" />
+                        <apex:outputField value="{!Sales_Information_Tool__c.Travelers_Sales_Design__c}" />
+                        <apex:outputField value="{!Sales_Information_Tool__c.Travelers_ES_OM_AM__c}" />
+                        <apex:outputField value="{!Sales_Information_Tool__c.Travelers_Union__c}" />
+                        <apex:outputField value="{!Sales_Information_Tool__c.Travelers_Total__c}" />
+                        <apex:outputLabel value="Show Travel Days:" />
+                        <apex:outputField value="{!Sales_Information_Tool__c.Show_Travel_Days_Sales_Design__c}" />
+                        <apex:outputField value="{!Sales_Information_Tool__c.Show_Travel_Days_ES_OM_AM__c}" />
+                        <apex:outputField value="{!Sales_Information_Tool__c.Show_Travel_Days_Union__c}" />
+                        <apex:outputField value="{!Sales_Information_Tool__c.Show_Travel_Days_Union__c}" />
+                        <apex:outputLabel value="Average Daily Cost:" />
+                        <apex:outputField value="{!Sales_Information_Tool__c.Avg_Daily_Cost_Sales_Design__c}" />
+                        <apex:outputField value="{!Sales_Information_Tool__c.Avg_Daily_Cost_ES_OM_AM__c}" />
+                        <apex:outputField value="{!Sales_Information_Tool__c.Avg_Daily_Cost_Union__c}" />
+                        <apex:pageBlockSectionItem />
+                        <apex:outputLabel value="Showsite Travel Estimate:" />
+                        <apex:outputField value="{!Sales_Information_Tool__c.Showsite_Travel_Estimates_Sales_Design__c}" />
+                        <apex:outputField value="{!Sales_Information_Tool__c.Showsite_Travel_Estimates_ES_OM_AM__c}" />
+                        <apex:outputField value="{!Sales_Information_Tool__c.Showsite_Travel_Estimates_Union__c}"/>
+                        <apex:outputField value="{!Sales_Information_Tool__c.Showsite_Travel_Estimates_Total__c}"/>
+                        <apex:outputLabel value="Add'l T&E Costs (i.e. site visits, client meals, etc.):" />
+                        <apex:outputField value="{!Sales_Information_Tool__c.Add_l_T_E_Costs_Sales_Design__c}" />
+                        <apex:outputField value="{!Sales_Information_Tool__c.Add_l_T_E_Costs_ES_OM_AM__c}" />
+                        <apex:outputField value="{!Sales_Information_Tool__c.Add_l_T_E_Costs_Union__c}"/>
+                        <apex:outputField value="{!Sales_Information_Tool__c.Add_l_T_E_Costs_Total__c}"/>
+                        <apex:outputLabel value="Total T&E ($$$s):" style="font-weight: bold" />
+                        <apex:outputField value="{!Sales_Information_Tool__c.Total_T_E_Sales_Design__c}" style="font-weight: bold" />
+                        <apex:outputField value="{!Sales_Information_Tool__c.Total_T_E_ES_OM_AM__c}" style="font-weight: bold" />
+                        <apex:outputField value="{!Sales_Information_Tool__c.Total_T_E_Union__c}" style="font-weight: bold" />
+                        <apex:outputField value="{!Sales_Information_Tool__c.Total_T_E_Total__c}" style="font-weight: bold" />
+                        <apex:pageBlockSectionItem />
+                        <apex:pageBlockSectionItem />
+                        <apex:pageBlockSectionItem />
+                        <apex:pageBlockSectionItem />
+                        <apex:pageBlockSectionItem />
+                        <apex:outputLabel value="Rooms Comped?" style="font-weight: bold" />
+                        <apex:outputField value="{!Sales_Information_Tool__c.Rooms_Comped__c}" />
+                        <apex:pageBlockSectionItem />
+                        <apex:outputLabel value="Sponsorships?" style="font-weight: bold"/>
+                        <apex:outputField value="{!Sales_Information_Tool__c.Sponsorships__c}"/>
+                        <apex:outputLabel value="Site Visits/Notes:" style="font-weight: bold" />
+                        <apex:outputText value="{!Sales_Information_Tool__c.Site_Visits_Notes__c}"/>
+                        <apex:pageBlockSectionItem />
+                        <apex:outputLabel value="Site Visits/Notes:" style="font-weight: bold" />
+                        <apex:outputText value="{!Sales_Information_Tool__c.Other_T_E_Notes__c}" />
+                    </apex:panelGrid>
+                </apex:outputPanel>
+            </apex:pageBlockSection>
+       
+            <!--/ Column 1: Cost Information for Planned Show -->
+            <apex:pageBlockSection showHeader="true" title="Material Handling" columns="2">
+                    <apex:outputLabel value="Referenced Year" style="font-weight: bold" />
+                    <apex:outputLabel value="Planned Year" style="font-weight: bold" />
+                        <apex:outputField value="{!Sales_Information_Tool__c.Material_Handling_Rates_RY__c}"/>
+                        <apex:outputField value="{!Sales_Information_Tool__c.Material_Handling_Rates_PY__c}"/>
+                        <apex:outputField value="{!Sales_Information_Tool__c.Package_Rates__c}"/>
+                        <apex:outputField value="{!Sales_Information_Tool__c.Machinery_Special_Rates__c}"/>
+                        <apex:outputText value="{!Sales_Information_Tool__c.If_Yes_Please_Explain_xx__c}"/>
+                        <apex:pageBlockSectionItem />
+            </apex:pageBlockSection>
+            <apex:pageBlockSection showHeader="true" title="Material Handling Rates" columns="1">
+                <apex:panelGrid columns="4">
+                    <apex:pageBlockSectionItem />
+                    <apex:outputLabel value="Referenced Year" style="font-weight: bold" />
+                    <apex:outputLabel value="Planned Year" style="font-weight: bold" />
+                    <apex:outputLabel value="Var YoY:" style="font-weight: bold" />
+                    <apex:outputLabel value="Warehouse Crated ST/ST:" style="font-weight: bold" />
+                    <apex:outputField value="{!Sales_Information_Tool__c.Warehouse_Crated_ST_ST_RY__c}"/>
+                    <apex:outputField value="{!Sales_Information_Tool__c.Warehouse_Crated_ST_ST_PY__c}"/>
+                    <apex:outputField value="{!Sales_Information_Tool__c.Warehouse_Crated_ST_ST_Var_YOY__c}"/>
+                    <apex:outputLabel value="Warehouse Crated ST/OT:" style="font-weight: bold" />
+                    <apex:outputField value="{!Sales_Information_Tool__c.Warehouse_Crated_ST_OT_RY__c}"/>
+                    <apex:outputField value="{!Sales_Information_Tool__c.Warehouse_Crated_ST_OT_PY__c}"/>
+                    <apex:outputField value="{!Sales_Information_Tool__c.Warehouse_Crated_ST_OT_Var_YOY__c}"/>
+                    <apex:outputLabel value="Warehouse Crated OT/OT:" style="font-weight: bold" />
+                    <apex:outputField value="{!Sales_Information_Tool__c.Warehouse_Crated_OT_OT_RY__c}"/>
+                    <apex:outputField value="{!Sales_Information_Tool__c.Warehouse_Crated_OT_OT_PY__c}"/>
+                    <apex:outputField value="{!Sales_Information_Tool__c.Warehouse_Crated_OT_OT_Var_YOY__c}"/>
+                    <apex:outputLabel value="Warehouse Special Handling ST/ST:" style="font-weight: bold" />
+                    <apex:outputField value="{!Sales_Information_Tool__c.Warehouse_Special_Handling_ST_ST_RY__c}"/>
+                    <apex:outputField value="{!Sales_Information_Tool__c.Warehouse_Special_Handling_ST_ST_PY__c}"/>
+                    <apex:outputField value="{!Sales_Information_Tool__c.Warehouse_Spec_H_ling_ST_Var_YOY__c}"/>
+                    <apex:outputLabel value="Warehouse Special Handling ST/OT:" style="font-weight: bold" />
+                    <apex:outputField value="{!Sales_Information_Tool__c.Warehouse_Special_Handling_ST_OT_RY__c}"/>
+                    <apex:outputField value="{!Sales_Information_Tool__c.Warehouse_Special_Handling_ST_OT_PY__c}"/>
+                    <apex:outputField value="{!Sales_Information_Tool__c.Warehouse_Spec_H_ling_ST_OT_Var_YOY__c}"/>
+                    <apex:outputLabel value="Warehouse Special Handling OT/OT:" style="font-weight: bold" />
+                    <apex:outputField value="{!Sales_Information_Tool__c.Warehouse_Special_Handling_OT_OT_RY__c}"/>
+                    <apex:outputField value="{!Sales_Information_Tool__c.Warehouse_Special_Handling_OT_OT_PY__c}"/>
+                    <apex:outputField value="{!Sales_Information_Tool__c.Warehouse_Spec_H_ling_OT_OT_Var_YOY__c}"/>
+                    <apex:outputLabel value="Showsite Crated ST/ST:" style="font-weight: bold" />
+                    <apex:outputField value="{!Sales_Information_Tool__c.Showsite_Crated_ST_ST_RY__c}"/>
+                    <apex:outputField value="{!Sales_Information_Tool__c.Showsite_Crated_ST_ST_PY__c}"/>
+                    <apex:outputField value="{!Sales_Information_Tool__c.Showsite_Crated_ST_ST_Var_YOY__c}"/>
+                    <apex:outputLabel value="Showsite Crated ST/OT:" style="font-weight: bold" />
+                    <apex:outputField value="{!Sales_Information_Tool__c.Showsite_Crated_ST_OT_RY__c}"/>
+                    <apex:outputField value="{!Sales_Information_Tool__c.Showsite_Crated_ST_OT_PY__c}"/>
+                    <apex:outputField value="{!Sales_Information_Tool__c.Showsite_Crated_ST_OT_Var_YOY__c}"/>
+                    <apex:outputLabel value="Showsite Crated OT/OT:" style="font-weight: bold" />
+                    <apex:outputField value="{!Sales_Information_Tool__c.Showsite_Crated_OT_OT_RY__c}"/>
+                    <apex:outputField value="{!Sales_Information_Tool__c.Showsite_Crated_OT_OT_PY__c}"/>
+                    <apex:outputField value="{!Sales_Information_Tool__c.Showsite_Crated_OT_OT_Var_YOY__c}"/>
+                    <apex:outputLabel value="Showsite Special Handling ST/ST:" style="font-weight: bold" />
+                    <apex:outputField value="{!Sales_Information_Tool__c.Showsite_Special_Handling_ST_ST_RY__c}"/>
+                    <apex:outputField value="{!Sales_Information_Tool__c.Showsite_Special_Handling_ST_ST_PY__c}"/>
+                    <apex:outputField value="{!Sales_Information_Tool__c.Showsite_Spec_H_ling_ST_ST_Var_YOY__c}"/>
+                    <apex:outputLabel value="Showsite Special Handling ST/OT:" style="font-weight: bold" />
+                    <apex:outputField value="{!Sales_Information_Tool__c.Showsite_Special_Handling_ST_OT_RY__c}"/>
+                    <apex:outputField value="{!Sales_Information_Tool__c.Showsite_Special_Handling_ST_OT_PY__c}"/>
+                    <apex:outputField value="{!Sales_Information_Tool__c.Showsite_Spec_H_ling_ST_OT_Var_YOY__c}"/>
+                    <apex:outputLabel value="Showsite Special Handling OT/OT:" style="font-weight: bold" />
+                    <apex:outputField value="{!Sales_Information_Tool__c.Showsite_Special_Handling_OT_OT_RY__c}"/>
+                    <apex:outputField value="{!Sales_Information_Tool__c.Showsite_Special_Handling_OT_OT_PY__c}"/>
+                    <apex:outputField value="{!Sales_Information_Tool__c.Showsite_Spec_H_ling_OT_OT_Var_YOY__c}"/>
+                    <apex:outputLabel value="Showsite Uncrated ST/ST:" style="font-weight: bold" />
+                    <apex:outputField value="{!Sales_Information_Tool__c.Showsite_Uncrated_ST_ST_RY__c}"/>
+                    <apex:outputField value="{!Sales_Information_Tool__c.Showsite_Uncrated_ST_ST_PY__c}"/>
+                    <apex:outputField value="{!Sales_Information_Tool__c.Showsite_Uncrated_ST_ST_Var_YOY__c}"/>
+                    <apex:outputLabel value="Showsite Uncrated ST/OT:" style="font-weight: bold" />
+                    <apex:outputField value="{!Sales_Information_Tool__c.Showsite_Uncrated_ST_OT_RY__c}"/>
+                    <apex:outputField value="{!Sales_Information_Tool__c.Showsite_Uncrated_ST_OT_PY__c}"/>
+                    <apex:outputField value="{!Sales_Information_Tool__c.Showsite_Uncrated_ST_OT_Var_YOY__c}"/>
+                    <apex:outputLabel value="Showsite Uncrated OT/OT:" style="font-weight: bold" />
+                    <apex:outputField value="{!Sales_Information_Tool__c.Showsite_Uncrated_OT_OT_RY__c}"/>
+                    <apex:outputField value="{!Sales_Information_Tool__c.Showsite_Uncrated_OT_OT_PY__c}"/>
+                    <apex:outputField value="{!Sales_Information_Tool__c.Showsite_Uncrated_OT_OT_Var_YOY__c}"/>
+                    <apex:outputField value="{!Sales_Information_Tool__c.Other_Material_Handling_Notes__c}"/> 
+                </apex:panelGrid>
+            </apex:pageBlockSection>
+        </apex:pageBlockSection>
+    </apex:pageBlock>
+    
+    <apex:pageBlock >
+            <!--  Column 2: Additional Notes -->
+
+        <apex:pageBlockSection showHeader="true" title="Additional Notes" columns="2">
+            <apex:outputText value="{!Sales_Information_Tool__c.Show_Opportunities__c}"/>
+            <apex:outputText value="{!Sales_Information_Tool__c.Show_Risks__c}"/>
+            <apex:outputText value="{!Sales_Information_Tool__c.Account_Manager_Notes__c}"/>
+            <apex:outputText value="{!Sales_Information_Tool__c.Other_Notes__c}"/>
+        </apex:pageBlockSection>
+    
+    <!--/ Two Column Block 2 -->
+
+    </apex:pageBlock>
+</apex:page>

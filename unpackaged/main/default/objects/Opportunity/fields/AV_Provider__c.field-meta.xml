@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>AV_Provider__c</fullName>
+    <deleteConstraint>Restrict</deleteConstraint>
+    <label>AV Provider</label>
+    <referenceTo>Account</referenceTo>
+    <relationshipLabel>Opportunities (AV Provider)</relationshipLabel>
+    <relationshipName>AV_Provider</relationshipName>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Lookup</type>
+</CustomField>

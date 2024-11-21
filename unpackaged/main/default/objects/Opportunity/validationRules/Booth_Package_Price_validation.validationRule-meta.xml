@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Booth_Package_Price_validation</fullName>
+    <active>true</active>
+    <description>If booth package is checked, booth package price must be entered</description>
+    <errorConditionFormula>AND (ISPICKVAL( Booth_Package_Price_Y_N__c , &quot;Yes&quot;),ISNULL(Booth_Package_Price__c), NOT($Profile.Name = &quot;GES Administrator Interface&quot;))</errorConditionFormula>
+    <errorDisplayField>Booth_Package_Price__c</errorDisplayField>
+    <errorMessage>Please enter a Booth Package Price</errorMessage>
+</ValidationRule>

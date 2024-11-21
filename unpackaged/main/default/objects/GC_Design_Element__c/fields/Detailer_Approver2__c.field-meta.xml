@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Detailer_Approver2__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <inlineHelpText>This is a lookup to the Designer/Detailer User that is Assigned to this Task to be used in the approval process routing.  This field is set by assigning a designer/detailer to the task.</inlineHelpText>
+    <label>Designer/Detailer Approver 2</label>
+    <lookupFilter>
+        <active>true</active>
+        <filterItems>
+            <field>User.Profile.Name</field>
+            <operation>contains</operation>
+            <value>GC Detailer,GC Creative Director</value>
+        </filterItems>
+        <isOptional>true</isOptional>
+    </lookupFilter>
+    <referenceTo>User</referenceTo>
+    <relationshipName>Design_Element_Tasks_Approver2</relationshipName>
+    <required>false</required>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

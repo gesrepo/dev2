@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Carpet_Plan_Review</fullName>
+    <columns>NAME</columns>
+    <columns>CPR_Claimed_By__c</columns>
+    <columns>CR_Show_ID__c</columns>
+    <columns>CR_Project_Number__c</columns>
+    <columns>CR_Facility_ID__c</columns>
+    <columns>CR_Submitted_Date__c</columns>
+    <columns>Request_Type__c</columns>
+    <columns>Start_of_12_Week_Plan_order__c</columns>
+    <columns>Start_of_6_Week_Plan_order__c</columns>
+    <columns>Start_of_3_Week_Plan_order__c</columns>
+    <columns>Status__c</columns>
+    <columns>CREATEDBY_USER</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>CPR_Claimed_By__c</field>
+        <operation>equals</operation>
+    </filters>
+    <filters>
+        <field>Status__c</field>
+        <operation>notEqual</operation>
+        <value>New</value>
+    </filters>
+    <label>01 Unclaimed: Carpet Plan Review</label>
+</ListView>

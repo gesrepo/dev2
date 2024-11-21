@@ -1,0 +1,2954 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Product_Sig_Sauer</fullName>
+    <active>true</active>
+    <label>Product Sig Sauer</label>
+    <picklistValues>
+        <picklist>Additional_Cost_Description_2__c</picklist>
+        <values>
+            <fullName>AV%2FLighting</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Apparel</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Carpet</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Catering</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Collateral%2FPrinting</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Electrical</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Freight%2FShipping</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>I%26D</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lead Retrieval</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Material Handling</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Promotional Items</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Shipping</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Signage%2FKiosk</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Additional_Cost_Description_3__c</picklist>
+        <values>
+            <fullName>AV%2FLighting</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Apparel</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Carpet</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Catering</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Collateral%2FPrinting</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Electrical</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Freight%2FShipping</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>I%26D</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lead Retrieval</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Material Handling</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Promotional Items</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Shipping</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Signage%2FKiosk</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Additional_Cost_Description_4__c</picklist>
+        <values>
+            <fullName>AV%2FLighting</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Apparel</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Carpet</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Catering</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Collateral%2FPrinting</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Electrical</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Freight%2FShipping</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>I%26D</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lead Retrieval</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Material Handling</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Promotional Items</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Shipping</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Signage%2FKiosk</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Additional_Cost_Description_5__c</picklist>
+        <values>
+            <fullName>AV%2FLighting</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Apparel</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Carpet</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Catering</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Collateral%2FPrinting</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Electrical</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Freight%2FShipping</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>I%26D</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lead Retrieval</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Material Handling</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Promotional Items</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Shipping</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Signage%2FKiosk</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Additional_Cost_Description__c</picklist>
+        <values>
+            <fullName>AV%2FLighting</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Apparel</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Carpet</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Catering</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Collateral%2FPrinting</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Electrical</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Freight%2FShipping</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>I%26D</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lead Retrieval</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Material Handling</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Promotional Items</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Shipping</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Signage%2FKiosk</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Brand_Name_Pharma__c</picklist>
+        <values>
+            <fullName>Academy</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Air</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ammunition</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Capx</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Elecrto-Optics</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Firearms</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Suppressors</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Brand_Name__c</picklist>
+        <values>
+            <fullName>Commercial Buyers</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Consumer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Law Enforcement</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Media</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Military</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sport</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Brand_Team_Contact__c</picklist>
+        <values>
+            <fullName>--Other--</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Adamczyk%2C Alice</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ahmed%2C Noor</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Akkad%2C Fouad</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Alex Nieto</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Alice Adamczyk</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Alitto%2C Liana</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Alper %28Schubach%29%2C Jen</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Amanda Wyatts</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ami Patel</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Andrei%2C Elisa</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Andrew Clair</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Andrew Segan</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Anjos%2C Suzana</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Anthony Antonelli</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Apostolakis%2C Yannis</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Appel%2C Pam</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Appetiti%2C Valentina</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Arghir%2C Andrei</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ariel Lichtenstein</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Aronda Forsey</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Aronda Perry Forsey</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bagchi%2C Madhavi</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bakken%2C Dan</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Baldwin%2C Richard</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Barishman%2C Ilana</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Barry Chester</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Belenkiy%2C Ilya</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Berg%2C Kristen</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bernice Golla</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bhalla%2C Atul</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Birch%2C Kathy</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Boesch%2C Jerry</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bogdan Bradatan</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bortniker%2C Aviva</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bradatan%2C Bogdan</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Brand%2C Lyndsey</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Brian Hawkins</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Brooks Perkins</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bugbee%2C Todd</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Burd%2C Laura</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Burnett%2C Beth</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Carol Kim</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Carolyn Griffin</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Carver%2C Jeff</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cassidy Crook</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Catela%2C Maria</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ceisler%2C Gayle</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cerati%2C Elisa</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Chand%2C Sanjeev</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Chester%2C Barry</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Chimere Chimezie</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Chris Garcia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Christin O%27Neil</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Christine Seung-Lee</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Christopher Chu</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Christopher McCarthy</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Chu%2C Christopher</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Chuck Broadway</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Clair%2C Andrew</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Clover%2C Kim</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Contact Name 1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Contact Name 2</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Contact Name 3</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Costea%2C Anca</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Coyle%2C Emma</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Daily%2C Rob</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Dale He</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Dana Gaumond</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Daniel Culwick</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>David Chen</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>De Bodman%2C Quentin</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DeSantos%2C Mark</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DeShong%2C Doug</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Dembinski%2C Tim</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Denny Palacios</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Derck%2C Heather</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Dermody%2C Katie</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Dinesh Pethiyagoda</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Discenza%2C Beth</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Djordjevic%2C Katarina</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Domenica Davi</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Donovan%2C Bob</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Doug Hisey</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Dougherty%2C Tim</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Dyott%2C Steve</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Egge%2C Stephanie</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Elisa Andrei</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Elisa Cerati</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Emma Coyle</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Emma Eaves</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Erica Kepes</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Externest%2C Doerthe</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Folks%2C Sean</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Fox%2C Gretchen</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Fromm%2C Heidi</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Fullerton%2C Mary</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Fussel%2C Julian</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Gaeta%2C Sandy</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Garabedian%2C Peter</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Gary Sullivan</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Gavin%2C Rene</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Gayle Ceisler</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Gertsek%2C Marina</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Gevgan%2C Geeta</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Gibson%2C Kevin</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Gifford%2C Justin</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Glasel%2C Anne</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Glenn Borgmann</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Gordon Grauer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Gosselin%2C Gene</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>GÜVENEL%2C Zeynep</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hakes%2C Sharon</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hana Dembe</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hennessey%2C Danielle</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Herron%2C Dianne</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hetal%2C Naik</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hoang%2C Quynh</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hoffman%2C Kathryn</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hyjek%2C Michelle</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ioana Panait</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Irem Tek</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Irina Cherciu</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Jack Micali</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Jaclyn Viola</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Jain%2C Shweta</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Jamie Hidalgo</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Jarmillo%2C Karissa</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Jeaninne Kelly</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Jeff Carver</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Jen Matyas</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Jennifer Faikish</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Joao Santos</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Joe Gagliano</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Jones%2C Felicia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Jones%2C Lauren</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Josephs%2C Felicia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Judd%2C Donna</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Justina Grossman</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Kagan%2C Stephen</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Kahen%2C Robin</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Kang%2C Yoonsun</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Karen Ness</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Katerina Spyratou</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Kathryn Sweeney</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Kenesky%2C Aimee</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Kesselman%2C Adam</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Kevin Bell</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Kim Clover</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Kirkland%2C Julia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Klein%2C Jason</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Klugman%2C Dina</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Kohn%2C Seth</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Kristen Berg</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Kristina Birnbrauer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Kuperstein %2C David</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lanattin%2C Lori</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Laryssa Wozniak</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Laurence Oury</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lawler%2C Lisa</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lawrence%2C Jeffrey</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lee%2C Micca</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Levine%2C Lauren</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Liana Alitto</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Little%2C Fred</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lopienski%2C Karen</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lyndsey Brand</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Maccalman%2C Grant</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Maegan Marin</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mahon%2C Hadley</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mallaina%2C Pablo</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Malva Cuevas</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Manthorp%2C John</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Margarita Lucas</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Maria Carmen</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Maria Catela</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Marianne Nielsen</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Marie Daubisse</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Marshall%2C Lisa</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mary Kay Patrick</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Massar%2C Bill</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mathison%2C Clara</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Matthieu%2C Dominik</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>McCahon%2C Brendan%C2%A0</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>McCorkle%2C Allison</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>McGhee%2C Tracey</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>McMaster%2C Kim</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Means%2C Rose</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Melissa Contorno</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Melissa Gorlaski</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mike Suzuki</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Milne%2C Lisa</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mitzi Conors</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Monica Smith</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Montgomery%2C Megan</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Naik%2C Hetal</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Nduati%2C Maria</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ngozi Motilewa</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Nicole</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Nikita Pitkar</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Noor%2C Ahmed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Noto%2C Nicholaus</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Oliverio%2C Dominick P</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Overcash%2C Dale</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Padmansan%2C Krishna</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Palumbo%2C Andrea</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pam Frazer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Parmjit Agarwal</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Patel%2C Sophia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Patella%2C Alessandra</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pathani%2C Oindrila</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Paul Peters</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pedersen%2C Joyce</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Perdue%2C Lauren</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Perry%2C Cathy</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Peter Kamins</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Peter Woodrow</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pignatelli%2C Rafaella</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pizzino%2C Gabriella</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pugh%2C Leigh</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Quentin De Bodman</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ram Murali</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Raul Suarez-Rodriguez</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rehault%2C Emily</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Richard Baldwin</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Richard Liu</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sack%2C Rachel</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SanFillippo%2C Vince</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Schegoleva%2C Anna</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Schneiderbauer%2C Monika</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Schuler%2C Kris</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Scott Benson</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Searle%2C David</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Semel%2C David</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Shah%2C Shweta</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Shresta%2C Reva</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Shultis%2C Megan</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Simpath%2C Tina</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Singerman%2C Nathan</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Singewald%2C Craig</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Singh%2C Kanwarjit</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sleiman%2C Nolla</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Smedley%2C Andrew</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Smets%2C Helga</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Spencer%2C Scott</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Stanger%2C Steven</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tarquinio%2C Donna</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Taylor%2C Darrell</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Terruso%2C Marguerite</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Thorndell%2C Tracey</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Todd Bugbee</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Torres Quevedo</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Townsend%2C Emily</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Trisha Wagh</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tuck%2C Niki</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Vachhani%2C AP</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Valdivieso%2C Jarod</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Vallone%2C Bernadette</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Vanni%2C Rebecca</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Varones%2C Elizabeth</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Victoria Silva</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Vincent Tong</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Walens%2C Gary</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Walker%2C Simon</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Walt Slijepcevich</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Washington%2C Danielle</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Williams%2C Judy</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Winther%2C A%2E</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Wirth Dabbous%2C Nadia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Wittkemper%2C Frank</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yanchunas%2C Marcy</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yannis Apostolakis</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yasuda%2C Joanne</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Zaccardi%2C Bryan</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Zamparo%2C Joanne</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>von Matthiessen%2C Clara</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Budget_Owner__c</picklist>
+        <values>
+            <fullName>ASD</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Business Development %26 Strategy</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Business Support%2FCareer Fairs</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Channel%2FPartner</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Convention Marketing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Corporate %E2%80%93 Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Corporate Development %26 Strategy</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Diabetes Marketing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Emerging Technologies</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Enterprise</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Fiasp</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Global</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>GlucaGen HypoKit</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Gov%E2%80%99t Relations%2FPA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Government</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Growth Disorder</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hemophilia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Human Resources</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>K-12</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Levemir</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Market Access</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Medical Information</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>National Sales</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Norditropin</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NovoLog</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NovoLog Mix 70%2F30</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NovoSeven</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Novoeight</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Obesity Marketing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Overlay</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ozempic</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Prandin</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Product Communications</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Public Affairs%2FGovt%E2%80%99 Relations</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Public Safety</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ReThink Obesity</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rebinyn</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rethink - Unbranded</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SCN Sales</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sales Partner</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Saxenda</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Small Cell</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Small Cell - In Building</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Small Cell Sales</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Somapacitan</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Supply Chain%2FDiversity</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>System-wide event</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Towers</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Trade</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tresiba</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tresiba - Unbranded</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tretten</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Vagifem</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Victoza</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Wholesale</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Xultophy</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Business_Unit_Pharma__c</picklist>
+        <values>
+            <fullName>Business Unit A</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Business Unit B</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Business Unit C</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CH</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Corporate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Human Health</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PEH</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PIH</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Corporate_Business_Unit__c</picklist>
+        <values>
+            <fullName>Atherosclerosis</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Business Development %26 Strategy</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Business Support%2FCareer Fairs</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cardiovascular</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Chronic Weight Management</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Corporate %E2%80%93 Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Data Collection</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Diabetes</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Diabetes devices</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Education</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Emerging Technologies</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Employer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Global</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Glucagon-Like Peptide-1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Growth Disorder</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Growth Disorders</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hemophilia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hormone Replacement Therapy</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Human insulin</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hypo</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hypo Disease State</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Insulins</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Marketing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Modern insulin</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>New-generation insulin</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Non-Alcoholic Steatohepatitis</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Obesity</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Oral antidiabetic agent</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pharmaceutical</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Public Affairs%2FGovt%E2%80%99 Relations</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Public Safety</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rethink</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Saxenda</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Small Cell</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Supply Chain%2FDiversity</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>System-wide event</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Trade</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Type 1 Diabetes</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Type 2 Diabetes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Estimate_Cost_Origin__c</picklist>
+        <values>
+            <fullName>GES Proposal%2FCO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Previous Years Actual</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Estimated_Cost_Origination__c</picklist>
+        <values>
+            <fullName>GES Proposal%2FCO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Previous Years Actual</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Fiber_Business_Unit__c</picklist>
+        <values>
+            <fullName>Channel%2FPartner</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Enterprise</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Government</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>K-12</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sales Partner</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Wholesale</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Funding_Provider_Brand__c</picklist>
+        <values>
+            <fullName>Adjuvant</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Belsomra</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BioSimilars</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Biomarkers</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bridion</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cancidas</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cubicin</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Delstrigo</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Dificid</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Diversity</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Elvona</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Emend</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Entereg</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Follistim</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ganirelix</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Gardasil 9</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ILUM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Invanz</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Isentress</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Janumet</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Januvia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Keytruda</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lenvima</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Licensing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lynparza</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MMR II</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Nexplanon</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Noxafil</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Nuvaring</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ontruzant</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Orgalutron</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pifeltro</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pipeline</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pneumovax 23</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Prevymis</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Proquad</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Puregon</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Remicade</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Renflexis</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>RotaTeq</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Simponi</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sivextro</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>StayWell</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Steglatro</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Steglujan</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Syaltron</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Test</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Unbranded</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Vaqta</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Varivax</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Zepatier</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Zerbaxa</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Zinplava</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Zostavax</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Funding_Provider_Department__c</picklist>
+        <values>
+            <fullName>Marketing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Medical</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Funding_Provider_Region__c</picklist>
+        <values>
+            <fullName>EMEA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>US</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Geography__c</picklist>
+        <values>
+            <fullName>CapEx</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Corporate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Domestic</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>International</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Product_Category_CrownCastle__c</picklist>
+        <values>
+            <fullName>BioPharm</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Biopharmaceuticals</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Clinical Trial %2F Global</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Corporate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Diabetes</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Diabetes Care</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Fiber</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Healthcare Professionals %28HCP%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Human Resources</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Market Access</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Medical Information</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Obesity</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Patients %26 HCP</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Product Communication</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Product Communications</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Research %26 Development</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Trade</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Product__c</picklist>
+        <values>
+            <fullName>ASD</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Activelle</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Actrapid</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Business Development %26 Strategy</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Business Support%2FCareer Fairs</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Changing Diabetes</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Changing Haemophilia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Channel%2FPartner</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Convention Marketing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Corporate %E2%80%93 Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Corporate Development %26 Strategy</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Diabetes Marketing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Emerging Technologies</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Enterprise</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Estrofem</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Fiasp</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FlexPen</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FlexTouch</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>GlucaGen</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Gov%E2%80%99t Relations%2FPA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Government</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Growth Disorder</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>HCP</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hemophilia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Human Resources</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>InnoLet</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Insulatard</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>K-12</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Levemir</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Market Access</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Medical Information</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mixtard 30</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mixtard 40</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mixtard 50</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Multi-Product</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NNI Corporate - Med Info</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NNI Corporate Logo</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>National Sales</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NordiLet</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NordiPen</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Norditropin</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Norditropin FlexPro</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Norditropin Nordiflex</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NovoFine</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NovoFine AutoCover</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NovoFine Plus</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NovoLog</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NovoLog Mix 70%2F30</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NovoPen</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NovoSeven</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NovoThirteen</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NovoTwist</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Novoeight</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Novofem</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Obesity Marketing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>OneHypoTooMany</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Oral Sema</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Overlay</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ozempic</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PenMate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Prandin</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Product Communications</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Public Affairs%2FGovt%E2%80%99 Relations</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Public Safety</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ReThink Obesity</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rebinyn</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ryzodeg 70%2F30</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SCN Sales</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sales Partner</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Saxenda</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Small Cell</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Small Cell - In Building</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Small Cell Sales</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Somapacitan</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Somatropin</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Supply Chain%2FDiversity</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>System-wide event</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Trade</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tresiba</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tresiba - Unbranded</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tretten</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Vagifem</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Victoza</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Wholesale</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Xultophy</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Reason_for_Cancellation__c</picklist>
+        <values>
+            <fullName>Budget Cut</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Exhibit Space Sold Out</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Product Owner Decision</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Strategy Change</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Sales_Leaders__c</picklist>
+        <values>
+            <fullName>Baker</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Fagan</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hurwitz</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Kavanagh</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Maier</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Reddick</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tomlin</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Therapeutic_Area_Subgroup__c</picklist>
+        <values>
+            <fullName>Atherosclerosis</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Business Development %26 Strategy</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Business Support%2FCareer Fairs</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cardiovascular</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Chronic Weight Management</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Corporate %E2%80%93 Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Data Collection</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Diabetes</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Diabetes devices</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Education</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Emerging Technologies</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Employer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Global</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Glucagon-Like Peptide-1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Growth Disorder</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Growth Disorders</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hemophilia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hormone Replacement Therapy</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Human insulin</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hypo</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hypo Disease State</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Insulins</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Marketing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Modern insulin</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>New-generation insulin</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Non-Alcoholic Steatohepatitis</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Obesity</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Oral antidiabetic agent</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pharmaceutical</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Public Affairs%2FGovt%E2%80%99 Relations</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Public Safety</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rethink</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Saxenda</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Small Cell</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Supply Chain%2FDiversity</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>System-wide event</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Trade</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Type 1 Diabetes</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Type 2 Diabetes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Therapeutic_Area__c</picklist>
+        <values>
+            <fullName>BioPharm</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BioSimilars</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Biopharmaceuticals</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Clinical Trial %2F Global</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Corporate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Diabetes</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Diabetes Care</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Endocrinology</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Fiber</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Gastroenterology</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Healthcare Professionals %28HCP%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hepatology</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Human Resources</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ilum</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Immunology</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Infectious Disease</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Market Access</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Medical Information</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Obesity</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Oncology</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Patients %26 HCP</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Product Communication</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Product Communications</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Research %26 Development</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sleep Medicine</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>StayWell</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Surgery</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Trade</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Vaccines</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Womens Health</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

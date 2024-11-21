@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Clarity_Reference__c</fullName>
+    <caseSensitive>false</caseSensitive>
+    <description>Please Type in Clarity Reference number I.E. ITL....</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Please Type in Clarity Reference number I.E. ITL....</inlineHelpText>
+    <label>Clarity Reference</label>
+    <length>10</length>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>true</unique>
+</CustomField>

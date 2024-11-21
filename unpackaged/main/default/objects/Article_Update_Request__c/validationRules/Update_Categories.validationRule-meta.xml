@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Update_Categories</fullName>
+    <active>true</active>
+    <description>Requires that the new categories are selected.</description>
+    <errorConditionFormula>IF (ISPICKVAL (Request_Type__c, &quot;Update Article Categories&quot;) &amp;&amp; ISBLANK (Categories__c), TRUE, FALSE)</errorConditionFormula>
+    <errorDisplayField>Categories__c</errorDisplayField>
+    <errorMessage>You must select the new categories for this Article.</errorMessage>
+</ValidationRule>

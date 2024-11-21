@@ -1,0 +1,303 @@
+<apex:page standardStylesheets="true" showHeader="true" sidebar="true" docType="html-5.0" controller="GC_OrderFilterController" >
+    <html xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <head>
+            <apex:outputPanel id="filterControls">
+                <apex:form >
+                    <style>
+                        table{
+                        border: 1px solid #e0e3e5;
+                        }
+                        th.headerRow {
+                        border: 1px solid #ededed;
+                        background: #f2f3f3;
+                        border-width: 0 0 1px 1px;
+                        border-color: #e0e3e5;
+                        font-size: .9em;
+                        font-weight: bold;
+                        }
+                        tr.dataRow { 
+                        background-color:white; 
+                        }
+                        tr.dataRow:hover { 
+                        background-color: #e3f3ff;
+                        }
+                        .secMoreFilter .pbSubheader {
+                        color:black !important;
+                        };
+                    </style>
+                    <!--<apex:actionFunction name="doSearch" action="{!searchResults}" reRender="outputQueries" status="serachStatusSpinner"/>
+                    <apex:actionFunction name="doReset" action="{!resetSearch}" reRender="filterControls, outputQueries" />-->
+                    
+                    <apex:pageBlock title="Order Filters">
+                        
+                        <apex:pageBlockSection columns="3" >
+                            <!-- Row 1-->
+                            <apex:pageBlockSectionItem >
+                                <apex:outputLabel >Delivery Location</apex:outputLabel>
+                                <apex:selectList value="{!deliveryLocation}" size="1">
+                                    <apex:selectOptions value="{!deliveryLocations}"></apex:selectOptions>
+                                </apex:selectList>
+                            </apex:pageBlockSectionItem>
+                            
+                            <apex:pageBlockSectionItem >
+                                <apex:outputLabel >Area Description</apex:outputLabel>
+                                <apex:selectList value="{!selectedOADescription}" size="1">
+                                    <apex:selectOptions value="{!orderAreaDescriptions}"></apex:selectOptions>
+                                </apex:selectList>
+                            </apex:pageBlockSectionItem>
+                            <apex:pageBlockSectionItem >
+                                <apex:outputLabel >Delivery Area</apex:outputLabel>
+                                <apex:selectList value="{!delivery}" size="1">
+                                    <apex:selectOptions value="{!deliveryAreas}"></apex:selectOptions>
+                                </apex:selectList>
+                            </apex:pageBlockSectionItem>
+                            
+                            <!-- Row 2-->
+                            <apex:pageBlockSectionItem >
+                                <apex:outputLabel >Department</apex:outputLabel>
+                                <apex:selectList value="{!department}" size="1">
+                                    <apex:selectOptions value="{!departments}"></apex:selectOptions>
+                                </apex:selectList>
+                            </apex:pageBlockSectionItem>
+                            <apex:pageBlockSectionItem >
+                                <apex:outputLabel >User Name</apex:outputLabel>
+                                <apex:selectList value="{!Username}" multiselect="true">
+                                    <apex:selectOptions value="{!Usernames}"></apex:selectOptions>
+                                </apex:selectList>
+                            </apex:pageBlockSectionItem>
+                            <apex:pageBlockSectionItem >
+                                <apex:outputLabel >Venue Location</apex:outputLabel>
+                                <apex:selectList value="{!venue}" size="1">
+                                    <apex:selectOptions value="{!venueLocations}"></apex:selectOptions>
+                                </apex:selectList>
+                            </apex:pageBlockSectionItem>
+                        </apex:pageBlockSection>
+                        
+                        <apex:outputpanel id="collapsibleSection" styleClass="secMoreFilter">
+                        <apex:pageBlockSection collapsible="true" title="More Filters" columns="3">
+                            <!-- Row 3-->
+                            <apex:pageBlockSectionItem >
+                                <apex:outputLabel >Modified Date From</apex:outputLabel>
+                                <input type="date" value="{!modifiedDateFrom}"/>
+                            </apex:pageBlockSectionItem>
+                            <apex:pageBlockSectionItem >
+                                <apex:outputLabel >Modified Date To</apex:outputLabel>
+                                
+
+                            <apex:input type="date" value="{!modifiedDateTo}" />
+                            </apex:pageBlockSectionItem>
+                            <apex:pageBlockSectionItem >
+                                <apex:outputLabel >Keyword Search</apex:outputLabel>
+                                <apex:input type="text" value="{!searchString}"/>
+                            </apex:pageBlockSectionItem>
+                            
+                            <!-- Row 4-->
+                            <apex:pageBlockSectionItem >
+                                <apex:outputLabel >Creation Date From</apex:outputLabel>
+                                <apex:input type="date" value="{!createdDateFrom}" />
+                            </apex:pageBlockSectionItem>
+                            <apex:pageBlockSectionItem >
+                                <apex:outputLabel >Creation Date To</apex:outputLabel>
+                                <apex:input type="date" value="{!createdDateTo}" />
+                            </apex:pageBlockSectionItem>
+                            
+                            <apex:pageBlockSectionItem >
+                                <apex:outputLabel >Vendor</apex:outputLabel>
+                                <apex:selectList value="{!selectedVendor}" size="1">
+                                    <apex:selectOptions value="{!vendors}"></apex:selectOptions>
+                                </apex:selectList>
+                            </apex:pageBlockSectionItem>
+                            
+                            <!-- Row 5-->
+                            <apex:pageBlockSectionItem >
+                                <apex:outputLabel >Delivery Date/Time</apex:outputLabel>
+                                <apex:input type="date" value="{!showDateDelivery}" />
+                            </apex:pageBlockSectionItem>
+                            
+                            <apex:pageBlockSectionItem >
+                                <apex:outputLabel >Completion Date/Time</apex:outputLabel>
+                                <apex:input type="date" value="{!showDateCompletion}" />
+                            </apex:pageBlockSectionItem>
+                            
+                            <apex:pageBlockSectionItem >
+                                <apex:outputLabel >Removal Date/Time</apex:outputLabel>
+                                <apex:input type="date" value="{!showDateRemoval}" />
+                            </apex:pageBlockSectionItem>
+                                                            
+                            <apex:pageBlockSectionItem >
+                            <apex:outputLabel >Onsite Contact Person </apex:outputLabel>
+                             <apex:selectList value="{!onsiteContactPerson}" size="8" styleClass="slds-select" multiselect="true" style="height: 100px;width: 200px;">
+                             <apex:selectOptions value="{!OnsiteContactPersons}"></apex:selectOptions>
+                            </apex:selectList>
+                            </apex:pageBlockSectionItem> 
+                            
+                            <apex:pageBlockSectionItem >
+                              <apex:outputLabel >Onsite Contact Person Other</apex:outputLabel>
+                               <apex:selectList value="{!onsiteContactPersonOther}" size="8" styleClass="slds-select" multiselect="true" style="height: 100px;width: 200px;">
+                               <apex:selectOptions value="{!OnsiteContactPersonOthers}"></apex:selectOptions>
+                              </apex:selectList>
+                            </apex:pageBlockSectionItem> 
+                            
+                        </apex:pageBlockSection>
+                        </apex:outputpanel>
+                        
+                      
+                           
+                              <apex:commandButton action="{!searchResults}" style="margin-left:45%" value="Search" id="btnSearch" reRender="outputQueries"/>
+                              <apex:commandButton action="{!resetSearch}" style="margin-left:1%" value="Reset" id="btnReset" reRender="filterControls, outputQueries"/>
+                              <apex:actionFunction name="saveFilters" action="{!SaveFilter}" reRender="messages" status="savingFiltersSpinner"/> 
+                            
+                    </apex:pageBlock>
+                                        
+                </apex:form>
+            </apex:outputPanel>
+            
+            
+            <div class="slds-card gc-grey-background">
+                
+                <!-- CARD BODY -->
+                <div class="slds-card__body">
+                    <!-- TASK LIST -->
+                    <apex:outputPanel id="outputQueries">
+                        <apex:form >
+                            <!--<table class="slds-table slds-table--bordered slds-max-medium-table--stacked-horizontal">-->
+                            
+                            <table class="list" width="100%" padding="0" cellpadding="0" cellspacing="0">
+                                
+                                <thead>
+                                    <tr>
+                                        <th class="headerRow">
+                                            <span class="slds-truncate">
+                                                <apex:commandLink reRender="messages" value="Order Name">
+                                                    <apex:param name="orderByCol" value="Name"></apex:param>
+                                                </apex:commandLink>
+                                            </span>
+                                        </th>
+                                        <th class="headerRow">
+                                            <span class="slds-truncate">
+                                                <apex:commandLink reRender="messages" value="DELIVERY LOCATION">
+                                                    <apex:param name="orderByCol" value="Booth_Area__c"></apex:param>
+                                                </apex:commandLink>
+                                            </span>
+                                        </th>
+                                        <th class="headerRow">
+                                            <span class="slds-truncate">
+                                                <apex:commandLink reRender="messages" value="Area Description">
+                                                    <apex:param name="orderByCol" value="Order_Area_Description__c"></apex:param>
+                                                </apex:commandLink>
+                                            </span>
+                                        </th>
+                                        <th class="headerRow">
+                                            <span class="slds-truncate">
+                                                <apex:commandLink reRender="messages" value="Delivery Date">
+                                                    <apex:param name="orderByCol" value="Delivery_Date_Time__c"></apex:param>
+                                                </apex:commandLink>
+                                            </span>
+                                        </th>
+                                        <th class="headerRow">
+                                            <span class="slds-truncate">
+                                                <apex:commandLink reRender="messages" value="Completion Date">
+                                                    <apex:param name="orderByCol" value="Completion_Date_Time__c"></apex:param>
+                                                </apex:commandLink>
+                                            </span>
+                                        </th>
+                                        <th class="headerRow">
+                                            <span class="slds-truncate">
+                                                <apex:commandLink reRender="messages" value="Removal Date">
+                                                    <apex:param name="orderByCol" value="Removal_Date_Time__c"></apex:param>
+                                                </apex:commandLink>
+                                            </span>
+                                        </th>
+                                        <th class="headerRow">
+                                            <span class="slds-truncate">
+                                                <apex:commandLink reRender="messages" value="Order Number">
+                                                    <apex:param name="orderByCol" value="Order_Number__c"></apex:param>
+                                                </apex:commandLink>
+                                            </span>
+                                        </th>
+                                        <th class="headerRow">
+                                            <span class="slds-truncate">
+                                                <apex:commandLink reRender="messages, outputQueries" value="Status">
+                                                    <apex:param name="orderByCol" value="Status__c"></apex:param>
+                                                </apex:commandLink>
+                                            </span>
+                                        </th>
+                                        <th class="headerRow">
+                                            <span class="slds-truncate">
+                                                <apex:commandLink reRender="messages, outputQueries" value="User Name">
+                                                    <apex:param name="orderByCol" value="User_Name__c"></apex:param>
+                                                </apex:commandLink>
+                                            </span>
+                                        </th>
+                                        <th class="headerRow">
+                                            <span class="slds-truncate">
+                                                <apex:commandLink reRender="messages" value="Creation Date">
+                                                    <apex:param name="orderByCol" value="CreatedById"></apex:param>
+                                                </apex:commandLink>
+                                            </span>
+                                        </th>
+                                        <th class="headerRow">
+                                            <span class="slds-truncate">
+                                                <apex:commandLink reRender="messages" value="Modified Date">
+                                                    <apex:param name="orderByCol" value="LastModifiedDate"></apex:param>
+                                                </apex:commandLink>
+                                            </span>
+                                        </th>   
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <apex:repeat value="{!gesOrders}" var="go">
+                                        <tr class="dataRow">
+                                            <td data-label="ges-order-name" role="row">
+                                                <apex:outputLink value="{!$Page.GC_OrderView}" target="_blank">
+                                                    {!go.Name}
+                                                    <apex:param name="id" value="{!go.Id}" />
+                                                </apex:outputLink>
+                                                
+                                            </td>
+                                            <td data-label="booth" role="row">
+                                                <apex:outputField value="{!go.Booth_Area__c}" />
+                                            </td>
+                                            <td data-label="areadescription" role="row">
+                                                <apex:outputField value="{!go.Order_Area_Description__c}" />
+                                            </td>
+                                            <td data-label="delivery">
+                                                <apex:outputField value="{!go.Delivery_Date_Time__c}" />
+                                            </td>
+                                            <td data-label="completion">
+                                                <apex:outputField value="{!go.Completion_Date_Time__c}" />
+                                            </td>
+                                            <td data-label="removal">
+                                                <apex:outputField value="{!go.Removal_Date_Time__c}" />
+                                            </td>
+                                            <td data-label="order-number">
+                                                <apex:outputText value="{!go.Order_Number__c}" />
+                                            </td>
+                                            <td data-label="Status">
+                                                <apex:outputText value="{!go.Status__c}" />
+                                            </td>
+                                            <td data-label="Username">
+                                                <apex:outputText value="{!go.User_Name__c}" />
+                                            </td>
+                                            <td data-label="ges-order-name" role="row">
+                                                <apex:outputText value="{0, date, MM'/'dd'/'yyyy}">
+                                                    <apex:param value="{!go.Createddate}" />
+                                                </apex:outputText>
+                                            </td>
+                                            <td data-label="ges-order-name" role="row">
+                                                <apex:outputText value="{0, date, MM'/'dd'/'yyyy}">
+                                                    <apex:param value="{!go.LastModifiedDate}" />
+                                                </apex:outputText>
+                                            </td>
+                                        </tr>
+                                    </apex:repeat>
+                                </tbody>
+                            </table>
+                        </apex:form>
+                    </apex:outputPanel>
+                </div>
+            </div>
+            
+        </head>
+    </html>
+</apex:page>

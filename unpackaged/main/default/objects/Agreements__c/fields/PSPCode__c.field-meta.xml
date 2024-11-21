@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PSPCode__c</fullName>
+    <label>PSPCode</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Yes: 3% will apply</fullName>
+                <default>false</default>
+                <label>Yes: 3% will apply</label>
+            </value>
+            <value>
+                <fullName>PI: 3% price increase</fullName>
+                <default>false</default>
+                <label>PI: 3% price increase</label>
+            </value>
+            <value>
+                <fullName>No: No Exhibitor Revenue</fullName>
+                <default>false</default>
+                <label>No: No Exhibitor Revenue</label>
+            </value>
+            <value>
+                <fullName>No: Management Decision</fullName>
+                <default>false</default>
+                <label>No: Management Decision</label>
+            </value>
+            <value>
+                <fullName>None</fullName>
+                <default>false</default>
+                <label>None</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

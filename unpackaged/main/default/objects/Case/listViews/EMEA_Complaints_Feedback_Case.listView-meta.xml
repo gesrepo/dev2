@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>EMEA_Complaints_Feedback_Case</fullName>
+    <filterScope>Queue</filterScope>
+    <label>EMEA Feedback/Complaints</label>
+    <language>en_US</language>
+    <queue>EMEA_Complaints_Feedback</queue>
+    <sharedTo>
+        <roleAndSubordinatesInternal>GES_EMEA_Servi_Centre_Supervisor</roleAndSubordinatesInternal>
+    </sharedTo>
+</ListView>

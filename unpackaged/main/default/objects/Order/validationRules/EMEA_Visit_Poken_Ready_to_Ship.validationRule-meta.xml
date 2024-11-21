@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>EMEA_Visit_Poken_Ready_to_Ship</fullName>
+    <active>true</active>
+    <description>Requires delivery address to change Order status to &quot;Ready to Ship&quot;.</description>
+    <errorConditionFormula>ISPICKVAL(Status, &quot;Ready to Ship&quot;) &amp;&amp;
+(ISBLANK( Delivery_City__c  )  || 
+ ISBLANK( Delivery_Country__c  )  ||  
+ ISBLANK( Delivery_Street__c  )  || 
+ ISBLANK( Delivery_Zip_Postal_Code__c  )  || 
+ ISBLANK( Delivery_State__c  )  
+)</errorConditionFormula>
+    <errorMessage>Delivery address required to change Order status to &quot;Ready to Ship&quot;.</errorMessage>
+</ValidationRule>

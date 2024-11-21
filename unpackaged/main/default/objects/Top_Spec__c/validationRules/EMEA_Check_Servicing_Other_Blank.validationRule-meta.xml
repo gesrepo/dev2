@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>EMEA_Check_Servicing_Other_Blank</fullName>
+    <active>true</active>
+    <errorConditionFormula>!ISPICKVAL( Servicing__c , &quot;Other&quot;) &amp;&amp;  Len(Servicing_Other__c) &gt;0</errorConditionFormula>
+    <errorMessage>If you have not selected Other as Servicing, you do not need to enter anything in Servicing (Other)</errorMessage>
+</ValidationRule>

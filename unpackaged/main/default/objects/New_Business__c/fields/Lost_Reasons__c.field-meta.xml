@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Lost_Reasons__c</fullName>
+    <label>Lost Reasons</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Price</fullName>
+                <default>false</default>
+                <label>Price</label>
+            </value>
+            <value>
+                <fullName>Competitor Offering</fullName>
+                <default>false</default>
+                <label>Competitor Offering</label>
+            </value>
+            <value>
+                <fullName>Show Cancelled</fullName>
+                <default>false</default>
+                <label>Show Cancelled</label>
+            </value>
+            <value>
+                <fullName>Agency Lost Pitch</fullName>
+                <default>false</default>
+                <label>Agency Lost Pitch</label>
+            </value>
+            <value>
+                <fullName>Previous Bad Experience</fullName>
+                <default>false</default>
+                <label>Previous Bad Experience</label>
+            </value>
+            <value>
+                <fullName>Creativity</fullName>
+                <default>false</default>
+                <label>Creativity</label>
+            </value>
+            <value>
+                <fullName>Standfitting</fullName>
+                <default>false</default>
+                <label>Standfitting</label>
+            </value>
+            <value>
+                <fullName>Electrics</fullName>
+                <default>false</default>
+                <label>Electrics</label>
+            </value>
+            <value>
+                <fullName>Floorcovering</fullName>
+                <default>false</default>
+                <label>Floorcovering</label>
+            </value>
+            <value>
+                <fullName>Furniture</fullName>
+                <default>false</default>
+                <label>Furniture</label>
+            </value>
+            <value>
+                <fullName>Features</fullName>
+                <default>false</default>
+                <label>Features</label>
+            </value>
+            <value>
+                <fullName>Pricing Exercise/Benchmark</fullName>
+                <default>false</default>
+                <label>Pricing Exercise/Benchmark</label>
+            </value>
+            <value>
+                <fullName>Lost Other</fullName>
+                <default>false</default>
+                <label>Lost Other</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

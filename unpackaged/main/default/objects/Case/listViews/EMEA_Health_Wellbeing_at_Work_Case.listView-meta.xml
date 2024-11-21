@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>EMEA_Health_Wellbeing_at_Work_Case</fullName>
+    <filterScope>Queue</filterScope>
+    <label>EMEA Health &amp; Wellbeing at Work</label>
+    <queue>EMEA_Health_Wellbeing_at_Work</queue>
+    <sharedTo>
+        <allInternalUsers />
+    </sharedTo>
+</ListView>

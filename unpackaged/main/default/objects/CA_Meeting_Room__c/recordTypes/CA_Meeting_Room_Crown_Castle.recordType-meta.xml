@@ -1,0 +1,825 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CA_Meeting_Room_Crown_Castle</fullName>
+    <active>true</active>
+    <label>CA Meeting Room Crown Castle</label>
+    <picklistValues>
+        <picklist>Activity_Level__c</picklist>
+        <values>
+            <fullName>Priority 1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Priority 2</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Priority 3</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tier 1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tier 2</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tier 3</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tier 4</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tier 5</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>CC_Project_Manager__c</picklist>
+        <values>
+            <fullName>Cassandra Zwick</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Juanita Timney</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Katie Lillie</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Kayleigh Fortuna</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lisa Gebhart</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lisandra Fernandez</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Stephanie Naida</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Congress_Lead__c</picklist>
+        <values>
+            <fullName>Congress Lead 1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Congress Lead 2</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Congress Lead 3</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Congress_Manager__c</picklist>
+        <values>
+            <fullName>Congress Manager 1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Congress Manager 2</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Congress Manager 3</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Curtin%2C Nadine</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Jacqueline Campo</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Joe Walsh</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>John Hasemann</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Kaitlyn Reynolds</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Kepes%2C Erica</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Laurie Stein-Richards</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ralph Lopez</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rebecca Baker</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rosete%2C Aleida</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Schuler%2C Dan</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Syntcha%2C Dawn</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Throckmorton%2C Andrea</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Zarrillo%2C Rose Marie</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Event_Manager2__c</picklist>
+        <values>
+            <fullName>Curtin%2C Nadine</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Horvath%2C Judy</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rocha%2C Paula</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Shamey-Golonka%2C Kimrlee</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Throckmorton%2C Andrea</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Zarrillo%2C Rose Marie</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Event_Manager__c</picklist>
+        <values>
+            <fullName>Aisling Meehan</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Budrecki%2C Sheree</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Caitlin Ferdyn</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Casarotto%2C Ilenia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>D%27Onofrio%2C Lisa</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lisa Mahan</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Michael Clearey</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Nicole Brown</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ridgeway%2C Alison</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Shawn McDonald</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>GES_Account_Executive__c</picklist>
+        <values>
+            <fullName>Bullock%2C Deana</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ellis%2C Richard</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>GES Account Executive 1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>GES Account Executive 2</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>GES Account Executive 3</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Heather Rosenow</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Jennifer Spencer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>John Boy</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lori Chester</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Steve Maurer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Test</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>GES_Account_Manager2__c</picklist>
+        <values>
+            <fullName>Aldridge%2C Hannah</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Callaway%2C Carsen</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Carey-Smalls%2C Fanchon</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Dewey%2C Kaila</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Fletcher%2C Samantha</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Kearney%2C Jaclynn</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Medus%2C Heather</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>O%E2%80%99Connell%2C Mary</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Platt%2C Becky</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Smith%2C Lindsey</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Versleys%2C Beth</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Villwock%2C Kelly</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Wagoner%2C Brian</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Wainman%2C Ana</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ward%2C Nick</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>GES_Account_Manager__c</picklist>
+        <values>
+            <fullName>Alita Mathews</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Allyson Wagner</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Amanda Shulman</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Angelina Palermo</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Beyer%2C Lisa</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Brosmore%2C Jamie</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Brown%2C Caroline</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Costa%2C Debra</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Daphne Saavedra</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ellis%2C Richard</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Eppelman%2C Jill</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>GES Account Manager 1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>GES Account Manager 2</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>GES Account Manager 3</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Harley%2C Lauren</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Jamie Brosmore</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Jessica Bodner</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Jill Eppelman</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Jill Johnson</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Kayla Rogers</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Kevin Jones</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Kimrlee Shamey-Golonka</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lauren Gallagher</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lauren Poole</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Linda Holland</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Marsh%2C Reta</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mary Jones</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mathews%2C Alita</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Megan Sien</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Melinda Peterson</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Proule%2C Jeannette</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rogers%2C Kayla</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Shulman%2C Amanda</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Stephanie Specht</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Test</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>GES_Congress_Manager__c</picklist>
+        <values>
+            <fullName>Manager 1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Manager 2</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Manager 3</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>GES_Project_Manager__c</picklist>
+        <values>
+            <fullName>Al Grauzinis</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Andrew Vanhorn</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Carl Ahrens</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Courtney Rowe</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Da silva%2C Camille</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Dave Botsford</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Donny Spray</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Duane Glossa</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Edward Haas</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Elizabeth Zajda</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ferraro%2C Antonio</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Frank Cacciato</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>GES Project Manager 1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>GES Project Manager 2</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>GES Project Manager 3</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Greg Rawe</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>James Haas</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Jim Angle</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Kelly%2C Alexa</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Medus%2C Heather</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Michael Samuel</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mike Mulvey</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Montagne%2C Sarah</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mulvey%2C Mike</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Patty Welch</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Porter%2C Mike</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sam Hornsby</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Samuel%2C Mike</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tim Murphy</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Troy Devenberg</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Wainman%2C Ana</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ward%2C Nick</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Wright%2C Chris</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>test</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>I_D_Supervisor__c</picklist>
+        <values>
+            <fullName>Alan Squyres</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Dave Dragoone</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hadrava%2C Don</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Heather Campbell</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>I%26D Supervisor 1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>I%26D Supervisor 2</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>I%26D Supervisor 3</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Joe Holland</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ken Pantoliano</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pat Gallagher</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Randy Frields</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Skarupa%2C Dennis</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Steve Burgess</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Storm%2C Kari</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tom Kessler</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Vanderpol%2C Gary</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>test</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Market__c</picklist>
+        <values>
+            <fullName>Commercial Buyers</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Consumer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Law Enforcement</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Media</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Military</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sport</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Meeting_Room_Use__c</picklist>
+        <values>
+            <fullName>Client Meetings</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Opinion Leader</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Work Room</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Participation_Type_MR__c</picklist>
+        <values>
+            <fullName>In-Person</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Virtual</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Product__c</picklist>
+        <values>
+            <fullName>Academy</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Air</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ammunition</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Electro-Optics</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Firearms</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Suppressors</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Reason_for_Cancellation__c</picklist>
+        <values>
+            <fullName>Budget Cut</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Event Not Occurring</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Exhibit Space Sold Out</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Product Owner Decision</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Public Health Issue</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rollover Event</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Strategy Change</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

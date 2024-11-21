@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>US_Housing_Compass_Number</fullName>
+    <active>false</active>
+    <description>US Housing, Compass # format should be 2 numeric, 3 alpha, 2 numeric, always length of 7</description>
+    <errorConditionFormula>/* We only want this to run against Housing */ 
+$RecordType.DeveloperName = &#39;US_Housing&#39;
+&amp;&amp; LEN(Compass_Project__c) &lt;&gt; 7 &amp;&amp; 
+(!ISNUMBER(LEFT(Compass_Project__c,2))
+|| !ISNUMBER(RIGHT(Compass_Project__c,2))) &amp;&amp; NOT(OR($Profile.Name = &#39;GES Interface&#39;,$Profile.Name = &#39;System Administrator&#39;))</errorConditionFormula>
+    <errorMessage>Compass # must be in the format of nnaaann and be 7 characters in length</errorMessage>
+</ValidationRule>

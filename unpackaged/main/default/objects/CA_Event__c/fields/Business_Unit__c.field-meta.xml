@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Business_Unit__c</fullName>
+    <label>Business Unit</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Business Support/Career Fairs</fullName>
+                <default>false</default>
+                <label>Business Support/Career Fairs</label>
+            </value>
+            <value>
+                <fullName>ASD</fullName>
+                <default>false</default>
+                <label>ASD</label>
+            </value>
+            <value>
+                <fullName>Corporate Development &amp; Strategy</fullName>
+                <default>false</default>
+                <label>Corporate Development &amp; Strategy</label>
+            </value>
+            <value>
+                <fullName>Emerging Technologies</fullName>
+                <default>false</default>
+                <label>Emerging Technologies</label>
+            </value>
+            <value>
+                <fullName>Fiber – Channel</fullName>
+                <default>false</default>
+                <label>Fiber – Channel</label>
+            </value>
+            <value>
+                <fullName>Fiber – Enterprise</fullName>
+                <default>false</default>
+                <label>Fiber – Enterprise</label>
+            </value>
+            <value>
+                <fullName>Fiber – Wholesale</fullName>
+                <default>false</default>
+                <label>Fiber – Wholesale</label>
+            </value>
+            <value>
+                <fullName>Fiber – Overlay</fullName>
+                <default>false</default>
+                <label>Fiber – Overlay</label>
+            </value>
+            <value>
+                <fullName>Gov’t Relations/PA</fullName>
+                <default>false</default>
+                <label>Gov’t Relations/PA</label>
+            </value>
+            <value>
+                <fullName>National Sales</fullName>
+                <default>false</default>
+                <label>National Sales</label>
+            </value>
+            <value>
+                <fullName>Public Safety</fullName>
+                <default>false</default>
+                <label>Public Safety</label>
+            </value>
+            <value>
+                <fullName>SCN Sales</fullName>
+                <default>false</default>
+                <label>SCN Sales</label>
+            </value>
+            <value>
+                <fullName>Small Cell</fullName>
+                <default>false</default>
+                <label>Small Cell</label>
+            </value>
+            <value>
+                <fullName>Supply Chain/Diversity</fullName>
+                <default>false</default>
+                <label>Supply Chain/Diversity</label>
+            </value>
+            <value>
+                <fullName>Corporate – Other</fullName>
+                <default>false</default>
+                <label>Corporate – Other</label>
+            </value>
+            <value>
+                <fullName>System-wide event</fullName>
+                <default>false</default>
+                <label>System-wide event</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

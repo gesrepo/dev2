@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>OB_Pallet_Jack__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Pallet Jack</description>
+    <inlineHelpText>Pallet Jack</inlineHelpText>
+    <label>Pallet Jack</label>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

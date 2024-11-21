@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ApexPage xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>35.0</apiVersion>
+    <availableInTouch>false</availableInTouch>
+    <confirmationTokenRequired>false</confirmationTokenRequired>
+    <description>Page container for handling approval action for the Design Budget. This automatically routes to the director of account management on the Show and will display an error message if not defined for the show.</description>
+    <label>GC_DRF_BudgetApprovalDisplay</label>
+</ApexPage>

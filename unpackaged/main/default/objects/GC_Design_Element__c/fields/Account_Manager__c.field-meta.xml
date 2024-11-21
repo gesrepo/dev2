@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Account_Manager__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>Person who is responsible for the management of sales, and relationships with particular customers.</description>
+    <inlineHelpText>This account manager is identified when the task is submitted for approval.  The system looks at the show team for any users with the role Account Manager and populates this field on submit.</inlineHelpText>
+    <label>Account Manager</label>
+    <referenceTo>User</referenceTo>
+    <relationshipName>Account_Manager_Design_Elements</relationshipName>
+    <required>false</required>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

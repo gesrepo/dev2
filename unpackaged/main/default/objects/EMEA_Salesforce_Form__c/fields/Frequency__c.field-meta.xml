@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Frequency__c</fullName>
+    <inlineHelpText>Please select the frequency of the Opportunity from the list</inlineHelpText>
+    <label>Frequency</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>B1, Same location each year</fullName>
+                <default>false</default>
+                <label>B1, Same location each year</label>
+            </value>
+            <value>
+                <fullName>B2, Same location every 2 years</fullName>
+                <default>false</default>
+                <label>B2, Same location every 2 years</label>
+            </value>
+            <value>
+                <fullName>B3, Same location every 3 years</fullName>
+                <default>false</default>
+                <label>B3, Same location every 3 years</label>
+            </value>
+            <value>
+                <fullName>B4, Same location every 4 years</fullName>
+                <default>false</default>
+                <label>B4, Same location every 4 years</label>
+            </value>
+            <value>
+                <fullName>B5, Same location every 5 years</fullName>
+                <default>false</default>
+                <label>B5, Same location every 5 years</label>
+            </value>
+            <value>
+                <fullName>R1, Rotating location each year</fullName>
+                <default>false</default>
+                <label>R1, Rotating location each year</label>
+            </value>
+            <value>
+                <fullName>R2, Rotating location every 2 years</fullName>
+                <default>false</default>
+                <label>R2, Rotating location every 2 years</label>
+            </value>
+            <value>
+                <fullName>R3, Rotating location every 3 years</fullName>
+                <default>false</default>
+                <label>R3, Rotating location every 3 years</label>
+            </value>
+            <value>
+                <fullName>R4, Rotating location every 4 years</fullName>
+                <default>false</default>
+                <label>R4, Rotating location every 4 years</label>
+            </value>
+            <value>
+                <fullName>R5, Rotating location every 5 years</fullName>
+                <default>false</default>
+                <label>R5, Rotating location every 5 years</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

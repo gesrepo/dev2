@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Initialcontact_call_from__c</fullName>
+    <label>Initialcontact.call from</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Received call</fullName>
+                <default>false</default>
+                <label>Received call</label>
+            </value>
+            <value>
+                <fullName>Made call</fullName>
+                <default>false</default>
+                <label>Made call</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

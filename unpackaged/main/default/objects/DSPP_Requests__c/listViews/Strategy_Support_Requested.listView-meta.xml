@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Strategy_Support_Requested</fullName>
+    <columns>NAME</columns>
+    <columns>Proposal_Due_Date2__c</columns>
+    <columns>Show_Name__c</columns>
+    <columns>Account_Name__c</columns>
+    <columns>Submitted_for_Approval__c</columns>
+    <columns>Approved__c</columns>
+    <columns>Strategy_Support_Status__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Strategy_Support__c</field>
+        <operation>equals</operation>
+        <value>1</value>
+    </filters>
+    <label>Strategy Support Requested</label>
+    <language>en_US</language>
+</ListView>

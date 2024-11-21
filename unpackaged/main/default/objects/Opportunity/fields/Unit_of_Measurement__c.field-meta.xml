@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Unit_of_Measurement__c</fullName>
+    <label>Unit of Measurement</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Meters</fullName>
+                <default>false</default>
+                <label>Meters</label>
+            </value>
+            <value>
+                <fullName>Feet</fullName>
+                <default>false</default>
+                <label>Feet</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

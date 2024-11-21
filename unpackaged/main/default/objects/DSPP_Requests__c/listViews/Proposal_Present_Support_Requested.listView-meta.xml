@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Proposal_Present_Support_Requested</fullName>
+    <booleanFilter>1 or 2</booleanFilter>
+    <columns>NAME</columns>
+    <columns>CREATED_DATE</columns>
+    <columns>Proposal_Due_Date2__c</columns>
+    <columns>Show_Name__c</columns>
+    <columns>Account_Name__c</columns>
+    <columns>Proposal_Support__c</columns>
+    <columns>Presentation_Support__c</columns>
+    <columns>Submitted_for_Approval__c</columns>
+    <columns>Approved__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Presentation_Support__c</field>
+        <operation>equals</operation>
+        <value>1</value>
+    </filters>
+    <filters>
+        <field>Proposal_Support__c</field>
+        <operation>equals</operation>
+        <value>1</value>
+    </filters>
+    <label>Proposal &amp; Present Support Requested</label>
+</ListView>

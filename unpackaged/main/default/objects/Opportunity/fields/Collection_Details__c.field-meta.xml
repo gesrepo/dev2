@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Collection_Details__c</fullName>
+    <description>To be used for Adfield to have visibility of the Account Name</description>
+    <inlineHelpText>To be used for Adfield to have visibility of the Account Name</inlineHelpText>
+    <label>Account Name</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>TextArea</type>
+</CustomField>

@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Profit_center__c</fullName>
+    <description>Blitz field for Opportunity Integration</description>
+    <label>Profit center</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>true</sorted>
+            <value>
+                <fullName>05-DRY HIRE</fullName>
+                <default>false</default>
+                <label>05-DRY HIRE</label>
+            </value>
+            <value>
+                <fullName>10-CORPORATE</fullName>
+                <default>false</default>
+                <label>10-CORPORATE</label>
+            </value>
+            <value>
+                <fullName>15-NEW BUSINESS</fullName>
+                <default>false</default>
+                <label>15-NEW BUSINESS</label>
+            </value>
+            <value>
+                <fullName>25-SPECIALIST LIGHTING</fullName>
+                <default>false</default>
+                <label>25-SPECIALIST LIGHTING</label>
+            </value>
+            <value>
+                <fullName>35-BREWERY</fullName>
+                <default>false</default>
+                <label>35-BREWERY</label>
+            </value>
+            <value>
+                <fullName>40-MANCEN</fullName>
+                <default>false</default>
+                <label>40-MANCEN</label>
+            </value>
+            <value>
+                <fullName>45-EC&amp;O</fullName>
+                <default>false</default>
+                <label>45-EC&amp;O</label>
+            </value>
+            <value>
+                <fullName>50-GRAPHICS</fullName>
+                <default>false</default>
+                <label>50-GRAPHICS</label>
+            </value>
+            <value>
+                <fullName>55-PRODUCTION</fullName>
+                <default>false</default>
+                <label>55-PRODUCTION</label>
+            </value>
+            <value>
+                <fullName>56-AV EXHIBITIONS</fullName>
+                <default>false</default>
+                <label>56-AV EXHIBITIONS</label>
+            </value>
+            <value>
+                <fullName>60-NEC BIRMINGHAM</fullName>
+                <default>false</default>
+                <label>60-NEC BIRMINGHAM</label>
+            </value>
+            <value>
+                <fullName>65-EXCEL</fullName>
+                <default>false</default>
+                <label>65-EXCEL</label>
+            </value>
+            <value>
+                <fullName>70-FARNBOROUGH</fullName>
+                <default>false</default>
+                <label>70-FARNBOROUGH</label>
+            </value>
+            <value>
+                <fullName>85-THEATRE</fullName>
+                <default>false</default>
+                <label>85-THEATRE</label>
+            </value>
+            <value>
+                <fullName>Amsterdam</fullName>
+                <default>false</default>
+                <label>Amsterdam</label>
+            </value>
+            <value>
+                <fullName>CORE BUSINESS - UK</fullName>
+                <default>false</default>
+                <label>CORE BUSINESS - UK</label>
+            </value>
+            <value>
+                <fullName>CORE - EUROPE</fullName>
+                <default>false</default>
+                <label>CORE - EUROPE</label>
+            </value>
+            <value>
+                <fullName>CORE - UAE</fullName>
+                <default>false</default>
+                <label>CORE - UAE</label>
+            </value>
+            <value>
+                <fullName>Coventry</fullName>
+                <default>false</default>
+                <label>Coventry</label>
+            </value>
+            <value>
+                <fullName>DUBAI</fullName>
+                <default>false</default>
+                <label>DUBAI</label>
+            </value>
+            <value>
+                <fullName>EUROPE</fullName>
+                <default>false</default>
+                <label>EUROPE</label>
+            </value>
+            <value>
+                <fullName>EVENT INTELLIGENCE</fullName>
+                <default>false</default>
+                <label>EVENT INTELLIGENCE</label>
+            </value>
+            <value>
+                <fullName>EVENTS &amp; CONGRESS</fullName>
+                <default>false</default>
+                <label>EVENTS &amp; CONGRESS</label>
+            </value>
+            <value>
+                <fullName>FEATURES</fullName>
+                <default>false</default>
+                <label>FEATURES</label>
+            </value>
+            <value>
+                <fullName>GERMANY</fullName>
+                <default>false</default>
+                <label>GERMANY</label>
+            </value>
+            <value>
+                <fullName>INTERCOMPANY</fullName>
+                <default>false</default>
+                <label>INTERCOMPANY</label>
+            </value>
+            <value>
+                <fullName>LOGISTICS</fullName>
+                <default>false</default>
+                <label>LOGISTICS</label>
+            </value>
+            <value>
+                <fullName>New BUSINESS EXHIBITIONS</fullName>
+                <default>false</default>
+                <label>NEW BUSINESS EXHIBITIONS</label>
+            </value>
+            <value>
+                <fullName>POLAND</fullName>
+                <default>false</default>
+                <label>POLAND</label>
+            </value>
+            <value>
+                <fullName>SHEFFIELD</fullName>
+                <default>false</default>
+                <label>SHEFFIELD</label>
+            </value>
+            <value>
+                <fullName>SHOW READY</fullName>
+                <default>false</default>
+                <label>SHOW READY</label>
+            </value>
+            <value>
+                <fullName>UK</fullName>
+                <default>false</default>
+                <label>UK</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

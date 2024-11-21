@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Visit_Asset</fullName>
+    <active>true</active>
+    <label>Visit Asset</label>
+    <picklistValues>
+        <picklist>Base_Location__c</picklist>
+        <values>
+            <fullName>Chicago %E2%80%93 US</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Dubai %E2%80%93 AE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Elstree %E2%80%93 UK</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Haarlem %E2%80%93 NL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lausanne %E2%80%93 CH</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sibiu %E2%80%93 RO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Wan Chai %E2%80%93 HK</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Purchased_From__c</picklist>
+        <values>
+            <fullName>China</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Japan</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Thailand</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>duranmatic</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Status</picklist>
+        <values>
+            <fullName>Available</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>In Stock</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Missing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Obsolete</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rented out</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>inrepair</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

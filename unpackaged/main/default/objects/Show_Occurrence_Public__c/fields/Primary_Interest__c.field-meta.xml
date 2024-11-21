@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Primary_Interest__c</fullName>
+    <label>Primary Interest</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>true</sorted>
+            <value>
+                <fullName>A/V</fullName>
+                <default>false</default>
+                <label>A/V</label>
+            </value>
+            <value>
+                <fullName>Accommodations</fullName>
+                <default>false</default>
+                <label>Accommodations</label>
+            </value>
+            <value>
+                <fullName>Consumer Events (B2C)</fullName>
+                <default>false</default>
+                <label>Consumer Events (B2C)</label>
+            </value>
+            <value>
+                <fullName>Corporate Events (B2B)</fullName>
+                <default>false</default>
+                <label>Corporate Events (B2B)</label>
+            </value>
+            <value>
+                <fullName>Exhibit Design &amp; Build</fullName>
+                <default>false</default>
+                <label>Exhibit Design &amp; Build</label>
+            </value>
+            <value>
+                <fullName>Exhibitor Services</fullName>
+                <default>false</default>
+                <label>Exhibitor Services</label>
+            </value>
+            <value>
+                <fullName>Exhibit Program Management</fullName>
+                <default>false</default>
+                <label>Exhibit Program Management</label>
+            </value>
+            <value>
+                <fullName>Exhibit Rental</fullName>
+                <default>false</default>
+                <label>Exhibit Rental</label>
+            </value>
+            <value>
+                <fullName>GES Customer Service</fullName>
+                <default>false</default>
+                <label>GES Customer Service</label>
+            </value>
+            <value>
+                <fullName>GES Venue/Hotel Services</fullName>
+                <default>false</default>
+                <label>GES Venue/Hotel Services</label>
+            </value>
+            <value>
+                <fullName>Junk</fullName>
+                <default>false</default>
+                <label>Junk</label>
+            </value>
+            <value>
+                <fullName>Measurement &amp; Intelligence</fullName>
+                <default>false</default>
+                <label>Measurement &amp; Intelligence</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>Poken</fullName>
+                <default>false</default>
+                <label>Poken</label>
+            </value>
+            <value>
+                <fullName>Sponsorship</fullName>
+                <default>false</default>
+                <label>Sponsorship</label>
+            </value>
+            <value>
+                <fullName>Strategy</fullName>
+                <default>false</default>
+                <label>Strategy</label>
+            </value>
+            <value>
+                <fullName>Strategy / Experiential Design</fullName>
+                <default>false</default>
+                <label>Strategy / Experiential Design</label>
+            </value>
+            <value>
+                <fullName>Touring Exhibitions</fullName>
+                <default>false</default>
+                <label>Touring Exhibitions</label>
+            </value>
+            <value>
+                <fullName>Trade Show/Conference Management</fullName>
+                <default>false</default>
+                <label>Trade Show/Conference Management</label>
+            </value>
+            <value>
+                <fullName>VISIT</fullName>
+                <default>false</default>
+                <label>VISIT</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

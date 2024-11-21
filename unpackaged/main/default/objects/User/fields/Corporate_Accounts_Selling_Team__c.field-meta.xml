@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Corporate_Accounts_Selling_Team__c</fullName>
+    <label>Corporate Accounts Selling Team</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Campanaro</fullName>
+                <default>false</default>
+                <label>Campanaro</label>
+            </value>
+            <value>
+                <fullName>Jeewek</fullName>
+                <default>false</default>
+                <label>Jeewek</label>
+            </value>
+            <value>
+                <fullName>Newman</fullName>
+                <default>false</default>
+                <label>Newman</label>
+            </value>
+            <value>
+                <fullName>Thomas</fullName>
+                <default>false</default>
+                <label>Thomas</label>
+            </value>
+            <value>
+                <fullName>Rosenow</fullName>
+                <default>false</default>
+                <label>Rosenow</label>
+            </value>
+            <value>
+                <fullName>Porter</fullName>
+                <default>false</default>
+                <label>Porter</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

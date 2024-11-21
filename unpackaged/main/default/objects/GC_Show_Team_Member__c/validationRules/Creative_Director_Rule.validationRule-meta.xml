@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Creative_Director_Rule</fullName>
+    <active>true</active>
+    <description>Rules for Creative Directors</description>
+    <errorConditionFormula>AND(
+    ISPICKVAL(Show_Role__c, &#39;Creative Director&#39;),
+   (NOT(INCLUDES(User__r.GC_Show_Role__c, &#39;GC Creative Director&#39;)))
+)</errorConditionFormula>
+    <errorMessage>Only Users with Creative Director Profiles can have the GC Creative Director Role.</errorMessage>
+</ValidationRule>

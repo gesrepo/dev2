@@ -1,0 +1,150 @@
+<apex:page standardStylesheets="true" showHeader="false" sidebar="false" tabStyle="Account" applyHtmlTag="false" applyBodyTag="false" controller="ExhibitBrandEdit">
+    <html xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        
+        <head>
+            <apex:includeScript value="{!$Resource.jQuery}" />
+            <apex:stylesheet value="{!URLFOR($Resource.Lightning_Design_System, 'assets/styles/salesforce-lightning-design-system.min.css')}" />
+            <apex:stylesheet value="{!URLFOR($Resource.GC_Assets, 'GC_Assets/css/GC_Styles.css')}" />
+            <apex:includeScript value="{!URLFOR($Resource.GC_Assets, 'GC_Assets/js/GC_init.js')}" />
+            <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>    -->
+<script src="https://cdn.jsdelivr.net/alasql/0.3/alasql.min.js"></script>
+<script>
+$("document").ready( function () {
+    $("#dateSelectionDialog").show();
+}); 
+
+function closeItemPopup()
+{
+    console.log('Inside selectDates');
+    
+    $("#dateSelectionDialog").hide();
+    return false;
+    
+    
+}  
+
+</script>
+
+</head>
+
+<body>
+<div class="slds">
+<c:GC_Community_Header />   
+<div class="slds-page-header gc-navigation--subHeader" role="banner">
+<div class="slds-media">
+<div class="slds-media__figure">
+<apex:image url="{!URLFOR($Resource.GC_Assets, 'GC_Assets/img/custom13_60_teal.png')}" />
+</div>
+<div class="slds-media__body">
+<p class="slds-page-header__title slds-align-middle">
+<span> Exhibit Brand Edit Page</span>
+<span class="slds-truncate">{!ExhibitName}</span> 
+</p>
+</div>
+</div>
+</div>
+
+<apex:form >
+<apex:pagemessages />  
+<apex:pageBlock title="Exhibit Brand Edit">
+
+<apex:pageBlockButtons >
+<apex:commandButton action="{!BrandSave}" value="Save" styleClass="slds-button slds-button--brand gc-teal-button"/>
+<apex:commandButton value="Back" immediate="true" action="{!BrandCancel}" styleClass="slds-button slds-button--brand gc-teal-button"/>
+</apex:pageBlockButtons>
+
+<apex:pageBlockSection title="Brand Details" id="pbSection">           
+
+<apex:outputText label="Exhibit id" value="{!Exhibitname}"/>
+<apex:outputText label="Congress ID" value="{!congName}"/>
+<apex:pageBlockSectionItem >
+<apex:outputLabel value="Brand Name" />
+<apex:actionRegion >
+<apex:inputField value="{!b.Brand_Name__c}">
+<apex:actionSupport event="onchange" action="{!changeBrandCatandBusUnit}" reRender="pbSection"/>
+</apex:inputField>
+</apex:actionRegion>
+</apex:pageBlockSectionItem>
+
+<!-- <apex:inputField value="{!b.Brand_Name__c}" required="True">    
+<apex:actionSupport event="onchange" action="{!changeBrandCatandBusUnit}" reRender="pbSection"  /> 
+</apex:inputField> -->
+            <apex:inputField value="{!b.Brand_Team_Contact__c}" required="{!reuiredStatus}"/>
+            <apex:inputField value="{!b.Brand_Category__c}"/>
+            <apex:inputField value="{!b.Contact_Not_Listed__c}"/>
+            <apex:inputField value="{!b.Business_Unit__c}"/>
+            <apex:inputField value="{!b.Finance_Coordinator__c}"/>
+            <apex:inputField value="{!b.COE_Supported__c}"/>
+        </apex:pageBlockSection>    
+        <apex:pageBlockSection id="pbSection2"> 
+            
+            
+            <apex:inputField value="{!b.Booth_Space_Cost_Estimated__c}"/>
+            <!--<apex:inputField value="{!b.Funding_Provider_Region__c}" required="True" />  Amarab 03/25/2021 SCA-878 Remove required setting-->
+            <apex:inputField value="{!b.Funding_Provider_Region__c}"/>
+            <apex:inputField value="{!b.Booth_Space_Cost_Actual__c}"/>
+            <!--<apex:inputField value="{!b.Funding_Provider_Brand__c}" required="True" />  Amarab 03/25/2021 SCA-878 Remove required setting-->
+            <apex:inputField value="{!b.Funding_Provider_Brand__c}"/>
+            <apex:inputField value="{!b.Estimated_Cost_Origination__c}"/>
+            <!--<apex:inputField value="{!b.Funding_Provider_Department__c}" required="True" />  Amarab 03/25/2021 SCA-878 Remove required setting-->
+            <apex:inputField value="{!b.Funding_Provider_Department__c}"/>
+            <apex:inputField value="{!b.Exhibit_Costs_Estimated__c}"/>
+            <!--<apex:inputField value="{!b.Cost_Center__c}" required="True" />  Amarab 03/25/2021 SCA-878 Remove required setting-->
+            <apex:inputField value="{!b.Cost_Center__c}"/>
+            <apex:inputField value="{!b.Exhibit_Costs_Actual__c}"/>
+            <!--<apex:inputField value="{!b.Company_Code__c}" required="True" />  Amarab 03/25/2021 SCA-878 Remove required setting-->  
+            <apex:inputField value="{!b.Company_Code__c}"/>  
+            <apex:pageBlockSectionItem >
+                <apex:outputLabel value="Canceled" />
+                <apex:actionRegion >
+                    <apex:inputField value="{!b.Canceled__c}">
+                        <apex:actionSupport event="onchange" action="{!cancelOperation}" reRender="pbSection2"/>
+                    </apex:inputField>
+                </apex:actionRegion>
+            </apex:pageBlockSectionItem> 
+            <apex:inputField value="{!b.CurrencyIsoCode}"/>
+            <!--<apex:outputText ></apex:outputText>-->
+            <apex:inputField value="{!b.Reason_for_Cancellation__c}" required="{!cancelReason}"/>
+            <apex:outputText ></apex:outputText>           
+            <apex:outputField value="{!b.Cancelled_Date__c}"/>
+            <br/>
+            <!--<apex:inputField value="{!b.Sponsorship__c}"/>-->
+        </apex:pageBlockSection>
+        
+    </apex:pageBlock>
+    
+    <div class="slds">
+        <div id="dateSelectionDialog"  align = "center" style="display:none;">
+            <apex:outputPanel id="HomeGesPanel" rendered="{!autoBrand=='true'}" >
+                <div role="alertdialog" class="slds-modal slds-fade-in-open slds-modal--prompt prompt">
+                    <div class="slds-modal__container" style="width:400px;height: 300px;">
+                        <div class="slds-modal__header">
+                            <button class="slds-button slds-modal__close slds-button--icon-inverse prompt_close" title="Close" style="color: #b41955!important;" onclick="closeItemPopup();return false;">
+                                <svg aria-hidden="true" class="slds-button__icon slds-button__icon--large">
+                                    <use href="{!URLFOR($Resource.Lightning_Design_System, '/assets/icons/action-sprite/svg/symbols.svg#close')}"></use>
+                                </svg>
+                                <span class="slds-assistive-text">Close</span>
+                            </button>   
+                            <!-- <h2 class="slds-text-heading--medium" id="prompt-heading-id">Please Note</h2>    -->
+                        </div>
+                        <div class="slds-modal__content slds-p-around--medium">
+                            <h3 class="slds-section-title--divider" style="display: inherit;"><b>At least one Brand is required for an Activity.</b></h3>                                 
+                            <br/>
+                        </div>  
+                        <div class="slds-modal__footer slds-theme--default">  
+                            <button class="slds-button slds-button--brand gc-teal-button prompt_close" id="closeButton" onclick="closeItemPopup();return false;" >OK</button> 
+                        </div>
+                    </div>
+                </div>
+                <div class="slds-backdrop slds-backdrop--open prompt"></div>
+            </apex:outputPanel>
+        </div>
+    </div>
+    
+</apex:form>
+
+
+</div> 
+</body>
+</html>
+</apex:page>

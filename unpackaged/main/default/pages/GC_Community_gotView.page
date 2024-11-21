@@ -1,0 +1,479 @@
+<apex:page standardStylesheets="true" showHeader="false" sidebar="false" applyHtmlTag="false" applyBodyTag="false" docType="html-5.0" controller="GC_GESOrderTaskViewController" action="{!loadAction}">
+    <html xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        
+        <head>
+            <apex:includeScript value="{!$Resource.jQuery}" />
+            <apex:stylesheet value="{!URLFOR($Resource.Lightning_Design_System, 'assets/styles/salesforce-lightning-design-system.min.css')}" />
+            <apex:stylesheet value="{!URLFOR($Resource.GC_Assets, 'GC_Assets/css/GC_Styles.css')}" />
+            <apex:includeScript value="{!URLFOR($Resource.GC_Assets, 'GC_Assets/js/GC_init.js')}" />    
+        </head>
+        
+        <body>
+            <div class="slds">
+                <c:GC_Community_Header />
+                <apex:outputPanel rendered="{!got != null}">
+                    <div class="slds-page-header gc-navigation--subHeader" role="banner">
+                        <div class="slds-media">
+                            <div class="slds-media__figure">
+                                <apex:image url="{!URLFOR($Resource.GC_Assets, 'GC_Assets/img/custom13_60_teal.png')}" />
+                            </div>
+                            <div class="slds-media__body">
+                                <p class="slds-page-header__title slds-truncate slds-align-middle">GES Order Task View Page for Task: {!got.Name}</p>
+                                <p class="slds-text-body--small slds-page-header__info">{!got.Owner.Name} • &nbsp;
+                                    <apex:outputField value="{!got.CreatedDate}" />
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </apex:outputPanel>
+                <apex:outputPanel id="taskDetail">
+                    <apex:form style="width: 100%">
+                        <apex:pageMessages id="messages" />
+                        <div class="slds-grid slds-wrap gc-main-body">
+                            <!-- PAGE HEADER -->
+                            <div class="slds-page-header slds-col slds-size--1-of-1" role="banner">
+                                <div class="slds-grid">
+                                    <div class="slds-col slds-has-flexi-truncate">
+                                        <div class="slds-media">
+                                            <div class="slds-media__body">
+                                                <h1 class="slds-text-heading--medium slds-m-right--small slds-truncate slds-align-middle">GES Order Task</h1>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="slds-col slds-no-flex">
+                                        <div class="slds-grid">
+                                            <div class="slds-button">
+                                                <apex:outputPanel rendered="{!!isReadOnlyView}">
+                                                    <apex:commandButton title="To go back to the order" action="{!URLFOR($Page.GC_Community_OrderView,null,[orderId=orderId,showId=showId])}" value="Back to Order" id="BackToOrderButton" styleClass="slds-button slds-button--brand gc-teal-button"/>
+                                                    <apex:commandButton title="{!TakeOwnershipTitle}" action="{!takeOwnership}" value="Take Ownership" id="takeOwnershipButton" styleClass="slds-button slds-button--brand gc-teal-button" reRender="messages,taskDetail" rendered="{!canTakeOwnership}" oncomplete="location.reload();" />
+                                                    <apex:commandButton title="{!EditTitle}" action="{!editAction}" value="Edit" id="editRecord" styleClass="slds-button slds-button--brand gc-teal-button" reRender="messages,taskDetail" rendered="{!taskPermissions.CanCommunityEdit}" />
+                                                    <apex:commandButton title="{!CloneTitle}" action="{!cloneAction}" value="Clone" styleClass="slds-button slds-button--brand gc-teal-button" reRender="messages,taskDetail" rendered="{!taskPermissions.CanClone}" />
+                                                    <apex:commandButton title="{!CancelTitle}" action="{!cancelAction}" value="Cancel Task" styleClass="slds-button slds-button--brand gc-teal-button" reRender="messages,taskDetail" rendered="{!taskPermissions.CanCommunityCancel}" />
+                                                    <apex:commandButton title="{!SubmitTitle}" action="{!submitRecord}" value="Submit" id="submitRecord" styleClass="slds-button slds-button--brand gc-teal-button" reRender="messages,taskDetail" rendered="{!taskPermissions.CanSubmit}" />
+                                                    <apex:commandButton title="{!ReviseTitle}" action="{!reviseAction}" value="Revise" styleClass="slds-button slds-button--brand gc-teal-button" reRender="messages,taskDetail" rendered="{!taskPermissions.CanRevise}" />
+                                                    <apex:commandButton title="To go to the next order task" action="{!nextOrderTask}" value="Next Order Task" id="nxtButton" styleClass="slds-button slds-button--brand gc-teal-button"/>
+                                                </apex:outputPanel>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- /PAGE HEADER -->
+                            <!-- FORM -->
+                            <section class="slds-col--padded slds-size--1-of-1 gc-section-margin-bottom">
+                                <!-- GES ORDER TASK DETAIL -->
+                                <fieldset class="slds-form--compound gc-section-margin-top">
+                                    <legend class="slds-form-element__label slds-text-title--caps gc-section-margin-top">GES Order Task Detail</legend>
+                                    <div class="slds-grid slds-grid--align-center">
+                                        <!-- Left Side -->
+                                        <div class="slds-col--padded slds-size--1-of-1 slds-medium-size--1-of-1 slds-large-size--1-of-2">
+                                            <div class="slds-form-element">
+                                                <apex:outputLabel value="Order Number" styleClass="slds-form-element__label" />
+                                                <div class="slds-form-element__control">
+                                                    <apex:outputLink value="{!$Page.GC_Community_OrderView}">
+                                                        <apex:outputText value="{!got.Order__r.Name}" styleClass="slds-form-element__static" />
+                                                        <apex:param name="orderId" value="{!orderId}" assignTo="{!orderId}" />
+                                                        <apex:param name="showId" value="{!showId}" assignTo="{!showId}" />
+                                                    </apex:outputLink>
+                                                </div>
+                                            </div>
+                                            <!-- Status-->
+                                            <div class="slds-form-element">
+                                                <apex:outputLabel value="Status" for="status" styleClass="slds-form-element__label" />
+                                                <div class="slds-form-element__control">
+                                                    <apex:outputText value="{!got.Status__c}" styleClass="slds-form-element__static" id="status" />
+                                                </div>
+                                            </div>
+                                            <!-- Revision-->
+                                            <div class="slds-form-element">
+                                                <apex:outputLabel value="Revision" for="revision" styleClass="slds-form-element__label" />
+                                                <div class="slds-form-element__control">
+                                                    <apex:outputText value="{!got.Revision__c}" styleClass="slds-form-element__static" id="revision" />
+                                                </div>
+                                            </div>
+                                            <!-- Last Revision-->
+                                            <div class="slds-form-element">
+                                                <apex:outputLabel value="Last Revision" for="lastRevision" styleClass="slds-form-element__label" />
+                                                <div class="slds-form-element__control">
+                                                    <apex:outputText value="{!got.Last_Revision__c}" styleClass="slds-form-element__static" id="lastRevision" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- Right Side -->
+                                        <div class="slds-col--padded slds-size--1-of-1 slds-medium-size--1-of-1 slds-large-size--1-of-2">
+                                            <!-- Owner -->
+                                            <!--  <div class="slds-form-element">
+<apex:outputLabel value="Owner" for="owner" styleClass="slds-form-element__label"/>
+<div class="slds-form-element__control">
+<apex:outputText value="{!got.Owner}" styleClass="slds-form-element__static" id="owner"/>
+</div>
+</div> -->
+                                            <!-- Show Name-->
+                                            <div class="slds-form-element">
+                                                <apex:outputLabel value="Show Name" for="showName" styleClass="slds-form-element__label" />
+                                                <div class="slds-form-element__control">
+                                                    <apex:outputText value="{!got.Show_Name__c}" styleClass="slds-form-element__static" id="showName" />
+                                                </div>
+                                            </div>
+                                            <!-- Submitted Date-->
+                                            <div class="slds-form-element">
+                                                <apex:outputLabel value="Submitted Date" for="submitDate" styleClass="slds-form-element__label" />
+                                                <div class="slds-form-element__control">
+                                                    <apex:outputField value="{!got.Submitted_Date__c}" styleClass="slds-form-element__static" id="submitDate" />
+                                                </div>
+                                            </div>
+                                            <!-- Previous Revision-->
+                                            <div class="slds-form-element">
+                                                <apex:outputLabel value="Previous Revision" for="preRevision" styleClass="slds-form-element__label" />
+                                                <div class="slds-form-element__control">
+                                                    <apex:outputText value="{!got.Previous_Revision__r.Name}" styleClass="slds-form-element__static" id="preRevision" />
+                                                </div>
+                                            </div>
+                                            <!-- Show Management Field-->
+                                            <div class="slds-form-element">
+                                                <apex:outputLabel value="Show Management Field" for="showMgtField" styleClass="slds-form-element__label" />
+                                                <div class="slds-form-element__control">
+                                                    <apex:outputText value="{!got.Show_Management_Field__c}" styleClass="slds-form-element__static" id="showMgtField" escape="false" />
+                                                </div>
+                                            </div>
+                                            
+                                            <!-- Opportunity Name
+<div class="slds-form-element">
+<apex:outputLabel value="Opportunity Name" for="oppNameField" styleClass="slds-form-element__label" />
+<div class="slds-form-element__control">
+<apex:outputText value="{!got.Order__r.Connect2_Show__r.Opportunity_Name__c}" styleClass="slds-form-element__static" id="oppNameField" escape="false" />
+</div> 
+</div> -->
+                                            
+                                        </div>
+                                    </div>
+                                </fieldset>
+                                <!-- /GES ORDER TASK DETAIL -->
+                                <!-- AREA INFORMATION -->
+                                <fieldset class="slds-form--compound gc-section-margin-top">
+                                    <legend class="slds-form-element__label slds-text-title--caps gc-section-margin-top">Area Information</legend>
+                                    <div class="slds-grid">
+                                        <!-- Left Side -->
+                                        <div class="slds-col--padded slds-size--1-of-1 slds-medium-size--1-of-2 slds-large-size--1-of-2">
+                                            <!-- Venue Location -->
+                                            <div class="slds-form-element">
+                                                <apex:outputLabel value="Venue Location" for="venueLocation" styleClass="slds-form-element__label" />
+                                                <div class="slds-form-element__control">
+                                                    <apex:outputText value="{!got.SA_Venue_Location__r.Name}" styleClass="slds-form-element__static" id="venueLocation" />
+                                                </div>
+                                            </div>
+                                            <!-- Onsite Contact Person--> <!--SAL-636 -->
+                                            <div class="slds-form-element">
+                                                <apex:outputLabel value="Onsite Contact Person" for="onsitePerson" styleClass="slds-form-element__label" rendered="{!(taskFieldManager.Onsite_Contact_Person__c!= $Label.GC_Label_TFM_Hide)}"/>
+                                                <apex:outputText rendered="{!(taskFieldManager.Onsite_Contact_Person__c== $Label.GC_Label_TFM_Hide)}"></apex:outputText>
+                                                <div class="slds-form-element__control">
+                                                    <apex:outputText value="{!got.Onsite_Contact_Person_FML__c}" styleClass="slds-form-element__static" id="onsitePerson" rendered="{!(taskFieldManager.Onsite_Contact_Person__c!= $Label.GC_Label_TFM_Hide)}"/>
+                                                    <apex:outputText rendered="{!(taskFieldManager.Onsite_Contact_Person__c== $Label.GC_Label_TFM_Hide)}"></apex:outputText>
+                                                </div>
+                                            </div>
+                                            
+                                            <!-- Onsite Contact Person Formula--> <!--SAL-636 -->
+                                            <div class="slds-form-element">
+                                                <apex:outputLabel value="Onsite Contact Person Number" for="onsitePersonFML" styleClass="slds-form-element__label" rendered="{!(taskFieldManager.Onsite_Contact_Person_Number__c!= $Label.GC_Label_TFM_Hide)}" />
+                                                <apex:outputText rendered="{!(taskFieldManager.Onsite_Contact_Person_Number__c== $Label.GC_Label_TFM_Hide)}"></apex:outputText>
+                                                <div class="slds-form-element__control">
+                                                    <apex:outputText value="{!got.Onsite_Contact_Person_Number_FML__c}" styleClass="slds-form-element__static" id="onsitePersonFML" rendered="{!(taskFieldManager.Onsite_Contact_Person_Number__c!= $Label.GC_Label_TFM_Hide)}"/>
+                                                    <apex:outputText rendered="{!(taskFieldManager.Onsite_Contact_Person_Number__c== $Label.GC_Label_TFM_Hide)}"></apex:outputText>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- Right Side -->
+                                        <div class="slds-col--padded slds-size--1-of-1 slds-medium-size--1-of-1 slds-large-size--1-of-2">
+                                            <!-- Delivery Location -->
+                                            <div class="slds-form-element">
+                                                <apex:outputLabel value="Delivery Location" for="boothArea" styleClass="slds-form-element__label" />
+                                                <div class="slds-form-element__control">
+                                                    <apex:outputText value="{!got.Formula_Booth_Area__c}" styleClass="slds-form-element__static" id="boothArea" />
+                                                </div>
+                                            </div>
+                                            <div class="slds-form-element">
+                                                <div class="slds-form-element__control">
+                                                </div>
+                                            </div>
+                                            <!-- Delivery Area--> <!-- SAL-636 -->
+                                            <div class="slds-form-element">
+                                                <apex:outputLabel value="Delivery Area" for="deliveryLocation" styleClass="slds-form-element__label" rendered="{!(taskFieldManager.Delivery_Area__c!= $Label.GC_Label_TFM_Hide)}"/>
+                                                <apex:outputText rendered="{!(taskFieldManager.Delivery_Area__c== $Label.GC_Label_TFM_Hide)}"></apex:outputText>
+                                                <div class="slds-form-element__control">
+                                                    <apex:outputText value="{!got.Delivery_Location__c}" styleClass="slds-form-element__static" id="deliveryLocation" rendered="{!(taskFieldManager.Delivery_Area__c!= $Label.GC_Label_TFM_Hide)}" />
+                                                    <apex:outputText rendered="{!(taskFieldManager.Delivery_Area__c== $Label.GC_Label_TFM_Hide)}"></apex:outputText>
+                                                </div>
+                                            </div>
+                                            
+                                        </div>
+                                    </div>
+                                </fieldset>
+                                <!-- /AREA INFORMATION -->
+                                <fieldset class="slds-form--compound gc-section-margin-top">
+                                    <legend class="slds-form-element__label slds-text-title--caps gc-section-margin-top">Area Schedule</legend>
+                                    <div class="slds-grid">
+                                        <!-- Left Side -->
+                                        <div class="slds-col--padded slds-size--1-of-1 slds-medium-size--1-of-1 slds-large-size--1-of-2">
+                                            <!-- Delivery Date/time--> <!-- SAL-636 -->
+                                            <div class="slds-form-element">
+                                                <apex:outputLabel value="Delivery Date/Time" for="deliveryDate" styleClass="slds-form-element__label" rendered="{!(taskFieldManager.Installation_Delivery_Date_Time__c!= $Label.GC_Label_TFM_Hide)}"/>
+                                                <apex:outputText rendered="{!(taskFieldManager.Installation_Delivery_Date_Time__c== $Label.GC_Label_TFM_Hide)}"></apex:outputText>
+                                                <div class="slds-form-element__control">
+                                                    <apex:outputField value="{!got.Delivery_Date_Time__c}" styleClass="slds-form-element__static" id="deliveryDate" rendered="{!(taskFieldManager.Installation_Delivery_Date_Time__c!= $Label.GC_Label_TFM_Hide)}" />
+                                                    <apex:outputText rendered="{!(taskFieldManager.Installation_Delivery_Date_Time__c== $Label.GC_Label_TFM_Hide)}"></apex:outputText> 
+                                                </div>
+                                            </div>
+                                            
+                                            
+                                            <!-- Completion Date/time--> <!-- SAL-636 -->
+                                            <div class="slds-form-element">
+                                                <apex:outputLabel value="Completion Date/Time" for="completionDate" styleClass="slds-form-element__label" rendered="{!(taskFieldManager.Completion_Date_Time__c!= $Label.GC_Label_TFM_Hide)}" />
+                                                <apex:outputText rendered="{!(taskFieldManager.Completion_Date_Time__c== $Label.GC_Label_TFM_Hide)}"></apex:outputText>
+                                                <div class="slds-form-element__control">
+                                                    <apex:outputField value="{!got.Completion_Date_Time__c}" styleClass="slds-form-element__static" id="completionDate" rendered="{!(taskFieldManager.Completion_Date_Time__c!= $Label.GC_Label_TFM_Hide)}"/>
+                                                    <apex:outputText rendered="{!(taskFieldManager.Completion_Date_Time__c== $Label.GC_Label_TFM_Hide)}"></apex:outputText>                 
+                                                </div>
+                                            </div>
+                                            <!-- Removal Date/time-->
+                                            <div class="slds-form-element">
+                                                <apex:outputLabel value="Removal Date/Time" for="removalDate" styleClass="slds-form-element__label" rendered="{!(taskFieldManager.Removal_Date_Time__c!= $Label.GC_Label_TFM_Hide)}"/>
+                                                <apex:outputText rendered="{!(taskFieldManager.Removal_Date_Time__c== $Label.GC_Label_TFM_Hide)}"></apex:outputText>
+                                                <div class="slds-form-element__control">
+                                                    <apex:outputField value="{!got.Removal_Date_Time__c}" styleClass="slds-form-element__static" id="removalDate" rendered="{!(taskFieldManager.Removal_Date_Time__c!= $Label.GC_Label_TFM_Hide)}"/>
+                                                    <apex:outputText rendered="{!(taskFieldManager.Removal_Date_Time__c== $Label.GC_Label_TFM_Hide)}"></apex:outputText>
+                                                </div>
+                                            </div>
+                                            
+                                        </div>
+                                        <!-- Right Side -->
+                                        <div class="slds-col slds-size--1-of-1 slds-medium-size--1-of-1 slds-large-size--1-of-2">
+                                            <div class="slds-form--horizontal">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </fieldset>
+                                <!-- DEPARTMENT AND SERVICE -->
+                                <fieldset class="slds-form--compound gc-section-margin-top">
+                                    <legend class="slds-form-element__label slds-text-title--caps gc-section-margin-top">Department</legend>
+                                    <div class="slds-grid">
+                                        <!-- Left Side -->
+                                        <div class="slds-col--padded slds-size--1-of-1 slds-medium-size--1-of-1 slds-large-size--1-of-2">
+                                            <!-- Department -->
+                                            <div class="slds-form-element">
+                                                <apex:outputLabel value="Department" for="department" styleClass="slds-form-element__label" />
+                                                <div class="slds-form-element__control">
+                                                    <apex:outputText value="{!got.Department__r.Name}" styleClass="slds-form-element__static" id="department" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- Right Side -->
+                                        <!-- SAL-636 -->
+                                        <div class="slds-col--padded slds-size--1-of-1 slds-medium-size--1-of-1 slds-large-size--1-of-2">
+                                            <div class="slds-form-element">
+                                                <apex:outputLabel value="Budget Code" for="budgetCode" styleClass="slds-form-element__label" 
+                                                                  rendered="{!(taskFieldManager.Budget_Code__c!= $Label.GC_Label_TFM_Hide)}"/>
+                                                <apex:outputText rendered="{!(taskFieldManager.Budget_Code__c== $Label.GC_Label_TFM_Hide)}"></apex:outputText>
+                                                <div class="slds-form-element__control">
+                                                    <apex:outputText value="{!got.Budget_Code__c}" styleClass="slds-form-element__static" id="budgetCode" rendered="{!(taskFieldManager.Budget_Code__c!= $Label.GC_Label_TFM_Hide)}"/>
+                                                    <apex:outputText rendered="{!(taskFieldManager.Budget_Code__c== $Label.GC_Label_TFM_Hide)}"></apex:outputText>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+                                </fieldset>
+                                <!-- /DEPARTMENT AND SERVICE -->
+                                <!-- ITEM -->
+                                <fieldset class="slds-form--compound gc-section-margin-top">
+                                    <legend class="slds-form-element__label slds-text-title--caps gc-section-margin-top">Item</legend>
+                                    <div class="slds-grid">
+                                        <!-- Left Side -->
+                                        <div class="slds-col--padded slds-size--1-of-1 slds-medium-size--1-of-1 slds-large-size--1-of-2">
+                                            <!-- Item Description -->
+                                            <div class="slds-form-element">
+                                                <apex:outputLabel value="Item Description" for="itemDescription" styleClass="slds-form-element__label" />
+                                                <div class="slds-form-element__control">
+                                                    <apex:outputText value="{!got.Description__c}" styleClass="slds-form-element__static" id="itemDescription" />
+                                                </div>
+                                            </div>
+                                            <!-- Price--> <!-- SAL-636-->
+                                            <div class="slds-form-element">
+                                                <apex:outputLabel value="Price" for="price" styleClass="slds-form-element__label" 
+                                                                  rendered="{!(taskFieldManager.Price__c!= $Label.GC_Label_TFM_Hide)}"/>
+                                                <apex:outputText rendered="{!(taskFieldManager.Price__c== $Label.GC_Label_TFM_Hide)}"></apex:outputText>
+                                                <div class="slds-form-element__control">
+                                                    <apex:outputText value="{!got.Price__c}" styleClass="slds-form-element__static" id="price" 
+                                                                     rendered="{!(taskFieldManager.Price__c!= $Label.GC_Label_TFM_Hide)}"/>
+                                                    <apex:outputText rendered="{!(taskFieldManager.Price__c== $Label.GC_Label_TFM_Hide)}"></apex:outputText>
+                                                </div>
+                                            </div>
+                                            
+                                            <!-- UOM-->
+                                            <div class="slds-form-element">
+                                                <apex:outputLabel value="UOM" for="uom" styleClass="slds-form-element__label" />
+                                                <div class="slds-form-element__control">
+                                                    <apex:outputText value="{!got.UOM__c}" styleClass="slds-form-element__static" id="uom" />
+                                                </div>
+                                            </div>
+                                            <!-- Delivery Location Discount -->
+                                            <div class="slds-form-element">
+                                                <apex:outputLabel value="Delivery Location Discount" for="boothDiscount" styleClass="slds-form-element__label" rendered="{!(taskFieldManager.Booth_Area_Discount__c!= $Label.GC_Label_TFM_Hide)}" />
+                                                <apex:outputText rendered="{!(taskFieldManager.Booth_Area_Discount__c== $Label.GC_Label_TFM_Hide)}"></apex:outputText>
+                                                
+                                                <div class="slds-form-element__control">
+                                                    <apex:outputText value="{!got.Booth_Area_Discount__c}" styleClass="slds-form-element__static" id="boothDiscount" rendered="{!(taskFieldManager.Booth_Area_Discount__c!= $Label.GC_Label_TFM_Hide)}"/>
+                                                    <apex:outputText rendered="{!(taskFieldManager.Booth_Area_Discount__c== $Label.GC_Label_TFM_Hide)}"></apex:outputText>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- Right Side -->
+                                        <div class="slds-col--padded slds-size--1-of-1 slds-medium-size--1-of-1 slds-large-size--1-of-2">
+                                            <!-- Item Number -->
+                                            <div class="slds-form-element">
+                                                <apex:outputLabel value="Item Number" for="itemNumber" styleClass="slds-form-element__label" />
+                                                <div class="slds-form-element__control">
+                                                    <apex:outputText value="{!got.Item_Number__c}" styleClass="slds-form-element__static" id="itemNumber" />
+                                                </div>
+                                            </div>
+                                            <!-- File Reference Link --> <!-- SAL-636 -->
+                                            <div class="slds-form-element">
+                                                <apex:outputLabel value="File Reference Link" for="fileLink" styleClass="slds-form-element__label" rendered="{!(taskFieldManager.File_Reference_Link_Folder__c!= $Label.GC_Label_TFM_Hide)}" />
+                                                <apex:outputText rendered="{!(taskFieldManager.File_Reference_Link_Folder__c== $Label.GC_Label_TFM_Hide)}"></apex:outputText>
+                                                <div class="slds-form-element__control">
+                                                    <apex:outputText value="{!got.File_Reference_Link__c}" styleClass="slds-form-element__static" id="fileLink" rendered="{!(taskFieldManager.File_Reference_Link_Folder__c!= $Label.GC_Label_TFM_Hide)}"/>
+                                                    <apex:outputText rendered="{!(taskFieldManager.File_Reference_Link_Folder__c== $Label.GC_Label_TFM_Hide)}"></apex:outputText>
+                                                </div>
+                                            </div>
+                                            <!-- Item Template -->
+                                            <div class="slds-form-element">
+                                                <apex:outputLabel value="Item Template" for="itemTemplate" styleClass="slds-form-element__label" />
+                                                <div class="slds-form-element__control">
+                                                    <apex:outputText value="{!got.Item_Template__c}" styleClass="slds-form-element__static" id="itemTemplate" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </fieldset>
+                                <!-- /ITEM -->
+                                <!-- ITEM OPTIONS -->
+                                <c:GC_Community_ItemOptions gotAttribute="{!got}" coreApiAttribute="{!coreApi}" editMode="false" taskFieldMan="{!taskFieldManager}" >
+                                </c:GC_Community_ItemOptions>
+                                <apex:outputPanel rendered="{!canRecall}">
+                                    <fieldset class="slds-form--compound gc-section-margin-top">
+                                        <legend class="slds-form-element__label slds-text-title--caps gc-section-margin-top">Recall Approval Process</legend>
+                                        <div class="slds-grid">
+                                            <div class="slds-col--padded slds-size--1-of-1 slds-medium-size--1-of-1 slds-large-size--1-of-1">
+                                                <div class="slds-form-element">
+                                                    <apex:outputLabel value="Comments" for="recallComments" styleClass="slds-form-element__label" />
+                                                    <div class="slds-form-element__control">
+                                                        <apex:inputText value="{!recallComments}" styleClass="slds-form-element__static" id="recallComments" style="width:75%" />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="slds-grid gc-section-margin-top">
+                                            <div class="slds-col--padded slds-size--1-of-1 slds-medium-size--1-of-1 slds-large-size--1-of-1">
+                                                <div class="slds-form-element">
+                                                    <apex:commandButton value="Recall Approval Process" action="{!recallApprovalProcess}" title="Recall this task to edit the order." styleClass="slds-button slds-button--brand gc-teal-button">
+                                                        <apex:param name="showId" value="{!show.Id}" />
+                                                        <apex:param name="orderId" value="{!order.Id}" />
+                                                        <apex:param name="gotId" value="{!got.Id}" />
+                                                    </apex:commandButton>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </fieldset>
+                                </apex:outputPanel>
+                                <!-- /ITEM OPTIONS -->
+                            </section>
+                            <!-- /FORM -->
+                        </div>
+                    </apex:form>
+                </apex:outputPanel>
+                <div class="slds-page-header slds-col slds-size--1-of-1" role="banner">
+                    <div class="slds-grid">
+                        <div class="slds-col slds-has-flexi-truncate">
+                            <div class="slds-media">
+                                <div class="slds-media__body">
+                                    <c:GC_TaskHistoryComponent recordLimits="50" mysObject="{!got}" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <apex:form >
+                    <div class="slds-card__header slds-grid" role="banner" style="text-align: center;">
+                        <div class="slds-col slds-no-flex--align-center">
+                            <div class="slds-grid--align-center">
+                                <apex:commandLink target="_blank" action="{!URLFOR($Page.GC_FileUploadPage, null, [recordId = got.Id, recordName = got.Name])}">
+                                    <div class="slds-button" >    
+                                        <apex:commandButton value="Upload Files" styleClass="slds-button slds-button--brand gc-teal-button" />
+                                        <apex:param name="taskId" value="{!got.Id}" />
+                                    </div>
+                                </apex:commandLink>
+                            </div>
+                        </div>
+                    </div>
+                </apex:form>
+                <!--<apex:form >
+<c:GC_File_Upload recordId="{!got.id}" ></c:GC_File_Upload>                                                   
+</apex:form>-->
+                <div class="slds-page-header slds-col slds-size--1-of-1" role="banner">
+                    <div class="slds-grid">
+                        <div class="slds-col slds-has-flexi-truncate">
+                            <div class="slds-media">
+                                <div class="slds-media__body" id="relatedListId">
+                                    <apex:relatedList subject="{!got}" list="AttachedContentDocuments" />
+                                    <apex:relatedList subject="{!got}" list="AttachedContentNotes" />
+                                    <apex:relatedList subject="{!got}" list="CombinedAttachments" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="slds-page-header slds-col slds-size--1-of-1" role="banner">
+                    <div class="slds-grid">
+                        <div class="slds-col slds-has-flexi-truncate">
+                            <div class="slds-media">
+                                <div class="slds-media__body">
+                                    <apex:relatedList subject="{!got}" list="ProcessSteps" />
+                                    <script language="JavaScript" type="text/javascript">
+                                    var allTdTags = document.getElementsByTagName('td');
+                                    for (var i = 0; i < allTdTags.length; i++) {
+                                        
+                                        if (allTdTags[i].className == 'pbButton') {
+                                            try {
+                                                document.getElementsByName('piSubmit')[0].style.display = "none";
+                                            }
+                                            catch(err) {
+                                                
+                                            }
+                                            try {
+                                                document.getElementsByName('piRemove')[0].style.display = "none";
+                                            }
+                                            catch(err) {
+                                                
+                                            }
+                                        }
+                                    }
+                                    
+                                    $( document ).ready(function() {
+                                        window.parent.document.getElementsByName("NewFile" )[0].style.visibility ='hidden';
+                                        var url_string = window.location.href;
+                                        var url = new URL(url_string);
+                                        var scrollDiv = url.searchParams.get("scrolltodiv");
+                                        if(scrollDiv != undefined) {
+                                            $('html, body').animate({ scrollTop: $('#'+scrollDiv).offset().top }, 'slow');
+                                        }
+                                    })
+                                    </script>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </body>
+        
+    </html>
+</apex:page>

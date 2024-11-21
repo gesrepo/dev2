@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Default_Floor_Covering_Assignee__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>Default Floor Covering Assignee</description>
+    <inlineHelpText>Please select the default floor covering assignee from the list</inlineHelpText>
+    <label>Default Floor Covering Assignee</label>
+    <lookupFilter>
+        <active>true</active>
+        <errorMessage>You must select the person responsible for Floor Covering Service requests from the list</errorMessage>
+        <filterItems>
+            <field>User.IsActive</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </filterItems>
+        <infoMessage>Please select the person responsible for Floor Covering from the list. They must have an active Salesforce account.</infoMessage>
+        <isOptional>false</isOptional>
+    </lookupFilter>
+    <referenceTo>User</referenceTo>
+    <relationshipName>UsertoOpportunitiesFloorCoveringAssignee</relationshipName>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Lookup</type>
+</CustomField>

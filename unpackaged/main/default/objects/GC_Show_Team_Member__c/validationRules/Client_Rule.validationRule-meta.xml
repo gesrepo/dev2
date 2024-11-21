@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Client_Rule</fullName>
+    <active>true</active>
+    <description>Rules for Clients</description>
+    <errorConditionFormula>AND(
+   ISPICKVAL(Show_Role__c, &#39;Show Organizer - Read Only&#39;),
+   (User__r.Profile.Name &lt;&gt; &#39;GC Community Client&#39;)
+)</errorConditionFormula>
+    <errorMessage>Only Users with Client Profiles can have the Client Role.</errorMessage>
+</ValidationRule>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>New_Business_Forecast__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF (AND (OR (  OR ((YEAR( Account.Date_of_First_Won_Deal__c )) = YEAR(TODAY()), ((((YEAR(TODAY()) - YEAR( Account.Date_of_Last_Won_Deal__c ))*12) + ((MONTH( TODAY() )) - (MONTH( Account.Date_of_Last_Won_Deal__c )))) &gt;= 24)),AND ( YEAR (X100_Approved_Won__c) = YEAR(TODAY ()),  ISNULL(Account.First_Project_Moved_to_100__c))), Is_Probabilty_Won__c = True),&quot;Wins&quot;,
+
+
+
+IF ( AND( Open__c = 1, OR ( ISNULL(YEAR(Account.Date_of_First_Won_Deal__c)), ((((YEAR(TODAY()) - YEAR( Account.Date_of_Last_Won_Deal__c ))*12) + ((MONTH( TODAY() )) - (MONTH( Account.Date_of_Last_Won_Deal__c )))) &gt;= 24))),
+&quot;Pipeline&quot;,
+
+
+IF ((ISNULL(Account.First_Project_Moved_to_100__c)) &amp;&amp;
+   ((ISNULL( Account.Date_of_First_Won_Deal__c )) ||
+((((YEAR(TODAY()) - YEAR( Account.Date_of_Last_Won_Deal__c ))*12) + ((MONTH( TODAY() )) - (MONTH( Account.Date_of_Last_Won_Deal__c ))) &gt;= 24))  &amp;&amp; 
+
+
+(YEAR(Account.First_Project_Moved_to_Lost__c)  =  YEAR(  TODAY() ))) &amp;&amp;
+
+(Lost__c = 1),&quot;Lost&quot;,
+
+IF ( RecordType.DeveloperName = &quot;Sales_Goal&quot;, &quot;Sales Goal&quot;,
+
+
+&quot;&quot;))))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>New Business Forecast</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

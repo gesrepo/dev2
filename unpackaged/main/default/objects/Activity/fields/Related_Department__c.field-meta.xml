@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Related_Department__c</fullName>
+    <inlineHelpText>Select from the picklist which department this task is related to.</inlineHelpText>
+    <label>Related Department</label>
+    <required>false</required>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>true</sorted>
+            <value>
+                <fullName>AV</fullName>
+                <default>false</default>
+                <label>AV</label>
+            </value>
+            <value>
+                <fullName>Core</fullName>
+                <default>false</default>
+                <label>Core</label>
+            </value>
+            <value>
+                <fullName>Corporate Accounts</fullName>
+                <default>false</default>
+                <label>Corporate Accounts</label>
+            </value>
+            <value>
+                <fullName>Event Intelligence</fullName>
+                <default>false</default>
+                <label>Event Intelligence</label>
+            </value>
+            <value>
+                <fullName>Event Management</fullName>
+                <default>false</default>
+                <label>Event Management</label>
+            </value>
+            <value>
+                <fullName>Graphics</fullName>
+                <default>false</default>
+                <label>Graphics</label>
+            </value>
+            <value>
+                <fullName>Lead Generation</fullName>
+                <default>false</default>
+                <label>Lead Generation</label>
+            </value>
+            <value>
+                <fullName>New Business</fullName>
+                <default>false</default>
+                <label>New Business</label>
+            </value>
+            <value>
+                <fullName>Service Centre</fullName>
+                <default>false</default>
+                <label>Service Centre</label>
+            </value>
+            <value>
+                <fullName>Show Ready</fullName>
+                <default>false</default>
+                <label>Show Ready</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

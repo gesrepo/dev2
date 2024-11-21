@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FormulaShowCloseDate__c</fullName>
+    <description>Opportunity Show Close Date</description>
+    <formula>Connect2_Show__r.Show_End_Date__c</formula>
+    <inlineHelpText>Close Date of Show</inlineHelpText>
+    <label>Show Close Date</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Date</type>
+</CustomField>

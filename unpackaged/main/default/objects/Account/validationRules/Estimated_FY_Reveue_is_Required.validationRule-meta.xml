@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Estimated_FY_Reveue_is_Required</fullName>
+    <active>true</active>
+    <description>Add the Anticipated Estimated Revenue for the Full (12 month) of this new Client.</description>
+    <errorConditionFormula>/*Mandatory field on New Accounts created by for New Business Teams*/
+
+AND(   ISNEW() ,
+ISBLANK(Estimated_Full_Year_Revenue__c), 
+ OR($Profile.Name = &#39;Sales Rep, Consolidated&#39;,
+ $User.ManagerId = &#39;00540000002AaTP&#39;,
+$User.Id = &#39;0051W000004f46l&#39;,
+$User.Id = &#39;0051W0000073ijn&#39;,
+$User.Id = &#39;0051W000004bZGm&#39;))</errorConditionFormula>
+    <errorDisplayField>Estimated_Full_Year_Revenue__c</errorDisplayField>
+    <errorMessage>Please add the Anticipated Estimated Revenue for the Full (12 month) of this new Client.</errorMessage>
+</ValidationRule>

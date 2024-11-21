@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>EMEA_Exhibition_Lead_Source</fullName>
+    <active>true</active>
+    <description>If Lead Source is filled as &#39;Commissionable Venue Recommendation&#39;, then &quot; Venue Lead Source&quot; to be filled</description>
+    <errorConditionFormula>$RecordType.DeveloperName = &#39;EMEA_Exhibition&#39; 
+&amp;&amp; ISPICKVAL(  LeadSource  ,&#39;Commissionable Venue Recommendation&#39;) 
+&amp;&amp; ISBLANK(     TEXT( Venue_Lead_Source__c )   )</errorConditionFormula>
+    <errorDisplayField>Venue_Lead_Source__c</errorDisplayField>
+    <errorMessage>Please fill Venue Lead Source</errorMessage>
+</ValidationRule>

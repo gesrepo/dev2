@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>AV_Stage_Conversion__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(TEXT(StageName)=&#39;Proposal Opportunity&#39;, &#39;PO&#39;, 
+IF(TEXT(StageName)=&#39;Proposal Submitted&#39;, &#39;PS&#39;, 
+IF(TEXT(StageName)=&#39;Contract Win&#39;, &#39;CR&#39;, 
+IF(TEXT(StageName)=&#39;Verbal Win&#39;, &#39;CV&#39;, 
+IF(TEXT(StageName)=&#39;Decline to Bid&#39;, &#39;DB&#39;, 
+IF(TEXT(StageName)=&#39;Lost&#39;, &#39;LO&#39;, NULL))))))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>AV Stage Conversion</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

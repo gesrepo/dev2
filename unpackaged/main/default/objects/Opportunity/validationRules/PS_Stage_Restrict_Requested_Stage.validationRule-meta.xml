@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PS_Stage_Restrict_Requested_Stage</fullName>
+    <active>true</active>
+    <description>When Show Opportunity Stage is PS, it can&#39;t go to TS. Only valid Stages at this point are CR, CV, LO, LPE, LPR and LR. So, Requested Stage selection needs to be within valid list.</description>
+    <errorConditionFormula>AND(NOT(BEGINS( $RecordType.Name, &quot;E&amp;D&quot;)),( $RecordType.Name &lt;&gt; &quot;Master Show Occurrence&quot;),( $RecordType.Name &lt;&gt; &quot;US - Housing&quot;),( $RecordType.Name &lt;&gt; &quot;AV - Master&quot;), OR(ISPICKVAL(StageName,&quot;PS&quot;),ISPICKVAL(StageName,&quot;Proposal Submitted&quot;)), NOT(OR(ISPICKVAL(Requested_Stage__c,&quot;CV&quot;), ISPICKVAL(Requested_Stage__c,&quot;CR&quot;), ISPICKVAL(Requested_Stage__c,&quot;LO&quot;), ISPICKVAL(Requested_Stage__c,&quot;LR&quot;), ISPICKVAL(Requested_Stage__c,&quot;LPE&quot;),ISPICKVAL(Requested_Stage__c,&quot;LPM&quot;),ISPICKVAL(Requested_Stage__c,&quot;Lost&quot;),ISPICKVAL(Requested_Stage__c,&quot;Verbal Win&quot;),ISPICKVAL(Requested_Stage__c,&quot;Contract Win&quot;),ISPICKVAL(Requested_Stage__c,&quot;&quot;))),
+NOT(OR(($Profile.Name = &quot;GES Administrator Interface&quot;),
+($Profile.Name = &quot;System Administrator&quot;),
+($Profile.Name = &quot;EMEA Salesforce Support User&quot;),
+($Profile.Name = &quot;IT Support - EMEA&quot;)
+)))</errorConditionFormula>
+    <errorDisplayField>Requested_Stage__c</errorDisplayField>
+    <errorMessage>From PS Stage, Show Opportunity can only go to CR, CV or Lost stages (LO, LPE, LPM and LR). Please select a valid value in &quot;Requested Stage&quot; field or select &quot;--None--&quot;.</errorMessage>
+</ValidationRule>

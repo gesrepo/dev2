@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PRFRequest_Type__c</fullName>
+    <label>Request Type</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Design &amp; Estimate</fullName>
+                <default>false</default>
+                <label>Design &amp; Estimate</label>
+            </value>
+            <value>
+                <fullName>Estimate Only</fullName>
+                <default>false</default>
+                <label>Estimate Only</label>
+            </value>
+            <value>
+                <fullName>Graphic Design Only &amp; Estimate</fullName>
+                <default>false</default>
+                <label>Graphic Design Only &amp; Estimate</label>
+            </value>
+            <value>
+                <fullName>Design Only (EG Retail use only)</fullName>
+                <default>false</default>
+                <label>Design Only (EG Retail use only)</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

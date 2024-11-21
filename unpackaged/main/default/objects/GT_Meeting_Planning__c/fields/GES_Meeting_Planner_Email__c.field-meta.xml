@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>GES_Meeting_Planner_Email__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF((TEXT(GES_Meeting_Planner__c) == &quot;Brenda Chambers&quot;),&quot;BChambers@ges.com&quot;, 
+IF((TEXT(GES_Meeting_Planner__c) == &quot;Allyson Wagner&quot;),&quot;awagner@ges.com&quot;, 
+IF((TEXT(GES_Meeting_Planner__c) == &quot;Brian Travis&quot;),&quot;btravis@ges.com&quot;, 
+IF((TEXT(GES_Meeting_Planner__c) == &quot;Marie Caci&quot;),&quot;mcaci@ges.com&quot;, 
+IF((TEXT(GES_Meeting_Planner__c) == &quot;Maria Kramer&quot;),&quot;mkramer@ges.com&quot;,
+IF((TEXT(GES_Meeting_Planner__c) == &quot;Sue Kelly&quot;),&quot;Skelly@ges.com&quot;,
+IF((TEXT(GES_Meeting_Planner__c) == &quot;Linda Holland&quot;),&quot;LHolland@ges.com&quot;, 
+IF((TEXT(GES_Meeting_Planner__c) == &quot;Kayla Rogers&quot;),&quot;krogers@ges.com&quot;,&quot; &quot;))))))))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>GES Meeting Planner Email</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

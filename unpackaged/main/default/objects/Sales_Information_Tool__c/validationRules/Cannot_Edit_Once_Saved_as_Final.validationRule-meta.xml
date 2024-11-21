@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Cannot_Edit_Once_Saved_as_Final</fullName>
+    <active>true</active>
+    <errorConditionFormula>NOT (Editable__c) &amp;&amp;  NOT($User.Id =&#39;005400000033mOs&#39;)
+&amp;&amp;  NOT($User.Id =&#39;00540000000oEOn&#39;)</errorConditionFormula>
+    <errorMessage>Unfortunately, the SIT cannot be edited once Final version has been saved. Please email the finance team for help.</errorMessage>
+</ValidationRule>

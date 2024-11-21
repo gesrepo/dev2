@@ -1,0 +1,315 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Staff_Email__c</fullName>
+    <inlineHelpText>The staff members email address, dependant on the Staff member</inlineHelpText>
+    <label>Staff Email</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Staff_Member__c</controllingField>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>susanmayer@outlook.com</fullName>
+                <default>false</default>
+                <label>susanmayer@outlook.com</label>
+            </value>
+            <value>
+                <fullName>cogs16@hotmail.co.uk</fullName>
+                <default>false</default>
+                <label>cogs16@hotmail.co.uk</label>
+            </value>
+            <value>
+                <fullName>carolyn.akkad@outlook.com</fullName>
+                <default>false</default>
+                <label>carolyn.akkad@outlook.com</label>
+            </value>
+            <value>
+                <fullName>hodgessusan6@gmail.com</fullName>
+                <default>false</default>
+                <label>hodgessusan6@gmail.com</label>
+            </value>
+            <value>
+                <fullName>alanna.wall@bnc.ox.ac.uk</fullName>
+                <default>false</default>
+                <label>alanna.wall@bnc.ox.ac.uk</label>
+            </value>
+            <value>
+                <fullName>wallangelaw@googlemail.com</fullName>
+                <default>false</default>
+                <label>wallangelaw@googlemail.com</label>
+            </value>
+            <value>
+                <fullName>aforangie@hotmail.co.uk</fullName>
+                <default>false</default>
+                <label>aforangie@hotmail.co.uk</label>
+            </value>
+            <value>
+                <fullName>courtoregan16@gmail.com</fullName>
+                <default>false</default>
+                <label>courtoregan16@gmail.com</label>
+            </value>
+            <value>
+                <fullName>deborahcox111@icloud.com</fullName>
+                <default>false</default>
+                <label>deborahcox111@icloud.com</label>
+            </value>
+            <value>
+                <fullName>georgemarling@hotmail.co.uk</fullName>
+                <default>false</default>
+                <label>georgemarling@hotmail.co.uk</label>
+            </value>
+            <value>
+                <fullName>georgiepalmer@talktalk.net</fullName>
+                <default>false</default>
+                <label>georgiepalmer@talktalk.net</label>
+            </value>
+            <value>
+                <fullName>helenjwilkes@hotmail.co.uk</fullName>
+                <default>false</default>
+                <label>helenjwilkes@hotmail.co.uk</label>
+            </value>
+            <value>
+                <fullName>helenm2001@hotmail.com</fullName>
+                <default>false</default>
+                <label>helenm2001@hotmail.com</label>
+            </value>
+            <value>
+                <fullName>jacquimartin1950@icloud.com</fullName>
+                <default>false</default>
+                <label>jacquimartin1950@icloud.com</label>
+            </value>
+            <value>
+                <fullName>jacquirobinsons1@hotmail.co.uk</fullName>
+                <default>false</default>
+                <label>jacquirobinsons1@hotmail.co.uk</label>
+            </value>
+            <value>
+                <fullName>janicemceachran@hotmail.co.uk</fullName>
+                <default>false</default>
+                <label>janicemceachran@hotmail.co.uk</label>
+            </value>
+            <value>
+                <fullName>jasonfryuk@hotmail.com</fullName>
+                <default>false</default>
+                <label>jasonfryuk@hotmail.com</label>
+            </value>
+            <value>
+                <fullName>josie.berns@googlemail.com</fullName>
+                <default>false</default>
+                <label>josie.berns@googlemail.com</label>
+            </value>
+            <value>
+                <fullName>lbroad@ges.com</fullName>
+                <default>false</default>
+                <label>lbroad@ges.com</label>
+            </value>
+            <value>
+                <fullName>itslisa25@hotmail.co.uk</fullName>
+                <default>false</default>
+                <label>itslisa25@hotmail.co.uk</label>
+            </value>
+            <value>
+                <fullName>lisa.gb@hotmail.com</fullName>
+                <default>false</default>
+                <label>lisa.gb@hotmail.com</label>
+            </value>
+            <value>
+                <fullName>liz.cox164@gmail.com</fullName>
+                <default>false</default>
+                <label>liz.cox164@gmail.com</label>
+            </value>
+            <value>
+                <fullName>liz.devey@hotmail.co.uk</fullName>
+                <default>false</default>
+                <label>liz.devey@hotmail.co.uk</label>
+            </value>
+            <value>
+                <fullName>louisevmuir@aol.com</fullName>
+                <default>false</default>
+                <label>louisevmuir@aol.com</label>
+            </value>
+            <value>
+                <fullName>margaret1_manuel@hotmail.com</fullName>
+                <default>false</default>
+                <label>margaret1_manuel@hotmail.com</label>
+            </value>
+            <value>
+                <fullName>sullivanm8@hotmail.co.uk</fullName>
+                <default>false</default>
+                <label>sullivanm8@hotmail.co.uk</label>
+            </value>
+            <value>
+                <fullName>marling36@btinernet.com</fullName>
+                <default>false</default>
+                <label>marling36@btinernet.com</label>
+            </value>
+            <value>
+                <fullName>PAMOMAN49@YAHOO.CO.UK</fullName>
+                <default>false</default>
+                <label>PAMOMAN49@YAHOO.CO.UK</label>
+            </value>
+            <value>
+                <fullName>ronnie1961@icloud.com</fullName>
+                <default>false</default>
+                <label>ronnie1961@icloud.com</label>
+            </value>
+            <value>
+                <fullName>bibipaiva1997@hotmail.com</fullName>
+                <default>false</default>
+                <label>bibipaiva1997@hotmail.com</label>
+            </value>
+            <value>
+                <fullName>nailwoodsj@yahoo.co.uk</fullName>
+                <default>false</default>
+                <label>nailwoodsj@yahoo.co.uk</label>
+            </value>
+            <value>
+                <fullName>sheenab.leach@yahoo.co.uk</fullName>
+                <default>false</default>
+                <label>sheenab.leach@yahoo.co.uk</label>
+            </value>
+            <value>
+                <fullName>suenoble1@hotmail.co.uk</fullName>
+                <default>false</default>
+                <label>suenoble1@hotmail.co.uk</label>
+            </value>
+            <value>
+                <fullName>brysuewelsh@aol.com</fullName>
+                <default>false</default>
+                <label>brysuewelsh@aol.com</label>
+            </value>
+            <value>
+                <fullName>lucasesme@icloud.com</fullName>
+                <default>false</default>
+                <label>lucasesme@icloud.com</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Jacqueline Martin</controllingFieldValue>
+            <valueName>jacquimartin1950@icloud.com</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Janice Mceachran</controllingFieldValue>
+            <valueName>janicemceachran@hotmail.co.uk</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Josie Berns</controllingFieldValue>
+            <valueName>josie.berns@googlemail.com</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Lauren Broad</controllingFieldValue>
+            <valueName>lbroad@ges.com</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Lisa	Shelley</controllingFieldValue>
+            <valueName>lisa.gb@hotmail.com</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Liz Devey</controllingFieldValue>
+            <valueName>liz.devey@hotmail.co.uk</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Nina	Marling</controllingFieldValue>
+            <valueName>marling36@btinernet.com</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Pamela Whitehead</controllingFieldValue>
+            <valueName>PAMOMAN49@YAHOO.CO.UK</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Jason Fry</controllingFieldValue>
+            <valueName>jasonfryuk@hotmail.com</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Lisa Brain</controllingFieldValue>
+            <valueName>itslisa25@hotmail.co.uk</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Liz Cox</controllingFieldValue>
+            <valueName>liz.cox164@gmail.com</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Tracy Dunn</controllingFieldValue>
+            <valueName>lucasesme@icloud.com</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Louise Muir</controllingFieldValue>
+            <valueName>louisevmuir@aol.com</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Angela Wall</controllingFieldValue>
+            <valueName>wallangelaw@googlemail.com</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Margaret Manuel</controllingFieldValue>
+            <valueName>margaret1_manuel@hotmail.com</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Sabrina Paiva</controllingFieldValue>
+            <valueName>bibipaiva1997@hotmail.com</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Sarah Jones</controllingFieldValue>
+            <valueName>nailwoodsj@yahoo.co.uk</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Sue Hodges</controllingFieldValue>
+            <valueName>hodgessusan6@gmail.com</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Sue Welsh</controllingFieldValue>
+            <valueName>brysuewelsh@aol.com</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Susan Mayer</controllingFieldValue>
+            <valueName>susanmayer@outlook.com</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Angie Gay</controllingFieldValue>
+            <valueName>aforangie@hotmail.co.uk</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Carolyn Akkad</controllingFieldValue>
+            <valueName>carolyn.akkad@outlook.com</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Colin Allen</controllingFieldValue>
+            <valueName>cogs16@hotmail.co.uk</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Courtney O&#39;Regan</controllingFieldValue>
+            <valueName>courtoregan16@gmail.com</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Debbie Cox</controllingFieldValue>
+            <valueName>deborahcox111@icloud.com</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>George Palmer</controllingFieldValue>
+            <valueName>georgiepalmer@talktalk.net</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Helen Misghinna</controllingFieldValue>
+            <valueName>helenm2001@hotmail.com</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Helen Wilkes</controllingFieldValue>
+            <valueName>helenjwilkes@hotmail.co.uk</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Jacqui Robinson</controllingFieldValue>
+            <valueName>jacquirobinsons1@hotmail.co.uk</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Alanna Wall</controllingFieldValue>
+            <valueName>alanna.wall@bnc.ox.ac.uk</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>George Marling</controllingFieldValue>
+            <valueName>georgemarling@hotmail.co.uk</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

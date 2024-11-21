@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Status_Calculated__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF( OR( ISPICKVAL( StageName ,&quot;Closed Won&quot;),ISPICKVAL( StageName ,&quot;Won&quot;), ISPICKVAL(StageName ,&quot;CR&quot;), ISPICKVAL(StageName ,&quot;CV&quot;),ISPICKVAL(StageName ,&quot;Contract&quot;),ISPICKVAL(StageName ,&quot;DONE&quot;),ISPICKVAL(Type ,&quot;INVOICED&quot;), ISPICKVAL(Type,&quot;HOLD&quot;),ISPICKVAL(Type,&quot;RESERVATION&quot;),ISPICKVAL( StageName ,&quot;Verbal Win&quot;),ISPICKVAL( StageName ,&quot;Contract Win&quot;) ), &quot;Won&quot;,  
+IF (OR( ISPICKVAL( StageName ,&quot;LR&quot;), ISPICKVAL(StageName ,&quot;LO&quot;), ISPICKVAL(StageName ,&quot;Closed Lost&quot;), ISPICKVAL(StageName ,&quot;LPE&quot;),ISPICKVAL( StageName ,&quot;Lost&quot;), ISPICKVAL(StageName ,&quot;LPM&quot;)), &quot;Lost&quot;,
+IF (OR( ISPICKVAL( StageName ,&quot;PO&quot;), ISPICKVAL(StageName ,&quot;PS&quot;), ISPICKVAL(StageName ,&quot;Needs Analysis&quot;), ISPICKVAL(StageName ,&quot;Meeting Scheduled&quot;), ISPICKVAL(StageName ,&quot;Resource Allocation&quot;), ISPICKVAL(StageName ,&quot;Present Proposal/RFP Response&quot;), ISPICKVAL( StageName ,&quot;Proposal/Price&quot;), ISPICKVAL(StageName ,&quot;Objectives Resolved/Questions Answered&quot;), ISPICKVAL(StageName ,&quot;Verbal Agreement&quot;),ISPICKVAL(StageName ,&quot;Negotiation/Review&quot;), ISPICKVAL(StageName ,&quot;Contract &amp; Transition to Accnt Team&quot;), ISPICKVAL(StageName ,&quot;Confirmed Project 100%&quot;), ISPICKVAL( StageName ,&quot;SL1&quot;), ISPICKVAL(StageName ,&quot;SL3&quot;),ISPICKVAL(StageName ,&quot;Prospect&quot;),ISPICKVAL(StageName ,&quot;Qualified&quot;), ISPICKVAL(StageName ,&quot;Value Proposition/Proposal&quot;), ISPICKVAL(StageName ,&quot;Proposal/Quotation Sent&quot;), ISPICKVAL(StageName ,&quot;Open / Pending&quot;),ISPICKVAL(StageName ,&quot;OPEN&quot;), ISPICKVAL(StageName ,&quot;Proposal Submitted&quot;), ISPICKVAL(StageName ,&quot;Proposal Opportunity&quot;), ISPICKVAL(StageName ,&quot;No Activity&quot;)), &quot;Open&quot;,&quot; &quot;)))</formula>
+    <label>Status (Calculated)</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

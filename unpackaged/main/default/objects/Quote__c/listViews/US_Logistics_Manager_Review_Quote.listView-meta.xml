@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>US_Logistics_Manager_Review_Quote</fullName>
+    <columns>NAME</columns>
+    <columns>Quote_Subject__c</columns>
+    <columns>Order_Date__c</columns>
+    <columns>Stage__c</columns>
+    <columns>Quoted_Total__c</columns>
+    <columns>CREATEDBY_USER</columns>
+    <columns>CREATED_DATE</columns>
+    <columns>OWNER.ALIAS</columns>
+    <filterScope>Queue</filterScope>
+    <label>US Logistics Manager Review</label>
+    <language>en_US</language>
+    <queue>US_Logistics_Manager_Review</queue>
+    <sharedTo>
+        <allInternalUsers />
+    </sharedTo>
+</ListView>

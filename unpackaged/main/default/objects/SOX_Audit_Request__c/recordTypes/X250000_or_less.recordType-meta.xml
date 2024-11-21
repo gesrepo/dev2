@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>X250000_or_less</fullName>
+    <active>true</active>
+    <description>Revenue less than or equal to $250,000</description>
+    <label>$250,000 or less</label>
+    <picklistValues>
+        <picklist>AR_Adjustment_Applicable__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Amount_of_Invoices__c</picklist>
+        <values>
+            <fullName>1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>10</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>3</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>4</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>5</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>6</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>7</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>8</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>9</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Carpet_Planner_Invoice_A_or_B__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>GES_Caused_Graphics_Credit__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Reason_for_Rejection__c</picklist>
+        <values>
+            <fullName>All items and services must have a price%2C no zeros allowed%2E</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Backup documentation is needed%2E</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Complete the remaining applicable fields in the AR Adjustment in Contract%2E</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Email approval must state the preliminary invoice total within the email body or in the subject line%2E</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Incorrect record type selected%2E</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Missing the client%27s approval signature%2E</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Order Status Report is not clear of all exceptions%2E</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pricing Error</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Subtotals from the Summary of Services %26 the Details of Services do not match%2E</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>The preliminary invoice compared to what is booked in Core%2C does not match%2E</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Update the DCS field to the correct DCS in the production location%2E</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Upload the fully executed contract%2E</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Upload the preliminary invoice signed %26 dated by CSM%2E</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>SA_AR_Reason_for_Adjustment__c</picklist>
+        <values>
+            <fullName>Allowances Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CAD Operator Allowance</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Facility Commission</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Flex Spending%2FNew Idea</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Marketworks</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rebates</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sales Allowance</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Show Organizer Commission</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Signing Bonus</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>SA_Client_Approval_Substitutions__c</picklist>
+        <values>
+            <fullName>N%2FA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes- Upload Form</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>SA_Final_WOST_required_if_any_graphics__c</picklist>
+        <values>
+            <fullName>N%2FA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes- Upload Form</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>SA_Is_show_org_tax_exempt__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes - Upload Form</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>SA_Order_Confirmation_SIGNED_DATED__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes- Upload Form</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>SA_Order_Status_Report_for_SO__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes- Upload Form</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>SA_Signed_contract_and_addendums__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes- Upload Form</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Show_Organizers_Total_is_less_than_50K__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Show_weight_recap__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Status__c</picklist>
+        <values>
+            <fullName>Complete</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Final Review</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>New</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Rejected</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Submitted to Auditor%2FBTS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Submitted to Billing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Submitted to DCS%2FFA</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Supporting_Documentation__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

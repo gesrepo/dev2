@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Case_Account_Type_Exhibitor</fullName>
+    <active>true</active>
+    <description>Case Account must be Exhibitor. Amended for EMEA 14/7 MW</description>
+    <errorConditionFormula>Account.RecordTypeId = &#39;Exhibitor&#39; &amp;&amp;  Account.EMEA__c == False</errorConditionFormula>
+    <errorMessage>Account selected on Case must be of Record Type &#39;Exhibitor&#39;. Please select a valid Account.</errorMessage>
+</ValidationRule>

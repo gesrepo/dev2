@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Eligible_for_Incentives__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>This box is checked if the employee is eligible for incentives. By default the box is unchecked.</description>
+    <label>Eligible for Incentives</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Checkbox</type>
+</CustomField>

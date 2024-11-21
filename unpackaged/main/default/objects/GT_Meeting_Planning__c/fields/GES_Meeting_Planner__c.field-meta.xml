@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>GES_Meeting_Planner__c</fullName>
+    <label>GES Meeting Planner</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Allyson Wagner</fullName>
+                <default>false</default>
+                <label>Allyson Wagner</label>
+            </value>
+            <value>
+                <fullName>Brenda Chambers</fullName>
+                <default>false</default>
+                <label>Brenda Chambers</label>
+            </value>
+            <value>
+                <fullName>Brian Travis</fullName>
+                <default>false</default>
+                <label>Brian Travis</label>
+            </value>
+            <value>
+                <fullName>Chambers, Brenda</fullName>
+                <default>false</default>
+                <label>Chambers, Brenda</label>
+            </value>
+            <value>
+                <fullName>Holland, Linda</fullName>
+                <default>false</default>
+                <label>Holland, Linda</label>
+            </value>
+            <value>
+                <fullName>Kayla Rogers</fullName>
+                <default>false</default>
+                <label>Kayla Rogers</label>
+            </value>
+            <value>
+                <fullName>Kelly, Sue</fullName>
+                <default>false</default>
+                <label>Kelly, Sue</label>
+            </value>
+            <value>
+                <fullName>Linda Holland</fullName>
+                <default>false</default>
+                <label>Linda Holland</label>
+            </value>
+            <value>
+                <fullName>Maria Kramer</fullName>
+                <default>false</default>
+                <label>Maria Kramer</label>
+            </value>
+            <value>
+                <fullName>Marie Caci</fullName>
+                <default>false</default>
+                <label>Marie Caci</label>
+            </value>
+            <value>
+                <fullName>N/A</fullName>
+                <default>false</default>
+                <label>N/A</label>
+            </value>
+            <value>
+                <fullName>Rogers, Kayla</fullName>
+                <default>false</default>
+                <label>Rogers, Kayla</label>
+            </value>
+            <value>
+                <fullName>Sue Kelly</fullName>
+                <default>false</default>
+                <label>Sue Kelly</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

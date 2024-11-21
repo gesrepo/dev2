@@ -1,0 +1,6 @@
+<apex:page standardController="GC_Design_Element__c" extensions="GC_DRF_RFP_ApprovalController" action="{!setApprover}">
+    <apex:form id="myForm">
+        <apex:pageMessages id="messages" />
+        <apex:outputLink value="/{!de.Id}">&lt; Return to Design Element Task</apex:outputLink>
+    </apex:form>
+</apex:page>

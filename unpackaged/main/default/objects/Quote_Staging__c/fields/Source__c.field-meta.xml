@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Source__c</fullName>
+    <description>Source</description>
+    <inlineHelpText>Source</inlineHelpText>
+    <label>Source</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Chat - Logistics Link</fullName>
+                <default>false</default>
+                <label>Chat - Logistics Link</label>
+            </value>
+            <value>
+                <fullName>City Lead</fullName>
+                <default>false</default>
+                <label>City Lead</label>
+            </value>
+            <value>
+                <fullName>E-Commerce Site</fullName>
+                <default>false</default>
+                <label>E-Commerce Site</label>
+            </value>
+            <value>
+                <fullName>Exhibitor List - Canadian</fullName>
+                <default>false</default>
+                <label>Exhibitor List - Canadian</label>
+            </value>
+            <value>
+                <fullName>Exhibitor List - Domestic</fullName>
+                <default>false</default>
+                <label>Exhibitor List - Domestic</label>
+            </value>
+            <value>
+                <fullName>Fax</fullName>
+                <default>false</default>
+                <label>Fax</label>
+            </value>
+            <value>
+                <fullName>Inbound Call Center - Chat</fullName>
+                <default>false</default>
+                <label>Inbound Call Center - Chat</label>
+            </value>
+            <value>
+                <fullName>Inbound Call Center - Phone</fullName>
+                <default>false</default>
+                <label>Inbound Call Center - Phone</label>
+            </value>
+            <value>
+                <fullName>Incoming Call</fullName>
+                <default>false</default>
+                <label>Incoming Call</label>
+            </value>
+            <value>
+                <fullName>International Agent</fullName>
+                <default>false</default>
+                <label>International Agent</label>
+            </value>
+            <value>
+                <fullName>Quote Engine - Accepted</fullName>
+                <default>false</default>
+                <label>Quote Engine - Accepted</label>
+            </value>
+            <value>
+                <fullName>Quote Engine - Declined</fullName>
+                <default>false</default>
+                <label>Quote Engine - Declined</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

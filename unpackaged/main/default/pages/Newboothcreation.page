@@ -1,0 +1,61 @@
+<apex:page standardController="GC_Connect2_Show__c" extensions="NewBoothController">
+    <apex:stylesheet value="{!URLFOR($Resource.GC_Assets, 'GC_Assets/css/GC_PageStyles.css')}" />
+    <apex:form >
+        <apex:pageBlock >
+            <apex:pageMessages />
+            <apex:pageBlockSection title="Booth Area Creation">
+                <apex:inputField value="{!bo.Name}" rendered="{!flag || bo.Editable__c}"/>
+                <apex:outputField value="{!bo.name}" rendered="{!isdirectLoad && (!bo.Editable__c)}"/>
+                
+                <apex:outputField value="{!bo.Connect2_Show__c}"/>
+                <!--<apex:outputField value="{!bo.BoothID_Area__c}" rendered="{!isdirectLoad}"/>
+                <apex:outputField value="{!bo.Job_Number__c}" />-->
+                
+                <apex:inputField value="{!bo.Delivery_Date_time__c}" rendered="{!bo.Editable__c || flag}"/>
+                <apex:outputField value="{!bo.Delivery_Date_time__c}" rendered="{!(!bo.Editable__c) && isdirectLoad}"/>
+                
+                              
+                <apex:outputText value="{!bo.ShowOccrCustomerId__c}" rendered="{!isdirectLoad}"/>
+                <apex:selectList value="{!bo.ShowOccrCustomerId__c}" multiselect="false" size="1" rendered="{!flag}">
+                    <apex:selectOptions value="{!options}"/>
+                </apex:selectList>
+                
+                <apex:inputField value="{!bo.Completion_Date_time__c}" rendered="{!bo.Editable__c || flag}"/>
+                <apex:outputField value="{!bo.Completion_Date_time__c}" rendered="{!(!bo.Editable__c) && isdirectLoad}"/>
+                
+                <apex:outputField value="{!bo.Zone_Id__c}" rendered="{!isdirectLoad}"/> 
+            <!--- <apex:inputField value="{!bo.Zone_Id__c}" rendered="{!bo.Editable__c || flag}" /> --->
+                
+                <apex:selectList value="{!bo.Zone_Id__c}" multiselect="false" size="1" rendered="{!flag}">
+                    <apex:selectOptions value="{!zoneOptions}"/>
+                </apex:selectList>
+                
+                <apex:inputField value="{!bo.Removal_Date_time__c}" rendered="{!bo.Editable__c || flag}"/>
+                <apex:outputField value="{!bo.Removal_Date_time__c}" rendered="{!(!bo.Editable__c) && isdirectLoad}"/>
+                
+                <apex:outputText value="{!varFacilityId}" label="Facility ID" />
+                
+                <apex:inputCheckbox value="{!bo.ShowToCustomer__c}" disabled="{!(!bo.Editable__c) && isdirectLoad}" />  
+                       
+                <apex:inputField value="{!bo.Delivery_Location__c}" rendered="{!bo.Editable__c || flag}"/>
+                <apex:outputField value="{!bo.Delivery_Location__c}" rendered="{!(!bo.Editable__c) && isdirectLoad}"/>
+                
+                <apex:inputCheckbox value="{!bo.GroupOrdersByCategory__c}" disabled="{!(!bo.Editable__c) && isdirectLoad}" /> 
+                
+                 <apex:inputField value="{!bo.Operations__c}" rendered="{!bo.Editable__c || flag}"/>
+                 
+                <apex:inputField value="{!bo.Display_Sequence__c }" rendered="{!flag || bo.Editable__c}"/>
+                <apex:outputField value="{!bo.Display_Sequence__c }" rendered="{!isdirectLoad && (!bo.Editable__c)}"/>
+               
+                
+                <!--<apex:inputCheckbox value="{!bo.Deleteable__c}" rendered="{!isdirectLoad}" disabled="true"/>
+                <apex:inputCheckbox value="{!bo.Editable__c}" rendered="{!isdirectLoad}" disabled="true"/>-->
+            </apex:pageBlockSection>
+            <apex:pageBlockButtons location="bottom">
+                <apex:commandbutton value="Submit" action="{!oracleSubmission}" rendered="{!flag}" status="actStatusId"/>
+                <apex:commandbutton value="Update" action="{!oracleUpdate}" rendered="{!IF(AND(isdirectLoad ==true,bo.Editable__c ==true), TRUE, FALSE)}"  id="update"/>
+                <apex:commandbutton value="Delete" action="{!oracleDelete}"  rendered="{!IF(AND(isdirectLoad ==true,bo.Deleteable__c ==true), TRUE, FALSE)}"   id="delete" />
+            </apex:pageBlockButtons>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

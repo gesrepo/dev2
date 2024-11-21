@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>NL_World_Passenger_Festival_Case</fullName>
+    <filterScope>Queue</filterScope>
+    <label>NL World Passenger Festival</label>
+    <queue>NL_World_Passenger_Festival</queue>
+    <sharedTo>
+        <allInternalUsers />
+    </sharedTo>
+</ListView>

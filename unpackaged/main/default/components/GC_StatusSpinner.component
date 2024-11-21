@@ -1,0 +1,24 @@
+<apex:component layout="none">
+  <apex:stylesheet value="{!URLFOR($Resource.GC_Assets, 'GC_Assets/css/GC_PageStyles.css')}" />
+  <apex:attribute name="statusMessage" description="Message to be displayed." type="String" required="true" />
+  <div>
+    <div class="popupBackground" />
+    <div class="popupPanel">
+      <table border="0" width="100%" height="100%">
+        <tr>
+          <td align="center"> <b>Please Wait...</b>
+          </td>
+        </tr>
+        <tr>
+          <td align="center"> <b>{!statusMessage}</b>
+          </td>
+        </tr>
+        <tr>
+          <td align="center">
+            <img src="/img/loading.gif" />
+          </td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</apex:component>

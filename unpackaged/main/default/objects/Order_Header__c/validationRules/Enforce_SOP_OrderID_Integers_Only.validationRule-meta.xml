@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Enforce_SOP_OrderID_Integers_Only</fullName>
+    <active>true</active>
+    <description>Prohibits character text values from being included within OrderID</description>
+    <errorConditionFormula>NOT(ISNUMBER( OrderID__c ))&amp;&amp;
+
+NOT(ISBLANK(OrderID__c))</errorConditionFormula>
+    <errorMessage>OrderID cannot contain text characters; integers only.</errorMessage>
+</ValidationRule>

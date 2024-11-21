@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Price_List_City__c</fullName>
+    <description>Price Location used to pull Standard Price list.</description>
+    <inlineHelpText>Price Location used to pull Standard Price list.</inlineHelpText>
+    <label>Price List Location</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Atlanta</fullName>
+                <default>false</default>
+                <label>Atlanta</label>
+            </value>
+            <value>
+                <fullName>Atlantic City</fullName>
+                <default>false</default>
+                <label>Atlantic City</label>
+            </value>
+            <value>
+                <fullName>Baltimore</fullName>
+                <default>false</default>
+                <label>Baltimore</label>
+            </value>
+            <value>
+                <fullName>Boston</fullName>
+                <default>false</default>
+                <label>Boston</label>
+            </value>
+            <value>
+                <fullName>Chicago</fullName>
+                <default>false</default>
+                <label>Chicago</label>
+            </value>
+            <value>
+                <fullName>Cleveland</fullName>
+                <default>false</default>
+                <label>Cleveland</label>
+            </value>
+            <value>
+                <fullName>Dallas</fullName>
+                <default>false</default>
+                <label>Dallas</label>
+            </value>
+            <value>
+                <fullName>Denver</fullName>
+                <default>false</default>
+                <label>Denver</label>
+            </value>
+            <value>
+                <fullName>Detroit</fullName>
+                <default>false</default>
+                <label>Detroit</label>
+            </value>
+            <value>
+                <fullName>Hartford</fullName>
+                <default>false</default>
+                <label>Hartford</label>
+            </value>
+            <value>
+                <fullName>Hawaii</fullName>
+                <default>false</default>
+                <label>Hawaii</label>
+            </value>
+            <value>
+                <fullName>Indianapolis</fullName>
+                <default>false</default>
+                <label>Indianapolis</label>
+            </value>
+            <value>
+                <fullName>Las Vegas</fullName>
+                <default>false</default>
+                <label>Las Vegas</label>
+            </value>
+            <value>
+                <fullName>Los Angeles</fullName>
+                <default>false</default>
+                <label>Los Angeles</label>
+            </value>
+            <value>
+                <fullName>Miami</fullName>
+                <default>false</default>
+                <label>Miami</label>
+            </value>
+            <value>
+                <fullName>Milwaukee</fullName>
+                <default>false</default>
+                <label>Milwaukee</label>
+            </value>
+            <value>
+                <fullName>Minneapolis</fullName>
+                <default>false</default>
+                <label>Minneapolis</label>
+            </value>
+            <value>
+                <fullName>Nashville</fullName>
+                <default>false</default>
+                <label>Nashville</label>
+            </value>
+            <value>
+                <fullName>New Jersey</fullName>
+                <default>false</default>
+                <label>New Jersey</label>
+            </value>
+            <value>
+                <fullName>New Orleans</fullName>
+                <default>false</default>
+                <label>New Orleans</label>
+            </value>
+            <value>
+                <fullName>New York</fullName>
+                <default>false</default>
+                <label>New York</label>
+            </value>
+            <value>
+                <fullName>Orlando</fullName>
+                <default>false</default>
+                <label>Orlando</label>
+            </value>
+            <value>
+                <fullName>Outside of Dallas</fullName>
+                <default>false</default>
+                <label>Outside of Dallas</label>
+            </value>
+            <value>
+                <fullName>Philadelphia</fullName>
+                <default>false</default>
+                <label>Philadelphia</label>
+            </value>
+            <value>
+                <fullName>Phoenix</fullName>
+                <default>false</default>
+                <label>Phoenix</label>
+            </value>
+            <value>
+                <fullName>Portland</fullName>
+                <default>false</default>
+                <label>Portland</label>
+            </value>
+            <value>
+                <fullName>Providence</fullName>
+                <default>false</default>
+                <label>Providence</label>
+            </value>
+            <value>
+                <fullName>Reno</fullName>
+                <default>false</default>
+                <label>Reno</label>
+            </value>
+            <value>
+                <fullName>Sacramento</fullName>
+                <default>false</default>
+                <label>Sacramento</label>
+            </value>
+            <value>
+                <fullName>Saint Louis</fullName>
+                <default>false</default>
+                <label>Saint Louis</label>
+            </value>
+            <value>
+                <fullName>Salt Lake City</fullName>
+                <default>false</default>
+                <label>Salt Lake City</label>
+            </value>
+            <value>
+                <fullName>San Diego</fullName>
+                <default>false</default>
+                <label>San Diego</label>
+            </value>
+            <value>
+                <fullName>San Francisco</fullName>
+                <default>false</default>
+                <label>San Francisco</label>
+            </value>
+            <value>
+                <fullName>San Jose</fullName>
+                <default>false</default>
+                <label>San Jose</label>
+            </value>
+            <value>
+                <fullName>Seattle</fullName>
+                <default>false</default>
+                <label>Seattle</label>
+            </value>
+            <value>
+                <fullName>Sparks</fullName>
+                <default>false</default>
+                <label>Sparks</label>
+            </value>
+            <value>
+                <fullName>Tampa</fullName>
+                <default>false</default>
+                <label>Tampa</label>
+            </value>
+            <value>
+                <fullName>Washington DC</fullName>
+                <default>false</default>
+                <label>Washington DC</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

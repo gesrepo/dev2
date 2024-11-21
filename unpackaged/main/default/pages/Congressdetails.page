@@ -1,0 +1,343 @@
+<apex:page standardStylesheets="true" standardController="GES_Connect_Corporate_Accounts__c" extensions="CongressDetails" showHeader="false" sidebar="false" applyHtmlTag="false" tabStyle="Account">
+    <html xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <head>
+            <apex:includeScript value="{!$Resource.jQuery}" />
+            <apex:stylesheet value="{!URLFOR($Resource.Lightning_Design_System, 'assets/styles/salesforce-lightning-design-system.min.css')}" />
+            <apex:stylesheet value="{!URLFOR($Resource.GC_Assets, 'GC_Assets/css/GC_Styles.css')}" />
+            <apex:includeScript value="{!URLFOR($Resource.GC_Assets, 'GC_Assets/js/GC_init.js')}" />
+            
+        </head>
+        <div class="slds">
+            <c:GC_Community_Header /> 
+            <div class="slds-page-header gc-navigation--subHeader" role="banner">
+                <div class="slds-media">
+                    <div class="slds-media__figure">
+                        <apex:image url="{!URLFOR($Resource.GC_Assets, 'GC_Assets/img/custom13_60_teal.png')}" />
+                    </div>
+                    <div class="slds-media__body">
+                        <p class="slds-page-header__title slds-align-middle">
+                            <span>Congress View Page:</span>
+                            <span class="slds-truncate">{!gcca.Name}</span> 
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            <apex:form id="fm">
+                <!-- <apex:commandButton value="Edit" action="{!Congressedit}"/> -->
+                
+                <apex:pageBlock id="pb">
+                    <apex:pageBlockButtons location="top">
+                        <apex:commandButton value="Edit" action="{!editCongress}" styleClass="slds-button slds-button--brand gc-teal-button"/>            
+                        <apex:commandButton value="Back" action="{!URLFOR($Page.GC_Community_ShowCongress)}" styleClass="slds-button slds-button--brand gc-teal-button"/>
+                        <apex:commandButton value="Clone" action="{!cloneCongress}" styleClass="slds-button slds-button--brand gc-teal-button" style="float:right" />
+                    </apex:pageBlockButtons>
+                    <apex:pageBlockSection title="Congress Detail" id="pbs" collapsible="true">
+                        
+                        <apex:outputField value="{!gcca.Name_of_Congress__c}"/>
+                        <apex:outputText label="Connect2 Show" >
+                            <apex:outputField value="{!connect2showname.Name}"/>
+                            
+                        </apex:outputText>
+                        <apex:outputField value="{!gcca.Acronym_of_Congress__c}"/>
+                        <apex:outputField value="{!gcca.Congress_Website__c}"/>
+                        <apex:outputField value="{!gcca.Congress_Type__c}"/>
+                        <apex:outputField value="{!gcca.Congress_Level__c}"/>
+                        <apex:outputText value="{0,date, MMMM d, yyyy}" label="Exhibit Open Date"> <apex:param value="{!gcca.Exhibit_Open_Date__c+ offset}" /> </apex:outputText>
+                        
+                        <apex:outputText value="{0,date, MMMM d, yyyy}" label="Congress Start Date"> <apex:param value="{!gcca.Congress_Start_Date__c+ offset}" /> </apex:outputText>
+                        
+                        <apex:outputText value="{0,date, MMMM d, yyyy}" label="Exhibit Close Date"> <apex:param value="{!gcca.Exhibit_Close_Date__c+ offset}" /> </apex:outputText>
+                        
+                        <apex:outputText value="{0,date, MMMM d, yyyy}" label="Congress End Date"> <apex:param value="{!gcca.Congress_End_Date__c+ offset}" /> </apex:outputText>        
+                        
+                        <apex:outputText value="{!exhibitHoursOpenDay1}" label="Exhibit Hours Open - Day 1"/>   
+                        <apex:outputText value="{!exhibitHoursCloseDay1}" label="Exhibit Hours Close - Day 1"/>
+                        
+                        <apex:outputText value="{!exhibitHoursOpenDay2}" label="Exhibit Hours Open - Day 2"/>   
+                        <apex:outputText value="{!exhibitHoursCloseDay2}" label="Exhibit Hours Close - Day 2"/>
+                        
+                        <apex:outputText value="{!exhibitHoursOpenDay3}" label="Exhibit Hours Open - Day 3"/>   
+                        <apex:outputText value="{!exhibitHoursCloseDay3}" label="Exhibit Hours Close - Day 3"/>
+                        
+                        <!--<apex:outputText value="{0,date, MMMM d, yyyy}" label="Exhibit Date - Day 4"> <apex:param value="{!gcca.Exhibit_Date_Day_4__c+ offset}" /> </apex:outputText>--> 
+                        <apex:outputText value="{!exhibitHoursOpenDay4}" label="Exhibit Hours Open - Day 4"/>  
+                        <apex:outputText value="{!exhibitHoursCloseDay4}" label="Exhibit Hours Close - Day 4"/>
+                        
+                        <apex:pageBlockSectionItem > 
+                            <div style="border-bottom:2px solid #1797c0;"/>
+                        </apex:pageBlockSectionItem>
+                        <apex:pageBlockSectionItem > 
+                            <div style="border-bottom:2px solid #1797c0;"/>
+                        </apex:pageBlockSectionItem>    
+                        
+                        <apex:outputField value="{!gcca.CSI_form_submitted_by_CM__c}"/>
+                        <apex:outputField value="{!gcca.Planning_Commenced__c}"/>
+                        
+                        <apex:outputField value="{!gcca.Social_Media_Utilized__c}" />
+                        <apex:outputField value="{!gcca.Congress_Occurence__c}"/> 
+                        <apex:outputField value="{!gcca.of_HCP_s_in_Attendance__c}"/>
+                        
+                        <apex:outputText escape="false" value="{!SUBSTITUTE(gcca.Social_Media_Used__c,';',', ')}"  label="Social Media Used" rendered="{!gcca.Social_Media_Utilized__c=true}"/>
+                        
+                        <apex:outputField value="{!gcca.Pfizer_Previously_Attended__c}"/>
+                        <apex:outputText value="{!gcca.CurrencyIsoCode}" label="Currency of Congress"/>
+                        <apex:outputField value="{!gcca.Project_Complete__c}"/>
+                        <apex:outputField value="{!gcca.Sales_Direct_to_GES__c}"/>
+                        <!--<apex:outputText ></apex:outputText>-->
+                        <apex:outputField value="{!gcca.Event_Type__c}"/>
+                        <apex:outputText rendered="{!gcca.Social_Media_Utilized__c=false}"></apex:outputText>
+                        
+                        <apex:outputText ></apex:outputText>            
+                        <apex:outputField value="{!gcca.NonShowPRJ__c}"/>
+                        <apex:outputText ></apex:outputText>
+                        
+                        <!--Amarab 03252021 SCA-874 Adding new fields -->
+                        <apex:pageBlockSectionItem > 
+                            <div style="border-bottom:2px solid #1797c0;"/>
+                        </apex:pageBlockSectionItem>
+                        <apex:pageBlockSectionItem > 
+                            <div style="border-bottom:2px solid #1797c0;"/>
+                        </apex:pageBlockSectionItem>  
+                        
+                        <apex:outputField value="{!gcca.Assoc_Activity_Type_offered__c}"/>
+                        <apex:outputField value="{!gcca.Congress_Registrants__c}"/>
+                        <apex:outputField value="{!gcca.Assoc_Provided_Data__c}"/>
+                        <apex:outputField value="{!gcca.Active_Registrants__c}"/>
+                        <apex:outputText ></apex:outputText>
+                        <apex:outputField value="{!gcca.Exhibit_Hall_Registrants__c}"/>
+                        <apex:outputText ></apex:outputText>
+                        <apex:outputText ></apex:outputText>
+                        
+                        <apex:outputField value="{!gcca.Congress_Cancelled__c}"/>
+                        <apex:outputText ></apex:outputText>
+                        <apex:outputField value="{!gcca.Reason_for_Cancellation__c}" rendered="{!showCancelledFields}"/>
+                        <apex:outputText rendered="{!showCancelledFields}"></apex:outputText>
+                        <apex:outputField value="{!gcca.Congress_Cancellation_Date__c}" rendered="{!showCancelledFields}"/> 
+                    </apex:pageBlockSection>
+                    <apex:pageBlockSection title="Contact Information" id="pbs1" collapsible="true">                        
+                        <apex:outputText ></apex:outputText>
+                        <apex:outputField value="{!gcca.Secretariat_Same_as_Association__c}"/>
+                        <apex:outputField value="{!gcca.Association_Name__c}"/>
+                        <apex:outputField value="{!gcca.Secretariat_Name__c}"/>
+                        <apex:outputField value="{!gcca.Association_Contact_Name__c}"/>
+                        <apex:outputField value="{!gcca.Secretariat_Contact_Name__c}"/>
+                        <apex:outputField value="{!gcca.Association_phone__c}"/>
+                        <apex:outputField value="{!gcca.Secretariat_Contact_Phone__c}"/>
+                        
+                        <apex:outputField value="{!gcca.Association_Email__c}"/>
+                        <apex:outputField value="{!gcca.Secretariat_Contact_Email__c}"/>
+                        <apex:outputText style="color:blue"><big>______________________________________________________________________</big></apex:outputText>
+                        <apex:outputText style="color:blue"><big>______________________________________________________________________</big></apex:outputText>
+                        <apex:outputField value="{!gcca.General_Contractor_Name__c}"/>
+                        <apex:outputField value="{!gcca.General_Contractor_Contact_Name__c}"/>
+                        
+                        <apex:outputField value="{!gcca.General_Contractor_Phone__c}"/>
+                        <apex:outputField value="{!gcca.General_Contractor_Website__c}"/>
+                        
+                        
+                    </apex:pageBlockSection>
+                    <apex:pageBlockSection title="Location" id="pbs2" collapsible="true">
+                        <apex:outputField value="{!gcca.Congress_Shipping__c}" />
+                        <apex:outputField value="{!gcca.Congress_WHS__c}" />
+                        <apex:outputField value="{!gcca.Facility_Name_Account__c}" rendered="{!(gcca.Facility_Name_Account__c!=null)}"/>
+                        <apex:outputField value="{!gcca.Facility_Name__c}" rendered="{!(gcca.Facility_Name_Account__c=null)}"/>
+                        <!--<apex:outputField value="{!gcca.Facility_Name__c}"/>-->
+                        
+                        <apex:outputField value="{!gcca.Advanced_Warehouse_Location_Name__c}"/>
+                        <apex:outputField value="{!gcca.Shipping_Street__c}"/>
+                        <apex:outputField value="{!gcca.Shipping_Street_c__c}"/>
+                        <apex:outputField value="{!gcca.Shipping_City__c}"/>
+                        <apex:outputField value="{!gcca.Shipping_City_c__c}"/>
+                        <apex:outputField value="{!gcca.Shipping_State_Province__c}"/>
+                        <apex:outputField value="{!gcca.Shipping_State_Province_c__c}"/>
+                        <apex:outputField value="{!gcca.Shipping_Zip_Postal_Code__c}"/>
+                        <apex:outputField value="{!gcca.Shipping_Zip_Postal_Code_c__c}"/>
+                        <apex:outputField value="{!gcca.Shipping_Country__c}"/>
+                        <apex:outputField value="{!gcca.Shipping_Country_c__c}"/>                        
+                        <apex:outputText value="{0,date, MMMM d, yyyy}" label="First Day Freight can arrive at Showsite"> <apex:param value="{!gcca.First_Day_Freight__c+ offset}" /> </apex:outputText>
+                        <apex:outputText value="{0,date, MMMM d, yyyy}"  label="Last Day Freight to Adv. Whs."> <apex:param value="{!gcca.Last_Day_Freight__c+ offset}" /> </apex:outputText>
+                    </apex:pageBlockSection>
+                    <!-- Amarab 03/25/2021 SCA-878 Remove Housing Section---> 
+                    <!--<apex:pageBlockSection title="Housing" id="pbs3" collapsible="true">
+                        <apex:outputField value="{!gcca.Housing_Required_PL__c}"/>
+                        
+                        <apex:outputText rendered="{!showHousingFields}"></apex:outputText>
+                        
+                        <apex:outputField value="{!gcca.Total_No_of_Rooms_Req__c}" rendered="{!!showHousingFields}"/>
+                        
+                        <apex:outputText ></apex:outputText>
+                        <apex:outputText ></apex:outputText>
+                        <apex:outputField value="{!gcca.Brand_1__c}" rendered="{!showHousingFields}"/>
+                        <apex:outputField value="{!gcca.Number_of_Rooms_Requested_1__c}" rendered="{!showHousingFields}"/>
+                        <apex:outputField value="{!gcca.Brand_2__c}" rendered="{!showHousingFields}"/>
+                        <apex:outputField value="{!gcca.Number_of_Rooms_Requested_2__c}" rendered="{!showHousingFields}"/>
+                        <apex:outputField value="{!gcca.Brand_3__c}" rendered="{!showHousingFields}"/>
+                        <apex:outputField value="{!gcca.Number_of_Rooms_Requested_3__c}" rendered="{!showHousingFields}"/>
+                        <apex:outputField value="{!gcca.Brand_4__c}" rendered="{!showHousingFields}"/>
+                        <apex:outputField value="{!gcca.Number_of_Rooms_Requested_4__c}" rendered="{!showHousingFields}"/>
+                        <apex:outputField value="{!gcca.Brand_5__c}" rendered="{!showHousingFields}"/>
+                        <apex:outputField value="{!gcca.Number_of_Rooms_Requested_5__c}" rendered="{!showHousingFields}"/>
+                        <apex:outputText rendered="{!showHousingFields}"></apex:outputText>
+                        <apex:outputField value="{!gcca.Total_No_of_Rooms_Req__c}" rendered="{!showHousingFields}"/>
+                        
+                        <apex:pageBlockSectionItem > 
+                            <div style="border-bottom:2px solid #1797c0;"/>
+                        </apex:pageBlockSectionItem>
+                        <apex:pageBlockSectionItem > 
+                            <div style="border-bottom:2px solid #1797c0;"/>
+                        </apex:pageBlockSectionItem> 
+                        
+                        <apex:outputField value="{!gcca.Housing_Logistics_Vendor__c}"/>
+                        <apex:outputText rendered="{!!showHousingLogisticVendorOther}"></apex:outputText>
+                        <apex:outputField value="{!gcca.Housing_Logistics_Vendor_Other__c}" rendered="{!showHousingLogisticVendorOther}"/>
+                        <apex:outputField value="{!gcca.Housing_Contact__c}"/>
+                        <apex:outputText ></apex:outputText>
+                        <apex:outputField value="{!gcca.Housing_Contact_Phone__c}"/>
+                        <apex:outputText ></apex:outputText>
+                        <apex:outputField value="{!gcca.Housing_Contact_e_mail__c}"/>
+                        <apex:outputText ></apex:outputText>
+                    </apex:pageBlockSection>-->
+                    <!-- comment the whole page block section as it must not be visible SCA-405 till line no 325-->         
+                    <!-- <apex:inlineEditSupport event="ondblClick" /> -->
+                </apex:pageBlock>        
+                <apex:pageBlock title="Exhibit" id="pbexh">
+                    <apex:pageBlockButtons location="top">
+                        <apex:commandButton action="{!NewExhibit}" value="New Exhibit" styleClass="slds-button slds-button--brand gc-teal-button"/>
+                    </apex:pageBlockButtons>
+                    
+                    <apex:pageBlockTable value="{!lstExt}" var="a" id="pbtexh">     
+                        <apex:column width="25px" headerValue="Action"><apex:outputLink value="{!$Page.Exhibitedit}"> Edit   
+                            <apex:param name="congressid" value="{!congid}"/>                 
+                            <apex:param name="exhibitid" value="{!a.Id}"/>
+                            <apex:param name="congressName" value="{!gcca.Name}"/>
+                            <!--<apex:param name="id" value="{!a.Id}" assignTo="{!aId}" />-->
+                            </apex:outputLink>               
+                        </apex:column>                     
+                        <apex:column headerValue="Exhibit" style="width:100px" >
+                            <apex:outputLink value="{!$Page.ExhibitDetails}"> {!a.Name}  
+                                <apex:param name="congressid" value="{!congid}"/>                 
+                                <apex:param name="exhibitid" value="{!a.Id}"/>
+                                <apex:param name="congressName" value="{!gcca.Name}"/>
+                                <!--<apex:param name="id" value="{!a.Id}" assignTo="{!aId}" />-->
+                            </apex:outputLink>
+                        </apex:column>               
+                        <apex:column headerValue="Exhibit Name" value="{!a.Exhibit_Name__c}" />
+                        <apex:column headerValue="Activity Level" value="{!a.Activity_Level__c}"/>               
+                        <apex:column headerValue="GES Project Number" value="{!a.GES_Project_Number_For__c}"/>
+                        <apex:column headerValue="Canceled" value="{!a.Canceled__c}"/>      
+                    </apex:pageBlockTable>
+                </apex:pageBlock>    
+                <apex:pageBlock title="Sponsorship" id="spexh">
+                    <apex:pageBlockButtons location="top">
+                        <apex:commandButton action="{!NewSponsorship}" value="New Sponsorship" styleClass="slds-button slds-button--brand gc-teal-button"/>
+                    </apex:pageBlockButtons>
+                    <apex:pageBlockTable value="{!lstSpnsp}" var="s" id="sptexh">
+                        <apex:column width="25px" headerValue="Action"><apex:outputLink value="{!$Page.Sponsorshipedit}"> Edit
+                            
+                            <apex:param name="congid" value="{!congid}"/>                 
+                            <apex:param name="sponid" value="{!s.Id}"/>
+                            <apex:param name="congName" value="{!gcca.Name}"/>
+                            <!--<apex:param name="id" value="{!a.Id}" assignTo="{!aId}" />-->
+                            </apex:outputLink>
+                        </apex:column> 
+                        <!-- <apex:column headerValue="Sponsorship" style="width:100px"> --> 
+                        <apex:column width="25px" headerValue="Sponsorship"><apex:outputLink value="{!$Page.SponsorshipDetails}"> {!s.Name}
+                            <!--  <apex:outputLink value="{!$Page.SponsorshipDetails}"> {!s.Name}-->
+                            <apex:param name="congid" value="{!congid}"/>                 
+                            <apex:param name="sponid" value="{!s.Id}"/>
+                            <apex:param name="congName" value="{!gcca.Name}"/> 
+                            </apex:outputLink>
+                        </apex:column>           
+                        <!--<apex:column headerValue="Sponsorship" value="{!s.Name}"/>-->
+                        <apex:column headerValue="Sponsorship Name" value="{!s.Sponsorship_Name__c}"/>
+                        <apex:column headerValue="Activity Level" value="{!s.Activity_Level__c}"/>               
+                        <apex:column headerValue="Sponsorship Costs Actual" value="{!s.Sponsorship_Costs_Actual__c}"/>
+                        <apex:column headerValue="Canceled" value="{!s.Canceled__c}"/> 
+                        <!--<apex:column headervalue="Created Date" value="{!s.Createddate}">                
+</apex:column>
+<apex:column headervalue="Modified Date" value="{!s.LastModifiedDate}"/>-->                         
+                    </apex:pageBlockTable>
+                </apex:pageBlock>    
+                <apex:pageBlock title="Product Theater" id="ptexh">
+                    <apex:pageBlockButtons location="top">
+                        <apex:commandButton action="{!NewProductTheater}" value="New Product Theater" styleClass="slds-button slds-button--brand gc-teal-button"/>
+                    </apex:pageBlockButtons>
+                    <apex:pageBlockTable value="{!lstptrs}" var="pt" id="pttexh">
+                        <apex:column width="25px" headerValue="Action"><apex:outputLink value="{!$Page.ProductTheaterEdit}"> Edit               
+                            <apex:param name="congid" value="{!congid}"/>                 
+                            <apex:param name="ProductTheaterid" value="{!pt.Id}"/>
+                            <apex:param name="congName" value="{!gcca.Name}"/>
+                            <!--<apex:param name="id" value="{!a.Id}" assignTo="{!aId}" />-->
+                            </apex:outputLink>
+                        </apex:column> 
+                        <apex:column width="25px" headerValue="Product Theater"><apex:outputLink value="{!$Page.ProductTheaterDetail}"> {!pt.Name}
+                            <apex:param name="congid" value="{!congid}"/>                 
+                            <apex:param name="producttherid" value="{!pt.Id}"/>
+                            <apex:param name="congName" value="{!gcca.Name}"/> 
+                            </apex:outputLink>
+                        </apex:column>              
+                        <apex:column headerValue="Product Theater Name" value="{!pt.Product_Theater_Name__c}"/>  
+                        <apex:column headerValue="Product Theater Location" value="{!pt.Product_Theater_Location__c}"/>                             
+                        <apex:column headerValue="Product Theater Date" value="{!pt.Product_Theater_Date__c}"/> 
+                        <apex:column headerValue="Canceled" value="{!pt.Canceled__c}"/> 
+                        <!--<apex:column headervalue="Created Date" value="{!pt.Createddate}">                
+</apex:column>
+<apex:column headervalue="Modified Date" value="{!pt.LastModifiedDate}"/>-->                                     
+                    </apex:pageBlockTable>
+                </apex:pageBlock>    
+                <apex:pageBlock title="Symposia" id="syexh">
+                    <apex:pageBlockButtons location="top">
+                        <apex:commandButton action="{!NewSymposia}" value="New Symposia" styleClass="slds-button slds-button--brand gc-teal-button"/>
+                    </apex:pageBlockButtons>
+                    <apex:pageBlockTable value="{!lstsy}" var="sy" id="sytexh">
+                        <apex:column width="25px" headerValue="Action"><apex:outputLink value="{!$Page.SymposiaEdit}"> Edit  
+                            <!--<apex:column headerValue="Action" style="width:25px" >
+<apex:outputLink value="{!$Page.SymposiaEdit}"> Edit-->  
+                            <apex:param name="congid" value="{!congid}"/>                 
+                            <apex:param name="symid" value="{!sy.Id}"/>
+                            <apex:param name="congName" value="{!gcca.Name}"/>
+                            <!--<apex:param name="id" value="{!a.Id}" assignTo="{!aId}" />-->
+                            </apex:outputLink>
+                        </apex:column>
+                        <apex:column width="25px" headerValue="Symposia"><apex:outputLink value="{!$Page.SymposiaDetails}"> {!sy.Name} 
+                            <apex:param name="congid" value="{!congid}"/>                 
+                            <apex:param name="symid" value="{!sy.Id}"/>
+                            <apex:param name="congName" value="{!gcca.Name}"/>
+                            </apex:outputLink>
+                        </apex:column>
+                        <apex:column headerValue="Symposia Name" value="{!sy.Symposia_Name__c}"/>
+                        <apex:column headerValue="Activity Level" value="{!sy.Activity_Level__c}"/>               
+                        <apex:column headerValue="Symposium Location" value="{!sy.Symposium_Location__c}"/>
+                        <apex:column headerValue="Canceled" value="{!sy.Canceled__c}"/> 
+                        
+                    </apex:pageBlockTable>
+                </apex:pageBlock>    
+                <apex:pageBlock title="Meeting Room" id="mrexh">
+                    <apex:pageBlockButtons location="top">
+                        <apex:commandButton action="{!NewMeetingRoom}" value="New Meeting Room" styleClass="slds-button slds-button--brand gc-teal-button"/>
+                    </apex:pageBlockButtons>
+                    <apex:pageBlockTable value="{!lstmr}" var="mr" id="mrtexh">
+                        <apex:column width="25px" headerValue="Action"><apex:outputLink value="{!$Page.MeetingRoomEdit}"> Edit
+                            
+                            <apex:param name="congid" value="{!congid}"/>                 
+                            <apex:param name="mrid" value="{!mr.Id}"/>
+                            <apex:param name="congName" value="{!gcca.Name}"/>
+                            </apex:outputLink>
+                        </apex:column> 
+                        <apex:column width="25px" headerValue="Meeting Room"><apex:outputLink value="{!$Page.MeetingRoomDetails}"> {!mr.Name}
+                            <apex:param name="congid" value="{!congid}"/>                 
+                            <apex:param name="mrid" value="{!mr.Id}"/>
+                            <apex:param name="congName" value="{!gcca.Name}"/>
+                            </apex:outputLink>
+                        </apex:column> 
+                        <apex:column headerValue="Meeting Room Name" value="{!mr.Meeting_Room_Name__c}"/>
+                        <apex:column headerValue="Activity Level" value="{!mr.Activity_Level__c}"/>               
+                        <apex:column headerValue="GES Project Number" value="{!mr.GES_Project_Number__c}"/>
+                        <apex:column headerValue="Canceled" value="{!mr.Canceled__c}"/>                                                   
+                    </apex:pageBlockTable>
+                </apex:pageBlock>
+            </apex:form>
+        </div>
+    </html>
+</apex:page>

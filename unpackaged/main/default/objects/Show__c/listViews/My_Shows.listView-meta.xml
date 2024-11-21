@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>My_Shows</fullName>
+    <columns>NAME</columns>
+    <columns>Show_ID__c</columns>
+    <columns>Account__c</columns>
+    <columns>Exhibition_Provider__c</columns>
+    <columns>Exhibition_Currently_Under_Contract__c</columns>
+    <columns>Exhibition_Expiration_Date__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>OWNER.LAST_NAME</field>
+        <operation>equals</operation>
+        <value>reeves</value>
+    </filters>
+    <label>My Shows</label>
+    <language>en_US</language>
+</ListView>

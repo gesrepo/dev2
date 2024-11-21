@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Quote_Inbound_Requires_Ship_To</fullName>
+    <active>false</active>
+    <description>Inbound logistics quote requires selection of Ship To</description>
+    <errorConditionFormula>AND( ($Profile.Name &lt;&gt; &quot;GES Administrator Interface&quot;),IF(AND(NOT(ISPICKVAL(Shipment_Type__c,&#39;&#39;)), ISPICKVAL(Ship_To_Location__c,&#39;&#39;)), true, false))</errorConditionFormula>
+    <errorDisplayField>Ship_To_Location__c</errorDisplayField>
+    <errorMessage>Ship To field must be specified for Inbound Shipment.</errorMessage>
+</ValidationRule>

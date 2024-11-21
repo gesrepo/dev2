@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Created_this_week</fullName>
+    <columns>NAME</columns>
+    <columns>Show_Name__c</columns>
+    <columns>Oracle_Customer_Number__c</columns>
+    <columns>Account__c</columns>
+    <columns>BOOTH_NUMBER__c</columns>
+    <columns>BOOTH_TYPE__c</columns>
+    <columns>BOOTH_LENGTH__c</columns>
+    <columns>BOOTH_WIDTH__c</columns>
+    <columns>Service_Zone__c</columns>
+    <columns>Show_Open_Date__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>CREATED_DATE</field>
+        <operation>equals</operation>
+        <value>THIS_WEEK</value>
+    </filters>
+    <label>Created this week</label>
+    <language>en_US</language>
+</ListView>

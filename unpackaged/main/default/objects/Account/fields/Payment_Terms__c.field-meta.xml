@@ -1,0 +1,389 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Payment_Terms__c</fullName>
+    <label>Payment Terms</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>CT1-100% DEP NET 30</fullName>
+                <default>false</default>
+                <label>CT1-100% DEP NET 30</label>
+            </value>
+            <value>
+                <fullName>CT2-55% DEP NET 30</fullName>
+                <default>false</default>
+                <label>CT2-55% DEP NET 30</label>
+            </value>
+            <value>
+                <fullName>CT3-75% DEP NET 30</fullName>
+                <default>false</default>
+                <label>CT3-75% DEP NET 30</label>
+            </value>
+            <value>
+                <fullName>CT4-100% BEFORE PROD</fullName>
+                <default>false</default>
+                <label>CT4-100% BEFORE PROD</label>
+            </value>
+            <value>
+                <fullName>CT5-CONTRACT TERMS</fullName>
+                <default>false</default>
+                <label>CT5-CONTRACT TERMS</label>
+            </value>
+            <value>
+                <fullName>CT6-33-33% DEP NET</fullName>
+                <default>false</default>
+                <label>CT6-33-33% DEP NET</label>
+            </value>
+            <value>
+                <fullName>CT7-50-25% DEP NET 30</fullName>
+                <default>false</default>
+                <label>CT7-50-25% DEP NET 30</label>
+            </value>
+            <value>
+                <fullName>CT8-NET 30</fullName>
+                <default>false</default>
+                <label>CT8-NET 30</label>
+            </value>
+            <value>
+                <fullName>CT9 -100% PRIOR SHIP</fullName>
+                <default>false</default>
+                <label>CT9 -100% PRIOR SHIP</label>
+            </value>
+            <value>
+                <fullName>CTL - 100% FINAL LOAD OUT</fullName>
+                <default>false</default>
+                <label>CTL - 100% FINAL LOAD OUT</label>
+            </value>
+            <value>
+                <fullName>CTLG-50% DEP NET 30</fullName>
+                <default>false</default>
+                <label>CTLG-50% DEP NET 30</label>
+            </value>
+            <value>
+                <fullName>T10 - BALANCE DUE NET 45</fullName>
+                <default>false</default>
+                <label>T10 - BALANCE DUE NET 45</label>
+            </value>
+            <value>
+                <fullName>T11 - BALANCE DUE NET 60</fullName>
+                <default>false</default>
+                <label>T11 - BALANCE DUE NET 60</label>
+            </value>
+            <value>
+                <fullName>T12-75% DEP NET 10</fullName>
+                <default>false</default>
+                <label>T12-75% DEP NET 10</label>
+            </value>
+            <value>
+                <fullName>T13-55% DEP NET 45</fullName>
+                <default>false</default>
+                <label>T13-55% DEP NET 45</label>
+            </value>
+            <value>
+                <fullName>T14-75% DEP NET 45</fullName>
+                <default>false</default>
+                <label>T14-75% DEP NET 45</label>
+            </value>
+            <value>
+                <fullName>T15-75% DEP NET 60</fullName>
+                <default>false</default>
+                <label>T15-75% DEP NET 60</label>
+            </value>
+            <value>
+                <fullName>T16-55% DEP NET 60</fullName>
+                <default>false</default>
+                <label>T16-55% DEP NET 60</label>
+            </value>
+            <value>
+                <fullName>T17-50% DEP NET 45</fullName>
+                <default>false</default>
+                <label>T17-50% DEP NET 45</label>
+            </value>
+            <value>
+                <fullName>T18-2% 20 NET 60</fullName>
+                <default>false</default>
+                <label>T18-2% 20 NET 60</label>
+            </value>
+            <value>
+                <fullName>T19-2% 10 NET 30</fullName>
+                <default>false</default>
+                <label>T19-2% 10 NET 30</label>
+            </value>
+            <value>
+                <fullName>T20 - 15% DEP 50% INT N 60</fullName>
+                <default>false</default>
+                <label>T20 - 15% DEP 50% INT N 60</label>
+            </value>
+            <value>
+                <fullName>T21 - 50% DEP 50% INT N 30</fullName>
+                <default>false</default>
+                <label>T21 - 50% DEP 50% INT N 30</label>
+            </value>
+            <value>
+                <fullName>T22 - 25% DEP NET 30</fullName>
+                <default>false</default>
+                <label>T22 - 25% DEP NET 30</label>
+            </value>
+            <value>
+                <fullName>T23 - 50% DEP 2% 15 NET 45</fullName>
+                <default>false</default>
+                <label>T23 - 50% DEP 2% 15 NET 45</label>
+            </value>
+            <value>
+                <fullName>T24-50% DEP NET 30</fullName>
+                <default>false</default>
+                <label>T24-50% DEP NET 30</label>
+            </value>
+            <value>
+                <fullName>T25-50% DEP 40% INT N 30</fullName>
+                <default>false</default>
+                <label>T25-50% DEP 40% INT N 30</label>
+            </value>
+            <value>
+                <fullName>T26-2.5% 15 NET 90</fullName>
+                <default>false</default>
+                <label>T26-2.5% 15 NET 90</label>
+            </value>
+            <value>
+                <fullName>T27-55% DEP NET 30</fullName>
+                <default>false</default>
+                <label>T27-55% DEP NET 30</label>
+            </value>
+            <value>
+                <fullName>T28 - NET 15</fullName>
+                <default>false</default>
+                <label>T28 - NET 15</label>
+            </value>
+            <value>
+                <fullName>T29-55% DEP NET 80</fullName>
+                <default>false</default>
+                <label>T29-55% DEP NET 80</label>
+            </value>
+            <value>
+                <fullName>T30-40% DEP NET 90</fullName>
+                <default>false</default>
+                <label>T30-40% DEP NET 90</label>
+            </value>
+            <value>
+                <fullName>T31-20% DEP NET 30</fullName>
+                <default>false</default>
+                <label>T31-20% DEP NET 30</label>
+            </value>
+            <value>
+                <fullName>T32 - NET 50</fullName>
+                <default>false</default>
+                <label>T32 - NET 50</label>
+            </value>
+            <value>
+                <fullName>T33-40% DEP NET 30</fullName>
+                <default>false</default>
+                <label>T33-40% DEP NET 30</label>
+            </value>
+            <value>
+                <fullName>T34-50% DEP NET 90</fullName>
+                <default>false</default>
+                <label>T34-50% DEP NET 90</label>
+            </value>
+            <value>
+                <fullName>T35-25% DEP NET 60</fullName>
+                <default>false</default>
+                <label>T35-25% DEP NET 60</label>
+            </value>
+            <value>
+                <fullName>T36--40% DEP NET 120</fullName>
+                <default>false</default>
+                <label>T36--40% DEP NET 120</label>
+            </value>
+            <value>
+                <fullName>T38-60% DEP NET 30</fullName>
+                <default>false</default>
+                <label>T38-60% DEP NET 30</label>
+            </value>
+            <value>
+                <fullName>T39-50% DEP 2%10 NET 60</fullName>
+                <default>false</default>
+                <label>T39-50% DEP 2%10 NET 60</label>
+            </value>
+            <value>
+                <fullName>T40-50% DEP NET 60</fullName>
+                <default>false</default>
+                <label>T40-50% DEP NET 60</label>
+            </value>
+            <value>
+                <fullName>T41-NET 75</fullName>
+                <default>false</default>
+                <label>T41-NET 75</label>
+            </value>
+            <value>
+                <fullName>T42-60% DEP 30% INT 10% FINAL</fullName>
+                <default>false</default>
+                <label>T42-60% DEP 30% INT 10% FINAL</label>
+            </value>
+            <value>
+                <fullName>T43-35% DEP NET 30</fullName>
+                <default>false</default>
+                <label>T43-35% DEP NET 30</label>
+            </value>
+            <value>
+                <fullName>T44-50% DEP NET 75</fullName>
+                <default>false</default>
+                <label>T44-50% DEP NET 75</label>
+            </value>
+            <value>
+                <fullName>100% UP FRONT/W CREDIT CARD ON FILE FOR OVERRUNS</fullName>
+                <default>false</default>
+                <label>100% UP FRONT/W CREDIT CARD ON FILE FOR OVERRUNS</label>
+            </value>
+            <value>
+                <fullName>ADVANCE PAYMENT REQ, BAL DUE NET 30 DAYS</fullName>
+                <default>false</default>
+                <label>ADVANCE PAYMENT REQ, BAL DUE NET 30 DAYS</label>
+            </value>
+            <value>
+                <fullName>CHARGE CUSTOMER CARD AT SHOW SITE</fullName>
+                <default>false</default>
+                <label>CHARGE CUSTOMER CARD AT SHOW SITE</label>
+            </value>
+            <value>
+                <fullName>FULL AMT PD WHEN SALES ORDER IS REQUESTED</fullName>
+                <default>false</default>
+                <label>FULL AMT PD WHEN SALES ORDER IS REQUESTED</label>
+            </value>
+            <value>
+                <fullName>HLD-HOLD ALL ORDERS</fullName>
+                <default>false</default>
+                <label>HLD-HOLD ALL ORDERS</label>
+            </value>
+            <value>
+                <fullName>NET DUE IN 30 DAYS</fullName>
+                <default>false</default>
+                <label>NET DUE IN 30 DAYS</label>
+            </value>
+            <value>
+                <fullName>15Days</fullName>
+                <default>false</default>
+                <label>15Days</label>
+            </value>
+            <value>
+                <fullName>N20</fullName>
+                <default>false</default>
+                <label>N20</label>
+            </value>
+            <value>
+                <fullName>N5</fullName>
+                <default>false</default>
+                <label>N5</label>
+            </value>
+            <value>
+                <fullName>N</fullName>
+                <default>false</default>
+                <label>N</label>
+            </value>
+            <value>
+                <fullName>CASH</fullName>
+                <default>false</default>
+                <label>CASH</label>
+            </value>
+            <value>
+                <fullName>M30</fullName>
+                <default>false</default>
+                <label>M30</label>
+            </value>
+            <value>
+                <fullName>N14</fullName>
+                <default>false</default>
+                <label>N14</label>
+            </value>
+            <value>
+                <fullName>N30</fullName>
+                <default>false</default>
+                <label>N30</label>
+            </value>
+            <value>
+                <fullName>N45</fullName>
+                <default>false</default>
+                <label>N45</label>
+            </value>
+            <value>
+                <fullName>N60</fullName>
+                <default>false</default>
+                <label>N60</label>
+            </value>
+            <value>
+                <fullName>N7</fullName>
+                <default>false</default>
+                <label>N7</label>
+            </value>
+            <value>
+                <fullName>T46-75% DEP NET 60</fullName>
+                <default>false</default>
+                <label>T46-75% DEP NET 60</label>
+            </value>
+            <value>
+                <fullName>T47-100% DEP NET 60</fullName>
+                <default>false</default>
+                <label>T47-100% DEP NET 60</label>
+            </value>
+            <value>
+                <fullName>T48-25% DEP NET 80</fullName>
+                <default>false</default>
+                <label>T48-25% DEP NET 80</label>
+            </value>
+            <value>
+                <fullName>T49-NET 65</fullName>
+                <default>false</default>
+                <label>T49-NET 65</label>
+            </value>
+            <value>
+                <fullName>T50 - 30 NET/30 DEP</fullName>
+                <default>false</default>
+                <label>T50 - 30 NET/30 DEP</label>
+            </value>
+            <value>
+                <fullName>T51-55% DEP NET 90</fullName>
+                <default>false</default>
+                <label>T51-55% DEP NET 90</label>
+            </value>
+            <value>
+                <fullName>T52-80% DEP NET 30</fullName>
+                <default>false</default>
+                <label>T52-80% DEP NET 30</label>
+            </value>
+            <value>
+                <fullName>T53-30% DEP NET 60</fullName>
+                <default>false</default>
+                <label>T53-30% DEP NET 60</label>
+            </value>
+            <value>
+                <fullName>T54-50% DEP NET 130</fullName>
+                <default>false</default>
+                <label>T54-50% DEP NET 130</label>
+            </value>
+            <value>
+                <fullName>T55-50% DEP NET 120</fullName>
+                <default>false</default>
+                <label>T55-50% DEP NET 120</label>
+            </value>
+            <value>
+                <fullName>T56-T56-75% DEP 2% INT</fullName>
+                <default>false</default>
+                <label>T56-T56-75% DEP 2% INT</label>
+            </value>
+            <value>
+                <fullName>T45-BALANCE DUE NET 90</fullName>
+                <default>false</default>
+                <label>T45-BALANCE DUE NET 90</label>
+            </value>
+            <value>
+                <fullName>T57-70% DEP NET 30</fullName>
+                <default>false</default>
+                <label>T57-70% DEP NET 30</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

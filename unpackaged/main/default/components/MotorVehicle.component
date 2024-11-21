@@ -1,0 +1,503 @@
+<apex:component allowDML="true">
+    <apex:attribute name="IncidentReport" description="incident report record." type="Claims__Incident_Report__c" required="true" />
+    <apex:attribute name="Controller" description="Controller for component" type="IncidentReportPortalController" required="true"/>
+    <apex:attribute name="Route" description="Route into component, Incident Portal or New Incident Report in backend" type="String" default="new"/>
+    <apex:attribute name="ButtonLabel" description="button label." type="string" />
+
+    <apex:componentBody >
+        <apex:pageBlock >
+            <apex:actionStatus startText="applying value..." id="status"/>
+            <!-- Incident Details -->
+            <apex:pageBlockSection title="{!$Label.Initial_Information}" columns="2">
+               <apex:inputField value="{!IncidentReport.Job_Number__c}" />
+                <apex:inputField value="{!IncidentReport.Location_Code__c}" />
+                <apex:inputField value="{!IncidentReport.Facility__c}" />
+                <apex:inputField value="{!IncidentReport.Claims__IncidentLocation__c}" />
+                <apex:inputField value="{!IncidentReport.Show_Name_or_ID__c}" />
+                <apex:inputField value="{!IncidentReport.State_of_Loss__c}" />
+                <apex:inputField value="{!IncidentReport.Zip_Code__c}" />   
+                <apex:inputField value="{!IncidentReport.Claims__First_Name__c}" />
+                <apex:inputField value="{!IncidentReport.Claims__Last_Name__c}" />
+                <apex:inputField value="{!IncidentReport.Claims__Email__c}" />
+                <apex:inputField value="{!IncidentReport.Preparer_Phone__c}" />
+                <apex:inputField value="{!IncidentReport.Claims__IncidentDate__c}" /> 
+                <apex:inputField value="{!IncidentReport.Time_of_Loss__c}" />
+            </apex:pageBlockSection>
+
+            <!-- Initial Information -->
+            <apex:pageBlockSection title="{!$Label.Manager_Information}" columns="2">
+               <!-- <apex:inputField value="{!IncidentReport.Manager_Full_Name__c}" />-->
+                <apex:inputField value="{!IncidentReport.Manager_First_Name__c}" />
+                <apex:inputField value="{!IncidentReport.Manager_Last_Name__c}" />
+                <apex:inputField value="{!IncidentReport.Manager_Email__c}" />
+                <apex:inputField value="{!IncidentReport.Manager_Cell_Phone__c}" />
+                <apex:inputField value="{!IncidentReport.Manager_City__c}" />
+            </apex:pageBlockSection>
+
+            <!-- Incident Information -->
+            <apex:pageBlockSection title="{!$Label.Incident_Information}" columns="1">
+                <apex:inputField styleClass="textAreaBox" value="{!IncidentReport.Claims__Description_of_Incident__c}" />
+                <apex:inputField styleClass="textAreaBox" value="{!IncidentReport.Weather_Conditions__c}" /> 
+            </apex:pageBlockSection>
+
+            <!-- GES Vehicle Information (Vehicle# 1) --> 
+            <apex:outputPanel id="vehicleInformation" >
+                <apex:actionRegion >
+                    <apex:pageBlockSection title="{!$Label.GES_Vehicle_Information}" columns="2">
+                        <apex:inputField value="{!IncidentReport.GES_Vehicle__c}" /> 
+                        <apex:inputField value="{!IncidentReport.GES_Vehicle_VIN__c}" /> 
+                        <apex:inputField value="{!IncidentReport.GES_Vehicle_Year__c}" /> 
+                        <apex:inputField value="{!IncidentReport.GES_Vehicle_Make__c}" /> 
+                        <apex:inputField value="{!IncidentReport.GES_Vehicle_Model__c}" /> 
+                        <apex:inputField value="{!IncidentReport.GES_Vehicle_Color__c}" /> 
+                        <apex:inputField value="{!IncidentReport.GES_Vehicle_Plate_Number__c}" />
+                        <apex:inputField value="{!IncidentReport.GES_Vehicle_State__c}" />
+                        <apex:inputField value="{!IncidentReport.GES_Was_Vehicle_Parked__c}" />
+                        <apex:inputField value="{!IncidentReport.GES_Vehicle_Address__c}" />
+                        <apex:inputField value="{!IncidentReport.GES_Vehicle_City__c}" />
+                        <apex:inputField value="{!IncidentReport.GES_Vehicle_State1__c}" />
+                        <apex:inputField value="{!IncidentReport.GES_Vehicle_Zip__c}" />
+                            <apex:inputField value="{!IncidentReport.GES_Does_GES_own_this_vehicle__c}" >
+                                 <apex:actionSupport event="onchange" rerender="vehicleInformation" status="status" /> 
+                            </apex:inputField>
+                        <apex:pageBlockSectionItem rendered="{!IncidentReport.GES_Does_GES_own_this_vehicle__c == 'No'}" />
+                        <apex:inputField value="{!IncidentReport.GES_It_is_owner_by__c}" rendered="{!IncidentReport.GES_Does_GES_own_this_vehicle__c == 'No'}" />
+                    </apex:pageBlockSection>
+                    <apex:pageBlockSection columns="1">
+                        <apex:inputField styleClass="textAreaBox" value="{!IncidentReport.GES_Vehicle_Damage_Description__c}" /> 
+                    </apex:pageBlockSection>
+                </apex:actionRegion>
+            </apex:outputPanel>
+
+            <!-- GES Driver Information -->
+            <apex:outputPanel id="gesDriverInformation" >
+                <apex:actionRegion >
+                    <apex:pageBlockSection title="{!$Label.GES_Driver_Information}" columns="2">
+                        <apex:inputField value="{!IncidentReport.Driver_First_Name__c}" />
+                         <apex:inputField value="{!IncidentReport.Driver_Last_Name__c}" />
+                        <!--<apex:inputField value="{!IncidentReport.GES_Driver_SSN__c}" />-->
+                        <apex:inputField value="{!IncidentReport.GES_Driver_License__c}" />
+                        <apex:inputField value="{!IncidentReport.GES_Driver_Position__c}" />
+                        <apex:inputField value="{!IncidentReport.GES_Driver_Cell_Phone__c}" />
+                        <apex:inputField value="{!IncidentReport.GES_Driver_Alt_Phone__c}" />
+                        <apex:inputField value="{!IncidentReport.GES_Driver_DOB__c}" />
+                        <apex:inputField value="{!IncidentReport.GES_Driver_Age__c}" />
+                        <apex:pageBlockSectionItem >
+                            <apex:outputLabel value="{!$ObjectType.Claims__Incident_Report__c.fields.GES_Driver_Was_driver_Injured__c.Label}" />
+                            <apex:inputField value="{!IncidentReport.GES_Driver_Was_driver_Injured__c}" >
+                                 <apex:actionSupport event="onchange" rerender="gesDriverInformation" status="status" /> 
+                            </apex:inputField>
+                        </apex:pageBlockSectionItem>
+                    </apex:pageBlockSection>
+                    <apex:pageBlockSection columns="1">
+                        <apex:inputField styleClass="textAreaBox" value="{!IncidentReport.Claims__Details_of_All_Any_Injuries__c}" rendered="{!IncidentReport.GES_Driver_Was_driver_Injured__c == 'Yes'}" />
+                    </apex:pageBlockSection>   
+                    <apex:pageBlockSection columns="2">
+                        <apex:pageBlockSectionItem rendered="{!IncidentReport.GES_Driver_Was_driver_Injured__c == 'Yes'}" >
+                            <apex:outputLabel value="{!$ObjectType.Claims__Incident_Report__c.fields.GES_Driver_Was_Medical_Treatment_sought__c.Label}" />
+                            <apex:inputField value="{!IncidentReport.GES_Driver_Was_Medical_Treatment_sought__c}" >
+                                 <apex:actionSupport event="onchange" rerender="gesDriverInformation" status="status" /> 
+                            </apex:inputField>
+                        </apex:pageBlockSectionItem>
+                        <apex:inputField value="{!IncidentReport.GES_Driver_Medical_Facility_Name__c}" rendered="{!IncidentReport.GES_Driver_Was_driver_Injured__c == 'Yes' && IncidentReport.GES_Driver_Was_Medical_Treatment_sought__c == 'Yes' }" /> 
+                        <apex:inputField value="{!IncidentReport.GES_Driver_Facility_Address__c}" rendered="{!IncidentReport.GES_Driver_Was_driver_Injured__c == 'Yes' && IncidentReport.GES_Driver_Was_Medical_Treatment_sought__c == 'Yes' }" /> 
+                        <apex:inputField value="{!IncidentReport.GES_Driver_City__c}" rendered="{!IncidentReport.GES_Driver_Was_driver_Injured__c == 'Yes' && IncidentReport.GES_Driver_Was_Medical_Treatment_sought__c == 'Yes' }" /> 
+                        <apex:inputField value="{!IncidentReport.GES_Driver_State__c}" rendered="{!IncidentReport.GES_Driver_Was_driver_Injured__c == 'Yes' && IncidentReport.GES_Driver_Was_Medical_Treatment_sought__c == 'Yes' }" /> 
+                        <apex:inputField value="{!IncidentReport.GES_Driver_Zip_Code__c}" rendered="{!IncidentReport.GES_Driver_Was_driver_Injured__c == 'Yes' && IncidentReport.GES_Driver_Was_Medical_Treatment_sought__c == 'Yes' }" /> 
+                    </apex:pageBlockSection>
+                </apex:actionRegion>
+            </apex:outputPanel>
+
+            <!-- GES Driver Passsenger Information  -->
+            <apex:outputPanel id="gesDriverPassengerInformation" >
+                <apex:actionRegion >
+                    <apex:pageBlockSection title="{!$Label.GES_Driver_Passenger_Information}" columns="2">
+                        <apex:inputField value="{!IncidentReport.GES_PP_Vehicle_Passenger_Pedestrian__c}" /> 
+                        <apex:inputField value="{!IncidentReport.Injured_Party_First_Name__c}" />
+                        <apex:inputField value="{!IncidentReport.Injured_Party_Last_Name__c}" />
+                        <apex:inputField value="{!IncidentReport.Injured_Party_Address__c}" />
+                        <apex:inputField value="{!IncidentReport.Injured_Party_City__c}" />
+                        <apex:inputField value="{!IncidentReport.Injured_Party_State__c}" />
+                        <apex:inputField value="{!IncidentReport.Injured_Party_Zip_Code__c}" />
+                        <apex:inputField value="{!IncidentReport.Daytime_Number__c}" />
+                        <apex:inputField value="{!IncidentReport.Cell_Phone_Number__c}" />
+                        <apex:pageBlockSectionItem >
+                            <apex:outputLabel value="{!$ObjectType.Claims__Incident_Report__c.fields.GES_PP_Was_this_person_injured__c.Label}" />
+                            <apex:inputField value="{!IncidentReport.GES_PP_Was_this_person_injured__c}" >
+                                 <apex:actionSupport event="onchange" rerender="gesDriverPassengerInformation" status="status" /> 
+                            </apex:inputField>
+                        </apex:pageBlockSectionItem>
+                    </apex:pageBlockSection>
+                    <apex:pageBlockSection columns="1">
+                        <apex:inputField styleClass="textAreaBox" value="{!IncidentReport.GES_PP_Description_of_Injury__c}" rendered="{!IncidentReport.GES_PP_Was_this_person_injured__c == 'Yes'}" /> 
+                    </apex:pageBlockSection>
+                    <apex:pageBlockSection columns="2">
+                        <apex:pageBlockSectionItem rendered="{!IncidentReport.GES_PP_Was_this_person_injured__c == 'Yes'}" >
+                            <apex:outputLabel value="{!$ObjectType.Claims__Incident_Report__c.fields.GES_PP_Was_Medical_Treatment_Sought__c.Label}" />
+                            <apex:inputField value="{!IncidentReport.GES_PP_Was_Medical_Treatment_Sought__c}" >
+                                 <apex:actionSupport event="onchange" rerender="gesDriverPassengerInformation" status="status" /> 
+                            </apex:inputField>
+                        </apex:pageBlockSectionItem>
+                        <apex:inputField value="{!IncidentReport.GES_PP_Medical_Facility_Name__c}" rendered="{!IncidentReport.GES_PP_Was_this_person_injured__c == 'Yes' && IncidentReport.GES_PP_Was_Medical_Treatment_Sought__c == 'Yes'}" /> 
+                        <apex:inputField value="{!IncidentReport.GES_PP_Facility_Address__c}" rendered="{!IncidentReport.GES_PP_Was_this_person_injured__c == 'Yes' && IncidentReport.GES_PP_Was_Medical_Treatment_Sought__c == 'Yes'}" /> 
+                        <apex:inputField value="{!IncidentReport.GES_PP_City__c}" rendered="{!IncidentReport.GES_PP_Was_this_person_injured__c == 'Yes' && IncidentReport.GES_PP_Was_Medical_Treatment_Sought__c == 'Yes'}" /> 
+                        <apex:inputField value="{!IncidentReport.GES_PP_State__c}" rendered="{!IncidentReport.GES_PP_Was_this_person_injured__c == 'Yes' && IncidentReport.GES_PP_Was_Medical_Treatment_Sought__c == 'Yes'}" /> 
+                        <apex:inputField value="{!IncidentReport.GES_PP_Zip_Code__c}" rendered="{!IncidentReport.GES_PP_Was_this_person_injured__c == 'Yes' && IncidentReport.GES_PP_Was_Medical_Treatment_Sought__c == 'Yes'}" />
+                    </apex:pageBlockSection>
+                </apex:actionRegion>
+            </apex:outputPanel>
+
+            <!-- NON-GES Vehicle Information (Vehicle# 2) --> 
+            <apex:pageBlockSection title="{!$Label.NONGES_Vehicle_Information}" columns="2">
+                <apex:inputField value="{!IncidentReport.NONGES_Vehicle__c}" /> 
+                <apex:inputField value="{!IncidentReport.NONGES_Vehicle_VIN__c}" /> 
+                <apex:inputField value="{!IncidentReport.NONGES_Vehicle_Year__c}" /> 
+                <apex:inputField value="{!IncidentReport.NONGES_Vehicle_Make__c}" /> 
+                <apex:inputField value="{!IncidentReport.NONGES_Vehicle_Model__c}" /> 
+                <apex:inputField value="{!IncidentReport.NONGES_Vehicle_Color__c}" /> 
+                <apex:inputField value="{!IncidentReport.NONGES_Vehicle_Plate_Number__c}" />
+                <apex:inputField value="{!IncidentReport.NONGES_Vehicle_State__c}" />
+                <apex:inputField value="{!IncidentReport.NONGES_Was_Vehicle_Parked__c}" />
+            </apex:pageBlockSection>
+            <apex:pageBlockSection columns="1">
+                <apex:inputField styleClass="textAreaBox" value="{!IncidentReport.NONGES_Vehicle_Damage_Description__c}" /> 
+            </apex:pageBlockSection>
+            <apex:pageBlockSection columns="2">
+                <apex:inputField value="{!IncidentReport.NONGES_Vehicle_Address__c}" />
+                <apex:inputField value="{!IncidentReport.NONGES_Vehicle_City__c}" />
+                <apex:inputField value="{!IncidentReport.NONGES_Vehicle_State1__c}" />
+                <apex:inputField value="{!IncidentReport.NONGES_Vehicle_Zip__c}" />
+                <apex:inputField value="{!IncidentReport.NONGES_Driver_Insurance_Company_Name__c}" />
+                <apex:inputField value="{!IncidentReport.NONGES_Driver_Insurance_Policy__c}" />
+            </apex:pageBlockSection> 
+
+            <!-- NON_GES Driver Information -->
+            <apex:outputPanel id="nonGesDriverInformation" >
+                <apex:actionRegion >
+                <apex:pageBlockSection title="{!$Label.NONGES_Driver_Information}" columns="2">
+                    <apex:pageBlockSectionItem >
+                        <apex:outputLabel value="{!$ObjectType.Claims__Incident_Report__c.fields.NONGES_Driver_Owner_Same_As_Driver__c.Label}" />
+                        <apex:inputField value="{!IncidentReport.NONGES_Driver_Owner_Same_As_Driver__c}" >
+                             <apex:actionSupport event="onchange" rerender="nonGesVehicleInformation" status="status" /> 
+                        </apex:inputField>
+                    </apex:pageBlockSectionItem>
+                    <apex:inputField value="{!IncidentReport.NONGES_Driver_First_Name__c}" /> 
+                    <apex:inputField value="{!IncidentReport.NONGES_Driver_Last_Name__c}" /> 
+                    <apex:inputField value="{!IncidentReport.NONGES_Driver_Phone_Number__c}" />  
+                    <apex:inputField value="{!IncidentReport.NONGES_Driver_Cell_Number__c}" />
+                    <apex:inputField value="{!IncidentReport.NONGES_Driver_Address__c}" /> 
+                    <apex:inputField value="{!IncidentReport.NONGES_Driver_City__c}" /> 
+                    <apex:inputField value="{!IncidentReport.NONGES_Driver_State__c}" /> 
+                    <apex:inputField value="{!IncidentReport.NONGES_Driver_Zip_Code__c}" />  
+                    <apex:inputField value="{!IncidentReport.NONGES_Driver_Date_Of_Birth__c}" />
+                    <apex:inputField value="{!IncidentReport.NONGES_Driver_Age__c}" />
+                    <apex:inputField value="{!IncidentReport.Driver_Email_Address__c}"/>
+                    <apex:inputField value="{!IncidentReport.NONGES_Driver_Driver_License__c}" />
+                    <apex:inputField value="{!IncidentReport.NONGES_Driver_State1__c}" /> 
+                    <apex:pageBlockSectionItem >
+                        <apex:outputLabel value="{!$ObjectType.Claims__Incident_Report__c.fields.NONGES_Driver_Was_Driver_Injured__c.Label}" />
+                        <apex:inputField value="{!IncidentReport.NONGES_Driver_Was_Driver_Injured__c}" >
+                             <apex:actionSupport event="onchange" rerender="nonGesDriverInformation" status="status" /> 
+                        </apex:inputField>
+                    </apex:pageBlockSectionItem>
+                </apex:pageBlockSection>
+                <apex:pageBlockSection columns="1">
+                    <apex:inputField styleClass="textAreaBox" value="{!IncidentReport.NONGES_Driver_Describe_Injuries__c}" rendered="{!IncidentReport.NONGES_Driver_Was_Driver_Injured__c == 'Yes'}" />
+                </apex:pageBlockSection>
+                <apex:pageBlockSection columns="2">
+                    <apex:pageBlockSectionItem rendered="{!IncidentReport.NONGES_Driver_Was_Driver_Injured__c == 'Yes'}" > 
+                        <apex:outputLabel value="{!$ObjectType.Claims__Incident_Report__c.fields.NONGES_Driver_MedicalTreatmentSought__c.Label}" />
+                        <apex:inputField value="{!IncidentReport.NONGES_Driver_MedicalTreatmentSought__c}" >
+                             <apex:actionSupport event="onchange" rerender="nonGesDriverInformation" status="status" /> 
+                        </apex:inputField>
+                    </apex:pageBlockSectionItem>
+                    <apex:inputField value="{!IncidentReport.NONGES_Driver_Medical_Facility_Name__c}" rendered="{!IncidentReport.NONGES_Driver_Was_Driver_Injured__c == 'Yes' && IncidentReport.NONGES_Driver_MedicalTreatmentSought__c == 'Yes'}" /> 
+                    <apex:inputField value="{!IncidentReport.NONGES_Driver_Facility_Address__c}" rendered="{!IncidentReport.NONGES_Driver_Was_Driver_Injured__c == 'Yes' && IncidentReport.NONGES_Driver_MedicalTreatmentSought__c == 'Yes'}" /> 
+                    <apex:inputField value="{!IncidentReport.NONGES_Driver_City1__c}" rendered="{!IncidentReport.NONGES_Driver_Was_Driver_Injured__c == 'Yes' && IncidentReport.NONGES_Driver_MedicalTreatmentSought__c == 'Yes'}" /> 
+                    <apex:inputField value="{!IncidentReport.NONGES_Driver_State2__c}" rendered="{!IncidentReport.NONGES_Driver_Was_Driver_Injured__c == 'Yes' && IncidentReport.NONGES_Driver_MedicalTreatmentSought__c == 'Yes'}" /> 
+                    <apex:inputField value="{!IncidentReport.NONGES_Driver_Zip_Code1__c}" rendered="{!IncidentReport.NONGES_Driver_Was_Driver_Injured__c == 'Yes' && IncidentReport.NONGES_Driver_MedicalTreatmentSought__c == 'Yes'}" /> 
+                   
+                </apex:pageBlockSection>
+                </apex:actionRegion>
+            </apex:outputPanel>
+
+            <!-- NON_GES Vehicle Owner if difference from driver  -->
+            <apex:outputPanel id="nonGesVehicleInformation"  >
+                <apex:pageBlockSection title="{!$Label.NON_GES_Vehicle_Owner}" columns="2" rendered="{!IncidentReport.NONGES_Driver_Owner_Same_As_Driver__c == 'No'}">
+                    <apex:inputField value="{!IncidentReport.NONGES_Owner_Vehicle_Owner__c}" />
+                    <apex:inputField value="{!IncidentReport.NONGES_Owner_Phone_Number__c}" /> 
+                    <apex:inputField value="{!IncidentReport.NONGES_Owner_Cell_Phone__c}" /> 
+                    <apex:inputField value="{!IncidentReport.NONGES_Owner_Fax_Number__c}" />  
+                    <apex:inputField value="{!IncidentReport.NONGES_Owner_Email__c}" />
+                    <apex:inputField value="{!IncidentReport.NONGES_Owner_Address__c}" /> 
+                    <apex:inputField value="{!IncidentReport.NONGES_Owner_City__c}" /> 
+                    <apex:inputField value="{!IncidentReport.NONGES_Owner_State__c}" /> 
+                    <apex:inputField value="{!IncidentReport.NONGES_Owner_Zip_Code__c}" />  
+                    <apex:inputField value="{!IncidentReport.NONGES_Owner_Insurance_Company_Name__c}" /> 
+                    <apex:inputField value="{!IncidentReport.NONGES_Owner_Insurance_Policy__c}" /> 
+                </apex:pageBlockSection>
+            </apex:outputPanel>
+
+            <!-- GES Driver Passsenger Information  -->
+            <apex:outputPanel id="nonGesDriverPassengerInformation" >
+                <apex:actionRegion >
+                    <apex:pageBlockSection title="{!$Label.NON_GES_Driver_Passenger_Information}" columns="2">
+                        <apex:inputField value="{!IncidentReport.NONGES_PP_Vehicle_Passenger_Pedestrian__c}" /> 
+                        <apex:inputField value="{!IncidentReport.NONGES_PP_Name__c}" />
+                        <apex:inputField value="{!IncidentReport.NON_GES_PP_LastName__c}" />
+                        <apex:inputField value="{!IncidentReport.NONGES_PP_Daytime_Phone__c}" />
+                        <apex:inputField value="{!IncidentReport.NONGES_PP_Other_Phone__c}" />
+                        <apex:inputField value="{!IncidentReport.NONGES_PP_Address1__c}" />
+                        <apex:inputField value="{!IncidentReport.NONGES_PP_City__c}" /> 
+                        <apex:inputField value="{!IncidentReport.NONGES_PP_State__c}" /> 
+                        <apex:inputField value="{!IncidentReport.NONGES_PP_Zip_Code__c}" /> 
+                        <apex:pageBlockSectionItem >
+                            <apex:outputLabel value="{!$ObjectType.Claims__Incident_Report__c.fields.NONGES_Was_this_person_injured__c.Label}" />
+                            <apex:inputField value="{!IncidentReport.NONGES_Was_this_person_injured__c}" >
+                                 <apex:actionSupport event="onchange" rerender="nonGesDriverPassengerInformation" status="status" /> 
+                            </apex:inputField>
+                        </apex:pageBlockSectionItem>
+                    </apex:pageBlockSection>
+                    <apex:pageBlockSection columns="1">
+                        <apex:inputField styleClass="textAreaBox" value="{!IncidentReport.NONGES_PP_Description_of_Injury__c}" rendered="{!IncidentReport.NONGES_Was_this_person_injured__c == 'Yes'}" /> 
+                    </apex:pageBlockSection>
+                    <apex:pageBlockSection columns="2">
+                        <apex:pageBlockSectionItem rendered="{!IncidentReport.NONGES_Was_this_person_injured__c == 'Yes'}" >
+                            <apex:outputLabel value="{!$ObjectType.Claims__Incident_Report__c.fields.NONGES_Was_Medical_Treatment_Sought__c.Label}" />
+                            <apex:inputField value="{!IncidentReport.NONGES_Was_Medical_Treatment_Sought__c}" >
+                                 <apex:actionSupport event="onchange" rerender="nonGesDriverPassengerInformation" status="status" /> 
+                            </apex:inputField>
+                        </apex:pageBlockSectionItem>
+                        <apex:inputField value="{!IncidentReport.NONGES_PP_Medical_Facility_Name__c}" rendered="{!IncidentReport.NONGES_Was_this_person_injured__c == 'Yes' && IncidentReport.NONGES_Was_Medical_Treatment_Sought__c == 'Yes' }" /> 
+                        <apex:inputField value="{!IncidentReport.NONGES_PP_Facility_Address__c}" rendered="{!IncidentReport.NONGES_Was_this_person_injured__c == 'Yes' && IncidentReport.NONGES_Was_Medical_Treatment_Sought__c == 'Yes' }" /> 
+                        <apex:inputField value="{!IncidentReport.NONGES_PP_City1__c}" rendered="{!IncidentReport.NONGES_Was_this_person_injured__c == 'Yes' && IncidentReport.NONGES_Was_Medical_Treatment_Sought__c == 'Yes' }" /> 
+                        <apex:inputField value="{!IncidentReport.NONGES_PP_State1__c}" rendered="{!IncidentReport.NONGES_Was_this_person_injured__c == 'Yes' && IncidentReport.NONGES_Was_Medical_Treatment_Sought__c == 'Yes' }" /> 
+                        <apex:inputField value="{!IncidentReport.NONGES_PP_Zip_Code1__c}" rendered="{!IncidentReport.NONGES_Was_this_person_injured__c == 'Yes' && IncidentReport.NONGES_Was_Medical_Treatment_Sought__c == 'Yes' }" />
+                    </apex:pageBlockSection>
+                </apex:actionRegion>
+            </apex:outputPanel>
+
+            <!-- Witness Information -->
+             <!-- List any Witnesses to the Incident -->
+            <apex:outputPanel id="WitnessSection" >
+                <apex:PageBlockSection title="{!$Label.List_Witness}" columns="2">
+                    <apex:pageBlockSectionItem > 
+                        <apex:outputLabel value="{!$Label.Any_Witness_to_Incident}" />  
+                        <apex:actionRegion > 
+                            <apex:inputField value="{!IncidentReport.Are_there_any_witnesses_to_the_incident__c}" >
+                                <apex:actionSupport event="onchange" rerender="WitnessSection,witenessTwoSection" status="status" />
+                            </apex:inputField>
+                        </apex:actionRegion>
+                    </apex:pageBlockSectionItem>  
+                </apex:PageBlockSection>
+                <apex:PageBlockSection rendered="{!IncidentReport.Are_there_any_witnesses_to_the_incident__c == 'Yes'}">
+                    <apex:inputField value="{!IncidentReport.Witness_1_Name__c}" />
+                    <apex:inputField value="{!IncidentReport.LastName_Witness_1__c}" />
+                    <apex:inputField value="{!IncidentReport.Home_Phone_wit_1__c}" />
+                    <apex:inputField value="{!IncidentReport.Work_Phone_wit_1__c}" />
+                    <apex:inputField value="{!IncidentReport.Address_wit_1__c}" />
+                    <apex:inputField value="{!IncidentReport.City_wit_1__c}" />
+                    <apex:inputField value="{!IncidentReport.State_Witness_1__c}" />
+                    <apex:inputField value="{!IncidentReport.Zip_Code_witness_1__c}" />
+                    <apex:inputField value="{!IncidentReport.Witness_Email_Address__c}"/>
+                    <apex:pageBlockSectionItem />
+                    <apex:pageBlockSectionItem />
+                    <apex:pageBlockSectionItem />
+                    <apex:pageBlockSectionItem > 
+                        <apex:outputLabel value="{!$ObjectType.Claims__Incident_Report__c.fields.Enter_Witness_2_Details__c.Label}" />  
+                        <apex:actionRegion > 
+                            <apex:inputField value="{!IncidentReport.Enter_Witness_2_Details__c}" >
+                                <apex:actionSupport event="onchange" rerender="witenessTwoSection" status="status" />
+                            </apex:inputField>
+                        </apex:actionRegion>
+                    </apex:pageBlockSectionItem>
+                    <apex:pageBlockSectionItem />
+                </apex:PageBlockSection>
+            </apex:outputPanel>
+
+            <apex:outputPanel id="witenessTwoSection" >
+                <apex:PageBlockSection rendered="{!IncidentReport.Are_there_any_witnesses_to_the_incident__c == 'Yes' && IncidentReport.Enter_Witness_2_Details__c}" >
+                    <apex:inputField value="{!IncidentReport.Witness_2_Name__c}"  />
+                    <apex:inputField value="{!IncidentReport.LastName_Witness_2__c}" />
+                    <apex:inputField value="{!IncidentReport.Home_Phone_witness_2__c}" />
+                    <apex:inputField value="{!IncidentReport.Work_Phone_witness_2__c}"  />
+                    <apex:inputField value="{!IncidentReport.Address_wit_2__c}" />
+                    <apex:inputField value="{!IncidentReport.City_wit_2__c}" />
+                    <apex:inputField value="{!IncidentReport.State_witness_2__c}"  />
+                    <apex:inputField value="{!IncidentReport.Zip_Code_witness_2__c}"  />
+                    <apex:inputField value="{!IncidentReport.Witness_2_Email_Address__c}"/> 
+                </apex:PageBlockSection>
+                <apex:PageBlockSection >
+                   <apex:pageBlockSectionItem />
+                   <apex:pageBlockSectionItem />
+                   <apex:pageBlockSectionItem />
+                   <apex:pageBlockSectionItem rendered="{!IncidentReport.Enter_Witness_2_Details__c}" >
+                      <apex:outputLabel value="{!$ObjectType.Claims__Incident_Report__c.fields.Enter_Witness_3_Details__c.Label}" />
+                      <apex:actionRegion >
+                         <apex:inputField value="{!IncidentReport.Enter_Witness_3_Details__c}" >
+                            <apex:actionSupport event="onchange" rerender="witnessThreeSection" status="status" />
+                         </apex:inputField>
+                      </apex:actionRegion>
+                   </apex:pageBlockSectionItem>
+                   <apex:pageBlockSectionItem />
+                </apex:PageBlockSection>
+             </apex:outputPanel>
+             <apex:outputPanel id="witnessThreeSection" >
+                <apex:PageBlockSection rendered="{!IncidentReport.Are_there_any_witnesses_to_the_incident__c == 'Yes' 
+                &&  IncidentReport.Enter_Witness_2_Details__c && IncidentReport.Enter_Witness_3_Details__c}" >
+                   <apex:inputField value="{!IncidentReport.Witness_3_Name__c}"  />
+                   <apex:inputField value="{!IncidentReport.LastName_Witness_3__c}" />
+                   <apex:inputField value="{!IncidentReport.Home_Phone_Witness_3__c}" />
+                   <apex:inputField value="{!IncidentReport.Work_Phone_Witness_3__c}"  />
+                   <apex:inputField value="{!IncidentReport.Address_Witness_3__c}" />
+                   <apex:inputField value="{!IncidentReport.City_wit_3__c}" />
+                   <apex:inputField value="{!IncidentReport.State_Witness_3__c}"  />
+                   <apex:inputField value="{!IncidentReport.Zip_Code_Witness_3__c}"  />
+                   <apex:inputField value="{!IncidentReport.Witness_3_Company_Name__c}" />
+                   <apex:inputField value="{!IncidentReport.Witness_3_Email__c}"/> 
+                </apex:PageBlockSection>
+             </apex:outputPanel>
+
+            <!-- Crawford and company information  -->
+            <apex:outputPanel id="CrawfordSection" >
+                <apex:actionRegion > 
+                    <apex:PageBlockSection title="{!$Label.Crawford_And_Company_Information}" columns="2">                 
+                        <apex:pageBlockSectionItem > 
+                            <apex:outputLabel value="{!$ObjectType.Claims__Incident_Report__c.fields.Crawford_Notified__c.Label}" />  
+                            <apex:inputField value="{!IncidentReport.Crawford_Notified__c}" >
+                                <apex:actionSupport event="onchange" rerender="CrawfordSection" status="status" />
+                            </apex:inputField>
+                        </apex:pageBlockSectionItem>  
+                        <apex:inputField value="{!IncidentReport.Crawford_Date_Notified__c}" rendered="{!IncidentReport.Crawford_Notified__c == 'Yes'}"/>
+                        <apex:inputField value="{!IncidentReport.Crawford_Time_Notified__c}" rendered="{!IncidentReport.Crawford_Notified__c == 'Yes'}"/>
+                    </apex:PageBlockSection>
+                </apex:actionRegion>
+            </apex:outputPanel>
+
+            <!--Dot Information  -->
+            <apex:outputPanel id="dotInformation" >
+                <apex:actionRegion > 
+                    <apex:PageBlockSection title="{!$Label.Dot_Information}" columns="2">                 
+                        <apex:pageBlockSectionItem > 
+                            <apex:outputLabel value="{!$ObjectType.Claims__Incident_Report__c.fields.Fatality_either_party__c.Label}" />  
+                            <apex:inputField value="{!IncidentReport.Fatality_either_party__c}" >
+                                <apex:actionSupport event="onchange" rerender="dotInformation" status="status" />
+                            </apex:inputField>
+                        </apex:pageBlockSectionItem>
+                        <apex:pageBlockSectionItem >
+                            <apex:outputLabel value="{!$ObjectType.Claims__Incident_Report__c.fields.Medical_Attention_Away_from_Scene__c.Label}" />  
+                            <apex:inputField value="{!IncidentReport.Medical_Attention_Away_from_Scene__c}" >
+                                <apex:actionSupport event="onchange" rerender="dotInformation" status="status" />
+                            </apex:inputField>
+                        </apex:pageBlockSectionItem>  
+                        <apex:inputField value="{!IncidentReport.No_of_Deaths__c}" rendered="{!IncidentReport.Fatality_either_party__c == True}"/>
+                        <apex:inputField value="{!IncidentReport.No_of_Persons_Injured__c}" rendered="{!IncidentReport.Medical_Attention_Away_from_Scene__c == True}"/>
+                    </apex:PageBlockSection>
+                </apex:actionRegion>
+                <apex:PageBlockSection >
+                    <apex:inputField value="{!IncidentReport.Ticketed_either_party__c}"/>
+                    <apex:inputField value="{!IncidentReport.Towed_either_party__c}"/>
+                </apex:PageBlockSection>
+            </apex:outputPanel>
+
+            <!-- PoliceSection -->
+            <apex:outputPanel id="policeSection" >
+                <apex:actionRegion >
+                    <apex:PageBlockSection title="{!$Label.Police_Fire_Information}" columns="2">  
+                        <apex:pageBlockSectionItem >
+                            <apex:outputLabel value="{!$ObjectType.Claims__Incident_Report__c.fields.Police_Fire_EMT_Contacted__c.Label}" />
+                            <apex:inputField value="{!IncidentReport.Police_Fire_EMT_Contacted__c}" >
+                                <apex:actionSupport event="onchange" rerender="policeSection" status="status" /> 
+                            </apex:inputField>
+                        </apex:pageBlockSectionItem>
+                        <apex:inputField value="{!IncidentReport.Police_Who_Contacted__c}" rendered="{!IncidentReport.Police_Fire_EMT_Contacted__c == 'Yes'}" />
+                        <apex:inputField value="{!IncidentReport.Dept_Name__c}" rendered="{!IncidentReport.Police_Fire_EMT_Contacted__c == 'Yes'}" />
+                        <apex:inputField value="{!IncidentReport.Dept_Phone_Number__c}" rendered="{!IncidentReport.Police_Fire_EMT_Contacted__c == 'Yes'}" />
+                        <apex:pageBlockSectionItem rendered="{!IncidentReport.Police_Fire_EMT_Contacted__c == 'Yes'}" >
+                            <apex:outputLabel value="{!$ObjectType.Claims__Incident_Report__c.fields.Police_Was_Anyone_Cited__c.Label}" />
+                            <apex:inputField value="{!IncidentReport.Police_Was_Anyone_Cited__c}" >
+                                 <apex:actionSupport event="onchange" rerender="policeSection" status="status" /> 
+                            </apex:inputField>
+                        </apex:pageBlockSectionItem>
+                        <apex:inputField value="{!IncidentReport.Police_Who__c}" rendered="{!IncidentReport.Police_Fire_EMT_Contacted__c == 'Yes' && IncidentReport.Police_Was_Anyone_Cited__c == 'Yes'}" />
+                        <apex:inputField value="{!IncidentReport.Citation_Number__c}" rendered="{!IncidentReport.Police_Fire_EMT_Contacted__c == 'Yes' && IncidentReport.Police_Was_Anyone_Cited__c == 'Yes'}" />
+                    </apex:PageBlockSection>
+                </apex:actionRegion>
+            </apex:outputPanel>
+
+            <!-- Property Information -->
+            <apex:outputPanel id="propertyDamageSection" >
+                <apex:actionRegion >
+                    <apex:PageBlockSection title="{!$Label.Property_Damage}" columns="2">
+                        <apex:pageBlockSectionItem >
+                            <apex:outputLabel value="{!$ObjectType.Claims__Incident_Report__c.fields.Was_there_Property_Damage__c.Label}" />
+                            <apex:inputField value="{!IncidentReport.Was_there_Property_Damage__c}" >
+                                 <apex:actionSupport event="onchange" rerender="propertyDamageSection" status="status" /> 
+                            </apex:inputField>
+                        </apex:pageBlockSectionItem>
+                        <apex:inputField value="{!IncidentReport.Property_Owner__c}" rendered="{!IncidentReport.Was_there_Property_Damage__c == 'Yes'}" />
+                    </apex:PageBlockSection>
+                    <apex:pageBlockSection columns="1">
+                        <apex:inputField styleClass="textAreaBox" value="{!IncidentReport.Damage__c}" rendered="{!IncidentReport.Was_there_Property_Damage__c == 'Yes'}" />
+                    </apex:PageBlockSection>
+                </apex:actionRegion>
+            </apex:outputPanel>
+           <!--  <apex:outputPanel >
+              <apex:pageBlockSection title="Highline" >
+                   <apex:pageBlockSectionItem >
+                  <apex:outputLabel >Search: </apex:outputLabel>
+                  <apex:actionRegion >
+                    <apex:inputText list="{!listOfFname}" value="{!NamesSelected}">
+                     <apex:actionSupport event="onchange" action="{!RelatedFileds}" rerender="pbs01" />
+                </apex:inputText>
+                  </apex:actionRegion>
+                  </apex:pageBlockSectionItem>
+                  <apex:pageBlockSectionItem >
+                  <apex:outputText />
+              </apex:pageBlockSectionItem>
+              </apex:pageBlockSection>
+              
+              <apex:pageBlockSection id="pbs01">
+                  
+                    <apex:pageBlockSectionItem >
+                  <apex:outputText />
+              </apex:pageBlockSectionItem>
+               <apex:pageBlockSectionItem >
+                  <apex:outputText />
+              </apex:pageBlockSectionItem>
+                   <apex:pageBlockSectionItem >
+                  <apex:outputLabel >First Name: </apex:outputLabel>
+                  <apex:outputText value="{!frst}"/>
+                  </apex:pageBlockSectionItem>
+                  
+                <apex:pageBlockSectionItem >
+                  <apex:outputLabel >Last Name: </apex:outputLabel>
+                  <apex:outputText value="{!lst}"/>
+                  </apex:pageBlockSectionItem>
+                  
+                  <apex:pageBlockSectionItem >
+                  <apex:outputLabel >Department: </apex:outputLabel>
+                  <apex:outputText value="{!dpt}"/>
+                  </apex:pageBlockSectionItem>
+            
+             <apex:pageBlockSectionItem >
+                  <apex:outputLabel >DOB:</apex:outputLabel>
+                  <apex:outputText value="{0,date,MM/dd/yy}"> 
+                      <apex:param value="{!DOB}" />
+                  </apex:outputText>
+              </apex:pageBlockSectionItem>
+              </apex:pageBlockSection>    
+          </apex:outputPanel>-->
+            <!-- Additional Comments -->
+            <apex:PageBlockSection title="{!$Label.Additional_Comments}" columns="1">
+                <apex:inputField style="width:98%;" value="{!IncidentReport.Additional_Comments__c}" />
+            </apex:PageBlockSection>
+
+            <!-- Save Button -->
+            <apex:pageBlockButtons location="bottom">
+                <apex:commandButton action="{!Controller.Save}" value="{!ButtonLabel}" />
+                <apex:commandButton action="{!Controller.saveWithoutSubmission}" value="{!$Label.SaveWithoutSubmit}" />
+            </apex:pageBlockButtons>
+        </apex:pageBlock>
+    </apex:componentBody>
+</apex:component>

@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Payment_Method__c</fullName>
+    <label>Payment Method</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>AMEX</fullName>
+                <default>false</default>
+                <label>AMEX</label>
+            </value>
+            <value>
+                <fullName>BK-ATLANTA B OF A</fullName>
+                <default>false</default>
+                <label>BK-ATLANTA B OF A</label>
+            </value>
+            <value>
+                <fullName>BK-ATLANTA WELLS FARGO</fullName>
+                <default>false</default>
+                <label>BK-ATLANTA WELLS FARGO</label>
+            </value>
+            <value>
+                <fullName>BK-CHICAGO JP MORGAN</fullName>
+                <default>false</default>
+                <label>BK-CHICAGO JP MORGAN</label>
+            </value>
+            <value>
+                <fullName>BK-CHICAGO WELLS FARGO</fullName>
+                <default>false</default>
+                <label>BK-CHICAGO WELLS FARGO</label>
+            </value>
+            <value>
+                <fullName>BK-DALLAS B OF A</fullName>
+                <default>false</default>
+                <label>BK-DALLAS B OF A</label>
+            </value>
+            <value>
+                <fullName>BK-DALLAS WELLS FARGO</fullName>
+                <default>false</default>
+                <label>BK-DALLAS WELLS FARGO</label>
+            </value>
+            <value>
+                <fullName>BK-DC BANK OF AMERICA</fullName>
+                <default>false</default>
+                <label>BK-DC BANK OF AMERICA</label>
+            </value>
+            <value>
+                <fullName>BK-DC WELLS FARGO</fullName>
+                <default>false</default>
+                <label>BK-DC WELLS FARGO</label>
+            </value>
+            <value>
+                <fullName>BK-LAS VEGAS WELLS FARGO</fullName>
+                <default>false</default>
+                <label>BK-LAS VEGAS WELLS FARGO</label>
+            </value>
+            <value>
+                <fullName>BK-LOS ANGELES B OF A</fullName>
+                <default>false</default>
+                <label>BK-LOS ANGELES B OF A</label>
+            </value>
+            <value>
+                <fullName>BK-LOS ANGELES WELLS FARGO</fullName>
+                <default>false</default>
+                <label>BK-LOS ANGELES WELLS FARGO</label>
+            </value>
+            <value>
+                <fullName>BK-MINNEAPOLIS JP MORGAN</fullName>
+                <default>false</default>
+                <label>BK-MINNEAPOLIS JP MORGAN</label>
+            </value>
+            <value>
+                <fullName>BK-MINNEAPOLIS WELLS FARGO</fullName>
+                <default>false</default>
+                <label>BK-MINNEAPOLIS WELLS FARGO</label>
+            </value>
+            <value>
+                <fullName>BK-NATL AR WELLS FARGO</fullName>
+                <default>false</default>
+                <label>BK-NATL AR WELLS FARGO</label>
+            </value>
+            <value>
+                <fullName>BK-NEW ORLEANS CAPITAL ONE</fullName>
+                <default>false</default>
+                <label>BK-NEW ORLEANS CAPITAL ONE</label>
+            </value>
+            <value>
+                <fullName>BK-NEW YORK WACHOVIA</fullName>
+                <default>false</default>
+                <label>BK-NEW YORK WACHOVIA</label>
+            </value>
+            <value>
+                <fullName>BK-NEW YORK WELLS FARGO</fullName>
+                <default>false</default>
+                <label>BK-NEW YORK WELLS FARGO</label>
+            </value>
+            <value>
+                <fullName>BK-ORLANDO B OF A</fullName>
+                <default>false</default>
+                <label>BK-ORLANDO B OF A</label>
+            </value>
+            <value>
+                <fullName>BK-ORLANDO WELLS FARGO</fullName>
+                <default>false</default>
+                <label>BK-ORLANDO WELLS FARGO</label>
+            </value>
+            <value>
+                <fullName>BK-PHOENIX JP MORGAN</fullName>
+                <default>false</default>
+                <label>BK-PHOENIX JP MORGAN</label>
+            </value>
+            <value>
+                <fullName>BK-PHOENIX WELLS FARGO</fullName>
+                <default>false</default>
+                <label>BK-PHOENIX WELLS FARGO</label>
+            </value>
+            <value>
+                <fullName>BK-RENO WELLS FARGO</fullName>
+                <default>false</default>
+                <label>BK-RENO WELLS FARGO</label>
+            </value>
+            <value>
+                <fullName>BK-SALT LAKE CITY WELLS FARGO</fullName>
+                <default>false</default>
+                <label>BK-SALT LAKE CITY WELLS FARGO</label>
+            </value>
+            <value>
+                <fullName>BK-SAN DIEGO B OF A</fullName>
+                <default>false</default>
+                <label>BK-SAN DIEGO B OF A</label>
+            </value>
+            <value>
+                <fullName>BK-SAN DIEGO WELLS FARGO</fullName>
+                <default>false</default>
+                <label>BK-SAN DIEGO WELLS FARGO</label>
+            </value>
+            <value>
+                <fullName>BK-SAN FRANCISCO B OF A</fullName>
+                <default>false</default>
+                <label>BK-SAN FRANCISCO B OF A</label>
+            </value>
+            <value>
+                <fullName>BK-SAN FRANCISCO WELLS FARGO</fullName>
+                <default>false</default>
+                <label>BK-SAN FRANCISCO WELLS FARGO</label>
+            </value>
+            <value>
+                <fullName>BK-SEATTLE B OF A</fullName>
+                <default>false</default>
+                <label>BK-SEATTLE B OF A</label>
+            </value>
+            <value>
+                <fullName>BK-SEATTLE WELLS FARGO</fullName>
+                <default>false</default>
+                <label>BK-SEATTLE WELLS FARGO</label>
+            </value>
+            <value>
+                <fullName>DINERS DISCOVER</fullName>
+                <default>false</default>
+                <label>DINERS DISCOVER</label>
+            </value>
+            <value>
+                <fullName>MAN CC-AMEX</fullName>
+                <default>false</default>
+                <label>MAN CC-AMEX</label>
+            </value>
+            <value>
+                <fullName>MAN CC-DINERS</fullName>
+                <default>false</default>
+                <label>MAN CC-DINERS</label>
+            </value>
+            <value>
+                <fullName>MAN CC-DISCOVER</fullName>
+                <default>false</default>
+                <label>MAN CC-DISCOVER</label>
+            </value>
+            <value>
+                <fullName>MAN CC-MasterCard</fullName>
+                <default>false</default>
+                <label>MAN CC-MasterCard</label>
+            </value>
+            <value>
+                <fullName>MAN CC-VISA</fullName>
+                <default>false</default>
+                <label>MAN CC-VISA</label>
+            </value>
+            <value>
+                <fullName>MANUAL MOVE CREDIT</fullName>
+                <default>false</default>
+                <label>MANUAL MOVE CREDIT</label>
+            </value>
+            <value>
+                <fullName>MC</fullName>
+                <default>false</default>
+                <label>MC</label>
+            </value>
+            <value>
+                <fullName>VISA</fullName>
+                <default>false</default>
+                <label>VISA</label>
+            </value>
+            <value>
+                <fullName>WIRE TRANSFER</fullName>
+                <default>false</default>
+                <label>WIRE TRANSFER</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

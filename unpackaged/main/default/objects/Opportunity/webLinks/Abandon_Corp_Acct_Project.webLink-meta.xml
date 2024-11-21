@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Abandon_Corp_Acct_Project</fullName>
+    <availability>online</availability>
+    <description>Sets status to Closed Lost. Sends workflow to Lost in GBMS.</description>
+    <displayType>button</displayType>
+    <linkType>javascript</linkType>
+    <masterLabel>Abandon Corp Acct Project</masterLabel>
+    <openType>onClickJavaScript</openType>
+    <protected>false</protected>
+    <url>{!REQUIRESCRIPT(&quot;/soap/ajax/58.0/connection.js&quot;)}
+
+/*
+var Opp = new sforce.SObject(&quot;Opportunity&quot;); 
+Opp.Id = &#39;{!Opportunity.Id}&#39;;
+Opp.StageName = &quot;Closed Lost&quot;;
+Opp.GBMS_Workflow_Status__c = &quot;Lost&quot;; 
+Opp.GBMSProjectStatus__c = &quot;Lost&quot;;
+
+var result = sforce.connection.update([Opp]); 
+
+if (result[0].success==&#39;false&#39;) 
+     alert(result[0].errors.message);
+else
+     window.location= &quot;./apex/opportunityEdit?id=&quot;+&#39;{!Opportunity.Id}&#39;;
+*/
+
+window.location= &quot;./apex/opportunityEdit?id=&quot;+&#39;{!Opportunity.Id}&#39;;</url>
+</WebLink>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CRR_Project_Central_Show__c</fullName>
+    <deleteConstraint>Restrict</deleteConstraint>
+    <label>Project Central Show</label>
+    <referenceTo>GC_Connect2_Show__c</referenceTo>
+    <relationshipLabel>Central Reservations Requests</relationshipLabel>
+    <relationshipName>Central_Reservations_Requests</relationshipName>
+    <required>true</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

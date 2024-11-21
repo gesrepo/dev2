@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Orders_Created_Today</fullName>
+    <columns>NAME</columns>
+    <columns>Opportunity_Name__c</columns>
+    <columns>Request_Plan_Type__c</columns>
+    <columns>Fire_Marshaling__c</columns>
+    <columns>CREATED_DATE</columns>
+    <columns>UserEntered_Requested_Due_Date__c</columns>
+    <columns>Claimed_By__c</columns>
+    <columns>CREATEDBY_USER</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>CREATED_DATE</field>
+        <operation>equals</operation>
+        <value>TODAY</value>
+    </filters>
+    <label>~Orders Created Today</label>
+</ListView>

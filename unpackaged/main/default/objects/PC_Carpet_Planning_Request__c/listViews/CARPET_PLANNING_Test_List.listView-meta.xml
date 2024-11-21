@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CARPET_PLANNING_Test_List</fullName>
+    <columns>First_Move_In_Date__c</columns>
+    <columns>CR_Show_ID__c</columns>
+    <columns>X12_week_approval_due_date__c</columns>
+    <columns>X6_week_approval_due_date__c</columns>
+    <columns>X3_week_approval_due_date__c</columns>
+    <columns>NAME</columns>
+    <columns>Request_Type__c</columns>
+    <columns>Status__c</columns>
+    <columns>CR_Client_Services_Manager__c</columns>
+    <columns>CPR_Claimed_By__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>First_Move_In_Date__c</field>
+        <operation>greaterThan</operation>
+        <value>TODAY</value>
+    </filters>
+    <label>CARPET PLANNING-Staus Overview</label>
+</ListView>

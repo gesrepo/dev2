@@ -1,0 +1,604 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>EMEA_Sales_Layout</fullName>
+    <active>true</active>
+    <description>Used by users in EMEA for lightning</description>
+    <label>EMEA Sales Layout</label>
+    <picklistValues>
+        <picklist>DMAPP__TTG_Prime_Action_Type__c</picklist>
+        <values>
+            <fullName>Emphasize your strengths</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Insulate against competition</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Minimize your weaknesses</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Prove your value</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Retrieve missing information</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Event_Status__c</picklist>
+        <values>
+            <fullName>Cancelled</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Completed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Planned</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Postponed</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Outcome__c</picklist>
+        <values>
+            <fullName>Disqualified%3A Invalid Number</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Disqualified%3A Not Attending Show</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Success %E2%80%93 Spoke%2C Additional follow up set</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Success%3A Dealing with Design and Build</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Success%3A Dealing with Service Centre</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Success%3A Dealing with Show Ready</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Success%3A Email capabilities</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Success%3A Onsite meeting scheduled</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Success%3A Opportunity created</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Success%3A Presentation scheduled</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Success%3A Spoke%2C but not interested</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Success%3A Spoke%2C registered for webinar</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Unsuccessful%3A Unable to reach %E2%80%93 did not leave voicemail</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Unsuccessful%3A Unable to reach %E2%80%93 left voicemail</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Priority</picklist>
+        <values>
+            <fullName>High</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Low</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Normal</fullName>
+            <default>true</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Related_Department__c</picklist>
+        <values>
+            <fullName>AV</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Core</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Corporate Accounts</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Event Intelligence</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Event Management</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Graphics</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lead Generation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>New Business</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Service Centre</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Show Ready</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Status</picklist>
+        <values>
+            <fullName>Completed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Deferred</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>In Progress</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Not Started</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Pending Approval</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Waiting on someone else</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Sub_Sub_Type__c</picklist>
+        <values>
+            <fullName>IAEE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IAEE Annual</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PCMA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PCMA Annual</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Sub_Type__c</picklist>
+        <values>
+            <fullName>Account Planning</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Attached %26 Completed Competitor Show Report</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Direct Mail</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Email</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Face-to-face Meeting</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Facility Visit</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Follow-up</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Industry Event</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Last Attempt</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Last Meeting</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Last Reach</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Letter</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mass Email</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Meeting</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Phone</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Presentation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>RFP</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Reassignment</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sent Proposal</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Site Visit</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Social Post</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Speaking Engagement</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Task</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Virtual Meeting</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Website Chat</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Subject</picklist>
+        <values>
+            <fullName>ACCESS opening times%2Fdate enquiry</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>APPOINTED SERVICES query</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BROCHURE request%2Fsent</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>COMPLAINT LOB communication %28not ServiCentre%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>COMPLAINT invoice</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>COMPLAINT on-site issues</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DASHBOARD functionality problem%2Fs</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DASHBOARD stock alternatives</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DELIVERY enquiry</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DIAGRAM query</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DIAGRAM received</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DIAGRAM request</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Electrical enquiry</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FLOOR COVERING general enquiry</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FLOOR COVERING sample request</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FLOOR COVERING shell scheme colour</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FURNITURE availability query</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FURNITURE dimensions</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FURNITURE lock enquiry</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FURNITURE missing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FURNITURE non-stock item request</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FURNITURE suitability query</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Graphics enquiry</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>INVOICE error</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>INVOICE not received</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>INVOICE received</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>INVOICE request%2Fsent</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>LEAD %28MSC generated%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Name board query</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ORDER amendment</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ORDER cancellation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ORDER enquiry</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ORDER form request%2Fquery</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ORDER new</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PACKAGE CONTENT enquiry</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PAYMENT details received</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PAYMENT query</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PERSON change of contact details</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PRICE enquiry</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>QUOTE accepted</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>QUOTE request%2Fsent</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>REFUND request%2Fsent</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>RESERVE request%2Fsent</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>STAND FITTING dimensions</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>STAND FITTING display advice</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>STAND FITTING picture request</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>STAND FITTING platform enquiry</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>STAND FITTING removal of fascia%2Fceiling grid</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>STAND FITTING storage area enquiry</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>STAND FITTING system enquiry</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>STAND NUMBER amendment%2Fquery</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>STAND query %28size%2Fopen sides%2Fetc%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Storage enquiry</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Type</picklist>
+        <values>
+            <fullName>Call%3A Chase order %28pre invoice call%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Call%3A Courtesy intro as event contractor</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Call%3A Courtesy%C2%A0following invoice</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Call%3A General Inbound</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Call%3A Inbound -From Site</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Call%3A Inbound- Lead Generation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Call%3A Lead Generation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Call%3A Up-sell attempt made</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Email</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Internal communication</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Meeting Arrangement</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Outbound call</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Reminder</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Task</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Type__c</picklist>
+        <values>
+            <fullName>External</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Internal</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

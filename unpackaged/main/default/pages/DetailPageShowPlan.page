@@ -1,0 +1,23 @@
+<apex:page standardController="Show_Plan__c" extensions="DetailPageShowPlan">
+<style>
+.fewerMore { display: none;}
+</style>
+<apex:form >
+ <apex:pageMessages />
+ <apex:detail relatedList="true"></apex:detail>
+<apex:pageblock id="CustomList" title="Related Show Contacts"  >
+   <apex:pageBlockTable value="{!cntacts}" var="c" rendered="{!NOT(ISNULL(cntacts))}">
+        <apex:column >
+                <apex:facet name="header">
+                <apex:outputLabel value="Show Contact Name" />
+                </apex:facet>
+                <apex:outputLink value="{!URLFOR($Action.Contact.View,c.id)}">{!c.name}</apex:outputLink>
+            </apex:column>
+	<apex:column value="{!c.Title}"/>
+        <apex:column value="{!c.Email}"/>
+        <apex:column value="{!c.Phone}"/>
+   </apex:pageBlockTable>
+   <apex:outputLabel value="No records to display" rendered="{!(ISNULL(cntacts))}" styleClass="noRowsHeader"></apex:outputLabel>
+ </apex:pageblock>
+</apex:form>
+</apex:page>

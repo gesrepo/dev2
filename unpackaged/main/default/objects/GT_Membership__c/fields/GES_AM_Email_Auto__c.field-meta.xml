@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>GES_AM_Email_Auto__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF((TEXT(GES_Account_Manager__c) == &quot;Jessica Bodner&quot;),&quot;jbodner@ges.com&quot;, 
+IF((TEXT(GES_Account_Manager__c) == &quot;Stephanie Specht&quot;),&quot;sspecht@ges.com&quot;, 
+IF((TEXT(GES_Account_Manager__c) == &quot;Jamie Brosmore&quot;),&quot;jbrosmore@ges.com&quot;,
+IF((TEXT(GES_Account_Manager__c) == &quot;Dabra Watters&quot;),&quot;dwatters@ges.com&quot;,
+IF((TEXT(GES_Account_Manager__c) == &quot;Amy Ziccarelli&quot;),&quot; aziccarelli@thisisspiro.com&quot;, 
+&quot;&quot;)))))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>GES AM Email</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

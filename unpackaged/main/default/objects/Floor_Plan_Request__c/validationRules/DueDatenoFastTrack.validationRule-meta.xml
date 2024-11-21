@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>DueDatenoFastTrack</fullName>
+    <active>true</active>
+    <errorConditionFormula>Fast_Track__c = false &amp;&amp; NOT(ISBLANK(Requested_Due_Date__c))</errorConditionFormula>
+    <errorDisplayField>Fast_Track__c</errorDisplayField>
+    <errorMessage>Please check Fast Track if indicating a faster turn around time is needed or remove Requested Due Date to proceed.</errorMessage>
+</ValidationRule>

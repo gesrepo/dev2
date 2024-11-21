@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Credit_Memo_Code__c</fullName>
+    <label>Credit Memo Code</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>01-Wrong Price/Rate/Quote</fullName>
+                <default>false</default>
+                <label>01-Wrong Price/Rate/Quote</label>
+            </value>
+            <value>
+                <fullName>02-Wrong Qty/weight/hours</fullName>
+                <default>false</default>
+                <label>02-Wrong Qty/weight/hours</label>
+            </value>
+            <value>
+                <fullName>03-Didn’t order</fullName>
+                <default>false</default>
+                <label>03-Didn’t order</label>
+            </value>
+            <value>
+                <fullName>04-Billed wrong cust/Rebill</fullName>
+                <default>false</default>
+                <label>04-Billed wrong cust/Rebill</label>
+            </value>
+            <value>
+                <fullName>05-Surchrg/OffTarget/Lte Whse</fullName>
+                <default>false</default>
+                <label>05-Surchrg/OffTarget/Lte Whse</label>
+            </value>
+            <value>
+                <fullName>06-Dupe Billing</fullName>
+                <default>false</default>
+                <label>06-Dupe Billing</label>
+            </value>
+            <value>
+                <fullName>07-Insufficient Documentation</fullName>
+                <default>false</default>
+                <label>07-Insufficient Documentation</label>
+            </value>
+            <value>
+                <fullName>08-Wrong Item Billed</fullName>
+                <default>false</default>
+                <label>08-Wrong Item Billed</label>
+            </value>
+            <value>
+                <fullName>09-Supervision charge error</fullName>
+                <default>false</default>
+                <label>09-Supervision charge error</label>
+            </value>
+            <value>
+                <fullName>10-Good Faith</fullName>
+                <default>false</default>
+                <label>10-Good Faith</label>
+            </value>
+            <value>
+                <fullName>11-Bill to Association</fullName>
+                <default>false</default>
+                <label>11-Bill to Association</label>
+            </value>
+            <value>
+                <fullName>12-Cancelled/Didn’t attend</fullName>
+                <default>false</default>
+                <label>12-Cancelled/Didn’t attend</label>
+            </value>
+            <value>
+                <fullName>13-Not Used</fullName>
+                <default>false</default>
+                <label>13-Not Used</label>
+            </value>
+            <value>
+                <fullName>14-Service Failure/Didn’t rcv</fullName>
+                <default>false</default>
+                <label>14-Service Failure/Didn’t rcv</label>
+            </value>
+            <value>
+                <fullName>15-Logistics Good Faith</fullName>
+                <default>false</default>
+                <label>15-Logistics Good Faith</label>
+            </value>
+            <value>
+                <fullName>16-Legal Settlement</fullName>
+                <default>false</default>
+                <label>16-Legal Settlement</label>
+            </value>
+            <value>
+                <fullName>17-Trans/Disc Not Applied</fullName>
+                <default>false</default>
+                <label>17-Trans/Disc Not Applied</label>
+            </value>
+            <value>
+                <fullName>18-OB /IB Quote not matched</fullName>
+                <default>false</default>
+                <label>18-OB /IB Quote not matched</label>
+            </value>
+            <value>
+                <fullName>19-Operation Error</fullName>
+                <default>false</default>
+                <label>19-Operation Error</label>
+            </value>
+            <value>
+                <fullName>20-Order Error</fullName>
+                <default>false</default>
+                <label>20-Order Error</label>
+            </value>
+            <value>
+                <fullName>21-Tax Exempt</fullName>
+                <default>false</default>
+                <label>21-Tax Exempt</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

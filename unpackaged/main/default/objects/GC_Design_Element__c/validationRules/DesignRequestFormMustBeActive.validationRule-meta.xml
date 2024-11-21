@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>DesignRequestFormMustBeActive</fullName>
+    <active>false</active>
+    <description>A new Design Element Task must be added to a DRF with a status of New or Active</description>
+    <errorConditionFormula>AND(!ISPICKVAL(Design_Request_Form__r.Status__c, &#39;New&#39;) ,!ISPICKVAL(Design_Request_Form__r.Status__c, &#39;Active&#39;))</errorConditionFormula>
+    <errorMessage>You can only add a Design Element Task to a Design Request Form with a status of &#39;New&#39; or &#39;Active&#39;</errorMessage>
+</ValidationRule>

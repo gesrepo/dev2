@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Archivist</fullName>
+    <filterScope>Queue</filterScope>
+    <filters>
+        <field>CASES.STATUS</field>
+        <operation>notEqual</operation>
+        <value>Closed</value>
+    </filters>
+    <label>US-Archivist</label>
+    <language>en_US</language>
+    <queue>US_Case_Queue_Archivist</queue>
+    <sharedTo>
+        <allInternalUsers />
+        <roleAndSubordinatesInternal>GESNSCExhibitorSalesSupervisor</roleAndSubordinatesInternal>
+        <roleAndSubordinatesInternal>GES_NSC_Admin</roleAndSubordinatesInternal>
+        <roleAndSubordinatesInternal>GES_NSC_CAS_Rep</roleAndSubordinatesInternal>
+        <roleAndSubordinatesInternal>GES_NSC_Director</roleAndSubordinatesInternal>
+        <roleAndSubordinatesInternal>GES_NSC_File_Archivist</roleAndSubordinatesInternal>
+        <roleAndSubordinatesInternal>GES_NSC_Inbound_Rep</roleAndSubordinatesInternal>
+        <roleAndSubordinatesInternal>GES_NSC_Inbound_Supervisor</roleAndSubordinatesInternal>
+        <roleAndSubordinatesInternal>GES_NSC_Kit_Admin_Rep</roleAndSubordinatesInternal>
+        <roleAndSubordinatesInternal>GES_NSC_Kit_Admin_Supervisor</roleAndSubordinatesInternal>
+        <roleAndSubordinatesInternal>GES_NSC_LeadGen_Rep</roleAndSubordinatesInternal>
+        <roleAndSubordinatesInternal>GES_NSC_Logistics_Rep</roleAndSubordinatesInternal>
+        <roleAndSubordinatesInternal>GES_NSC_Order_Entry_Director</roleAndSubordinatesInternal>
+        <roleAndSubordinatesInternal>GES_NSC_Order_Entry_Rep</roleAndSubordinatesInternal>
+        <roleAndSubordinatesInternal>GES_NSC_Order_Entry_Supervisor</roleAndSubordinatesInternal>
+        <roleAndSubordinatesInternal>GES_NSC_Outbound_Rep</roleAndSubordinatesInternal>
+        <roleAndSubordinatesInternal>GES_NSC_Resolutions_Rep</roleAndSubordinatesInternal>
+        <roleAndSubordinatesInternal>GES_NSC_Resolutions_Supervisor</roleAndSubordinatesInternal>
+        <roleAndSubordinatesInternal>GES_NSC_Support_Desk_Rep</roleAndSubordinatesInternal>
+        <roleAndSubordinatesInternal>GES_National_Servicenter</roleAndSubordinatesInternal>
+    </sharedTo>
+</ListView>

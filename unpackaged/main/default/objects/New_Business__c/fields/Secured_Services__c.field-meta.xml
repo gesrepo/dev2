@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Secured_Services__c</fullName>
+    <label>Secured Services</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Blitz AV</fullName>
+                <default>false</default>
+                <label>Blitz AV</label>
+            </value>
+            <value>
+                <fullName>Design &amp; Build</fullName>
+                <default>false</default>
+                <label>Design &amp; Build</label>
+            </value>
+            <value>
+                <fullName>Electrics</fullName>
+                <default>false</default>
+                <label>Electrics</label>
+            </value>
+            <value>
+                <fullName>EMOL</fullName>
+                <default>false</default>
+                <label>EMOL</label>
+            </value>
+            <value>
+                <fullName>Exhibitor Graphics</fullName>
+                <default>false</default>
+                <label>Exhibitor Graphics</label>
+            </value>
+            <value>
+                <fullName>Floorcovering</fullName>
+                <default>false</default>
+                <label>Floorcovering</label>
+            </value>
+            <value>
+                <fullName>Floorplanning</fullName>
+                <default>false</default>
+                <label>Floorplanning</label>
+            </value>
+            <value>
+                <fullName>Furniture</fullName>
+                <default>false</default>
+                <label>Furniture</label>
+            </value>
+            <value>
+                <fullName>Logistics</fullName>
+                <default>false</default>
+                <label>Logistics</label>
+            </value>
+            <value>
+                <fullName>N200</fullName>
+                <default>false</default>
+                <label>N200</label>
+            </value>
+            <value>
+                <fullName>Organiser Graphics</fullName>
+                <default>false</default>
+                <label>Organiser Graphics</label>
+            </value>
+            <value>
+                <fullName>Specialist Lighting</fullName>
+                <default>false</default>
+                <label>Specialist Lighting</label>
+            </value>
+            <value>
+                <fullName>Standfitting</fullName>
+                <default>false</default>
+                <label>Standfitting</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>5</visibleLines>
+</CustomField>

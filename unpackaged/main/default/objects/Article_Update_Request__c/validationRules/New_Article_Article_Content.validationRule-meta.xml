@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>New_Article_Article_Content</fullName>
+    <active>true</active>
+    <description>Requires Article Content on a New Article</description>
+    <errorConditionFormula>IF (ISPICKVAL (Request_Type__c, &quot;New Article&quot;) &amp;&amp; ISBLANK (Article_Content__c), TRUE, FALSE)</errorConditionFormula>
+    <errorDisplayField>Article_Content__c</errorDisplayField>
+    <errorMessage>You must specify article content for a new article.</errorMessage>
+</ValidationRule>

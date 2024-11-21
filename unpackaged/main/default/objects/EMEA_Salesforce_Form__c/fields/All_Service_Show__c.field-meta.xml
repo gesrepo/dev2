@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>All_Service_Show__c</fullName>
+    <defaultValue>false</defaultValue>
+    <inlineHelpText>Check Yes if this is an all service show, or leave blank if it is not</inlineHelpText>
+    <label>All Service Show?</label>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

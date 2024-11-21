@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>US_Order_Entry_Open_Cases_FAXES</fullName>
+    <columns>CASES.CASE_NUMBER</columns>
+    <columns>CASES.CREATED_DATE</columns>
+    <columns>CASES.LAST_UPDATE</columns>
+    <columns>Show_Open_Date__c</columns>
+    <columns>Show_Name__c</columns>
+    <columns>Project_Number__c</columns>
+    <columns>Reason__c</columns>
+    <columns>Customer_Name__c</columns>
+    <columns>NAME</columns>
+    <columns>Booth_Number__c</columns>
+    <columns>Booth_Dimensions__c</columns>
+    <filterScope>Queue</filterScope>
+    <filters>
+        <field>CASES.STATUS</field>
+        <operation>notEqual</operation>
+        <value>Closed</value>
+    </filters>
+    <label>US-Order Entry Open Cases FAXES</label>
+    <language>en_US</language>
+    <queue>US_Case_Queue_Order_Entry</queue>
+</ListView>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SA_Billing_Distribution_Client_Email__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>For Billing to distribute the final invoice to the client, provide client’s Email and cc Emails OR write MAIL (for USPS standard delivery)</inlineHelpText>
+    <label>Billing Distribution Client Email/Mail</label>
+    <length>100</length>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

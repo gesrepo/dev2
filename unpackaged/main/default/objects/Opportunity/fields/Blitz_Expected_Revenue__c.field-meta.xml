@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Blitz_Expected_Revenue__c</fullName>
+    <description>Custom revenue field for Blitz reporting</description>
+    <formula>IF ( Owner.Id = &quot;00540000003EhZ9&quot;,
+IF( TEXT(Type) = &quot;QUOTE&quot;,  ExpectedRevenue , If(TEXT(Type) = &quot;Sales Goal&quot;, 0,  Amount))
+, 0)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Blitz Expected Revenue</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackHistory>false</trackHistory>
+    <type>Currency</type>
+</CustomField>

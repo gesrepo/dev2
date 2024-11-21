@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Reason_for_Cancellation__c</fullName>
+    <label>Reason for Cancellation</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>true</sorted>
+            <value>
+                <fullName>Budget cut</fullName>
+                <default>false</default>
+                <label>Budget cut</label>
+            </value>
+            <value>
+                <fullName>Event Not Occurring</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Event Not Occurring</label>
+            </value>
+            <value>
+                <fullName>Exhibit Space Sold Out</fullName>
+                <default>false</default>
+                <label>Exhibit space sold out</label>
+            </value>
+            <value>
+                <fullName>Product owner decision</fullName>
+                <default>false</default>
+                <label>Product owner decision</label>
+            </value>
+            <value>
+                <fullName>Public Health Issue</fullName>
+                <default>false</default>
+                <label>Public Health Issue</label>
+            </value>
+            <value>
+                <fullName>Strategy Change</fullName>
+                <default>false</default>
+                <label>Strategy Change</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

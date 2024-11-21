@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>GES_Event_Manager__c</fullName>
+    <label>GES Event Manager</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Debbie Hummel</fullName>
+                <default>false</default>
+                <label>Debbie Hummel</label>
+            </value>
+            <value>
+                <fullName>Elena Fezzardi</fullName>
+                <default>false</default>
+                <label>Elena Fezzardi</label>
+            </value>
+            <value>
+                <fullName>Eva McCartney</fullName>
+                <default>false</default>
+                <label>Eva McCartney</label>
+            </value>
+            <value>
+                <fullName>Gail Griffith</fullName>
+                <default>false</default>
+                <label>Gail Griffith</label>
+            </value>
+            <value>
+                <fullName>Ilyse Link</fullName>
+                <default>false</default>
+                <label>Ilyse Link</label>
+            </value>
+            <value>
+                <fullName>Jennifer Matyas</fullName>
+                <default>false</default>
+                <label>Jennifer Matyas</label>
+            </value>
+            <value>
+                <fullName>Julia Noonan</fullName>
+                <default>false</default>
+                <label>Julia Noonan</label>
+            </value>
+            <value>
+                <fullName>Linnell Navarro</fullName>
+                <default>false</default>
+                <label>Linnell Navarro</label>
+            </value>
+            <value>
+                <fullName>N/A</fullName>
+                <default>false</default>
+                <label>N/A</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

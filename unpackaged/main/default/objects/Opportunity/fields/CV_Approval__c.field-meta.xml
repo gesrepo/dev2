@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CV_Approval__c</fullName>
+    <defaultValue>false</defaultValue>
+    <inlineHelpText>Only needs to go to Jen Beindorf for approval if not already approved in CV (occasionally smaller event deals go straight to CR without CV)</inlineHelpText>
+    <label>CV Approval</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

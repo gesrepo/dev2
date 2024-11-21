@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Submit_for_Approval</fullName>
+    <availability>online</availability>
+    <description>Custom button to trigger custom approval process</description>
+    <displayType>button</displayType>
+    <linkType>javascript</linkType>
+    <masterLabel>Submit for Approval</masterLabel>
+    <openType>onClickJavaScript</openType>
+    <protected>false</protected>
+    <url>{!REQUIRESCRIPT(&quot;/soap/ajax/15.0/connection.js&quot;)}
+{!REQUIRESCRIPT(&quot;/soap/ajax/15.0/apex.js&quot;)}
+
+var customerServiceInquiries = sforce.connection.query(&quot;SELECT Case_Approval_Status__c from Customer_Service_Inquiries_ICS__c where id =&#39;{!Customer_Service_Inquiries_ICS__c.Id}&#39; limit 1&quot;);
+
+records = customerServiceInquiries.getArray(&quot;records&quot;); 
+
+var approvalStatus = records[0].Case_Approval_Status__c;
+if(approvalStatus == &#39;Requestor Submitted&#39; 
+	|| approvalStatus == &#39;LOB Submitted&#39; 
+	|| approvalStatus == &#39;F&amp;R Submitted&#39; 
+	|| approvalStatus == &#39;AR1 Submitted&#39;
+        || approvalStatus == &#39;CSO Submitted&#39;
+	|| approvalStatus == &#39;AR2 Submitted&#39;
+	|| approvalStatus == &#39;Additional Submitted&#39;) {
+	alert(&quot;Record already submitted for Approval&quot;);
+}else if (approvalStatus == &#39;Case Approved&#39;){
+	alert(&quot;Case already Approved&quot;)
+} else
+{
+	sforce.apex.execute(&quot;CaseSubmitForApproval&quot;,&quot;generateEmail&quot;,{caseRecordId:&quot;{!Customer_Service_Inquiries_ICS__c.Id}&quot;});
+	alert(&quot;Submitted Case for Approval&quot;);
+	window.location.reload();
+}</url>
+</WebLink>

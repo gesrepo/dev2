@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Lock_Exhibitor_Account_Billing_Address</fullName>
+    <active>true</active>
+    <description>Make Account Billing Address fields read-only for a selected list of profiles.</description>
+    <errorConditionFormula>AND($RecordType.Name = &#39;Exhibitor&#39;, OR(ISCHANGED(BillingStreet),ISCHANGED(BillingState), ISCHANGED(BillingCity), ISCHANGED(BillingCountry), ISCHANGED(BillingPostalCode)), 
+
+NOT(OR($Profile.Name = &#39;EMEA Credit Control&#39;,
+$Profile.Name = &#39;EDAdmin_Interface&#39;,
+$Profile.Name = &#39;GES Interface&#39;,
+$Profile.Name = &#39;EMEA Spiro Interface&#39;,
+$Profile.Name = &#39;System Administrator&#39;,
+$Profile.Name = &#39;IT Support - EMEA&#39;,
+$Profile.Name = &#39;EMEA System Administrator&#39;, 
+$Profile.Name = &#39;Salesforce Support User&#39;,
+$Profile.Name = &#39;Events Salesforce Support User&#39;,  
+$Profile.Name = &#39;AV Support User&#39;, 
+$Profile.Name = &#39;Marketing Super Users&#39;,
+
+
+$User.Update_Locked_Account_Fields__c, 
+$Profile.Name = &#39;EDAdmin_Interface&#39;,
+$Profile.Name = &#39;Salesforce Support User&#39;,
+$Profile.Name = &quot;GES EMEA Service&quot;, 
+$Profile.Name = &quot;GES EMEA Service Manager&quot; , 
+$Profile.Name = &quot;GES EMEA Service Supervisor&quot; , 
+$Profile.Name = &quot;EMEA Finance Full&quot;, 
+$Profile.Name = &quot;Blitz Manager&quot;, 
+$Profile.Name = &quot;Blitz Sales Rep&quot;,
+$Profile.Name = &quot;EMEA Operations/Account Mgmt&quot;, 
+$Profile.Name = &quot;R2 Interface&quot;, 
+$Profile.Name = &quot;Sales, Non US&quot;, 
+$Profile.Name = &#39;EMEA Salesforce Support User&#39;, 
+$Profile.Name = &#39;GES EMEA Service Onsite&#39;, 
+$Profile.Name = &#39;EMEA Exhibitor Sales&#39;,
+$Profile.Name = &#39;EMEA Show Ready&#39;,
+$Profile.Name = &quot;GES Administrator Interface&quot;,
+$Profile.Name = &quot;SOP Interface&quot; )))</errorConditionFormula>
+    <errorMessage>Account Billing Address cannot be modified. Please send an email to creditrequests@ges.com to update Account information.</errorMessage>
+</ValidationRule>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Send_Test_Docusign</fullName>
+    <availability>online</availability>
+    <displayType>link</displayType>
+    <encodingKey>UTF-8</encodingKey>
+    <hasMenubar>false</hasMenubar>
+    <hasScrollbars>true</hasScrollbars>
+    <hasToolbar>false</hasToolbar>
+    <height>600</height>
+    <isResizable>true</isResizable>
+    <linkType>url</linkType>
+    <masterLabel>Send Test Docusign</masterLabel>
+    <openType>newWindow</openType>
+    <position>none</position>
+    <protected>false</protected>
+    <showsLocation>false</showsLocation>
+    <showsStatus>false</showsStatus>
+    <url>{!URLFOR(&#39;/apex/dsfs__Docusign_CreateEnvelope&#39;, null, [
+SourceID =  Agreements__c.Id,
+DSEID= &#39;0&#39;,
+CRL = &#39;Email~nmuhammed@ges.com;FirstName~Najmal;LastName~Archer;Role~Signer 2;RoutingOrder~2;RecipientNote~Please sign this document,Email~muhdnajmal1@gmail.com;FirstName~Muhammed;LastName~Najmal;Role~Signer 3;RoutingOrder~3,;LoadDefaultContacts~0&#39;,
+LA = &#39;1&#39;
+]
+)}</url>
+</WebLink>

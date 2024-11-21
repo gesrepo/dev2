@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>DB_Required_Fields</fullName>
+    <active>true</active>
+    <description>If requesting the stage to be set to  DB, you must enter a value in the Production Location and an Amount. This doesn&#39;t apply to AV Opportunity record types.</description>
+    <errorConditionFormula>AND (
+ISPICKVAL( Requested_Stage__c , &#39;DB&#39;),
+OR 
+( ISPICKVAL(Production_Location__c, &quot;&quot;),
+Amount  &lt; 1), NOT(CONTAINS(RecordType_Name__c,&quot;AV&quot;)),NOT($Profile.Name = &quot;GES Administrator Interface&quot;))</errorConditionFormula>
+    <errorMessage>If requesting the stage to be set to  DB, you must enter a value in the Production Location and an Amount.</errorMessage>
+</ValidationRule>

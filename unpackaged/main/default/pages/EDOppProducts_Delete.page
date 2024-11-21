@@ -1,0 +1,13 @@
+<apex:page standardController="OpportunityLineItem">
+
+<div style="width:100%;" align="center">
+<br /><br />
+<div id="userRoundedCornersBox">
+<h1>NOTICE</h1>
+<br/><br/>
+You are not allowed to delete Opportunity products from Salesforce. <br>
+Please set the amount to $0.00 to clear the product.
+Click <a href="javascript:history.go(-1)"><b>here</b></a> to go back to the previous page.</a>
+</div> 
+</div> 
+</apex:page>

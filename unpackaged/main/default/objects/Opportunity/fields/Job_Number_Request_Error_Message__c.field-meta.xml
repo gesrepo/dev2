@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Job_Number_Request_Error_Message__c</fullName>
+    <description>Messages from Oracle Job Number Request/Response Interface. This field will have test only if Job was not created/processed successfully by the interface.</description>
+    <externalId>false</externalId>
+    <label>Job Number Request Error Message</label>
+    <length>255</length>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

@@ -1,0 +1,3464 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StandardValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sorted>false</sorted>
+    <standardValue>
+        <fullName>1220 Exhibits, Inc.</fullName>
+        <default>false</default>
+        <label>1220 Exhibits, Inc.</label>
+    </standardValue>
+    <standardValue>
+        <fullName>21st Century Expo Group, Inc.</fullName>
+        <default>false</default>
+        <label>21st Century Expo Group, Inc.</label>
+    </standardValue>
+    <standardValue>
+        <fullName>2Xcel/Metro Exhibit, LLC</fullName>
+        <default>false</default>
+        <label>2Xcel/Metro Exhibit, LLC</label>
+    </standardValue>
+    <standardValue>
+        <fullName>3D Exhibits</fullName>
+        <default>false</default>
+        <label>3D Exhibits</label>
+    </standardValue>
+    <standardValue>
+        <fullName>5 Star Conventions pka Mid Atlantic</fullName>
+        <default>false</default>
+        <label>5 Star Conventions pka Mid Atlantic</label>
+    </standardValue>
+    <standardValue>
+        <fullName>7 Convention Services</fullName>
+        <default>false</default>
+        <label>7 Convention Services</label>
+    </standardValue>
+    <standardValue>
+        <fullName>A. G. Exhibitions</fullName>
+        <default>false</default>
+        <label>A. G. Exhibitions</label>
+    </standardValue>
+    <standardValue>
+        <fullName>A &amp; N Convention Services</fullName>
+        <default>false</default>
+        <label>A &amp; N Convention Services</label>
+    </standardValue>
+    <standardValue>
+        <fullName>A-1 Event &amp; Party Rentals</fullName>
+        <default>false</default>
+        <label>A-1 Event &amp; Party Rentals</label>
+    </standardValue>
+    <standardValue>
+        <fullName>a5</fullName>
+        <default>false</default>
+        <label>a5</label>
+    </standardValue>
+    <standardValue>
+        <fullName>AA Party Rentals</fullName>
+        <default>false</default>
+        <label>AA Party Rentals</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Aaron Group (The)</fullName>
+        <default>false</default>
+        <label>Aaron Group (The)</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Abbey Party Rents</fullName>
+        <default>false</default>
+        <label>Abbey Party Rents</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Absolute Expo</fullName>
+        <default>false</default>
+        <label>Absolute Expo</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Absolute Logistics</fullName>
+        <default>false</default>
+        <label>Absolute Logistics</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Absolute Services</fullName>
+        <default>false</default>
+        <label>Absolute Services</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Academy Expo</fullName>
+        <default>false</default>
+        <label>Academy Expo</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Academy Theatrical Events (ATL Events)</fullName>
+        <default>false</default>
+        <label>Academy Theatrical Events (ATL Events)</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Access TCA</fullName>
+        <default>false</default>
+        <label>Access TCA</label>
+    </standardValue>
+    <standardValue>
+        <fullName>ACT, Inc.</fullName>
+        <default>false</default>
+        <label>ACT, Inc.</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Adam Petrovich &amp; Associates Inc.</fullName>
+        <default>false</default>
+        <label>Adam Petrovich &amp; Associates Inc.</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Adaptive&#39;s Party Line</fullName>
+        <default>false</default>
+        <label>Adaptive&#39;s Party Line</label>
+    </standardValue>
+    <standardValue>
+        <fullName>AD-EX International</fullName>
+        <default>false</default>
+        <label>AD-EX International</label>
+    </standardValue>
+    <standardValue>
+        <fullName>ADVANCED EXHIBIT METHODS</fullName>
+        <default>false</default>
+        <label>ADVANCED EXHIBIT METHODS</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Advanced Expo Solutions Int.</fullName>
+        <default>false</default>
+        <label>Advanced Expo Solutions Int.</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Advantage Conference &amp; Expo</fullName>
+        <default>false</default>
+        <label>Advantage Conference &amp; Expo</label>
+    </standardValue>
+    <standardValue>
+        <fullName>AEG LIVE Events</fullName>
+        <default>false</default>
+        <label>AEG LIVE Events</label>
+    </standardValue>
+    <standardValue>
+        <fullName>AES Inc.</fullName>
+        <default>false</default>
+        <label>AES Inc.</label>
+    </standardValue>
+    <standardValue>
+        <fullName>AEX Convention Services</fullName>
+        <default>false</default>
+        <label>AEX Convention Services</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Affiliated Graphics</fullName>
+        <default>false</default>
+        <label>Affiliated Graphics</label>
+    </standardValue>
+    <standardValue>
+        <fullName>AGS Expo</fullName>
+        <default>false</default>
+        <label>AGS Expo</label>
+    </standardValue>
+    <standardValue>
+        <fullName>All American Decorating</fullName>
+        <default>false</default>
+        <label>All American Decorating</label>
+    </standardValue>
+    <standardValue>
+        <fullName>All American Special Event Rentals</fullName>
+        <default>false</default>
+        <label>All American Special Event Rentals</label>
+    </standardValue>
+    <standardValue>
+        <fullName>All Convention &amp; Expo Services</fullName>
+        <default>false</default>
+        <label>All Convention &amp; Expo Services</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Alleen Rents</fullName>
+        <default>false</default>
+        <label>Alleen Rents</label>
+    </standardValue>
+    <standardValue>
+        <fullName>All Events Rental</fullName>
+        <default>false</default>
+        <label>All Events Rental</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Alliance Nationwide</fullName>
+        <default>false</default>
+        <label>Alliance Nationwide</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Aloha Business Center</fullName>
+        <default>false</default>
+        <label>Aloha Business Center</label>
+    </standardValue>
+    <standardValue>
+        <fullName>American Convention Exposition Services</fullName>
+        <default>false</default>
+        <label>American Convention Exposition Services</label>
+    </standardValue>
+    <standardValue>
+        <fullName>American Exposition Services, Inc.</fullName>
+        <default>false</default>
+        <label>American Exposition Services, Inc.</label>
+    </standardValue>
+    <standardValue>
+        <fullName>American Meetings and Conventions</fullName>
+        <default>false</default>
+        <label>American Meetings and Conventions</label>
+    </standardValue>
+    <standardValue>
+        <fullName>American Trade Shows, Inc.</fullName>
+        <default>false</default>
+        <label>American Trade Shows, Inc.</label>
+    </standardValue>
+    <standardValue>
+        <fullName>AMT Online</fullName>
+        <default>false</default>
+        <label>AMT Online</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Andrews-Bartlett Exposition Services</fullName>
+        <default>false</default>
+        <label>Andrews-Bartlett Exposition Services</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Anza Tents</fullName>
+        <default>false</default>
+        <label>Anza Tents</label>
+    </standardValue>
+    <standardValue>
+        <fullName>APA Exposition Services</fullName>
+        <default>false</default>
+        <label>APA Exposition Services</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Apex</fullName>
+        <default>false</default>
+        <label>Apex</label>
+    </standardValue>
+    <standardValue>
+        <fullName>A Plus Xpo</fullName>
+        <default>false</default>
+        <label>A Plus Xpo</label>
+    </standardValue>
+    <standardValue>
+        <fullName>APS Convention Services</fullName>
+        <default>false</default>
+        <label>APS Convention Services</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Arata Expositions Inc.</fullName>
+        <default>false</default>
+        <label>Arata Expositions Inc.</label>
+    </standardValue>
+    <standardValue>
+        <fullName>ARCHEX DISPLAY</fullName>
+        <default>false</default>
+        <label>ARCHEX DISPLAY</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Arizona Cine Equipment</fullName>
+        <default>false</default>
+        <label>Arizona Cine Equipment</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Art Craft Display Inc.</fullName>
+        <default>false</default>
+        <label>Art Craft Display Inc.</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Art Decorating Company</fullName>
+        <default>false</default>
+        <label>Art Decorating Company</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Art Fair Company Inc (The)</fullName>
+        <default>false</default>
+        <label>Art Fair Company Inc (The)</label>
+    </standardValue>
+    <standardValue>
+        <fullName>ArtFX</fullName>
+        <default>false</default>
+        <label>ArtFX</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Art Guild</fullName>
+        <default>false</default>
+        <label>Art Guild</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Arti &#39;70</fullName>
+        <default>false</default>
+        <label>Arti &#39;70</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Art Services North Inc.</fullName>
+        <default>false</default>
+        <label>Art Services North Inc.</label>
+    </standardValue>
+    <standardValue>
+        <fullName>ASI Production Services</fullName>
+        <default>false</default>
+        <label>ASI Production Services</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Asterix</fullName>
+        <default>false</default>
+        <label>Asterix</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Atlantic Expo</fullName>
+        <default>false</default>
+        <label>Atlantic Expo</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Attco Inc. Exposition Services</fullName>
+        <default>false</default>
+        <label>Attco Inc. Exposition Services</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Audie Group (The)</fullName>
+        <default>false</default>
+        <label>Audie Group (The)</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Avalon Exhibits</fullName>
+        <default>false</default>
+        <label>Avalon Exhibits</label>
+    </standardValue>
+    <standardValue>
+        <fullName>A-Z Party Rentals</fullName>
+        <default>false</default>
+        <label>A-Z Party Rentals</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Badger Exposition Service</fullName>
+        <default>false</default>
+        <label>Badger Exposition Service</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Bailey Brothers</fullName>
+        <default>false</default>
+        <label>Bailey Brothers</label>
+    </standardValue>
+    <standardValue>
+        <fullName>BAL Exhibit Rental Company</fullName>
+        <default>false</default>
+        <label>BAL Exhibit Rental Company</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Ballantine Events</fullName>
+        <default>false</default>
+        <label>Ballantine Events</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Bauer Audio Visual (Phoenix)</fullName>
+        <default>false</default>
+        <label>Bauer Audio Visual (Phoenix)</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Bay Convention Services</fullName>
+        <default>false</default>
+        <label>Bay Convention Services</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Bear Promotions</fullName>
+        <default>false</default>
+        <label>Bear Promotions</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Bella Group</fullName>
+        <default>false</default>
+        <label>Bella Group</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Berm Studios</fullName>
+        <default>false</default>
+        <label>Berm Studios</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Best Expo Inc.</fullName>
+        <default>false</default>
+        <label>Best Expo Inc.</label>
+    </standardValue>
+    <standardValue>
+        <fullName>BH &amp; L Decorators</fullName>
+        <default>false</default>
+        <label>BH &amp; L Decorators</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Big Top Rentals</fullName>
+        <default>false</default>
+        <label>Big Top Rentals</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Blaine Convention Services Inc.</fullName>
+        <default>false</default>
+        <label>Blaine Convention Services Inc.</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Blair</fullName>
+        <default>false</default>
+        <label>Blair</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Blue Chip</fullName>
+        <default>false</default>
+        <label>Blue Chip</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Booths Etc.</fullName>
+        <default>false</default>
+        <label>Booths Etc.</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Brantley Sound Associates</fullName>
+        <default>false</default>
+        <label>Brantley Sound Associates</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Brede Exposition Services</fullName>
+        <default>false</default>
+        <label>Brede Exposition Services</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Browder Displays Inc</fullName>
+        <default>false</default>
+        <label>Browder Displays Inc</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Bruno Tessier services d&#39;expositions</fullName>
+        <default>false</default>
+        <label>Bruno Tessier services d&#39;expositions</label>
+    </standardValue>
+    <standardValue>
+        <fullName>C.E. South</fullName>
+        <default>false</default>
+        <label>C.E. South</label>
+    </standardValue>
+    <standardValue>
+        <fullName>C-1 Trade Show Services</fullName>
+        <default>false</default>
+        <label>C-1 Trade Show Services</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Calaway Convention Services</fullName>
+        <default>false</default>
+        <label>Calaway Convention Services</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Cal Ostlund</fullName>
+        <default>false</default>
+        <label>Cal Ostlund</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Camelot Event Management</fullName>
+        <default>false</default>
+        <label>Camelot Event Management</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Capital Convention Contractors LLC</fullName>
+        <default>false</default>
+        <label>Capital Convention Contractors LLC</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Capital Expositions</fullName>
+        <default>false</default>
+        <label>Capital Expositions</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Capitol Expo Service</fullName>
+        <default>false</default>
+        <label>Capitol Expo Service</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Carambola Group Inc.</fullName>
+        <default>false</default>
+        <label>Carambola Group Inc.</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Carden Convention Services</fullName>
+        <default>false</default>
+        <label>Carden Convention Services</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Cardinal Expo</fullName>
+        <default>false</default>
+        <label>Cardinal Expo</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Caribbean Exhibits Inc.</fullName>
+        <default>false</default>
+        <label>Caribbean Exhibits Inc.</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Carolina Tradeshow Decorators</fullName>
+        <default>false</default>
+        <label>Carolina Tradeshow Decorators</label>
+    </standardValue>
+    <standardValue>
+        <fullName>CarriageWorks</fullName>
+        <default>false</default>
+        <label>CarriageWorks</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Cart King</fullName>
+        <default>false</default>
+        <label>Cart King</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Catalyst Exhibits Inc.</fullName>
+        <default>false</default>
+        <label>Catalyst Exhibits Inc.</label>
+    </standardValue>
+    <standardValue>
+        <fullName>CB Display Service Inc.</fullName>
+        <default>false</default>
+        <label>CB Display Service Inc.</label>
+    </standardValue>
+    <standardValue>
+        <fullName>CC Expo Services</fullName>
+        <default>false</default>
+        <label>CC Expo Services</label>
+    </standardValue>
+    <standardValue>
+        <fullName>CDS Events &amp; Expositions</fullName>
+        <default>false</default>
+        <label>CDS Events &amp; Expositions</label>
+    </standardValue>
+    <standardValue>
+        <fullName>CE Group</fullName>
+        <default>false</default>
+        <label>CE Group</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Cenaiko Expo Inc.</fullName>
+        <default>false</default>
+        <label>Cenaiko Expo Inc.</label>
+    </standardValue>
+    <standardValue>
+        <fullName>CenterPoint</fullName>
+        <default>false</default>
+        <label>CenterPoint</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Century Trade Show Services</fullName>
+        <default>false</default>
+        <label>Century Trade Show Services</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Century Transportation Services, LLC</fullName>
+        <default>false</default>
+        <label>Century Transportation Services, LLC</label>
+    </standardValue>
+    <standardValue>
+        <fullName>CEP</fullName>
+        <default>false</default>
+        <label>CEP</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Chair-Man Mills Inc.</fullName>
+        <default>false</default>
+        <label>Chair-Man Mills Inc.</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Champion</fullName>
+        <default>false</default>
+        <label>Champion</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Charlotte Van &amp; Storage Co., Inc.</fullName>
+        <default>false</default>
+        <label>Charlotte Van &amp; Storage Co., Inc.</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Cherry Convention Services Inc.</fullName>
+        <default>false</default>
+        <label>Cherry Convention Services Inc.</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Chesapeake Expositions Inc.</fullName>
+        <default>false</default>
+        <label>Chesapeake Expositions Inc.</label>
+    </standardValue>
+    <standardValue>
+        <fullName>China International</fullName>
+        <default>false</default>
+        <label>China International</label>
+    </standardValue>
+    <standardValue>
+        <fullName>C Horton Productions</fullName>
+        <default>false</default>
+        <label>C Horton Productions</label>
+    </standardValue>
+    <standardValue>
+        <fullName>CISTEMS</fullName>
+        <default>false</default>
+        <label>CISTEMS</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Clarkson-Conway Inc.</fullName>
+        <default>false</default>
+        <label>Clarkson-Conway Inc.</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Classic Events, Inc</fullName>
+        <default>false</default>
+        <label>Classic Events, Inc</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Classic Party Rentals</fullName>
+        <default>false</default>
+        <label>Classic Party Rentals</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Clifton Park Convention Services</fullName>
+        <default>false</default>
+        <label>Clifton Park Convention Services</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Coast to Coast Tradeshow Services Inc.</fullName>
+        <default>false</default>
+        <label>Coast to Coast Tradeshow Services Inc.</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Colonial Convention Services</fullName>
+        <default>false</default>
+        <label>Colonial Convention Services</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Colorado Services</fullName>
+        <default>false</default>
+        <label>Colorado Services</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Communication Exhibits Inc.</fullName>
+        <default>false</default>
+        <label>Communication Exhibits Inc.</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Compass Collective</fullName>
+        <default>false</default>
+        <label>Compass Collective</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Complete XPO</fullName>
+        <default>false</default>
+        <label>Complete XPO</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Concept Convention Services Inc.</fullName>
+        <default>false</default>
+        <label>Concept Convention Services Inc.</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Consolidated Convention Services</fullName>
+        <default>false</default>
+        <label>Consolidated Convention Services</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Continental Exposition Services South</fullName>
+        <default>false</default>
+        <label>Continental Exposition Services South</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Controlled Marketing Conferences, Inc.</fullName>
+        <default>false</default>
+        <label>Controlled Marketing Conferences, Inc.</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Convention &amp; Show Services Inc.</fullName>
+        <default>false</default>
+        <label>Convention &amp; Show Services Inc.</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Convention and Expo Management Services</fullName>
+        <default>false</default>
+        <label>Convention and Expo Management Services</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Convention Display Service</fullName>
+        <default>false</default>
+        <label>Convention Display Service</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Convention Handling Services</fullName>
+        <default>false</default>
+        <label>Convention Handling Services</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Convention Makers, Inc</fullName>
+        <default>false</default>
+        <label>Convention Makers, Inc</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Conventions*Exhibits*Promotions * Inc.</fullName>
+        <default>false</default>
+        <label>Conventions*Exhibits*Promotions * Inc.</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Conventions and More</fullName>
+        <default>false</default>
+        <label>Conventions and More</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Convention Services Company</fullName>
+        <default>false</default>
+        <label>Convention Services Company</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Convention Services Inc.</fullName>
+        <default>false</default>
+        <label>Convention Services Inc.</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Convention Services of the Southwest</fullName>
+        <default>false</default>
+        <label>Convention Services of the Southwest</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Corey / Classic Tents &amp; Events</fullName>
+        <default>false</default>
+        <label>Corey / Classic Tents &amp; Events</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Cornerstone Technologies</fullName>
+        <default>false</default>
+        <label>Cornerstone Technologies</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Cove Expo &amp; Design</fullName>
+        <default>false</default>
+        <label>Cove Expo &amp; Design</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Crane Convention Services</fullName>
+        <default>false</default>
+        <label>Crane Convention Services</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Creatacor, Inc.</fullName>
+        <default>false</default>
+        <label>Creatacor, Inc.</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Creatifs</fullName>
+        <default>false</default>
+        <label>Creatifs</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Creative Expos &amp; Conferences</fullName>
+        <default>false</default>
+        <label>Creative Expos &amp; Conferences</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Creative Management Services Inc/Stlouis</fullName>
+        <default>false</default>
+        <label>Creative Management Services Inc/Stlouis</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Creative Solutions</fullName>
+        <default>false</default>
+        <label>Creative Solutions</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Creative Works</fullName>
+        <default>false</default>
+        <label>Creative Works</label>
+    </standardValue>
+    <standardValue>
+        <fullName>CSI etc</fullName>
+        <default>false</default>
+        <label>CSI etc</label>
+    </standardValue>
+    <standardValue>
+        <fullName>CSI Worldwide</fullName>
+        <default>false</default>
+        <label>CSI Worldwide</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Curtin Convention &amp; Services</fullName>
+        <default>false</default>
+        <label>Curtin Convention &amp; Services</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Cuvillier Concepts</fullName>
+        <default>false</default>
+        <label>Cuvillier Concepts</label>
+    </standardValue>
+    <standardValue>
+        <fullName>CVS - Creative Visual Solutions Inc.</fullName>
+        <default>false</default>
+        <label>CVS - Creative Visual Solutions Inc.</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Czarnowski Exhibit Service Specialists</fullName>
+        <default>false</default>
+        <label>Czarnowski Exhibit Service Specialists</label>
+    </standardValue>
+    <standardValue>
+        <fullName>CZECH-IN s.r.o.</fullName>
+        <default>false</default>
+        <label>CZECH-IN s.r.o.</label>
+    </standardValue>
+    <standardValue>
+        <fullName>D&amp;P Architecture de Communication</fullName>
+        <default>false</default>
+        <label>D&amp;P Architecture de Communication</label>
+    </standardValue>
+    <standardValue>
+        <fullName>David Barten Associates of San Francisco</fullName>
+        <default>false</default>
+        <label>David Barten Associates of San Francisco</label>
+    </standardValue>
+    <standardValue>
+        <fullName>David Torres Productions, Inc</fullName>
+        <default>false</default>
+        <label>David Torres Productions, Inc</label>
+    </standardValue>
+    <standardValue>
+        <fullName>DCM Expositions Inc.</fullName>
+        <default>false</default>
+        <label>DCM Expositions Inc.</label>
+    </standardValue>
+    <standardValue>
+        <fullName>DECO Productions</fullName>
+        <default>false</default>
+        <label>DECO Productions</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Decorator Services of San Antonio</fullName>
+        <default>false</default>
+        <label>Decorator Services of San Antonio</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Decorators West</fullName>
+        <default>false</default>
+        <label>Decorators West</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Décor Experts Expo</fullName>
+        <default>false</default>
+        <label>Décor Experts Expo</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Delphi Productions Inc.</fullName>
+        <default>false</default>
+        <label>Delphi Productions Inc.</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Demers Exposition Services</fullName>
+        <default>false</default>
+        <label>Demers Exposition Services</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Derse</fullName>
+        <default>false</default>
+        <label>Derse</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Design Craft Ltd</fullName>
+        <default>false</default>
+        <label>Design Craft Ltd</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Design Craftsmen</fullName>
+        <default>false</default>
+        <label>Design Craftsmen</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Design Events</fullName>
+        <default>false</default>
+        <label>Design Events</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Design Shop (The)</fullName>
+        <default>false</default>
+        <label>Design Shop (The)</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Design West</fullName>
+        <default>false</default>
+        <label>Design West</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Diamond Rental</fullName>
+        <default>false</default>
+        <label>Diamond Rental</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Dimensional Communications Inc.</fullName>
+        <default>false</default>
+        <label>Dimensional Communications Inc.</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Disco Display House Inc.</fullName>
+        <default>false</default>
+        <label>Disco Display House Inc.</label>
+    </standardValue>
+    <standardValue>
+        <fullName>DisplayCraft</fullName>
+        <default>false</default>
+        <label>DisplayCraft</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Display Group</fullName>
+        <default>false</default>
+        <label>Display Group</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Display Presentations</fullName>
+        <default>false</default>
+        <label>Display Presentations</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Display Services Inc</fullName>
+        <default>false</default>
+        <label>Display Services Inc</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Displays Unlimited</fullName>
+        <default>false</default>
+        <label>Displays Unlimited</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Display Works</fullName>
+        <default>false</default>
+        <label>Display Works</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Downing Displays</fullName>
+        <default>false</default>
+        <label>Downing Displays</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Dream Show Exhibits</fullName>
+        <default>false</default>
+        <label>Dream Show Exhibits</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Dunmar Exhibit Services</fullName>
+        <default>false</default>
+        <label>Dunmar Exhibit Services</label>
+    </standardValue>
+    <standardValue>
+        <fullName>DWA Trade Show &amp; Exposition Services</fullName>
+        <default>false</default>
+        <label>DWA Trade Show &amp; Exposition Services</label>
+    </standardValue>
+    <standardValue>
+        <fullName>EAI Expo Accessories Inc.</fullName>
+        <default>false</default>
+        <label>EAI Expo Accessories Inc.</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Earl Beckwith and Associates Inc.</fullName>
+        <default>false</default>
+        <label>Earl Beckwith and Associates Inc.</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Early Action Group, Ltd.</fullName>
+        <default>false</default>
+        <label>Early Action Group, Ltd.</label>
+    </standardValue>
+    <standardValue>
+        <fullName>East Coast Decorating</fullName>
+        <default>false</default>
+        <label>East Coast Decorating</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Eastern Exhibits</fullName>
+        <default>false</default>
+        <label>Eastern Exhibits</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Ecclectica</fullName>
+        <default>false</default>
+        <label>Ecclectica</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Echo Expo</fullName>
+        <default>false</default>
+        <label>Echo Expo</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Eden Decorating</fullName>
+        <default>false</default>
+        <label>Eden Decorating</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Edlen Electrical (Chicago)</fullName>
+        <default>false</default>
+        <label>Edlen Electrical (Chicago)</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Edlen Electrical (Orlando)</fullName>
+        <default>false</default>
+        <label>Edlen Electrical (Orlando)</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Ekits</fullName>
+        <default>false</default>
+        <label>Ekits</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Elite Expo</fullName>
+        <default>false</default>
+        <label>Elite Expo</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Encinosa Expositons Inc.</fullName>
+        <default>false</default>
+        <label>Encinosa Expositons Inc.</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Encore Productions</fullName>
+        <default>false</default>
+        <label>Encore Productions</label>
+    </standardValue>
+    <standardValue>
+        <fullName>ESR Exposition Service Inc.</fullName>
+        <default>false</default>
+        <label>ESR Exposition Service Inc.</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Essex Decorating Service (The)</fullName>
+        <default>false</default>
+        <label>Essex Decorating Service (The)</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Event 1 Productions</fullName>
+        <default>false</default>
+        <label>Event 1 Productions</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Event Co.</fullName>
+        <default>false</default>
+        <label>Event Co.</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Event Engineering Inc</fullName>
+        <default>false</default>
+        <label>Event Engineering Inc</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Event Lab LLC</fullName>
+        <default>false</default>
+        <label>Event Lab LLC</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Event Management Unlimited</fullName>
+        <default>false</default>
+        <label>Event Management Unlimited</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Event One Meetings</fullName>
+        <default>false</default>
+        <label>Event One Meetings</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Event Planning by Leilani, Inc</fullName>
+        <default>false</default>
+        <label>Event Planning by Leilani, Inc</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Event Productions Inc.</fullName>
+        <default>false</default>
+        <label>Event Productions Inc.</label>
+    </standardValue>
+    <standardValue>
+        <fullName>EventPro Services</fullName>
+        <default>false</default>
+        <label>EventPro Services</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Events Exposition Services Inc.</fullName>
+        <default>false</default>
+        <label>Events Exposition Services Inc.</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Events Staging</fullName>
+        <default>false</default>
+        <label>Events Staging</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Eventures</fullName>
+        <default>false</default>
+        <label>Eventures</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Everest Tradeshow Management</fullName>
+        <default>false</default>
+        <label>Everest Tradeshow Management</label>
+    </standardValue>
+    <standardValue>
+        <fullName>EVERGREEN EXHIBITIONS</fullName>
+        <default>false</default>
+        <label>EVERGREEN EXHIBITIONS</label>
+    </standardValue>
+    <standardValue>
+        <fullName>EWI Worldwide</fullName>
+        <default>false</default>
+        <label>EWI Worldwide</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Excel Decorators Inc</fullName>
+        <default>false</default>
+        <label>Excel Decorators Inc</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Excel Expo Inc</fullName>
+        <default>false</default>
+        <label>Excel Expo Inc</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Exclusively Expo</fullName>
+        <default>false</default>
+        <label>Exclusively Expo</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Exhibit Company, Inc. (The)</fullName>
+        <default>false</default>
+        <label>Exhibit Company, Inc. (The)</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Exhibit Concepts, Inc.</fullName>
+        <default>false</default>
+        <label>Exhibit Concepts, Inc.</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Exhibit Group</fullName>
+        <default>false</default>
+        <label>Exhibit Group</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Exhibition Contractors Company</fullName>
+        <default>false</default>
+        <label>Exhibition Contractors Company</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Exhibitions Etc.</fullName>
+        <default>false</default>
+        <label>Exhibitions Etc.</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Exhibitors Carpet Service</fullName>
+        <default>false</default>
+        <label>Exhibitors Carpet Service</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Exhibitor Source of Madison, LLC</fullName>
+        <default>false</default>
+        <label>Exhibitor Source of Madison, LLC</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Exhibitors West</fullName>
+        <default>false</default>
+        <label>Exhibitors West</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Exhibitree, Inc</fullName>
+        <default>false</default>
+        <label>Exhibitree, Inc</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Exhibitry</fullName>
+        <default>false</default>
+        <label>Exhibitry</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Exhibits by Design, Inc.</fullName>
+        <default>false</default>
+        <label>Exhibits by Design, Inc.</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Exhibit Services, Inc.</fullName>
+        <default>false</default>
+        <label>Exhibit Services, Inc.</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Exhibits Inc.</fullName>
+        <default>false</default>
+        <label>Exhibits Inc.</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Exhibits West Expo</fullName>
+        <default>false</default>
+        <label>Exhibits West Expo</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Expo Advantage</fullName>
+        <default>false</default>
+        <label>Expo Advantage</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Expo and Events</fullName>
+        <default>false</default>
+        <label>Expo and Events</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Expo Convention Contractors</fullName>
+        <default>false</default>
+        <label>Expo Convention Contractors</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Expo Decor</fullName>
+        <default>false</default>
+        <label>Expo Decor</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Expo Display and Design Inc.</fullName>
+        <default>false</default>
+        <label>Expo Display and Design Inc.</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Expo Emphasis</fullName>
+        <default>false</default>
+        <label>Expo Emphasis</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Expo Event Services</fullName>
+        <default>false</default>
+        <label>Expo Event Services</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Expo Expo</fullName>
+        <default>false</default>
+        <label>Expo Expo</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Expo Group (The)</fullName>
+        <default>false</default>
+        <label>Expo Group (The)</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Expo Plus</fullName>
+        <default>false</default>
+        <label>Expo Plus</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Expo Services Inc.</fullName>
+        <default>false</default>
+        <label>Expo Services Inc.</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Exposervice Standard Inc</fullName>
+        <default>false</default>
+        <label>Exposervice Standard Inc</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Exposition Services</fullName>
+        <default>false</default>
+        <label>Exposition Services</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Expositions Etcetera by Chene, Inc.</fullName>
+        <default>false</default>
+        <label>Expositions Etcetera by Chene, Inc.</label>
+    </standardValue>
+    <standardValue>
+        <fullName>ExpoTechnik</fullName>
+        <default>false</default>
+        <label>ExpoTechnik</label>
+    </standardValue>
+    <standardValue>
+        <fullName>ExpoVision Inc</fullName>
+        <default>false</default>
+        <label>ExpoVision Inc</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Expowest</fullName>
+        <default>false</default>
+        <label>Expowest</label>
+    </standardValue>
+    <standardValue>
+        <fullName>EZ Expo Services</fullName>
+        <default>false</default>
+        <label>EZ Expo Services</label>
+    </standardValue>
+    <standardValue>
+        <fullName>e-z rentals</fullName>
+        <default>false</default>
+        <label>e-z rentals</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Factor 110</fullName>
+        <default>false</default>
+        <label>Factor 110</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Fandango Special Events</fullName>
+        <default>false</default>
+        <label>Fandango Special Events</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Federal Convention Contractors Inc.</fullName>
+        <default>false</default>
+        <label>Federal Convention Contractors Inc.</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Federal Expositions</fullName>
+        <default>false</default>
+        <label>Federal Expositions</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Fern Exposition &amp; Event Services</fullName>
+        <default>false</default>
+        <label>Fern Exposition &amp; Event Services</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Fiera Milano TL.TI EXPO</fullName>
+        <default>false</default>
+        <label>Fiera Milano TL.TI EXPO</label>
+    </standardValue>
+    <standardValue>
+        <fullName>FILO Exposition Services</fullName>
+        <default>false</default>
+        <label>FILO Exposition Services</label>
+    </standardValue>
+    <standardValue>
+        <fullName>FINCH RENTAL</fullName>
+        <default>false</default>
+        <label>FINCH RENTAL</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Five Star Convention Decorating Inc.</fullName>
+        <default>false</default>
+        <label>Five Star Convention Decorating Inc.</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Fivestar Group</fullName>
+        <default>false</default>
+        <label>Fivestar Group</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Florida Destinations</fullName>
+        <default>false</default>
+        <label>Florida Destinations</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Florida International Productions Inc.</fullName>
+        <default>false</default>
+        <label>Florida International Productions Inc.</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Fly Events L.L.C.</fullName>
+        <default>false</default>
+        <label>Fly Events L.L.C.</label>
+    </standardValue>
+    <standardValue>
+        <fullName>FM Convention Contractors Inc.</fullName>
+        <default>false</default>
+        <label>FM Convention Contractors Inc.</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Folio Corporation</fullName>
+        <default>false</default>
+        <label>Folio Corporation</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Freeman Expositions, Inc.</fullName>
+        <default>false</default>
+        <label>Freeman Expositions, Inc.</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Frost &amp; Sullivan</fullName>
+        <default>false</default>
+        <label>Frost &amp; Sullivan</label>
+    </standardValue>
+    <standardValue>
+        <fullName>FRW Exhibit Rentals</fullName>
+        <default>false</default>
+        <label>FRW Exhibit Rentals</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Fun Factory Events</fullName>
+        <default>false</default>
+        <label>Fun Factory Events</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Funmaker</fullName>
+        <default>false</default>
+        <label>Funmaker</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Fusion Imaging</fullName>
+        <default>false</default>
+        <label>Fusion Imaging</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Gallo Displays, Inc.</fullName>
+        <default>false</default>
+        <label>Gallo Displays, Inc.</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Gelco Convention Services</fullName>
+        <default>false</default>
+        <label>Gelco Convention Services</label>
+    </standardValue>
+    <standardValue>
+        <fullName>GEMS Exposition Management Services</fullName>
+        <default>false</default>
+        <label>GEMS Exposition Management Services</label>
+    </standardValue>
+    <standardValue>
+        <fullName>General Exposition Services</fullName>
+        <default>false</default>
+        <label>General Exposition Services</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Genesis Exposition Services</fullName>
+        <default>false</default>
+        <label>Genesis Exposition Services</label>
+    </standardValue>
+    <standardValue>
+        <fullName>George Fern</fullName>
+        <default>false</default>
+        <label>George Fern</label>
+    </standardValue>
+    <standardValue>
+        <fullName>George P. Johnson Company, The</fullName>
+        <default>false</default>
+        <label>George P. Johnson Company, The</label>
+    </standardValue>
+    <standardValue>
+        <fullName>GES Exposition Services</fullName>
+        <default>false</default>
+        <label>GES Exposition Services</label>
+    </standardValue>
+    <standardValue>
+        <fullName>GIBBS Convention and Expo</fullName>
+        <default>false</default>
+        <label>GIBBS Convention and Expo</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Gilbert Displays</fullName>
+        <default>false</default>
+        <label>Gilbert Displays</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Gilbert Expo Management Services</fullName>
+        <default>false</default>
+        <label>Gilbert Expo Management Services</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Gilmore Exhibition Services</fullName>
+        <default>false</default>
+        <label>Gilmore Exhibition Services</label>
+    </standardValue>
+    <standardValue>
+        <fullName>GL Events</fullName>
+        <default>false</default>
+        <label>GL Events</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Global Convention Services Ltd.</fullName>
+        <default>false</default>
+        <label>Global Convention Services Ltd.</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Global Events Services, Inc.</fullName>
+        <default>false</default>
+        <label>Global Events Services, Inc.</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Global Lifestyle Markets (GSC)</fullName>
+        <default>false</default>
+        <label>Global Lifestyle Markets (GSC)</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Goben Convention Services</fullName>
+        <default>false</default>
+        <label>Goben Convention Services</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Goodfellows Decorating Services</fullName>
+        <default>false</default>
+        <label>Goodfellows Decorating Services</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Goodkey Show Services Ltd.</fullName>
+        <default>false</default>
+        <label>Goodkey Show Services Ltd.</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Good Time Tricycle Productions</fullName>
+        <default>false</default>
+        <label>Good Time Tricycle Productions</label>
+    </standardValue>
+    <standardValue>
+        <fullName>GotExpo LLC</fullName>
+        <default>false</default>
+        <label>GotExpo LLC</label>
+    </standardValue>
+    <standardValue>
+        <fullName>GRANDE EXHIBITIONS</fullName>
+        <default>false</default>
+        <label>GRANDE EXHIBITIONS</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Grand Event Rentals</fullName>
+        <default>false</default>
+        <label>Grand Event Rentals</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Grapevine Exhibits</fullName>
+        <default>false</default>
+        <label>Grapevine Exhibits</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Graphic Presentation Systems</fullName>
+        <default>false</default>
+        <label>Graphic Presentation Systems</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Great Events</fullName>
+        <default>false</default>
+        <label>Great Events</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Great Lakes Events (cc)</fullName>
+        <default>false</default>
+        <label>Great Lakes Events (cc)</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Green Bay Exposition Services</fullName>
+        <default>false</default>
+        <label>Green Bay Exposition Services</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Group Expo</fullName>
+        <default>false</default>
+        <label>Group Expo</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Gulf Coast Exhibit Service</fullName>
+        <default>false</default>
+        <label>Gulf Coast Exhibit Service</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Gulf Coast Expo</fullName>
+        <default>false</default>
+        <label>Gulf Coast Expo</label>
+    </standardValue>
+    <standardValue>
+        <fullName>H.B. Stubbs Company</fullName>
+        <default>false</default>
+        <label>H.B. Stubbs Company</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Hadley Exhibits, Inc.</fullName>
+        <default>false</default>
+        <label>Hadley Exhibits, Inc.</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Hale Northeastern Inc.</fullName>
+        <default>false</default>
+        <label>Hale Northeastern Inc.</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Hamilton Exhibits</fullName>
+        <default>false</default>
+        <label>Hamilton Exhibits</label>
+    </standardValue>
+    <standardValue>
+        <fullName>HAMM Event Services, Inc.</fullName>
+        <default>false</default>
+        <label>HAMM Event Services, Inc.</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Hannover Fairs USA Inc.</fullName>
+        <default>false</default>
+        <label>Hannover Fairs USA Inc.</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Harborview Center</fullName>
+        <default>false</default>
+        <label>Harborview Center</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Hargrove, Inc.</fullName>
+        <default>false</default>
+        <label>Hargrove, Inc.</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Harrington Exposition Services</fullName>
+        <default>false</default>
+        <label>Harrington Exposition Services</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Hartmann Studios</fullName>
+        <default>false</default>
+        <label>Hartmann Studios</label>
+    </standardValue>
+    <standardValue>
+        <fullName>HCT Convention Services</fullName>
+        <default>false</default>
+        <label>HCT Convention Services</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Henly Decorators</fullName>
+        <default>false</default>
+        <label>Henly Decorators</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Heritage Communications of Nevada Inc.</fullName>
+        <default>false</default>
+        <label>Heritage Communications of Nevada Inc.</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Heritage Exhibits</fullName>
+        <default>false</default>
+        <label>Heritage Exhibits</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Heritage Exposition Services</fullName>
+        <default>false</default>
+        <label>Heritage Exposition Services</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Hicks Convention</fullName>
+        <default>false</default>
+        <label>Hicks Convention</label>
+    </standardValue>
+    <standardValue>
+        <fullName>High Impact Events, Inc.</fullName>
+        <default>false</default>
+        <label>High Impact Events, Inc.</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Hill &amp; Partners, Inc.</fullName>
+        <default>false</default>
+        <label>Hill &amp; Partners, Inc.</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Hill Enterprise, Inc.</fullName>
+        <default>false</default>
+        <label>Hill Enterprise, Inc.</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Hoffend Xposition</fullName>
+        <default>false</default>
+        <label>Hoffend Xposition</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Hollins Exposition Services</fullName>
+        <default>false</default>
+        <label>Hollins Exposition Services</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Hollywood Lights</fullName>
+        <default>false</default>
+        <label>Hollywood Lights</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Home Team Productions</fullName>
+        <default>false</default>
+        <label>Home Team Productions</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Hopper Expositions Inc.</fullName>
+        <default>false</default>
+        <label>Hopper Expositions Inc.</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Horizon</fullName>
+        <default>false</default>
+        <label>Horizon</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Hubbell/Tyner Convention</fullName>
+        <default>false</default>
+        <label>Hubbell/Tyner Convention</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Hub-City Display</fullName>
+        <default>false</default>
+        <label>Hub-City Display</label>
+    </standardValue>
+    <standardValue>
+        <fullName>I &amp; D Group International</fullName>
+        <default>false</default>
+        <label>I &amp; D Group International</label>
+    </standardValue>
+    <standardValue>
+        <fullName>I-Beam Sound &amp; Light</fullName>
+        <default>false</default>
+        <label>I-Beam Sound &amp; Light</label>
+    </standardValue>
+    <standardValue>
+        <fullName>ICON Exhibits</fullName>
+        <default>false</default>
+        <label>ICON Exhibits</label>
+    </standardValue>
+    <standardValue>
+        <fullName>IES International Exhibition Services</fullName>
+        <default>false</default>
+        <label>IES International Exhibition Services</label>
+    </standardValue>
+    <standardValue>
+        <fullName>IFS</fullName>
+        <default>false</default>
+        <label>IFS</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Image Events</fullName>
+        <default>false</default>
+        <label>Image Events</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Image Wear Expo</fullName>
+        <default>false</default>
+        <label>Image Wear Expo</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Imagine Design Production &amp; Services</fullName>
+        <default>false</default>
+        <label>Imagine Design Production &amp; Services</label>
+    </standardValue>
+    <standardValue>
+        <fullName>IMG Live</fullName>
+        <default>false</default>
+        <label>IMG Live</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Impact Unlimited</fullName>
+        <default>false</default>
+        <label>Impact Unlimited</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Inclusive Management Services</fullName>
+        <default>false</default>
+        <label>Inclusive Management Services</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Indestructo Rental Company Inc.</fullName>
+        <default>false</default>
+        <label>Indestructo Rental Company Inc.</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Index Exhibition Services</fullName>
+        <default>false</default>
+        <label>Index Exhibition Services</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Industrial Displays</fullName>
+        <default>false</default>
+        <label>Industrial Displays</label>
+    </standardValue>
+    <standardValue>
+        <fullName>In House Events</fullName>
+        <default>false</default>
+        <label>In House Events</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Innovative Expo</fullName>
+        <default>false</default>
+        <label>Innovative Expo</label>
+    </standardValue>
+    <standardValue>
+        <fullName>INSTITUTE FOR PLASTINATION</fullName>
+        <default>false</default>
+        <label>INSTITUTE FOR PLASTINATION</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Int. Convention and Event Services</fullName>
+        <default>false</default>
+        <label>Int. Convention and Event Services</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Integrated Show Management &amp; Marketing</fullName>
+        <default>false</default>
+        <label>Integrated Show Management &amp; Marketing</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Interesting Exhibit Corp</fullName>
+        <default>false</default>
+        <label>Interesting Exhibit Corp</label>
+    </standardValue>
+    <standardValue>
+        <fullName>InterEx, Inc.</fullName>
+        <default>false</default>
+        <label>InterEx, Inc.</label>
+    </standardValue>
+    <standardValue>
+        <fullName>International Exposition (I-X) Center</fullName>
+        <default>false</default>
+        <label>International Exposition (I-X) Center</label>
+    </standardValue>
+    <standardValue>
+        <fullName>International Exposition Services Inc.</fullName>
+        <default>false</default>
+        <label>International Exposition Services Inc.</label>
+    </standardValue>
+    <standardValue>
+        <fullName>IS Expo</fullName>
+        <default>false</default>
+        <label>IS Expo</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Island Professional Displays Ltd.</fullName>
+        <default>false</default>
+        <label>Island Professional Displays Ltd.</label>
+    </standardValue>
+    <standardValue>
+        <fullName>J&amp;J Motor Service</fullName>
+        <default>false</default>
+        <label>J&amp;J Motor Service</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Jack Morton Exhibits</fullName>
+        <default>false</default>
+        <label>Jack Morton Exhibits</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Jam Productions</fullName>
+        <default>false</default>
+        <label>Jam Productions</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Joe Manby&#39;s Ltd</fullName>
+        <default>false</default>
+        <label>Joe Manby&#39;s Ltd</label>
+    </standardValue>
+    <standardValue>
+        <fullName>John Halloran Associates</fullName>
+        <default>false</default>
+        <label>John Halloran Associates</label>
+    </standardValue>
+    <standardValue>
+        <fullName>John Murray Productions</fullName>
+        <default>false</default>
+        <label>John Murray Productions</label>
+    </standardValue>
+    <standardValue>
+        <fullName>JP &amp; Associates</fullName>
+        <default>false</default>
+        <label>JP &amp; Associates</label>
+    </standardValue>
+    <standardValue>
+        <fullName>JP Display</fullName>
+        <default>false</default>
+        <label>JP Display</label>
+    </standardValue>
+    <standardValue>
+        <fullName>K &amp; J Convention Decorators</fullName>
+        <default>false</default>
+        <label>K &amp; J Convention Decorators</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Karl&#39;s Rental</fullName>
+        <default>false</default>
+        <label>Karl&#39;s Rental</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Kelly Press Inc.</fullName>
+        <default>false</default>
+        <label>Kelly Press Inc.</label>
+    </standardValue>
+    <standardValue>
+        <fullName>KMH Productions</fullName>
+        <default>false</default>
+        <label>KMH Productions</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Kragen Auto</fullName>
+        <default>false</default>
+        <label>Kragen Auto</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Kriedt Convention Services</fullName>
+        <default>false</default>
+        <label>Kriedt Convention Services</label>
+    </standardValue>
+    <standardValue>
+        <fullName>KZ Associates</fullName>
+        <default>false</default>
+        <label>KZ Associates</label>
+    </standardValue>
+    <standardValue>
+        <fullName>L. B. Lightswest Inc.</fullName>
+        <default>false</default>
+        <label>L. B. Lightswest Inc.</label>
+    </standardValue>
+    <standardValue>
+        <fullName>L &amp; M Productions Design Group Inc.</fullName>
+        <default>false</default>
+        <label>L &amp; M Productions Design Group Inc.</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Lange</fullName>
+        <default>false</default>
+        <label>Lange</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Laser Exhibitor Services</fullName>
+        <default>false</default>
+        <label>Laser Exhibitor Services</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Las Vegas Events</fullName>
+        <default>false</default>
+        <label>Las Vegas Events</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Las Vegas Expo, Inc.</fullName>
+        <default>false</default>
+        <label>Las Vegas Expo, Inc.</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Las Vegas Party Tents &amp; Rentals</fullName>
+        <default>false</default>
+        <label>Las Vegas Party Tents &amp; Rentals</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Las Vegas Video and Sound</fullName>
+        <default>false</default>
+        <label>Las Vegas Video and Sound</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Layton Productions Inc.</fullName>
+        <default>false</default>
+        <label>Layton Productions Inc.</label>
+    </standardValue>
+    <standardValue>
+        <fullName>LCD Expo Services</fullName>
+        <default>false</default>
+        <label>LCD Expo Services</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Levy Show Service Inc</fullName>
+        <default>false</default>
+        <label>Levy Show Service Inc</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Levy Show Service Inc.</fullName>
+        <default>false</default>
+        <label>Levy Show Service Inc.</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Lewellen &amp; Best</fullName>
+        <default>false</default>
+        <label>Lewellen &amp; Best</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Lexpo Exposition</fullName>
+        <default>false</default>
+        <label>Lexpo Exposition</label>
+    </standardValue>
+    <standardValue>
+        <fullName>LibertyCFS NV Inc.</fullName>
+        <default>false</default>
+        <label>LibertyCFS NV Inc.</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Liberty Exposition Services</fullName>
+        <default>false</default>
+        <label>Liberty Exposition Services</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Lighting and Decorating</fullName>
+        <default>false</default>
+        <label>Lighting and Decorating</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Lights West</fullName>
+        <default>false</default>
+        <label>Lights West</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Line One Productions Inc.</fullName>
+        <default>false</default>
+        <label>Line One Productions Inc.</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Lomanto Exhibit Services Inc.</fullName>
+        <default>false</default>
+        <label>Lomanto Exhibit Services Inc.</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Lone Star Decorating In Lubbock</fullName>
+        <default>false</default>
+        <label>Lone Star Decorating In Lubbock</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Long Island Expositions</fullName>
+        <default>false</default>
+        <label>Long Island Expositions</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Loran Associates Inc.</fullName>
+        <default>false</default>
+        <label>Loran Associates Inc.</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Lukerrilli Display</fullName>
+        <default>false</default>
+        <label>Lukerrilli Display</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Lynch Exhibits</fullName>
+        <default>false</default>
+        <label>Lynch Exhibits</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Main Line Expo</fullName>
+        <default>false</default>
+        <label>Main Line Expo</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Maloney Productions</fullName>
+        <default>false</default>
+        <label>Maloney Productions</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Markey&#39;s Exposition Services</fullName>
+        <default>false</default>
+        <label>Markey&#39;s Exposition Services</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Marquart Convention Services</fullName>
+        <default>false</default>
+        <label>Marquart Convention Services</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Master&#39;s Event Services, LLC</fullName>
+        <default>false</default>
+        <label>Master&#39;s Event Services, LLC</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Matrex Exhibits</fullName>
+        <default>false</default>
+        <label>Matrex Exhibits</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Matrix Exhibits</fullName>
+        <default>false</default>
+        <label>Matrix Exhibits</label>
+    </standardValue>
+    <standardValue>
+        <fullName>MAW</fullName>
+        <default>false</default>
+        <label>MAW</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Maxim Exhbition &amp; Display</fullName>
+        <default>false</default>
+        <label>Maxim Exhbition &amp; Display</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Maximum Conventions</fullName>
+        <default>false</default>
+        <label>Maximum Conventions</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Maxum Expo Services</fullName>
+        <default>false</default>
+        <label>Maxum Expo Services</label>
+    </standardValue>
+    <standardValue>
+        <fullName>MC2</fullName>
+        <default>false</default>
+        <label>MC2</label>
+    </standardValue>
+    <standardValue>
+        <fullName>McCarty Convention Contractors Inc.</fullName>
+        <default>false</default>
+        <label>McCarty Convention Contractors Inc.</label>
+    </standardValue>
+    <standardValue>
+        <fullName>McCormick Convention Services</fullName>
+        <default>false</default>
+        <label>McCormick Convention Services</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Mc Cune Audio Visual</fullName>
+        <default>false</default>
+        <label>Mc Cune Audio Visual</label>
+    </standardValue>
+    <standardValue>
+        <fullName>MCKERNIN EXHIBITS, INC.</fullName>
+        <default>false</default>
+        <label>MCKERNIN EXHIBITS, INC.</label>
+    </standardValue>
+    <standardValue>
+        <fullName>MCS Event Decorators LLC</fullName>
+        <default>false</default>
+        <label>MCS Event Decorators LLC</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Mcvey</fullName>
+        <default>false</default>
+        <label>Mcvey</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Meeting Architects</fullName>
+        <default>false</default>
+        <label>Meeting Architects</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Meeting House (The)</fullName>
+        <default>false</default>
+        <label>Meeting House (The)</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Meeting Services</fullName>
+        <default>false</default>
+        <label>Meeting Services</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Melville Exhibition Services</fullName>
+        <default>false</default>
+        <label>Melville Exhibition Services</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Metropolitan Exposition Services, Inc.</fullName>
+        <default>false</default>
+        <label>Metropolitan Exposition Services, Inc.</label>
+    </standardValue>
+    <standardValue>
+        <fullName>MG Design Associates</fullName>
+        <default>false</default>
+        <label>MG Design Associates</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Mid American Convention</fullName>
+        <default>false</default>
+        <label>Mid American Convention</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Mid Atlantic Decorating Inc.</fullName>
+        <default>false</default>
+        <label>Mid Atlantic Decorating Inc.</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Midway Party Rental Inc.</fullName>
+        <default>false</default>
+        <label>Midway Party Rental Inc.</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Midwest Conference Service</fullName>
+        <default>false</default>
+        <label>Midwest Conference Service</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Midwest Decorating Company</fullName>
+        <default>false</default>
+        <label>Midwest Decorating Company</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Midwest Expositions Inc.</fullName>
+        <default>false</default>
+        <label>Midwest Expositions Inc.</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Miller Party Rentals</fullName>
+        <default>false</default>
+        <label>Miller Party Rentals</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Milwaukee Exposition</fullName>
+        <default>false</default>
+        <label>Milwaukee Exposition</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Mining Media International</fullName>
+        <default>false</default>
+        <label>Mining Media International</label>
+    </standardValue>
+    <standardValue>
+        <fullName>MINOTAUR MAZE</fullName>
+        <default>false</default>
+        <label>MINOTAUR MAZE</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Modern Display</fullName>
+        <default>false</default>
+        <label>Modern Display</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Modern Expo &amp; Events</fullName>
+        <default>false</default>
+        <label>Modern Expo &amp; Events</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Monterey Transfer (Bekins Van Lines)</fullName>
+        <default>false</default>
+        <label>Monterey Transfer (Bekins Van Lines)</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Moore Displays</fullName>
+        <default>false</default>
+        <label>Moore Displays</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Morris Marketing Inc.</fullName>
+        <default>false</default>
+        <label>Morris Marketing Inc.</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Mostre Design, Inc.</fullName>
+        <default>false</default>
+        <label>Mostre Design, Inc.</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Mr. C &amp; Company Decorators</fullName>
+        <default>false</default>
+        <label>Mr. C &amp; Company Decorators</label>
+    </standardValue>
+    <standardValue>
+        <fullName>MSM Associates, LLC</fullName>
+        <default>false</default>
+        <label>MSM Associates, LLC</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Music City Xpo, LLC</fullName>
+        <default>false</default>
+        <label>Music City Xpo, LLC</label>
+    </standardValue>
+    <standardValue>
+        <fullName>MVP Event Management Services</fullName>
+        <default>false</default>
+        <label>MVP Event Management Services</label>
+    </standardValue>
+    <standardValue>
+        <fullName>N&#39;awlins Trade Show &amp; Convention</fullName>
+        <default>false</default>
+        <label>N&#39;awlins Trade Show &amp; Convention</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Nancy&#39;s Party Rentals and Sales</fullName>
+        <default>false</default>
+        <label>Nancy&#39;s Party Rentals and Sales</label>
+    </standardValue>
+    <standardValue>
+        <fullName>National Audio Visual</fullName>
+        <default>false</default>
+        <label>National Audio Visual</label>
+    </standardValue>
+    <standardValue>
+        <fullName>National Convention Services</fullName>
+        <default>false</default>
+        <label>National Convention Services</label>
+    </standardValue>
+    <standardValue>
+        <fullName>National Expo Inc. (IN)</fullName>
+        <default>false</default>
+        <label>National Expo Inc. (IN)</label>
+    </standardValue>
+    <standardValue>
+        <fullName>National Exposition Services Inc.</fullName>
+        <default>false</default>
+        <label>National Exposition Services Inc.</label>
+    </standardValue>
+    <standardValue>
+        <fullName>National Tradeshow Center</fullName>
+        <default>false</default>
+        <label>National Tradeshow Center</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Nationwide Expo Services</fullName>
+        <default>false</default>
+        <label>Nationwide Expo Services</label>
+    </standardValue>
+    <standardValue>
+        <fullName>New York Decorating</fullName>
+        <default>false</default>
+        <label>New York Decorating</label>
+    </standardValue>
+    <standardValue>
+        <fullName>NexxtShow Exposition Services</fullName>
+        <default>false</default>
+        <label>NexxtShow Exposition Services</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Nimlok</fullName>
+        <default>false</default>
+        <label>Nimlok</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Noel Lesley Decorating</fullName>
+        <default>false</default>
+        <label>Noel Lesley Decorating</label>
+    </standardValue>
+    <standardValue>
+        <fullName>North American Trade Shows Inc.</fullName>
+        <default>false</default>
+        <label>North American Trade Shows Inc.</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Northeast Decorating &amp; Exhibit Services</fullName>
+        <default>false</default>
+        <label>Northeast Decorating &amp; Exhibit Services</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Northwest Tradeshow Management</fullName>
+        <default>false</default>
+        <label>Northwest Tradeshow Management</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Novak Birch</fullName>
+        <default>false</default>
+        <label>Novak Birch</label>
+    </standardValue>
+    <standardValue>
+        <fullName>nParallel</fullName>
+        <default>false</default>
+        <label>nParallel</label>
+    </standardValue>
+    <standardValue>
+        <fullName>NRG! EXHIBITS LLC</fullName>
+        <default>false</default>
+        <label>NRG! EXHIBITS LLC</label>
+    </standardValue>
+    <standardValue>
+        <fullName>NTE Expo Services</fullName>
+        <default>false</default>
+        <label>NTE Expo Services</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Nth Degree</fullName>
+        <default>false</default>
+        <label>Nth Degree</label>
+    </standardValue>
+    <standardValue>
+        <fullName>O&#39;Neil Relocation</fullName>
+        <default>false</default>
+        <label>O&#39;Neil Relocation</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Ocean Expo</fullName>
+        <default>false</default>
+        <label>Ocean Expo</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Official Security</fullName>
+        <default>false</default>
+        <label>Official Security</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Olympic Events</fullName>
+        <default>false</default>
+        <label>Olympic Events</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Omni TradeShow Services L.L.C.</fullName>
+        <default>false</default>
+        <label>Omni TradeShow Services L.L.C.</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Ontario Promotional Services</fullName>
+        <default>false</default>
+        <label>Ontario Promotional Services</label>
+    </standardValue>
+    <standardValue>
+        <fullName>OPS - Ontario Promotional Services</fullName>
+        <default>false</default>
+        <label>OPS - Ontario Promotional Services</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Orchid Event Solutions</fullName>
+        <default>false</default>
+        <label>Orchid Event Solutions</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Ovation Events</fullName>
+        <default>false</default>
+        <label>Ovation Events</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Pacific Convention Services Inc.</fullName>
+        <default>false</default>
+        <label>Pacific Convention Services Inc.</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Pacific Event Productions, Inc.</fullName>
+        <default>false</default>
+        <label>Pacific Event Productions, Inc.</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Pacific Exposition Decorating Company</fullName>
+        <default>false</default>
+        <label>Pacific Exposition Decorating Company</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Pacific Party Canopies</fullName>
+        <default>false</default>
+        <label>Pacific Party Canopies</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Pack Expo Services</fullName>
+        <default>false</default>
+        <label>Pack Expo Services</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Palm Coast Contractors</fullName>
+        <default>false</default>
+        <label>Palm Coast Contractors</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Paradice Group (The)</fullName>
+        <default>false</default>
+        <label>Paradice Group (The)</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Paramount Convention Services</fullName>
+        <default>false</default>
+        <label>Paramount Convention Services</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Party Palace</fullName>
+        <default>false</default>
+        <label>Party Palace</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Party Smart Rentals</fullName>
+        <default>false</default>
+        <label>Party Smart Rentals</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Party Time Productions</fullName>
+        <default>false</default>
+        <label>Party Time Productions</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Peak Productions (Los Angeles - Prime)</fullName>
+        <default>false</default>
+        <label>Peak Productions (Los Angeles - Prime)</label>
+    </standardValue>
+    <standardValue>
+        <fullName>PEELING PRODUCTIONS</fullName>
+        <default>false</default>
+        <label>PEELING PRODUCTIONS</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Penn State Exposition Services Inc.</fullName>
+        <default>false</default>
+        <label>Penn State Exposition Services Inc.</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Peoria Flag &amp; Decorating Company</fullName>
+        <default>false</default>
+        <label>Peoria Flag &amp; Decorating Company</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Perfect Systems Convention Management</fullName>
+        <default>false</default>
+        <label>Perfect Systems Convention Management</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Peter Corvallis Productions Inc.</fullName>
+        <default>false</default>
+        <label>Peter Corvallis Productions Inc.</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Peterson Events</fullName>
+        <default>false</default>
+        <label>Peterson Events</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Phoenix Exhibits</fullName>
+        <default>false</default>
+        <label>Phoenix Exhibits</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Phoenix Formations</fullName>
+        <default>false</default>
+        <label>Phoenix Formations</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Pinnacle Decorating Company</fullName>
+        <default>false</default>
+        <label>Pinnacle Decorating Company</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Pinnacle Exhibits</fullName>
+        <default>false</default>
+        <label>Pinnacle Exhibits</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Pipes and Drapes</fullName>
+        <default>false</default>
+        <label>Pipes and Drapes</label>
+    </standardValue>
+    <standardValue>
+        <fullName>PME Expo Services</fullName>
+        <default>false</default>
+        <label>PME Expo Services</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Poretta &amp; Orr</fullName>
+        <default>false</default>
+        <label>Poretta &amp; Orr</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Posh Decorating</fullName>
+        <default>false</default>
+        <label>Posh Decorating</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Premier (Contractor)</fullName>
+        <default>false</default>
+        <label>Premier (Contractor)</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Premier Event Rentals</fullName>
+        <default>false</default>
+        <label>Premier Event Rentals</label>
+    </standardValue>
+    <standardValue>
+        <fullName>PREMIER EXHIBITIONS</fullName>
+        <default>false</default>
+        <label>PREMIER EXHIBITIONS</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Prestige Audio Visual</fullName>
+        <default>false</default>
+        <label>Prestige Audio Visual</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Prestige Exposition Services</fullName>
+        <default>false</default>
+        <label>Prestige Exposition Services</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Prime Contractor Not Known</fullName>
+        <default>false</default>
+        <label>Prime Contractor Not Known</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Production Associates</fullName>
+        <default>false</default>
+        <label>Production Associates</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Production Resource Group</fullName>
+        <default>false</default>
+        <label>Production Resource Group</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Pro Expo Systems</fullName>
+        <default>false</default>
+        <label>Pro Expo Systems</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Prof. Relations and Research Inst.</fullName>
+        <default>false</default>
+        <label>Prof. Relations and Research Inst.</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Professional Event Management</fullName>
+        <default>false</default>
+        <label>Professional Event Management</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Professional Exhibits &amp; Graphics</fullName>
+        <default>false</default>
+        <label>Professional Exhibits &amp; Graphics</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Projection Presentation Services</fullName>
+        <default>false</default>
+        <label>Projection Presentation Services</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Projexion Video Supply Inc.</fullName>
+        <default>false</default>
+        <label>Projexion Video Supply Inc.</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Pro-Sho Inc.</fullName>
+        <default>false</default>
+        <label>Pro-Sho Inc.</label>
+    </standardValue>
+    <standardValue>
+        <fullName>PTR Expo Serve</fullName>
+        <default>false</default>
+        <label>PTR Expo Serve</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Pyramid Presentations</fullName>
+        <default>false</default>
+        <label>Pyramid Presentations</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Q Enterprises</fullName>
+        <default>false</default>
+        <label>Q Enterprises</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Raphael&#39;s Party Rentals</fullName>
+        <default>false</default>
+        <label>Raphael&#39;s Party Rentals</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Rapid Rent All</fullName>
+        <default>false</default>
+        <label>Rapid Rent All</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Rapier Group</fullName>
+        <default>false</default>
+        <label>Rapier Group</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Ray Pekowski Inc.</fullName>
+        <default>false</default>
+        <label>Ray Pekowski Inc.</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Rebel Party Rentals</fullName>
+        <default>false</default>
+        <label>Rebel Party Rentals</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Reber Friel Company</fullName>
+        <default>false</default>
+        <label>Reber Friel Company</label>
+    </standardValue>
+    <standardValue>
+        <fullName>RedLine Exhibits</fullName>
+        <default>false</default>
+        <label>RedLine Exhibits</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Reflex Services</fullName>
+        <default>false</default>
+        <label>Reflex Services</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Regency Exposition Services</fullName>
+        <default>false</default>
+        <label>Regency Exposition Services</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Reno Exposition Services Incorporated</fullName>
+        <default>false</default>
+        <label>Reno Exposition Services Incorporated</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Rent-Right West</fullName>
+        <default>false</default>
+        <label>Rent-Right West</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Rileighs Inc.</fullName>
+        <default>false</default>
+        <label>Rileighs Inc.</label>
+    </standardValue>
+    <standardValue>
+        <fullName>RJ Productions</fullName>
+        <default>false</default>
+        <label>RJ Productions</label>
+    </standardValue>
+    <standardValue>
+        <fullName>RoArk Special Projects Division</fullName>
+        <default>false</default>
+        <label>RoArk Special Projects Division</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Robinson Show Service Inc</fullName>
+        <default>false</default>
+        <label>Robinson Show Service Inc</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Rockland Exposition Inc.</fullName>
+        <default>false</default>
+        <label>Rockland Exposition Inc.</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Rodel Productions Inc.</fullName>
+        <default>false</default>
+        <label>Rodel Productions Inc.</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Rogers Company, The</fullName>
+        <default>false</default>
+        <label>Rogers Company, The</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Rosemont Exposition Services, Inc.</fullName>
+        <default>false</default>
+        <label>Rosemont Exposition Services, Inc.</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Rose Tree Events</fullName>
+        <default>false</default>
+        <label>Rose Tree Events</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Rossi Productions</fullName>
+        <default>false</default>
+        <label>Rossi Productions</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Rowan Pacific Rim Decorators Inc.</fullName>
+        <default>false</default>
+        <label>Rowan Pacific Rim Decorators Inc.</label>
+    </standardValue>
+    <standardValue>
+        <fullName>RP Exhibit Service Inc.</fullName>
+        <default>false</default>
+        <label>RP Exhibit Service Inc.</label>
+    </standardValue>
+    <standardValue>
+        <fullName>RPM CompleteXPO Services</fullName>
+        <default>false</default>
+        <label>RPM CompleteXPO Services</label>
+    </standardValue>
+    <standardValue>
+        <fullName>RSVP Party Rentals</fullName>
+        <default>false</default>
+        <label>RSVP Party Rentals</label>
+    </standardValue>
+    <standardValue>
+        <fullName>RVS Exhibitional Draperies Inc.</fullName>
+        <default>false</default>
+        <label>RVS Exhibitional Draperies Inc.</label>
+    </standardValue>
+    <standardValue>
+        <fullName>SAIC</fullName>
+        <default>false</default>
+        <label>SAIC</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Sand Mountain</fullName>
+        <default>false</default>
+        <label>Sand Mountain</label>
+    </standardValue>
+    <standardValue>
+        <fullName>S and N Show Services</fullName>
+        <default>false</default>
+        <label>S and N Show Services</label>
+    </standardValue>
+    <standardValue>
+        <fullName>San Francisco Exposition Services Inc.</fullName>
+        <default>false</default>
+        <label>San Francisco Exposition Services Inc.</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Savoy Convention Service</fullName>
+        <default>false</default>
+        <label>Savoy Convention Service</label>
+    </standardValue>
+    <standardValue>
+        <fullName>SBX - System Built Exhibitions</fullName>
+        <default>false</default>
+        <label>SBX - System Built Exhibitions</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Scenicworks</fullName>
+        <default>false</default>
+        <label>Scenicworks</label>
+    </standardValue>
+    <standardValue>
+        <fullName>SDC Convention Services</fullName>
+        <default>false</default>
+        <label>SDC Convention Services</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Seattle Decorators Inc.</fullName>
+        <default>false</default>
+        <label>Seattle Decorators Inc.</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Select Decorating</fullName>
+        <default>false</default>
+        <label>Select Decorating</label>
+    </standardValue>
+    <standardValue>
+        <fullName>SER Exposition Services</fullName>
+        <default>false</default>
+        <label>SER Exposition Services</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Sharon Show Services</fullName>
+        <default>false</default>
+        <label>Sharon Show Services</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Sharp Expo</fullName>
+        <default>false</default>
+        <label>Sharp Expo</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Shepard Exposition Services Inc.</fullName>
+        <default>false</default>
+        <label>Shepard Exposition Services Inc.</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Sho-Aids, Inc. (National Headquarters)</fullName>
+        <default>false</default>
+        <label>Sho-Aids, Inc. (National Headquarters)</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Show Consultants Inc.</fullName>
+        <default>false</default>
+        <label>Show Consultants Inc.</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Show in Motion</fullName>
+        <default>false</default>
+        <label>Show in Motion</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Showlink</fullName>
+        <default>false</default>
+        <label>Showlink</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Shows Unlimited Inc.</fullName>
+        <default>false</default>
+        <label>Shows Unlimited Inc.</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Show Support Services Inc.</fullName>
+        <default>false</default>
+        <label>Show Support Services Inc.</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Showtime Expo Group</fullName>
+        <default>false</default>
+        <label>Showtime Expo Group</label>
+    </standardValue>
+    <standardValue>
+        <fullName>ShowTX</fullName>
+        <default>false</default>
+        <label>ShowTX</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Skyway Event Services</fullName>
+        <default>false</default>
+        <label>Skyway Event Services</label>
+    </standardValue>
+    <standardValue>
+        <fullName>SM Decorators</fullName>
+        <default>false</default>
+        <label>SM Decorators</label>
+    </standardValue>
+    <standardValue>
+        <fullName>SMG Expo Services</fullName>
+        <default>false</default>
+        <label>SMG Expo Services</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Source One Events</fullName>
+        <default>false</default>
+        <label>Source One Events</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Southeastern Decorators Inc.</fullName>
+        <default>false</default>
+        <label>Southeastern Decorators Inc.</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Southern Convention Services</fullName>
+        <default>false</default>
+        <label>Southern Convention Services</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Southern Exhibiton Services</fullName>
+        <default>false</default>
+        <label>Southern Exhibiton Services</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Southwest Convention Services</fullName>
+        <default>false</default>
+        <label>Southwest Convention Services</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Southwest Design &amp; Display</fullName>
+        <default>false</default>
+        <label>Southwest Design &amp; Display</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Southwest Exposition Services</fullName>
+        <default>false</default>
+        <label>Southwest Exposition Services</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Southwest Scenic Group</fullName>
+        <default>false</default>
+        <label>Southwest Scenic Group</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Sparks Exhibits &amp; Environments</fullName>
+        <default>false</default>
+        <label>Sparks Exhibits &amp; Environments</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Specialty Retail Fabricators</fullName>
+        <default>false</default>
+        <label>Specialty Retail Fabricators</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Spectrum Associates Inc.</fullName>
+        <default>false</default>
+        <label>Spectrum Associates Inc.</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Spirit Exposition Services</fullName>
+        <default>false</default>
+        <label>Spirit Exposition Services</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Splash Events</fullName>
+        <default>false</default>
+        <label>Splash Events</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Spoon Exhibits</fullName>
+        <default>false</default>
+        <label>Spoon Exhibits</label>
+    </standardValue>
+    <standardValue>
+        <fullName>SS&amp;G Management, LLC</fullName>
+        <default>false</default>
+        <label>SS&amp;G Management, LLC</label>
+    </standardValue>
+    <standardValue>
+        <fullName>St. George Show Service Inc.</fullName>
+        <default>false</default>
+        <label>St. George Show Service Inc.</label>
+    </standardValue>
+    <standardValue>
+        <fullName>StageOne Events</fullName>
+        <default>false</default>
+        <label>StageOne Events</label>
+    </standardValue>
+    <standardValue>
+        <fullName>STAK Design</fullName>
+        <default>false</default>
+        <label>STAK Design</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Stampede Display &amp; Convention Ltd.</fullName>
+        <default>false</default>
+        <label>Stampede Display &amp; Convention Ltd.</label>
+    </standardValue>
+    <standardValue>
+        <fullName>STANDEX</fullName>
+        <default>false</default>
+        <label>STANDEX</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Stands Projetos e Decorações Ltda.</fullName>
+        <default>false</default>
+        <label>Stands Projetos e Decorações Ltda.</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Stanley Isaacs Company</fullName>
+        <default>false</default>
+        <label>Stanley Isaacs Company</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Star Exhibits &amp; Environments, Inc.</fullName>
+        <default>false</default>
+        <label>Star Exhibits &amp; Environments, Inc.</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Star Incorporated</fullName>
+        <default>false</default>
+        <label>Star Incorporated</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Steele Tradeshow Services</fullName>
+        <default>false</default>
+        <label>Steele Tradeshow Services</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Steelhead Productions</fullName>
+        <default>false</default>
+        <label>Steelhead Productions</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Stetson Convention Services</fullName>
+        <default>false</default>
+        <label>Stetson Convention Services</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Stetson Convention Services Inc.</fullName>
+        <default>false</default>
+        <label>Stetson Convention Services Inc.</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Stevens Exhibits</fullName>
+        <default>false</default>
+        <label>Stevens Exhibits</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Stewart MDM</fullName>
+        <default>false</default>
+        <label>Stewart MDM</label>
+    </standardValue>
+    <standardValue>
+        <fullName>STL Ltd (Sacramento Theatrical Lighting)</fullName>
+        <default>false</default>
+        <label>STL Ltd (Sacramento Theatrical Lighting)</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Strategic Alliance Services</fullName>
+        <default>false</default>
+        <label>Strategic Alliance Services</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Strategic Events</fullName>
+        <default>false</default>
+        <label>Strategic Events</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Stronco Group of Companies</fullName>
+        <default>false</default>
+        <label>Stronco Group of Companies</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Structural Display Co, Inc.</fullName>
+        <default>false</default>
+        <label>Structural Display Co, Inc.</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Studioetc Inc.</fullName>
+        <default>false</default>
+        <label>Studioetc Inc.</label>
+    </standardValue>
+    <standardValue>
+        <fullName>studio III</fullName>
+        <default>false</default>
+        <label>studio III</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Summit Exposition</fullName>
+        <default>false</default>
+        <label>Summit Exposition</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Sunbelt Convention Services</fullName>
+        <default>false</default>
+        <label>Sunbelt Convention Services</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Suncoast Convention Services</fullName>
+        <default>false</default>
+        <label>Suncoast Convention Services</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Sun Rentals</fullName>
+        <default>false</default>
+        <label>Sun Rentals</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Sunrise Decorating Company</fullName>
+        <default>false</default>
+        <label>Sunrise Decorating Company</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Superior Decorating</fullName>
+        <default>false</default>
+        <label>Superior Decorating</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Superior Exhibits &amp; Design, Inc.</fullName>
+        <default>false</default>
+        <label>Superior Exhibits &amp; Design, Inc.</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Superior Expo Services</fullName>
+        <default>false</default>
+        <label>Superior Expo Services</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Superior Show Services</fullName>
+        <default>false</default>
+        <label>Superior Show Services</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Supplies Unlimited Expo Services</fullName>
+        <default>false</default>
+        <label>Supplies Unlimited Expo Services</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Sylvester Management</fullName>
+        <default>false</default>
+        <label>Sylvester Management</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Sysco Intermountain, Inc.</fullName>
+        <default>false</default>
+        <label>Sysco Intermountain, Inc.</label>
+    </standardValue>
+    <standardValue>
+        <fullName>T3 Expo, LLC</fullName>
+        <default>false</default>
+        <label>T3 Expo, LLC</label>
+    </standardValue>
+    <standardValue>
+        <fullName>TASD Inc.</fullName>
+        <default>false</default>
+        <label>TASD Inc.</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Taylored Events</fullName>
+        <default>false</default>
+        <label>Taylored Events</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Taylor Exhibit Services</fullName>
+        <default>false</default>
+        <label>Taylor Exhibit Services</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Taylor Rental Center Party Plus</fullName>
+        <default>false</default>
+        <label>Taylor Rental Center Party Plus</label>
+    </standardValue>
+    <standardValue>
+        <fullName>TD Banknorth Garden</fullName>
+        <default>false</default>
+        <label>TD Banknorth Garden</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Team One Exhibitor Services</fullName>
+        <default>false</default>
+        <label>Team One Exhibitor Services</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Teams</fullName>
+        <default>false</default>
+        <label>Teams</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Teamwork Event Specialists</fullName>
+        <default>false</default>
+        <label>Teamwork Event Specialists</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Term Group</fullName>
+        <default>false</default>
+        <label>Term Group</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Texas Exposition Services</fullName>
+        <default>false</default>
+        <label>Texas Exposition Services</label>
+    </standardValue>
+    <standardValue>
+        <fullName>The Design Agency</fullName>
+        <default>false</default>
+        <label>The Design Agency</label>
+    </standardValue>
+    <standardValue>
+        <fullName>The Exhibit House</fullName>
+        <default>false</default>
+        <label>The Exhibit House</label>
+    </standardValue>
+    <standardValue>
+        <fullName>The Mash Group</fullName>
+        <default>false</default>
+        <label>The Mash Group</label>
+    </standardValue>
+    <standardValue>
+        <fullName>The Taylor Group</fullName>
+        <default>false</default>
+        <label>The Taylor Group</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Thorndike &amp; Associates</fullName>
+        <default>false</default>
+        <label>Thorndike &amp; Associates</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Timberline Corp</fullName>
+        <default>false</default>
+        <label>Timberline Corp</label>
+    </standardValue>
+    <standardValue>
+        <fullName>ToeZay Decorating &amp; Display Company</fullName>
+        <default>false</default>
+        <label>ToeZay Decorating &amp; Display Company</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Toro Expo</fullName>
+        <default>false</default>
+        <label>Toro Expo</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Total Expo</fullName>
+        <default>false</default>
+        <label>Total Expo</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Total Exposition Concepts</fullName>
+        <default>false</default>
+        <label>Total Exposition Concepts</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Tradeshow Convention Services Inc</fullName>
+        <default>false</default>
+        <label>Tradeshow Convention Services Inc</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Trade Show Decorating Services</fullName>
+        <default>false</default>
+        <label>Trade Show Decorating Services</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Tradeshow Decorators of Hawaii Inc.</fullName>
+        <default>false</default>
+        <label>Tradeshow Decorators of Hawaii Inc.</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Trade Show Electric</fullName>
+        <default>false</default>
+        <label>Trade Show Electric</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Tradeshow Group (The)</fullName>
+        <default>false</default>
+        <label>Tradeshow Group (The)</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Tradeshow Logic</fullName>
+        <default>false</default>
+        <label>Tradeshow Logic</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Trade Show Navigator</fullName>
+        <default>false</default>
+        <label>Trade Show Navigator</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Trade Show Navigators L.L.C.</fullName>
+        <default>false</default>
+        <label>Trade Show Navigators L.L.C.</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Tradeshow Network Inc.</fullName>
+        <default>false</default>
+        <label>Tradeshow Network Inc.</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Trade Show Services</fullName>
+        <default>false</default>
+        <label>Trade Show Services</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Tradeshow Services, Inc. (OH)</fullName>
+        <default>false</default>
+        <label>Tradeshow Services, Inc. (OH)</label>
+    </standardValue>
+    <standardValue>
+        <fullName>TradeShow Services Inc. (NV)</fullName>
+        <default>false</default>
+        <label>TradeShow Services Inc. (NV)</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Trans America Convention Services Inc.</fullName>
+        <default>false</default>
+        <label>Trans America Convention Services Inc.</label>
+    </standardValue>
+    <standardValue>
+        <fullName>TriCord Tradeshow Services</fullName>
+        <default>false</default>
+        <label>TriCord Tradeshow Services</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Tripp Mixx Productions</fullName>
+        <default>false</default>
+        <label>Tripp Mixx Productions</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Tri Rentals</fullName>
+        <default>false</default>
+        <label>Tri Rentals</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Tri Serve Party Rentals</fullName>
+        <default>false</default>
+        <label>Tri Serve Party Rentals</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Triumph Expo &amp; Events Inc.</fullName>
+        <default>false</default>
+        <label>Triumph Expo &amp; Events Inc.</label>
+    </standardValue>
+    <standardValue>
+        <fullName>U-Neek Expo</fullName>
+        <default>false</default>
+        <label>U-Neek Expo</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Union Payroll/Rental Company</fullName>
+        <default>false</default>
+        <label>Union Payroll/Rental Company</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Union Payroll Agency</fullName>
+        <default>false</default>
+        <label>Union Payroll Agency</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Unique Displays</fullName>
+        <default>false</default>
+        <label>Unique Displays</label>
+    </standardValue>
+    <standardValue>
+        <fullName>United Exposition Service Co.</fullName>
+        <default>false</default>
+        <label>United Exposition Service Co.</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Universal Event Services Inc.</fullName>
+        <default>false</default>
+        <label>Universal Event Services Inc.</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Universal Structure</fullName>
+        <default>false</default>
+        <label>Universal Structure</label>
+    </standardValue>
+    <standardValue>
+        <fullName>US Expo &amp; Convention Services</fullName>
+        <default>false</default>
+        <label>US Expo &amp; Convention Services</label>
+    </standardValue>
+    <standardValue>
+        <fullName>US Tradeshows</fullName>
+        <default>false</default>
+        <label>US Tradeshows</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Valley Expo &amp; Displays</fullName>
+        <default>false</default>
+        <label>Valley Expo &amp; Displays</label>
+    </standardValue>
+    <standardValue>
+        <fullName>ValueTech Exhibits</fullName>
+        <default>false</default>
+        <label>ValueTech Exhibits</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Veal Convention Services</fullName>
+        <default>false</default>
+        <label>Veal Convention Services</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Viper Tradeshow Services</fullName>
+        <default>false</default>
+        <label>Viper Tradeshow Services</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Virtual Office News LLC</fullName>
+        <default>false</default>
+        <label>Virtual Office News LLC</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Vista Convention Services</fullName>
+        <default>false</default>
+        <label>Vista Convention Services</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Voblo GMBH &amp; Co. KG</fullName>
+        <default>false</default>
+        <label>Voblo GMBH &amp; Co. KG</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Von Braun</fullName>
+        <default>false</default>
+        <label>Von Braun</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Waggon-Cellars</fullName>
+        <default>false</default>
+        <label>Waggon-Cellars</label>
+    </standardValue>
+    <standardValue>
+        <fullName>West Coast Displays</fullName>
+        <default>false</default>
+        <label>West Coast Displays</label>
+    </standardValue>
+    <standardValue>
+        <fullName>WestCoast Exhibit Services, Inc.</fullName>
+        <default>false</default>
+        <label>WestCoast Exhibit Services, Inc.</label>
+    </standardValue>
+    <standardValue>
+        <fullName>West Coast Expo</fullName>
+        <default>false</default>
+        <label>West Coast Expo</label>
+    </standardValue>
+    <standardValue>
+        <fullName>West Coast Productions</fullName>
+        <default>false</default>
+        <label>West Coast Productions</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Western Display</fullName>
+        <default>false</default>
+        <label>Western Display</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Western Display Service Ltd</fullName>
+        <default>false</default>
+        <label>Western Display Service Ltd</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Western Event Services</fullName>
+        <default>false</default>
+        <label>Western Event Services</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Western Exhibitors</fullName>
+        <default>false</default>
+        <label>Western Exhibitors</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Western Scenic Studios Inc.</fullName>
+        <default>false</default>
+        <label>Western Scenic Studios Inc.</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Williams/Gerard Productions</fullName>
+        <default>false</default>
+        <label>Williams/Gerard Productions</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Willwork, Inc.</fullName>
+        <default>false</default>
+        <label>Willwork, Inc.</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Winnett Expo Services</fullName>
+        <default>false</default>
+        <label>Winnett Expo Services</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Wisconsin Expo Inc.</fullName>
+        <default>false</default>
+        <label>Wisconsin Expo Inc.</label>
+    </standardValue>
+    <standardValue>
+        <fullName>XIME Solutions Group</fullName>
+        <default>false</default>
+        <label>XIME Solutions Group</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Xpert Exposition Services</fullName>
+        <default>false</default>
+        <label>Xpert Exposition Services</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Yoffe Exposition Services, Inc.</fullName>
+        <default>false</default>
+        <label>Yoffe Exposition Services, Inc.</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Dana Testy</fullName>
+        <default>false</default>
+        <label>Dana Testy</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Dan Testy</fullName>
+        <default>false</default>
+        <label>Dan Testy</label>
+    </standardValue>
+</StandardValueSet>

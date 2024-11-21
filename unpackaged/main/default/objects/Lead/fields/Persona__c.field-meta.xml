@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Persona__c</fullName>
+    <inlineHelpText>Large Corporation = 100B+
+Medium Company = 100M – 99B
+Small Company = &lt;100M</inlineHelpText>
+    <label>Persona</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Brad Brand</fullName>
+                <default>false</default>
+                <label>Brad Brand</label>
+            </value>
+            <value>
+                <fullName>Cathy CMO</fullName>
+                <default>false</default>
+                <label>Cathy CMO</label>
+            </value>
+            <value>
+                <fullName>Emily Events</fullName>
+                <default>false</default>
+                <label>Emily Events</label>
+            </value>
+            <value>
+                <fullName>Fran Field</fullName>
+                <default>false</default>
+                <label>Fran Field</label>
+            </value>
+            <value>
+                <fullName>Paul Procurement</fullName>
+                <default>false</default>
+                <label>Paul Procurement</label>
+            </value>
+            <value>
+                <fullName>Steve Sales</fullName>
+                <default>false</default>
+                <label>Steve Sales</label>
+            </value>
+            <value>
+                <fullName>Tammy Tradeshow</fullName>
+                <default>false</default>
+                <label>Tammy Tradeshow</label>
+            </value>
+            <value>
+                <fullName>Large Corporation</fullName>
+                <default>false</default>
+                <label>Large Corporation</label>
+            </value>
+            <value>
+                <fullName>Medium Company</fullName>
+                <default>false</default>
+                <label>Medium Company</label>
+            </value>
+            <value>
+                <fullName>Small Company</fullName>
+                <default>false</default>
+                <label>Small Company</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

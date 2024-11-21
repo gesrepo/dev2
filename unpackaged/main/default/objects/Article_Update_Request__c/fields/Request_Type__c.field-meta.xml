@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Request_Type__c</fullName>
+    <label>Request Type</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>New Article</fullName>
+                <default>false</default>
+                <label>New Article</label>
+            </value>
+            <value>
+                <fullName>Update Article Categories</fullName>
+                <default>false</default>
+                <label>Update Article Categories</label>
+            </value>
+            <value>
+                <fullName>Update Article (Minor Change)</fullName>
+                <default>false</default>
+                <label>Update Article (Minor Change)</label>
+            </value>
+            <value>
+                <fullName>Update Article (Major Change)</fullName>
+                <default>false</default>
+                <label>Update Article (Major Change)</label>
+            </value>
+            <value>
+                <fullName>Unpublish Article</fullName>
+                <default>false</default>
+                <label>Unpublish Article</label>
+            </value>
+            <value>
+                <fullName>Archive Article</fullName>
+                <default>false</default>
+                <label>Archive Article</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

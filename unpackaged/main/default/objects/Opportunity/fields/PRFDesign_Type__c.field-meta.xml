@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PRFDesign_Type__c</fullName>
+    <label>Design Type</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>New Exhibit</fullName>
+                <default>false</default>
+                <label>New Exhibit</label>
+            </value>
+            <value>
+                <fullName>Reconfig Existing Only</fullName>
+                <default>false</default>
+                <label>Reconfig Existing Only</label>
+            </value>
+            <value>
+                <fullName>Reconfig Existing &amp; New</fullName>
+                <default>false</default>
+                <label>Reconfig Existing &amp; New</label>
+            </value>
+            <value>
+                <fullName>Rental</fullName>
+                <default>false</default>
+                <label>Rental</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

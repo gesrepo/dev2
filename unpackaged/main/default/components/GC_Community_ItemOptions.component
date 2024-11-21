@@ -1,0 +1,512 @@
+<apex:component controller="GC_ItemOptionsController" selfClosing="true">
+      <apex:attribute name="gotAttribute" description="The task being passed in" type="GC_GES_Order_Task__c" required="true" assignTo="{!got}" />
+      <apex:attribute name="coreApiAttribute" description="The coreAPI instance to use" type="GC_CoreQuery" required="true" assignTo="{!coreApi}" />
+      <apex:attribute name="materialOptions" description="Select Options" type="SelectOption[]" required="false" assignTo="{!materialAttributes}" />
+      <apex:attribute name="editMode" description="Edit Mode" default="true" type="Boolean" />
+      <apex:attribute name="activeGemStructureTaskOptions" description="GEM Structures to Link" type="SelectOption[]" required="false" assignTo="{!activeGemStructureTasks}" />
+      <apex:attribute name="taskFieldMan" description="Task Fields to be shown" type="GC_Task_Field_Manager__c" required="false" assignTo="{!taskFieldManager}" />
+      <!--<apex:outputPanel rendered="{!coreApi.itemOptionsTemplate != null || coreApi.itemOptionsTemplate != ''}">-->
+      <apex:outputPanel rendered="{!got.Item_Template__c != null || got.Item_Template__c != ''}">
+        <legend class="form-element__legend slds-form-element__label slds-text-title--caps gc-section-margin-top">Item Options</legend>
+      </apex:outputPanel>
+      <!-- Basic Options Quantity Only -->
+      <!--<apex:outputPanel rendered="{!coreApi.itemOptionsTemplate == 'Basic' || coreApi.itemOptionsTemplate == 'GEM Structures'}" layout="none">-->
+      <apex:outputPanel rendered="{!got.Item_Template__c == 'Basic' || got.Item_Template__c == 'GEM Structures'}" layout="none">
+        <fieldset class="slds-form--compound">
+          <div class="form-element__group">
+            <div class="slds-form-element__row">
+              <div class="slds-form-element is-required slds-size--1-of-2 slds-p-horizontal--small">
+                <label class="slds-form-element__label">
+                  <abbr class="slds-required" title="required">*</abbr>
+                  Quantity
+                </label>
+                <div class="slds-form-element__control">
+                  <div class="gc-relative">
+                    <apex:inputField value="{!got.QuantityNum__c}"  styleClass="slds-input" rendered="{!editMode}" />
+                    <apex:outputField value="{!got.QuantityNum__c}" styleClass="slds-form-element__static" rendered="{!!editMode}" />
+                  </div>
+                </div>
+              </div>
+            </div>
+            </div>
+        </fieldset>       
+      </apex:outputPanel>
+      <!-- Standard Carpet Options Quantity, Electrical Ordered Electrical Under Only -->
+      <!-- Custom Carpet Options Legnth and Width, Electrical Ordered Electrical Under Only -->
+      <!--<apex:outputPanel rendered="{!(coreApi.itemOptionsTemplate == 'Carpet' || coreApi.itemOptionsTemplate == 'Custom Carpet') && (got.UOM__c == 'SF')}" layout="none">-->
+      <apex:outputPanel rendered="{!(got.Item_Template__c == 'Carpet' || got.Item_Template__c == 'Custom Carpet') && (got.UOM__c == 'SF')}" layout="none">
+        <fieldset class="slds-form--compound">
+          <div class="form-element__group">
+            <!-- Quantity -->
+              <div class="slds-form-element__row">
+                <div class="slds-form-element is-required slds-size--1-of-2 slds-p-horizontal--small">
+                  <div class="slds-form-element__control">
+                    <div class="gc-relative">
+                     <!-- <apex:inputField value="{!got.QuantityNum__c}" styleClass="slds-input" rendered="{!editMode}" /> -->
+                      <apex:outputLabel value="Quantity : " rendered="{!!editMode}" />
+                      <apex:outputField value="{!got.QuantityNum__c}" styleClass="slds-form-element__static" rendered="{!!editMode}"/>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="slds-form-element__row">
+                <div class="slds-form-element is-required slds-size--1-of-2 slds-p-horizontal--small">
+                  <label class="slds-form-element__label">
+                    <abbr class="slds-required" title="required">*</abbr>
+                    Carpet Width
+                  </label>
+                  <div class="slds-form-element__control">
+                    <div class="gc-relative">
+                      <apex:inputField value="{!got.Carpet_Width__c}" styleClass="slds-input" rendered="{!editMode}" />
+                      <apex:outputField value="{!got.Carpet_Width__c}" styleClass="slds-form-element__static" rendered="{!!editMode}" />
+                    </div>
+                  </div>
+                </div>
+              <div class="slds-form-element is-required slds-size--1-of-2 slds-p-horizontal--small">
+                <label class="slds-form-element__label">
+                  <abbr class="slds-required" title="required">*</abbr>
+                  Carpet Length
+                </label>
+                <div class="slds-form-element__control">
+                  <div class="gc-relative">
+                    <apex:inputField value="{!got.Carpet_Length__c}" styleClass="slds-input" rendered="{!editMode}" />
+                    <apex:outputField value="{!got.Carpet_Length__c}" styleClass="slds-form-element__static" rendered="{!!editMode}" />
+                  </div>
+                </div>
+              </div>
+              </div>
+            <div class="slds-form-element__row">
+              <!-- Electrical Ordered -->
+              <div class="slds-form-element is-required slds-size--1-of-12 slds-p-horizontal--small">
+                <label class="slds-form-element__label">
+                  Electrical Ordered
+                </label>
+                <div class="slds-form-element__control">
+                  <div class="gc-relative">
+                    <apex:inputField value="{!got.Electrical_Ordered__c}" styleClass="slds-input" rendered="{!editMode}" />
+                    <apex:outputField value="{!got.Electrical_Ordered__c}" styleClass="slds-form-element__static" rendered="{!!editMode}" />
+                  </div>
+                </div>
+              </div>
+              <!-- Electrical Under -->
+              <div class="slds-form-element is-required slds-size--1-of-12 slds-p-horizontal--small">
+                <label class="slds-form-element__label">
+                  Electrical Under
+                </label>
+                <div class="slds-form-element__control">
+                  <div class="gc-relative">
+                    <apex:inputField value="{!got.Electrical_Under__c}" styleClass="slds-input" rendered="{!editMode}" />
+                    <apex:outputField value="{!got.Electrical_Under__c}" styleClass="slds-form-element__static" rendered="{!!editMode}" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </fieldset>
+      </apex:outputPanel>
+      
+      <!--<apex:outputPanel rendered="{!(coreApi.itemOptionsTemplate == 'Carpet' || coreApi.itemOptionsTemplate == 'Custom Carpet') && (got.UOM__c == 'EA')}" layout="none">-->
+      <apex:outputPanel rendered="{!(got.Item_Template__c == 'Carpet' || got.Item_Template__c == 'Custom Carpet') && (got.UOM__c == 'EA')}" layout="none">
+        <fieldset class="slds-form--compound">
+          <div class="form-element__group">
+            <!-- Quantity -->
+              <div class="slds-form-element__row">
+              <div class="slds-form-element is-required slds-size--1-of-2 slds-p-horizontal--small">
+                <label class="slds-form-element__label">
+                  <abbr class="slds-required" title="required">*</abbr>
+                  Quantity
+                </label>
+                <div class="slds-form-element__control">
+                  <div class="gc-relative">
+                    <apex:inputField value="{!got.QuantityNum__c}"  styleClass="slds-input" rendered="{!editMode}" />
+                    <apex:outputField value="{!got.QuantityNum__c}" styleClass="slds-form-element__static" rendered="{!!editMode}" />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="slds-form-element__row">
+              <!-- Electrical Ordered -->
+              <div class="slds-form-element is-required slds-size--1-of-12 slds-p-horizontal--small">
+                <label class="slds-form-element__label">
+                  Electrical Ordered
+                </label>
+                <div class="slds-form-element__control">
+                  <div class="gc-relative">
+                    <apex:inputField value="{!got.Electrical_Ordered__c}" styleClass="slds-input" rendered="{!editMode}" />
+                    <apex:outputField value="{!got.Electrical_Ordered__c}" styleClass="slds-form-element__static" rendered="{!!editMode}" />
+                  </div>
+                </div>
+              </div>
+              <!-- Electrical Under -->
+              <div class="slds-form-element is-required slds-size--1-of-12 slds-p-horizontal--small">
+                <label class="slds-form-element__label">
+                  Electrical Under
+                </label>
+                <div class="slds-form-element__control">
+                  <div class="gc-relative">
+                    <apex:inputField value="{!got.Electrical_Under__c}" styleClass="slds-input" rendered="{!editMode}" />
+                    <apex:outputField value="{!got.Electrical_Under__c}" styleClass="slds-form-element__static" rendered="{!!editMode}" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </fieldset>
+      </apex:outputPanel>
+      <!-- Graphics Sign Order -->
+      <apex:outputPanel rendered="{!got.Item_Template__c == 'Graphics' || got.Item_Template__c == 'Custom Graphics' || got.Item_Template__c == 'GEM Graphics'}" layout="none">
+        <!-- Custom Graphics -->
+        <fieldset class="slds-form--compound">
+          <div class="form-element__group">
+            <!-- Quantity -->
+            <div class="slds-form-element__row">
+              <div class="slds-form-element is-required slds-size--1-of-2 slds-p-horizontal--small">
+                <label class="slds-form-element__label">
+                  <abbr class="slds-required" title="required">*</abbr>
+                  Quantity
+                </label>
+                <div class="slds-form-element__control">
+                  <div class="gc-relative">
+                    <apex:inputField value="{!got.QuantityNum__c}" styleClass="slds-input" rendered="{!editMode}" />
+                    <apex:outputField value="{!got.QuantityNum__c}" styleClass="slds-form-element__static" rendered="{!!editMode}" />
+                  </div>
+                </div>
+              </div>
+             
+            <!--SAL-636 -->
+            <div class="slds-form-element slds-size--1-of-2 slds-p-horizontal--small">
+                <apex:outputLabel value="Sign Title" styleClass="slds-form-element__label" 
+                rendered="{!(taskFieldManager.Sign_Title__c!= $Label.GC_Label_TFM_Hide)}"/>
+                <apex:outputText rendered="{!(taskFieldManager.Sign_Title__c== $Label.GC_Label_TFM_Hide)}"></apex:outputText>
+                <div class="slds-form-element__control">
+                    <div class="gc-relative">
+                        <apex:inputField styleClass="slds-input" value="{!got.Sign_Title__c}" rendered="{!(editMode
+                        && (taskFieldManager.Sign_Title__c!= $Label.GC_Label_TFM_Hide))}" />
+                        <apex:outputField styleClass="slds-form-element__static" value="{!got.Sign_Title__c}" rendered="{!(!editMode && (taskFieldManager.Sign_Title__c!= $Label.GC_Label_TFM_Hide))}" />
+                        <apex:outputText rendered="{!(taskFieldManager.Sign_Title__c== $Label.GC_Label_TFM_Hide)}"></apex:outputText>
+                    </div>
+                </div>
+            </div>
+              
+            </div>
+            <div class="slds-form-element__row">
+              <!-- Sign Width x Height is required for Custom Graphics, so we indicate it using CSS -->
+              <apex:outputPanel rendered="{!coreApi.itemOptionsTemplate == 'Custom Graphics'}" layout="none">
+                <!-- Sign Width -->
+                <div class="slds-form-element is-required slds-size--1-of-2 slds-p-horizontal--small">
+                  <label class="slds-form-element__label">
+                    <apex:outputPanel layout="none" rendered="{!editMode}">
+                    <abbr class="slds-required" title="required">*</abbr>
+                    </apex:outputPanel>
+                    Sign Width (in)
+                  </label>
+                  <div class="slds-form-element__control">
+                    <div class="gc-relative">
+                      <apex:inputField styleClass="slds-input" value="{!got.Sign_Width__c}" rendered="{!editMode}" />
+                      <apex:outputField styleClass="slds-form-element__static" value="{!got.Sign_Width__c}" rendered="{!!editMode}" />
+                    </div>
+                  </div>
+                </div>
+                <!-- Sign Length -->
+                <div class="slds-form-element is-required slds-size--1-of-2 slds-p-horizontal--small">
+                  <label class="slds-form-element__label">
+                    <apex:outputPanel layout="none" rendered="{!editMode}">
+                    <abbr class="slds-required" title="required">*</abbr>
+                    </apex:outputPanel>
+                    Sign Height (in)
+                  </label>
+                  <div class="slds-form-element__control">
+                    <div class="gc-relative">
+                      <apex:inputField styleClass="slds-input" value="{!got.Sign_Length__c}" rendered="{!editMode}" />
+                      <apex:outputField styleClass="slds-form-element__static" value="{!got.Sign_Length__c}" rendered="{!!editMode}" />
+                    </div>
+                  </div>
+                </div>
+              </apex:outputPanel>
+              <!-- Sign Width x Height not required for GEM Graphics, but optional -->
+              <apex:outputPanel rendered="{!coreApi.itemOptionsTemplate == 'GEM Graphics'}" layout="none">
+                <!-- Sign Width -->
+                <div class="slds-form-element slds-size--1-of-2 slds-p-horizontal--small">
+                  <label class="slds-form-element__label">
+                    Sign Width (in)
+                  </label>
+                  <div class="slds-form-element__control">
+                    <div class="gc-relative">
+                      <apex:inputField styleClass="slds-input" value="{!got.Sign_Width__c}" rendered="{!editMode}" />
+                      <apex:outputField styleClass="slds-form-element__static" value="{!got.Sign_Width__c}" rendered="{!!editMode}" />
+                    </div>
+                  </div>
+                </div>
+                <!-- Sign Length -->
+                <div class="slds-form-element slds-size--1-of-2 slds-p-horizontal--small">
+                  <label class="slds-form-element__label">
+                    Sign Height (in)
+                  </label>
+                  <div class="slds-form-element__control">
+                    <div class="gc-relative">
+                      <apex:inputField styleClass="slds-input" value="{!got.Sign_Length__c}" rendered="{!editMode}" />
+                      <apex:outputField styleClass="slds-form-element__static" value="{!got.Sign_Length__c}" rendered="{!!editMode}" />
+                    </div>
+                  </div>
+                </div>
+              </apex:outputPanel>
+            </div>
+          </div>
+        </fieldset>
+      </apex:outputPanel>
+      <apex:outputPanel rendered="{!got.Item_Template__c == 'GEM Graphics'}" layout="none">
+        <fieldset class="slds-form--compound">
+          <div class="form-element__group">
+            <div class="slds-form-element__row">
+              <div class="slds-form-element slds-size--1-of-2 slds-p-horizontal--small">
+                <label class="slds-form-element__label">
+                  Parent GEM Structure
+                </label>
+                <div class="slds-form-element__control">
+                  <div class="gc-relative">
+                    <apex:outputField value="{!got.Parent_GEM_Structure__c}" styleClass="slds-input" rendered="{!!editMode}" />
+                    <apex:selectList styleClass="slds-select" id="gemStructureSelect" value="{!got.Parent_GEM_Structure__c}" title="Parent GEM Structure." size="1" rendered="{!editMode}">
+                      <apex:selectOptions value="{!activeGemStructureTasks}"></apex:selectOptions>
+                    </apex:selectList>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </fieldset>
+      </apex:outputPanel>
+      <apex:outputPanel rendered="{!got.Item_Template__c == 'Graphics' || got.Item_Template__c == 'Custom Graphics' || got.Item_Template__c == 'GEM Graphics'}" layout="none">
+        <fieldset class="slds-form--compound">
+          <div class="form-element__group">
+            <!-- Sign Title was moved above -->
+            <!-- <div class="slds-form-element__row"> -->
+            <!-- <div class="slds-form-element slds-size--1-of-2 slds-p-horizontal--small">
+                <apex:outputLabel value="Sign Title" styleClass="slds-form-element__label" />
+                <div class="slds-form-element__control">
+                  <div class="gc-relative">
+                    <apex:inputField styleClass="slds-input" value="{!got.Sign_Title__c}" rendered="{!editMode}" />
+                    <apex:outputField styleClass="slds-form-element__static" value="{!got.Sign_Title__c}" rendered="{!!editMode}" />
+                  </div>
+                </div>
+              </div> -->
+            <!-- </div> -->
+            <!-- Sign type and Single / double sided -->
+            <div class="slds-form-element__row">
+            <!--SAL-636 -->
+            <div class="slds-form-element slds-size--1-of-2 slds-p-horizontal--small">
+                <apex:outputLabel value="Sign Type" styleClass="slds-form-element__label" 
+                rendered="{!(taskFieldManager.Sign_Type__c!= $Label.GC_Label_TFM_Hide)}" />
+                <apex:outputText rendered="{!(taskFieldManager.Sign_Type__c== $Label.GC_Label_TFM_Hide)}"></apex:outputText>
+                <div class="slds-form-element__control">
+                    <div class="gc-relative">
+                        <apex:inputField styleClass="slds-select" value="{!got.GOT_Sign_Type__c}" rendered="{!(editMode
+                        && (taskFieldManager.Sign_Type__c!= $Label.GC_Label_TFM_Hide))}"/>
+                        <apex:outputField styleClass="slds-form-element__static" value="{!got.GOT_Sign_Type__c}" rendered="{!(!editMode && (taskFieldManager.Sign_Type__c!= $Label.GC_Label_TFM_Hide))}" />
+                        <apex:outputText rendered="{!(taskFieldManager.Sign_Type__c== $Label.GC_Label_TFM_Hide)}"></apex:outputText>
+                    </div>
+                </div>
+            </div>
+            <!-- SAL-636-->  
+            <div class="slds-form-element slds-size--1-of-2 slds-p-horizontal--small is-required">
+                <apex:outputLabel value="Single/Double Sided" styleClass="slds-form-element__label" 
+                rendered="{!(taskFieldManager.Single_Double_Sided__c!= $Label.GC_Label_TFM_Hide)}"/>
+                <apex:outputText rendered="{!(taskFieldManager.Single_Double_Sided__c== $Label.GC_Label_TFM_Hide)}"></apex:outputText>
+                <div class="slds-form-element__control">
+                    <div class="gc-relative">
+                        <apex:inputField styleClass="slds-select" value="{!got.GOT_Single_Double_Sided__c}" rendered="{!(editMode && (taskFieldManager.Single_Double_Sided__c!= $Label.GC_Label_TFM_Hide))}" />
+                        <apex:outputField styleClass="slds-form-element__static" value="{!got.GOT_Single_Double_Sided__c}" rendered="{!(!editMode && (taskFieldManager.Single_Double_Sided__c!= $Label.GC_Label_TFM_Hide))}" />
+                        <apex:outputText rendered="{!(taskFieldManager.Single_Double_Sided__c== $Label.GC_Label_TFM_Hide)}"></apex:outputText>
+                    </div>
+                </div>
+            </div>
+              
+            </div>
+            <!-- Sign Type Other & Material Select -->
+            
+            
+            <apex:outputPanel id="Sign_type_Other" rendered="{!(taskFieldManager.Sign_Type_Other__c!= $Label.GC_Label_TFM_Hide)}">
+                <div class="slds-form-element__row">
+                <div class="slds-form-element slds-size--1-of-2 slds-p-horizontal--small">
+                    <apex:outputLabel value="Sign Type Other" styleClass="slds-form-element__label" />                
+                   <div class="slds-form-element__control">
+                  <div class="gc-relative">
+                    <apex:inputField styleClass="slds-select" value="{!got.GOT_Sign_Type_Other__c}" rendered="{!editMode}" />
+                    <apex:outputField styleClass="slds-form-element__static" value="{!got.GOT_Sign_Type_Other__c}" rendered="{!!editMode}" />
+                  </div>
+                </div>
+                </div>
+                </div>
+            </apex:outputPanel>
+            
+                <div class="slds-form-element__row">
+              <div class="slds-form-element slds-size--1-of-2 slds-p-horizontal--small">
+                <apex:outputLabel value="Material" styleClass="slds-form-element__label" />
+                <div class="slds-form-element__control">
+                  <div class="gc-relative">
+                    <apex:selectList id="materialSelect" value="{!got.Material__c}" size="1" styleClass="slds-select" rendered="{!editMode}">
+                      <apex:selectOptions value="{!materialAttributes}"></apex:selectOptions>
+                    </apex:selectList>
+                    <apex:outputField styleClass="slds-form-element__static" value="{!got.Material__c}" rendered="{!!editMode}" />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Sign Copy and Install Should be Here. -->
+            <!-- Copy Placement and Outdoors --> <!-- SAL-636 -->
+            <div class="slds-form-element__row">
+              
+                <div class="slds-form-element slds-size--1-of-2 slds-p-horizontal--small">
+                    <apex:outputLabel value="Installation Method" styleClass="slds-form-element__label" 
+                    rendered="{!(taskFieldManager.Installation_Method__c!= $Label.GC_Label_TFM_Hide)}"/>
+                    <apex:outputText rendered="{!(taskFieldManager.Installation_Method__c== $Label.GC_Label_TFM_Hide)}"></apex:outputText>
+                    <div class="slds-form-element__control">
+                            <div class="gc-relative">
+                                <apex:inputField styleClass="slds-select" value="{!got.Installation_Method__c}" rendered="{!(editMode && (taskFieldManager.Installation_Method__c!= $Label.GC_Label_TFM_Hide))}"/>
+                                <apex:outputField styleClass="slds-form-element__static" value="{!got.Installation_Method__c}" rendered="{!(!editMode && (taskFieldManager.Installation_Method__c!= $Label.GC_Label_TFM_Hide))}" />
+                                <apex:outputText rendered="{!(taskFieldManager.Installation_Method__c== $Label.GC_Label_TFM_Hide)}"></apex:outputText>
+                            </div>
+                    </div>
+                </div>
+              <!--SAL-636-->
+                <div class="slds-form-element slds-size--1-of-2 slds-p-horizontal--small">
+                    <apex:outputLabel value="Outdoors?" styleClass="slds-form-element__label" 
+                    rendered="{!(taskFieldManager.Outdoors__c!= $Label.GC_Label_TFM_Hide)}"/>
+                    <apex:outputText rendered="{!(taskFieldManager.Outdoors__c== $Label.GC_Label_TFM_Hide)}"></apex:outputText>
+                    <div class="slds-form-element__control">
+                        <div class="gc-relative">
+                            <apex:inputField styleClass="slds-input" value="{!got.Outdoors__c}" rendered="{!(editMode 
+                            && (taskFieldManager.Outdoors__c!= $Label.GC_Label_TFM_Hide))}" />
+                            <apex:outputField styleClass="slds-form-element__static" value="{!got.Outdoors__c}" rendered="{!(!editMode && (taskFieldManager.Outdoors__c!= $Label.GC_Label_TFM_Hide))}" />
+                            <apex:outputText rendered="{!(taskFieldManager.Outdoors__c== $Label.GC_Label_TFM_Hide)}"></apex:outputText>
+                        </div>
+                    </div>
+                </div>
+              
+            </div>
+            <!-- Installation Method and Save Signs --> <!--SAL-636-->
+            <div class="slds-form-element__row">
+                <div class="slds-form-element slds-size--1-of-2 slds-p-horizontal--small">
+                    <apex:outputLabel value="Copy Placement" styleClass="slds-form-element__label" 
+                    rendered="{!(taskFieldManager.Copy_Placement__c!= $Label.GC_Label_TFM_Hide)}"/>
+                    <apex:outputText rendered="{!(taskFieldManager.Copy_Placement__c== $Label.GC_Label_TFM_Hide)}"></apex:outputText>
+                    <div class="slds-form-element__control">
+                      <div class="gc-relative">
+                        <apex:inputField styleClass="slds-select" value="{!got.GOT_Copy_Placement__c}" rendered="{!(editMode && (taskFieldManager.Copy_Placement__c!= $Label.GC_Label_TFM_Hide))}" />
+                        <apex:outputField styleClass="slds-form-element__static" value="{!got.GOT_Copy_Placement__c}" rendered="{!(!editMode && (taskFieldManager.Copy_Placement__c!= $Label.GC_Label_TFM_Hide))}" />
+                        <apex:outputText rendered="{!(taskFieldManager.Copy_Placement__c== $Label.GC_Label_TFM_Hide)}"></apex:outputText>
+                      </div>
+                    </div>
+                </div>
+              <!-- SAL-636 -->
+              <div class="slds-form-element slds-size--1-of-2 slds-p-horizontal--small">
+                <apex:outputLabel value="Save Signs" styleClass="slds-form-element__label" rendered="{!(taskFieldManager.Save_Signs__c!= $Label.GC_Label_TFM_Hide)}" />
+                <apex:outputText rendered="{!(taskFieldManager.Save_Signs__c== $Label.GC_Label_TFM_Hide)}"></apex:outputText>
+                <div class="slds-form-element__control">
+                  <div class="gc-relative">
+                    <!--<apex:inputField styleClass="slds-input" value="{!got.Save_Signs__c}" rendered="{!editMode}" />
+                    <apex:outputField styleClass="slds-form-element__static" value="{!got.Save_Signs__c}" rendered="{!!editMode}" />-->
+                    <apex:selectList value="{!got.Save_Signs__c}" size="1" styleClass="slds-select" rendered="{!(editMode && (taskFieldManager.Save_Signs__c!= $Label.GC_Label_TFM_Hide))}">
+                      <apex:selectOption itemValue="Yes" itemLabel="Yes"/>
+                      <apex:selectOption itemValue="No" itemLabel="No"/>
+                    </apex:selectList>
+                    <apex:selectList value="{!got.Save_Signs__c}" size="1" styleClass="slds-select" rendered="{!(!editMode && (taskFieldManager.Save_Signs__c!= $Label.GC_Label_TFM_Hide))}" readonly="true" >
+                      <apex:selectOption itemValue="Yes" itemLabel="Yes"/>
+                      <apex:selectOption itemValue="No" itemLabel="No"/>
+                    </apex:selectList>
+                    <apex:outputText rendered="{!(taskFieldManager.Save_Signs__c== $Label.GC_Label_TFM_Hide)}"></apex:outputText>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Background --> <!-- SAL-636 -->
+            <div class="slds-form-element__row">
+              <div class="slds-form-element slds-size--1-of-2 slds-p-horizontal--small">
+                <apex:outputLabel value="Background" styleClass="slds-form-element__label" rendered="{!(taskFieldManager.Background__c!= $Label.GC_Label_TFM_Hide)}" />
+                <apex:outputText rendered="{!(taskFieldManager.Background__c== $Label.GC_Label_TFM_Hide)}"></apex:outputText>
+                <div class="slds-form-element__control">
+                  <div class="gc-relative">
+                    <apex:inputField styleClass="slds-select" value="{!got.GOT_Background__c}" rendered="{!(editMode && (taskFieldManager.Background__c!= $Label.GC_Label_TFM_Hide))}"/>                  
+                    <apex:outputField styleClass="slds-form-element__static" value="{!got.GOT_Background__c}" rendered="{!(!editMode && (taskFieldManager.Background__c!= $Label.GC_Label_TFM_Hide))}" />
+                    <apex:outputText rendered="{!(taskFieldManager.Background__c== $Label.GC_Label_TFM_Hide)}"></apex:outputText>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="slds-form-element slds-size--1-of-2 slds-p-horizontal--small">
+              </div>
+            </div>
+            <!-- Sign Copy and Layout are at the bottom and they get their own rows. -->
+           
+            <apex:outputPanel rendered="{!(taskFieldManager.Sign_Copy__c!= $Label.GC_Label_TFM_Hide)}">
+           <div class="slds-form-element__row">
+             <!--SAL-636-->
+             <div class="slds-form-element slds-size--1-of-1 slds-p-horizontal--small">
+                <apex:outputLabel value="Sign Copy" styleClass="slds-form-element__label" 
+                rendered="{!(taskFieldManager.Sign_Copy__c!= $Label.GC_Label_TFM_Hide)}"/>
+                <apex:outputText rendered="{!(taskFieldManager.Sign_Copy__c== $Label.GC_Label_TFM_Hide)}"></apex:outputText>
+                <div class="slds-form-element__control">
+                    <div class="gc-relative">
+                        <c:GC_CustomRTF uniqueid="componentText1" targetclass="componentText1" toolbar="SalesforceLight">
+                        </c:GC_CustomRTF>
+                        <apex:inputTextarea styleClass="componentText1 ckeditor" richText="false" value="{!got.Sign_Copy__c}" style="width:100%" disabled="{!(!editMode && (taskFieldManager.Sign_Copy__c!= $Label.GC_Label_TFM_Hide)) }" />
+                        <apex:outputText rendered="{!(taskFieldManager.Sign_Copy__c== $Label.GC_Label_TFM_Hide)}"></apex:outputText>
+                    </div>
+                </div>
+             </div> 
+            </div>
+            </apex:outputPanel>
+            <apex:outputPanel rendered="{!(taskFieldManager.Client_Layout_Notes__c!= $Label.GC_Label_TFM_Hide)}">
+            <div class="slds-form-element__row">
+              <div class="slds-form-element slds-size--1-of-1 slds-p-horizontal--small">
+                <apex:outputLabel value="Layout" styleClass="slds-form-element__label" 
+                rendered="{!(taskFieldManager.Client_Layout_Notes__c!= $Label.GC_Label_TFM_Hide)}"/>
+                 <apex:outputText rendered="{!(taskFieldManager.Client_Layout_Notes__c== $Label.GC_Label_TFM_Hide)}"></apex:outputText>
+                <div class="slds-form-element__control">
+                  <div class="gc-relative">
+                    <c:GC_CustomRTF uniqueid="componentText2" targetclass="componentText2" toolbar="SalesforceLight">
+                    </c:GC_CustomRTF>
+                    <apex:inputTextarea styleClass="componentText2 ckeditor" richText="false" value="{!got.Layout__c}" style="width:100%" disabled="{!(!editMode && (taskFieldManager.Client_Layout_Notes__c!= $Label.GC_Label_TFM_Hide)) }" />
+                    <apex:outputText rendered="{!(taskFieldManager.Client_Layout_Notes__c== $Label.GC_Label_TFM_Hide)}"></apex:outputText>
+                  </div>
+                </div>
+              </div>
+            </div>
+            </apex:outputPanel>
+          </div>
+        </fieldset>
+    </apex:outputPanel>
+     <apex:outputPanel rendered="{!got.Item_Template__c == 'Labor'}" layout="none">
+        <fieldset class="slds-form--compound">
+        <div class="form-element__group">
+            <div class="slds-form-element__row">
+              <div class="slds-form-element is-required slds-size--1-of-2 slds-p-horizontal--small">
+                <label class="slds-form-element__label">
+                  <abbr class="slds-required" title="required">*</abbr>
+                  Quantity
+                </label>
+                <div class="slds-form-element__control">
+                  <div class="gc-relative">
+                    <apex:inputField value="{!got.QuantityNum__c}"  styleClass="slds-input" rendered="{!editMode}" />
+                    <apex:outputField value="{!got.QuantityNum__c}" styleClass="slds-form-element__static" rendered="{!!editMode}" />
+                  </div>
+                </div>
+              </div>
+              
+                <div class="slds-form-element is-required slds-size--1-of-2 slds-p-horizontal--small">
+                  <label class="slds-form-element__label">
+                    <abbr class="slds-required" title="required">*</abbr>
+                    Labor In/Out
+                  </label>
+                  <div class="slds-form-element__control">
+                    <div class="gc-relative">
+                       <apex:inputField value="{!got.Labor_In_Out__c}"  styleClass="slds-input" rendered="{!editMode}" required="true"/>
+                      <apex:outputField value="{!got.Labor_In_Out__c}"  styleClass="slds-form-element__static" rendered="{!!editMode}" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            
+        </div>
+        </fieldset>
+      </apex:outputPanel>
+    </apex:component>

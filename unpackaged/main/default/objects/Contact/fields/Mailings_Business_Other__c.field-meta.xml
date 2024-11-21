@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Mailings_Business_Other__c</fullName>
+    <inlineHelpText>If recipient wants to receive mailings at their Business or Other(Home) address.</inlineHelpText>
+    <label>Mailings Business/Other</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Business Address</fullName>
+                <default>false</default>
+                <label>Business Address</label>
+            </value>
+            <value>
+                <fullName>Newsletter</fullName>
+                <default>false</default>
+                <label>Newsletter</label>
+            </value>
+            <value>
+                <fullName>Other Address</fullName>
+                <default>false</default>
+                <label>Other Address</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

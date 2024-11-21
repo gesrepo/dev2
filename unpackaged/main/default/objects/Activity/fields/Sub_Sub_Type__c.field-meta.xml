@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Sub_Sub_Type__c</fullName>
+    <description>Custom Sub Sub Type Field for Exhibitions/Tradeshow</description>
+    <label>Sub Sub Type</label>
+    <required>false</required>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Sub_Type__c</controllingField>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>IAEE</fullName>
+                <default>false</default>
+                <label>IAEE</label>
+            </value>
+            <value>
+                <fullName>IAEE Annual</fullName>
+                <default>false</default>
+                <label>IAEE Annual</label>
+            </value>
+            <value>
+                <fullName>PCMA</fullName>
+                <default>false</default>
+                <label>PCMA</label>
+            </value>
+            <value>
+                <fullName>PCMA Annual</fullName>
+                <default>false</default>
+                <label>PCMA Annual</label>
+            </value>
+            <value>
+                <fullName>Fact Based</fullName>
+                <default>false</default>
+                <label>Fact Based</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Account Planning</controllingFieldValue>
+            <valueName>Fact Based</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Industry Event</controllingFieldValue>
+            <valueName>IAEE</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Industry Event</controllingFieldValue>
+            <valueName>IAEE Annual</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Industry Event</controllingFieldValue>
+            <valueName>PCMA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Industry Event</controllingFieldValue>
+            <valueName>PCMA Annual</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

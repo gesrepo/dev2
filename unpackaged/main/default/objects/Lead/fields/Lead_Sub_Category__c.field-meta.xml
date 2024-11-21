@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Lead_Sub_Category__c</fullName>
+    <label>Lead Sub Category</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Visited Booth</fullName>
+                <default>false</default>
+                <label>Visited Booth</label>
+            </value>
+            <value>
+                <fullName>Visited Booth/Voucher</fullName>
+                <default>false</default>
+                <label>Visited Booth/Voucher</label>
+            </value>
+            <value>
+                <fullName>No Show</fullName>
+                <default>false</default>
+                <label>No Show</label>
+            </value>
+            <value>
+                <fullName>No show/Voucher</fullName>
+                <default>false</default>
+                <label>No show/Voucher</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

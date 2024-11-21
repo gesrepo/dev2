@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Multi_Year_Step__c</fullName>
+    <inlineHelpText>Identifies where this opportunity is in length of current contract; e.g. 1 of 2 - year one of two year contract</inlineHelpText>
+    <label>Contract Length</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>1 of 1</fullName>
+                <default>false</default>
+                <label>1 of 1</label>
+            </value>
+            <value>
+                <fullName>1 of 2</fullName>
+                <default>false</default>
+                <label>1 of 2</label>
+            </value>
+            <value>
+                <fullName>2 of 2</fullName>
+                <default>false</default>
+                <label>2 of 2</label>
+            </value>
+            <value>
+                <fullName>1 of 3</fullName>
+                <default>false</default>
+                <label>1 of 3</label>
+            </value>
+            <value>
+                <fullName>2 of 3</fullName>
+                <default>false</default>
+                <label>2 of 3</label>
+            </value>
+            <value>
+                <fullName>3 of 3</fullName>
+                <default>false</default>
+                <label>3 of 3</label>
+            </value>
+            <value>
+                <fullName>1 of 4</fullName>
+                <default>false</default>
+                <label>1 of 4</label>
+            </value>
+            <value>
+                <fullName>2 of 4</fullName>
+                <default>false</default>
+                <label>2 of 4</label>
+            </value>
+            <value>
+                <fullName>3 of 4</fullName>
+                <default>false</default>
+                <label>3 of 4</label>
+            </value>
+            <value>
+                <fullName>4 of 4</fullName>
+                <default>false</default>
+                <label>4 of 4</label>
+            </value>
+            <value>
+                <fullName>1 of 5</fullName>
+                <default>false</default>
+                <label>1 of 5</label>
+            </value>
+            <value>
+                <fullName>2 of 5</fullName>
+                <default>false</default>
+                <label>2 of 5</label>
+            </value>
+            <value>
+                <fullName>3 of 5</fullName>
+                <default>false</default>
+                <label>3 of 5</label>
+            </value>
+            <value>
+                <fullName>4 of 5</fullName>
+                <default>false</default>
+                <label>4 of 5</label>
+            </value>
+            <value>
+                <fullName>5 of 5</fullName>
+                <default>false</default>
+                <label>5 of 5</label>
+            </value>
+            <value>
+                <fullName>1 of 6</fullName>
+                <default>false</default>
+                <label>1 of 6</label>
+            </value>
+            <value>
+                <fullName>2 of 6</fullName>
+                <default>false</default>
+                <label>2 of 6</label>
+            </value>
+            <value>
+                <fullName>3 of 6</fullName>
+                <default>false</default>
+                <label>3 of 6</label>
+            </value>
+            <value>
+                <fullName>4 of 6</fullName>
+                <default>false</default>
+                <label>4 of 6</label>
+            </value>
+            <value>
+                <fullName>5 of 6</fullName>
+                <default>false</default>
+                <label>5 of 6</label>
+            </value>
+            <value>
+                <fullName>6 of 6</fullName>
+                <default>false</default>
+                <label>6 of 6</label>
+            </value>
+            <value>
+                <fullName>1 of 7</fullName>
+                <default>false</default>
+                <label>1 of 7</label>
+            </value>
+            <value>
+                <fullName>2 of 7</fullName>
+                <default>false</default>
+                <label>2 of 7</label>
+            </value>
+            <value>
+                <fullName>3 of 7</fullName>
+                <default>false</default>
+                <label>3 of 7</label>
+            </value>
+            <value>
+                <fullName>4 of 7</fullName>
+                <default>false</default>
+                <label>4 of 7</label>
+            </value>
+            <value>
+                <fullName>5 of 7</fullName>
+                <default>false</default>
+                <label>5 of 7</label>
+            </value>
+            <value>
+                <fullName>6 of 7</fullName>
+                <default>false</default>
+                <label>6 of 7</label>
+            </value>
+            <value>
+                <fullName>7 of 7</fullName>
+                <default>false</default>
+                <label>7 of 7</label>
+            </value>
+            <value>
+                <fullName>1 of 8</fullName>
+                <default>false</default>
+                <label>1 of 8</label>
+            </value>
+            <value>
+                <fullName>2 of 8</fullName>
+                <default>false</default>
+                <label>2 of 8</label>
+            </value>
+            <value>
+                <fullName>3 of 8</fullName>
+                <default>false</default>
+                <label>3 of 8</label>
+            </value>
+            <value>
+                <fullName>4 of 8</fullName>
+                <default>false</default>
+                <label>4 of 8</label>
+            </value>
+            <value>
+                <fullName>5 of 8</fullName>
+                <default>false</default>
+                <label>5 of 8</label>
+            </value>
+            <value>
+                <fullName>6 of 8</fullName>
+                <default>false</default>
+                <label>6 of 8</label>
+            </value>
+            <value>
+                <fullName>7 of 8</fullName>
+                <default>false</default>
+                <label>7 of 8</label>
+            </value>
+            <value>
+                <fullName>8 of 8</fullName>
+                <default>false</default>
+                <label>8 of 8</label>
+            </value>
+            <value>
+                <fullName>1 of 9</fullName>
+                <default>false</default>
+                <label>1 of 9</label>
+            </value>
+            <value>
+                <fullName>2 of 9</fullName>
+                <default>false</default>
+                <label>2 of 9</label>
+            </value>
+            <value>
+                <fullName>3 of 9</fullName>
+                <default>false</default>
+                <label>3 of 9</label>
+            </value>
+            <value>
+                <fullName>4 of 9</fullName>
+                <default>false</default>
+                <label>4 of 9</label>
+            </value>
+            <value>
+                <fullName>5 of 9</fullName>
+                <default>false</default>
+                <label>5 of 9</label>
+            </value>
+            <value>
+                <fullName>6 of 9</fullName>
+                <default>false</default>
+                <label>6 of 9</label>
+            </value>
+            <value>
+                <fullName>7 of 9</fullName>
+                <default>false</default>
+                <label>7 of 9</label>
+            </value>
+            <value>
+                <fullName>8 of 9</fullName>
+                <default>false</default>
+                <label>8 of 9</label>
+            </value>
+            <value>
+                <fullName>9 of 9</fullName>
+                <default>false</default>
+                <label>9 of 9</label>
+            </value>
+            <value>
+                <fullName>0 of 0</fullName>
+                <default>false</default>
+                <label>0 of 0</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

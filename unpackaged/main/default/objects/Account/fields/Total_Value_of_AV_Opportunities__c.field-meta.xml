@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Total_Value_of_AV_Opportunities__c</fullName>
+    <label>Total Value of AV Opportunities</label>
+    <summarizedField>Opportunity.Amount</summarizedField>
+    <summaryFilterItems>
+        <field>Opportunity.RecordTypeId</field>
+        <operation>equals</operation>
+        <value>AV - Exhibitor - CC, AV - Exhibitor - CR, AV - Exhibitor - CV, AV - Exhibitor - DB, AV - Exhibitor - IA, AV - Exhibitor - LO, AV - Exhibitor - Master, AV - Exhibitor - PS, AV - Exhibitor - TS</value>
+    </summaryFilterItems>
+    <summaryForeignKey>Opportunity.AccountId</summaryForeignKey>
+    <summaryOperation>sum</summaryOperation>
+    <trackHistory>false</trackHistory>
+    <type>Summary</type>
+</CustomField>

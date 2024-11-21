@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Industry__c</fullName>
+    <label>Industry</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Building, Construction, Home Repair</fullName>
+                <default>false</default>
+                <label>Building, Construction, Home Repair</label>
+            </value>
+            <value>
+                <fullName>Communications &amp; Information Technology</fullName>
+                <default>false</default>
+                <label>Communications &amp; Information Technology</label>
+            </value>
+            <value>
+                <fullName>Consumer Goods &amp; Retail Trade</fullName>
+                <default>false</default>
+                <label>Consumer Goods &amp; Retail Trade</label>
+            </value>
+            <value>
+                <fullName>Education</fullName>
+                <default>false</default>
+                <label>Education</label>
+            </value>
+            <value>
+                <fullName>Financial, Legal, Real Estate</fullName>
+                <default>false</default>
+                <label>Financial, Legal, Real Estate</label>
+            </value>
+            <value>
+                <fullName>Food Sector</fullName>
+                <default>false</default>
+                <label>Food Sector</label>
+            </value>
+            <value>
+                <fullName>Government</fullName>
+                <default>false</default>
+                <label>Government</label>
+            </value>
+            <value>
+                <fullName>Industrial/Heavy Machinery</fullName>
+                <default>false</default>
+                <label>Industrial/Heavy Machinery</label>
+            </value>
+            <value>
+                <fullName>Medical &amp; Healthcare</fullName>
+                <default>false</default>
+                <label>Medical &amp; Healthcare</label>
+            </value>
+            <value>
+                <fullName>Professional Business Services</fullName>
+                <default>false</default>
+                <label>Professional Business Services</label>
+            </value>
+            <value>
+                <fullName>Raw Materials &amp; Science</fullName>
+                <default>false</default>
+                <label>Raw Materials &amp; Science</label>
+            </value>
+            <value>
+                <fullName>Sports, Travel, Art &amp; Consumer Services</fullName>
+                <default>false</default>
+                <label>Sports, Travel, Art &amp; Consumer Services</label>
+            </value>
+            <value>
+                <fullName>Transportation</fullName>
+                <default>false</default>
+                <label>Transportation</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

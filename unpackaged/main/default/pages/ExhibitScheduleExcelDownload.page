@@ -1,0 +1,88 @@
+<apex:page standardStylesheets="true"  showHeader="false" sidebar="false" applyHtmlTag="false" tabStyle="Account" standardController="Brand__c" extensions="ExhibitScheduleReport" contentType="application/vnd.ms-excel#ExhibitScheduleReport.xls" cache="true">
+<apex:form id="fm">
+                
+            <apex:pageBlock id="pb">                
+                  
+                <apex:pageBlockSection columns="2" collapsible="false">
+                    
+               </apex:pageBlockSection>
+            </apex:pageBlock>
+            <apex:pageBlock id="pbst">           
+             
+                <apex:pageBlockTable value="{!dispWrapper}" var="a" id="pbt" width="100">
+                    <apex:column >
+                            <apex:facet name="header">Congress Name</apex:facet>
+                            <apex:outputText value="{!a.nameOfCongress}" />
+                    </apex:column>
+                    <apex:column >
+                            <apex:facet name="header">Acronym</apex:facet>
+                            <apex:outputText value="{!a.acronym}" />
+                    </apex:column>
+                    <apex:column >
+                            <apex:facet name="header">Level</apex:facet>
+                            <apex:outputText value="{!a.level}" />
+                    </apex:column>
+                    <apex:column >
+                            <apex:facet name="header">Exhibit Open Date</apex:facet>
+                            <apex:outputText value="{!a.exhiBitOpenDate}" />
+                    </apex:column>
+                    <apex:column >
+                            <apex:facet name="header">Exhibit Close Date</apex:facet>
+                            <apex:outputText value="{!a.exhiBitCloseDate}" />
+                    </apex:column>
+                    <apex:column >
+                            <apex:facet name="header">Location</apex:facet>
+                            <apex:outputText value="{!a.City + ',' + a.State}" />
+                    </apex:column>
+                    <apex:column >
+                            <apex:facet name="header">Facility Name</apex:facet>
+                            <apex:outputText value="{!a.FacilityName }" />
+                    </apex:column>
+                    <apex:column >
+                            <apex:facet name="header">Booth Length</apex:facet>
+                            <apex:outputText value="{!a.exhibitSize}" />
+                    </apex:column>
+                    <apex:column >
+                            <apex:facet name="header">Booth Width</apex:facet>
+                            <apex:outputText value="{!a.exhibitSize1}" />
+                    </apex:column>
+                    <apex:column >
+                            <apex:facet name="header">Booth No.</apex:facet>
+                            <apex:outputText value="{!a.boothNo}" />
+                    </apex:column>
+                    <apex:column >
+                            <apex:facet name="header">Brands</apex:facet>
+                            <apex:outputText value="{!a.Brands}" />
+                    </apex:column>
+                    <apex:column >
+                            <apex:facet name="header">Congress Manager</apex:facet>
+                            <apex:outputText value="{!a.congressManager}" />
+                    </apex:column>
+                    <apex:column >
+                            <apex:facet name="header">Congress Lead</apex:facet>
+                            <apex:outputText value="{!a.CongressLead}" />
+                    </apex:column>
+                    <apex:column >
+                            <apex:facet name="header">GES Account Executive</apex:facet>
+                            <apex:outputText value="{!a.GESAccountExecutive}" />
+                    </apex:column>
+                    
+                    <apex:column >
+                            <apex:facet name="header">GES Account Manager</apex:facet>
+                            <apex:outputText value="{!a.GesAccountmanager}" />
+                    </apex:column>
+                    <!--<apex:column >
+                            <apex:facet name="header">GES Meeting Planner</apex:facet>
+                            <apex:outputText value="{!a.GESMeetingPlanner}" />
+                    </apex:column>-->
+                    <apex:column >
+                            <apex:facet name="header">ID Supervisor</apex:facet>
+                            <apex:outputText value="{!a.IDSupervisor}" />
+                    </apex:column>
+                    
+                </apex:pageBlockTable>
+            </apex:pageBlock>
+        </apex:form>   
+        
+                                
+</apex:page>

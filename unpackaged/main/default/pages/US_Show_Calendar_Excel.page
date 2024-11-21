@@ -1,0 +1,24 @@
+<apex:page standardController="Opportunity" extensions="USShowCalendarexcelomethod" showHeader="false" action="{!mainmethod}" standardStylesheets="false" sidebar="false"  contentType="application/vnd.ms-excel#North_America_Show_Calendar_{!TODAY()}.xls"  readonly="true" lightningStylesheets="true">
+
+   
+    <apex:pageBlock >
+            <apex:pageBlockSection columns="1">
+                <apex:pageBlockTable value="{!show}" var="s" border="1" >
+                    <apex:column headerValue="Show Name" value="{!s.opp.Show_Name__r.name}"/>
+                    <apex:column headerValue="Opportunity Name">
+                       {!s.opp.Name}
+                    </apex:column>
+                    <apex:column headerValue="Venue" value="{!s.opp.Facility__r.name}"/>
+                    <apex:column headerValue="Show Open" value="{!s.opp.Show_Open_Date__c}"/>
+                    <apex:column headerValue="Show Close" value="{!s.opp.Show_Close_Date__c}"/>
+                    <apex:column headerValue="Sales Manager" value="{!s.opp.Sales_Person__r.name}"/>
+                    <apex:column headerValue="StageName" value="{!s.opp.StageName}"/>
+                    <apex:column headerValue="Production Location" value="{!s.opp.Production_Location__c}"/>
+                    <apex:column headerValue="Probability" value="{!s.opp.Probability}"/>
+                    <apex:column headerValue="Amount" value="{!s.opp.Amount}"/>
+                    <apex:column headerValue="Type" value="{!s.opp.RecordType_Name__c}"/>
+                </apex:pageBlockTable>
+            </apex:pageBlockSection>
+        </apex:pageBlock>
+
+</apex:page>

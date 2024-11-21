@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Marketin_If_no_to_Show_Ready_why__c</fullName>
+    <inlineHelpText>If we are not allowed to market Show Ready, please enter a reason why</inlineHelpText>
+    <label>If no to Show Ready, why?</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>TextArea</type>
+</CustomField>

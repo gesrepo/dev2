@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>EMEA_Adfield_Opportunities</fullName>
+    <columns>OPPORTUNITY.NAME</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>Collection_Details__c</columns>
+    <columns>Show_Name_ref_Occ__c</columns>
+    <columns>OPPORTUNITY.AMOUNT</columns>
+    <columns>OPPORTUNITY.STAGE_NAME</columns>
+    <columns>CORE.USERS.FULL_NAME</columns>
+    <columns>Occurrence_Open_Date__c</columns>
+    <columns>Occurrence_Close_Date__c</columns>
+    <columns>OPPORTUNITY.CREATED_DATE</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>RecordType_Name__c</field>
+        <operation>equals</operation>
+        <value>EMEA - 3rd Party Lead Gen</value>
+    </filters>
+    <filters>
+        <field>Start_Date__c</field>
+        <operation>greaterOrEqual</operation>
+        <value>1/1/2021</value>
+    </filters>
+    <filters>
+        <field>End_Date__c</field>
+        <operation>lessOrEqual</operation>
+        <value>12/31/2021</value>
+    </filters>
+    <label>EMEA Adfield Opportunities 2021</label>
+    <sharedTo>
+        <role>EMEA_3rd_party_Lead_Gen_Sevice</role>
+        <role>EMEA_3rd_party_Lead_Gen_Supervisor</role>
+        <role>EMEA_Show_Ready</role>
+        <role>EMEA_Show_Ready_Administrator</role>
+        <role>EMEA_Show_Ready_Director</role>
+        <role>EMEA_Show_Ready_Project_Manager</role>
+        <role>GES_EMEA_Servi_Centre</role>
+        <role>GES_EMEA_Servi_Centre_Manager</role>
+        <role>GES_EMEA_Servi_Centre_Supervisor</role>
+        <role>SystemAdministrator</role>
+    </sharedTo>
+</ListView>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>NL_WellnessEurope2019_Case</fullName>
+    <filterScope>Queue</filterScope>
+    <label>NL WellnessEurope2019</label>
+    <queue>NL_WellnessEurope2019</queue>
+    <sharedTo>
+        <allInternalUsers />
+    </sharedTo>
+</ListView>

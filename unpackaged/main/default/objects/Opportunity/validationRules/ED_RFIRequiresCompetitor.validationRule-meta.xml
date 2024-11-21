@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ED_RFIRequiresCompetitor</fullName>
+    <active>true</active>
+    <description>RFI/RFP choice requires competitors.</description>
+    <errorConditionFormula>PRF_Submitted__c =true &amp;&amp; 
+$RecordType.DeveloperName = &quot;E_D_Projects&quot;  
+&amp;&amp;( GBMSProjectStatus__c =&quot;Forecast&quot; ||  ISBLANK(GBMSProjectStatus__c )) 
+&amp;&amp;  INCLUDES(PRFOther_Info__c, &quot;RFP/RFI Response&quot;)
+&amp;&amp; ISBLANK( E_D_Competitor__c)
+&amp;&amp; ($Profile.Name != &quot;GES Administrator Interface&quot;)</errorConditionFormula>
+    <errorMessage>At least one Competitor is required for an RFI/RFP response.</errorMessage>
+</ValidationRule>

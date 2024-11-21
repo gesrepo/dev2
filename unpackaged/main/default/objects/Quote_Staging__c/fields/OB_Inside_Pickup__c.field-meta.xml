@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>OB_Inside_Pickup__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Inside Pickup</description>
+    <inlineHelpText>Inside Pickup</inlineHelpText>
+    <label>Inside Pickup</label>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

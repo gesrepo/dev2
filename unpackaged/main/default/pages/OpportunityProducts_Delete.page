@@ -1,0 +1,12 @@
+<apex:page standardController="OpportunityLineItem" extensions="OpportunityProducts_CheckDelete" action="{!checkDelete}">
+<apex:outputText value="{!opportunityLineItem.opportunityId}, {!opportunityLineItem.opportunity.recordType.developerName}" rendered="false"/>
+    
+    <div id="userRoundedCornersBox">
+        <h1>NOTICE</h1>
+        <br/><br/>
+        You are not allowed to delete Opportunity products from Salesforce. <br/>
+        Please set the amount to $0.00 to clear the product.
+        <br/><br/>
+        Click <a href="javascript:history.go(-1)"><b>here</b></a> to go back to the previous page.
+    </div>
+</apex:page>

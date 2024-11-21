@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CompactLayout xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>US_Show_Contact_Compact</fullName>
+    <fields>Name</fields>
+    <fields>Agreement_Type__c</fields>
+    <fields>Account__c</fields>
+    <fields>OwnerId</fields>
+    <fields>Show_Name__c</fields>
+    <fields>Show_Occurrence__c</fields>
+    <fields>Show_Occurrence_Amount__c</fields>
+    <fields>Agreement_Status__c</fields>
+    <fields>Agreement_on_File__c</fields>
+    <label>US Show Contact Compact</label>
+</CompactLayout>

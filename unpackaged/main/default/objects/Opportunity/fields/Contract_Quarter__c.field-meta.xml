@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Contract_Quarter__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(MONTH(CloseDate)=1,&quot;Q1&quot;,
+IF(MONTH(CloseDate)=2,&quot;Q1&quot;,
+IF(MONTH(CloseDate)=3,&quot;Q1&quot;,
+IF(MONTH(CloseDate)=4,&quot;Q2&quot;,
+IF(MONTH(CloseDate)=5,&quot;Q2&quot;,
+IF(MONTH(CloseDate)=6,&quot;Q2&quot;,
+IF(MONTH(CloseDate)=7,&quot;Q3&quot;,
+IF(MONTH(CloseDate)=8,&quot;Q3&quot;,
+IF(MONTH(CloseDate)=9,&quot;Q3&quot;,
+IF(MONTH(CloseDate)=10,&quot;Q4&quot;,
+IF(MONTH(CloseDate)=11,&quot;Q4&quot;,
+IF(MONTH(CloseDate)=12,&quot;Q4&quot;,
+NULL))))))))))))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Contract Quarter</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

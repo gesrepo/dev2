@@ -1,0 +1,729 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Production_Company_2__c</fullName>
+    <label>Production Company</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Jack Morton</fullName>
+                <default>false</default>
+                <label>Jack Morton</label>
+            </value>
+            <value>
+                <fullName>MC2</fullName>
+                <default>false</default>
+                <label>MC2</label>
+            </value>
+            <value>
+                <fullName>Ovation</fullName>
+                <default>false</default>
+                <label>Ovation</label>
+            </value>
+            <value>
+                <fullName>Williams Gerard</fullName>
+                <default>false</default>
+                <label>Williams Gerard</label>
+            </value>
+            <value>
+                <fullName>3A Design</fullName>
+                <default>false</default>
+                <label>3A Design</label>
+            </value>
+            <value>
+                <fullName>4 Seasons</fullName>
+                <default>false</default>
+                <label>4 Seasons</label>
+            </value>
+            <value>
+                <fullName>4foreverything</fullName>
+                <default>false</default>
+                <label>4foreverything</label>
+            </value>
+            <value>
+                <fullName>7 Exhibitions</fullName>
+                <default>false</default>
+                <label>7 Exhibitions</label>
+            </value>
+            <value>
+                <fullName>A2 Design</fullName>
+                <default>false</default>
+                <label>A2 Design</label>
+            </value>
+            <value>
+                <fullName>ABL Design</fullName>
+                <default>false</default>
+                <label>ABL Design</label>
+            </value>
+            <value>
+                <fullName>Abreu Events</fullName>
+                <default>false</default>
+                <label>Abreu Events</label>
+            </value>
+            <value>
+                <fullName>Alpha</fullName>
+                <default>false</default>
+                <label>Alpha</label>
+            </value>
+            <value>
+                <fullName>AMD, ARMSCOR &amp; CASSA</fullName>
+                <default>false</default>
+                <label>AMD, ARMSCOR &amp; CASSA</label>
+            </value>
+            <value>
+                <fullName>Armadillo</fullName>
+                <default>false</default>
+                <label>Armadillo</label>
+            </value>
+            <value>
+                <fullName>Aurelius</fullName>
+                <default>false</default>
+                <label>Aurelius</label>
+            </value>
+            <value>
+                <fullName>Bano</fullName>
+                <default>false</default>
+                <label>Bano</label>
+            </value>
+            <value>
+                <fullName>Barrett Displays</fullName>
+                <default>false</default>
+                <label>Barrett Displays</label>
+            </value>
+            <value>
+                <fullName>Blitz</fullName>
+                <default>false</default>
+                <label>Blitz</label>
+            </value>
+            <value>
+                <fullName>Brad Expo</fullName>
+                <default>false</default>
+                <label>Brad Expo</label>
+            </value>
+            <value>
+                <fullName>Branco</fullName>
+                <default>false</default>
+                <label>Branco</label>
+            </value>
+            <value>
+                <fullName>BrandME</fullName>
+                <default>false</default>
+                <label>BrandME</label>
+            </value>
+            <value>
+                <fullName>British Exhibition Services</fullName>
+                <default>false</default>
+                <label>British Exhibition Services</label>
+            </value>
+            <value>
+                <fullName>CAB Design</fullName>
+                <default>false</default>
+                <label>CAB Design</label>
+            </value>
+            <value>
+                <fullName>Carifex</fullName>
+                <default>false</default>
+                <label>Carifex</label>
+            </value>
+            <value>
+                <fullName>Centthor</fullName>
+                <default>false</default>
+                <label>Centthor</label>
+            </value>
+            <value>
+                <fullName>Certame</fullName>
+                <default>false</default>
+                <label>Certame</label>
+            </value>
+            <value>
+                <fullName>CGC Events</fullName>
+                <default>false</default>
+                <label>CGC Events</label>
+            </value>
+            <value>
+                <fullName>Challis</fullName>
+                <default>false</default>
+                <label>Challis</label>
+            </value>
+            <value>
+                <fullName>Ciscorvi</fullName>
+                <default>false</default>
+                <label>Ciscorvi</label>
+            </value>
+            <value>
+                <fullName>City Neon</fullName>
+                <default>false</default>
+                <label>City Neon</label>
+            </value>
+            <value>
+                <fullName>Cogue</fullName>
+                <default>false</default>
+                <label>Cogue</label>
+            </value>
+            <value>
+                <fullName>Contract Exhibitions Ltd</fullName>
+                <default>false</default>
+                <label>Contract Exhibitions Ltd</label>
+            </value>
+            <value>
+                <fullName>Crisaborole</fullName>
+                <default>false</default>
+                <label>Crisaborole</label>
+            </value>
+            <value>
+                <fullName>D&amp;P Architecture de Commumication</fullName>
+                <default>false</default>
+                <label>D&amp;P Architecture de Commumication</label>
+            </value>
+            <value>
+                <fullName>Dart Expo</fullName>
+                <default>false</default>
+                <label>Dart Expo</label>
+            </value>
+            <value>
+                <fullName>DB Systems</fullName>
+                <default>false</default>
+                <label>DB Systems</label>
+            </value>
+            <value>
+                <fullName>De Boer Structures (UK) Ltd</fullName>
+                <default>false</default>
+                <label>De Boer Structures (UK) Ltd</label>
+            </value>
+            <value>
+                <fullName>Design Desk</fullName>
+                <default>false</default>
+                <label>Design Desk</label>
+            </value>
+            <value>
+                <fullName>Detail Ltd</fullName>
+                <default>false</default>
+                <label>Detail Ltd</label>
+            </value>
+            <value>
+                <fullName>DHL</fullName>
+                <default>false</default>
+                <label>DHL</label>
+            </value>
+            <value>
+                <fullName>Diamond Exhibitions Ltd</fullName>
+                <default>false</default>
+                <label>Diamond Exhibitions Ltd</label>
+            </value>
+            <value>
+                <fullName>Display Builders</fullName>
+                <default>false</default>
+                <label>Display Builders</label>
+            </value>
+            <value>
+                <fullName>Display Works</fullName>
+                <default>false</default>
+                <label>Display Works</label>
+            </value>
+            <value>
+                <fullName>DOTO (Greece)</fullName>
+                <default>false</default>
+                <label>DOTO (Greece)</label>
+            </value>
+            <value>
+                <fullName>DWTC</fullName>
+                <default>false</default>
+                <label>DWTC</label>
+            </value>
+            <value>
+                <fullName>Early Action Group</fullName>
+                <default>false</default>
+                <label>Early Action Group</label>
+            </value>
+            <value>
+                <fullName>Eclipse Manufacturing Solutions</fullName>
+                <default>false</default>
+                <label>Eclipse Manufacturing Solutions</label>
+            </value>
+            <value>
+                <fullName>EIC</fullName>
+                <default>false</default>
+                <label>EIC</label>
+            </value>
+            <value>
+                <fullName>Electra India</fullName>
+                <default>false</default>
+                <label>Electra India</label>
+            </value>
+            <value>
+                <fullName>Electro Pro</fullName>
+                <default>false</default>
+                <label>Electro Pro</label>
+            </value>
+            <value>
+                <fullName>Equinox</fullName>
+                <default>false</default>
+                <label>Equinox</label>
+            </value>
+            <value>
+                <fullName>Escardio</fullName>
+                <default>false</default>
+                <label>Escardio</label>
+            </value>
+            <value>
+                <fullName>Evolution Exhibitions</fullName>
+                <default>false</default>
+                <label>Evolution Exhibitions</label>
+            </value>
+            <value>
+                <fullName>Exmedia</fullName>
+                <default>false</default>
+                <label>Exmedia</label>
+            </value>
+            <value>
+                <fullName>Expace</fullName>
+                <default>false</default>
+                <label>Expace</label>
+            </value>
+            <value>
+                <fullName>Expose (Greece)</fullName>
+                <default>false</default>
+                <label>Expose (Greece)</label>
+            </value>
+            <value>
+                <fullName>ExpoStars</fullName>
+                <default>false</default>
+                <label>ExpoStars</label>
+            </value>
+            <value>
+                <fullName>Expotechnic</fullName>
+                <default>false</default>
+                <label>Expotechnic</label>
+            </value>
+            <value>
+                <fullName>F &amp; E</fullName>
+                <default>false</default>
+                <label>F &amp; E</label>
+            </value>
+            <value>
+                <fullName>Farmailing</fullName>
+                <default>false</default>
+                <label>Farmailing</label>
+            </value>
+            <value>
+                <fullName>Ford &amp; Barley</fullName>
+                <default>false</default>
+                <label>Ford &amp; Barley</label>
+            </value>
+            <value>
+                <fullName>Global Exhibitions Pty Ltd</fullName>
+                <default>false</default>
+                <label>Global Exhibitions Pty Ltd</label>
+            </value>
+            <value>
+                <fullName>GT Exhibitions</fullName>
+                <default>false</default>
+                <label>GT Exhibitions</label>
+            </value>
+            <value>
+                <fullName>Helm</fullName>
+                <default>false</default>
+                <label>Helm</label>
+            </value>
+            <value>
+                <fullName>Hestex</fullName>
+                <default>false</default>
+                <label>Hestex</label>
+            </value>
+            <value>
+                <fullName>Hub9</fullName>
+                <default>false</default>
+                <label>Hub9</label>
+            </value>
+            <value>
+                <fullName>Idea International</fullName>
+                <default>false</default>
+                <label>Idea International</label>
+            </value>
+            <value>
+                <fullName>IEC Group</fullName>
+                <default>false</default>
+                <label>IEC Group</label>
+            </value>
+            <value>
+                <fullName>Image Exhibitions</fullName>
+                <default>false</default>
+                <label>Image Exhibitions</label>
+            </value>
+            <value>
+                <fullName>Immaginazione Italia</fullName>
+                <default>false</default>
+                <label>Immaginazione Italia</label>
+            </value>
+            <value>
+                <fullName>In2 Design</fullName>
+                <default>false</default>
+                <label>In2 Design</label>
+            </value>
+            <value>
+                <fullName>Interface Worldwide</fullName>
+                <default>false</default>
+                <label>Interface Worldwide</label>
+            </value>
+            <value>
+                <fullName>Intermark</fullName>
+                <default>false</default>
+                <label>Intermark</label>
+            </value>
+            <value>
+                <fullName>Intrada Digital Media</fullName>
+                <default>false</default>
+                <label>Intrada Digital Media</label>
+            </value>
+            <value>
+                <fullName>Itapro</fullName>
+                <default>false</default>
+                <label>Itapro</label>
+            </value>
+            <value>
+                <fullName>JJ Installations</fullName>
+                <default>false</default>
+                <label>JJ Installations</label>
+            </value>
+            <value>
+                <fullName>JKK Africa</fullName>
+                <default>false</default>
+                <label>JKK Africa</label>
+            </value>
+            <value>
+                <fullName>Kallman Worldwide</fullName>
+                <default>false</default>
+                <label>Kallman Worldwide</label>
+            </value>
+            <value>
+                <fullName>Kenes</fullName>
+                <default>false</default>
+                <label>Kenes</label>
+            </value>
+            <value>
+                <fullName>Kingsmen</fullName>
+                <default>false</default>
+                <label>Kingsmen</label>
+            </value>
+            <value>
+                <fullName>L4 Construction</fullName>
+                <default>false</default>
+                <label>L4 Construction</label>
+            </value>
+            <value>
+                <fullName>L&#39;as Décor</fullName>
+                <default>false</default>
+                <label>L&#39;as Décor</label>
+            </value>
+            <value>
+                <fullName>Leach</fullName>
+                <default>false</default>
+                <label>Leach</label>
+            </value>
+            <value>
+                <fullName>LPR</fullName>
+                <default>false</default>
+                <label>LPR</label>
+            </value>
+            <value>
+                <fullName>Macro Art</fullName>
+                <default>false</default>
+                <label>Macro Art</label>
+            </value>
+            <value>
+                <fullName>Maidenhead Exhibitions</fullName>
+                <default>false</default>
+                <label>Maidenhead Exhibitions</label>
+            </value>
+            <value>
+                <fullName>MAW</fullName>
+                <default>false</default>
+                <label>MAW</label>
+            </value>
+            <value>
+                <fullName>Medyacity</fullName>
+                <default>false</default>
+                <label>Medyacity</label>
+            </value>
+            <value>
+                <fullName>Mestalla</fullName>
+                <default>false</default>
+                <label>Mestalla</label>
+            </value>
+            <value>
+                <fullName>Milestone</fullName>
+                <default>false</default>
+                <label>Milestone</label>
+            </value>
+            <value>
+                <fullName>Mirko</fullName>
+                <default>false</default>
+                <label>Mirko</label>
+            </value>
+            <value>
+                <fullName>Momentum</fullName>
+                <default>false</default>
+                <label>Momentum</label>
+            </value>
+            <value>
+                <fullName>Moving Venue Catering</fullName>
+                <default>false</default>
+                <label>Moving Venue Catering</label>
+            </value>
+            <value>
+                <fullName>Neptunus</fullName>
+                <default>false</default>
+                <label>Neptunus</label>
+            </value>
+            <value>
+                <fullName>Nexpo</fullName>
+                <default>false</default>
+                <label>Nexpo</label>
+            </value>
+            <value>
+                <fullName>Nomadic</fullName>
+                <default>false</default>
+                <label>Nomadic</label>
+            </value>
+            <value>
+                <fullName>Oak Overseas</fullName>
+                <default>false</default>
+                <label>Oak Overseas</label>
+            </value>
+            <value>
+                <fullName>Officials</fullName>
+                <default>false</default>
+                <label>Officials</label>
+            </value>
+            <value>
+                <fullName>O-Liver</fullName>
+                <default>false</default>
+                <label>O-Liver</label>
+            </value>
+            <value>
+                <fullName>Ormex Display</fullName>
+                <default>false</default>
+                <label>Ormex Display</label>
+            </value>
+            <value>
+                <fullName>Otracosa</fullName>
+                <default>false</default>
+                <label>Otracosa</label>
+            </value>
+            <value>
+                <fullName>Pico</fullName>
+                <default>false</default>
+                <label>Pico</label>
+            </value>
+            <value>
+                <fullName>PJS Solutions</fullName>
+                <default>false</default>
+                <label>PJS Solutions</label>
+            </value>
+            <value>
+                <fullName>Planete Bleue</fullName>
+                <default>false</default>
+                <label>Planete Bleue</label>
+            </value>
+            <value>
+                <fullName>Posz</fullName>
+                <default>false</default>
+                <label>Posz</label>
+            </value>
+            <value>
+                <fullName>Priority Graphics</fullName>
+                <default>false</default>
+                <label>Priority Graphics</label>
+            </value>
+            <value>
+                <fullName>Pro Electro</fullName>
+                <default>false</default>
+                <label>Pro Electro</label>
+            </value>
+            <value>
+                <fullName>ProDoit Oy</fullName>
+                <default>false</default>
+                <label>ProDoit Oy</label>
+            </value>
+            <value>
+                <fullName>Project 4</fullName>
+                <default>false</default>
+                <label>Project 4</label>
+            </value>
+            <value>
+                <fullName>Pubmerc</fullName>
+                <default>false</default>
+                <label>Pubmerc</label>
+            </value>
+            <value>
+                <fullName>Radius</fullName>
+                <default>false</default>
+                <label>Radius</label>
+            </value>
+            <value>
+                <fullName>RAI</fullName>
+                <default>false</default>
+                <label>RAI</label>
+            </value>
+            <value>
+                <fullName>Resource Design</fullName>
+                <default>false</default>
+                <label>Resource Design</label>
+            </value>
+            <value>
+                <fullName>SBX</fullName>
+                <default>false</default>
+                <label>SBX</label>
+            </value>
+            <value>
+                <fullName>Scan Display</fullName>
+                <default>false</default>
+                <label>Scan Display</label>
+            </value>
+            <value>
+                <fullName>Scarlet Red</fullName>
+                <default>false</default>
+                <label>Scarlet Red</label>
+            </value>
+            <value>
+                <fullName>Scena</fullName>
+                <default>false</default>
+                <label>Scena</label>
+            </value>
+            <value>
+                <fullName>Scross</fullName>
+                <default>false</default>
+                <label>Scross</label>
+            </value>
+            <value>
+                <fullName>SedefGrup</fullName>
+                <default>false</default>
+                <label>SedefGrup</label>
+            </value>
+            <value>
+                <fullName>Senaf</fullName>
+                <default>false</default>
+                <label>Senaf</label>
+            </value>
+            <value>
+                <fullName>Sermail</fullName>
+                <default>false</default>
+                <label>Sermail</label>
+            </value>
+            <value>
+                <fullName>Silverline</fullName>
+                <default>false</default>
+                <label>Silverline</label>
+            </value>
+            <value>
+                <fullName>Skyline</fullName>
+                <default>false</default>
+                <label>Skyline</label>
+            </value>
+            <value>
+                <fullName>Stands Projetos e Decorações Ltda</fullName>
+                <default>false</default>
+                <label>Stands Projetos e Decorações Ltda</label>
+            </value>
+            <value>
+                <fullName>Studio Arancia</fullName>
+                <default>false</default>
+                <label>Studio Arancia</label>
+            </value>
+            <value>
+                <fullName>Sukonik</fullName>
+                <default>false</default>
+                <label>Sukonik</label>
+            </value>
+            <value>
+                <fullName>Swift Exhibits</fullName>
+                <default>false</default>
+                <label>Swift Exhibits</label>
+            </value>
+            <value>
+                <fullName>Syning</fullName>
+                <default>false</default>
+                <label>Syning</label>
+            </value>
+            <value>
+                <fullName>Tamooz</fullName>
+                <default>false</default>
+                <label>Tamooz</label>
+            </value>
+            <value>
+                <fullName>Tapenade</fullName>
+                <default>false</default>
+                <label>Tapenade</label>
+            </value>
+            <value>
+                <fullName>Target</fullName>
+                <default>false</default>
+                <label>Target</label>
+            </value>
+            <value>
+                <fullName>Terrapin</fullName>
+                <default>false</default>
+                <label>Terrapin</label>
+            </value>
+            <value>
+                <fullName>TGAC</fullName>
+                <default>false</default>
+                <label>TGAC</label>
+            </value>
+            <value>
+                <fullName>The Works - India</fullName>
+                <default>false</default>
+                <label>The Works - India</label>
+            </value>
+            <value>
+                <fullName>Town &amp; Country</fullName>
+                <default>false</default>
+                <label>Town &amp; Country</label>
+            </value>
+            <value>
+                <fullName>Tran Concept</fullName>
+                <default>false</default>
+                <label>Tran Concept</label>
+            </value>
+            <value>
+                <fullName>Tuyap</fullName>
+                <default>false</default>
+                <label>Tuyap</label>
+            </value>
+            <value>
+                <fullName>Vinehall</fullName>
+                <default>false</default>
+                <label>Vinehall</label>
+            </value>
+            <value>
+                <fullName>VisualMax</fullName>
+                <default>false</default>
+                <label>VisualMax</label>
+            </value>
+            <value>
+                <fullName>Win Together</fullName>
+                <default>false</default>
+                <label>Win Together</label>
+            </value>
+            <value>
+                <fullName>Worldwide Structures</fullName>
+                <default>false</default>
+                <label>Worldwide Structures</label>
+            </value>
+            <value>
+                <fullName>XS Worldwide Exhibits</fullName>
+                <default>false</default>
+                <label>XS Worldwide Exhibits</label>
+            </value>
+            <value>
+                <fullName>Zone Exhibitions</fullName>
+                <default>false</default>
+                <label>Zone Exhibitions</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

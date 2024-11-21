@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Show_Close_Month__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF( MONTH( Show_Close_Date__c ) =1,&quot;01_Jan&quot;,IF(MONTH(Show_Close_Date__c )=2,&quot;02_Feb&quot;,IF(MONTH(Show_Close_Date__c )=3,&quot;03_Mar&quot;,IF(MONTH(Show_Close_Date__c )=4,&quot;04_Apr&quot;,IF(MONTH(Show_Close_Date__c )=5,&quot;05_May&quot;,IF(MONTH(Show_Close_Date__c )=6,&quot;06_Jun&quot;,IF(MONTH(Show_Close_Date__c )=7,&quot;07_Jul&quot;,IF(MONTH(Show_Close_Date__c )=8,&quot;08_Aug&quot;,IF(MONTH(Show_Close_Date__c )=9,&quot;09_Sept&quot;,IF(MONTH(Show_Close_Date__c )=10,&quot;10_Oct&quot;,IF(MONTH(Show_Close_Date__c )=11,&quot;11_Nov&quot;,IF(MONTH(Show_Close_Date__c )=12,&quot;12_Dec&quot;,&quot;&quot;))))))))))))</formula>
+    <label>Show Close Month</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

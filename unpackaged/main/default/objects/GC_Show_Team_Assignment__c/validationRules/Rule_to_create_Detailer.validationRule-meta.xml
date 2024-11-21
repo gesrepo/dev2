@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Rule_to_create_Detailer</fullName>
+    <active>true</active>
+    <description>TA/CD user profile can create Detailer Role for Design elements</description>
+    <errorConditionFormula>AND(
+$Profile.Name &lt;&gt; &#39;System Administrator&#39;,
+!INCLUDES($User.GC_Show_Role__c, &#39;GC Creative Director&#39;),
+!INCLUDES($User.GC_Show_Role__c, &#39;GC Traffic Administrator&#39;),
+ RecordType.Name = &#39;Design Element Assignment&#39;,
+  ISPICKVAL(Show_Team_Member__r.Show_Role__c, &#39;Detailer&#39;)
+)</errorConditionFormula>
+    <errorMessage>Only Users with System Administrator / Traffic Administrator / Creative Director Profiles can Create Detailer Roles</errorMessage>
+</ValidationRule>

@@ -1,0 +1,15 @@
+<apex:page standardController="GC_Order__c" recordSetVar="order" extensions="LC_OrderCloneController">
+    <apex:includeLightning />
+    <div id="displayOrderCloneView"></div>
+    <script>
+    $Lightning.use("c:LC_OrderCloneApp", function() {
+        $Lightning.createComponent("c:LC_OrderClone",
+                                   { 
+                                       cloneFromShow : '{!recordId}'
+                                   },
+                                   "displayOrderCloneView",
+                                   function(component) {
+                                   });
+    });
+    </script>
+</apex:page>

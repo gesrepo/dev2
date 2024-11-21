@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Ges_Chat_Omni_LiveChatTranscript</fullName>
+    <filterScope>Queue</filterScope>
+    <label>Ges Chat Omni</label>
+    <queue>Ges_Chat_Omni</queue>
+    <sharedTo>
+        <allInternalUsers />
+    </sharedTo>
+</ListView>

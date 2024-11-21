@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Outbound_Stage__c</fullName>
+    <label>Outbound Stage</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Booked</fullName>
+                <default>false</default>
+                <label>Booked</label>
+            </value>
+            <value>
+                <fullName>Closed Lost</fullName>
+                <default>false</default>
+                <label>Closed Lost</label>
+            </value>
+            <value>
+                <fullName>Pending Carrier Quote</fullName>
+                <default>false</default>
+                <label>Pending Carrier Quote</label>
+            </value>
+            <value>
+                <fullName>Pending Exhibitor Information</fullName>
+                <default>false</default>
+                <label>Pending Exhibitor Information</label>
+            </value>
+            <value>
+                <fullName>Pending Traffic Quote</fullName>
+                <default>false</default>
+                <label>Pending Traffic Quote</label>
+            </value>
+            <value>
+                <fullName>Qualification</fullName>
+                <default>false</default>
+                <label>Qualification</label>
+            </value>
+            <value>
+                <fullName>Quote Approved</fullName>
+                <default>false</default>
+                <label>Quote Approved</label>
+            </value>
+            <value>
+                <fullName>Quote Submitted</fullName>
+                <default>false</default>
+                <label>Quote Submitted</label>
+            </value>
+            <value>
+                <fullName>Re-Book</fullName>
+                <default>false</default>
+                <label>Re-Book</label>
+            </value>
+            <value>
+                <fullName>Traffic / Carrier Quote Returned</fullName>
+                <default>false</default>
+                <label>Traffic / Carrier Quote Returned</label>
+            </value>
+            <value>
+                <fullName>Sent Traffic Quote</fullName>
+                <default>false</default>
+                <label>Sent Traffic Quote</label>
+            </value>
+            <value>
+                <fullName>AIT PERISHABLE LEAD</fullName>
+                <default>false</default>
+                <label>AIT PERISHABLE LEAD</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

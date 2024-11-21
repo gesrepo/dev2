@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Hall_Description__c</fullName>
+    <description>Which Hall or Halls are being used for the show</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Which hall(s) are used for the show</inlineHelpText>
+    <label>Hall Description</label>
+    <length>255</length>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

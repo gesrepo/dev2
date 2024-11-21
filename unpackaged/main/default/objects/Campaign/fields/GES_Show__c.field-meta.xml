@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>GES_Show__c</fullName>
+    <defaultValue>true</defaultValue>
+    <description>Indicates whether this campaign is associated with a GES show or a Non GES show</description>
+    <label>GES Show</label>
+    <type>Checkbox</type>
+</CustomField>

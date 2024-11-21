@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StandardValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sorted>false</sorted>
+    <standardValue>
+        <fullName>First Call Resolution</fullName>
+        <default>true</default>
+        <label>First Call Resolution</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Low Priority</fullName>
+        <default>false</default>
+        <label>Low Priority</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Medium Priority</fullName>
+        <default>false</default>
+        <label>Medium Priority</label>
+    </standardValue>
+    <standardValue>
+        <fullName>High Priority</fullName>
+        <default>false</default>
+        <label>High Priority</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Urgent</fullName>
+        <default>false</default>
+        <label>Urgent</label>
+    </standardValue>
+    <standardValue>
+        <fullName>--None--</fullName>
+        <default>false</default>
+        <label>--None--</label>
+    </standardValue>
+</StandardValueSet>

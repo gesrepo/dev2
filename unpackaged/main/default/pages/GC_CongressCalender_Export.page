@@ -1,0 +1,210 @@
+<apex:page standardStylesheets="true"  showHeader="false" sidebar="false" applyHtmlTag="false" tabStyle="Account" Controller="GC_CongressCalendarController"  contentType="application/vnd.ms-excel#GC_CongressCalender.xls" cache="true">
+    <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+    <style type="text/css">
+        .hdrCaption {
+            text-align:right;
+        }
+</style>
+</head>
+
+    <apex:pageBlock id="pbst1">
+        
+            <div class="slds-card__header slds-grid">
+                     <div class="slds-media__body">
+                      <h2 class="slds-text-heading--small slds-truncate">Congress Filters</h2>
+                      <!-- Need to add some help text -->
+                    </div>
+                </div> 
+            <div class="slds-card__body">
+                <div class="slds-media slds-media--center slds-has-flexi-truncate">
+                <div class="slds-media__body">
+                  <h2 class="slds-text-heading--small slds-truncate">Congress</h2>
+                </div>
+              </div>
+        <apex:outputPanel id="outputQueries" styleClass="tableScrollBox">
+            <!--  <apex:outputText value="{!filteredBrandWrapperList.size}"/> -->
+            <apex:form >
+                  <!-- TASK LIST -->
+                <table class="slds-table slds-table--bordered slds-max-medium-table--stacked-horizontal">
+                    <thead>
+                        <tr class="slds-text-heading--label">
+                            <th scope="col">
+                                <span class="slds-truncate">
+                                    <apex:commandLink action="{!sortColumn}" reRender="messages, outputQueries, outputButtons" value="Congress name" status="pagStatus">
+                                        <apex:param name="orderByCol" value="GES_Connect_Corporate_Accounts__r.Name_of_Congress__c"></apex:param>
+                                        <apex:outputPanel layout="none" rendered="{!sortOrder == 'asc' && orderByClause == 'GES_Connect_Corporate_Accounts__r.Name_of_Congress__c'}">
+                                        
+                                        </apex:outputPanel>
+                                        <apex:outputPanel layout="none" rendered="{!sortOrder == 'desc' && orderByClause == 'GES_Connect_Corporate_Accounts__r.Name_of_Congress__c'}">
+                                            
+                                        </apex:outputPanel>
+                                    </apex:commandLink>
+                                </span>
+                            </th>
+                            <th scope="col">
+                                <span class="slds-truncate">
+                                    <apex:commandLink action="{!sortColumn}" reRender="messages, outputQueries, outputButtons" value="Acronym of Congress" status="pagStatus">
+                                        <apex:param name="orderByCol" value="GES_Connect_Corporate_Accounts__r.Acronym_of_Congress__c"></apex:param>
+                                         <apex:outputPanel layout="none" rendered="{!sortOrder == 'asc' && orderByClause == 'GES_Connect_Corporate_Accounts__r.Acronym_of_Congress__c'}">
+                                        ?
+                                        </apex:outputPanel>
+                                        <apex:outputPanel layout="none" rendered="{!sortOrder == 'desc' && orderByClause == 'GES_Connect_Corporate_Accounts__r.Acronym_of_Congress__c'}">
+                                            ?
+                                        </apex:outputPanel>
+                                    </apex:commandLink>
+                                </span>
+                            </th>
+                            <th scope="col">
+                                <span class="slds-truncate">
+                                    <apex:commandLink action="{!sortColumn}" reRender="messages, outputQueries" value="Congress Start" status="pagStatus">
+                                        <apex:param name="orderByCol" value="GES_Connect_Corporate_Accounts__r.Congress_Start_Date__c"></apex:param>
+                                         <apex:outputPanel layout="none" rendered="{!sortOrder == 'asc' && orderByClause == 'GES_Connect_Corporate_Accounts__r.Congress_Start_Date__c'}">
+                                        ?
+                                    </apex:outputPanel>
+                                    <apex:outputPanel layout="none" rendered="{!sortOrder == 'desc' && orderByClause == 'GES_Connect_Corporate_Accounts__r.Congress_Start_Date__c'}">
+                                        ?
+                                    </apex:outputPanel>
+                                    </apex:commandLink>
+                                </span>
+                            </th>
+                       
+                            <th scope="col">
+                                <span class="slds-truncate">
+                                    <apex:commandLink action="{!sortColumn}" reRender="messages, outputQueries" value="Congress End" status="pagStatus">
+                                        <apex:param name="orderByCol" value="GES_Connect_Corporate_Accounts__r.Congress_End_Date__c"></apex:param>
+                                         <apex:outputPanel layout="none" rendered="{!sortOrder == 'asc' && orderByClause == 'GES_Connect_Corporate_Accounts__r.Congress_End_Date__c'}">
+                                        ?
+                                    </apex:outputPanel>
+                                    <apex:outputPanel layout="none" rendered="{!sortOrder == 'desc' && orderByClause == 'GES_Connect_Corporate_Accounts__r.Congress_End_Date__c'}">
+                                        ?
+                                    </apex:outputPanel>
+                                    </apex:commandLink>
+                                </span>
+                            </th>
+                        
+                            <th scope="col">
+                                <span class="slds-truncate">
+                                    <apex:commandLink action="{!sortColumn}" reRender="messages, outputQueries" value="Location" status="pagStatus">
+                                        <apex:param name="orderByCol" value="GES_Connect_Corporate_Accounts__r.Shipping_City__c"></apex:param>
+                                         <apex:outputPanel layout="none" rendered="{!sortOrder == 'asc' && orderByClause == 'GES_Connect_Corporate_Accounts__r.Shipping_City__c'}">
+                                        ?
+                                    </apex:outputPanel>
+                                    <apex:outputPanel layout="none" rendered="{!sortOrder == 'desc' && orderByClause == 'GES_Connect_Corporate_Accounts__r.Shipping_City__c'}">
+                                        ?
+                                    </apex:outputPanel>
+                                    </apex:commandLink>
+                                </span>
+                            </th>
+                            <th scope="col">
+                                <span class="slds-truncate">
+                                    <apex:commandLink action="{!sortColumn}" reRender="messages, outputQueries" value="Country" status="pagStatus">
+                                                <apex:param name="orderByCol" value="GES_Connect_Corporate_Accounts__r.Shipping_Country__c"></apex:param>
+                                                 <apex:outputPanel layout="none" rendered="{!sortOrder == 'asc' && orderByClause == 'GES_Connect_Corporate_Accounts__r.Shipping_Country__c'}">
+                                                ?
+                                            </apex:outputPanel>
+                                            <apex:outputPanel layout="none" rendered="{!sortOrder == 'desc' && orderByClause == 'GES_Connect_Corporate_Accounts__r.Shipping_Country__c'}">
+                                                ?
+                                            </apex:outputPanel>
+                                    </apex:commandLink>
+                                </span>
+                            </th>  
+                            <th scope="col">
+                                <span class="slds-truncate">
+                                    <apex:commandLink action="{!sortColumn}" reRender="messages, outputQueries" value="Activity Type" status="pagStatus">
+                                        <apex:param name="orderByCol" value="Brand_Name__c"></apex:param>
+                                         <apex:outputPanel layout="none" rendered="{!sortOrder == 'asc' && orderByClause == 'Brand_Name__c'}">
+                                        ?
+                                    </apex:outputPanel>
+                                    <apex:outputPanel layout="none" rendered="{!sortOrder == 'desc' && orderByClause == 'Brand_Name__c'}">
+                                        ?
+                                    </apex:outputPanel>
+                                    </apex:commandLink>
+                                </span>
+                            </th>  
+                            <th scope="col">
+                              <span class="slds-truncate">
+                                    <apex:commandLink action="{!sortColumn}" reRender="messages, outputQueries" value="Brands" status="pagStatus">
+                                        <apex:param name="orderByCol" value="Brand_Name__c"></apex:param>
+                                         <apex:outputPanel layout="none" rendered="{!sortOrder == 'asc' && orderByClause == 'Brand_Name__c'}">
+                                        ?
+                                    </apex:outputPanel>
+                                    <apex:outputPanel layout="none" rendered="{!sortOrder == 'desc' && orderByClause == 'Brand_Name__c'}">
+                                        ?
+                                    </apex:outputPanel>
+                                    </apex:commandLink>
+                                </span>
+                            </th>
+                             <th scope="col">
+                              <span class="slds-truncate">
+                                    <apex:commandLink action="{!sortColumn}" reRender="messages, outputQueries" value="Congress Manager" status="pagStatus">
+                                        <apex:param name="orderByCol" value="Brand_Name__c"></apex:param>
+                                         <apex:outputPanel layout="none" rendered="{!sortOrder == 'asc' && orderByClause == 'Brand_Name__c'}">
+                                        ?
+                                    </apex:outputPanel>
+                                    <apex:outputPanel layout="none" rendered="{!sortOrder == 'desc' && orderByClause == 'Brand_Name__c'}">
+                                        ?
+                                    </apex:outputPanel>
+                                    </apex:commandLink>
+                                </span>
+                            </th> 
+                             <th scope="col">
+                              <span class="slds-truncate">
+                                    <apex:commandLink action="{!sortColumn}" reRender="messages, outputQueries" value="Congress Lead" status="pagStatus">
+                                        <apex:param name="orderByCol" value="Brand_Name__c"></apex:param>
+                                         <apex:outputPanel layout="none" rendered="{!sortOrder == 'asc' && orderByClause == 'Brand_Name__c'}">
+                                        ?
+                                    </apex:outputPanel>
+                                    <apex:outputPanel layout="none" rendered="{!sortOrder == 'desc' && orderByClause == 'Brand_Name__c'}">
+                                        ?
+                                    </apex:outputPanel>
+                                    </apex:commandLink>
+                                </span>
+                            </th> 
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <apex:repeat value="{!filteredBrandWrapperList}" var="singleBrand">
+                            <tr class="slds-hint-parent">
+                              
+                             <td data-label="showName">
+                                <apex:outputText value="{!singleBrand.CongressName}" />
+                              </td> 
+                              
+                              <td data-label="showName">
+                                <apex:outputText value="{!singleBrand.Acronym}" />
+                              </td>
+                              <td data-label="showName">
+                                <apex:outputText value=" {!singleBrand.CongressStart}" />
+                              </td>                          
+                              <td data-label="showName">
+                                <apex:outputText value=" {!singleBrand.CongressEnd}" />
+                              </td>
+                              <td data-label="showName">
+                                <apex:outputText value=" {!singleBrand.Location}" />
+                              </td>
+                              <td data-label="showName">
+                                <apex:outputText value=" {!singleBrand.Country}" />
+                              </td>
+                              <td data-label="showName">
+                                <apex:outputText value=" {!singleBrand.ActivityType}" />
+                              </td>
+                                  <td data-label="showName">
+                                    <apex:outputText value=" {!singleBrand.Brand}" />
+                               </td> 
+                                <td data-label="showName">
+                                    <apex:outputText value=" {!singleBrand.CongressManager}" />
+                               </td>
+                                <td data-label="showName">
+                                    <apex:outputText value=" {!singleBrand.CongressLead}" />
+                               </td> 
+                            </tr>   
+                        </apex:repeat>
+                    </tbody>
+                </table>
+                                                                                                           
+            </apex:form>
+        </apex:outputPanel>
+    </div>
+    </apex:pageBlock> 
+</apex:page>

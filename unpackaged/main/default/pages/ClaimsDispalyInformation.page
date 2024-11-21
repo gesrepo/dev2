@@ -1,0 +1,76 @@
+<apex:page standardController="Claims__Claim__c" extensions="ClaimsDisplayInformationController" lightningStylesheets="true">
+    <html>
+        <style>
+            .Myclass{
+            font-size:60px;!important
+            }    
+        </style>
+        <!-- <apex:slds/>-->
+        <apex:pageBlock >
+            <!-- <apex:pageBlockSection >-->
+            <!-- <apex:outputText ><b>{!Workcomponsation}</b></apex:outputText>
+<apex:outputText >{!BodiliyInjury}</apex:outputText>-->
+            <apex:pageBlockSection columns="2" rendered="{!claimsRecordType == 'Workers Compensation'}">
+                  <h1>
+                    <br/>
+               {!WCPortalInfo}
+                </h1>
+                <br/>
+            </apex:pageBlockSection>
+            <apex:pageBlockSection columns="2" rendered="{!claimsRecordType == 'Bodily Injury'}" >
+               <h1>
+                    <br/>
+                 {!fistLastName} 
+                    <br/>
+                </h1>
+            
+                <br/>
+                
+            </apex:pageBlockSection>
+            <apex:pageBlockSection columns="2"  rendered="{!claimsRecordType == 'Motor Vehicle'}">
+               <h1>
+                    <br/>
+                 {!MotorGESInfo}
+                   <br/><br/>
+                   {!MotorNONGESInfo}
+                   <br/>
+                </h1>
+            
+                <br/>
+            </apex:pageBlockSection>
+            <apex:pageBlockSection columns="2" rendered="{!claimsRecordType == 'Property Damage'}">
+               <h1>
+                    <br/>
+                {!PDcompanyName}
+                   
+                </h1>
+                <br/>
+            </apex:pageBlockSection>
+            <apex:pageBlockSection columns="2" rendered="{!claimsRecordType == 'Facility Damage'}">
+                <h1>
+                    <br/>
+               {!FDCompany}
+                   
+                </h1>
+                <br/>
+            </apex:pageBlockSection>
+            <apex:pageBlockSection columns="2"  rendered="{!claimsRecordType == 'Theft'}">
+                <h1>
+                    <br/>
+                {!TheftInfo}
+                   
+                </h1>
+                <br/>
+            </apex:pageBlockSection>
+            <apex:pageBlockSection columns="2" rendered="{!claimsRecordType == 'Missing'}">
+               <h1>
+                    <br/>
+                {!MissingInfo}
+                   
+                </h1>
+                <br/>
+            </apex:pageBlockSection>
+            <!-- </apex:pageBlockSection>-->
+        </apex:pageBlock>
+    </html>
+</apex:page>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ENK_Orders</fullName>
+    <columns>CASES.CASE_NUMBER</columns>
+    <columns>Show_Name__c</columns>
+    <columns>CASES.PRIORITY</columns>
+    <columns>CASES.STATUS</columns>
+    <columns>Substatus__c</columns>
+    <columns>GES_Type__c</columns>
+    <columns>Reason__c</columns>
+    <columns>Customer_Name__c</columns>
+    <columns>Exhibitor_Name__c</columns>
+    <columns>NAME</columns>
+    <columns>Booth_Number__c</columns>
+    <columns>OWNER_NAME</columns>
+    <columns>Days_to_Show__c</columns>
+    <columns>Age_Current_Owner__c</columns>
+    <columns>Age__c</columns>
+    <filterScope>Queue</filterScope>
+    <filters>
+        <field>CASES.STATUS</field>
+        <operation>equals</operation>
+        <value>Closed,Open,In Process,Pending</value>
+    </filters>
+    <label>US-ENK - East</label>
+    <language>en_US</language>
+    <queue>US_ENK_Orders</queue>
+    <sharedTo>
+        <allInternalUsers />
+    </sharedTo>
+</ListView>

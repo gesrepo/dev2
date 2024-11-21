@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Custom_Build_Sales_Location</fullName>
+    <active>false</active>
+    <description>Sales location cannot be blank on a Custom Build Opportunity</description>
+    <errorConditionFormula>/* We only want this to run against Custom build
+If the lead source has not been set, prompt the user
+*/
+$RecordType.DeveloperName = &#39;EMEA_Custom_Build&#39;
+&amp;&amp; ISPICKVAL( Sales_Location__c ,&#39;&#39;)</errorConditionFormula>
+    <errorMessage>You must select a Sales Location</errorMessage>
+</ValidationRule>

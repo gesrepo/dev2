@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>AV_Special_Events_Company_Required</fullName>
+    <active>true</active>
+    <description>Select &quot;Yes&quot; for Special Events makes Special Events Company field Required</description>
+    <errorConditionFormula>AND(ISPICKVAL( Special_Events__c ,&quot;Yes&quot;),ISPICKVAL(Special_Events_Company__c ,&quot;&quot;), NOT($Profile.Name = &quot;GES Administrator Interface&quot;))</errorConditionFormula>
+    <errorDisplayField>Special_Events_Company__c</errorDisplayField>
+    <errorMessage>Please fill out the Special Events Company. Special Events Company is required when you choose Yes for Special Events.</errorMessage>
+</ValidationRule>

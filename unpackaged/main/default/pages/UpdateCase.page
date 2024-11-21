@@ -1,0 +1,24 @@
+<apex:page standardController="Case" extensions="UpdateCase">
+    <apex:form >
+        <apex:pageBlock >
+        <apex:pageMessages />
+            <apex:pageBlockSection columns="1">
+                <apex:inputField value="{!Case.Quick_Comment_Text__c}" /><br/><br/>
+                <apex:inputField value="{!Case.GES_Type__c}" required="true" /><br/><br/>
+                <apex:inputField value="{!Case.Reason__c}"  required="true"/><br/><br/>
+                <apex:inputField value="{!Case.Priority}" /><br/><br/>
+                <apex:inputField value="{!Case.Status}" /><br/><br/>
+                <apex:inputField value="{!Case.Substatus__c}" /><br/><br/>
+                <apex:inputField value="{!Case.Show_Status__c}" /><br/><br/>
+                <apex:inputField value="{!Case.Customer_Type__c}" /><br/><br/>
+                <apex:inputField value="{!Case.Origin}" /><br/><br/>
+               
+                 <apex:inputField value="{!Case.Delegated_Owner__c}" /><br/><br/>
+                <apex:inputField value="{!Case.Reassign_to_Onsite_Owner__c}" />
+            </apex:pageBlockSection>
+            <apex:pageBlockButtons >
+                <apex:commandButton action="{!SaveCase}" value="Continue" />
+            </apex:pageBlockButtons>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

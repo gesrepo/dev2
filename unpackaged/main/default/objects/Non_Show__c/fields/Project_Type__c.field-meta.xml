@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Project_Type__c</fullName>
+    <label>Project Type</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>true</sorted>
+            <value>
+                <fullName>Digital/Content Development</fullName>
+                <default>false</default>
+                <label>Digital/Content Development</label>
+            </value>
+            <value>
+                <fullName>Exhibit Program</fullName>
+                <default>false</default>
+                <label>Exhibit Program</label>
+            </value>
+            <value>
+                <fullName>Exhibit Shipping/Storage/Disposal</fullName>
+                <default>false</default>
+                <label>Exhibit Shipping/Storage/Disposal</label>
+            </value>
+            <value>
+                <fullName>Holiday Program</fullName>
+                <default>false</default>
+                <label>Holiday Program</label>
+            </value>
+            <value>
+                <fullName>Measurement &amp; Analytics</fullName>
+                <default>false</default>
+                <label>Measurement &amp; Analytics</label>
+            </value>
+            <value>
+                <fullName>Meetings &amp; Events</fullName>
+                <default>false</default>
+                <label>Meetings &amp; Events</label>
+            </value>
+            <value>
+                <fullName>Misc. Product Rental/Purchase</fullName>
+                <default>false</default>
+                <label>Misc. Product Rental/Purchase</label>
+            </value>
+            <value>
+                <fullName>One Time Event</fullName>
+                <default>false</default>
+                <label>One Time Event</label>
+            </value>
+            <value>
+                <fullName>Pop Up</fullName>
+                <default>false</default>
+                <label>Pop Up</label>
+            </value>
+            <value>
+                <fullName>Product Launch</fullName>
+                <default>false</default>
+                <label>Product Launch</label>
+            </value>
+            <value>
+                <fullName>Virtual Event</fullName>
+                <default>false</default>
+                <label>Virtual Event</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

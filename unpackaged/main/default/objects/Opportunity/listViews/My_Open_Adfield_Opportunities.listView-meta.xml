@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>My_Open_Adfield_Opportunities</fullName>
+    <columns>OPPORTUNITY.NAME</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>Collection_Details__c</columns>
+    <columns>OPPORTUNITY.AMOUNT</columns>
+    <columns>OPPORTUNITY.STAGE_NAME</columns>
+    <columns>Show_Close_Date__c</columns>
+    <columns>Occurrence_Open_Date__c</columns>
+    <columns>Show_Name__c</columns>
+    <columns>Show_Name_ref_Occ__c</columns>
+    <columns>OPPORTUNITY.CREATED_DATE</columns>
+    <filterScope>Mine</filterScope>
+    <filters>
+        <field>RecordType_Name__c</field>
+        <operation>equals</operation>
+        <value>EMEA - 3rd Party Lead Gen</value>
+    </filters>
+    <filters>
+        <field>OPPORTUNITY.STAGE_NAME</field>
+        <operation>notEqual</operation>
+        <value>CR,CV,LO,Closed Won,Closed Lost,Won,Lost</value>
+    </filters>
+    <label>My Open Adfield Opportunities</label>
+    <sharedTo>
+        <role>EMEA_3rd_party_Lead_Gen_Sevice</role>
+        <role>EMEA_3rd_party_Lead_Gen_Supervisor</role>
+        <role>EMEA_Show_Ready</role>
+        <role>EMEA_Show_Ready_Administrator</role>
+        <role>SystemAdministrator</role>
+    </sharedTo>
+</ListView>

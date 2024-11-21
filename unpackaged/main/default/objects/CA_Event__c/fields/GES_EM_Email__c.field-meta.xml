@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>GES_EM_Email__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF((TEXT(Event_Manager__c) == &quot;Andrew Rolls&quot;),&quot;ARER@novonordisk.com&quot;,
+IF((TEXT(Event_Manager__c) == &quot;Joe Walsh&quot;),&quot;YJWQ@novonordisk.com&quot;,
+IF((TEXT(Event_Manager__c) == &quot;John Hasemann&quot;),&quot;JXHM@novonordisk.com&quot;,
+IF((TEXT(Event_Manager__c) == &quot;Rebecca Baker&quot;),&quot;RBBK@novonordisk.com&quot;,
+IF((TEXT(Event_Manager__c) == &quot;Jacqueline Campo&quot;),&quot;JCCPnovonordisk.com&quot;,
+IF((TEXT(Event_Manager__c) == &quot;Corrine Landolt&quot;),&quot;cnld@novonordisk.com&quot;,
+IF((TEXT(Event_Manager__c) == &quot;Laurie Stein-Richards&quot;),&quot;LSIR@novonordisk.com&quot;,
+IF((TEXT(Event_Manager__c) == &quot;Kaitlyn Reynolds&quot;),&quot;KLRL@novonordisk.com&quot;,
+IF((TEXT(Event_Manager__c) == &quot;Curtin, Nadine&quot;),&quot;nadine.curtin@merck.com&quot;,
+IF((TEXT(Event_Manager__c) == &quot;Lopez, Ralph&quot;),&quot;Ralph.lopez@merck.com&quot;,
+IF((TEXT(Event_Manager__c) == &quot;Rosete, Aleida&quot;),&quot;Aleida.rosete@merck.com&quot;,
+IF((TEXT(Event_Manager__c) == &quot;Kepes, Erica&quot;),&quot;Erica.kepes@merck.com&quot;,
+IF((TEXT(Event_Manager__c) == &quot;Throckmorton, Andrea&quot;),&quot;Andrea.throckmorton@merck.com&quot;,
+IF((TEXT(Event_Manager__c) == &quot;Schuler, Dan&quot;),&quot;Daniel_schuler@merck.com&quot;,
+IF((TEXT(Event_Manager__c) == &quot;Syntcha, Dawn&quot;),&quot;dawn.syntscha@merck.com&quot;,
+IF((TEXT(Event_Manager__c) == &quot;Zarrillo, Rose Marie&quot;),&quot;Rose.marie.zarrillo@merck.com&quot;,
+IF((TEXT(Event_Manager__c) == &quot;Congress Manager 1&quot;),&quot;CongressManager1@domain.com&quot;,
+IF((TEXT(Event_Manager__c) == &quot;Congress Manager 2&quot;),&quot;CongressManager2@domain.com&quot;,
+IF((TEXT(Event_Manager__c) == &quot;Congress Manager 3&quot;),&quot;CongressManager3@domain.com&quot;,
+IF((TEXT(Event_Manager__c) == &quot;Horvath, Judy&quot;),&quot;judy.hovarth@merck.com&quot;,
+IF((TEXT(Event_Manager__c) == &quot;Rocha, Paula&quot;),&quot;paula.rocha@merck.com&quot;,
+IF((TEXT(Event_Manager__c) == &quot;Shamey-Golonka, Kimrlee&quot;),&quot;kimrlee.shamey-golonka@merck.com&quot;,
+&quot; &quot;))))))))))))))))))))))</formula>
+    <label>GES EM Email</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

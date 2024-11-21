@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Need__c</fullName>
+    <label>Primary Interest</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>true</sorted>
+            <value>
+                <fullName>A/V</fullName>
+                <default>false</default>
+                <label>A/V</label>
+            </value>
+            <value>
+                <fullName>Accommodations</fullName>
+                <default>false</default>
+                <label>Accommodations</label>
+            </value>
+            <value>
+                <fullName>Brand &amp; Product Activations</fullName>
+                <default>false</default>
+                <label>Brand &amp; Product Activations</label>
+            </value>
+            <value>
+                <fullName>Digital &amp; Multimedia</fullName>
+                <default>false</default>
+                <label>Digital &amp; Multimedia</label>
+            </value>
+            <value>
+                <fullName>Environments &amp; Permanent Installations</fullName>
+                <default>false</default>
+                <label>Environments &amp; Permanent Installations</label>
+            </value>
+            <value>
+                <fullName>Exhibitor Services</fullName>
+                <default>false</default>
+                <label>Exhibitor Services</label>
+            </value>
+            <value>
+                <fullName>Exhibits &amp; Program Management</fullName>
+                <default>false</default>
+                <label>Exhibits &amp; Program Management</label>
+            </value>
+            <value>
+                <fullName>GES Customer Service</fullName>
+                <default>false</default>
+                <label>GES Customer Service</label>
+            </value>
+            <value>
+                <fullName>GES Venue/Hotel Services</fullName>
+                <default>false</default>
+                <label>GES Venue/Hotel Services</label>
+            </value>
+            <value>
+                <fullName>Junk</fullName>
+                <default>false</default>
+                <label>Junk</label>
+            </value>
+            <value>
+                <fullName>Marketing &amp; Measurement</fullName>
+                <default>false</default>
+                <label>Marketing &amp; Measurement</label>
+            </value>
+            <value>
+                <fullName>Meetings &amp; Events</fullName>
+                <default>false</default>
+                <label>Meetings &amp; Events</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>Poken</fullName>
+                <default>false</default>
+                <label>Poken</label>
+            </value>
+            <value>
+                <fullName>Strategy &amp; Planning</fullName>
+                <default>false</default>
+                <label>Strategy &amp; Planning</label>
+            </value>
+            <value>
+                <fullName>Trade Show/Conference Management</fullName>
+                <default>false</default>
+                <label>Trade Show/Conference Management</label>
+            </value>
+            <value>
+                <fullName>VISIT</fullName>
+                <default>false</default>
+                <label>Visit</label>
+            </value>
+            <value>
+                <fullName>Visit GO</fullName>
+                <default>false</default>
+                <label>Visit GO</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

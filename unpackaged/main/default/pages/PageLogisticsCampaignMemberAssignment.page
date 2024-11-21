@@ -1,0 +1,356 @@
+<!-- SFDC-242 added showheader and sidebar attribute in apex:page for lightning view by Sajid - 07/26/23 -->
+<!-- <apex:page controller="LogisticsCampaignMemberAssignment" tabStyle="Campaign"> -->
+<apex:page controller="LogisticsCampaignMemberAssignment" showHeader="false" sidebar="false" tabStyle="Campaign" >
+
+    <apex:includeScript value="/support/console/23.0/integration.js"/>
+    <script type="text/javascript">     
+        function setTabTitle() {
+            sforce.console.setTabTitle('Add Show Contacts');
+        }
+        
+        var previousOnload = window.onload;       
+        
+        window.onload = function() {
+                if (previousOnload) {
+                    previousOnload();
+                }               
+                setTimeout('setTabTitle()', '500');
+            }
+    </script>
+
+    <apex:sectionHeader title="Add Show Contacts to Campaign"/>
+    
+    <br /><br />
+    
+    <apex:form id="ascForm">
+        <apex:pageBlock id="validationPB" rendered="{!(ParentCampaign.Status == 'Completed' || ParentCampaign.Status == 'Aborted' || ParentCampaign.Status == 'Canceled') || ParentCampaign.Opportunity__c == null || ParentCampaign.ParentId != null}">
+                
+            <apex:outputLabel style="color: red; font-weight: bold;" value="This form cannot be used to assign 'Completed', 'Aborted' and 'Canceled' campaigns." rendered="{!(ParentCampaign.Status == 'Completed' || ParentCampaign.Status == 'Aborted' || ParentCampaign.Status == 'Canceled')}" />           
+            <br /> 
+                              
+            <apex:outputLabel style="color: red; font-weight: bold;" value="This form cannot be used to assign child campaigns." rendered="{!(ParentCampaign.ParentId != null)}" /> 
+            <br />
+            
+            <apex:outputLabel style="color: red; font-weight: bold;" value="Select a Show Opportunity on campaign." rendered="{!ParentCampaign.Status != 'Completed' && ParentCampaign.Status != 'Aborted' && ParentCampaign.Status != 'Canceled' && ParentCampaign.ParentId == null && ParentCampaign.Opportunity__c == null}" /> 
+                
+        </apex:pageBlock>
+        
+        <apex:pageBlock Id="mainPB" rendered="{!ParentCampaign.Status != 'Completed' && ParentCampaign.Status != 'Aborted' && ParentCampaign.Status != 'Canceled' && ParentCampaign.Opportunity__c != null && ParentCampaign.ParentId == null}">
+            <apex:pageMessages />
+            
+            <script type="text/javascript">
+              function invokeCountUpdate(id) {
+                invokeCountUpdateServer(document.getElementById(id).value);
+              }
+              
+              function invokeCountUpdate2(id) {
+                invokeCountUpdateServer2(document.getElementById(id).value);
+              }              
+              
+              function invokeSelectAll() {
+                invokeSelectAllServer();
+              }
+              
+              function invokeUnselectAll() {
+                invokeUnselectAllServer();
+              }
+              
+              function invokeDistributionMethodChanged(id) {
+                invokeDistributionChanged(document.getElementById(id).value);
+              }
+              
+              function invokeDistributionChanged(method) {
+
+                var Method = method;
+                var Count = document.getElementById('j_id0:ascForm:mainPB:distributionOptionsPBS:amCountPSI:amCountText');
+                var Percent = document.getElementById('j_id0:ascForm:mainPB:distributionOptionsPBS:amPercentPSI:amPercentText');
+                var ShowContactCount = document.getElementById('j_id0:ascForm:mainPB:detailPBS:showContactCountPSI:showContactCountField');
+                
+                Count = (Count != null ? Count.value : '0');                    
+                Percent = (Percent != null ? Percent.value : '0');
+                ShowContactCount = (ShowContactCount != null ? ShowContactCount.innerHTML : '0');
+                
+                if (Method  == 'Percent' && Count >= 0 && Count <= ShowContactCount && Method != '{!DistributionMethod}')
+                    Percent = Count/ShowContactCount * 100;
+                
+                if (Method  == 'Count' && Percent >= 0 && Percent <= 100 && Method != '{!DistributionMethod}')
+                    Count = Math.round(Percent * ShowContactCount / 100);
+                    
+                //alert('Method: ' + Method + ' Count: ' + Count + ' Percent:' + Percent);                
+                /*              
+                if (parseInt(Count) <= 0 || parseInt(Count) > parseInt(ShowContactCount))
+                {
+                    window.alert('Count must be greater than 0 and less than or equal to ' + ShowContactCount + '.');
+                }               
+                else if (parseFloat(Percent) <= 0 || parseFloat(Percent) > 100)
+                {
+                    window.alert('Percent must be greater than 0 and less than or equal to 100.');
+                }
+                else
+                    invokeDistributionMethodChangedServer(Count, Percent);
+                */
+                
+                invokeDistributionMethodChangedServer(Method, Count, Percent);
+              }
+              
+              function invokeNSFChanged() {
+                var NSF = document.getElementById('j_id0:ascForm:mainPB:filterPBS:nsfValuePSI:nsfTextbox');
+                
+                NSF = (NSF != null ? NSF.value : '0');
+                
+                invokeNSFChangedServer(NSF); 
+              }
+              
+              function invokeCustomersToExcludeChanged() {
+                var CustomersToExclude = document.getElementById('j_id0:ascForm:mainPB:filterPBS:excludeCustomersListPSI:customersToExcludeTextbox');
+                
+                CustomersToExclude = (CustomersToExclude != null ? CustomersToExclude.value : '');
+                
+                invokeCustomersToExcludeChangedServer(CustomersToExclude); 
+              }          
+              
+            </script>
+            
+            <apex:actionFunction name="invokeCountUpdateServer" id="updateCountAF" action="{!nsfFilterOperatorChanged}" rerender="detailPBS,filterPBS,distributionOptionsPBS,userTable">
+               <apex:param name="operator" value="" />
+            </apex:actionFunction>
+            
+            <apex:actionFunction name="invokeCountUpdateServer2" id="updateCountAF2" action="{!includCustomersDomIntlChanged}" rerender="detailPBS,filterPBS,distributionOptionsPBS,userTable">
+               <apex:param name="operator" value="" />
+            </apex:actionFunction>         
+            
+            <apex:actionFunction name="invokeSelectAllServer" id="selectAllAF" action="{!selectAll}" rerender="userTable">
+            </apex:actionFunction>
+            
+            <apex:actionFunction name="invokeUnselectAllServer" id="unselectAF" action="{!unselectAll}" rerender="userTable">
+            </apex:actionFunction>
+            
+            <apex:actionFunction name="invokeDistributionMethodChangedServer" id="distributionMethodChangedAF" action="{!distributionMethodChanged}" rerender="mainPB,detailPBS,filterPBS,distributionOptionsPBS,userTable">
+                <apex:param name="method" value="" />
+                <apex:param name="count" value="" />
+                <apex:param name="percent" value="" />
+            </apex:actionFunction>
+            
+            <apex:actionFunction name="invokeNSFChangedServer" id="nsfChangedAF" action="{!nsfChanged}" rerender="mainPB,detailPBS,filterPBS,distributionOptionsPBS,userTable">
+                <apex:param name="nsf" value="" />
+            </apex:actionFunction>
+            
+            <apex:actionFunction name="invokeCustomersToExcludeChangedServer" id="customersToExcludeChangedAF" action="{!customersToExcludeChanged}" rerender="mainPB,detailPBS,filterPBS,distributionOptionsPBS,userTable">
+                <apex:param name="excludeCustomers" value="" />
+            </apex:actionFunction>
+                
+            <apex:pageBlockButtons >
+                <apex:commandButton value="Assign" action="{!assign}"/>
+            </apex:pageBlockButtons>
+
+            <apex:pageblocksection Id="detailPBS" title="Campaign and Show Opportunity Details" columns="2">
+                <!--
+                <apex:facet name="header">
+                    <apex:outputLabel value="Assignment Details" />
+                </apex:facet>
+                -->
+                <apex:pageBlockSectionItem Id="parentCampaignPSI">
+                    <apex:outputLabel value="Parent Campaign:" for="parentCampaignField"  />
+                    <apex:outputField id="parentCampaignField" value="{!ParentCampaign.Name}" />
+                </apex:pageBlockSectionItem>
+                
+                <apex:pageBlockSectionItem Id="showOpportunityPSI" rendered="{!ParentCampaign.Opportunity__c != null}" >
+                    <apex:outputLabel id="showOpportunityFieldLabel" value="Show Opportunity:" for="showOpportunityField"  />
+                    <apex:outputField id="showOpportunityField" value="{!ParentCampaign.Opportunity__c}" />
+                </apex:pageBlockSectionItem>
+                
+                <apex:pageBlockSectionItem Id="showOpportunityPSINoValue" rendered="{!ParentCampaign.Opportunity__c == null}">
+                    <apex:outputLabel id="showOpportunityFieldLabelNoValue" value="Show Opportunity:" for="showOpportunityFieldNoValue"  />
+                    <apex:outputText style="color: red; font-weight: bold;" id="showOpportunityFieldNoValue" value="PLEASE SELECT ON CAMPAIGN" />                    
+                </apex:pageBlockSectionItem>
+                
+                <apex:pageBlockSectionItem Id="totalShowContactCountPSI">
+                    <apex:outputLabel id="totalShowContactCountFieldLabel" value="Total Contact Count:"  />
+                    <apex:outputText id="totalShowContactCountField" value="{!TotalShowContactCount}" />
+                </apex:pageBlockSectionItem>
+                                
+                <apex:pageBlockSectionItem Id="showContactCountPSI">
+                    <apex:outputLabel id="showContactCountFieldLabel" value="Unassigned Contact Count (Filtered):"  />
+                    <apex:outputText id="showContactCountField" value="{!showContactCount}" />
+                </apex:pageBlockSectionItem>
+                
+                <!--  Use For Debugging UserId argument passing -->
+                <!--
+                <apex:pageBlockSectionItem Id="UserIdSectionItem">
+                    <apex:outputLabel value="User Id:" for="UserIdField"  />
+                    <apex:outputText id="UserIdField" value="{!UserId}" />
+                </apex:pageBlockSectionItem>                
+                
+                <apex:pageBlockSectionItem Id="IsCheckedSectionItem">
+                    <apex:outputLabel value="Count:" for="CheckedField"  />
+                    <apex:outputText id="CheckedField" value="{!LoCustomUsersPageSet[0].Count}" />
+                </apex:pageBlockSectionItem>
+                -->
+                
+            </apex:pageblocksection>
+            
+           <apex:pageblocksection Id="filterPBS" title="Filter Criteria" columns="2">
+                
+                <apex:pageBlockSectionItem Id="NSFOperatorPSI">
+                    <apex:outputLabel value="NSF Filter Operator:"/>               
+                     
+                    <apex:selectList Id="NSFFilterOperator" value="{!NSFFilterOperator}" size="1"  onchange="invokeCountUpdate('{!$Component.NSFFilterOperator}');">
+                        <apex:selectOptions value="{!NSFFilterOperatorOptions}" />
+                    </apex:selectList>
+                    
+                </apex:pageBlockSectionItem>
+                
+                <apex:pageBlockSectionItem Id="nsfValuePSI">
+                    <apex:outputLabel value="Net Square Feet:" />
+                    <apex:inputText Id="nsfTextbox" value="{!NSFValue}" onchange="invokeNSFChanged();" />
+                </apex:pageBlockSectionItem>
+                
+                <apex:pageBlockSectionItem Id="excludeCustomersListPSI">
+                    <apex:outputLabel value="Customers To Exclude:" />
+                    <apex:inputTextArea cols="100" rows="2" Id="customersToExcludeTextbox" value="{!excludeCustomersList}" onchange="invokeCustomersToExcludeChanged();" />
+                </apex:pageBlockSectionItem>
+                
+                <apex:pageBlockSectionItem Id="includeCustomersDomesticInternational">
+                    <apex:outputLabel value="Include Customers (Domestic/International):"/>               
+                     
+                    <apex:selectList Id="IncludeCustomersDomIntlSelectList" value="{!IncludeCustomersDomIntlValue}" size="1" onchange="invokeCountUpdate2('{!$Component.IncludeCustomersDomIntlSelectList}');">
+                        <apex:selectOptions value="{!IncludeCustomersDomIntlOptions}" />
+                    </apex:selectList>                
+                </apex:pageBlockSectionItem>              
+
+           </apex:pageblocksection>
+           
+            <apex:pageblocksection Id="distributionOptionsPBS" title="Assignment Options" columns="2">
+            
+                <apex:pageBlockSectionItem Id="amListPSI">
+                    <apex:outputLabel value="Select Subset of Unassigned By:" for="distributionMethodSelectList"  />
+                    <apex:selectList Id="amSelectList" value="{!DistributionMethod}" size="1" onchange="invokeDistributionMethodChanged('{!$Component.amSelectList}');" >
+                        <apex:selectOptions Id="distributionMethodOptions" value="{!distributionMethodOptions}" />
+                        <!-- <apex:actionSupport event="onchange" rerender="mainPB,detailPBS,filterPBS,userTable"/> -->
+                    </apex:selectList>
+                </apex:pageBlockSectionItem>
+                  
+                <apex:pageBlockSectionItem Id="amCountPSI" rendered="{!DistributionMethod == 'Count'}">
+                    <apex:outputLabel value="Assign How Many (out of {!showContactCount})?:" />
+                    <apex:inputText Id="amCountText" value="{!TotalToAssignCount}" onchange="invokeDistributionChanged('{!DistributionMethod}');"> <!-- '{!$Component.assigmentMethodCountText}','{!$Component.assigmentMethodPercentText}' -->
+                    </apex:inputText>
+                </apex:pageBlockSectionItem>
+                
+                <apex:pageBlockSectionItem Id="amPercentPSI" rendered="{!DistributionMethod == 'Percent'}">
+                    <apex:outputLabel value="Assign what % (out of 100)?:" />
+                    <apex:inputText Id="amPercentText" value="{!TotalToAssignPercent}" onchange="invokeDistributionChanged('{!DistributionMethod}');">
+                    </apex:inputText>               
+                </apex:pageBlockSectionItem>
+                            
+                <apex:pageBlockSectionItem Id="profilePSI">
+                    <apex:outputLabel value="Select Profile:" for="profileSelectList"  />
+                    <apex:selectList Id="profileSelectList" value="{!SelectedProfile}" size="1" >
+                        <apex:selectOptions Id="profileOptions" value="{!profileOptions}"/>
+                        <apex:actionSupport event="onchange" rerender="detailPBS,userTable"/>
+                    </apex:selectList>
+                </apex:pageBlockSectionItem>
+                
+                <apex:pageBlockSectionItem Id="RowCheckActionItem">
+                    <apex:outputLabel value="Action When User Selected:"/>               
+                     
+                    <apex:selectList Id="RowCheckAction" value="{!RowCheckAction}" size="1" > <!-- onchange="invokeRowCheckAction();" -->
+                        <apex:selectOptions value="{!RowCheckActionOptions}" />
+                    </apex:selectList>                
+                </apex:pageBlockSectionItem>
+                
+                <apex:pageBlockSectionItem Id="BlankPBSI">
+                </apex:pageBlockSectionItem>
+                            
+                <apex:pageBlockSectionItem Id="RowUncheckActionItem">
+                    <apex:outputLabel value="Action When User Unselected:"/>               
+                     
+                    <apex:selectList Id="RowUncheckAction" value="{!RowUncheckAction}" size="1" > <!--  onchange="invokeRowUncheckAction();" -->
+                        <apex:selectOptions value="{!RowUncheckActionOptions}" />
+                    </apex:selectList>
+                    
+                </apex:pageBlockSectionItem>            
+            </apex:pageblocksection>           
+                   
+            <apex:pageBlockSection Id="userTable" columns="1">
+            
+                <div style="float: left;">
+                <table>
+                <tr>
+                    <td>
+                        <apex:panelGrid >
+                            <apex:panelGroup >
+                                <apex:inputCheckbox id="checkAllCheckbox" value="{!checkAll}" rendered="{!checkAll == false}" onchange="invokeSelectAll();" />
+                                <apex:outputLabel value="Select All" rendered="{!checkAll == false}"></apex:outputLabel>
+                                
+                                <apex:inputCheckbox id="clearAllCheckbox" value="{!checkAll}" rendered="{!checkAll}" onchange="invokeUnselectAll();"/>
+                                <apex:outputLabel value="Clear All" rendered="{!checkAll}"></apex:outputLabel>                              
+                            </apex:panelGroup>
+                        </apex:panelGrid>
+                    </td>                   
+                </tr>               
+                </table>
+                </div>    
+                     
+                <div style="">
+                <table align="right" id="navigation">
+                <tr>
+                    <td>
+                        <apex:panelGrid columns="7">
+                            <apex:selectList value="{!pageSize}" size="1">
+                                <apex:selectOptions value="{!pageSizeOptions}" />
+                                <apex:actionSupport event="onchange" rerender="detailPBS,userTable"/>
+                            </apex:selectList>
+                            <apex:outputText value="Page {!pageNumber}"></apex:outputText>
+                            <apex:outputText value="|"></apex:outputText>
+                            <apex:commandLink action="{!first}" rendered="{!hasPrevious}" >First</apex:commandlink>
+                            <apex:outputText value="First" rendered="{!NOT(hasPrevious)}" ></apex:outputText>
+                            
+                            <apex:commandLink value="Prev" action="{!previous}" rendered="{!hasPrevious}" >
+                                <apex:param name="CurrentPageNumber" value="{!pageNumber}" />
+                            </apex:commandlink>
+                            <apex:outputText value="Prev" rendered="{!NOT(hasPrevious)}" ></apex:outputText>
+                                                    
+                            <apex:commandLink value="Next" action="{!next}" rendered="{!hasNext}" >
+                                <apex:param name="CurrentPageNumber" value="{!pageNumber}" />
+                            </apex:commandlink>
+                            
+                            <apex:outputText value="Next" rendered="{!NOT(hasNext)}" ></apex:outputText>
+                                                                          
+                            <apex:commandLink action="{!last}" rendered="{!hasNext}" >Last</apex:commandlink>
+                            <apex:outputText value="Last" rendered="{!NOT(hasNext)}" />
+                        </apex:panelGrid>
+                    </td>
+                </tr>
+                </table>
+                </div>
+                
+                <apex:PageBlockTable Id="userTable" value="{!LoCustomUsersPageSet}" var="item">
+                                                        
+                    <apex:column headerValue="Include">
+                        <apex:inputCheckbox Id="itemIsCheckCheckbox" value="{!item.IsChecked}">                         
+                            <apex:actionSupport event="onchange" action="{!rowCheckboxChanged}" rerender="mainPB,userTable" >
+                                <apex:param name="UserId" value="{!item.Id}" assignTo="{!UserId}"></apex:param>
+                                <apex:param name="CheckValue" value="{!item.IsChecked}"></apex:param>
+                            </apex:actionSupport>                                       
+                        </apex:inputCheckbox>
+                    </apex:column>
+                    <apex:column headerValue="Id" value="{!item.Id}" />
+                    <apex:column headerValue="First Name" value="{!item.FirstName}" />
+                    <apex:column headerValue="Last Name" value="{!item.LastName}" />
+                    <apex:column headerValue="Email" value="{!item.Email}" />
+                    
+                    <apex:column headerValue="Count">
+                        <apex:inputText Id="itemCountText" value="{!item.Count}">
+                            <apex:actionSupport event="onchange" action="{!rowCountChanged}" rerender="mainPB,userTable" >
+                                <apex:param name="UserId" value="{!item.Id}" assignTo="{!UserId}"></apex:param>
+                                <apex:param name="CountValue" value=""></apex:param>
+                            </apex:actionSupport>                       
+                        </apex:inputText>
+                    </apex:column>
+                                
+                </apex:PageBlockTable>
+            </apex:pageBlockSection>            
+         
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

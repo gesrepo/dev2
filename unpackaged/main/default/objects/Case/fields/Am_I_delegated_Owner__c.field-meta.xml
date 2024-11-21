@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Am_I_delegated_Owner__c</fullName>
+    <description>Am I Delegated Owner =? Logged in user</description>
+    <externalId>false</externalId>
+    <formula>IF( Delegated_Owner__c = $User.Id, &quot;Yes&quot;, &quot;No&quot;)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>Am I Delegated Owner =? Logged in user</inlineHelpText>
+    <label>Am I delegated Owner ?</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

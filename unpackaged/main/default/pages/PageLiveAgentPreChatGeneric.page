@@ -1,0 +1,150 @@
+<apex:page showHeader="false" title="GES Online Chat">
+    <!-- This script takes the endpoint URL parameter passed from the deployment page and makes it the action for the form -->
+    <script type="text/javascript">
+    (function() { function handlePageLoad() {
+        var endpointMatcher = new RegExp("[\\?\\&]endpoint=([^&#]*)");
+        document.getElementById('prechatForm').setAttribute('action',
+        decodeURIComponent(endpointMatcher.exec(document.location.search)[1]));
+        }
+        
+        if (window.addEventListener) {
+            window.addEventListener('load', handlePageLoad, false);
+        }
+        else { 
+            window.attachEvent('onload', handlePageLoad, false);
+        }
+    })();
+    </script>
+    
+    <script type='text/javascript' src='https://c.la2c1.salesforceliveagent.com/content/g/deployment.js'/>
+    
+    <script type='text/javascript'>
+        liveagent.addCustomDetail('Channel','Web').map('Case','Origin','true',false,true);
+    </script>
+    
+    <script type="text/javascript">
+        function OnSubmitValidate(chatForm)
+        {
+            for(var i=0; i<chatForm.length; i++)
+            {
+                var element = chatForm.elements[i];
+                
+                if (element.id.indexOf("reqText") >= 0)
+                {
+                    var elNum = element.id.substring(7,element.id.length);
+                    var lbl = document.getElementById("reqLabel"+elNum);
+                        
+                    if (element.value == null || element.value == "")
+                    {
+                        lbl.style.color = "red";
+                        element.focus();
+                        return false;
+                    }
+                    else
+                    {
+                        lbl.style.color = "black";
+                    }
+                    
+                    lbl = null;
+                }
+            }
+            
+            /*
+                If all validations are successful, make the value in the hidden name
+                input text field (i.e. where name = "liveagent.prechat:Name" same as 
+                the value in name input text (i.e. where name = "liveagent.prechat.name").
+                The reason is the default name input text maps to the name displyed 
+                on the incoming chat request pop-up. The hidden field propagates the value
+                to the chat details window.
+            */
+            
+            var NameTextBox = document.getElementById("reqText1");
+            var NameHiddenTextBox = document.getElementById("hiddenNameInput");
+            
+            if (NameTextBox != null && NameHiddenTextBox != null)
+                NameHiddenTextBox.value = NameTextBox.value;
+                                
+                
+            
+        }        
+    </script> 
+    
+    <p class="banner" id="bannerHeader">
+        Welcome to the Global Experience Specialists (GES) National Servicenter!<br/>
+        To help us provide you Outstanding Service, please provide some information <br/>
+        before we begin your chat.<br/>
+        <br/>
+        Please note: Live Chat is supported by latest versions of Chrome, Firefox, <br/>
+        Internet Explorer 11, or Safari.<br/>
+        <br/>
+        Thank you for holding! We have received your request.<br/>
+        A representative will be with you shortly. <br/>
+        <br/>
+        Thank you.
+        
+    </p>
+    
+    <form method='post' id='prechatForm' onsubmit='return OnSubmitValidate(this);'>
+    <div>
+    
+        <p>
+            <span class="questionLabel" id="reqLabel1">Your First and Last Name<span style="color: red">*</span></span><br/>
+            <input type='text' id="reqText1" name='liveagent.prechat.name' size='75' /> <!-- id='prechat_field' -->
+        </p>
+    
+        <p>
+            <span class="questionLabel" id="reqLabel2">Your Company Name<span style="color: red">*</span></span><br/>
+            <input type='text' id="reqText2" name='liveagent.prechat:Company' size='75' /> <!-- id='prechat_companyname_field' -->
+        </p>
+        
+        <p>
+            <span class="questionLabel" id="reqLabel3">Your Email Address<span style="color: red">*</span></span><br/>
+            <input type='text' id="reqText3" name='liveagent.prechat:Email' size='75' />
+        </p>
+        
+        <p>
+            <span class="questionLabel" id="reqLabel4">Your Telephone Number<span style="color: red">*</span></span><br/>   
+            <input type='text' id="reqText4" name='liveagent.prechat:Phone' />
+        </p>
+        
+        <p>
+            <span class="questionLabel" id="reqLabel5">Show Name (Please provide the complete show name since many shows share the same acronym.)<span style="color: red">*</span></span><br/>
+            <input type='text' id="reqText5" name='liveagent.prechat:Show' size='75'/>
+        </p>
+        
+        <p>
+            <span class="questionLabel" id="optLabel1">Booth Number</span><br/>
+            <input type='text' id="optText1" name='liveagent.prechat:Booth' />
+        </p>
+        <!-- Ticket # 206063 Add Question text box Mounika Atluri 01-24-2022 -->
+        <p>
+            <span class="questionLabel" id="optLabel1">Question</span><br/>
+            <input type='text' id="optText7" name='liveagent.prechat:Question' />
+        </p>
+        <br/>   
+        
+        <input id="hiddenNameInput" type="hidden" name="liveagent.prechat:Name"/>        
+        
+        <!-- Creates an auto-query for a matching Contact record’s Email field based on the value of the liveagent.prechat:Email field -->      
+        <input type="hidden" name="liveagent.prechat.query:Email" value="Contact,Contact.Email"/>
+        <input type="hidden" name="liveagent.prechat.query:Name" value="Contact,Contact.Name"/>
+        <input type="hidden" name="liveagent.prechat.query:Company" value="Contact,Contact.AccountName"/>
+        
+        <input type="hidden" name="liveagent.prechat.save:Name" value="Prechat_Contact_Name__c" />
+        <input type="hidden" name="liveagent.prechat.save:Email" value="Prechat_Contact_Email__c" />
+        <input type="hidden" name="liveagent.prechat.save:Phone" value="Prechat_Contact_Phone__c" /> 
+        <input type="hidden" name="liveagent.prechat.save:Company" value="Prechat_Company__c" />                 
+        <input type="hidden" name="liveagent.prechat.save:Show" value="Prechat_Show_Name__c" />
+        <input type="hidden" name="liveagent.prechat.save:Booth" value="Prechat_Booth_Number__c" /> 
+        <input type="hidden" name="liveagent.prechat.save:Question" value="Prechat_Question__c" /> <!-- add Prechat_Question__c as hidden -->
+        
+        <input type='submit' value='Request Chat' id='prechat_submit'/>
+    </div>
+    <style type="text/css">
+        div {margin-left: 10px }
+        p.banner {margin-left: 10px; font-weight: bolder; color: blue;}
+        span.questionLabel {font-weight: bold}
+    </style>
+    </form>
+    
+</apex:page>

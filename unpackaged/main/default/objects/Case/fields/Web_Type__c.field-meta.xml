@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Web_Type__c</fullName>
+    <description>Use on the website form for incoming Web2Case cases.  A new field was created because to use the field &quot;GES_Type_c&quot; would require the both the Show Status and Reason fields.</description>
+    <label>Web Type</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Invoice Inquiry</fullName>
+                <default>false</default>
+                <label>Invoice Inquiry</label>
+            </value>
+            <value>
+                <fullName>Charge Inquiry</fullName>
+                <default>false</default>
+                <label>Charge Inquiry</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>GES_EM_Email2_Auto__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF((TEXT(Event_Manager2__c) == &quot;Shawn McDonald&quot;),&quot;Shawn.McDonald@sigsauer.com&quot;,
+IF((TEXT(Event_Manager2__c) == &quot;Aisling Meehan&quot;),&quot;Aisling.Meehan@sigsauer.com&quot;,
+IF((TEXT(Event_Manager2__c) == &quot;Caitlin Ferdyn&quot;),&quot;Caitlin.Ferdyn@sigsauer.com&quot;,
+IF((TEXT(Event_Manager2__c) == &quot;Nicole Brown&quot;),&quot;Nicole.Brown@sigsauer.com&quot;,
+IF((TEXT(Event_Manager2__c) == &quot;Lisa Mahan&quot;),&quot;Lisa.Mahan@sigsauer.com&quot;,
+IF((TEXT(Event_Manager2__c) == &quot;Michael Clearey&quot;),&quot;Michael.Cleary@sigsauer.com&quot;,
+IF((TEXT(Event_Manager2__c) == &quot;Horvath, Judy&quot;),&quot;judy.hovarth@merck.com&quot;,
+IF((TEXT(Event_Manager2__c) == &quot;Rocha, Paula&quot;),&quot;paula.rocha@merck.com&quot;,
+IF((TEXT(Event_Manager2__c) == &quot;Shamey-Golonka, Kimrlee&quot;),&quot;kimrlee.shamey-golonka@merck.com&quot;,
+IF((TEXT(Event_Manager2__c) == &quot;Curtin, Nadine&quot;),&quot;nadine.curtin@merck.com&quot;,
+IF((TEXT(Event_Manager2__c) == &quot;Throckmorton, Andrea&quot;),&quot;Andrea.throckmorton@merck.com&quot;,
+IF((TEXT(Event_Manager2__c) == &quot;Zarrillo, Rose Marie&quot;),&quot;Rose.marie.zarrillo@merck.com&quot;,
+&quot;&quot;))))))))))))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>GES EM Email2 Auto</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

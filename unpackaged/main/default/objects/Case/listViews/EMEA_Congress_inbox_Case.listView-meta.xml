@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>EMEA_Congress_inbox_Case</fullName>
+    <filterScope>Queue</filterScope>
+    <label>EMEA Congress inbox</label>
+    <language>en_US</language>
+    <queue>EMEA_Congress_inbox</queue>
+    <sharedTo>
+        <roleAndSubordinatesInternal>EMEA_AV_Executive</roleAndSubordinatesInternal>
+        <roleAndSubordinatesInternal>EMEA_Executive</roleAndSubordinatesInternal>
+        <roleAndSubordinatesInternal>EMEA_Operations</roleAndSubordinatesInternal>
+        <roleAndSubordinatesInternal>Exhibitor_Services_Co_Ordinator</roleAndSubordinatesInternal>
+        <roleAndSubordinatesInternal>Finance_EMEA</roleAndSubordinatesInternal>
+        <roleAndSubordinatesInternal>Floorplan_Technician_EMEA</roleAndSubordinatesInternal>
+        <roleAndSubordinatesInternal>GES_EMEA_Operations</roleAndSubordinatesInternal>
+        <roleAndSubordinatesInternal>GES_EMEA_Servi_Centre</roleAndSubordinatesInternal>
+        <roleAndSubordinatesInternal>GES_EMEA_Servi_Centre_Manager</roleAndSubordinatesInternal>
+        <roleAndSubordinatesInternal>GES_EMEA_Servi_Centre_Supervisor</roleAndSubordinatesInternal>
+        <roleAndSubordinatesInternal>Marketing_EMEA</roleAndSubordinatesInternal>
+    </sharedTo>
+</ListView>
